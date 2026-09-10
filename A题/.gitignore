@@ -1,0 +1,15 @@
+__pycache__/
+.pytest_cache/
+node_modules/
+.runtime/
+cache/
+tmp/
+*.log
+.venv/
+附件/
+A题.pdf
+results/
+figures/
+output/
+paper/论文.md
+paper/equations/
