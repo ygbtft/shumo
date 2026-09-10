@@ -1,0 +1,26 @@
+﻿{
+    "variant":  "full",
+    "run_label":  "full-first",
+    "launch_utc":  "2026-09-10T12:48:57.1220685+00:00",
+    "first_process_s":  2.4285063,
+    "first_listener_s":  2.4578634999999998,
+    "first_webview_process_s":  3.0717754999999998,
+    "observed_seconds":  90.1396091,
+    "final_sample":  {
+                         "elapsed_s":  89.47,
+                         "root_pid":  7884,
+                         "session_id":  2,
+                         "root_working_set_bytes":  106598400,
+                         "tree_working_set_bytes":  703209472,
+                         "tree_private_bytes":  481349632,
+                         "webview_count":  6,
+                         "listener_count":  2
+                     },
+    "runtimes":  [
+                     {
+                         "path":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+                         "version":  "151.0.4129.86"
+                     }
+                 ],
+    "executable_sha256":  "110542502401761B81F701CA1A866092E38D4AC290FA025BF18AED73FF8E9628"
+}
