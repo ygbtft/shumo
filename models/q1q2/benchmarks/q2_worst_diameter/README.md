@@ -71,3 +71,84 @@ J 是连续集合上的上确界，生产 `J_hat` 是 `NUMERICAL_CANDIDATE`。�
 生产修复已到位，本目录未修改生产代码。最终本轮运行前后被测文件 SHA256 一致性为 **True**，具体哈希见报告。指定线段闭式 15.459510178683 m，当前生产输出 15.459510178551 m。原有 11 个独立可达点对低估案例现已全部通过，新加切点/窄角案例也未产生 A 或 B。
 
 当前没有 A，因此报告顶层 `regression_targets` 为空；所有案例的独立可达源对仍固定保存在 `cases.jsonl` 的 `ground_truth` 和报告的 `expected` 中。以后任何 A 都会自动附带完整共同反馈、两个可实现世界和必须达到的 J 下限。分档逻辑已用合成 A/B/C 数值及所有生成点对的独立可实现性核验检查过。
+
+## 可选区间认证 oracle
+
+`optional/certified.py` 独立计算固定 q 的连续 J 区间；`oracle.py` 将其接入
+本 runner。只读取 `SourceSet` 中首测与物理常量，不调用生产的成员判据、
+角事件、`parameter_point`、`sample_sources` 或 `score_point`，也不读取生产
+J_hat/点对来构造界限。默认生产依赖和执行路径不变。
+
+```bash
+uv pip install --python models/q1q2/.venv/bin/python -r models/q1q2/benchmarks/q2_worst_diameter/requirements-certify.txt
+models/q1q2/.venv/bin/python -m models.q1q2.benchmarks.q2_worst_diameter.run --certify --certify-tol .1
+models/q1q2/.venv/bin/python -m pytest -q models/q1q2/benchmarks/q2_worst_diameter/tests/test_certified.py
+```
+
+可重复 `--case <完整case_id>` 选择案例；`--certify-seconds 60`、
+`--certify-nodes 200000` 控制每例认证预算。默认另写 `report-certified.json`，
+也可用 `--report <路径>` 指定；不覆盖已有普通 benchmark 报告。
+连续 `score` 案例增加认证；有限点云、选点与条件 R 的原有合同检查仍保留。
+这次没有增加生产 `run.py --certify`（题目中的可选项）。
+
+后端固定为纯 Python `mpmath==1.3.0` 的 `iv`，每次调用使用独立区间上下文，
+默认 30 位十进制精度，不修改全局精度。只使用区间基本四则、整数平方、
+平方根、sin/cos/tan 与区间 π；依据是
+[mpmath 的区间包含合同](https://mpmath.org/doc/current/contexts.html#arbitrary-precision-interval-arithmetic-iv)。
+该后端的 interval 支持仍标为 experimental，本实现的证明依赖上述运算满足其
+包含合同，并以独立闭式回归核验；不是形式化验证库。没有编译依赖，
+Windows guest 可按单独 requirements 安装；本轮未在实际 guest 执行，
+不宣称 guest 验收完成。
+
+### 区间包含证明与边界处理
+
+1. 输入 float 按其**精确二进制数值**解释，与生产接收到的输入一致。
+   首测角盒完整覆盖 `[-eps1,eps1]`（度），用区间 π 转弧度，不从已舍入的
+   `math.radians` 或生产角事件开始。对每条射线重算
+   `disc=(S-c)·u squared + R²-|S-c|²`，径向端点为
+   `lo=max(near,-proj-sqrt(disc))`、`hi=min(rho_hi,-proj+sqrt(disc))`。
+   `r=(1-t)lo+t hi`、`t∈[0,1]` 的自然区间扩张包含所有真实径向点。
+   判别式盒跨零时只将平方根输入与非负半轴相交；仅在区间证明无交时剪枝。
+   无效射线的额外外包可以留下，但不能删掉有效射线。
+2. 完整四维盒分别进入 near/direction 队列；q 与 S 坐标精确相同时改用
+   `same_station`，直接认证 `diam(F)`。每次二分的两个闭子盒共享浮点
+   分点，严格覆盖父盒。浮点物理宽度仅用于选分裂坐标，不参与证明或剪枝。
+3. near 盒只有某点距离平方下端已大于 near² 才排除，上界还截到 `2*near`。
+   direction 盒若某点距离平方上端 ≤ near²，或 `w` / 角度多项式上端 <0，
+   可证明没有可行点；另用等价的 `tan(2eps2)w ± cross` 加强剪枝。
+   未决的严格 `>near` 边界只留给上界，不给下界。点积判据无需 atan2，
+   自然处理跨 0° 的共同方向圆弧，支持 `0<eps2<45°`。
+4. L 来自重新区间验证的**点参数** `(alpha_x,t_x,alpha_y,t_y)`。
+   径向构造证明源在圆盘/射线/接收范围内，且半径区间下端严格大于首次
+   near；第二次反馈约束须整个点值区间满足（direction 使用 §6.3 原多项式）。
+   距离平方根下端向下导出为 L。参数定义精确数学点，即使坐标含无理数；
+   `coordinate_enclosures` 是这些点的外包，不能把其中的浮点中点冒充见证。
+   开端点只用实际内移点逼近，不把上确界伪报为已取得最大值。
+5. 每个活盒的距离区间上端向上导出，且可与父盒上界取 min。仅在约束
+   区间证明不可行、或盒上界 ≤ 已有 L 时剪枝。U 为 `max(L,活盒最大上界)`；
+   由全域覆盖不变量可得 `L≤J(q)≤U`。导出 float 时端点转换后再向外走
+   一个 `nextafter`；gap 也向上舍入。这里认证的是输入模型中的固定 q，
+   没有认证 C_sig 成员或外层最优 q；后验解释仍以前述保收前提为条件。
+6. gap≤tol 返回 `CERTIFIED_FIXED_Q_TOL`；节点/时间预算耗尽或无法继续
+   浮点二分时返回 `CERTIFIED_BOUNDS` 和真实未决 gap，不声称收敛。
+   严格边界闭松弛的孤立不可达部分、退化切触、过小 tol 都可能阻碍收敛。
+   若连一个实际源点也未验证，抛出 `NO_VERIFIED_SOURCE`，不把空 F 的
+   未定义直径伪写成 0。API 的上下界证明不依赖有限时间收敛。
+
+### 新增判定
+
+逐例 `actual.certification` 报告 L、U、向上舍入的 gap、见证、节点数、
+耗时、停止原因和 `converged`。顶层 `certification.verdict_counts` 独立统计：
+
+| 判定 | 条件 |
+|---|---|
+| UNDERESTIMATE | J_hat < L−tol |
+| OVERESTIMATE | J_hat > U+tol |
+| PASS | L−tol ≤ J_hat ≤ U+tol |
+
+预算退出也可以排除已被上下界反驳的数值；未收敛时的带内 PASS 只表示尚未
+被反驳。因此 runner 另有 `certified_gap` 检查：未达 tol 会让整例检查失败，
+而不是将宽带 PASS 当作精度通过。旧 A/B/C 保留其原语义，不能代替新增
+三态与收敛统计。闭式例还要求 `[L,U]` 夹住保存的解析值；可选测试使用
+80 位解析公式复核，包含首次开端点、第二次恰好 5 米、near、同站、
+跨零、目标圆裁剪、预算退出和人为低估/高估注入。

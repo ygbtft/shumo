@@ -30,7 +30,7 @@ def production_samples(ss,level,q,eps2=1.):
 
 def compact(summary):return asdict(summary)
 
-def evaluate(case):
+def evaluate(case, certified_options=None):
     inp,gt=case['input'],case['ground_truth']
     checks=[];actual={}
     def check(name,passed,expected,value,semantics='correctness'):
@@ -46,6 +46,23 @@ def evaluate(case):
         prod=production_samples(ss,2,q,cfg.second_half_width_deg)
         score=score_point(ss,q,prod,cfg)
         actual=dict(J_hat=score.J_hat,sample_count=len(prod.points),status=score.status,witness=asdict(score.witness) if score.witness else None)
+        if certified_options is not None:
+            from .oracle import compare
+            certification = compare(ss, q, cfg.second_half_width_deg, score.J_hat,
+                                    **certified_options)
+            actual['certification'] = certification
+            check('certified_J_band', certification['verdict'] == 'PASS',
+                  certification['acceptance_band_m'], score.J_hat,
+                  'independent interval lower/upper bounds; inspect convergence and gap')
+            check('certified_gap', certification['converged'],
+                  certified_options['tol'], certification['gap_m'],
+                  'certification completeness; budget exhaustion is not a production bug')
+            if 'J_exact_m' in gt:
+                exact = gt['J_exact_m']
+                check('certified_closed_form_enclosure',
+                      certification['lower_m'] <= exact <= certification['upper_m'],
+                      exact, [certification['lower_m'], certification['upper_m']],
+                      'stored float closed form; optional tests additionally use 80-digit formulas')
         lower=gt['lower_bound_m']
         check('independent_reachable_pair_dominance',score.J_hat>=lower-TOL['reachable_pair_m'],lower,score.J_hat,'independent lower-bound approximation; not exact J')
         actual['underestimate_m']=max(0.,lower-score.J_hat)
@@ -225,15 +242,33 @@ def classify_case(case,actual):
     return grade,assessments,refined
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--certify', action='store_true')
+    parser.add_argument('--certify-tol', type=float, default=.1)
+    parser.add_argument('--certify-seconds', type=float, default=60.)
+    parser.add_argument('--certify-nodes', type=int, default=200000)
+    parser.add_argument('--case', action='append', help='exact case id; repeatable')
+    parser.add_argument('--report', type=Path)
+    args = parser.parse_args()
+    certified_options = (dict(tol=args.certify_tol, time_limit_s=args.certify_seconds,
+                              max_nodes=args.certify_nodes) if args.certify else None)
+    if args.certify:
+        from .oracle import compare  # fail clearly before running without optional dependency
     if not (HERE/'cases.jsonl').exists():generate()
     cases=[json.loads(x) for x in (HERE/'cases.jsonl').read_text().splitlines()]
+    if args.case:
+        known = {c['case_id'] for c in cases}
+        if set(args.case)-known:
+            parser.error('unknown case ids: '+str(sorted(set(args.case)-known)))
+        cases = [c for c in cases if c['case_id'] in args.case]
     production_paths=[HERE.parents[1]/name for name in ['q2.py','diagnostics.py','feasible.py','geometry.py']]
     hashes_before={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in production_paths}
     rows=[];started=time.monotonic()
     for c in cases:
         start=time.monotonic()
         try:
-            actual,checks=evaluate(c)
+            actual,checks=evaluate(c, certified_options)
             grade,assessments,refined=classify_case(c,actual)
         except Exception as e:
             grade,assessments,refined=None,[],[]
@@ -262,8 +297,20 @@ def main():
                   legacy_pass_fail_note='n_pass/n_fail and failures retain all-check compatibility; use grade_counts for mutually exclusive A/B/C J results.',
                   production_sha256=hashes_before,production_sha256_after=hashes_after,
                   production_unchanged_during_run=hashes_before==hashes_after)
-    (HERE/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
+    certifications = [dict(case_id=r['case_id'], **r['actual']['certification'])
+                      for r in rows if 'certification' in r['actual']]
+    report['certification'] = dict(
+        enabled=args.certify, options=certified_options, results=certifications,
+        verdict_counts={v: sum(c['verdict'] == v for c in certifications)
+                        for v in ('PASS', 'UNDERESTIMATE', 'OVERESTIMATE')},
+        converged_count=sum(c['converged'] for c in certifications),
+        scope='continuous score cases only; finite clouds and selection contracts retain their own oracles')
+    output = args.report or HERE/('report-certified.json' if args.certify else 'report.json')
+    output.write_text(json.dumps(report,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
     print(json.dumps({k:report[k] for k in ['n_cases','grade_counts','n_grade_not_applicable','refined_grade_counts','n_pass','n_fail','elapsed_seconds']}),flush=True)
+    if args.certify:
+        print(json.dumps(dict(certification_counts=report['certification']['verdict_counts'],
+                              converged=report['certification']['converged_count'])), flush=True)
     return 1 if report['n_fail'] else 0
 
 if __name__=='__main__':raise SystemExit(main())
