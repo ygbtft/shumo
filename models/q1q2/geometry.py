@@ -274,7 +274,11 @@ def intersect_halfplanes(hps: Sequence[HalfPlane], policy: NumericPolicy) -> Reg
         if alternatives:
             p = np.asarray(alternatives[0])
             feasible = point(origin+scale*p)
-        else:
+        elif np.any(normals @ np.asarray(feasible)-offsets >
+                    16*np.finfo(float).eps*(np.abs(normals) @ np.abs(feasible)+np.abs(offsets))):
+            # Boundary points need not have strictly negative floating residuals.
+            # Only arithmetic roundoff is excused here, not the policy tolerance:
+            # a genuinely inconsistent narrow strip must remain unresolved.
             return Region(None, feasible_point=feasible, status='NUMERICAL_UNRESOLVED',
                           method='feasibility_residual_recheck')
     for n in normals:

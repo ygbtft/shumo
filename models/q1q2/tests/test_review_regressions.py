@@ -210,7 +210,7 @@ def test_b4_search_assembly_observes_shifted_gain_without_rank_change(monkeypatc
                           starts=1,pair_rounds=0,boundary_step_deg=180,
                           station_initial_step_m=2.,station_min_step_m=2.,time_budget_s=20)
     monkeypatch.setattr(q2,'candidate_bbox',lambda *args:(10.,20.,10.,20.))
-    def samples(ss,level,grids,q=None,inward=1e-7,shifted=False):
+    def samples(ss,level,grids,q=None,inward=1e-7,shifted=False,second_half_width_deg=1.):
         points = ((1000.,0.),(1100.,0.))+(((1200.,0.),) if shifted else ())
         return q2.SourceSamples(points,level,grids[level],shifted=shifted)
     monkeypatch.setattr(q2,'_sample_sources',samples)

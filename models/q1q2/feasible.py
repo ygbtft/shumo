@@ -310,9 +310,33 @@ def closure_distance(source_set, q):
     distances = [distance(q, x) for x in pts]
     i = int(np.argmin(distances))
     minimum = distances[i]
-    attained = any(source_set.contains([x])[0] for x, d in zip(pts, distances)
-                   if abs(d-minimum) <= source_set.policy.length(minimum))
-    return minimum, pts[i], attained
+    witness, attained = _boundary_witness(source_set, pts[i])
+    return minimum, witness, attained
+
+
+def _boundary_witness(ss, x):
+    """Represent a closed analytic extremum inside its closed constraints.
+
+    Do not confuse trig roundoff on a closed edge with the excluded first-near
+    circle. The latter remains a limit witness, even if its rounded norm is > R.
+    """
+    r = distance(x, ss.first.position)
+    rounding = 32*np.finfo(float).eps*max(1., r, *map(abs, x),
+                                          *map(abs, ss.first.position))
+    if abs(r-ss.physics.near_radius) <= rounding:
+        return point(x), False
+    if ss.contains([x])[0]:
+        return point(x), True
+    params = ss.parameters(x)
+    if params is not None and ss.contains([x], closed=True)[0]:
+        alpha, t = params
+        eps = math.radians(ss.first.half_width_deg)
+        for inset in (1e-15, 1e-14, 1e-13, 1e-12):
+            a = min(max(0., eps-inset), max(min(0., -eps+inset), alpha))
+            candidate = ss.parameter_point(a, min(1-inset, max(inset, t)))
+            if candidate is not None:
+                return candidate, True
+    return point(x), False
 
 
 def check_candidate(source_set: SourceSet, q: Point2, require_direction: bool, policy: NumericPolicy) -> CandidateCheck:
@@ -335,6 +359,7 @@ def check_candidate(source_set: SourceSet, q: Point2, require_direction: bool, p
     if not combined:
         return CandidateCheck('UNRESOLVED', None, reason='no_analytic_boundary')
     violation, witness = max(combined, key=lambda z: z[0])
+    witness, witness_attained = _boundary_witness(ss, witness)
     tol = policy.squared(max(p.rho_hi, np.linalg.norm(h)))
     status = 'OUT' if violation > tol else 'IN' if violation < -tol else 'BOUNDARY'
     ds, near_distance, inside = None, None, False
@@ -352,11 +377,25 @@ def check_candidate(source_set: SourceSet, q: Point2, require_direction: bool, p
             ds = 'BOUNDARY_UNRESOLVED'
         if ds == 'OUT':
             status = 'OUT'
+            witness, witness_attained = closest, attained
+            # If the closest point is excluded, strict distance < R leaves room
+            # to construct an actual nearby world. Equality has no such room.
+            if not attained and margin < 0:
+                params = ss.parameters(closest)
+                if params is not None:
+                    for fraction in (1e-8, 1e-10, 1e-12):
+                        candidate = ss.parameter_point(params[0], max(fraction, params[1]))
+                        if candidate is not None and distance(q, candidate) <= p.near_radius:
+                            witness, witness_attained = candidate, True
+                            break
         elif ds == 'BOUNDARY_UNRESOLVED':
             status = 'UNRESOLVED'
-    return CandidateCheck(status, violation, witness, bool(ss.contains([witness])[0]),
+    return CandidateCheck(status, violation, witness, witness_attained,
                           max((v for v, _ in low), default=None),
-                          max((v for v, _ in high), default=None), ds, near_distance, inside)
+                          max((v for v, _ in high), default=None), ds, near_distance, inside,
+                          reason='near_separating_world' if ds == 'OUT' else '',
+                          exact_definition=('q in C_sig and forall p in F: |q-p| > near_radius'
+                                            if require_direction else CandidateCheck.exact_definition))
 
 
 def posterior_contains(source_set: SourceSet, q: Point2, feedback: Feedback,

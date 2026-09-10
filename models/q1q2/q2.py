@@ -9,7 +9,7 @@ import numpy as np
 from .geometry import (Point2, NumericPolicy, Region, RegionKind, point, unit, distance,
                        bearing, angle_delta, convex_hull, diameter)
 from .feasible import (SourceSet, CandidateCheck, Feedback, check_candidate, closure_distance,
-                       circle_intersections)
+                       circle_intersections, _boundary_witness)
 
 
 @dataclass(frozen=True)
@@ -64,6 +64,8 @@ class SourceSamples:
     additional_count: int = 0
     offset_m: float = 1e-7
     shifted: bool = False
+    direction_half_width_deg: float | None = None
+    augmentation_q: Point2 | None = None
 
 
 @dataclass(frozen=True)
@@ -145,7 +147,108 @@ class Q2Result:
         return self.score.J_hat if self.score else None
 
 
-def _sample_sources(ss, level, grids, q=None, inward=1e-7, shifted=False):
+def _direction_boundary_samples(ss, q, count, half_width, inward):
+    """Analytic angular-contact pairs, with adaptive boundary maximization.
+
+    For a boundary anchor x, intersect the rays rotated by +/- 2 epsilon
+    with every segment/arc. This includes interior edge contacts missed by
+    radial grids. Refine sampled local maxima along each anchor boundary.
+    These are legal lower-bound samples, not a continuous upper certificate.
+    """
+    if point(q) == ss.first.position:
+        return ()
+    q = np.asarray(q)
+    delta = math.radians(2*half_width)*(1-1e-11)
+    rotations = [np.array(((math.cos(a), -math.sin(a)),
+                           (math.sin(a), math.cos(a)))) for a in (-delta, 0., delta)]
+    pieces = tuple(dict.fromkeys(ss.boundaries))
+    result = set()
+
+    def legal(x):
+        x, attained = _boundary_witness(ss, x)
+        if not attained:
+            params = ss.parameters(x)
+            x = ss.parameter_point(*params, inward=inward) if params else None
+        return x if x is not None and ss.contains([x])[0] else None
+
+    def evaluate(piece, t):
+        x = legal(piece.at(t))
+        if x is None or distance(x, q) <= ss.physics.near_radius:
+            return -1., None
+        best, pair = -1., None
+        for rotation in rotations:
+            v = rotation @ (np.asarray(x)-q)
+            v /= np.linalg.norm(v)
+            candidates = []
+            # Strict direction side of the near boundary also matters when q
+            # lies inside F: the other endpoint need not be on the boundary of F.
+            candidates.append(point(q+(ss.physics.near_radius+inward)*v))
+            for other in pieces:
+                if other.kind == 'segment':
+                    edge = np.asarray(other.end)-other.start
+                    a = np.asarray(other.start)-q
+                    det = v[0]*edge[1]-v[1]*edge[0]
+                    if det == 0:
+                        candidates.extend((other.start, other.end))
+                        continue
+                    radius = (a[0]*edge[1]-a[1]*edge[0])/det
+                    u = (a[0]*v[1]-a[1]*v[0])/det
+                    if radius >= 0 and 0 <= u <= 1:
+                        candidates.append(other.at(float(u)))
+                elif other.kind == 'arc':
+                    a = q-other.center
+                    projection = float(a @ v)
+                    disc = projection**2-float(a @ a)+other.radius**2
+                    if disc >= 0:
+                        for radius in (-projection-math.sqrt(disc), -projection+math.sqrt(disc)):
+                            y = q+radius*v
+                            if radius >= 0 and other.angle_contains(math.atan2(y[1]-other.center[1], y[0]-other.center[0])):
+                                candidates.append(point(y))
+                else:
+                    candidates.append(other.start)
+            for y in candidates:
+                y = legal(y)
+                if y is None or distance(y, q) <= ss.physics.near_radius:
+                    continue
+                if abs(angle_delta(bearing(q, x), bearing(q, y))) > 2*half_width:
+                    continue
+                d = distance(x, y)
+                if d > best:
+                    best, pair = d, (x, y)
+        if pair is not None:
+            result.update(pair)
+        return best, pair
+
+    for piece in pieces:
+        if piece.kind == 'point':
+            evaluate(piece, 0.)
+            continue
+        ts = np.linspace(0., 1., count)
+        values = [evaluate(piece, float(t))[0] for t in ts]
+        for i in range(1, len(ts)-1):
+            if values[i] < 0 or not (values[i] >= values[i-1] and values[i] >= values[i+1]):
+                continue
+            if values[i-1] == values[i] == values[i+1]:
+                continue
+            lo, hi = ts[i-1], ts[i+1]
+            # Golden-section search retains every tested legal contact pair.
+            ratio = (math.sqrt(5)-1)/2
+            a, b = hi-ratio*(hi-lo), lo+ratio*(hi-lo)
+            fa, fb = evaluate(piece, a)[0], evaluate(piece, b)[0]
+            for _ in range(18):
+                if fa < fb:
+                    lo, a, fa = a, b, fb
+                    b = lo+ratio*(hi-lo)
+                    fb = evaluate(piece, b)[0]
+                else:
+                    hi, b, fb = b, a, fa
+                    a = hi-ratio*(hi-lo)
+                    fa = evaluate(piece, a)[0]
+    return tuple(sorted(result))
+
+
+def _sample_sources(ss, level, grids, q=None, inward=1e-7, shifted=False,
+                    second_half_width_deg=1.):
     if level not in (0, 1, 2):
         raise ValueError('source level must be 0, 1, or 2')
     found, excluded = [], 0
@@ -173,8 +276,8 @@ def _sample_sources(ss, level, grids, q=None, inward=1e-7, shifted=False):
                                 found.append(p)
     for piece in ss.boundaries:
         for t in np.linspace(0, 1, grids[level][0]):
-            p = piece.at(float(t))
-            if ss.contains([p])[0]:
+            p, attained = _boundary_witness(ss, piece.at(float(t)))
+            if attained:
                 found.append(p)
     base = len(set(found))
     if q is not None:
@@ -200,12 +303,19 @@ def _sample_sources(ss, level, grids, q=None, inward=1e-7, shifted=False):
                 p = point(np.asarray(q)+radius*unit(a))
                 if ss.contains([p])[0]:
                     found.append(p)
+        for k in range(level+1):
+            found.extend(_direction_boundary_samples(ss, q, grids[k][0],
+                                                      second_half_width_deg, inward))
     pts = tuple(sorted(set(found)))
-    return SourceSamples(pts, level, grids[level], excluded, len(pts)-base, inward, shifted)
+    return SourceSamples(pts, level, grids[level], excluded, len(pts)-base, inward, shifted,
+                         second_half_width_deg if q is not None else None,
+                         point(q) if q is not None else None)
 
 
-def sample_sources(source_set: SourceSet, level: int, q: Point2 | None = None) -> SourceSamples:
-    return _sample_sources(source_set, level, SearchConfig().source_grids, q)
+def sample_sources(source_set: SourceSet, level: int, q: Point2 | None = None,
+                   second_half_width_deg: float = 1.) -> SourceSamples:
+    return _sample_sources(source_set, level, SearchConfig().source_grids, q,
+                           second_half_width_deg=second_half_width_deg)
 
 
 def _sample_diameter(points, policy):
@@ -291,6 +401,11 @@ def _refine_pair(ss, q, witness, samples, config):
 
 def score_point(source_set: SourceSet, q: Point2, samples: SourceSamples, config: SearchConfig) -> Score:
     ss, q = source_set, point(q)
+    if (samples.augmentation_q == q and samples.direction_half_width_deg !=
+            config.second_half_width_deg):
+        extra = _direction_boundary_samples(ss, q, samples.grid[0],
+                                            config.second_half_width_deg, samples.offset_m)
+        samples = replace(samples, points=tuple(sorted(set(samples.points).union(extra))))
     if not samples.points:
         return Score(None, None, None, 0, None, status='NUMERICAL_UNRESOLVED')
     points = np.asarray(samples.points, dtype=float)
@@ -718,7 +833,8 @@ def _search(ss, config, extra_points=()):
     for q in local:
         if expired():
             return output(reason='TIME_BUDGET')
-        near_samples = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m)
+        near_samples = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m,
+                                       second_half_width_deg=config.second_half_width_deg)
         counts[q] = near_samples.additional_count
         additions.update(near_samples.points)
         score = score_point(ss, q, near_samples, final_config)
@@ -727,7 +843,7 @@ def _search(ss, config, extra_points=()):
         for w in score.top_pairs:
             additions.update((w.x, w.y))
     common = replace(common, points=tuple(sorted(additions)), additional_count=len(additions)-len(common.points))
-    # Same retained near points and witness endpoints for every finalist.
+    # Same retained boundary points and witness endpoints for every finalist.
     final = []
     shifted = _sample_sources(ss, 2, config.source_grids, inward=config.near_offset_m, shifted=True)
     audit_samples = replace(common, points=tuple(sorted(set(common.points) | set(shifted.points))))
@@ -744,7 +860,8 @@ def _search(ss, config, extra_points=()):
         for factor in (.1, 10.):
             policy = replace(config.policy, length_abs=config.policy.length_abs*factor,
                              relative=config.policy.relative*factor, angle_abs=config.policy.angle_abs*factor)
-            varied = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m*factor)
+            varied = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m*factor,
+                                       second_half_width_deg=config.second_half_width_deg)
             varied = replace(varied, points=tuple(sorted(set(common.points) | set(varied.points))))
             tol_values.append(score_point(ss, q, varied, replace(final_config, policy=policy)).J_hat)
         values = (*source_values, score.J_hat, shifted_score.J_hat, *tol_values)
@@ -799,7 +916,8 @@ def _search(ss, config, extra_points=()):
         for q in new_qs:
             if expired():
                 break
-            extra = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m)
+            extra = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m,
+                                       second_half_width_deg=config.second_half_width_deg)
             additions.update(extra.points)
             score = score_point(ss, q, extra, final_config)
             for w in score.top_pairs:
@@ -850,7 +968,8 @@ def movement_frontier(source_set: SourceSet, budgets_m: Sequence[float], config:
     candidates.discard(source_set.first.position)
     candidates = sorted(q for q in candidates if _admissible(source_set, q, replace(config, movement_budget_m=None)))
     for q in candidates:
-        points.update(_sample_sources(source_set, 2, config.source_grids, q, config.near_offset_m).points)
+        points.update(_sample_sources(source_set, 2, config.source_grids, q, config.near_offset_m,
+                                       second_half_width_deg=config.second_half_width_deg).points)
     common = replace(common, points=tuple(sorted(points)))
     fine = replace(config, refine_pairs=True)
     preliminary = {q: score_point(source_set, q, common, fine) for q in candidates}
