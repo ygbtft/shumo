@@ -1,6 +1,6 @@
 {
   "area": "q2_worst_diameter",
-  "generated_utc": "2026-09-10T18:17:30.595403+00:00",
+  "generated_utc": "2026-09-10T20:01:35.673058+00:00",
   "n_cases": 48,
   "n_pass": 46,
   "n_fail": 2,
@@ -81,6 +81,16 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": false,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [
+          "sample_sources_nested"
+        ],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -288,7 +298,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.578004459002841
+      "elapsed_seconds": 2.5759060830023373
     },
     {
       "case_id": "polar_6",
@@ -311,6 +321,16 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": false,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [
+          "sample_sources_nested"
+        ],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -518,7 +538,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.565730916998291
+      "elapsed_seconds": 2.5321671670026262
     }
   ],
   "results": [
@@ -556,6 +576,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -765,7 +793,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.8951645830020425
+      "elapsed_seconds": 0.8912845000013476
     },
     {
       "case_id": "segment_10_100_20_0.5",
@@ -801,6 +829,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -1010,7 +1046,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.7810845410022011
+      "elapsed_seconds": 0.7857357500033686
     },
     {
       "case_id": "segment_10_100_20_2",
@@ -1046,6 +1082,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -1255,7 +1299,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.8697190419989056
+      "elapsed_seconds": 0.8875939999998081
     },
     {
       "case_id": "segment_20_80_40_1",
@@ -1291,6 +1335,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -1500,7 +1552,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.727066499999637
+      "elapsed_seconds": 0.7319007080004667
     },
     {
       "case_id": "segment_10_100_200_1",
@@ -1536,6 +1588,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -1745,7 +1805,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.7862602079985663
+      "elapsed_seconds": 0.7907007920002798
     },
     {
       "case_id": "tangent_segment_0",
@@ -1781,6 +1841,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -2003,7 +2071,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.7075486249996175
+      "elapsed_seconds": 0.7055540830042446
     },
     {
       "case_id": "tangent_segment_1",
@@ -2039,6 +2107,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -2261,7 +2337,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.7129357080011687
+      "elapsed_seconds": 0.6942952500030515
     },
     {
       "case_id": "tangent_segment_2",
@@ -2297,6 +2373,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -2519,7 +2603,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.908687834002194
+      "elapsed_seconds": 0.9021877919949475
     },
     {
       "case_id": "tangent_segment_3",
@@ -2555,6 +2639,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -2777,7 +2869,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.6892737499983923
+      "elapsed_seconds": 0.6720817090026685
     },
     {
       "case_id": "tangent_segment_4",
@@ -2813,6 +2905,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -3035,7 +3135,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.7058430839970242
+      "elapsed_seconds": 0.684873250000237
     },
     {
       "case_id": "tangent_segment_5",
@@ -3071,6 +3171,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -3293,7 +3401,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.8683062089985469
+      "elapsed_seconds": 0.8899860409946996
     },
     {
       "case_id": "tangent_polar_0",
@@ -3316,6 +3424,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -3503,7 +3619,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.6661239589993784
+      "elapsed_seconds": 2.6731845829999656
     },
     {
       "case_id": "tangent_polar_1",
@@ -3526,6 +3642,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -3713,7 +3837,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.2147884170008183
+      "elapsed_seconds": 2.2768623340016347
     },
     {
       "case_id": "tangent_polar_2",
@@ -3736,6 +3860,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -3923,7 +4055,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.6569812080015254
+      "elapsed_seconds": 2.6394960839970736
     },
     {
       "case_id": "tangent_polar_3",
@@ -3946,6 +4078,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -4133,7 +4273,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.4033837499991932
+      "elapsed_seconds": 2.435381834002328
     },
     {
       "case_id": "tangent_polar_4",
@@ -4156,6 +4296,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -4343,7 +4491,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.3815140000006068
+      "elapsed_seconds": 2.3908298340029432
     },
     {
       "case_id": "tangent_polar_5",
@@ -4366,6 +4514,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -4553,7 +4709,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.3254344160013716
+      "elapsed_seconds": 2.295879833000072
     },
     {
       "case_id": "polar_same_station_closed_0",
@@ -4589,6 +4745,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -4790,7 +4954,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8247339589979674
+      "elapsed_seconds": 0.8032591250012047
     },
     {
       "case_id": "polar_same_station_closed_1",
@@ -4826,6 +4990,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -5027,7 +5199,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8326740420015994
+      "elapsed_seconds": 0.8609486669956823
     },
     {
       "case_id": "polar_same_station_closed_2",
@@ -5063,6 +5235,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -5097,24 +5277,24 @@
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
-            1499.990861486684,
-            -5.235977122834092
+            4.999969638288343,
+            -0.017453257425183805
           ],
           "y": [
-            4.999969638288343,
-            0.017453257425183805
+            1499.990861486684,
+            5.235977122834092
           ],
           "branch": "direction",
           "common_bearing_deg": 0.0,
           "distance_m": 1495.0001221539821,
           "constraint_residuals": {
             "second_range_minus_near_m": [
-              1494.9999999999984,
-              1.0000000028043132e-07
+              1.0000000028043132e-07,
+              1494.9999999999984
             ],
             "second_angle_minus_halfwidth_deg": [
-              -6.822320486321587e-14,
-              -1.1379786002407855e-14
+              4.546363285840016e-14,
+              -6.822320486321587e-14
             ]
           },
           "near_boundary": true,
@@ -5122,25 +5302,25 @@
           "worlds": [
             {
               "p": [
-                1499.990861486684,
-                -5.235977122834092
-              ],
-              "rho": 1499.9999999999984,
-              "first_distance_m": 1499.9999999999984,
-              "second_distance_m": 1499.9999999999984,
-              "first_error_deg": 0.1999999999999318,
-              "second_error_deg": 0.1999999999999318
-            },
-            {
-              "p": [
                 4.999969638288343,
-                0.017453257425183805
+                -0.017453257425183805
               ],
               "rho": 1000.0,
               "first_distance_m": 5.0000001,
               "second_distance_m": 5.0000001,
-              "first_error_deg": -0.19999999999998863,
-              "second_error_deg": -0.19999999999998863
+              "first_error_deg": 0.19999999999998863,
+              "second_error_deg": 0.19999999999998863
+            },
+            {
+              "p": [
+                1499.990861486684,
+                5.235977122834092
+              ],
+              "rho": 1499.9999999999984,
+              "first_distance_m": 1499.9999999999984,
+              "second_distance_m": 1499.9999999999984,
+              "first_error_deg": -0.1999999999999318,
+              "second_error_deg": -0.1999999999999318
             }
           ],
           "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
@@ -5264,7 +5444,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8335605840002245
+      "elapsed_seconds": 0.8327535829957924
     },
     {
       "case_id": "segment_special_18",
@@ -5300,6 +5480,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -5505,7 +5693,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.26106308300222736
+      "elapsed_seconds": 0.2601777919990127
     },
     {
       "case_id": "segment_special_100",
@@ -5541,6 +5729,14 @@
       ],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -5750,7 +5946,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.23030308399756905
+      "elapsed_seconds": 0.228317708002578
     },
     {
       "case_id": "polar_0",
@@ -5773,6 +5969,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -5946,7 +6150,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.451766292000684
+      "elapsed_seconds": 2.4766136670004926
     },
     {
       "case_id": "polar_1",
@@ -5969,6 +6173,16 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": false,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [
+          "sample_sources_nested"
+        ],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -6176,7 +6390,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.578004459002841
+      "elapsed_seconds": 2.5759060830023373
     },
     {
       "case_id": "polar_2",
@@ -6199,6 +6413,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -6372,7 +6594,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.239628666997305
+      "elapsed_seconds": 2.243888874996628
     },
     {
       "case_id": "polar_3",
@@ -6395,6 +6617,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -6568,7 +6798,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.40555729100015
+      "elapsed_seconds": 2.3920390420025797
     },
     {
       "case_id": "polar_4",
@@ -6591,6 +6821,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -6623,24 +6861,24 @@
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
-            1499.7715427345854,
-            -26.17860965592374
+            4.999238575766726,
+            -0.08726203393165821
           ],
           "y": [
-            4.999238575766726,
-            0.08726203393165821
+            1499.7715427345854,
+            26.17860965592374
           ],
           "branch": "direction",
           "common_bearing_deg": 0.0,
           "distance_m": 1495.00305594868,
           "constraint_residuals": {
             "second_range_minus_near_m": [
-              1494.9999999999986,
-              1.0000000028043132e-07
+              1.0000000028043132e-07,
+              1494.9999999999986
             ],
             "second_angle_minus_halfwidth_deg": [
               0.0,
-              0.0
+              -5.684341886080802e-14
             ]
           },
           "near_boundary": true,
@@ -6648,25 +6886,25 @@
           "worlds": [
             {
               "p": [
-                1499.7715427345854,
-                -26.17860965592374
-              ],
-              "rho": 1499.9999999999986,
-              "first_distance_m": 1499.9999999999986,
-              "second_distance_m": 1499.9999999999986,
-              "first_error_deg": 0.9999999999999432,
-              "second_error_deg": 0.9999999999999432
-            },
-            {
-              "p": [
                 4.999238575766726,
-                0.08726203393165821
+                -0.08726203393165821
               ],
               "rho": 1000.0,
               "first_distance_m": 5.0000001,
               "second_distance_m": 5.0000001,
-              "first_error_deg": -1.0,
-              "second_error_deg": -1.0
+              "first_error_deg": 1.0,
+              "second_error_deg": 1.0
+            },
+            {
+              "p": [
+                1499.7715427345854,
+                26.17860965592374
+              ],
+              "rho": 1499.9999999999986,
+              "first_distance_m": 1499.9999999999986,
+              "second_distance_m": 1499.9999999999986,
+              "first_error_deg": -0.9999999999999432,
+              "second_error_deg": -0.9999999999999432
             }
           ],
           "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
@@ -6764,7 +7002,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 0.8161398329975782
+      "elapsed_seconds": 0.875721208001778
     },
     {
       "case_id": "polar_5",
@@ -6787,6 +7025,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -6962,7 +7208,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 1.8820809999997437
+      "elapsed_seconds": 1.8550442080013454
     },
     {
       "case_id": "polar_6",
@@ -6985,6 +7231,16 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": false,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [
+          "sample_sources_nested"
+        ],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -7192,7 +7448,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.565730916998291
+      "elapsed_seconds": 2.5321671670026262
     },
     {
       "case_id": "polar_7",
@@ -7215,6 +7471,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -7389,7 +7653,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.632417707998684
+      "elapsed_seconds": 3.6037990410040948
     },
     {
       "case_id": "polar_8",
@@ -7412,6 +7676,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -7586,7 +7858,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.1220086670000455
+      "elapsed_seconds": 3.116180457996961
     },
     {
       "case_id": "polar_9",
@@ -7609,6 +7881,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -7783,7 +8063,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.0793597089977993
+      "elapsed_seconds": 3.134429291996639
     },
     {
       "case_id": "polar_10",
@@ -7806,6 +8086,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -7980,7 +8268,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.85899737499858
+      "elapsed_seconds": 2.926736624998739
     },
     {
       "case_id": "polar_11",
@@ -8003,6 +8291,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -8177,7 +8473,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.42477633299859
+      "elapsed_seconds": 2.447671417001402
     },
     {
       "case_id": "polar_12",
@@ -8200,6 +8496,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -8374,7 +8678,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.421091582997178
+      "elapsed_seconds": 2.458546750000096
     },
     {
       "case_id": "monotone_epsilon",
@@ -8384,6 +8688,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "q": [
           750.0,
@@ -8422,7 +8734,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 2.651790791998792
+      "elapsed_seconds": 2.7025634169986006
     },
     {
       "case_id": "monotone_expansion",
@@ -8432,6 +8744,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "q": [
           750.0,
@@ -8476,7 +8796,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 0.07797699999719043
+      "elapsed_seconds": 0.07888804099638946
     },
     {
       "case_id": "monotone_nested",
@@ -8486,6 +8806,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "q": [
           750.0,
@@ -8520,7 +8848,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 1.1989234169996053
+      "elapsed_seconds": 1.2206912500041653
     },
     {
       "case_id": "clearance_10_18",
@@ -8530,6 +8858,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -8639,7 +8975,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.0010275409986206796
+      "elapsed_seconds": 0.001036791996739339
     },
     {
       "case_id": "clearance_10_30",
@@ -8649,6 +8985,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -8767,7 +9111,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.030143833999318304
+      "elapsed_seconds": 0.030897959004505537
     },
     {
       "case_id": "clearance_50_86",
@@ -8777,6 +9121,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -8895,7 +9247,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.04949329200098873
+      "elapsed_seconds": 0.04911241700028768
     },
     {
       "case_id": "clearance_50_90",
@@ -8905,6 +9257,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -9016,7 +9376,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.14658604199939873
+      "elapsed_seconds": 0.14617400000133784
     },
     {
       "case_id": "clearance_50_92",
@@ -9026,6 +9386,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -9162,7 +9530,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.030381291999219684
+      "elapsed_seconds": 0.03065141700062668
     },
     {
       "case_id": "feedback_near_boundary",
@@ -9185,6 +9553,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -9474,7 +9850,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0010599580018606503
+      "elapsed_seconds": 0.0011201250017620623
     },
     {
       "case_id": "feedback_wrap_zero",
@@ -9497,6 +9873,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           -100.0,
@@ -10063,7 +10447,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0015907919987512287
+      "elapsed_seconds": 0.0016266249949694611
     },
     {
       "case_id": "feedback_singleton",
@@ -10086,6 +10470,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "S": [
           0.0,
@@ -10255,7 +10647,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0009393330001330469
+      "elapsed_seconds": 0.0009714589978102595
     },
     {
       "case_id": "short_baseline_select",
@@ -10279,6 +10671,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "budget": 10.0
       },
@@ -10393,7 +10793,7 @@
                 "H_U": 1495.229256166799,
                 "status": "NOT_YET_GUARANTEED",
                 "evidence": "impossible_triple",
-                "residual": 2.8449465006019636e-15,
+                "residual": 2.345346139520643e-15,
                 "threshold_margin_m": -727.7277502323589,
                 "outer_sides": 32,
                 "subsequent_movement_seconds": null,
@@ -10420,10 +10820,6 @@
                   [
                     5.0,
                     1.835943913173696e-18
-                  ],
-                  [
-                    5.0,
-                    -1.0374036021497043e-17
                   ],
                   [
                     1499.7715383022305,
@@ -10585,7 +10981,7 @@
         "closed_form",
         "adversarial"
       ],
-      "elapsed_seconds": 9.593769916002202
+      "elapsed_seconds": 9.610815374995582
     },
     {
       "case_id": "short_baseline_frontier",
@@ -10622,6 +11018,14 @@
       "refined_J_assessments": [],
       "regression_targets": [],
       "passed": true,
+      "failure_attribution": {
+        "J_underestimate_detected": false,
+        "continuous_certificate_verdict": null,
+        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
+        "sampling_contract_failures": [],
+        "other_failed_checks": [],
+        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
+      },
       "input": {
         "budgets": [
           0.0,
@@ -11151,16 +11555,16 @@
         "closed_form",
         "invariant"
       ],
-      "elapsed_seconds": 22.694350415997178
+      "elapsed_seconds": 22.983126875005837
     }
   ],
   "weak_comparisons_excluded": 0,
-  "elapsed_seconds": 95.23904625000068,
+  "elapsed_seconds": 95.8309490419997,
   "production_sha256": {
     "q2.py": "27dc886757f5b3f60e7c37a7affd81a9bfd5812ea2c65d043c0d471d7f43999e",
     "diagnostics.py": "b4b5ad59d0a6fee531931f5f28af7fb8b4ee88b22e84c489eca6b4a8339fab90",
     "feasible.py": "ac537fe8957f418f3ba7840adb754866c6872bf3880de339351e789af5f2aada",
-    "geometry.py": "5a0c75e2b8eccb3bcba10e7d8d4f204132cf6108eaf0ff6525eb7bee0c96d68e"
+    "geometry.py": "2e0feb1bf9c52e9c3c43150dc368c759f36861c0ba67f4ac6017a9089bf8e2a5"
   },
   "scope_notes": [
     "J_hat is NUMERICAL_CANDIDATE, not a certified upper bound. Strict oracle dominance is the user-requested adequacy criterion; a failure can expose insufficient sampling rather than incorrect pair algebra.",
@@ -11169,6 +11573,7 @@
   ],
   "schema_version": 2,
   "grade_scope": "Primary J assessments only; refined profiles and non-J contracts are separate. C does not certify the continuous supremum or waive auxiliary failures.",
+  "failure_attribution_note": "polar_1/polar_6 fail the PLAN 7.2 and API nested-sampling contract, not J lower-bound dominance. No failure is suppressed and no continuous upper bound is inferred.",
   "grade_definitions": {
     "A": "低估: J_hat < independently realizable pair distance - 1e-6 m; correctness regression",
     "B": "逼近不够: no A, but closed-form absolute gap exceeds max(0.1 m, 1% exact J); numerical accuracy",
@@ -11275,7 +11680,19 @@
     "q2.py": "27dc886757f5b3f60e7c37a7affd81a9bfd5812ea2c65d043c0d471d7f43999e",
     "diagnostics.py": "b4b5ad59d0a6fee531931f5f28af7fb8b4ee88b22e84c489eca6b4a8339fab90",
     "feasible.py": "ac537fe8957f418f3ba7840adb754866c6872bf3880de339351e789af5f2aada",
-    "geometry.py": "5a0c75e2b8eccb3bcba10e7d8d4f204132cf6108eaf0ff6525eb7bee0c96d68e"
+    "geometry.py": "2e0feb1bf9c52e9c3c43150dc368c759f36861c0ba67f4ac6017a9089bf8e2a5"
   },
-  "production_unchanged_during_run": true
+  "production_unchanged_during_run": true,
+  "certification": {
+    "enabled": false,
+    "options": null,
+    "results": [],
+    "verdict_counts": {
+      "PASS": 0,
+      "UNDERESTIMATE": 0,
+      "OVERESTIMATE": 0
+    },
+    "converged_count": 0,
+    "scope": "continuous score cases only; finite clouds and selection contracts retain their own oracles"
+  }
 }

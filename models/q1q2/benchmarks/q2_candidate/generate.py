@@ -22,15 +22,19 @@ def world(p, inp):
     return [inp['S'][0]+x*math.cos(t)-y*math.sin(t), inp['S'][1]+x*math.sin(t)+y*math.cos(t)]
 
 
-def legal(points, inp, closure=False):
+def legal(points, inp, closure=False, boundary_slack=True):
     p = np.atleast_2d(points)
     d = p - inp['S']
     r = np.linalg.norm(d, axis=1)
     a = (np.degrees(np.arctan2(d[:,1], d[:,0]))-inp['theta']+180)%360-180
-    # Only roundoff allowance on closed constraints; near exclusion stays strict.
-    return ((r >= 5-1e-8 if closure else r > 5) & (r <= inp['rho_hi']+1e-8)
-            & (np.abs(a) <= inp['eps']+1e-10)
-            & (np.linalg.norm(p-inp['center'], axis=1) <= inp['arena_radius']+1e-8))
+    # World witnesses allow representation slack; API probes test the submitted
+    # binary64 points with literal closed inequalities, including after transforms.
+    length_slack = 1e-8 if boundary_slack else 0.
+    angle_slack = 1e-10 if boundary_slack else 0.
+    # Near exclusion stays strict.
+    return ((r >= 5-1e-8 if closure else r > 5) & (r <= inp['rho_hi']+length_slack)
+            & (np.abs(a) <= inp['eps']+angle_slack)
+            & (np.linalg.norm(p-inp['center'], axis=1) <= inp['arena_radius']+length_slack))
 
 
 def radial(alpha, inp):

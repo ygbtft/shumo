@@ -95,9 +95,17 @@ def generate():
                 assert math.isclose(gt[key],val,rel_tol=2e-12,abs_tol=2e-12), (name,key,gt[key],val)
         nonzero_distances=[math.dist(a,b) for a,b in combinations(points,2) if a!=b]
         magnitude=max(abs(x) for v in points for x in v)
-        feature=min(nonzero_distances,default=0.)
+        # Three-point forced circles also depend on altitude, not just edge lengths.
+        # Compute it from exact submitted coordinates to avoid cancellation.
+        altitudes=[]
+        if len(points)==3:
+            a,b,c=[tuple(F(x) for x in p) for p in points]
+            area2=abs((b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]))
+            if area2 and nonzero_distances:
+                altitudes.append(float(area2)/max(nonzero_distances))
+        feature=min(nonzero_distances+altitudes,default=0.)
         limited=magnitude>1e6 or (0<feature<1e-3)
-        extra['scale_assessment']=dict(coordinate_magnitude=magnitude,feature_m=feature,scale_limit=limited)
+        extra['scale_assessment']=dict(coordinate_magnitude=magnitude,feature_m=feature,min_nonzero_pair_distance_m=min(nonzero_distances,default=0.),min_nonzero_triangle_altitude_m=min(altitudes,default=None),scale_limit=limited)
         tags=list(tags)+(['scale_limit'] if limited else ['resolved_scale'])
         cases.append(dict(case_id=name,input=dict(points=points,seeds=[0,1,7,42],**extra),ground_truth=gt,
                           truth_method='exact_fraction_enumeration'+('+closed_form' if closed else ''),

@@ -241,6 +241,17 @@ def classify_case(case,actual):
     grade=min((x['grade'] for x in assessments),default=None)
     return grade,assessments,refined
 
+
+def failure_attribution(checks, grade, actual):
+    failed=[c['name'] for c in checks if not c['passed']]
+    return dict(
+        J_underestimate_detected=grade=='A',
+        continuous_certificate_verdict=actual.get('certification', {}).get('verdict'),
+        J_scope='Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.',
+        sampling_contract_failures=[n for n in failed if n=='sample_sources_nested'],
+        other_failed_checks=[n for n in failed if n!='sample_sources_nested'],
+        benchmark_correction='Separate sampling-contract failures from J under/overestimation; retain all failed checks.')
+
 def main():
     import argparse
     parser = argparse.ArgumentParser(description=__doc__)
@@ -274,7 +285,7 @@ def main():
             grade,assessments,refined=None,[],[]
             actual={'exception':repr(e),'traceback':traceback.format_exc()};checks=[dict(name='execution',passed=False,expected='successful execution',actual=repr(e),semantics='execution')]
         passed=all(x['passed'] for x in checks)
-        rows.append(dict(case_id=c['case_id'],grade=grade,grade_label={'A':'低估','B':'逼近不够','C':'通过',None:'不适用或执行异常'}[grade],J_assessments=assessments,refined_J_assessments=refined,regression_targets=[a['regression_target'] for a in assessments if a['grade']=='A'],passed=passed,input=c['input'],expected=c['ground_truth'],actual=actual,checks=checks,truth_method=c['truth_method'],tags=c['tags'],elapsed_seconds=time.monotonic()-start))
+        rows.append(dict(case_id=c['case_id'],grade=grade,grade_label={'A':'低估','B':'逼近不够','C':'通过',None:'不适用或执行异常'}[grade],J_assessments=assessments,refined_J_assessments=refined,regression_targets=[a['regression_target'] for a in assessments if a['grade']=='A'],passed=passed,failure_attribution=failure_attribution(checks,grade,actual),input=c['input'],expected=c['ground_truth'],actual=actual,checks=checks,truth_method=c['truth_method'],tags=c['tags'],elapsed_seconds=time.monotonic()-start))
         print(c['case_id'],grade or 'N/A','PASS' if passed else 'FAIL',','.join(x['name'] for x in checks if not x['passed']),flush=True)
     categories={}
     for row in rows:
@@ -284,6 +295,7 @@ def main():
     report=dict(area='q2_worst_diameter',generated_utc=datetime.now(timezone.utc).isoformat(),n_cases=len(rows),n_pass=sum(r['passed'] for r in rows),n_fail=sum(not r['passed'] for r in rows),categories=categories,tolerances=TOL,failures=[r for r in rows if not r['passed']],results=rows,weak_comparisons_excluded=0,elapsed_seconds=time.monotonic()-started,production_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [HERE.parents[1]/'q2.py',HERE.parents[1]/'diagnostics.py',HERE.parents[1]/'feasible.py']},scope_notes=['J_hat is NUMERICAL_CANDIDATE, not a certified upper bound. Strict oracle dominance is the user-requested adequacy criterion; a failure can expose insufficient sampling rather than incorrect pair algebra.','Selection tie order is checked on returned candidates; no global continuous optimum certificate is claimed. Conditional R support checks do not certify full K.','Known exact segment K checks independently decide E20. At equality R=20, conservative NOT_YET_GUARANTEED is valid, not mathematical impossibility.'])
     hashes_after={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in production_paths}
     report.update(schema_version=2,grade_scope='Primary J assessments only; refined profiles and non-J contracts are separate. C does not certify the continuous supremum or waive auxiliary failures.',
+                  failure_attribution_note='polar_1/polar_6 fail the PLAN 7.2 and API nested-sampling contract, not J lower-bound dominance. No failure is suppressed and no continuous upper bound is inferred.',
                   grade_definitions={'A':'低估: J_hat < independently realizable pair distance - 1e-6 m; correctness regression',
                                      'B':'逼近不够: no A, but closed-form absolute gap exceeds max(0.1 m, 1% exact J); numerical accuracy',
                                      'C':'通过: applicable reachable-pair and closed-form criteria pass'},

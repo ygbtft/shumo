@@ -140,6 +140,11 @@ def wedge_halfplanes(obs: BearingMeasurement) -> tuple[HalfPlane, ...]:
 
 
 def convex_hull(points: Sequence[Point2], policy: NumericPolicy) -> tuple[Point2, ...]:
+    """CCW extreme vertices, starting at the exact lexicographic minimum.
+
+    Sort exactly first: tolerance-based comparisons are not transitive. Clean
+    the cyclic hull afterwards so near duplicates across the seam are included.
+    """
     pts = sorted(set(point(p) for p in points))
     if len(pts) <= 1:
         return tuple(pts)
@@ -151,7 +156,38 @@ def convex_hull(points: Sequence[Point2], policy: NumericPolicy) -> tuple[Point2
                 out.pop()
             out.append(p)
         return out
-    return tuple(half(pts)[:-1] + half(pts[::-1])[:-1])
+    hull = half(pts)[:-1] + half(pts[::-1])[:-1]
+    if len(hull) <= 2:
+        return tuple(hull)
+    perimeter = sum(math.dist(a, b) for a, b in zip(hull, hull[1:]+hull[:1]))
+    extent = math.hypot(max(p[0] for p in hull)-hull[0][0],
+                        max(p[1] for p in hull)-min(p[1] for p in hull))
+    # Area/perimeter bounds the cleanup below the polygon's thickness. A
+    # length tolerance alone would erase genuine corners of a thin polygon.
+    tol = min(policy.length(extent), polygon_area(hull)/perimeter/4)
+    n = len(hull)
+    previous = [(i-1) % n for i in range(n)]
+    following = [(i+1) % n for i in range(n)]
+    alive = [True]*n
+    pending = deque(range(n))
+    remaining = n
+    while pending and remaining > 3:
+        i = pending.popleft()
+        if not alive[i]:
+            continue
+        left, right = previous[i], following[i]
+        a, b, c = hull[left], hull[i], hull[right]
+        ab, bc, ac = np.subtract(b, a), np.subtract(c, b), np.subtract(c, a)
+        # Remove only points between their neighbours and within a scaled
+        # distance of that chord; retain original coordinates, never average.
+        if np.dot(ab, bc) >= 0 and abs(cross(ab, ac)) <= tol*math.hypot(*ac):
+            alive[i] = False
+            remaining -= 1
+            following[left], previous[right] = right, left
+            pending.extend((left, right))
+    cleaned = [p for i, p in enumerate(hull) if alive[i]]
+    start = min(range(len(cleaned)), key=cleaned.__getitem__)
+    return tuple(cleaned[start:]+cleaned[:start])
 
 
 def polygon_area(vertices):
@@ -293,11 +329,11 @@ def intersect_halfplanes(hps: Sequence[HalfPlane], policy: NumericPolicy) -> Reg
     if len(vertices) < 3 or polygon_area(vertices) == 0:
         vertices = _enumerated_vertices(rows, tol)
         method = 'enumeration_fallback'
-    hull = convex_hull(vertices, policy)
-    if not hull:
+    # Normalize in metres, after the affine transform: world-coordinate
+    # rounding can itself introduce duplicate or collinear vertices.
+    world = convex_hull([point(origin+scale*np.array(v)) for v in vertices], policy)
+    if not world:
         return Region(None, feasible_point=feasible, status='NUMERICAL_UNRESOLVED', method=method)
-    # Exact duplicates are already removed; small area alone is not a rank decision.
-    world = tuple(point(origin+scale*np.array(v)) for v in hull)
     residual = float(np.max(normals @ np.asarray(world).T-offsets[:, None]))
     sines = [abs(cross(a, b)) for a, b in combinations(normals, 2) if cross(a, b) != 0]
     sine = min(sines, default=1.)

@@ -177,7 +177,7 @@ def main():
             failures.append(dict(case_id=case['case_id'],input=inp,expected=gt,actual=actual,error=errors,
                                  truth_method=case['truth_method'],note='All failed checks retained; no expected-failure suppression.'))
     report=dict(area='q1_circle_cover',generated_utc=datetime.now(timezone.utc).isoformat(),n_cases=len(cases),n_pass=len(cases)-len(failures),n_fail=len(failures),categories=categories,tolerances=TOLERANCES,failures=failures,weak_comparisons_excluded=0,n_checks=check_count,
-                scale_limit_policy=dict(max_coordinate_m=1e6,min_nonzero_pair_distance_m=1e-3,unresolved_accepted_only_outside=True,ok_results_still_checked=True),
+                scale_limit_policy=dict(max_coordinate_m=1e6,min_nonzero_feature_m=1e-3,feature_definition="minimum nonzero pair distance and (three-point inputs only) triangle altitude",unresolved_accepted_only_outside=True,ok_results_still_checked=True),
                 scale_limits=scale_limits,anchors=anchors,production_policy=asdict(policy),cases_sha256=hashlib.sha256((ROOT/'cases.jsonl').read_bytes()).hexdigest(),
                 production_circle_sha256=hashlib.sha256((ROOT.parents[1]/'circle.py').read_bytes()).hexdigest(),python=sys.version,
                 observed_cover_statuses={s:sum(a.get('cover',{}).get('status')==s for a in outputs.values()) for s in ['YES','NO','UNRESOLVED','NOT_APPLICABLE']})

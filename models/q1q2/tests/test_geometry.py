@@ -141,6 +141,66 @@ def test_square_parallel_ties_and_collinear_interior():
     assert d.indices == (0,2)
 
 
+@pytest.mark.parametrize('scale,shift', [(1., (0., 0.)),
+                                       (1e-6, (0., 0.)),
+                                       (1e6, (2e6, -2e6))])
+def test_hull_merges_near_duplicates_and_collinear_vertices(scale, shift):
+    from fractions import Fraction
+    from models.q1q2.circle import minimum_circle, diameter_circle_cover
+    corners = [(-1., -1.), (1., -1.), (1., 1.), (-1., 1.)]
+    # Noisy edge midpoint and corner, plus a duplicate closing vertex.
+    noise = P.length(2*scale)/8/scale
+    raw = corners + [(0., -1.-noise), (1.+noise, 1.),
+                     (-1.-noise, -1.), corners[0]]
+    raw = [tuple(np.asarray(shift)+scale*np.asarray(p)) for p in raw]
+    hull = convex_hull(raw, P)
+    assert len(hull) == 4
+    assert hull[0] == min(hull)
+    assert len(set(hull)) == len(hull)
+    for order in (raw[::-1], raw[2:]+raw[:2]):
+        assert convex_hull(order, P) == hull
+    exact = [tuple(map(Fraction.from_float, p)) for p in hull]
+    for i in range(4):
+        a, b, c = exact[i], exact[(i+1) % 4], exact[(i+2) % 4]
+        assert (b[0]-a[0])*(c[1]-b[1])-(b[1]-a[1])*(c[0]-b[0]) > 0
+    region = Region(Kind.POLYGON, hull)
+    d = diameter(region, P)
+    tolerance = P.length(3*scale)
+    assert abs(d.length-brute_diameter(raw)) <= tolerance
+    assert abs(minimum_circle(hull, P, 0).radius-math.sqrt(2)*scale) <= tolerance
+    assert diameter_circle_cover(region, d, P).status != 'NO'
+
+
+@pytest.mark.parametrize('width', [1e-7, 1e-12, 1e-15])
+def test_normalization_preserves_genuine_thin_polygon(width):
+    corners = [(0., 0.), (1., 0.), (1., width), (0., width)]
+    assert convex_hull(corners, P) == tuple(corners)
+    region = intersect_halfplanes([HP((1, 0), 1), HP((-1, 0), 0),
+                                   HP((0, 1), width), HP((0, -1), 0)], P)
+    assert region.kind == Kind.POLYGON
+    assert len(region.vertices) == 4
+
+
+def test_square_wedges_four_normalized_vertices():
+    # Same observations as the independent benchmark's square_wedges case.
+    observations = [Obs((-1, -1), 45, 45), Obs((1, 1), 225, 45)]
+    result = solve(observations, P)
+    assert result.region.kind == Kind.POLYGON
+    assert len(result.region.vertices) == 4
+    assert result.region.vertices[0] == min(result.region.vertices)
+    assert result.diameter.length == pytest.approx(2*math.sqrt(2), abs=P.length(3))
+    assert result.minimum_circle.radius == pytest.approx(math.sqrt(2), abs=P.length(3))
+    assert result.coverage.status == 'YES'
+
+
+@pytest.mark.parametrize('policy', [NumericPolicy(length_abs=1e-8, relative=0),
+                                   NumericPolicy(length_abs=0, relative=1e-8)])
+def test_normalization_obeys_absolute_and_relative_policy(policy):
+    points = [(0., 0.), (1., -1e-9), (2., 0.), (2., 2.), (0., 2.)]
+    assert len(convex_hull(points, NumericPolicy(length_abs=0, relative=0))) == 5
+    assert len(convex_hull(points, policy)) == 4
+
+
 def test_deque_against_independent_line_systems():
     normals = np.array([(math.cos(a),math.sin(a)) for a in np.linspace(0,2*math.pi,9,endpoint=False)])
     offsets = np.array([1,1.1,.9,1.2,1.,.95,1.05,1.2,.9])

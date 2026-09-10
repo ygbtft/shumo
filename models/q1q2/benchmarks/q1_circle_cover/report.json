@@ -1,6 +1,6 @@
 {
   "area": "q1_circle_cover",
-  "generated_utc": "2026-09-10T18:15:49.699931+00:00",
+  "generated_utc": "2026-09-10T19:59:54.158941+00:00",
   "n_cases": 330,
   "n_pass": 329,
   "n_fail": 1,
@@ -16,8 +16,13 @@
       "n_fail": 0
     },
     "resolved_scale": {
-      "n_cases": 234,
-      "n_pass": 233,
+      "n_cases": 222,
+      "n_pass": 222,
+      "n_fail": 0
+    },
+    "scale_limit": {
+      "n_cases": 95,
+      "n_pass": 94,
       "n_fail": 1
     },
     "adversarial": {
@@ -54,11 +59,6 @@
       "n_cases": 180,
       "n_pass": 179,
       "n_fail": 1
-    },
-    "scale_limit": {
-      "n_cases": 83,
-      "n_pass": 83,
-      "n_fail": 0
     },
     "anchor": {
       "n_cases": 1,
@@ -123,8 +123,10 @@
         },
         "scale_assessment": {
           "coordinate_magnitude": 456.6676144758471,
-          "feature_m": 0.9999999999999875,
-          "scale_limit": false
+          "feature_m": 1.0000189774898206e-09,
+          "min_nonzero_pair_distance_m": 0.9999999999999875,
+          "min_nonzero_triangle_altitude_m": 1.0000189774898206e-09,
+          "scale_limit": true
         }
       },
       "expected": {
@@ -309,16 +311,259 @@
   "n_checks": 21056,
   "scale_limit_policy": {
     "max_coordinate_m": 1000000.0,
-    "min_nonzero_pair_distance_m": 0.001,
+    "min_nonzero_feature_m": 0.001,
+    "feature_definition": "minimum nonzero pair distance and (three-point inputs only) triangle altitude",
     "unresolved_accepted_only_outside": true,
     "ok_results_still_checked": true
   },
   "scale_limits": [
     {
+      "case_id": "isosceles_1e-14",
+      "assessment": {
+        "coordinate_magnitude": 1.0,
+        "feature_m": 1e-14,
+        "min_nonzero_pair_distance_m": 1.0,
+        "min_nonzero_triangle_altitude_m": 1e-14,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1.0,
+          "support_vertex_indices": [
+            0,
+            1
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": "ForcedSupportError",
+        "cover": {
+          "status": "YES",
+          "forced_center": [
+            0.0,
+            0.0
+          ],
+          "thales_max": 0.0,
+          "kappa": 1.0,
+          "eta": 1.0,
+          "counterexample_vertex": null,
+          "counterexample_index": null,
+          "finite_cover": true,
+          "midpoint_radius": 1.0,
+          "tolerance_m2": 4.0800000000000004e-10
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "isosceles_1e-09",
+      "assessment": {
+        "coordinate_magnitude": 1.0,
+        "feature_m": 1e-09,
+        "min_nonzero_pair_distance_m": 1.0,
+        "min_nonzero_triangle_altitude_m": 1e-09,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1.0,
+          "support_vertex_indices": [
+            0,
+            1
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": {
+          "center": [
+            0.0,
+            -499999999.99999994
+          ],
+          "radius": 499999999.99999994,
+          "support_vertex_indices": [
+            0,
+            1,
+            2
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "forced_boundary",
+          "diagnostics": []
+        },
+        "cover": {
+          "status": "YES",
+          "forced_center": [
+            0.0,
+            0.0
+          ],
+          "thales_max": 0.0,
+          "kappa": 1.0,
+          "eta": 1.0,
+          "counterexample_vertex": null,
+          "counterexample_index": null,
+          "finite_cover": true,
+          "midpoint_radius": 1.0,
+          "tolerance_m2": 4.0800000000000004e-10
+        }
+      },
+      "passed": true
+    },
+    {
       "case_id": "segment_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 3.9999999999999996e-05,
         "feature_m": 3.9999999999999996e-05,
+        "min_nonzero_pair_distance_m": 3.9999999999999996e-05,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -444,6 +689,8 @@
       "assessment": {
         "coordinate_magnitude": 40000000.0,
         "feature_m": 40000000.0,
+        "min_nonzero_pair_distance_m": 40000000.0,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -569,6 +816,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000040.0,
         "feature_m": 40.0,
+        "min_nonzero_pair_distance_m": 40.0,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -694,6 +943,8 @@
       "assessment": {
         "coordinate_magnitude": 9.999999999999999e-06,
         "feature_m": 2e-06,
+        "min_nonzero_pair_distance_m": 2e-06,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -787,6 +1038,8 @@
       "assessment": {
         "coordinate_magnitude": 10000000.0,
         "feature_m": 2000000.0,
+        "min_nonzero_pair_distance_m": 2000000.0,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -880,6 +1133,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000010.0,
         "feature_m": 2.0,
+        "min_nonzero_pair_distance_m": 2.0,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -969,10 +1224,124 @@
       "passed": true
     },
     {
+      "case_id": "collinear_three_transform_(1, 0.731, (123, -456))",
+      "assessment": {
+        "coordinate_magnitude": 456.0,
+        "feature_m": 1.8825607406022854e-14,
+        "min_nonzero_pair_distance_m": 1.999999999999989,
+        "min_nonzero_triangle_altitude_m": 1.8825607406022854e-14,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              126.72253580116922,
+              -452.6619276207647
+            ],
+            "radius": 5.000000000000004,
+            "support_vertex_indices": [
+              2,
+              0
+            ],
+            "containment_residual": 1.9539925233402755e-14,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              126.72253580116922,
+              -452.6619276207647
+            ],
+            "radius": 5.000000000000004,
+            "support_vertex_indices": [
+              0,
+              2
+            ],
+            "containment_residual": 1.9539925233402755e-14,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              126.72253580116922,
+              -452.6619276207647
+            ],
+            "radius": 5.000000000000004,
+            "support_vertex_indices": [
+              0,
+              2
+            ],
+            "containment_residual": 1.9539925233402755e-14,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              126.72253580116922,
+              -452.6619276207647
+            ],
+            "radius": 5.000000000000004,
+            "support_vertex_indices": [
+              2,
+              0
+            ],
+            "containment_residual": 1.9539925233402755e-14,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            126.72253580116922,
+            -452.6619276207647
+          ],
+          "radius": 5.000000000000004,
+          "support_vertex_indices": [
+            0,
+            2
+          ],
+          "containment_residual": 1.9539925233402755e-14,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": "ForcedSupportError",
+        "cover": {
+          "status": "YES",
+          "forced_center": [
+            126.72253580116922,
+            -452.6619276207647
+          ],
+          "thales_max": 0.0,
+          "kappa": 1.0,
+          "eta": 1.0,
+          "counterexample_vertex": null,
+          "counterexample_index": null,
+          "finite_cover": true,
+          "midpoint_radius": 5.000000000000004,
+          "tolerance_m2": 2.200000000000002e-09
+        }
+      },
+      "passed": true
+    },
+    {
       "case_id": "collinear_three_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 9.999999999999999e-06,
         "feature_m": 2e-06,
+        "min_nonzero_pair_distance_m": 2e-06,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -1083,6 +1452,8 @@
       "assessment": {
         "coordinate_magnitude": 10000000.0,
         "feature_m": 2000000.0,
+        "min_nonzero_pair_distance_m": 2000000.0,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -1193,6 +1564,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000010.0,
         "feature_m": 2.0,
+        "min_nonzero_pair_distance_m": 2.0,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -1302,7 +1675,9 @@
       "case_id": "isosceles_1e-14_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1e-06,
-        "feature_m": 1e-06,
+        "feature_m": 1e-20,
+        "min_nonzero_pair_distance_m": 1e-06,
+        "min_nonzero_triangle_altitude_m": 1e-20,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -1409,10 +1784,124 @@
       "passed": true
     },
     {
+      "case_id": "isosceles_1e-14_transform_(1000000.0, 0, (0, 0))",
+      "assessment": {
+        "coordinate_magnitude": 1000000.0,
+        "feature_m": 1e-08,
+        "min_nonzero_pair_distance_m": 1000000.0,
+        "min_nonzero_triangle_altitude_m": 1e-08,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1000000.0,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1000000.0,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1000000.0,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 1000000.0,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1000000.0,
+          "support_vertex_indices": [
+            0,
+            1
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": "ForcedSupportError",
+        "cover": {
+          "status": "YES",
+          "forced_center": [
+            0.0,
+            0.0
+          ],
+          "thales_max": 0.0,
+          "kappa": 1.0,
+          "eta": 1.0,
+          "counterexample_vertex": null,
+          "counterexample_index": null,
+          "finite_cover": true,
+          "midpoint_radius": 1000000.0,
+          "tolerance_m2": 8.000399999999999
+        }
+      },
+      "passed": true
+    },
+    {
       "case_id": "isosceles_1e-14_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000001.0,
         "feature_m": 1.0,
+        "min_nonzero_pair_distance_m": 1.0,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -1519,10 +2008,252 @@
       "passed": true
     },
     {
+      "case_id": "isosceles_1e-14_transform_(0.001, 0, (0, 0))",
+      "assessment": {
+        "coordinate_magnitude": 0.001,
+        "feature_m": 1e-17,
+        "min_nonzero_pair_distance_m": 0.001,
+        "min_nonzero_triangle_altitude_m": 1e-17,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 0.001,
+          "support_vertex_indices": [
+            0,
+            1
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": "ForcedSupportError",
+        "cover": {
+          "status": "YES",
+          "forced_center": [
+            0.0,
+            0.0
+          ],
+          "thales_max": 0.0,
+          "kappa": 1.0,
+          "eta": 1.0,
+          "counterexample_vertex": null,
+          "counterexample_index": null,
+          "finite_cover": true,
+          "midpoint_radius": 0.001,
+          "tolerance_m2": 2.02e-10
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "isosceles_1e-09_transform_(1, 0.731, (123, -456))",
+      "assessment": {
+        "coordinate_magnitude": 456.6676144758471,
+        "feature_m": 1.0000189774898206e-09,
+        "min_nonzero_pair_distance_m": 0.9999999999999875,
+        "min_nonzero_triangle_altitude_m": 1.0000189774898206e-09,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              123.0,
+              -456.0
+            ],
+            "radius": 1.0000000000000082,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              123.0,
+              -456.0
+            ],
+            "radius": 1.0000000000000082,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              123.0,
+              -456.0
+            ],
+            "radius": 1.0000000000000082,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              123.0,
+              -456.0
+            ],
+            "radius": 1.0000000000000082,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            123.0,
+            -456.0
+          ],
+          "radius": 1.0000000000000082,
+          "support_vertex_indices": [
+            0,
+            1
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": {
+          "center": [
+            333801023.3500036,
+            -372246968.6115771
+          ],
+          "radius": 499990507.1358396,
+          "support_vertex_indices": [
+            0,
+            1,
+            2
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "forced_boundary",
+          "diagnostics": []
+        },
+        "cover": {
+          "status": "YES",
+          "forced_center": [
+            123.0,
+            -456.0
+          ],
+          "thales_max": 0.0,
+          "kappa": 1.0,
+          "eta": 1.0,
+          "counterexample_vertex": null,
+          "counterexample_index": null,
+          "finite_cover": true,
+          "midpoint_radius": 1.0000000000000082,
+          "tolerance_m2": 4.0800000000000345e-10
+        }
+      },
+      "passed": false
+    },
+    {
       "case_id": "isosceles_1e-09_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1e-06,
-        "feature_m": 1e-06,
+        "feature_m": 1e-15,
+        "min_nonzero_pair_distance_m": 1e-06,
+        "min_nonzero_triangle_altitude_m": 1e-15,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -1633,6 +2364,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000001.0,
         "feature_m": 1.0,
+        "min_nonzero_pair_distance_m": 1.0,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -1739,10 +2472,252 @@
       "passed": true
     },
     {
+      "case_id": "isosceles_1e-09_transform_(0.001, 0, (0, 0))",
+      "assessment": {
+        "coordinate_magnitude": 0.001,
+        "feature_m": 1.0000000000000002e-12,
+        "min_nonzero_pair_distance_m": 0.001,
+        "min_nonzero_triangle_altitude_m": 1.0000000000000002e-12,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 0.001,
+          "support_vertex_indices": [
+            0,
+            1
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": "ForcedSupportError",
+        "cover": {
+          "status": "YES",
+          "forced_center": [
+            0.0,
+            0.0
+          ],
+          "thales_max": 0.0,
+          "kappa": 1.0,
+          "eta": 1.0,
+          "counterexample_vertex": null,
+          "counterexample_index": null,
+          "finite_cover": true,
+          "midpoint_radius": 0.001,
+          "tolerance_m2": 2.02e-10
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "isosceles_1e-09_transform_(1, 0, (100000, -100000))",
+      "assessment": {
+        "coordinate_magnitude": 100001.0,
+        "feature_m": 1.0040821507573128e-09,
+        "min_nonzero_pair_distance_m": 1.0,
+        "min_nonzero_triangle_altitude_m": 1.0040821507573128e-09,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              100000.0,
+              -100000.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              100000.0,
+              -100000.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              100000.0,
+              -100000.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              100000.0,
+              -100000.0
+            ],
+            "radius": 1.0,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            100000.0,
+            -100000.0
+          ],
+          "radius": 1.0,
+          "support_vertex_indices": [
+            0,
+            1
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": {
+          "center": [
+            100000.0,
+            -498067222.7246377
+          ],
+          "radius": 497967222.7246377,
+          "support_vertex_indices": [
+            0,
+            1,
+            2
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "forced_boundary",
+          "diagnostics": []
+        },
+        "cover": {
+          "status": "YES",
+          "forced_center": [
+            100000.0,
+            -100000.0
+          ],
+          "thales_max": 0.0,
+          "kappa": 1.0,
+          "eta": 1.0,
+          "counterexample_vertex": null,
+          "counterexample_index": null,
+          "finite_cover": true,
+          "midpoint_radius": 1.0,
+          "tolerance_m2": 4.0800000000000004e-10
+        }
+      },
+      "passed": true
+    },
+    {
       "case_id": "isosceles_0.5_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1e-06,
-        "feature_m": 1.1180339887498948e-06,
+        "feature_m": 5e-07,
+        "min_nonzero_pair_distance_m": 1.1180339887498948e-06,
+        "min_nonzero_triangle_altitude_m": 5e-07,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -1852,7 +2827,9 @@
       "case_id": "isosceles_0.5_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000001.0,
-        "feature_m": 1.118033988749895,
+        "feature_m": 0.5,
+        "min_nonzero_pair_distance_m": 1.118033988749895,
+        "min_nonzero_triangle_altitude_m": 0.5,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -1975,10 +2952,140 @@
       "passed": true
     },
     {
+      "case_id": "isosceles_0.5_transform_(0.001, 0, (0, 0))",
+      "assessment": {
+        "coordinate_magnitude": 0.001,
+        "feature_m": 0.0005,
+        "min_nonzero_pair_distance_m": 0.001118033988749895,
+        "min_nonzero_triangle_altitude_m": 0.0005,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 0.001,
+          "support_vertex_indices": [
+            0,
+            1
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": {
+          "center": [
+            0.0,
+            -0.00075
+          ],
+          "radius": 0.00125,
+          "support_vertex_indices": [
+            0,
+            1,
+            2
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "forced_boundary",
+          "diagnostics": []
+        },
+        "cover": {
+          "status": "YES",
+          "forced_center": [
+            0.0,
+            0.0
+          ],
+          "thales_max": 0.0,
+          "kappa": 1.0,
+          "eta": 1.0,
+          "counterexample_vertex": null,
+          "counterexample_index": null,
+          "finite_cover": true,
+          "midpoint_radius": 0.001,
+          "tolerance_m2": 2.02e-10
+        }
+      },
+      "passed": true
+    },
+    {
       "case_id": "isosceles_1_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1e-06,
-        "feature_m": 1.414213562373095e-06,
+        "feature_m": 1e-06,
+        "min_nonzero_pair_distance_m": 1.414213562373095e-06,
+        "min_nonzero_triangle_altitude_m": 1e-06,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -2088,7 +3195,9 @@
       "case_id": "isosceles_1_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000001.0,
-        "feature_m": 1.4142135623730951,
+        "feature_m": 1.0,
+        "min_nonzero_pair_distance_m": 1.4142135623730951,
+        "min_nonzero_triangle_altitude_m": 1.0,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -2214,7 +3323,9 @@
       "case_id": "isosceles_2_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 2e-06,
-        "feature_m": 2e-06,
+        "feature_m": 1.788854381999832e-06,
+        "min_nonzero_pair_distance_m": 2e-06,
+        "min_nonzero_triangle_altitude_m": 1.788854381999832e-06,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -2308,7 +3419,9 @@
       "case_id": "isosceles_2_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 2000000.0,
-        "feature_m": 2000000.0,
+        "feature_m": 1788854.3819998319,
+        "min_nonzero_pair_distance_m": 2000000.0,
+        "min_nonzero_triangle_altitude_m": 1788854.3819998319,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -2442,7 +3555,9 @@
       "case_id": "isosceles_2_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000001.0,
-        "feature_m": 2.0,
+        "feature_m": 1.7888543819998317,
+        "min_nonzero_pair_distance_m": 2.0,
+        "min_nonzero_triangle_altitude_m": 1.7888543819998317,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -2576,7 +3691,9 @@
       "case_id": "isosceles_1.7320508075688772_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1.7320508075688771e-06,
-        "feature_m": 2e-06,
+        "feature_m": 1.7320508075688771e-06,
+        "min_nonzero_pair_distance_m": 2e-06,
+        "min_nonzero_triangle_altitude_m": 1.7320508075688771e-06,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -2670,7 +3787,9 @@
       "case_id": "isosceles_1.7320508075688772_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1732050.8075688772,
-        "feature_m": 2000000.0,
+        "feature_m": 1732050.8075688772,
+        "min_nonzero_pair_distance_m": 2000000.0,
+        "min_nonzero_triangle_altitude_m": 1732050.8075688772,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -2804,7 +3923,9 @@
       "case_id": "isosceles_1.7320508075688772_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000001.0,
-        "feature_m": 1.9999999730776528,
+        "feature_m": 1.7320507764816284,
+        "min_nonzero_pair_distance_m": 1.9999999730776528,
+        "min_nonzero_triangle_altitude_m": 1.7320507764816284,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -2943,7 +4064,9 @@
       "case_id": "thales_boundary_0.9999999999999999_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1e-06,
-        "feature_m": 1.4142135623730947e-06,
+        "feature_m": 9.999999999999997e-07,
+        "min_nonzero_pair_distance_m": 1.4142135623730947e-06,
+        "min_nonzero_triangle_altitude_m": 9.999999999999997e-07,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -3053,7 +4176,9 @@
       "case_id": "thales_boundary_0.9999999999999999_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000001.0,
-        "feature_m": 1.4142135623730951,
+        "feature_m": 1.0,
+        "min_nonzero_pair_distance_m": 1.4142135623730951,
+        "min_nonzero_triangle_altitude_m": 1.0,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -3176,10 +4301,140 @@
       "passed": true
     },
     {
+      "case_id": "thales_boundary_0.9999999999999999_transform_(0.001, 0, (0, 0))",
+      "assessment": {
+        "coordinate_magnitude": 0.001,
+        "feature_m": 0.0009999999999999998,
+        "min_nonzero_pair_distance_m": 0.001414213562373095,
+        "min_nonzero_triangle_altitude_m": 0.0009999999999999998,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              1,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0,
+              0.0
+            ],
+            "radius": 0.001,
+            "support_vertex_indices": [
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 0.001,
+          "support_vertex_indices": [
+            0,
+            1
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": {
+          "center": [
+            0.0,
+            -2.1175823681357513e-19
+          ],
+          "radius": 0.001,
+          "support_vertex_indices": [
+            0,
+            1,
+            2
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "forced_boundary",
+          "diagnostics": []
+        },
+        "cover": {
+          "status": "YES",
+          "forced_center": [
+            0.0,
+            0.0
+          ],
+          "thales_max": 0.0,
+          "kappa": 1.0,
+          "eta": 1.0,
+          "counterexample_vertex": null,
+          "counterexample_index": null,
+          "finite_cover": true,
+          "midpoint_radius": 0.001,
+          "tolerance_m2": 2.02e-10
+        }
+      },
+      "passed": true
+    },
+    {
       "case_id": "thales_boundary_1.00000000001_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1.00000000001e-06,
-        "feature_m": 1.4142135623801662e-06,
+        "feature_m": 1.00000000001e-06,
+        "min_nonzero_pair_distance_m": 1.4142135623801662e-06,
+        "min_nonzero_triangle_altitude_m": 1.00000000001e-06,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -3289,7 +4544,9 @@
       "case_id": "thales_boundary_1.00000000001_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1000000.00001,
-        "feature_m": 1414213.562380166,
+        "feature_m": 1000000.00001,
+        "min_nonzero_pair_distance_m": 1414213.562380166,
+        "min_nonzero_triangle_altitude_m": 1000000.00001,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -3424,7 +4681,9 @@
       "case_id": "thales_boundary_1.00000000001_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000001.0,
-        "feature_m": 1.4142135623730951,
+        "feature_m": 1.0,
+        "min_nonzero_pair_distance_m": 1.4142135623730951,
+        "min_nonzero_triangle_altitude_m": 1.0,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -3550,7 +4809,9 @@
       "case_id": "thales_boundary_1.00000001_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1.00000001e-06,
-        "feature_m": 1.4142135694441628e-06,
+        "feature_m": 1.00000001e-06,
+        "min_nonzero_pair_distance_m": 1.4142135694441628e-06,
+        "min_nonzero_triangle_altitude_m": 1.00000001e-06,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -3660,7 +4921,9 @@
       "case_id": "thales_boundary_1.00000001_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1000000.0099999999,
-        "feature_m": 1414213.5694441628,
+        "feature_m": 1000000.0099999999,
+        "min_nonzero_pair_distance_m": 1414213.5694441628,
+        "min_nonzero_triangle_altitude_m": 1000000.0099999999,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -3794,7 +5057,9 @@
       "case_id": "thales_boundary_1.00000001_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000001.0,
-        "feature_m": 1.4142135623730951,
+        "feature_m": 1.0,
+        "min_nonzero_pair_distance_m": 1.4142135623730951,
+        "min_nonzero_triangle_altitude_m": 1.0,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -3920,7 +5185,9 @@
       "case_id": "acute_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 4e-06,
-        "feature_m": 3.162277660168379e-06,
+        "feature_m": 2.8284271247461903e-06,
+        "min_nonzero_pair_distance_m": 3.162277660168379e-06,
+        "min_nonzero_triangle_altitude_m": 2.8284271247461903e-06,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -4014,7 +5281,9 @@
       "case_id": "acute_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 4000000.0,
-        "feature_m": 3162277.6601683795,
+        "feature_m": 2828427.12474619,
+        "min_nonzero_pair_distance_m": 3162277.6601683795,
+        "min_nonzero_triangle_altitude_m": 2828427.12474619,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -4148,7 +5417,9 @@
       "case_id": "acute_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000004.0,
-        "feature_m": 3.1622776601683795,
+        "feature_m": 2.8284271247461903,
+        "min_nonzero_pair_distance_m": 3.1622776601683795,
+        "min_nonzero_triangle_altitude_m": 2.8284271247461903,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -4282,7 +5553,9 @@
       "case_id": "obtuse_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 4e-06,
-        "feature_m": 1.414213562373095e-06,
+        "feature_m": 1e-06,
+        "min_nonzero_pair_distance_m": 1.414213562373095e-06,
+        "min_nonzero_triangle_altitude_m": 1e-06,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -4392,7 +5665,9 @@
       "case_id": "obtuse_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 4000000.0,
-        "feature_m": 1414213.562373095,
+        "feature_m": 1000000.0,
+        "min_nonzero_pair_distance_m": 1414213.562373095,
+        "min_nonzero_triangle_altitude_m": 1000000.0,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -4518,7 +5793,9 @@
       "case_id": "obtuse_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000004.0,
-        "feature_m": 1.4142135623730951,
+        "feature_m": 1.0,
+        "min_nonzero_pair_distance_m": 1.4142135623730951,
+        "min_nonzero_triangle_altitude_m": 1.0,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -4644,7 +5921,9 @@
       "case_id": "right_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 4e-06,
-        "feature_m": 3e-06,
+        "feature_m": 2.4000000000000003e-06,
+        "min_nonzero_pair_distance_m": 3e-06,
+        "min_nonzero_triangle_altitude_m": 2.4000000000000003e-06,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -4754,7 +6033,9 @@
       "case_id": "right_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 4000000.0,
-        "feature_m": 3000000.0,
+        "feature_m": 2400000.0,
+        "min_nonzero_pair_distance_m": 3000000.0,
+        "min_nonzero_triangle_altitude_m": 2400000.0,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -4881,7 +6162,9 @@
       "case_id": "right_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000004.0,
-        "feature_m": 3.0,
+        "feature_m": 2.4,
+        "min_nonzero_pair_distance_m": 3.0,
+        "min_nonzero_triangle_altitude_m": 2.4,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -5008,7 +6291,9 @@
       "case_id": "equilateral_1_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1e-06,
-        "feature_m": 1e-06,
+        "feature_m": 8.660254037844386e-07,
+        "min_nonzero_pair_distance_m": 1e-06,
+        "min_nonzero_triangle_altitude_m": 8.660254037844386e-07,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -5102,7 +6387,9 @@
       "case_id": "equilateral_1_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000001.0,
-        "feature_m": 1.0,
+        "feature_m": 0.8660254147996931,
+        "min_nonzero_pair_distance_m": 1.0,
+        "min_nonzero_triangle_altitude_m": 0.8660254147996931,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -5238,10 +6525,148 @@
       "passed": true
     },
     {
+      "case_id": "equilateral_1_transform_(0.001, 0, (0, 0))",
+      "assessment": {
+        "coordinate_magnitude": 0.001,
+        "feature_m": 0.0008660254037844386,
+        "min_nonzero_pair_distance_m": 0.001,
+        "min_nonzero_triangle_altitude_m": 0.0008660254037844386,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              0.0005,
+              0.0002886751345948129
+            ],
+            "radius": 0.0005773502691896258,
+            "support_vertex_indices": [
+              1,
+              2,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0005,
+              0.0002886751345948129
+            ],
+            "radius": 0.0005773502691896258,
+            "support_vertex_indices": [
+              0,
+              2,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0005,
+              0.0002886751345948129
+            ],
+            "radius": 0.0005773502691896258,
+            "support_vertex_indices": [
+              1,
+              0,
+              2
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0005,
+              0.0002886751345948128
+            ],
+            "radius": 0.0005773502691896258,
+            "support_vertex_indices": [
+              2,
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            0.0005,
+            0.0002886751345948129
+          ],
+          "radius": 0.0005773502691896258,
+          "support_vertex_indices": [
+            0,
+            1,
+            2
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": {
+          "center": [
+            0.0005,
+            0.0002886751345948129
+          ],
+          "radius": 0.0005773502691896258,
+          "support_vertex_indices": [
+            0,
+            1,
+            2
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "forced_boundary",
+          "diagnostics": []
+        },
+        "cover": {
+          "status": "NO",
+          "forced_center": [
+            0.0005,
+            0.0
+          ],
+          "thales_max": 4.999999999999999e-07,
+          "kappa": 1.1547005383792515,
+          "eta": 1.7320508075688772,
+          "counterexample_vertex": [
+            0.0005,
+            0.0008660254037844386
+          ],
+          "counterexample_index": 2,
+          "finite_cover": true,
+          "midpoint_radius": 0.0008660254037844386,
+          "tolerance_m2": 2.02e-10
+        }
+      },
+      "passed": true
+    },
+    {
       "case_id": "equilateral_20_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1.9999999999999998e-05,
-        "feature_m": 1.9999999999999998e-05,
+        "feature_m": 1.732050807568877e-05,
+        "min_nonzero_pair_distance_m": 1.9999999999999998e-05,
+        "min_nonzero_triangle_altitude_m": 1.732050807568877e-05,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -5372,7 +6797,9 @@
       "case_id": "equilateral_20_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 20000000.0,
-        "feature_m": 20000000.0,
+        "feature_m": 17320508.075688772,
+        "min_nonzero_pair_distance_m": 20000000.0,
+        "min_nonzero_triangle_altitude_m": 17320508.075688772,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -5506,7 +6933,9 @@
       "case_id": "equilateral_20_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000020.0,
-        "feature_m": 20.0,
+        "feature_m": 17.32050808737762,
+        "min_nonzero_pair_distance_m": 20.0,
+        "min_nonzero_triangle_altitude_m": 17.32050808737762,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -5639,7 +7068,9 @@
       "case_id": "equilateral_34.64101615137754_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 3.464101615137754e-05,
-        "feature_m": 3.464101615137754e-05,
+        "feature_m": 2.9999999999999994e-05,
+        "min_nonzero_pair_distance_m": 3.464101615137754e-05,
+        "min_nonzero_triangle_altitude_m": 2.9999999999999994e-05,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -5773,7 +7204,9 @@
       "case_id": "equilateral_34.64101615137754_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 34641016.151377544,
-        "feature_m": 34641016.151377544,
+        "feature_m": 29999999.999999996,
+        "min_nonzero_pair_distance_m": 34641016.151377544,
+        "min_nonzero_triangle_altitude_m": 29999999.999999996,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -5907,7 +7340,9 @@
       "case_id": "equilateral_34.64101615137754_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000034.6410161,
-        "feature_m": 34.64101611515059,
+        "feature_m": 29.999999957498748,
+        "min_nonzero_pair_distance_m": 34.64101611515059,
+        "min_nonzero_triangle_altitude_m": 29.999999957498748,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -6040,7 +7475,9 @@
       "case_id": "equilateral_36_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 3.6e-05,
-        "feature_m": 3.6e-05,
+        "feature_m": 3.117691453623979e-05,
+        "min_nonzero_pair_distance_m": 3.6e-05,
+        "min_nonzero_triangle_altitude_m": 3.117691453623979e-05,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -6174,7 +7611,9 @@
       "case_id": "equilateral_36_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 36000000.0,
-        "feature_m": 36000000.0,
+        "feature_m": 31176914.536239788,
+        "min_nonzero_pair_distance_m": 36000000.0,
+        "min_nonzero_triangle_altitude_m": 31176914.536239788,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -6308,7 +7747,9 @@
       "case_id": "equilateral_36_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000036.0,
-        "feature_m": 36.0,
+        "feature_m": 31.17691454535878,
+        "min_nonzero_pair_distance_m": 36.0,
+        "min_nonzero_triangle_altitude_m": 31.17691454535878,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -6447,7 +7888,9 @@
       "case_id": "equilateral_40_transform_(1e-06, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 3.9999999999999996e-05,
-        "feature_m": 3.9999999999999996e-05,
+        "feature_m": 3.464101615137754e-05,
+        "min_nonzero_pair_distance_m": 3.9999999999999996e-05,
+        "min_nonzero_triangle_altitude_m": 3.464101615137754e-05,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -6581,7 +8024,9 @@
       "case_id": "equilateral_40_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 40000000.0,
-        "feature_m": 40000000.0,
+        "feature_m": 34641016.151377544,
+        "min_nonzero_pair_distance_m": 40000000.0,
+        "min_nonzero_triangle_altitude_m": 34641016.151377544,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -6715,7 +8160,9 @@
       "case_id": "equilateral_40_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000000040.0,
-        "feature_m": 39.99999997774442,
+        "feature_m": 34.641016125679016,
+        "min_nonzero_pair_distance_m": 39.99999997774442,
+        "min_nonzero_triangle_altitude_m": 34.641016125679016,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -6851,10 +8298,148 @@
       "passed": true
     },
     {
+      "case_id": "equilateral_1000_transform_(1e-06, 0, (0, 0))",
+      "assessment": {
+        "coordinate_magnitude": 0.001,
+        "feature_m": 0.0008660254037844386,
+        "min_nonzero_pair_distance_m": 0.001,
+        "min_nonzero_triangle_altitude_m": 0.0008660254037844386,
+        "scale_limit": true
+      },
+      "accepted_unresolved": [],
+      "actual": {
+        "minimum_circle": [
+          {
+            "center": [
+              0.0005,
+              -0.0002886751345948129
+            ],
+            "radius": 0.0005773502691896258,
+            "support_vertex_indices": [
+              1,
+              2,
+              0
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 0,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0005,
+              -0.0002886751345948129
+            ],
+            "radius": 0.0005773502691896258,
+            "support_vertex_indices": [
+              0,
+              2,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 1,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0005,
+              -0.0002886751345948129
+            ],
+            "radius": 0.0005773502691896258,
+            "support_vertex_indices": [
+              1,
+              0,
+              2
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 7,
+            "method": "forced_boundary",
+            "diagnostics": []
+          },
+          {
+            "center": [
+              0.0005,
+              -0.0002886751345948128
+            ],
+            "radius": 0.0005773502691896258,
+            "support_vertex_indices": [
+              2,
+              0,
+              1
+            ],
+            "containment_residual": 0.0,
+            "status": "OK",
+            "seed": 42,
+            "method": "forced_boundary",
+            "diagnostics": []
+          }
+        ],
+        "ordinary": {
+          "center": [
+            0.0005,
+            -0.0002886751345948129
+          ],
+          "radius": 0.0005773502691896258,
+          "support_vertex_indices": [
+            0,
+            1,
+            2
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "candidate_enumeration",
+          "diagnostics": []
+        },
+        "forced": {
+          "center": [
+            0.0005,
+            -0.0002886751345948129
+          ],
+          "radius": 0.0005773502691896258,
+          "support_vertex_indices": [
+            0,
+            1,
+            2
+          ],
+          "containment_residual": 0.0,
+          "status": "OK",
+          "seed": null,
+          "method": "forced_boundary",
+          "diagnostics": []
+        },
+        "cover": {
+          "status": "NO",
+          "forced_center": [
+            0.0005,
+            0.0
+          ],
+          "thales_max": 4.999999999999999e-07,
+          "kappa": 1.1547005383792515,
+          "eta": 1.7320508075688772,
+          "counterexample_vertex": [
+            0.0005,
+            -0.0008660254037844386
+          ],
+          "counterexample_index": 2,
+          "finite_cover": true,
+          "midpoint_radius": 0.0008660254037844386,
+          "tolerance_m2": 2.02e-10
+        }
+      },
+      "passed": true
+    },
+    {
       "case_id": "equilateral_1000_transform_(1000000.0, 0, (0, 0))",
       "assessment": {
         "coordinate_magnitude": 1000000000.0,
-        "feature_m": 1000000000.0,
+        "feature_m": 866025403.7844386,
+        "min_nonzero_pair_distance_m": 1000000000.0,
+        "min_nonzero_triangle_altitude_m": 866025403.7844386,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -6988,7 +8573,9 @@
       "case_id": "equilateral_1000_transform_(1, 0, (1000000000.0, -1000000000.0))",
       "assessment": {
         "coordinate_magnitude": 1000001000.0,
-        "feature_m": 999.9999999598019,
+        "feature_m": 866.0254037380219,
+        "min_nonzero_pair_distance_m": 999.9999999598019,
+        "min_nonzero_triangle_altitude_m": 866.0254037380219,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -7122,6 +8709,8 @@
       "assessment": {
         "coordinate_magnitude": 4e-06,
         "feature_m": 4e-06,
+        "min_nonzero_pair_distance_m": 4e-06,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -7215,6 +8804,8 @@
       "assessment": {
         "coordinate_magnitude": 4000000.0,
         "feature_m": 4000000.0,
+        "min_nonzero_pair_distance_m": 4000000.0,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -7308,6 +8899,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000004.0,
         "feature_m": 4.0,
+        "min_nonzero_pair_distance_m": 4.0,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -7401,6 +8994,8 @@
       "assessment": {
         "coordinate_magnitude": 8.4e-05,
         "feature_m": 2.7779483436521998e-05,
+        "min_nonzero_pair_distance_m": 2.7779483436521998e-05,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -7501,6 +9096,8 @@
       "assessment": {
         "coordinate_magnitude": 84000000.0,
         "feature_m": 27779483.436521996,
+        "min_nonzero_pair_distance_m": 27779483.436521996,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -7601,6 +9198,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000059.75,
         "feature_m": 27.779483430138303,
+        "min_nonzero_pair_distance_m": 27.779483430138303,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -7706,6 +9305,8 @@
       "assessment": {
         "coordinate_magnitude": 9.765e-05,
         "feature_m": 4.778995710397741e-06,
+        "min_nonzero_pair_distance_m": 4.778995710397741e-06,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -7806,6 +9407,8 @@
       "assessment": {
         "coordinate_magnitude": 97650000.0,
         "feature_m": 4778995.71039774,
+        "min_nonzero_pair_distance_m": 4778995.71039774,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -7906,6 +9509,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000097.65,
         "feature_m": 4.778995717122757,
+        "min_nonzero_pair_distance_m": 4.778995717122757,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -8011,6 +9616,8 @@
       "assessment": {
         "coordinate_magnitude": 9.917e-05,
         "feature_m": 1.9038836624121756e-05,
+        "min_nonzero_pair_distance_m": 1.9038836624121756e-05,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -8104,6 +9711,8 @@
       "assessment": {
         "coordinate_magnitude": 99170000.0,
         "feature_m": 19038836.62412176,
+        "min_nonzero_pair_distance_m": 19038836.62412176,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -8197,6 +9806,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000099.17,
         "feature_m": 19.038836593200585,
+        "min_nonzero_pair_distance_m": 19.038836593200585,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -8295,6 +9906,8 @@
       "assessment": {
         "coordinate_magnitude": 9.789e-05,
         "feature_m": 5.91649220400061e-05,
+        "min_nonzero_pair_distance_m": 5.91649220400061e-05,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -8395,6 +10008,8 @@
       "assessment": {
         "coordinate_magnitude": 97890000.0,
         "feature_m": 59164922.0400061,
+        "min_nonzero_pair_distance_m": 59164922.0400061,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -8495,6 +10110,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000097.89,
         "feature_m": 59.16492207445222,
+        "min_nonzero_pair_distance_m": 59.16492207445222,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -8600,6 +10217,8 @@
       "assessment": {
         "coordinate_magnitude": 8.701999999999999e-05,
         "feature_m": 1.9538766593621e-05,
+        "min_nonzero_pair_distance_m": 1.9538766593621e-05,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -8700,6 +10319,8 @@
       "assessment": {
         "coordinate_magnitude": 87020000.0,
         "feature_m": 19538766.593621,
+        "min_nonzero_pair_distance_m": 19538766.593621,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -8800,6 +10421,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000051.07,
         "feature_m": 19.53876651261458,
+        "min_nonzero_pair_distance_m": 19.53876651261458,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -8905,6 +10528,8 @@
       "assessment": {
         "coordinate_magnitude": 6.636e-05,
         "feature_m": 2.2383835685601335e-05,
+        "min_nonzero_pair_distance_m": 2.2383835685601335e-05,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -9005,6 +10630,8 @@
       "assessment": {
         "coordinate_magnitude": 66360000.0,
         "feature_m": 22383835.68560134,
+        "min_nonzero_pair_distance_m": 22383835.68560134,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -9105,6 +10732,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000066.12,
         "feature_m": 22.38383564246967,
+        "min_nonzero_pair_distance_m": 22.38383564246967,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -9210,6 +10839,8 @@
       "assessment": {
         "coordinate_magnitude": 9.753e-05,
         "feature_m": 1.4651487979041577e-05,
+        "min_nonzero_pair_distance_m": 1.4651487979041577e-05,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -9310,6 +10941,8 @@
       "assessment": {
         "coordinate_magnitude": 97530000.0,
         "feature_m": 14651487.979041576,
+        "min_nonzero_pair_distance_m": 14651487.979041576,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -9410,6 +11043,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000097.53,
         "feature_m": 14.651487959280074,
+        "min_nonzero_pair_distance_m": 14.651487959280074,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -9515,6 +11150,8 @@
       "assessment": {
         "coordinate_magnitude": 9.787999999999999e-05,
         "feature_m": 3.97998241202144e-05,
+        "min_nonzero_pair_distance_m": 3.97998241202144e-05,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -9615,6 +11252,8 @@
       "assessment": {
         "coordinate_magnitude": 97880000.0,
         "feature_m": 39799824.1202144,
+        "min_nonzero_pair_distance_m": 39799824.1202144,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [],
@@ -9715,6 +11354,8 @@
       "assessment": {
         "coordinate_magnitude": 1000000097.88,
         "feature_m": 39.799824108089744,
+        "min_nonzero_pair_distance_m": 39.799824108089744,
+        "min_nonzero_triangle_altitude_m": null,
         "scale_limit": true
       },
       "accepted_unresolved": [
@@ -9867,7 +11508,7 @@
     "angle_abs": 1e-12,
     "relative": 1e-12
   },
-  "cases_sha256": "7dfab6530a15e8a4ba2998b47c05f7574f406c47d77f4ceab7a4fbc083b3cc87",
+  "cases_sha256": "d32f8c8b18564445f6aa68917a1362f7b463344201b016d6cf90cc01d6e742c8",
   "production_circle_sha256": "ca38d04fbfb0efe13cd69a84927d3978ecb764c25f5a445789b6c0fbbf4e8277",
   "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
   "observed_cover_statuses": {

@@ -125,7 +125,9 @@ def run():
         # Definition-level source membership probes include exact/near boundaries.
         probes=np.array([world([r,0],inp) for r in (0,4.999999,5,5.000001,1000,inp['rho_hi'],inp['rho_hi']+1e-5)])
         probes=np.vstack((probes,points[::max(1,len(points)//100)]))
-        expected=legal(probes,inp)
+        expected=legal(probes,inp,boundary_slack=False)
+        relaxed_expected=legal(probes,inp)
+        actual['source_probe_boundary_reclassifications']=np.flatnonzero(expected!=relaxed_expected).tolist()
         checks['source_contains']=bool(np.array_equal(ss.contains(probes),expected))
         actual['source_probe_mismatches']=np.flatnonzero(ss.contains(probes)!=expected).tolist()
         # Independent polar interval roots, including angular endpoints.
@@ -213,7 +215,7 @@ def run():
         for k in f['note'].split(', '): tally(breakdown,k)
     groups = summarize_groups(results, cases)
     report=dict(groups=groups,area='q2_candidate',generated_utc=datetime.now(timezone.utc).isoformat(),seed=SEED,n_cases=len(cases),n_pass=len(cases)-len(failures),n_fail=len(failures),categories=categories,
-        tolerances={'length_m':LENGTH_TOL,'squared_m2':SQUARED_TOL,'world_closed_constraints_m':1e-8,'world_angle_deg':1e-10,'production_policy':asdict(NumericPolicy()),'direction_contact':'UNRESOLVED allowed only at analytically established 5m equality; mathematical membership preserved in cases'},
+        tolerances={'length_m':LENGTH_TOL,'squared_m2':SQUARED_TOL,'world_closed_constraints_m':1e-8,'world_angle_deg':1e-10,'source_and_posterior_probe_closed_slack':0.,'production_policy':asdict(NumericPolicy()),'direction_contact':'UNRESOLVED allowed only at analytically established 5m equality; mathematical membership preserved in cases'},
         failures=failures,weak_comparisons_excluded=len([r for r in results if r['sampling']['n_sources']]),status_counts=status_counts,witness_counts=witness_counts,failure_check_counts=breakdown,
         invariants=invariants,results=results,elapsed_seconds=time.perf_counter()-started,
         source_sha256=hashlib.sha256(production_path.read_bytes()).hexdigest(),

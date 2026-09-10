@@ -54,3 +54,11 @@ models/q1q2/benchmarks/
 - **不修改任何生产代码**。benchmark 只读地调用生产 API。
 - 真值代码与生产代码**不共享实现**（不能 import 生产的 diameter/circle/candidate 再当真值）。
 - benchmark 的目的是**抓 bug**：要真的运行、要包含已知难例与退化例，如实报告 pass/fail，别只测正常路径。
+
+
+## 边界与尺度修正的共同约束
+
+- q1_circle_cover 的 scale_limit 包括坐标幅度 >1e6 米或非零特征 <1e-3 米；三点强制圆的特征必须包含三角形高度，不能只看边长。这是与绝对容差和病态放大相关的工程范围，不是 float64 的统一硬界。仅在该类接受 NUMERICAL_UNRESOLVED，返回 OK 仍检查原独立精确真值和原容差。
+- q2_candidate 源/后验布尔探针按提交的浮点坐标使用原定义的严格开闭边界；解析世界见证的表示裕度不套到 API 布尔探针上。核心 IN/OUT、sector/four-disk 真值和见证检查不变。
+- q2_worst_diameter 的 J 分档与采样契约分别报告。有限点云下界被满足不构成连续 J 上界证明；采样不嵌套不能误报为 J 低估，也不能因此删除已有嵌套检查。
+- q1_geometry 顶点归一化及顶点集检查本次不改，由生产侧任务处理。
