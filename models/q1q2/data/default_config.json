@@ -1,0 +1,5 @@
+{
+  "physics": {"rho_lo": 1000.0, "rho_hi": 1500.0, "near_radius": 5.0, "clearance_radius": 20.0, "arena_radius": 1800.0},
+  "policy": {"length_abs": 1e-10, "angle_abs": 1e-12, "relative": 1e-12},
+  "search": {"station_steps_m": [50.0, 25.0], "source_grids": [[9,25],[17,49],[33,97]], "starts": 12, "pair_starts": 8, "pair_rounds": 8, "time_budget_s": 180.0, "second_half_width_deg": 1.0}
+}
