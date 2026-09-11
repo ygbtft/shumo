@@ -1,0 +1,78 @@
+{
+  "conditions": {
+    "shifted/q3/edge__adversarial-spatial": {
+      "runs": 1,
+      "failures": 0,
+      "all_cleared_rate": 1.0,
+      "cleared_fraction": {
+        "n": 1,
+        "undefined": 0,
+        "mean": 1.0,
+        "std": 0.0,
+        "quantiles": {
+          "p00": 1.0,
+          "p05": 1.0,
+          "p25": 1.0,
+          "p50": 1.0,
+          "p75": 1.0,
+          "p95": 1.0,
+          "p100": 1.0
+        }
+      },
+      "average_clear_time_s": {
+        "n": 1,
+        "undefined": 0,
+        "mean": 403.6318241,
+        "std": 0.0,
+        "quantiles": {
+          "p00": 403.6318241,
+          "p05": 403.6318241,
+          "p25": 403.6318241,
+          "p50": 403.6318241,
+          "p75": 403.6318241,
+          "p95": 403.6318241,
+          "p100": 403.6318241
+        }
+      },
+      "total_time_s": {
+        "n": 1,
+        "undefined": 0,
+        "mean": 4036.318241,
+        "std": 0.0,
+        "quantiles": {
+          "p00": 4036.318241,
+          "p05": 4036.318241,
+          "p25": 4036.318241,
+          "p50": 4036.318241,
+          "p75": 4036.318241,
+          "p95": 4036.318241,
+          "p100": 4036.318241
+        }
+      },
+      "runtime_s": {
+        "n": 1,
+        "undefined": 0,
+        "mean": 0.24489083299704362,
+        "std": 0.0,
+        "quantiles": {
+          "p00": 0.24489083299704362,
+          "p05": 0.24489083299704362,
+          "p25": 0.24489083299704362,
+          "p50": 0.24489083299704362,
+          "p75": 0.24489083299704362,
+          "p95": 0.24489083299704362,
+          "p100": 0.24489083299704362
+        }
+      },
+      "pooled_cleared_fraction": 1.0,
+      "pooled_average_clear_time_s": 403.6318241,
+      "zero_clear_runs": 0
+    }
+  },
+  "runs": 1,
+  "failures": 0,
+  "elapsed_s": 0.36876425000082236,
+  "official_calls": 0,
+  "changed_source_files": [],
+  "mandatory_matrix_complete": false
+}

@@ -1,0 +1,21 @@
+Completed 100/2000, elapsed 1.6s, failures 0
+Completed 200/2000, elapsed 2.2s, failures 0
+Completed 300/2000, elapsed 2.9s, failures 0
+Completed 400/2000, elapsed 3.5s, failures 0
+Completed 500/2000, elapsed 4.2s, failures 0
+Completed 600/2000, elapsed 4.9s, failures 0
+Completed 700/2000, elapsed 5.5s, failures 0
+Completed 800/2000, elapsed 6.2s, failures 0
+Completed 900/2000, elapsed 6.8s, failures 0
+Completed 1000/2000, elapsed 7.5s, failures 0
+Completed 1100/2000, elapsed 8.1s, failures 0
+Completed 1200/2000, elapsed 8.8s, failures 0
+Completed 1300/2000, elapsed 9.4s, failures 0
+Completed 1400/2000, elapsed 10.0s, failures 0
+Completed 1500/2000, elapsed 10.8s, failures 0
+Completed 1600/2000, elapsed 11.7s, failures 0
+Completed 1700/2000, elapsed 12.6s, failures 0
+Completed 1800/2000, elapsed 13.3s, failures 0
+Completed 1900/2000, elapsed 13.9s, failures 0
+Completed 2000/2000, elapsed 14.6s, failures 0
+{"main_runs": 2000, "repeat_runs": 60, "batch_wall_s": 14.620277166999585, "total_wall_s": 16.451540125002794, "source_files_unchanged": true, "changed_files": [], "official_calls": 0}

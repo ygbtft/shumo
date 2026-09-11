@@ -1,11 +1,12 @@
-"""Run a frozen bounded-uncertainty strategy on the local peer protocol only."""
+"""Frozen strategies: owned mock HTTP by default; explicit opt-in for practice."""
+import time
+PROGRAM_STARTED = time.perf_counter()
 import argparse
 from dataclasses import asdict
 from datetime import datetime
 import gzip
 import json
 from pathlib import Path
-import time
 from client import Client
 from peer_benchmark import PeerTransport,ErrorConfig,ErrorField,ScenarioConfig,generate,Simulator,Limits,Protocol
 from metaheuristic_experiments import trace_metrics
@@ -21,7 +22,15 @@ def main():
     parser.add_argument("--method",required=True)
     parser.add_argument("--seed",type=int,default=42)
     parser.add_argument("--series",choices=("icra","mission","task","wide","coupled","history","deferred","cover21"),default="icra")
+    parser.add_argument("--mode", choices=("mock-http", "offline", "practice"), default="mock-http")
+    parser.add_argument("--base-url", help="Practice HTTP endpoint only; mock-http always owns its random loopback port")
+    parser.add_argument("--robot-id")
+    parser.add_argument("--confirm-practice", action="store_true", help="User has manually logged in and opened a PRACTICE session")
     args=parser.parse_args()
+    if args.mode == "practice" and (not args.confirm_practice or not args.robot_id):
+        parser.error("Practice needs --confirm-practice and --robot-id after manual login. No request sent.")
+    if args.mode != "practice" and (args.base_url or args.robot_id or args.confirm_practice):
+        parser.error("--base-url, --robot-id and --confirm-practice are practice-only. No request sent.")
     selected_specs,load_paths,factory=SPECS,all_paths,build
     if args.series=="mission":
         from mission_confirmation import SPECS as mission_specs,all_paths as mission_paths
@@ -46,7 +55,12 @@ def main():
         from cover21_confirmation import SPECS as cover21_specs,all_paths as cover21_paths,build as cover21_build
         selected_specs,load_paths,factory=cover21_specs,cover21_paths,cover21_build
     if args.method not in selected_specs[args.problem]:parser.error("Methods: "+", ".join(selected_specs[args.problem]))
-    paths=load_paths();scenario=generate(args.seed,ScenarioConfig(directional_fraction=.5 if args.problem==4 else 0.));error=ErrorConfig()
+    paths=load_paths()
+    if args.mode != "offline":
+        from bounded_http import run_http
+        run_http(args, factory, selected_specs[args.problem][args.method], paths, PROGRAM_STARTED)
+        return
+    scenario=generate(args.seed,ScenarioConfig(directional_fraction=.5 if args.problem==4 else 0.));error=ErrorConfig()
     sim=Simulator(scenario,ErrorField(args.seed,error),Limits(countdown_s=0))
     initialized=time.perf_counter();policy=factory(Client(PeerTransport(Protocol(sim)),robot_id="mock-robot"),selected_specs[args.problem][args.method],args.problem,paths)
     initialization=time.perf_counter()-initialized;began=time.perf_counter();cpu=time.process_time();stats=policy.run()

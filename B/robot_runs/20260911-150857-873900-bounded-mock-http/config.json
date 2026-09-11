@@ -1,0 +1,28 @@
+{
+  "problem": 4,
+  "method": "range_grid21_29",
+  "seed": 42,
+  "series": "cover21",
+  "mode": "mock-http",
+  "base_url": null,
+  "robot_id": null,
+  "confirm_practice": false,
+  "spec": {
+    "kind": "coupled_width",
+    "dispatch_model": "base",
+    "range_skip": true,
+    "layout": "grid21_29",
+    "fraction": 0.15,
+    "share_cooldown": 150.0,
+    "transverse_m": 40.0
+  },
+  "python": "3.14.6",
+  "numpy": "2.5.3",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "threads": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "client_sha256": "6081f7f7ef95574b410675b215c4d8fdd2b8efbec26f76ae13634921f2ca315a"
+}
