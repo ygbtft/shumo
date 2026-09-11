@@ -1,0 +1,87 @@
+{
+  "paired_cases": 372,
+  "comparisons": [
+    {
+      "problem": 3,
+      "new": "fast_locked_area7",
+      "old": "range_locked_area7",
+      "split": "ordinary",
+      "runs": 75,
+      "score_fields_identical": true,
+      "mean_cpu_reduction": 0.1327557223391963,
+      "mean_wall_reduction": 0.1334965761514475
+    },
+    {
+      "problem": 3,
+      "new": "fast_locked_area7",
+      "old": "range_locked_area7",
+      "split": "stress",
+      "runs": 18,
+      "score_fields_identical": true,
+      "mean_cpu_reduction": 0.15920342787811548,
+      "mean_wall_reduction": 0.14709079791982582
+    },
+    {
+      "problem": 4,
+      "new": "fast_arc05_width015",
+      "old": "range_arc05_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "score_fields_identical": true,
+      "mean_cpu_reduction": 0.3164771153022573,
+      "mean_wall_reduction": 0.31656008817360215
+    },
+    {
+      "problem": 4,
+      "new": "fast_arc05_width015",
+      "old": "range_arc05_width015",
+      "split": "stress",
+      "runs": 18,
+      "score_fields_identical": true,
+      "mean_cpu_reduction": 0.3017710585871276,
+      "mean_wall_reduction": 0.3016884073693026
+    },
+    {
+      "problem": 4,
+      "new": "fast_locked_width015",
+      "old": "range_locked_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "score_fields_identical": true,
+      "mean_cpu_reduction": 0.40451761133098385,
+      "mean_wall_reduction": 0.404538262024956
+    },
+    {
+      "problem": 4,
+      "new": "fast_locked_width015",
+      "old": "range_locked_width015",
+      "split": "stress",
+      "runs": 18,
+      "score_fields_identical": true,
+      "mean_cpu_reduction": 0.315623081106723,
+      "mean_wall_reduction": 0.31570034852730355
+    },
+    {
+      "problem": 4,
+      "new": "fast_negative_arc05_width015",
+      "old": "negative_arc05_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "score_fields_identical": true,
+      "mean_cpu_reduction": 0.29150335994818255,
+      "mean_wall_reduction": 0.29145989237055336
+    },
+    {
+      "problem": 4,
+      "new": "fast_negative_arc05_width015",
+      "old": "negative_arc05_width015",
+      "split": "stress",
+      "runs": 18,
+      "score_fields_identical": true,
+      "mean_cpu_reduction": 0.2731923345631684,
+      "mean_wall_reduction": 0.27344466694795977
+    }
+  ],
+  "scored_executions": 0,
+  "official_calls": 0
+}

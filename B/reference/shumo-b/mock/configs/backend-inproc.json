@@ -1,0 +1,1 @@
+{"kind":"inproc_mock","robot_id":"mock-robot","seed":202600,"scenario":{"directional_fraction":0.5},"error":{"model":"iid"},"limits":{"countdown_s":0}}

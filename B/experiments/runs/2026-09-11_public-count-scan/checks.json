@@ -1,0 +1,3608 @@
+{
+  "passed": 780,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_uniform__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_uniform__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_edge__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_edge__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_clustered__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_clustered__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_boundary_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_boundary_min__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_boundary_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_boundary_min__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_boundary_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_boundary_min__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_boundary_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_boundary_min__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q3_count_deferred_area7_boundary_min__n16__positive",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_boundary_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_boundary_min__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q3_count_deferred_area7_boundary_min__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_boundary_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_boundary_min__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q3_count_deferred_area7_boundary_min__n16__spatial",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_near_collinear_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_near_collinear_min__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_near_collinear_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_near_collinear_min__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_near_collinear_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_near_collinear_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_near_collinear_min__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q3_count_deferred_area7_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_near_collinear_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_near_collinear_min__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q3_count_deferred_area7_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_near_collinear_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_near_collinear_min__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q3_count_deferred_area7_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_unknown_count_late__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_unknown_count_late__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_unknown_count_late__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_unknown_count_late__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_unknown_count_late__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_unknown_count_late__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_unknown_count_late__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q3_count_deferred_area7_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_unknown_count_late__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_unknown_count_late__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q3_count_deferred_area7_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q3_count_deferred_area7_unknown_count_late__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q3_count_deferred_area7_unknown_count_late__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q3_count_deferred_area7_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_uniform__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_uniform__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_edge__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_edge__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_clustered__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_clustered__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_boundary_outward_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_boundary_outward_min__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_boundary_outward_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_boundary_outward_min__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_boundary_outward_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_boundary_outward_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_deferred_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_boundary_outward_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_deferred_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 15,
+      "switch_saved": 14,
+      "virtual_saved_s": 89.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_boundary_outward_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_deferred_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "skipped": 6,
+      "switch_saved": 6,
+      "virtual_saved_s": 36.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_near_collinear_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_near_collinear_min__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_near_collinear_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_near_collinear_min__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_near_collinear_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_near_collinear_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_deferred_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 6,
+      "switch_saved": 6,
+      "virtual_saved_s": 36.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_near_collinear_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_deferred_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 6,
+      "switch_saved": 6,
+      "virtual_saved_s": 36.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_near_collinear_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_deferred_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 6,
+      "switch_saved": 6,
+      "virtual_saved_s": 36.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_unknown_count_late__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_unknown_count_late__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_unknown_count_late__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_unknown_count_late__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_unknown_count_late__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_unknown_count_late__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_deferred_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_unknown_count_late__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_deferred_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_deferred_width015_unknown_count_late__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_deferred_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_deferred_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_uniform__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_uniform__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_edge__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_edge__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_clustered__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_clustered__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_boundary_outward_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_boundary_outward_min__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_boundary_outward_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_boundary_outward_min__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_boundary_outward_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_boundary_outward_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_boundary_outward_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 16,
+      "switch_saved": 14,
+      "virtual_saved_s": 94.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_boundary_outward_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "skipped": 6,
+      "switch_saved": 6,
+      "virtual_saved_s": 36.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_near_collinear_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_near_collinear_min__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_near_collinear_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_near_collinear_min__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_near_collinear_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_near_collinear_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 6,
+      "switch_saved": 6,
+      "virtual_saved_s": 36.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_near_collinear_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 6,
+      "switch_saved": 6,
+      "virtual_saved_s": 36.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_near_collinear_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 6,
+      "switch_saved": 6,
+      "virtual_saved_s": 36.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_unknown_count_late__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_unknown_count_late__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_unknown_count_late__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_unknown_count_late__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_unknown_count_late__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_unknown_count_late__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_unknown_count_late__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_width015_unknown_count_late__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_uniform__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_edge__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__iid__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__iid__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__iid__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__iid__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__iid__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__iid__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__iid__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__iid__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__iid__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__iid__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__smooth__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__smooth__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__smooth__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__smooth__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__smooth__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-positive__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-positive__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-positive__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-positive__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-positive__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-negative__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-negative__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-negative__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-negative__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-negative__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-spatial__67",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-spatial__68",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-spatial__69",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-spatial__70",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_clustered__adversarial-spatial__71",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "public_empty_skips": 3
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "skipped": 21,
+      "switch_saved": 21,
+      "virtual_saved_s": 126.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "public_empty_skips": 3
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 21,
+      "switch_saved": 20,
+      "virtual_saved_s": 125.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 3
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_locked_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "skipped": 21,
+      "switch_saved": 20,
+      "virtual_saved_s": 125.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_locked_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_locked_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_locked_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n10__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n10__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_locked_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_locked_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    },
+    {
+      "test": "disabled_public_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "public_feedback_expanded_count_q4_count_cheap_predict8_locked_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "public_empty_skips": 0
+    },
+    {
+      "test": "actual_count_deletion_cost_q4_count_cheap_predict8_locked_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0,
+      "switch_saved": 0,
+      "virtual_saved_s": 0.0
+    }
+  ],
+  "scored_executions": 0,
+  "official_calls": 0
+}

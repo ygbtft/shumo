@@ -1,0 +1,116 @@
+{
+  "scenario": {
+    "seed": 3283,
+    "sources": [
+      {
+        "channel": 14,
+        "x": -321.67643874298756,
+        "y": 786.7809534791936,
+        "radius": 1500.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 10,
+        "x": -691.916925803064,
+        "y": 582.038082000094,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 2,
+        "x": -936.0561144325266,
+        "y": 205.4305926858477,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 12,
+        "x": -976.5482030461354,
+        "y": -267.41327029032016,
+        "radius": 1500.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 4,
+        "x": -780.0281521115129,
+        "y": -727.553338038715,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 8,
+        "x": -370.4736641044113,
+        "y": -1057.835821531944,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 17,
+        "x": 171.46719640301433,
+        "y": -1162.4216105001187,
+        "radius": 1500.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 15,
+        "x": 723.9330549663897,
+        "y": -993.363793567832,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 11,
+        "x": 1151.2414173545037,
+        "y": -567.0869804642297,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 7,
+        "x": 1337.0609981392568,
+        "y": 34.265686259791785,
+        "radius": 1500.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 18,
+        "x": 1215.2862184584715,
+        "y": 678.096982986961,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 1,
+        "x": 790.5731379541933,
+        "y": 1210.5486943213139,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 20,
+        "x": 142.59705778028297,
+        "y": 1493.206643138319,
+        "radius": 1500.0,
+        "direction_deg": null
+      }
+    ],
+    "config": {
+      "stress_layout": "range_transition",
+      "source_rng": [
+        42,
+        119,
+        3,
+        4,
+        13
+      ]
+    }
+  },
+  "error": {
+    "model": "adversarial",
+    "length_scale_m": 200.0,
+    "cross_channel": "independent",
+    "adversarial_sign": "spatial",
+    "empirical_samples_deg": [],
+    "empirical_base": "iid"
+  }
+}

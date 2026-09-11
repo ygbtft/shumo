@@ -1,0 +1,1542 @@
+[
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "boundary_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 963.9707289999997
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "boundary_min__n16__negative",
+    "split": "stress",
+    "delta_s": 939.1933429999999
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 879.7122019999997
+  },
+  {
+    "problem": 4,
+    "method": "replace25_nearest",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 872.288192
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "boundary_min__n16__positive",
+    "split": "stress",
+    "delta_s": 795.4334040000003
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 763.484362000001
+  },
+  {
+    "problem": 4,
+    "method": "replace25",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 763.484362000001
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 673.4488039999997
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 662.6798279999994
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 661.2276919999999
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 641.0161000000003
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__smooth__69",
+    "split": "ordinary",
+    "delta_s": 636.082015
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 635.4121970000001
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 633.693225
+  },
+  {
+    "problem": 4,
+    "method": "replace25",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 633.693225
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 616.0670520000003
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 606.7136299999997
+  },
+  {
+    "problem": 4,
+    "method": "replace25_nearest",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 562.0913
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 559.2758990000011
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 539.0989450000002
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 529.027685
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 523.5090439999999
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 517.3967459999994
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__smooth__69",
+    "split": "ordinary",
+    "delta_s": 513.4134829999998
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 510.8182590000001
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 509.74705600000016
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 508.7578960000001
+  },
+  {
+    "problem": 4,
+    "method": "replace25_nearest",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 490.8748920000007
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 490.60591699999986
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 489.03132800000003
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "boundary_min__n16__positive",
+    "split": "stress",
+    "delta_s": 486.8055480000003
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 482.54881499999965
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 478.37567800000033
+  },
+  {
+    "problem": 4,
+    "method": "replace25_nearest",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 474.3433320000004
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 474.32654200000025
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 468.1701089999997
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 464.01422200000025
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 453.32247700000016
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 444.2853319999999
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 444.18924700000025
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 438.4049960000002
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 435.4806239999998
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 433.89220699999987
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 430.2872360000001
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 424.871435
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 422.09711700000025
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 419.43697900000006
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 415.2509809999997
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 408.1851590000001
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 403.011043
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 402.8529739999999
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 399.76977899999974
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 394.3118239999999
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 392.1894619999998
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 391.1975889999999
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 387.62102000000004
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 384.94828099999995
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 363.202217
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__iid__67",
+    "split": "ordinary",
+    "delta_s": 353.1679509999999
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__iid__67",
+    "split": "ordinary",
+    "delta_s": 353.1679509999999
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 348.6245359999998
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 347.81315799999993
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 343.18538199999966
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 342.7123650000003
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 339.61463000000003
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 337.68324200000006
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "edge__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 334.31015800000023
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 334.05738199999996
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 328.405882
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 320.62263600000006
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 317.9421580000003
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 317.09203400000024
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 316.34098200000017
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 314.2419890000001
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 314.11553300000014
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 314.00458100000014
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 312.76311799999985
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 311.90117999999984
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 311.55769499999997
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 309.7079709999998
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 305.4242009999998
+  },
+  {
+    "problem": 4,
+    "method": "replace25_nearest",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 299.1557040000007
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 296.1368010000001
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 296.0596450000003
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 295.61078499999985
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 293.97975499999984
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 290.48576300000013
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 289.1313359999999
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "edge__smooth__67",
+    "split": "ordinary",
+    "delta_s": 286.8531560000001
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "edge__smooth__67",
+    "split": "ordinary",
+    "delta_s": 286.8531560000001
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "edge__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 286.7775710000001
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__iid__67",
+    "split": "ordinary",
+    "delta_s": 285.87492900000007
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 284.20721000000003
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 279.812179
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 279.812179
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 264.42325200000005
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 258.95517299999983
+  },
+  {
+    "problem": 4,
+    "method": "replace25_nearest",
+    "case_id": "edge__smooth__67",
+    "split": "ordinary",
+    "delta_s": 258.701728
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 254.8085759999999
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 252.74772699999994
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__iid__68",
+    "split": "ordinary",
+    "delta_s": 251.53192900000022
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 250.63346200000024
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 240.78780099999994
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 240.77375900000015
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 240.16883800000005
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 238.1138050000004
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 233.9521880000002
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 233.90174799999977
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 233.90174799999977
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 230.22951999999987
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 226.0868330000003
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 226.0868330000003
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 219.83060400000022
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 218.33633199999986
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 212.46393500000022
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 211.12489099999993
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 211.12489099999993
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 206.34613100000024
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 206.22329200000013
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 199.8385519999997
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 196.97791699999834
+  },
+  {
+    "problem": 4,
+    "method": "replace25",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 196.97791699999834
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 196.7643750000002
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 196.18721300000016
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 195.95971699999973
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "boundary_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 190.91242899999997
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 190.8979250000002
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__smooth__69",
+    "split": "ordinary",
+    "delta_s": 190.4840409999997
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 187.37445300000036
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 183.90947200000028
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 182.56819899999982
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 182.56819899999982
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 179.09130099999993
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 173.1878700000002
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 166.9610389999998
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 166.11533099999997
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 165.55424099999982
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 164.72515900000008
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 164.72515900000008
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 163.05934100000013
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "boundary_min__n10__positive",
+    "split": "stress",
+    "delta_s": 162.40390099999968
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "boundary_min__n10__negative",
+    "split": "stress",
+    "delta_s": 158.41586499999994
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "boundary_min__n16__positive",
+    "split": "stress",
+    "delta_s": 151.14953200000036
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "boundary_min__n10__positive",
+    "split": "stress",
+    "delta_s": 140.17501999999968
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 134.4342019999999
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 133.00717199999963
+  },
+  {
+    "problem": 4,
+    "method": "replace22_noshare",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 131.63348000000042
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "clustered__iid__68",
+    "split": "ordinary",
+    "delta_s": 130.27358200000026
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 126.16530499999999
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 125.2872239999997
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 118.3560010000001
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 118.06969299999992
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "boundary_min__n10__negative",
+    "split": "stress",
+    "delta_s": 117.95560999999998
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 113.85238900000058
+  },
+  {
+    "problem": 4,
+    "method": "replace25",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 113.85238900000058
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 112.85407200000009
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 112.67138700000032
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 112.67138700000032
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 111.69129699999985
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 108.52536099999998
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "boundary_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 105.99632999999994
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 103.42818100000022
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 97.97446800000034
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 89.47202300000026
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 87.35991699999977
+  },
+  {
+    "problem": 4,
+    "method": "replace25",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 87.35991699999977
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 75.15920400000005
+  },
+  {
+    "problem": 4,
+    "method": "replace25_nearest",
+    "case_id": "uniform__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 74.42819699999927
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 67.55133100000012
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 64.75719799999979
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 63.06858999999986
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 61.05251300000009
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 57.41888300000028
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 51.84036500000002
+  },
+  {
+    "problem": 4,
+    "method": "replace25",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 51.84036500000002
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 50.635479999999916
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "edge__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 47.08178599999974
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 44.69313800000009
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 44.34977800000024
+  },
+  {
+    "problem": 3,
+    "method": "replace7",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 44.165402000000086
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 43.94512300000042
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 40.437954999999874
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 38.76095600000008
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 35.75395099999969
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 35.54337200000009
+  },
+  {
+    "problem": 3,
+    "method": "replace9",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 35.040586000000076
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 35.040586000000076
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 34.84555799999998
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 33.49705700000004
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "edge__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 33.17391399999997
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 32.40335899999991
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 30.73914599999989
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 28.664636000000428
+  },
+  {
+    "problem": 4,
+    "method": "replace25",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 28.664636000000428
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 27.737550999999257
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 26.968572000000222
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 26.086035000000265
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 25.645418000000063
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 25.31938100000025
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 17.4763939999998
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 15.755071999999927
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 15.330215999999837
+  },
+  {
+    "problem": 4,
+    "method": "replace22_nearest",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 14.994964000000436
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__smooth__68",
+    "split": "ordinary",
+    "delta_s": 13.83177599999999
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 13.826832000000195
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 12.308700000000044
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 11.124357000000145
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__iid__68",
+    "split": "ordinary",
+    "delta_s": 10.655137000000195
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 8.278666000000158
+  },
+  {
+    "problem": 4,
+    "method": "replace25",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 8.278666000000158
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 5.738954999999805
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 5.48691400000007
+  },
+  {
+    "problem": 3,
+    "method": "replace9_nearest",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 5.149630000000343
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__iid__68",
+    "split": "ordinary",
+    "delta_s": 4.769941000000017
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 4.412358999999924
+  },
+  {
+    "problem": 4,
+    "method": "static_task22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 2.2354609999993045
+  },
+  {
+    "problem": 4,
+    "method": "replace22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 2.2354609999993045
+  },
+  {
+    "problem": 4,
+    "method": "baseline_task25",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 1.01355600000079
+  },
+  {
+    "problem": 4,
+    "method": "replace25",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 1.01355600000079
+  },
+  {
+    "problem": 3,
+    "method": "replace7_nearest",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 0.1644029999997656
+  }
+]

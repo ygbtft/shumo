@@ -1,0 +1,26 @@
+﻿{
+    "variant":  "slim",
+    "run_label":  "slim-repeat",
+    "launch_utc":  "2026-09-10T12:54:07.7724178+00:00",
+    "first_process_s":  0.0667533,
+    "first_listener_s":  0.095098599999999991,
+    "first_webview_process_s":  0.666501,
+    "observed_seconds":  90.558248499999991,
+    "final_sample":  {
+                         "elapsed_s":  89.987,
+                         "root_pid":  7280,
+                         "session_id":  2,
+                         "root_working_set_bytes":  51728384,
+                         "tree_working_set_bytes":  431366144,
+                         "tree_private_bytes":  200806400,
+                         "webview_count":  6,
+                         "listener_count":  2
+                     },
+    "runtimes":  [
+                     {
+                         "path":  "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\152.0.4191.66\\msedgewebview2.exe",
+                         "version":  "152.0.4191.66"
+                     }
+                 ],
+    "executable_sha256":  "2373B9E7AF83735A04309E2983EB433EC46FAF7E0B8494410CE7FDED2A297C27"
+}

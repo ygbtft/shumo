@@ -1,0 +1,4192 @@
+{
+  "passed": 848,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "switch_metric_subsequence_0",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_1",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_2",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_3",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_4",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_5",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_6",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_7",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_8",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_9",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_10",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_11",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_12",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_13",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_14",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_15",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_16",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_17",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_18",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_19",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_20",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_21",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_22",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_23",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_24",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_25",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_26",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_27",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_28",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_29",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_30",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_31",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_32",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_33",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_34",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_35",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_36",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_37",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_38",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_39",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_40",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_41",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_42",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_43",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_44",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_45",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_46",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_47",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_48",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_49",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_50",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_51",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_52",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_53",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_54",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_55",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_56",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_57",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_58",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_59",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_60",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_61",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_62",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_63",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_64",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_65",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_66",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_67",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_68",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_69",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_70",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_71",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_72",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_73",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_74",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_75",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_76",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_77",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_78",
+      "passed": true
+    },
+    {
+      "test": "switch_metric_subsequence_79",
+      "passed": true
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__iid__67",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__iid__70",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__smooth__67",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__smooth__68",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__smooth__69",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__smooth__70",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-positive__67",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-positive__68",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-positive__69",
+      "passed": true,
+      "skipped": 6
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-positive__70",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-negative__67",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-negative__69",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-negative__70",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_uniform__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_uniform__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__iid__69",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__iid__70",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__iid__71",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__smooth__69",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__smooth__70",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__smooth__71",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-positive__69",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-positive__70",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-positive__71",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-negative__69",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-negative__70",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-negative__71",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_edge__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_edge__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__iid__68",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__smooth__68",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__smooth__71",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-positive__71",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-negative__68",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-negative__71",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_clustered__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_clustered__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_boundary_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_boundary_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_boundary_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_boundary_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_boundary_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_boundary_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_boundary_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_boundary_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_boundary_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_boundary_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_boundary_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_boundary_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_near_collinear_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_near_collinear_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_near_collinear_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_near_collinear_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_unknown_count_late__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_unknown_count_late__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_unknown_count_late__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_unknown_count_late__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q3_faithful_area7_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q3_faithful_area7_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__iid__67",
+      "passed": true,
+      "skipped": 44
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__iid__68",
+      "passed": true,
+      "skipped": 38
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__iid__69",
+      "passed": true,
+      "skipped": 29
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__iid__70",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__iid__71",
+      "passed": true,
+      "skipped": 24
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__smooth__67",
+      "passed": true,
+      "skipped": 23
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__smooth__68",
+      "passed": true,
+      "skipped": 36
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__smooth__69",
+      "passed": true,
+      "skipped": 29
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__smooth__70",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__smooth__71",
+      "passed": true,
+      "skipped": 23
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-positive__67",
+      "passed": true,
+      "skipped": 29
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-positive__68",
+      "passed": true,
+      "skipped": 26
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-positive__69",
+      "passed": true,
+      "skipped": 30
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-positive__70",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-positive__71",
+      "passed": true,
+      "skipped": 26
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-negative__67",
+      "passed": true,
+      "skipped": 44
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-negative__68",
+      "passed": true,
+      "skipped": 33
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-negative__69",
+      "passed": true,
+      "skipped": 13
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-negative__70",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-negative__71",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 33
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 38
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 35
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_uniform__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_uniform__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__iid__67",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__iid__68",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__iid__69",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__iid__70",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__iid__71",
+      "passed": true,
+      "skipped": 14
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__smooth__67",
+      "passed": true,
+      "skipped": 5
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__smooth__68",
+      "passed": true,
+      "skipped": 11
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__smooth__69",
+      "passed": true,
+      "skipped": 29
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__smooth__71",
+      "passed": true,
+      "skipped": 14
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-positive__67",
+      "passed": true,
+      "skipped": 24
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-positive__68",
+      "passed": true,
+      "skipped": 10
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-positive__69",
+      "passed": true,
+      "skipped": 28
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-positive__70",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-positive__71",
+      "passed": true,
+      "skipped": 13
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-negative__67",
+      "passed": true,
+      "skipped": 19
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-negative__68",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-negative__69",
+      "passed": true,
+      "skipped": 25
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-negative__71",
+      "passed": true,
+      "skipped": 14
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 9
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 24
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_edge__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_edge__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__iid__67",
+      "passed": true,
+      "skipped": 18
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__iid__68",
+      "passed": true,
+      "skipped": 68
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__iid__69",
+      "passed": true,
+      "skipped": 42
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__iid__70",
+      "passed": true,
+      "skipped": 37
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__iid__71",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__smooth__67",
+      "passed": true,
+      "skipped": 11
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__smooth__68",
+      "passed": true,
+      "skipped": 31
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__smooth__70",
+      "passed": true,
+      "skipped": 9
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__smooth__71",
+      "passed": true,
+      "skipped": 7
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-positive__67",
+      "passed": true,
+      "skipped": 14
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-positive__68",
+      "passed": true,
+      "skipped": 29
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-positive__70",
+      "passed": true,
+      "skipped": 8
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-positive__71",
+      "passed": true,
+      "skipped": 20
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-negative__67",
+      "passed": true,
+      "skipped": 19
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-negative__68",
+      "passed": true,
+      "skipped": 30
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-negative__69",
+      "passed": true,
+      "skipped": 19
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-negative__70",
+      "passed": true,
+      "skipped": 8
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-negative__71",
+      "passed": true,
+      "skipped": 7
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 14
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 8
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_clustered__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_clustered__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_boundary_outward_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_boundary_outward_min__n10__positive",
+      "passed": true,
+      "skipped": 5
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_boundary_outward_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_boundary_outward_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "skipped": 5
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 15
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "skipped": 6
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_near_collinear_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_near_collinear_min__n10__positive",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_near_collinear_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_near_collinear_min__n10__negative",
+      "passed": true,
+      "skipped": 5
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 6
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 6
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 6
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_unknown_count_late__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_unknown_count_late__n10__positive",
+      "passed": true,
+      "skipped": 12
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_unknown_count_late__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_unknown_count_late__n10__negative",
+      "passed": true,
+      "skipped": 10
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__iid__67",
+      "passed": true,
+      "skipped": 28
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__iid__68",
+      "passed": true,
+      "skipped": 18
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__iid__69",
+      "passed": true,
+      "skipped": 19
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__iid__70",
+      "passed": true,
+      "skipped": 19
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__iid__71",
+      "passed": true,
+      "skipped": 27
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__smooth__67",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__smooth__68",
+      "passed": true,
+      "skipped": 34
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__smooth__69",
+      "passed": true,
+      "skipped": 16
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__smooth__70",
+      "passed": true,
+      "skipped": 43
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__smooth__71",
+      "passed": true,
+      "skipped": 25
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-positive__67",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-positive__68",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-positive__69",
+      "passed": true,
+      "skipped": 28
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-positive__70",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-positive__71",
+      "passed": true,
+      "skipped": 18
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-negative__67",
+      "passed": true,
+      "skipped": 44
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-negative__68",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-negative__69",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-negative__70",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-negative__71",
+      "passed": true,
+      "skipped": 30
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 44
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 31
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_uniform__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_uniform__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 20
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__iid__67",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__iid__68",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__iid__69",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__iid__71",
+      "passed": true,
+      "skipped": 14
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__smooth__67",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__smooth__68",
+      "passed": true,
+      "skipped": 9
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__smooth__69",
+      "passed": true,
+      "skipped": 26
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__smooth__71",
+      "passed": true,
+      "skipped": 14
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-positive__67",
+      "passed": true,
+      "skipped": 13
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-positive__68",
+      "passed": true,
+      "skipped": 10
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-positive__69",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-positive__71",
+      "passed": true,
+      "skipped": 13
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-negative__67",
+      "passed": true,
+      "skipped": 26
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-negative__68",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-negative__69",
+      "passed": true,
+      "skipped": 6
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-negative__71",
+      "passed": true,
+      "skipped": 14
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_edge__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_edge__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__iid__68",
+      "passed": true,
+      "skipped": 37
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__iid__70",
+      "passed": true,
+      "skipped": 12
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__iid__71",
+      "passed": true,
+      "skipped": 4
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__smooth__67",
+      "passed": true,
+      "skipped": 25
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__smooth__68",
+      "passed": true,
+      "skipped": 17
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__smooth__69",
+      "passed": true,
+      "skipped": 26
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__smooth__70",
+      "passed": true,
+      "skipped": 9
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__smooth__71",
+      "passed": true,
+      "skipped": 78
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-positive__67",
+      "passed": true,
+      "skipped": 25
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-positive__68",
+      "passed": true,
+      "skipped": 15
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-positive__70",
+      "passed": true,
+      "skipped": 12
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-positive__71",
+      "passed": true,
+      "skipped": 5
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-negative__67",
+      "passed": true,
+      "skipped": 26
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-negative__68",
+      "passed": true,
+      "skipped": 30
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-negative__69",
+      "passed": true,
+      "skipped": 24
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-negative__70",
+      "passed": true,
+      "skipped": 1
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-negative__71",
+      "passed": true,
+      "skipped": 86
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 6
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 37
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 5
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_clustered__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_clustered__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_boundary_outward_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_boundary_outward_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_boundary_outward_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_boundary_outward_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "skipped": 7
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_near_collinear_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_near_collinear_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_near_collinear_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_near_collinear_min__n10__negative",
+      "passed": true,
+      "skipped": 26
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 12
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_unknown_count_late__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_unknown_count_late__n10__positive",
+      "passed": true,
+      "skipped": 19
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_unknown_count_late__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_unknown_count_late__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_arc05_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_arc05_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__iid__67",
+      "passed": true,
+      "skipped": 29
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__iid__68",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__iid__69",
+      "passed": true,
+      "skipped": 33
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__iid__70",
+      "passed": true,
+      "skipped": 16
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__iid__71",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__smooth__67",
+      "passed": true,
+      "skipped": 29
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__smooth__68",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__smooth__69",
+      "passed": true,
+      "skipped": 32
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__smooth__70",
+      "passed": true,
+      "skipped": 16
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__smooth__71",
+      "passed": true,
+      "skipped": 28
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-positive__67",
+      "passed": true,
+      "skipped": 29
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-positive__68",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-positive__69",
+      "passed": true,
+      "skipped": 33
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-positive__70",
+      "passed": true,
+      "skipped": 16
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-positive__71",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-negative__67",
+      "passed": true,
+      "skipped": 29
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-negative__68",
+      "passed": true,
+      "skipped": 20
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-negative__69",
+      "passed": true,
+      "skipped": 34
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-negative__70",
+      "passed": true,
+      "skipped": 16
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-negative__71",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 21
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 30
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 11
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_uniform__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_uniform__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 25
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__iid__67",
+      "passed": true,
+      "skipped": 35
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__iid__68",
+      "passed": true,
+      "skipped": 38
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__iid__69",
+      "passed": true,
+      "skipped": 57
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__iid__70",
+      "passed": true,
+      "skipped": 44
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__iid__71",
+      "passed": true,
+      "skipped": 39
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__smooth__67",
+      "passed": true,
+      "skipped": 36
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__smooth__68",
+      "passed": true,
+      "skipped": 30
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__smooth__69",
+      "passed": true,
+      "skipped": 64
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__smooth__70",
+      "passed": true,
+      "skipped": 44
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__smooth__71",
+      "passed": true,
+      "skipped": 39
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-positive__67",
+      "passed": true,
+      "skipped": 44
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-positive__68",
+      "passed": true,
+      "skipped": 45
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-positive__69",
+      "passed": true,
+      "skipped": 64
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-positive__70",
+      "passed": true,
+      "skipped": 45
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-positive__71",
+      "passed": true,
+      "skipped": 47
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-negative__67",
+      "passed": true,
+      "skipped": 44
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-negative__68",
+      "passed": true,
+      "skipped": 38
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-negative__69",
+      "passed": true,
+      "skipped": 64
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-negative__70",
+      "passed": true,
+      "skipped": 45
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-negative__71",
+      "passed": true,
+      "skipped": 47
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 26
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 50
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 39
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_edge__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_edge__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 18
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__iid__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__iid__67",
+      "passed": true,
+      "skipped": 17
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__iid__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__iid__68",
+      "passed": true,
+      "skipped": 41
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__iid__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__iid__69",
+      "passed": true,
+      "skipped": 2
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__iid__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__iid__70",
+      "passed": true,
+      "skipped": 20
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__iid__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__iid__71",
+      "passed": true,
+      "skipped": 30
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__smooth__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__smooth__67",
+      "passed": true,
+      "skipped": 18
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__smooth__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__smooth__68",
+      "passed": true,
+      "skipped": 53
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__smooth__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__smooth__69",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__smooth__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__smooth__70",
+      "passed": true,
+      "skipped": 20
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__smooth__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__smooth__71",
+      "passed": true,
+      "skipped": 16
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-positive__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-positive__67",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-positive__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-positive__68",
+      "passed": true,
+      "skipped": 51
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-positive__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-positive__69",
+      "passed": true,
+      "skipped": 5
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-positive__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-positive__70",
+      "passed": true,
+      "skipped": 16
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-positive__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-positive__71",
+      "passed": true,
+      "skipped": 30
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-negative__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-negative__67",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-negative__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-negative__68",
+      "passed": true,
+      "skipped": 53
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-negative__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-negative__69",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-negative__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-negative__70",
+      "passed": true,
+      "skipped": 20
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-negative__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-negative__71",
+      "passed": true,
+      "skipped": 30
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-spatial__67",
+      "passed": true,
+      "skipped": 12
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-spatial__68",
+      "passed": true,
+      "skipped": 22
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-spatial__69",
+      "passed": true,
+      "skipped": 3
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-spatial__70",
+      "passed": true,
+      "skipped": 16
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_clustered__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_clustered__adversarial-spatial__71",
+      "passed": true,
+      "skipped": 30
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_boundary_outward_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_boundary_outward_min__n10__positive",
+      "passed": true,
+      "skipped": 7
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_boundary_outward_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_boundary_outward_min__n10__negative",
+      "passed": true,
+      "skipped": 7
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "skipped": 7
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_boundary_outward_min__n16__positive",
+      "passed": true,
+      "skipped": 17
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 17
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "skipped": 17
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_near_collinear_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_near_collinear_min__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_near_collinear_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_near_collinear_min__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_near_collinear_min__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_near_collinear_min__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_unknown_count_late__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_unknown_count_late__n10__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_unknown_count_late__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_unknown_count_late__n10__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_unknown_count_late__n16__positive",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "disabled_plan_q4_faithful_locked_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "expanded_plan_q4_faithful_locked_width015_unknown_count_late__n16__spatial",
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q3_faithful_area7_boundary_min__n10__spatial",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q3_faithful_area7_boundary_min__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q3_faithful_area7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q3_faithful_area7_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q3_faithful_area7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q3_faithful_area7_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "skipped": 5,
+      "saved_s": 30.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 15,
+      "saved_s": 89.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 6,
+      "saved_s": 36.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_arc05_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_arc05_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_arc05_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 12,
+      "saved_s": 72.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_arc05_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_arc05_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_arc05_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_locked_width015_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "skipped": 7,
+      "saved_s": 42.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_locked_width015_boundary_outward_min__n16__negative",
+      "passed": true,
+      "skipped": 17,
+      "saved_s": 102.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_locked_width015_near_collinear_min__n10__spatial",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_locked_width015_near_collinear_min__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_locked_width015_unknown_count_late__n10__spatial",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    },
+    {
+      "test": "actual_protocol_subsequence_and_cost_q4_faithful_locked_width015_unknown_count_late__n16__negative",
+      "passed": true,
+      "skipped": 0,
+      "saved_s": 0.0
+    }
+  ],
+  "scored_execution_count": 0,
+  "official_calls": 0
+}

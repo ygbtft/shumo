@@ -1,0 +1,14 @@
+{
+  "checked": 160,
+  "mismatches": [
+    {
+      "path": "B/experiments/runs/2026-09-11_wide-confirmation/finalize_log.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "2196cdea11e75baf9b4aa5db87384703b8709928309027ea495683b613579782"
+    }
+  ],
+  "prior_scored_executions": 32889,
+  "cause": "Manifest hashed an open finalize stdout log before the final print flushed; no score or decision file mismatches",
+  "previous_goal_turn": "progress",
+  "repair": "Keep old evidence; next final manifest must be calculated only after log-writing commands finish"
+}

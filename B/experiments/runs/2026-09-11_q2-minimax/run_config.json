@@ -1,0 +1,54 @@
+{
+  "base_seed": 42,
+  "anchor": [
+    0.0,
+    0.0
+  ],
+  "returned_deg": 0.0,
+  "candidates": [
+    [
+      250.0,
+      400.0
+    ],
+    [
+      400.0,
+      400.0
+    ],
+    [
+      500.0,
+      400.0
+    ],
+    [
+      750.0,
+      350.0
+    ],
+    [
+      750.0,
+      550.0
+    ],
+    [
+      0.0,
+      500.0
+    ],
+    [
+      1000.0,
+      1000.0
+    ]
+  ],
+  "bins_deg": [
+    2.0,
+    1.0,
+    0.5
+  ],
+  "geometry_error_deg": 1.01,
+  "physical_noise_deg": 1.0,
+  "scored_execution_count": 0,
+  "official_calls": 0,
+  "code_sha256": {
+    "q2_minimax_experiments.py": "069fd545d64208a65079dd70f510188fdc09fd6459b678029ffc2ac51c2a2477",
+    "signal_minimax.py": "b441bb73886c05d0272cc19fad0faa89a920b552734283dab0fb4a3805efc936",
+    "geometry.py": "513bbabd4092b7aa98c1bee46380be2ca4ae3857232854d7cd87dcfeb835c9a6",
+    "intelligent.py": "63aa0d5d05e6c8a893536f62ddb64517730a360ec5251068930203cf38100445"
+  },
+  "python": "/Users/dingdingzai/anaconda3/bin/python"
+}

@@ -1,0 +1,9 @@
+{
+  "candidates": 240,
+  "certified": 36,
+  "real_counterexamples": 204,
+  "unresolved": 0,
+  "wall_s": 10.802834000030998,
+  "scored_executions": 0,
+  "official_calls": 0
+}

@@ -1,0 +1,95 @@
+{
+  "case": "q4__uniform__iid__93",
+  "methods": {
+    "fast22": {
+      "total_virtual_s": 4682.295143,
+      "station_indices": [
+        0,
+        6,
+        7,
+        2,
+        5,
+        18,
+        17
+      ],
+      "task_costs": {
+        "survey": {
+          "move_m": 4229.914060971265,
+          "measure_s": 585,
+          "switch_s": 111,
+          "clear_s": 0,
+          "commands": 117,
+          "virtual_s": 1541.9828130000005
+        },
+        "source": {
+          "move_m": 13826.561656553939,
+          "measure_s": 255,
+          "switch_s": 37,
+          "clear_s": 83,
+          "commands": 68,
+          "virtual_s": 3140.3123299999997
+        }
+      }
+    },
+    "quarter22": {
+      "total_virtual_s": 6212.850968,
+      "station_indices": [
+        0,
+        6,
+        7,
+        1,
+        10,
+        11,
+        12,
+        3,
+        2,
+        13,
+        14,
+        15,
+        16,
+        4,
+        5,
+        17,
+        18
+      ],
+      "task_costs": {
+        "survey": {
+          "move_m": 11971.495460385551,
+          "measure_s": 1120,
+          "switch_s": 211,
+          "clear_s": 0,
+          "commands": 224,
+          "virtual_s": 3725.2990900000013
+        },
+        "source": {
+          "move_m": 10697.759385944215,
+          "measure_s": 230,
+          "switch_s": 32,
+          "clear_s": 86,
+          "commands": 64,
+          "virtual_s": 2487.551877999998
+        }
+      }
+    }
+  },
+  "delta": {
+    "survey": {
+      "move_m": 7741.581399414286,
+      "measure_s": 535,
+      "switch_s": 100,
+      "clear_s": 0,
+      "commands": 107,
+      "virtual_s": 2183.316277000001
+    },
+    "source": {
+      "move_m": -3128.8022706097236,
+      "measure_s": -25,
+      "switch_s": -5,
+      "clear_s": 3,
+      "commands": -4,
+      "virtual_s": -652.7604520000018
+    }
+  },
+  "scored_executions": 0,
+  "official_calls": 0
+}

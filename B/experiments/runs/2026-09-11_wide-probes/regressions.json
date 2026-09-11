@@ -1,0 +1,6491 @@
+[
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 2222.52678
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 2037.928222999999
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 1931.919949000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 1687.6038330000001
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 1536.6611519999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 1500.2008680000008
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 1475.378678
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 1399.2746959999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1390.2582839999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 1379.6959499999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1364.8782569999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 1357.6075180000007
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 1356.600061
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 1321.7042600000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 1316.9766800000007
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 1292.4913880000004
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1273.9933259999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1271.2138479999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 1263.031411
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1221.2391449999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 1192.9587490000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 1190.4452339999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1179.2144549999994
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 1161.7895749999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 1159.9287760000007
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 1139.994498
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 1130.089296
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 1125.056772
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 1123.499589
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 1121.2059769999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1105.7035219999998
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 1088.4938149999998
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 1081.4195330000002
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 1071.7451550000005
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 1071.1251710000006
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 1066.0342979999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 1041.131461
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 1031.8017670000008
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 1030.8858930000006
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1025.312339
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 1018.435633
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 1017.1129770000007
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 999.3096590000005
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 998.2189319999998
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 990.5775120000008
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 986.0157669999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 981.5224910000006
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 977.5099230000005
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 966.9266719999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 937.4212010000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 930.8797530000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 925.6578589999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__iid__68",
+    "split": "ordinary",
+    "delta_s": 923.649668
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 920.9668689999999
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 913.7094189999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 905.2704490000006
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 905.2000969999999
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 904.4269009999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 893.9186449999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 885.2075060000006
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 884.8296949999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 874.4786429999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 870.1192169999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 870.1192169999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 859.3938150000004
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 849.0422070000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 845.097976
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 836.7238110000008
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 834.4192169999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 829.1215539999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 829.1215539999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 808.9241740000007
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 799.4342880000004
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 798.48045
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 796.4415129999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 791.9489620000004
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 781.6299559999998
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 777.3611090000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 775.4240219999992
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 767.494823
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 764.9820140000002
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 763.6731249999993
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 744.1973669999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 731.0236130000003
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 726.7067449999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 723.5450270000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 718.8420249999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 709.9675049999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 703.3483820000001
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 701.0372660000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__iid__68",
+    "split": "ordinary",
+    "delta_s": 698.7483689999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 695.356366
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 695.356366
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 692.5897880000002
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__smooth__68",
+    "split": "ordinary",
+    "delta_s": 689.9509930000004
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 689.598669
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 687.6248650000007
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 682.6542549999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 676.4161560000002
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 669.7691809999997
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 665.8890959999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 665.8007589999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 665.2396679999993
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 662.4266130000005
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 658.6627859999999
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 657.2336860000005
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 652.9315609999994
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 651.2516159999996
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 649.9579119999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 649.8170849999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 640.9895259999994
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 636.810716
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 634.9939030000005
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 634.6475250000003
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 633.1781820000006
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 629.6570739999997
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 615.9575600000007
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 615.2765689999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 609.8093090000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 608.633253
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 606.609367
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 605.5179699999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 603.446234
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 601.7380980000007
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 598.8614379999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 598.1620849999999
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 595.5253399999992
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 593.4684859999998
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 572.0685979999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 570.7712409999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 562.9052840000004
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 562.1193719999992
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 556.7264669999995
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 556.644182
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 553.8505759999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 553.4617559999997
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 553.0923909999992
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 551.4718560000001
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 551.1757809999999
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 545.5653419999999
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 543.4162349999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 543.277059
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 541.3053499999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 539.2304809999996
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 538.7504049999998
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 533.4734400000007
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 532.6439759999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 530.4958150000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 526.2710299999999
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 525.2213359999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 524.6727079999991
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__smooth__67",
+    "split": "ordinary",
+    "delta_s": 523.0520120000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 522.1259749999999
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 519.3154400000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 519.1928760000001
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 516.7253049999999
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 516.0932290000001
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 514.7118339999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 514.301152
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 511.6849539999994
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 509.80348700000013
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 509.4952199999998
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 509.101189
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 504.84939399999985
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 501.656465
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 501.6174259999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 500.9024589999999
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 498.28160000000025
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 494.0866930000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 492.0757900000008
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 492.0757900000008
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 491.8611209999999
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 491.5430349999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 487.5475200000001
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 486.32190699999956
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 480.59007199999996
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 479.2280559999999
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 478.21561500000007
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 476.9133810000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 476.13088100000004
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__iid__68",
+    "split": "ordinary",
+    "delta_s": 475.95317200000045
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 474.60992199999964
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 472.78175999999985
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 469.4744069999997
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 467.49110699999983
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 466.90037200000006
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 461.80684400000064
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 461.6956799999998
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 459.7001300000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 458.454479
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 457.5466779999997
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 457.5420350000004
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 457.1634489999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 456.55015099999946
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 452.10281600000053
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 451.5944049999998
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 450.9363489999996
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 450.1073459999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 449.10455400000046
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 448.0516659999994
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 447.5443959999993
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 447.5443959999993
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 447.17418199999975
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 447.0410759999995
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 446.0791960000006
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 444.972659
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 443.68227300000035
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 442.3399790000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 436.74168999999983
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 435.76688300000023
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 432.635354
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 430.7387090000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 429.9036500000002
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 429.5114160000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 428.39373199999955
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 428.3506129999996
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 427.8260399999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 426.293686
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 424.8390339999987
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 424.8390339999987
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__iid__68",
+    "split": "ordinary",
+    "delta_s": 420.2064540000001
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 417.0821729999998
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 417.05630400000064
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 413.480286
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 409.9914410000001
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 408.05657000000065
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 407.84919999999966
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 407.61677899999995
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 406.4399109999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 405.61967600000025
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 403.45719499999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 402.49564199999986
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 401.49867900000027
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 401.34405499999957
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 399.6441240000004
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 398.3398870000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 397.34393699999964
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 397.0176540000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "edge__iid__68",
+    "split": "ordinary",
+    "delta_s": 396.85998199999995
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 395.3426579999996
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 392.0813939999998
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 391.9914609999996
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 391.109367
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "edge__iid__68",
+    "split": "ordinary",
+    "delta_s": 389.4901410000002
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 388.5334329999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 385.38333299999977
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 385.349072
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 380.8289969999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 378.00971200000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 377.11900999999943
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 375.3957649999993
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 373.3876989999999
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 373.1243850000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 372.0409410000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 371.4641590000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 369.76658600000064
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 368.3392620000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 367.6155630000003
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 367.04712199999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 366.8667810000006
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 366.2711369999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 363.951943
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 361.8438470000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 359.69346099999984
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 359.4200549999996
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__iid__68",
+    "split": "ordinary",
+    "delta_s": 357.8445350000002
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 357.8325169999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 357.229464
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 357.07564400000047
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 353.1804239999992
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 350.0796309999996
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 349.5691390000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 348.61497000000054
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 346.33567500000026
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 346.33567500000026
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 345.8521759999994
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 345.11270500000046
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 344.04319399999986
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 343.5279529999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 343.4735379999993
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__smooth__69",
+    "split": "ordinary",
+    "delta_s": 339.4251999999997
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 337.5771540000005
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 335.4259830000001
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 335.19769799999995
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__iid__68",
+    "split": "ordinary",
+    "delta_s": 334.81458699999985
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 334.5530689999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 332.32313200000044
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 331.8168370000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 330.4947689999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 328.3515549999993
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 328.3040179999998
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 328.0068200000005
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 327.6098460000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 327.1256830000002
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 325.2853930000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 323.6323419999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 322.8924340000003
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 322.7601759999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 322.45065500000055
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 321.6143920000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 319.78088800000023
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 319.5527229999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 319.3589729999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 318.5169129999995
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 318.3482329999997
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 317.4812929999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 317.4410479999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 316.4574640000001
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 314.6986589999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 313.418412
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 311.71618599999965
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 310.40297999999984
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 309.12485299999935
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 309.12485299999935
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 308.79915899999924
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 307.0849109999999
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 306.00840100000005
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 305.2750509999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 305.04787999999917
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 304.07948099999976
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 303.75676400000066
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 302.6883349999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 301.56695599999966
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 301.5436520000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 301.1691329999994
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 298.4122619999998
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 298.1346989999993
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 297.7754849999992
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 297.6986310000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 296.7920379999996
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 296.70446100000026
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 296.34966499999973
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 295.262788
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 294.46529499999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 293.66726799999924
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 293.4228000000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 292.0814019999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 292.06281800000033
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 291.5165989999996
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 291.13555799999995
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__smooth__71",
+    "split": "ordinary",
+    "delta_s": 289.55936500000007
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 287.2292989999996
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 286.71511999999984
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__smooth__68",
+    "split": "ordinary",
+    "delta_s": 286.6726120000003
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 285.6065259999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 284.557049
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 283.05107099999987
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 282.2133439999998
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__smooth__69",
+    "split": "ordinary",
+    "delta_s": 281.7416750000002
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 280.92594999999983
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 279.30646199999956
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 276.0072019999998
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 275.4645190000001
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 275.34630500000003
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 275.2900410000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 274.96376899999996
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 274.5300649999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__smooth__68",
+    "split": "ordinary",
+    "delta_s": 273.96242299999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 273.3717690000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 273.3439760000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 272.44559500000014
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__iid__68",
+    "split": "ordinary",
+    "delta_s": 272.36177599999974
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 271.3569640000005
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 270.5031400000007
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 270.1181459999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 269.0510640000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 269.0510640000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 268.6600870000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 268.10808499999985
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 268.10808499999985
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 267.90376000000015
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 267.2020190000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 267.2020190000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 266.0143500000004
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 265.457402
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 264.8944469999997
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 262.282921
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 261.76694599999973
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 261.7150009999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 260.4241890000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 259.7553509999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 259.7443370000001
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 259.15161400000034
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 259.14196900000024
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 258.9452289999999
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 257.2711650000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 256.86843599999975
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 256.50112700000045
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 256.4111329999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 256.4111329999996
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 255.41109599999982
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 255.1948169999996
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 253.99546699999973
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 253.99546699999973
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 253.1905740000002
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 253.07882400000017
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 252.9330399999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 251.262068
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 250.1433620000007
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 249.79586599999948
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 247.06997499999943
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 247.06997499999943
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 246.47740500000054
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 246.47740500000054
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 245.49095699999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 245.27536599999985
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 245.27536599999985
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 243.65723900000012
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 243.20733799999834
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 243.20733799999834
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 242.16293499999938
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 241.8283930000007
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 240.88254599999982
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 239.27739400000064
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 237.99856999999975
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 237.91973099999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 237.35773100000006
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 237.347718
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 237.2286809999996
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 237.03257499999927
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 236.9459909999996
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 236.92184300000008
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 236.59342300000026
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__smooth__68",
+    "split": "ordinary",
+    "delta_s": 236.56630399999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 236.26200900000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 236.0593340000005
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 236.0110539999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 235.99907600000006
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 235.7348920000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 235.7348920000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 234.9425879999999
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 233.29779599999983
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 233.03497200000038
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 232.02708499999972
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 231.5133050000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 231.4865319999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 231.0609110000005
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 230.2196210000002
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 229.99881199999982
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__smooth__68",
+    "split": "ordinary",
+    "delta_s": 229.431912
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 227.73171900000034
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 226.89787100000012
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 226.56462699999975
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 226.37617599999976
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 226.33815199999935
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 223.32936400000017
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 222.50293899999997
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 222.38967200000025
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 221.4157210000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 221.4157210000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 217.83952399999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 216.78612299999986
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 216.29687599999943
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 215.39091800000006
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 214.29443700000047
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 213.50818199999958
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 213.50818199999958
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "edge__iid__68",
+    "split": "ordinary",
+    "delta_s": 212.9743470000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 210.9892949999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 209.52505500000007
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 207.5247049999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 207.160167
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 207.1228459999993
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 207.1228459999993
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 206.76449200000025
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 205.81275600000026
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 204.9106240000001
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 204.76432100000056
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 203.92218200000025
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 202.64665199999945
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 201.08655299999918
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 201.00596200000018
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 200.796069
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 200.796069
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 200.72909400000026
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 199.3342079999993
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 199.3342079999993
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 198.9557560000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 198.56695299999956
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 198.40603900000042
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 197.83916500000032
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 196.9522169999991
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 195.81775000000016
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 194.5282299999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 194.04998799999976
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 194.04998799999976
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 193.91370599999937
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 192.2934349999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 192.00674099999924
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 190.66491699999915
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 190.51300999999967
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 190.4790780000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 190.05144299999938
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 187.03354299999955
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__smooth__67",
+    "split": "ordinary",
+    "delta_s": 186.93903500000033
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 186.4675159999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 185.1601929999997
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 185.12030499999946
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 185.12030499999946
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 184.9838120000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 184.80250100000012
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 184.09787200000028
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 183.56363499999952
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 182.86269899999934
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 182.8433070000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 182.55039099999976
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 182.07923299999948
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 182.010722
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 181.9990170000001
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 181.82024900000033
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 181.51639700000032
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 181.31921500000044
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 181.31921500000044
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 181.29911100000027
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 180.48303699999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 179.83587500000067
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 178.77976099999978
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 178.77976099999978
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 178.71666299999924
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 178.63898599999993
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 178.62248200000067
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 176.65188599999965
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 176.4301919999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 176.4301919999998
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 175.77753800000028
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 174.9473709999993
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 174.2923069999997
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 173.60908899999959
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 173.5772109999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 173.03214599999956
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 172.907913
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 172.55333400000018
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 172.47167399999944
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 172.38125000000036
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 171.63324300000022
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 170.89207100000021
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 170.06062999999995
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 169.21760600000016
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 167.8083770000003
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 167.48177699999997
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 166.59955600000012
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 165.63603800000055
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 165.10438500000055
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 163.19031500000074
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 161.54612799999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 161.4949689999994
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 160.25759599999947
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 159.00638499999968
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 158.58043799999996
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 158.48488699999962
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 158.4286200000006
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 158.30887399999938
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 158.30887399999938
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 158.03017799999998
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__smooth__68",
+    "split": "ordinary",
+    "delta_s": 157.2877580000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 155.37189000000035
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__smooth__68",
+    "split": "ordinary",
+    "delta_s": 154.09127200000057
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 154.00846999999976
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 153.92937099999926
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 153.75023199999941
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 153.33083200000056
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 151.45127800000046
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "uniform__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 149.13995999999952
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 149.13157500000034
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 149.13157500000034
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 148.50278199999957
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 148.15265999999974
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__iid__68",
+    "split": "ordinary",
+    "delta_s": 147.19838199999958
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 146.4910520000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 146.4910520000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 146.33149999999932
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 146.22987400000056
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 145.20206899999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 145.11137700000018
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 144.09725200000048
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 142.76921299999958
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 142.76921299999958
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 142.45576299999993
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 142.230912
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 142.1290770000005
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 141.5343640000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 140.18586700000014
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 138.54735600000004
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 137.5714229999994
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 137.48047700000006
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 136.8169170000001
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 136.22471799999948
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 135.66422000000057
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 135.6426419999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 134.70934699999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 134.61168999999973
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 134.60195399999975
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 134.18901499999993
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 132.70973199999935
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 132.68870799999968
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 132.59633799999938
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 131.97331399999985
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 131.69046700000035
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 131.51672299999973
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 130.27165100000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 130.27165100000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 129.69190799999978
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 128.6005780000005
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 128.2899179999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 128.19535199999973
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 127.74214299999949
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 127.74214299999949
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 127.64988900000026
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 126.15620500000023
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "edge__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 125.60673499999939
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 125.50588599999992
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 125.50588599999992
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 125.36232500000006
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "uniform__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 125.34693900000002
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 125.00845799999934
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 124.86127599999963
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 124.0408440000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 123.89685499999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 123.3505069999992
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "uniform__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 123.30726099999993
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 123.04465999999957
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 122.01838800000041
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 121.06872900000053
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 121.06811500000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 121.01810100000057
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 120.64266599999974
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 120.20447799999965
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 119.92771899999934
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 118.2733930000004
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 117.80502199999955
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 117.27248899999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 116.91643599999952
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 115.76582499999859
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 115.76582499999859
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 115.55090699999982
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 115.50248199999987
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 115.45526999999947
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 114.95017999999982
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 114.70248900000024
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 114.22443300000032
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 113.92145099999925
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 112.91449199999988
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 111.08920200000011
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 110.51317999999992
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 110.08168399999977
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 109.5986840000005
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 109.5986840000005
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 109.26970399999936
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 109.01120600000013
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 108.30364000000009
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 108.02512999999999
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 107.96540000000005
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "edge__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 107.94980299999952
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 107.93456999999944
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 107.30150799999956
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 106.65868599999976
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 105.20803499999965
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 104.98454899999979
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 104.5034540000006
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 103.93950300000051
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 103.64493999999922
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 103.22531600000002
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 102.79605599999923
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 102.17632700000013
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 101.9677270000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 101.84805599999981
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 101.79199199999948
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 100.9848920000004
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 100.61596399999962
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 100.21117500000037
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 100.06816299999991
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 99.3697689999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 99.1682209999999
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 98.46472100000028
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 98.34053900000072
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 98.34053900000072
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 98.19848399999955
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 98.04170199999953
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 98.04170199999953
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 98.01725299999998
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 96.44536799999969
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 96.33702799999992
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 96.08812600000056
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 96.00595900000008
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 95.19485799999984
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 95.13063199999942
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 94.45988599999964
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 94.23767399999997
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 93.6967709999999
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 93.63092899999992
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 93.6280799999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 93.6280799999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 93.55484799999977
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 93.24626699999953
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 93.24626699999953
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 92.91594299999997
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 92.3675659999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 92.3675659999999
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 92.35205399999995
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 91.8503610000007
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 91.28095200000007
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 91.26761600000009
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 90.62006500000007
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 90.62003599999935
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 89.72603799999979
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 89.43429899999956
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 88.31450100000075
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 88.31450100000075
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 87.94522499999948
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 87.4343600000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 87.34049899999991
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 85.83082900000045
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 85.71857400000044
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 85.71857400000044
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 85.6878969999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 85.6878969999998
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 85.25683299999946
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 84.59562800000003
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 84.56179199999951
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 83.91254300000037
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 83.0979929999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 82.69221199999993
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 82.16584200000034
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 81.79347199999938
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 81.24729600000046
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 80.8521639999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 80.74226999999973
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 80.70200399999976
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 79.14057999999932
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 78.75620400000025
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 78.39498300000014
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "edge__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 77.17992800000047
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 76.49692199999936
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 76.47441200000048
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 74.30202300000019
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 74.01776699999937
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "edge__smooth__67",
+    "split": "ordinary",
+    "delta_s": 73.96261800000048
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 72.55127399999947
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 71.66957300000013
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 71.6255430000001
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 69.81735899999967
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 68.3605779999998
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 68.29711700000007
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 68.26039500000024
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__iid__68",
+    "split": "ordinary",
+    "delta_s": 68.08434299999954
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 67.61834899999849
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 67.61834899999849
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 67.19741500000055
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 66.92559299999994
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 66.88141899999937
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 66.88141899999937
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 66.8542379999999
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 66.65526299999965
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 65.60903000000053
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 65.49364200000036
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 65.04392900000039
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__iid__67",
+    "split": "ordinary",
+    "delta_s": 63.908840999999484
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 63.70227900000009
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 63.55620900000031
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 63.39919800000007
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 63.33734999999979
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 62.812550999999985
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 62.4089440000007
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 62.08407999999963
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 61.59301200000027
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 61.57813199999964
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 61.33140300000014
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "uniform__smooth__69",
+    "split": "ordinary",
+    "delta_s": 61.18622200000027
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 61.02196399999957
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__smooth__71",
+    "split": "ordinary",
+    "delta_s": 60.70073299999967
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 60.29858400000012
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 60.19488999999976
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "edge__smooth__67",
+    "split": "ordinary",
+    "delta_s": 59.96399900000051
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "edge__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 59.11316200000056
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 58.97151899999972
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 58.95708900000045
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 57.80142700000033
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 57.694398999999976
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 57.077847000000475
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 56.69443499999943
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 56.552729
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 56.39942599999995
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 55.96975500000008
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 55.82452000000012
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 55.76964299999963
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 55.30770299999949
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 55.251390999999785
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 53.390292000000045
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 53.15531199999987
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 53.02428599999985
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 52.86392100000012
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 52.8037719999993
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 52.55864600000041
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 50.958246000000145
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 50.616547999999966
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 50.51332199999979
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "unknown_count_late__n10__positive",
+    "split": "stress",
+    "delta_s": 49.91907699999956
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 49.90052399999968
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 48.356487000000016
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 47.58056800000031
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 47.043641999999636
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 43.236973000000035
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 42.77708199999961
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 42.63414699999976
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "edge__smooth__71",
+    "split": "ordinary",
+    "delta_s": 41.68975899999987
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 41.564986999999746
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 41.49477499999921
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 41.49477499999921
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "edge__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 41.43272799999977
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 41.17886499999986
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 41.13360199999988
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 40.809886000000006
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 40.54945399999997
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 40.12173999999868
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 40.12173999999868
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 40.054323000000295
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 39.926267000000735
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 39.19909600000028
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "edge__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 39.19909600000028
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 38.54902099999981
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 38.24436400000013
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 38.24436400000013
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 37.99086399999942
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 37.99086399999942
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 37.38176299999941
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 36.28639599999951
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 36.268849000000046
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 35.551000999999815
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 34.87493499999982
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 34.87493499999982
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 34.856745000000046
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 34.74677700000029
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 34.74677700000029
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__iid__68",
+    "split": "ordinary",
+    "delta_s": 33.71179200000006
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 33.30937099999937
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 33.28760599999987
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 33.26305599999978
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 33.1850029999996
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 32.61963500000002
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 31.54247999999916
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 31.365021999999954
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 31.365021999999954
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 31.08422800000062
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 31.083658999999898
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 30.012187999999696
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 29.655997000000752
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 29.60885000000053
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 28.737952000000405
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 28.375370000000657
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 28.24461599999995
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 28.07036700000026
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 27.02998800000023
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 26.569762000000082
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 25.947934999999234
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 25.05084799999986
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 24.744313000000147
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 24.56923800000004
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 24.561243999999533
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 24.41551900000013
+  },
+  {
+    "problem": 4,
+    "method": "wide30_22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 24.27455699999973
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "edge__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 24.17120200000045
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 24.064476000000468
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 24.034865999999965
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 23.76649399999951
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 23.738593000000037
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 23.60781599999973
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 23.230155999999624
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 22.857428999999684
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 22.304847999999765
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 20.767281000000366
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 20.767281000000366
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 20.09456599999976
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 19.372959999999694
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "uniform__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 19.305005000000165
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 19.22512000000006
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 18.576774999999543
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 17.96921300000031
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 17.815685999999914
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 17.745241999999962
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 17.400934999999663
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 17.131396000000677
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 16.763866000000235
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "edge__smooth__69",
+    "split": "ordinary",
+    "delta_s": 16.14148699999987
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 14.494526000000405
+  },
+  {
+    "problem": 4,
+    "method": "wide20_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 13.431354000000283
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 13.431354000000283
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 13.431354000000283
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 13.419874999999593
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 13.403747999999723
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide20_22",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 13.35363099999995
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 13.08000600000014
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 13.08000600000014
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 12.248109999999542
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 11.982246999999916
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 11.364987000000838
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 11.111425999999483
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 11.068503999999848
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 11.068503999999848
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "uniform__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 10.435127999999168
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 9.816915000000336
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 9.490372999999636
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 8.727050999999847
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 8.216542999999547
+  },
+  {
+    "problem": 4,
+    "method": "wide_f05_10_22",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 8.055978999999752
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 7.756923999999344
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 7.640126999999666
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide5_22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 7.27413500000057
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 6.5221599999995306
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 6.5221599999995306
+  },
+  {
+    "problem": 4,
+    "method": "packet_f015_15_22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 6.224436999999853
+  },
+  {
+    "problem": 4,
+    "method": "wide5_22",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 6.0045319999999265
+  },
+  {
+    "problem": 4,
+    "method": "packet_center22",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 5.530854000000545
+  },
+  {
+    "problem": 4,
+    "method": "packet_first30_22",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 5.4170649999996385
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 4.587193000000298
+  },
+  {
+    "problem": 4,
+    "method": "wide15_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 4.377516999999898
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide15_22",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 4.377516999999898
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 3.5385059999998703
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 3.5385059999998703
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 3.2778970000008485
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 3.0913309999996272
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide10_22",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 2.5913080000000264
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 2.0789529999992737
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide30_22",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 1.8159829999995054
+  },
+  {
+    "problem": 4,
+    "method": "wide3_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 1.1291739999996935
+  },
+  {
+    "problem": 4,
+    "method": "packet_wide3_22",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 1.1291739999996935
+  },
+  {
+    "problem": 4,
+    "method": "packet_decay20_22",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 0.7596880000000965
+  },
+  {
+    "problem": 4,
+    "method": "wide10_22",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 0.527711000000636
+  }
+]

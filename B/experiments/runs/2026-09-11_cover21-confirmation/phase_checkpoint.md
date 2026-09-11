@@ -1,0 +1,11 @@
+# 本阶段归档前检查点
+
+前一goal轮与本轮均为progress：当前文件中7620条新增计分全部完成、3900条冻结后确认轨迹、316项独立几何与99项运行检查均已落盘。没有仍在运行的计分/审计任务，不因外层启动脚本错误重新生成成绩。
+
+本轮新增21站连续覆盖与整数相切证书、相同动作的延迟求值、公开16源后的空频道删除；所有正负结果和公开反馈诊断已经写入REPORT_COVER21_UPDATE.md。当前仅进行文档/源图一致性及哈希归档，未消耗正式请求或新的留出场景。
+
+前一51894清单237项核验先于旧CLI扩展；原清单及入口核验保留在odd-ring-cover。当前运行代码在新真值生成前冻结，后续修改限于报告、归档检查和启动器。一次外层zsh收尾解析错误及推断原因保留于launcher_error.txt、launcher_correction.md。
+
+训练标题由report-support明确标注训练；该文档修正不改变计分数据。汇总表由已经保存的full_metric_table.md插入，图表源数据哈希另行检查。归档日志写完并关闭后才加入清单；归档后的独立核验保存为post_finalize_integrity.json，该核验记录不纳入它正在核验的清单，避免自引用。
+
+完整goal仍active，下一组157—166未生成。最终归档通过与否以artifact_checks.json、finalize_log.txt及独立post_finalize_integrity.json为准；本记录不预先代替检查结果。

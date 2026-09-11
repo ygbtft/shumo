@@ -1,0 +1,41 @@
+{
+  "mode": "offline",
+  "virtual_s": 12064.704455,
+  "policy": {
+    "certified_clears": 10,
+    "optical_fallback_calls": 0,
+    "active_measurements": 0,
+    "active_no_signal": 0,
+    "inconsistent_updates": 0,
+    "optical_max_cover_radius": 0.0,
+    "stations_visited": 45,
+    "stop_reason": "full_coverage_and_all_discovered_cleared",
+    "discovered_channels": 10,
+    "policy_cleared_channels": [
+      2,
+      4,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      19
+    ]
+  },
+  "source_truth": {
+    "sources": 10,
+    "cleared": 10,
+    "clear_fraction": 1.0,
+    "all_cleared": true,
+    "total_virtual_s": 12064.704455,
+    "per_source_s": 1206.4704454999999,
+    "move_m": 40618.52227489865,
+    "measurements": 656,
+    "clear_calls": 10,
+    "switches": 611,
+    "commands": 668,
+    "missed_channels": []
+  }
+}

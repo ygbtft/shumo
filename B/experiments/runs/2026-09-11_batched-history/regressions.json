@@ -1,0 +1,1192 @@
+[
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 760.3893619999999
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 760.3893619999999
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 723.8091020000002
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 723.8091020000002
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 619.2503390000002
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 619.2503390000002
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 554.9218000000001
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 554.9218000000001
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 553.965083
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 553.965083
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 542.8515010000001
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 542.8515010000001
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 473.41221099999984
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 473.41221099999984
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 473.1035759999995
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 473.1035759999995
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 400.72447400000055
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 400.72447400000055
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 399.42355899999984
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 399.42355899999984
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 343.56345299999975
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 343.56345299999975
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 342.0720019999999
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 342.0720019999999
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 342.04361599999993
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 342.04361599999993
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 323.9318889999995
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 323.9318889999995
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 299.5486740000006
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 299.5486740000006
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 296.1159120000002
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 296.1159120000002
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 288.76379799999995
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 288.76379799999995
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 285.882619
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 285.882619
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 281.52587499999936
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 281.52587499999936
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 268.18852400000014
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 268.18852400000014
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 265.13799800000015
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 265.13799800000015
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 258.33306100000027
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 258.33306100000027
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 248.81694700000025
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 248.81694700000025
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 245.4247430000005
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 245.4247430000005
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 224.2032879999997
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 224.2032879999997
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 221.9498819999999
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "edge__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 221.9498819999999
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 213.0213160000003
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 213.0213160000003
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 208.56442499999957
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 208.56442499999957
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 200.89064899999994
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 200.89064899999994
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 196.01865499999985
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 196.01865499999985
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 188.55845799999952
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 188.55845799999952
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "uniform__iid__67",
+    "split": "ordinary",
+    "delta_s": 185.3281419999994
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "uniform__iid__67",
+    "split": "ordinary",
+    "delta_s": 185.3281419999994
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 167.18158700000004
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 167.18158700000004
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 164.62230999999974
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 164.62230999999974
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 159.73826599999938
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 159.73826599999938
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 153.05852799999957
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 153.05852799999957
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 152.47991199999979
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "edge__iid__69",
+    "split": "ordinary",
+    "delta_s": 152.47991199999979
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 149.8167199999998
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 149.8167199999998
+  },
+  {
+    "problem": 4,
+    "method": "history_recent8_width015",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 144.86532199999965
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_recent8_width015",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 144.86532199999965
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 144.47983299999942
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 144.47983299999942
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 143.90602200000012
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 143.90602200000012
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 131.46029699999963
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 131.46029699999963
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 114.64800300000024
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 114.64800300000024
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 109.12671800000044
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 109.12671800000044
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 108.5814819999996
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 108.5814819999996
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 106.35607400000026
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 106.35607400000026
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 103.07193199999983
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 103.07193199999983
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 92.77055699999983
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 92.77055699999983
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 84.70811599999979
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 84.70811599999979
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 78.39436600000045
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 78.39436600000045
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 73.83783700000004
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "edge__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 73.83783700000004
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 70.95113700000002
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 70.95113700000002
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 47.85085600000002
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 47.85085600000002
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 43.540179999999964
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 43.540179999999964
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 40.99907600000006
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 40.99907600000006
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 38.90215900000021
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 38.90215900000021
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 37.77395700000034
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 37.77395700000034
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 35.647366999999576
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 35.647366999999576
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__iid__68",
+    "split": "ordinary",
+    "delta_s": 32.438405999999304
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__iid__68",
+    "split": "ordinary",
+    "delta_s": 32.438405999999304
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 27.858288999999786
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 27.858288999999786
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 27.504750999999487
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 27.504750999999487
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 27.413531999999577
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 27.413531999999577
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 25.97068500000023
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 25.97068500000023
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 25.605843000000277
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 25.605843000000277
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 20.673926000000392
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 20.673926000000392
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 19.729761999999937
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 19.729761999999937
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 16.322008000000096
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 16.322008000000096
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 16.07370699999956
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 16.07370699999956
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 14.496102000000064
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 14.496102000000064
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 14.129985999999917
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 14.129985999999917
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "uniform__smooth__69",
+    "split": "ordinary",
+    "delta_s": 10.817869999999857
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "uniform__smooth__69",
+    "split": "ordinary",
+    "delta_s": 10.817869999999857
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "uniform__iid__67",
+    "split": "ordinary",
+    "delta_s": 9.651952999999594
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "uniform__iid__67",
+    "split": "ordinary",
+    "delta_s": 9.651952999999594
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 8.516966000000139
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "clustered__iid__70",
+    "split": "ordinary",
+    "delta_s": 8.516966000000139
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "uniform__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 8.48388900000009
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "uniform__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 8.48388900000009
+  },
+  {
+    "problem": 4,
+    "method": "history_recent8_width015",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 7.0
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_recent8_width015",
+    "case_id": "unknown_count_late__n10__negative",
+    "split": "stress",
+    "delta_s": 7.0
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 3.500230000000556
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 3.500230000000556
+  },
+  {
+    "problem": 4,
+    "method": "history_arc8_width015",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 3.3826120000003357
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_arc8_width015",
+    "case_id": "edge__iid__67",
+    "split": "ordinary",
+    "delta_s": 3.3826120000003357
+  },
+  {
+    "problem": 4,
+    "method": "history_recent8_width015",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 2.6088300000001254
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_recent8_width015",
+    "case_id": "clustered__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 2.6088300000001254
+  },
+  {
+    "problem": 4,
+    "method": "history_locked8_width015",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 2.073742999999922
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_locked8_width015",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 2.073742999999922
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "uniform__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 1.7765249999993102
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "uniform__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 1.7765249999993102
+  },
+  {
+    "problem": 4,
+    "method": "history_recent8_width015",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 1.6501859999998487
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_recent8_width015",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 1.6501859999998487
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 0.9440009999998438
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 0.9440009999998438
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 0.8539160000000265
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 0.8539160000000265
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 0.7144600000001446
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 0.7144600000001446
+  },
+  {
+    "problem": 4,
+    "method": "history_ends16_width015",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 0.5819390000006024
+  },
+  {
+    "problem": 4,
+    "method": "batch_history_ends16_width015",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 0.5819390000006024
+  }
+]

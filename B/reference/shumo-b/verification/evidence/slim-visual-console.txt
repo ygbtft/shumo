@@ -1,0 +1,32 @@
+SUCCESS: The scheduled task "JammersCompare-slim" has successfully been created.
+SUCCESS: Attempted to run the scheduled task "JammersCompare-slim".
+{"elapsed_s":15.431,"root_pid":4320,"session_id":2,"root_working_set_bytes":52711424,"tree_working_set_bytes":418979840,"tree_private_bytes":200564736,"webview_count":6,"listener_count":2}
+{
+    "variant":  "slim",
+    "run_label":  "slim-visual",
+    "launch_utc":  "2026-09-10T12:58:48.8478443+00:00",
+    "first_process_s":  0.062467499999999995,
+    "first_listener_s":  0.077509,
+    "first_webview_process_s":  0.62476219999999993,
+    "observed_seconds":  30.146005499999998,
+    "final_sample":  {
+                         "elapsed_s":  29.519,
+                         "root_pid":  4320,
+                         "session_id":  2,
+                         "root_working_set_bytes":  52711424,
+                         "tree_working_set_bytes":  419287040,
+                         "tree_private_bytes":  200572928,
+                         "webview_count":  6,
+                         "listener_count":  2
+                     },
+    "runtimes":  [
+                     {
+                         "path":  "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\152.0.4191.66\\msedgewebview2.exe",
+                         "version":  "152.0.4191.66"
+                     }
+                 ],
+    "executable_sha256":  "2373B9E7AF83735A04309E2983EB433EC46FAF7E0B8494410CE7FDED2A297C27"
+}
+2026/09/10 20:58:48.922431 simulator startup begin
+2026/09/10 20:58:48.955213 simulator window starting
+2026/09/10 20:58:48.961055 [WebView2] Environment created successfully

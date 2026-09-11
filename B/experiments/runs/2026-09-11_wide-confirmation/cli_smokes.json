@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "problem": 3,
+      "method": "area_return1_7",
+      "folder": "robot_runs/20260911-050157-986735-bounded-offline",
+      "commands": 160
+    },
+    {
+      "problem": 4,
+      "method": "width_uncertainty100_22",
+      "folder": "robot_runs/20260911-050158-298270-bounded-offline",
+      "commands": 263
+    }
+  ],
+  "scored_executions": 0,
+  "official_calls": 0
+}

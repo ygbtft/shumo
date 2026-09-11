@@ -1,0 +1,1291 @@
+{
+  "passed": 276,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__iid__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__iid__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__iid__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__iid__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__iid__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_uniform__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__iid__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__iid__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__iid__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__iid__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__iid__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_edge__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__iid__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__iid__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__iid__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__iid__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__iid__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_clustered__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_boundary_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_boundary_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_boundary_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_boundary_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_boundary_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_boundary_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_near_collinear_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_near_collinear_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_near_collinear_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_near_collinear_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_near_collinear_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_near_collinear_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_unknown_count_late__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_unknown_count_late__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_unknown_count_late__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_unknown_count_late__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_unknown_count_late__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q3_unknown_count_late__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__iid__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__iid__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__iid__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__iid__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__iid__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_uniform__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__iid__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__iid__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__iid__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__iid__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__iid__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_edge__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__iid__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__iid__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__iid__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__iid__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__iid__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__smooth__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__smooth__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__smooth__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__smooth__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__smooth__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-positive__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-positive__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-positive__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-positive__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-positive__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-negative__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-negative__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-negative__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-negative__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-negative__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-spatial__67",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-spatial__68",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-spatial__69",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-spatial__70",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_clustered__adversarial-spatial__71",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_boundary_outward_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_boundary_outward_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_boundary_outward_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_boundary_outward_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_boundary_outward_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_boundary_outward_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_near_collinear_min__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_near_collinear_min__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_near_collinear_min__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_near_collinear_min__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_near_collinear_min__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_near_collinear_min__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_unknown_count_late__n10__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_unknown_count_late__n10__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_unknown_count_late__n10__spatial",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_unknown_count_late__n16__positive",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_unknown_count_late__n16__negative",
+      "passed": true
+    },
+    {
+      "test": "zero_priority_exact_feedback_q4_unknown_count_late__n16__spatial",
+      "passed": true
+    },
+    {
+      "test": "complete_protocol_q3_discover300_7_boundary_min__n10__spatial",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 4568.847307
+    },
+    {
+      "test": "complete_protocol_q3_discover300_7_boundary_min__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 4697.901409
+    },
+    {
+      "test": "complete_protocol_q3_discover300_7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 3344.194508
+    },
+    {
+      "test": "complete_protocol_q3_discover300_7_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 2804.689975
+    },
+    {
+      "test": "complete_protocol_q3_discover300_7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 2714.709757
+    },
+    {
+      "test": "complete_protocol_q3_discover300_7_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 1965.291618
+    },
+    {
+      "test": "complete_protocol_q3_discover900_7_boundary_min__n10__spatial",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 4636.750323
+    },
+    {
+      "test": "complete_protocol_q3_discover900_7_boundary_min__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 4679.996128
+    },
+    {
+      "test": "complete_protocol_q3_discover900_7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 3344.194508
+    },
+    {
+      "test": "complete_protocol_q3_discover900_7_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 3,
+      "total_s": 3512.306125
+    },
+    {
+      "test": "complete_protocol_q3_discover900_7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 5,
+      "total_s": 3140.664314
+    },
+    {
+      "test": "complete_protocol_q3_discover900_7_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 2018.213349
+    },
+    {
+      "test": "complete_protocol_q3_discover1800_7_boundary_min__n10__spatial",
+      "passed": true,
+      "overrides": 4,
+      "total_s": 5305.761959
+    },
+    {
+      "test": "complete_protocol_q3_discover1800_7_boundary_min__n16__negative",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 4929.544678
+    },
+    {
+      "test": "complete_protocol_q3_discover1800_7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 4,
+      "total_s": 3954.501088
+    },
+    {
+      "test": "complete_protocol_q3_discover1800_7_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 3,
+      "total_s": 3453.429695
+    },
+    {
+      "test": "complete_protocol_q3_discover1800_7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 5,
+      "total_s": 3140.664314
+    },
+    {
+      "test": "complete_protocol_q3_discover1800_7_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 2018.213349
+    },
+    {
+      "test": "complete_protocol_q3_discover300_clear7_boundary_min__n10__spatial",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 4568.847307
+    },
+    {
+      "test": "complete_protocol_q3_discover300_clear7_boundary_min__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 4697.901409
+    },
+    {
+      "test": "complete_protocol_q3_discover300_clear7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 3344.194508
+    },
+    {
+      "test": "complete_protocol_q3_discover300_clear7_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 2804.689975
+    },
+    {
+      "test": "complete_protocol_q3_discover300_clear7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 2714.709757
+    },
+    {
+      "test": "complete_protocol_q3_discover300_clear7_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 1965.291618
+    },
+    {
+      "test": "complete_protocol_q3_clear_reward7_boundary_min__n10__spatial",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 4493.320296
+    },
+    {
+      "test": "complete_protocol_q3_clear_reward7_boundary_min__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 4717.088281
+    },
+    {
+      "test": "complete_protocol_q3_clear_reward7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 3193.124043
+    },
+    {
+      "test": "complete_protocol_q3_clear_reward7_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 2776.955415
+    },
+    {
+      "test": "complete_protocol_q3_clear_reward7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 2724.772568
+    },
+    {
+      "test": "complete_protocol_q3_clear_reward7_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 3,
+      "total_s": 1926.904718
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover300_7_boundary_min__n10__spatial",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 4568.847307
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover300_7_boundary_min__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 4697.901409
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover300_7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 3356.799183
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover300_7_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 3248.154595
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover300_7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 2694.680701
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover300_7_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 1968.129008
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover900_7_boundary_min__n10__spatial",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 4636.750323
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover900_7_boundary_min__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 4679.996128
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover900_7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 3562.544266
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover900_7_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 3,
+      "total_s": 3699.987217
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover900_7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 4,
+      "total_s": 3144.316125
+    },
+    {
+      "test": "complete_protocol_q3_packet_discover900_7_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 1968.129008
+    },
+    {
+      "test": "complete_protocol_q4_discover300_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 7843.781119
+    },
+    {
+      "test": "complete_protocol_q4_discover300_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "overrides": 5,
+      "total_s": 8419.859308
+    },
+    {
+      "test": "complete_protocol_q4_discover300_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 6947.526894
+    },
+    {
+      "test": "complete_protocol_q4_discover300_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 5406.225725
+    },
+    {
+      "test": "complete_protocol_q4_discover300_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 6557.547008
+    },
+    {
+      "test": "complete_protocol_q4_discover300_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 5889.029155
+    },
+    {
+      "test": "complete_protocol_q4_discover900_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "overrides": 6,
+      "total_s": 8334.31801
+    },
+    {
+      "test": "complete_protocol_q4_discover900_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "overrides": 8,
+      "total_s": 9385.392238
+    },
+    {
+      "test": "complete_protocol_q4_discover900_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 7,
+      "total_s": 6817.615223
+    },
+    {
+      "test": "complete_protocol_q4_discover900_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 6310.498607
+    },
+    {
+      "test": "complete_protocol_q4_discover900_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 6557.547008
+    },
+    {
+      "test": "complete_protocol_q4_discover900_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 5669.385733
+    },
+    {
+      "test": "complete_protocol_q4_discover1800_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "overrides": 8,
+      "total_s": 9346.267215
+    },
+    {
+      "test": "complete_protocol_q4_discover1800_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "overrides": 9,
+      "total_s": 10158.887559
+    },
+    {
+      "test": "complete_protocol_q4_discover1800_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 9,
+      "total_s": 7173.852094
+    },
+    {
+      "test": "complete_protocol_q4_discover1800_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 3,
+      "total_s": 5772.101946
+    },
+    {
+      "test": "complete_protocol_q4_discover1800_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 5,
+      "total_s": 7062.324081
+    },
+    {
+      "test": "complete_protocol_q4_discover1800_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 5,
+      "total_s": 4988.45004
+    },
+    {
+      "test": "complete_protocol_q4_discover900_clear22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "overrides": 6,
+      "total_s": 8334.31801
+    },
+    {
+      "test": "complete_protocol_q4_discover900_clear22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "overrides": 8,
+      "total_s": 9385.392238
+    },
+    {
+      "test": "complete_protocol_q4_discover900_clear22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 7,
+      "total_s": 6817.615223
+    },
+    {
+      "test": "complete_protocol_q4_discover900_clear22_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 3,
+      "total_s": 6368.446666
+    },
+    {
+      "test": "complete_protocol_q4_discover900_clear22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 6,
+      "total_s": 6672.433716
+    },
+    {
+      "test": "complete_protocol_q4_discover900_clear22_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 5669.385733
+    },
+    {
+      "test": "complete_protocol_q4_clear_reward22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 7624.740687
+    },
+    {
+      "test": "complete_protocol_q4_clear_reward22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 8295.305973
+    },
+    {
+      "test": "complete_protocol_q4_clear_reward22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 6947.526894
+    },
+    {
+      "test": "complete_protocol_q4_clear_reward22_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 5406.225725
+    },
+    {
+      "test": "complete_protocol_q4_clear_reward22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 3,
+      "total_s": 6768.322006
+    },
+    {
+      "test": "complete_protocol_q4_clear_reward22_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 5963.924264
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover300_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 7045.917007
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover300_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 7298.91461
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover300_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 5,
+      "total_s": 7059.350824
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover300_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 2,
+      "total_s": 7064.344597
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover300_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 6337.929972
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover300_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 5960.653631
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover900_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "overrides": 6,
+      "total_s": 7766.289267
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover900_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "overrides": 7,
+      "total_s": 8453.598821
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover900_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 7,
+      "total_s": 7393.791378
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover900_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 4,
+      "total_s": 4751.833893
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover900_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 0,
+      "total_s": 6337.929972
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover900_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 1,
+      "total_s": 6004.499207
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover1800_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "overrides": 9,
+      "total_s": 8773.293644
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover1800_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "overrides": 8,
+      "total_s": 8537.71012
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover1800_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "overrides": 7,
+      "total_s": 7190.68802
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover1800_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "overrides": 4,
+      "total_s": 4902.61047
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover1800_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "overrides": 8,
+      "total_s": 7086.537943
+    },
+    {
+      "test": "complete_protocol_q4_packet_discover1800_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "overrides": 5,
+      "total_s": 5375.759268
+    }
+  ],
+  "scored_execution_count": 0
+}

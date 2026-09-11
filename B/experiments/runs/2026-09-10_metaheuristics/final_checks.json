@@ -1,0 +1,296 @@
+{
+  "passed": 61,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "independent_permutation_cost_square650_greedy",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square650_insertion_greedy",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square650_two_opt",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square650_genetic",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square650_immune",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square650_ant_colony",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square650_particle_swarm",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square650_fireworks",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square650_iterated_search",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square700_greedy",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square700_insertion_greedy",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square700_two_opt",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square700_genetic",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square700_immune",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square700_ant_colony",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square700_particle_swarm",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square700_fireworks",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_square700_iterated_search",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q3_triangle_greedy",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q3_triangle_insertion_greedy",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q3_triangle_two_opt",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q3_triangle_genetic",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q3_triangle_immune",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q3_triangle_ant_colony",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q3_triangle_particle_swarm",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q3_triangle_fireworks",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q3_triangle_iterated_search",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q4_triangle_greedy",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q4_triangle_insertion_greedy",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q4_triangle_two_opt",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q4_triangle_genetic",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q4_triangle_immune",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q4_triangle_ant_colony",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q4_triangle_particle_swarm",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q4_triangle_fireworks",
+      "passed": true
+    },
+    {
+      "test": "independent_permutation_cost_q4_triangle_iterated_search",
+      "passed": true
+    },
+    {
+      "test": "minimum_edge_length_certificate_q4_triangle",
+      "passed": true,
+      "edges": 30,
+      "edge_m": 990,
+      "length_m": 29700
+    },
+    {
+      "test": "minimum_edge_length_certificate_q3_triangle",
+      "passed": true,
+      "edges": 18,
+      "edge_m": 1700,
+      "length_m": 30600
+    },
+    {
+      "test": "minimum_edge_length_certificate_square650",
+      "passed": true,
+      "edges": 48,
+      "edge_m": 650,
+      "length_m": 31200
+    },
+    {
+      "test": "checkerboard_lower_bound_attainment",
+      "passed": true,
+      "color_counts": {
+        "0": 21,
+        "1": 24
+      },
+      "same_color_edges": 3
+    },
+    {
+      "test": "feedback_only_exact_replay_q3_active_immune",
+      "passed": true,
+      "commands": 253,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q3_active_fireworks",
+      "passed": true,
+      "commands": 253,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q3_active_adaptive_greedy",
+      "passed": true,
+      "commands": 256,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q3_active_adaptive_two_opt",
+      "passed": true,
+      "commands": 254,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q4_active_immune",
+      "passed": true,
+      "commands": 455,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q4_active_fireworks",
+      "passed": true,
+      "commands": 427,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q4_active_adaptive_greedy",
+      "passed": true,
+      "commands": 443,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q4_active_adaptive_two_opt",
+      "passed": true,
+      "commands": 449,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q4_conservative_immune",
+      "passed": true,
+      "commands": 600,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q4_conservative_fireworks",
+      "passed": true,
+      "commands": 600,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q4_conservative_adaptive_greedy",
+      "passed": true,
+      "commands": 494,
+      "source_truth_present": false
+    },
+    {
+      "test": "feedback_only_exact_replay_q4_conservative_adaptive_two_opt",
+      "passed": true,
+      "commands": 511,
+      "source_truth_present": false
+    },
+    {
+      "test": "adaptive_remaining_station_preservation_False",
+      "passed": true
+    },
+    {
+      "test": "adaptive_remaining_station_preservation_True",
+      "passed": true
+    },
+    {
+      "test": "three_original_documents_and_public_probe_unchanged",
+      "passed": true
+    },
+    {
+      "test": "upstream_readonly_shumo-b",
+      "passed": true
+    },
+    {
+      "test": "upstream_readonly_shumo-b-macos-handoff",
+      "passed": true
+    },
+    {
+      "test": "shared_policy_and_geometry_not_changed",
+      "passed": true
+    },
+    {
+      "test": "all_stops_have_public_certificate_and_action_limits",
+      "passed": true,
+      "executions": 3969
+    },
+    {
+      "test": "top_level_python_syntax",
+      "passed": true
+    },
+    {
+      "test": "pre_evaluation_route_hash_preserved",
+      "passed": true
+    }
+  ],
+  "official_calls": 0,
+  "new_executions": 3969,
+  "all_cleared": 3969,
+  "stop_reason_counts": {
+    "full_coverage_and_all_discovered_cleared": 3333,
+    "public_upper_bound_16": 636
+  }
+}

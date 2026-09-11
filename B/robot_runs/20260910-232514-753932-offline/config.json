@@ -1,0 +1,9 @@
+{
+  "mode": "offline",
+  "problem": 4,
+  "strategy": "square_cropped_2opt",
+  "seed": 42,
+  "base_url": "http://127.0.0.1:2026",
+  "robot_id": null,
+  "confirm_practice": false
+}

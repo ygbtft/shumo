@@ -1,0 +1,1 @@
+{"scenario":{"position_distribution":"edge","edge_power":8,"radius_distribution":"beta","radius_beta_a":1,"radius_beta_b":4,"directional_fraction":0.8,"direction_distribution":"outward"},"error":{"model":"smooth","length_scale_m":300}}

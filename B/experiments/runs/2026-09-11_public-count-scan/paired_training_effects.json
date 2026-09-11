@@ -1,0 +1,102 @@
+{
+  "results": [
+    {
+      "problem": 3,
+      "method": "count_deferred_area7",
+      "split": "ordinary",
+      "runs": 75,
+      "extra_skips": 0,
+      "mean_per_source_reduction": 0.0,
+      "faster": 0,
+      "slower": 0,
+      "worst_regression_s": 0.0,
+      "cpu_reduction": -0.00043151491904747097
+    },
+    {
+      "problem": 3,
+      "method": "count_deferred_area7",
+      "split": "stress",
+      "runs": 18,
+      "extra_skips": 0,
+      "mean_per_source_reduction": 0.0,
+      "faster": 0,
+      "slower": 0,
+      "worst_regression_s": 0.0,
+      "cpu_reduction": 0.0044793329785284275
+    },
+    {
+      "problem": 4,
+      "method": "count_cheap_predict8_locked_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "extra_skips": 0,
+      "mean_per_source_reduction": 0.0,
+      "faster": 0,
+      "slower": 0,
+      "worst_regression_s": 0.0,
+      "cpu_reduction": -0.005401596149103627
+    },
+    {
+      "problem": 4,
+      "method": "count_cheap_predict8_locked_width015",
+      "split": "stress",
+      "runs": 18,
+      "extra_skips": 9,
+      "mean_per_source_reduction": 0.0003527150928013256,
+      "faster": 3,
+      "slower": 0,
+      "worst_regression_s": 0.0,
+      "cpu_reduction": -0.004055906771261553
+    },
+    {
+      "problem": 4,
+      "method": "count_cheap_predict8_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "extra_skips": 0,
+      "mean_per_source_reduction": 0.0,
+      "faster": 0,
+      "slower": 0,
+      "worst_regression_s": 0.0,
+      "cpu_reduction": -0.0015417544541771466
+    },
+    {
+      "problem": 4,
+      "method": "count_cheap_predict8_width015",
+      "split": "stress",
+      "runs": 18,
+      "extra_skips": 0,
+      "mean_per_source_reduction": 0.0,
+      "faster": 0,
+      "slower": 0,
+      "worst_regression_s": 0.0,
+      "cpu_reduction": -0.0036822255057518127
+    },
+    {
+      "problem": 4,
+      "method": "count_deferred_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "extra_skips": 0,
+      "mean_per_source_reduction": 0.0,
+      "faster": 0,
+      "slower": 0,
+      "worst_regression_s": 0.0,
+      "cpu_reduction": -0.0036549403130541336
+    },
+    {
+      "problem": 4,
+      "method": "count_deferred_width015",
+      "split": "stress",
+      "runs": 18,
+      "extra_skips": 0,
+      "mean_per_source_reduction": 0.0,
+      "faster": 0,
+      "slower": 0,
+      "worst_regression_s": 0.0,
+      "cpu_reduction": 0.005389749694126089
+    }
+  ],
+  "scored_executions": 0,
+  "official_calls": 0
+}

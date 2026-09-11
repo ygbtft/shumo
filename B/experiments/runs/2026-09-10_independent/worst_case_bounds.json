@@ -1,0 +1,15 @@
+{
+  "max_stations": 49,
+  "max_sources": 16,
+  "waypoint_radius_bound_m": 3750,
+  "max_active_measurements_per_source": 3,
+  "max_optical_cover_centers_per_source": 108,
+  "optical_serpentine_length_bound_m": 3100,
+  "virtual_seconds_upper_bound": 238102.0,
+  "virtual_hours_upper_bound": 66.13944444444445,
+  "max_commands": 2774,
+  "assumptions": "Mathematical coverage/containment; accepted correct feedback; finite-precision margins; no HTTP failures; available real time sufficient",
+  "outer_range_radius_m": 1501.808994705589,
+  "first_wedge_rectangle_length_bound_m": 1502.0,
+  "first_wedge_rectangle_width_bound_m": 53.0
+}

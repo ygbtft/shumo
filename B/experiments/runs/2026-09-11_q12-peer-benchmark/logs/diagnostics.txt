@@ -1,0 +1,4 @@
+Halfplane-only supplement: {'PASS': 74, 'FAIL': 1}
+Our Q1 failure classes: {'dimension error from near-duplicate or collinear float vertices': 4, 'empty classified unbounded: feasibility tolerance': 4, 'bounded thin triangle classified unbounded: LP small coefficients': 3}
+Simple empty example: empty
+Q2 candidate breakdown: Counter({('NOT_CERTIFIED_OUTSIDE', 'OUT'): 265, ('CERTIFIED_CORRECT', 'IN'): 118, ('CONSERVATIVE_REFUSAL', 'BOUNDARY'): 89, ('CONSERVATIVE_REFUSAL', 'IN'): 55, ('EMPTY_OUTER', 'UNRESOLVED'): 3, ('UNSUPPORTED', 'UNRESOLVED'): 1})

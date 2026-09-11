@@ -1,0 +1,15 @@
+60 exact public-feedback region and clearance replays passed
+5343 scored rows and all 2925 confirmation trace physics passed
+All 727 active historical-cut executions retained true sources
+Expanded plan and actual cost dominance: 2026-09-11_faithful-skips
+Expanded plan and actual cost dominance: 2026-09-11_history-confirmation
+{
+  "passed": 813,
+  "failed": 0,
+  "feedback_region_replays": 779,
+  "active_historical_executions_verified": 727,
+  "faithful_expanded_replays": 1152,
+  "new_scored_executions": 5343,
+  "official_calls": 0,
+  "wall_s": 76.66019241599133
+}

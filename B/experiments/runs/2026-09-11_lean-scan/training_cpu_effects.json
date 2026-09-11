@@ -1,0 +1,102 @@
+{
+  "comparisons": [
+    {
+      "problem": 3,
+      "method": "lean_deferred_area7",
+      "split": "ordinary",
+      "runs": 75,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.012925825064520224
+    },
+    {
+      "problem": 3,
+      "method": "lean_deferred_area7",
+      "split": "stress",
+      "runs": 18,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.010188495287619337
+    },
+    {
+      "problem": 4,
+      "method": "lean_cheap_predict4_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.009206394330255607
+    },
+    {
+      "problem": 4,
+      "method": "lean_cheap_predict4_width015",
+      "split": "stress",
+      "runs": 18,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.006917637466892224
+    },
+    {
+      "problem": 4,
+      "method": "lean_cheap_predict8_arc05_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.01161774709859087
+    },
+    {
+      "problem": 4,
+      "method": "lean_cheap_predict8_arc05_width015",
+      "split": "stress",
+      "runs": 18,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.020165169104314873
+    },
+    {
+      "problem": 4,
+      "method": "lean_cheap_predict8_locked_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.013702749251641722
+    },
+    {
+      "problem": 4,
+      "method": "lean_cheap_predict8_locked_width015",
+      "split": "stress",
+      "runs": 18,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.014752423434394646
+    },
+    {
+      "problem": 4,
+      "method": "lean_cheap_predict8_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.01199573205368376
+    },
+    {
+      "problem": 4,
+      "method": "lean_cheap_predict8_width015",
+      "split": "stress",
+      "runs": 18,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.017094305063311888
+    },
+    {
+      "problem": 4,
+      "method": "lean_deferred_width015",
+      "split": "ordinary",
+      "runs": 75,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.014192355436360882
+    },
+    {
+      "problem": 4,
+      "method": "lean_deferred_width015",
+      "split": "stress",
+      "runs": 18,
+      "same_virtual_and_commands": true,
+      "cpu_reduction": 0.020712839615139367
+    }
+  ],
+  "scored_executions": 0,
+  "official_calls": 0
+}

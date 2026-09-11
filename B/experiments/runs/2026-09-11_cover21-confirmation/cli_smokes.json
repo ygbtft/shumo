@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "problem": 3,
+      "method": "lean_deferred_area7",
+      "folder": "robot_runs/20260911-080639-205975-bounded-offline"
+    },
+    {
+      "problem": 4,
+      "method": "range_grid21_29",
+      "folder": "robot_runs/20260911-080639-183717-bounded-offline"
+    }
+  ],
+  "scored_executions": 0,
+  "official_calls": 0
+}

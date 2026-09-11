@@ -1,0 +1,95 @@
+{
+  "scenario": {
+    "seed": 1778,
+    "sources": [
+      {
+        "channel": 17,
+        "x": 635.3109495874817,
+        "y": -564.6946053702411,
+        "radius": 1500.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 9,
+        "x": 917.7700761987428,
+        "y": -90.5091950834153,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 3,
+        "x": 858.0047529918292,
+        "y": 502.7400888429825,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 13,
+        "x": 427.58852269059867,
+        "y": 977.2132996644333,
+        "radius": 1500.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 18,
+        "x": -243.93418129292598,
+        "y": 1112.4585459384623,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 8,
+        "x": -905.2142941834711,
+        "y": 804.5975422922384,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 12,
+        "x": -1277.1378771199375,
+        "y": 125.949542555836,
+        "radius": 1500.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 4,
+        "x": -1169.5707247486382,
+        "y": -685.2993389814967,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 15,
+        "x": -572.3450538098108,
+        "y": -1308.0407188216636,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 20,
+        "x": 321.27916560531696,
+        "y": -1465.1893044067554,
+        "radius": 1500.0,
+        "direction_deg": null
+      }
+    ],
+    "config": {
+      "stress_layout": "range_transition",
+      "source_rng": [
+        42,
+        114,
+        3,
+        4,
+        10
+      ]
+    }
+  },
+  "error": {
+    "model": "adversarial",
+    "length_scale_m": 200.0,
+    "cross_channel": "independent",
+    "adversarial_sign": "positive",
+    "empirical_samples_deg": [],
+    "empirical_base": "iid"
+  }
+}

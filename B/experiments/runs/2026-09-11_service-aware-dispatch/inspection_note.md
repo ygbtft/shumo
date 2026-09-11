@@ -1,0 +1,1 @@
+入口293项哈希一致。一次只读搜索使用了不存在的completion_width_policy.py，实际文件是bounded_width_policy.py/completion_sensing_policy.py；另一次文件名筛选过宽产生截断输出。均未改动任何文件、场景或策略，随后按实际文件读取。

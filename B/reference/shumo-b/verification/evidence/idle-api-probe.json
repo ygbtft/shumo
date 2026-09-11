@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-10T13:07:56.986592+00:00",
+  "python": "C:\\Python314-arm64\\python.exe",
+  "architecture": "ARM64",
+  "observed_gui_state": "not_logged_in",
+  "endpoint": "http://127.0.0.1:2026/enter",
+  "request": {
+    "arena_id": "default",
+    "robot_id": "local-availability-probe",
+    "request_id": "idle-probe-a97737498d784e18b032801fcffed2c3"
+  },
+  "outcome": "connection_failed_or_closed",
+  "exception": "ConnectionResetError",
+  "message": "[WinError 10054] \u8fdc\u7a0b\u4e3b\u673a\u5f3a\u8feb\u5173\u95ed\u4e86\u4e00\u4e2a\u73b0\u6709\u7684\u8fde\u63a5\u3002",
+  "elapsed_ms": 3.71466699971279
+}

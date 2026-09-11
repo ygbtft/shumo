@@ -1,0 +1,47 @@
+{
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "all_current_python_parses",
+      "passed": true,
+      "files": 147
+    },
+    {
+      "test": "report_links_resolve",
+      "passed": true
+    },
+    {
+      "test": "figure_sources_and_four_standalone_artifacts",
+      "passed": true,
+      "files": [
+        "figures/cover21_layouts.pdf",
+        "figures/cover21_layouts.png",
+        "figures/cover21_tradeoffs.pdf",
+        "figures/cover21_tradeoffs.png"
+      ]
+    },
+    {
+      "test": "all_new_run_records_complete",
+      "passed": true
+    },
+    {
+      "test": "public_only_diagnosis_cost_sums",
+      "passed": true
+    },
+    {
+      "test": "scored_and_boundary_data_hash_indices",
+      "passed": true,
+      "files": {
+        "lean-scan": 1303,
+        "public-count-scan": 931,
+        "cover21-training": 2143,
+        "cover21-confirmation": 4291
+      }
+    },
+    {
+      "test": "previous_manifest_preserved",
+      "passed": true
+    }
+  ]
+}

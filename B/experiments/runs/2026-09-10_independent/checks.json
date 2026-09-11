@@ -1,0 +1,215 @@
+{
+  "seed": 42,
+  "passed": 49,
+  "wall_s": 1.2221449590288103,
+  "checks": [
+    {
+      "check": "actual_bearing_region_equilateral_counterexample",
+      "passed": true,
+      "diameter": 39.99999999999925,
+      "radius": 23.094010767584592
+    },
+    {
+      "check": "parallel_bearings_unbounded",
+      "passed": true
+    },
+    {
+      "check": "inconsistent_bearings_empty",
+      "passed": true
+    },
+    {
+      "check": "point_degeneracy",
+      "passed": true
+    },
+    {
+      "check": "segment_degeneracy",
+      "passed": true
+    },
+    {
+      "check": "thin_polygon_not_mislabeled_segment",
+      "passed": true
+    },
+    {
+      "check": "no_observations_unbounded",
+      "passed": true
+    },
+    {
+      "check": "zero_error_is_ray_not_line",
+      "passed": true
+    },
+    {
+      "check": "incremental_circle_vs_support_enumeration_180",
+      "passed": true,
+      "max_absolute_radius_difference": 1.8189894035458565e-12
+    },
+    {
+      "check": "rounding_nearest",
+      "passed": true
+    },
+    {
+      "check": "rounding_truncate",
+      "passed": true
+    },
+    {
+      "check": "rounding_wrap",
+      "passed": true
+    },
+    {
+      "check": "bearing_truth_containment_1800_updates",
+      "passed": true
+    },
+    {
+      "check": "optical_cover_600_posteriors",
+      "passed": true,
+      "max_radius": 18.924821930608104
+    },
+    {
+      "check": "directional_back_no_signal",
+      "passed": true
+    },
+    {
+      "check": "directional_closed_boundary",
+      "passed": true
+    },
+    {
+      "check": "fixed_error_same_numeric_location",
+      "passed": true
+    },
+    {
+      "check": "near_in_coverage_inclusive_5",
+      "passed": true
+    },
+    {
+      "check": "optics_work_from_back_at_20",
+      "passed": true
+    },
+    {
+      "check": "clear_does_not_change_channel",
+      "passed": true
+    },
+    {
+      "check": "already_cleared_returns_not_found",
+      "passed": true
+    },
+    {
+      "check": "cleared_signal_absent",
+      "passed": true
+    },
+    {
+      "check": "radius_inclusive_1000",
+      "passed": true
+    },
+    {
+      "check": "radius_outside_1000",
+      "passed": true
+    },
+    {
+      "check": "official_document_199_seconds_example",
+      "passed": true,
+      "times": [
+        105.0,
+        111.0,
+        194.0,
+        199.0,
+        199.0
+      ]
+    },
+    {
+      "check": "enter_does_not_reveal_truth",
+      "passed": true
+    },
+    {
+      "check": "idempotent_exact_response",
+      "passed": true
+    },
+    {
+      "check": "idempotency_conflict_409",
+      "passed": true
+    },
+    {
+      "check": "fractional_channel_400",
+      "passed": true
+    },
+    {
+      "check": "boolean_channel_400",
+      "passed": true
+    },
+    {
+      "check": "integer_float_channel_accepted",
+      "passed": true
+    },
+    {
+      "check": "bad_coordinate_0",
+      "passed": true
+    },
+    {
+      "check": "bad_coordinate_1",
+      "passed": true
+    },
+    {
+      "check": "bad_coordinate_2",
+      "passed": true
+    },
+    {
+      "check": "unknown_field_rejected_without_time",
+      "passed": true
+    },
+    {
+      "check": "rejected_id_reusable",
+      "passed": true
+    },
+    {
+      "check": "identity_arena_id",
+      "passed": true
+    },
+    {
+      "check": "identity_robot_id",
+      "passed": true
+    },
+    {
+      "check": "duplicate_json_400",
+      "passed": true
+    },
+    {
+      "check": "bom_400",
+      "passed": true
+    },
+    {
+      "check": "body_limit_413",
+      "passed": true
+    },
+    {
+      "check": "exact_path_404",
+      "passed": true
+    },
+    {
+      "check": "method_405",
+      "passed": true
+    },
+    {
+      "check": "content_type_415",
+      "passed": true
+    },
+    {
+      "check": "content_encoding_415",
+      "passed": true
+    },
+    {
+      "check": "utf8_content_type",
+      "passed": true
+    },
+    {
+      "check": "http_transport_lost_response_retry_identical",
+      "passed": true
+    },
+    {
+      "check": "client_does_not_apply_rejected_state",
+      "passed": true
+    },
+    {
+      "check": "policy_static_no_truth_access",
+      "passed": true
+    }
+  ],
+  "http_test_scope": "Injected urllib HTTP request/response and raw JSON fixture, no TCP listener, no official requests"
+}

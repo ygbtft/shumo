@@ -1,0 +1,179 @@
+{
+  "base_seed": 42,
+  "training_seeds": [
+    67,
+    68,
+    69,
+    70,
+    71
+  ],
+  "derivation": "42+25+repeat, repeat=0..4; reused exploratory scenes, not held-out",
+  "stress_rng": "SeedSequence([42,35,layout_index,count]); error seed 42+200+case_index; already seen in layout review",
+  "specs": {
+    "baseline_peer9": {
+      "kind": "base",
+      "ring": [
+        8,
+        1300.0
+      ]
+    },
+    "baseline_ring7": {
+      "kind": "base",
+      "ring": [
+        6,
+        1140.0
+      ]
+    },
+    "dynamic_greedy9": {
+      "kind": "adaptive",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "polish": false
+    },
+    "dynamic_two_opt9": {
+      "kind": "adaptive",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "polish": true
+    },
+    "deferred9": {
+      "kind": "joint",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "mode": "deferred"
+    },
+    "opportunistic200_9": {
+      "kind": "joint",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "mode": "opportunistic",
+      "detour_limit": 200.0
+    },
+    "opportunistic600_9": {
+      "kind": "joint",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "mode": "opportunistic",
+      "detour_limit": 600.0
+    },
+    "trial80_9": {
+      "kind": "joint",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "trial_radius": 80.0
+    },
+    "cov_mean9": {
+      "kind": "joint",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "sensing": "cov_mean"
+    },
+    "cov_trial80_9": {
+      "kind": "joint",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "sensing": "cov_mean",
+      "trial_radius": 80.0
+    },
+    "cov_robust80_9": {
+      "kind": "joint",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "sensing": "cov_robust",
+      "trial_radius": 80.0
+    },
+    "cov_dynamic80_9": {
+      "kind": "joint",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "sensing": "cov_mean",
+      "trial_radius": 80.0,
+      "order": "two_opt"
+    },
+    "cov_opportunistic80_9": {
+      "kind": "joint",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "mode": "opportunistic",
+      "sensing": "cov_mean",
+      "trial_radius": 80.0,
+      "detour_limit": 200.0
+    },
+    "cov_deferred80_9": {
+      "kind": "joint",
+      "ring": [
+        8,
+        1300.0
+      ],
+      "mode": "deferred",
+      "sensing": "cov_mean",
+      "trial_radius": 80.0
+    },
+    "cov_trial80_7": {
+      "kind": "joint",
+      "ring": [
+        6,
+        1140.0
+      ],
+      "sensing": "cov_mean",
+      "trial_radius": 80.0
+    },
+    "cov_robust80_7": {
+      "kind": "joint",
+      "ring": [
+        6,
+        1140.0
+      ],
+      "sensing": "cov_robust",
+      "trial_radius": 80.0
+    }
+  },
+  "executions_expected": 1488,
+  "peer_commit": "c477d3660368f27c7131a0591426b4c4f107ea5d",
+  "selection_rule": "require all-clear; inspect separate ordinary/stress mean total/per-source, p95/max total, commands and CPU/wall; retain tradeoffs, do not substitute weighted average",
+  "holdout_plan": "Freeze selected candidates then evaluate new generator seeds77..86 and fresh adversarial layouts; do not evaluate them during tuning",
+  "paper_original_code_available": false,
+  "baseline_scope": "Peer paper center/ring layout + our robust active policy, stronger reproducible proxy, not exact paper implementation",
+  "covariance_assumption": "vertex covariance + linearized independent angular variance, used only to rank next points; exact containing set and certificates remain in control",
+  "code_sha256": {
+    "joint_policy.py": "6f2755810fd30435a55189ef6c2234bb7583870be9a3bf0bcafb5ac905bdb22b",
+    "joint_experiments.py": "287e32139c7be1f6236c1699d71ad97ccf2b0acc39ac42583caeb8c2b824be7d",
+    "ring_coverage.py": "60f6a52526a80b3dd7201a8a86f329104c0a253e15ca62ffe0a613b1d85d0d86",
+    "policies.py": "bbbbb978182ee36f8417b865681f94d9aeb2da32a4bbd63c13efab654f57ae42",
+    "geometry.py": "513bbabd4092b7aa98c1bee46380be2ca4ae3857232854d7cd87dcfeb835c9a6",
+    "client.py": "f6fd4293bca4b9f9dbeed610dc0c1294d7bd2975032f47e3f59fb4e2cc567dd6",
+    "intelligent.py": "63aa0d5d05e6c8a893536f62ddb64517730a360ec5251068930203cf38100445",
+    "adaptive_routes.py": "dd07f0c9df4aae7e0e240dfb244c74b14d5f0c0b90686f59a63ea68021477b65",
+    "coverage.py": "35bcf544a6908eefcd7e98321216bea8f433d1fbe59feb26f34670c7e6e9949c",
+    "peer_benchmark.py": "bf868d03493d350253c0a0e7e3d76c1572c88e942c4bac531ff9098e6389b3e9",
+    "ring_experiments.py": "8fe4273d6f1b72cb4dbb134dbf40cd0677bae1c935672d21b1c9c2af7990cb8a",
+    "metaheuristic_experiments.py": "141ae48e45839fb71eb926563f8bcae1487824b8743103062ef65d8e4c8b4ad6",
+    "route_algorithms.py": "40838e471da2e6d09ed995563bc1512ad8195dbcd0114bb2de1c1afbff1f39f7"
+  },
+  "official_calls": 0,
+  "hidden_state_to_policy": false,
+  "python": "/Users/dingdingzai/anaconda3/bin/python",
+  "cpu_threads": 1
+}

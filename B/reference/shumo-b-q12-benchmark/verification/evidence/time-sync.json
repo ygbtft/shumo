@@ -1,0 +1,32 @@
+{
+  "samples": [
+    {
+      "host_before_ms": 1789044930475.357,
+      "guest_ms": 1789044931389,
+      "host_after_ms": 1789044931516.144,
+      "offset_midpoint_ms": 393.24951171875,
+      "uncertainty_ms": 520.3935546875
+    },
+    {
+      "host_before_ms": 1789044931516.158,
+      "guest_ms": 1789044932427,
+      "host_after_ms": 1789044932507.606,
+      "offset_midpoint_ms": 415.1181640625,
+      "uncertainty_ms": 495.7239990234375
+    },
+    {
+      "host_before_ms": 1789044932507.623,
+      "guest_ms": 1789044933414,
+      "host_after_ms": 1789044933481.981,
+      "offset_midpoint_ms": 419.197998046875,
+      "uncertainty_ms": 487.178955078125
+    }
+  ],
+  "best": {
+    "host_before_ms": 1789044932507.623,
+    "guest_ms": 1789044933414,
+    "host_after_ms": 1789044933481.981,
+    "offset_midpoint_ms": 419.197998046875,
+    "uncertainty_ms": 487.178955078125
+  }
+}

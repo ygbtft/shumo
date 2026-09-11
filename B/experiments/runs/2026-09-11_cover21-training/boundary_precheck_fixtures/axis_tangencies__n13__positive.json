@@ -1,0 +1,109 @@
+{
+  "scenario": {
+    "seed": 4272,
+    "sources": [
+      {
+        "channel": 20,
+        "x": 1800.0,
+        "y": 0.0,
+        "radius": 1000.0,
+        "direction_deg": 0.0
+      },
+      {
+        "channel": 1,
+        "x": 0.0,
+        "y": 1800.0,
+        "radius": 1000.0,
+        "direction_deg": 90.0
+      },
+      {
+        "channel": 2,
+        "x": -1800.0,
+        "y": 0.0,
+        "radius": 1000.0,
+        "direction_deg": 180.0
+      },
+      {
+        "channel": 3,
+        "x": 0.0,
+        "y": -1800.0,
+        "radius": 1000.0,
+        "direction_deg": 270.0
+      },
+      {
+        "channel": 4,
+        "x": 761.8668559085708,
+        "y": 244.0469091547548,
+        "radius": 1000.0,
+        "direction_deg": 292.0
+      },
+      {
+        "channel": 5,
+        "x": 426.7535419783149,
+        "y": 676.6693538272312,
+        "radius": 1000.0,
+        "direction_deg": 5.0
+      },
+      {
+        "channel": 6,
+        "x": -108.0424970809114,
+        "y": 792.6706875017653,
+        "radius": 1000.0,
+        "direction_deg": 78.0
+      },
+      {
+        "channel": 7,
+        "x": -592.284250997376,
+        "y": 537.7725969408234,
+        "radius": 1000.0,
+        "direction_deg": 151.0
+      },
+      {
+        "channel": 8,
+        "x": -799.3896213659406,
+        "y": 31.24473159459401,
+        "radius": 1000.0,
+        "direction_deg": 224.0
+      },
+      {
+        "channel": 9,
+        "x": -632.4517036713492,
+        "y": -489.90289091125805,
+        "radius": 1000.0,
+        "direction_deg": 297.0
+      },
+      {
+        "channel": 10,
+        "x": -169.5826049111953,
+        "y": -781.8195060955779,
+        "radius": 1000.0,
+        "direction_deg": 10.0
+      },
+      {
+        "channel": 11,
+        "x": 372.6360793876251,
+        "y": -707.9140854218255,
+        "radius": 1000.0,
+        "direction_deg": 83.0
+      },
+      {
+        "channel": 12,
+        "x": 740.4942007522604,
+        "y": -302.7677965905078,
+        "radius": 1000.0,
+        "direction_deg": 156.0
+      }
+    ],
+    "config": {
+      "role": "unscored exact cardinal boundary stress"
+    }
+  },
+  "error": {
+    "model": "adversarial",
+    "length_scale_m": 200.0,
+    "cross_channel": "independent",
+    "adversarial_sign": "positive",
+    "empirical_samples_deg": [],
+    "empirical_base": "iid"
+  }
+}

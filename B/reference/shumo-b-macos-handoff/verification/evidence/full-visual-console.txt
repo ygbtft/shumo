@@ -1,0 +1,32 @@
+SUCCESS: The scheduled task "JammersCompare-full" has successfully been created.
+SUCCESS: Attempted to run the scheduled task "JammersCompare-full".
+{"elapsed_s":15.603,"root_pid":2560,"session_id":2,"root_working_set_bytes":52314112,"tree_working_set_bytes":601145344,"tree_private_bytes":348889088,"webview_count":7,"listener_count":2}
+{
+    "variant":  "full",
+    "run_label":  "full-visual",
+    "launch_utc":  "2026-09-10T12:57:56.3678751+00:00",
+    "first_process_s":  0.0785838,
+    "first_listener_s":  0.11100499999999999,
+    "first_webview_process_s":  0.7001733,
+    "observed_seconds":  30.541607199999998,
+    "final_sample":  {
+                         "elapsed_s":  29.982,
+                         "root_pid":  2560,
+                         "session_id":  2,
+                         "root_working_set_bytes":  52314112,
+                         "tree_working_set_bytes":  601387008,
+                         "tree_private_bytes":  348897280,
+                         "webview_count":  7,
+                         "listener_count":  2
+                     },
+    "runtimes":  [
+                     {
+                         "path":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+                         "version":  "151.0.4129.86"
+                     }
+                 ],
+    "executable_sha256":  "110542502401761B81F701CA1A866092E38D4AC290FA025BF18AED73FF8E9628"
+}
+2026/09/10 20:57:56.445494 simulator startup begin
+2026/09/10 20:57:56.505749 simulator window starting
+2026/09/10 20:57:56.514377 [WebView2] Environment created successfully

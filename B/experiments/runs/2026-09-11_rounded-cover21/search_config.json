@@ -1,0 +1,308 @@
+{
+  "base_seed": 42,
+  "source_file": "experiments/runs/2026-09-11_odd-ring-cover/certified_layouts.json",
+  "source_sha256": "91c7eba777d47674d8aeb16d1318664a68ac88c01f962d66703f6353ac1001fe",
+  "specs": [
+    {
+      "source": "odd21_0",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_0",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_4",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_4",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_5",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_5",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_9",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_9",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_10",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_10",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_14",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_14",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_20",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_20",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_24",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_24",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_25",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_25",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_29",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_29",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_30",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_30",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_34",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_34",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_35",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_35",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_39",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_39",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_40",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_40",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_41",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_41",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_43",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_43",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_44",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_44",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_45",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_45",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_49",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_49",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_50",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_50",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_54",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_54",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_55",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_55",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_59",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_59",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_60",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_60",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_61",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_61",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_63",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_63",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_64",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_64",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_65",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_65",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_66",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_66",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_68",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_68",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_69",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_69",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_70",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_70",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_74",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_74",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_75",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_75",
+      "decimals": 0
+    },
+    {
+      "source": "odd21_79",
+      "decimals": 2
+    },
+    {
+      "source": "odd21_79",
+      "decimals": 0
+    }
+  ],
+  "code_sha256": {
+    "rounded_cover21_search.py": "0f38d4cf9a7aee2f4fb865f6317585d2e3aeb869fc5cb921792b6c4a652a779f",
+    "odd_ring_cover_search.py": "4d8a294f132e2f81811de58a841271f092ca6ab39e9cffeb814988a56f74c564",
+    "visibility_certificate.py": "525523f92a55bdd0e3628bf7c5231e3d0aa000095397b5bfa8e467612556c36c",
+    "coverage.py": "35bcf544a6908eefcd7e98321216bea8f433d1fbe59feb26f34670c7e6e9949c",
+    "geometry.py": "513bbabd4092b7aa98c1bee46380be2ca4ae3857232854d7cd87dcfeb835c9a6",
+    "icra_final_checks.py": "00116f67d317ec629d1f7a7b4b640f8c503508a7e43455bf2c5cdd5a0080aa4c"
+  },
+  "arena_radius": 1800.0,
+  "receive_radius": 1000.0,
+  "max_depth": 16,
+  "scored_executions": 0,
+  "official_calls": 0
+}

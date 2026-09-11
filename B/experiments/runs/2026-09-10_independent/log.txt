@@ -1,0 +1,29 @@
+23:06:14 route q3_triangle_genetic: 19 stations, 30600.0 -> 30600.0 m, GA 0.27s
+23:06:14 route q4_triangle_genetic: 31 stations, 30424.7 -> 30424.7 m, GA 0.30s
+23:06:14 Frozen benchmark: 122 cases x 6 strategies
+23:06:17 Completed 5/122 cases; 30 executions; wall 3.2s
+23:06:19 Completed 10/122 cases; 60 executions; wall 5.6s
+23:06:21 Completed 15/122 cases; 90 executions; wall 7.8s
+23:06:24 Completed 20/122 cases; 120 executions; wall 10.1s
+23:06:26 Completed 25/122 cases; 150 executions; wall 12.3s
+23:06:28 Completed 30/122 cases; 180 executions; wall 14.3s
+23:06:30 Completed 35/122 cases; 210 executions; wall 16.5s
+23:06:32 Completed 40/122 cases; 240 executions; wall 18.8s
+23:06:34 Completed 45/122 cases; 270 executions; wall 20.8s
+23:06:37 Completed 50/122 cases; 300 executions; wall 23.1s
+23:06:39 Completed 55/122 cases; 330 executions; wall 25.5s
+23:06:41 Completed 60/122 cases; 360 executions; wall 27.7s
+23:06:45 Completed 65/122 cases; 390 executions; wall 31.2s
+23:06:49 Completed 70/122 cases; 420 executions; wall 35.3s
+23:06:53 Completed 75/122 cases; 450 executions; wall 39.3s
+23:06:56 Completed 80/122 cases; 480 executions; wall 42.9s
+23:06:59 Completed 85/122 cases; 510 executions; wall 46.0s
+23:07:02 Completed 90/122 cases; 540 executions; wall 48.8s
+23:07:06 Completed 95/122 cases; 570 executions; wall 52.6s
+23:07:10 Completed 100/122 cases; 600 executions; wall 56.3s
+23:07:13 Completed 105/122 cases; 630 executions; wall 59.7s
+23:07:17 Completed 110/122 cases; 660 executions; wall 63.1s
+23:07:21 Completed 115/122 cases; 690 executions; wall 67.3s
+23:07:24 Completed 120/122 cases; 720 executions; wall 70.9s
+23:07:26 Completed 122/122 cases; 732 executions; wall 72.9s
+23:07:26 {"executions": 732, "cases": 122, "wall_s": 72.90155220899032, "all_cleared_runs": 732, "exceptions": 0}

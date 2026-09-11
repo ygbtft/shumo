@@ -1,0 +1,757 @@
+{
+  "base_seed": 42,
+  "training_seeds": [
+    67,
+    68,
+    69,
+    70,
+    71
+  ],
+  "derivation": "42+25+repeat,0..4; already-used training scenes",
+  "untouched_future_seeds": [
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "stress_derivation": "Q3 SeedSequence([42,35,layout_index,count]); Q4 [42,20,layout_index,count]; errors42+200+index/Q3,42+100+index/Q4",
+  "specs": {
+    "3": {
+      "packet_center7": {
+        "kind": "packet_clearance",
+        "layout": "ring7"
+      },
+      "discover300_7": {
+        "kind": "discovery_clearance",
+        "layout": "ring7",
+        "discovery_weight": 300.0
+      },
+      "discover900_7": {
+        "kind": "discovery_clearance",
+        "layout": "ring7",
+        "discovery_weight": 900.0
+      },
+      "discover1800_7": {
+        "kind": "discovery_clearance",
+        "layout": "ring7",
+        "discovery_weight": 1800.0
+      },
+      "discover300_clear7": {
+        "kind": "discovery_clearance",
+        "layout": "ring7",
+        "discovery_weight": 300.0,
+        "clear_weight": 1.0
+      },
+      "clear_reward7": {
+        "kind": "discovery_clearance",
+        "layout": "ring7",
+        "discovery_weight": 0.0,
+        "clear_weight": 1.0
+      },
+      "packet_discover300_7": {
+        "kind": "discovery_packet_clearance",
+        "layout": "ring7",
+        "discovery_weight": 300.0
+      },
+      "packet_discover900_7": {
+        "kind": "discovery_packet_clearance",
+        "layout": "ring7",
+        "discovery_weight": 900.0
+      }
+    },
+    "4": {
+      "packet_action4_22": {
+        "kind": "packet_probe",
+        "layout": "convex22",
+        "fraction": 0.25,
+        "share_cooldown": 150.0,
+        "prediction": "action",
+        "pause_limit": 4
+      },
+      "discover300_22": {
+        "kind": "discovery_probe",
+        "layout": "convex22",
+        "fraction": 0.25,
+        "share_cooldown": 150.0,
+        "discovery_weight": 300.0
+      },
+      "discover900_22": {
+        "kind": "discovery_probe",
+        "layout": "convex22",
+        "fraction": 0.25,
+        "share_cooldown": 150.0,
+        "discovery_weight": 900.0
+      },
+      "discover1800_22": {
+        "kind": "discovery_probe",
+        "layout": "convex22",
+        "fraction": 0.25,
+        "share_cooldown": 150.0,
+        "discovery_weight": 1800.0
+      },
+      "discover900_clear22": {
+        "kind": "discovery_probe",
+        "layout": "convex22",
+        "fraction": 0.25,
+        "share_cooldown": 150.0,
+        "discovery_weight": 900.0,
+        "clear_weight": 1.0
+      },
+      "clear_reward22": {
+        "kind": "discovery_probe",
+        "layout": "convex22",
+        "fraction": 0.25,
+        "share_cooldown": 150.0,
+        "discovery_weight": 0.0,
+        "clear_weight": 1.0
+      },
+      "packet_discover300_22": {
+        "kind": "discovery_packet_probe",
+        "layout": "convex22",
+        "fraction": 0.25,
+        "share_cooldown": 150.0,
+        "discovery_weight": 300.0,
+        "prediction": "action",
+        "pause_limit": 4
+      },
+      "packet_discover900_22": {
+        "kind": "discovery_packet_probe",
+        "layout": "convex22",
+        "fraction": 0.25,
+        "share_cooldown": 150.0,
+        "discovery_weight": 900.0,
+        "prediction": "action",
+        "pause_limit": 4
+      },
+      "packet_discover1800_22": {
+        "kind": "discovery_packet_probe",
+        "layout": "convex22",
+        "fraction": 0.25,
+        "share_cooldown": 150.0,
+        "discovery_weight": 1800.0,
+        "prediction": "action",
+        "pause_limit": 4
+      }
+    }
+  },
+  "paths": {
+    "ring9": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1300.0,
+        0.0
+      ],
+      [
+        919.2388155425118,
+        919.2388155425117
+      ],
+      [
+        7.960204194457796e-14,
+        1300.0
+      ],
+      [
+        -919.2388155425117,
+        919.2388155425118
+      ],
+      [
+        -1300.0,
+        1.5920408388915592e-13
+      ],
+      [
+        -919.238815542512,
+        -919.2388155425117
+      ],
+      [
+        -2.3880612583373384e-13,
+        -1300.0
+      ],
+      [
+        919.2388155425116,
+        -919.238815542512
+      ]
+    ],
+    "ring7": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1140.0,
+        0.0
+      ],
+      [
+        570.0000000000001,
+        987.26896031426
+      ],
+      [
+        -569.9999999999998,
+        987.2689603142601
+      ],
+      [
+        -1140.0,
+        1.3960973510279827e-13
+      ],
+      [
+        -570.0000000000005,
+        -987.2689603142597
+      ],
+      [
+        570.0000000000001,
+        -987.26896031426
+      ]
+    ],
+    "polar25": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        703.5712472806148,
+        703.5712472806147
+      ],
+      [
+        995.0,
+        0.0
+      ],
+      [
+        703.5712472806147,
+        -703.5712472806149
+      ],
+      [
+        -1.8277853477274245e-13,
+        -995.0
+      ],
+      [
+        -703.5712472806149,
+        -703.5712472806147
+      ],
+      [
+        -995.0,
+        1.2185235651516165e-13
+      ],
+      [
+        -703.5712472806147,
+        703.5712472806148
+      ],
+      [
+        6.092617825758082e-14,
+        995.0
+      ],
+      [
+        1.126675055215565e-13,
+        1840.0
+      ],
+      [
+        704.1375155517653,
+        1699.9383398207676
+      ],
+      [
+        1301.0764773832475,
+        1301.0764773832473
+      ],
+      [
+        1699.9383398207676,
+        704.1375155517652
+      ],
+      [
+        1840.0,
+        0.0
+      ],
+      [
+        1699.9383398207672,
+        -704.1375155517663
+      ],
+      [
+        1301.076477383247,
+        -1301.0764773832477
+      ],
+      [
+        704.1375155517657,
+        -1699.9383398207674
+      ],
+      [
+        -3.3800251656466946e-13,
+        -1840.0
+      ],
+      [
+        -704.1375155517662,
+        -1699.9383398207672
+      ],
+      [
+        -1301.0764773832477,
+        -1301.0764773832473
+      ],
+      [
+        -1699.9383398207679,
+        -704.137515551765
+      ],
+      [
+        -1840.0,
+        2.25335011043113e-13
+      ],
+      [
+        -1699.9383398207676,
+        704.1375155517654
+      ],
+      [
+        -1301.0764773832473,
+        1301.0764773832475
+      ],
+      [
+        -704.1375155517651,
+        1699.9383398207676
+      ]
+    ],
+    "polar28": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        762.2142209033831,
+        639.5736716381066
+      ],
+      [
+        172.77993677859575,
+        979.8837142471469
+      ],
+      [
+        -497.49999999999983,
+        861.6952767655165
+      ],
+      [
+        -934.9941576819788,
+        340.3100426090405
+      ],
+      [
+        -934.9941576819789,
+        -340.3100426090403
+      ],
+      [
+        -497.50000000000045,
+        -861.6952767655162
+      ],
+      [
+        172.77993677859533,
+        -979.883714247147
+      ],
+      [
+        762.2142209033829,
+        -639.5736716381069
+      ],
+      [
+        995.0,
+        0.0
+      ],
+      [
+        1850.0,
+        0.0
+      ],
+      [
+        1738.4313484539307,
+        -632.7372651524869
+      ],
+      [
+        1417.182219770109,
+        -1189.1570779200983
+      ],
+      [
+        924.9999999999987,
+        -1602.1469970012122
+      ],
+      [
+        321.24912868382046,
+        -1821.8943430725851
+      ],
+      [
+        -321.24912868382114,
+        -1821.894343072585
+      ],
+      [
+        -925.0000000000008,
+        -1602.146997001211
+      ],
+      [
+        -1417.18221977011,
+        -1189.157077920097
+      ],
+      [
+        -1738.4313484539307,
+        -632.737265152487
+      ],
+      [
+        -1850.0,
+        2.2655965784226035e-13
+      ],
+      [
+        -1738.4313484539305,
+        632.7372651524875
+      ],
+      [
+        -1417.1822197701092,
+        1189.1570779200981
+      ],
+      [
+        -924.9999999999997,
+        1602.1469970012115
+      ],
+      [
+        -321.2491286838211,
+        1821.894343072585
+      ],
+      [
+        321.24912868382125,
+        1821.894343072585
+      ],
+      [
+        925.0000000000002,
+        1602.1469970012115
+      ],
+      [
+        1417.1822197701092,
+        1189.1570779200977
+      ],
+      [
+        1738.4313484539307,
+        632.7372651524871
+      ]
+    ],
+    "polar37": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        325.00000000000006,
+        562.9165124598851
+      ],
+      [
+        650.0,
+        0.0
+      ],
+      [
+        1300.0,
+        0.0
+      ],
+      [
+        1125.8330249197704,
+        649.9999999999999
+      ],
+      [
+        650.0000000000001,
+        1125.8330249197702
+      ],
+      [
+        975.0000000000002,
+        1688.7495373796553
+      ],
+      [
+        1493.786664082007,
+        1253.4358388887515
+      ],
+      [
+        1832.4006105325213,
+        666.939279485054
+      ],
+      [
+        1950.0,
+        0.0
+      ],
+      [
+        1832.4006105325213,
+        -666.9392794850538
+      ],
+      [
+        1493.7866640820066,
+        -1253.4358388887522
+      ],
+      [
+        974.9999999999987,
+        -1688.7495373796562
+      ],
+      [
+        650.0000000000001,
+        -1125.8330249197702
+      ],
+      [
+        1125.83302491977,
+        -650.0000000000006
+      ],
+      [
+        325.00000000000006,
+        -562.9165124598851
+      ],
+      [
+        -325.0000000000003,
+        -562.916512459885
+      ],
+      [
+        -650.0000000000006,
+        -1125.83302491977
+      ],
+      [
+        -2.3880612583373384e-13,
+        -1300.0
+      ],
+      [
+        338.6139464505134,
+        -1920.375118373806
+      ],
+      [
+        -338.61394645051416,
+        -1920.3751183738057
+      ],
+      [
+        -975.0000000000009,
+        -1688.7495373796548
+      ],
+      [
+        -1493.7866640820077,
+        -1253.4358388887508
+      ],
+      [
+        -1832.4006105325213,
+        -666.9392794850539
+      ],
+      [
+        -1950.0,
+        2.388061258337339e-13
+      ],
+      [
+        -1300.0,
+        1.5920408388915592e-13
+      ],
+      [
+        -1125.8330249197704,
+        -649.9999999999997
+      ],
+      [
+        -650.0,
+        7.960204194457796e-14
+      ],
+      [
+        -324.9999999999999,
+        562.9165124598852
+      ],
+      [
+        -1125.8330249197704,
+        649.9999999999999
+      ],
+      [
+        -1832.4006105325211,
+        666.9392794850543
+      ],
+      [
+        -1493.7866640820068,
+        1253.435838888752
+      ],
+      [
+        -649.9999999999998,
+        1125.8330249197704
+      ],
+      [
+        -974.9999999999997,
+        1688.7495373796555
+      ],
+      [
+        -338.6139464505141,
+        1920.3751183738057
+      ],
+      [
+        338.61394645051433,
+        1920.3751183738057
+      ],
+      [
+        7.960204194457796e-14,
+        1300.0
+      ]
+    ],
+    "convex22": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -891.9591792233948,
+        429.54490172638265
+      ],
+      [
+        -220.2957246167512,
+        965.1786330600054
+      ],
+      [
+        617.2549038401463,
+        774.0131676433496
+      ],
+      [
+        990.0,
+        0.0
+      ],
+      [
+        617.2549038401461,
+        -774.0131676433496
+      ],
+      [
+        -220.29572461675144,
+        -965.1786330600054
+      ],
+      [
+        -891.9591792233949,
+        -429.5449017263824
+      ],
+      [
+        -1667.9549743034802,
+        -803.2447809383194
+      ],
+      [
+        -1851.290353890597,
+        2.2671768061844906e-13
+      ],
+      [
+        -1667.95497430348,
+        803.2447809383199
+      ],
+      [
+        -1154.260655930233,
+        1447.3970818610492
+      ],
+      [
+        -411.95085857205135,
+        1804.8746395609091
+      ],
+      [
+        411.9508585720516,
+        1804.8746395609091
+      ],
+      [
+        1154.2606559302333,
+        1447.397081861049
+      ],
+      [
+        1667.9549743034802,
+        803.2447809383196
+      ],
+      [
+        1851.290353890597,
+        0.0
+      ],
+      [
+        1667.9549743034806,
+        -803.2447809383185
+      ],
+      [
+        1154.2606559302328,
+        -1447.3970818610492
+      ],
+      [
+        411.9508585720495,
+        -1804.8746395609096
+      ],
+      [
+        -411.9508585720518,
+        -1804.8746395609091
+      ],
+      [
+        -1154.2606559302333,
+        -1447.397081861049
+      ]
+    ]
+  },
+  "expected_executions": 1581,
+  "prior": "seed42,384 uniform-disc positions +128 boundary positions, radius1000; Q4 12 faces including outward per position; ranking only",
+  "ranking": "Promote each of first four 2-opt tasks; open path metres/5 minus weighted new visible prior fraction and optional guaranteed-clear saved-scan reward",
+  "coverage_or_stop_depends_on_samples": false,
+  "initialization_measured_separately": true,
+  "virtual_upper_bound_s": 314016,
+  "instruction_upper_bound": 9766,
+  "code_sha256": {
+    "joint_experiments.py": "287e32139c7be1f6236c1699d71ad97ccf2b0acc39ac42583caeb8c2b824be7d",
+    "run_smart_robot.py": "0cee3b9ee02336e70cabc148cdbf68564126deb9668f686566f6207a5f21cad7",
+    "cooperative_policy.py": "753f8a7cf37217aadc8a85f7d7d15c6b6fdd83c299e6dc01e2af5c246f4b28e2",
+    "mission_confirmation.py": "4eb9f5618e30f87509293bb8da3bfea35e5f406d15d2c98e955763c3873a9f84",
+    "discovery_priority_experiments.py": "d69f66aa78aa6b91f05ec6a0350698410e61408de5688b4fd85bb960dee80361",
+    "joint_policy.py": "6f2755810fd30435a55189ef6c2234bb7583870be9a3bf0bcafb5ac905bdb22b",
+    "peer_benchmark.py": "bf868d03493d350253c0a0e7e3d76c1572c88e942c4bac531ff9098e6389b3e9",
+    "final_checks.py": "385a05491096a533b891cfd17345cde2e55a70a3193dd1854b892bdaa6227b8d",
+    "route_final_checks.py": "54203dfa8bbc17e4c5378881cb3695bf90bee4a2e0ad2ba8cc3e05064ce56fab",
+    "route_algorithms.py": "40838e471da2e6d09ed995563bc1512ad8195dbcd0114bb2de1c1afbff1f39f7",
+    "mission_http_checks.py": "ecae21f98f0ab50ed47f0d6c7925acf6f307b6deeb1aa5c78ab779fea4eae700",
+    "replacement_policy.py": "cf2661a3bc55629dff624dcdef44fe5ae410115fe4e035051959e66549c1f628",
+    "peer_paper_checks.py": "b4651f43f86919e8292d4326f82188adab3246e93a9ebaf47f674da9afcc5d3d",
+    "plot_icra_update.py": "6e59b6037617c288c091ef823ff881a13af0c34861c3b21781090672c206414c",
+    "summarize_ring_review.py": "0f99e120c065a0a90a203ec67e75315b01a440187f159c05336cde5c9f3740db",
+    "run_robot.py": "b9c6770deca2c41380449b092e0808d4c43461c04a6658e1d27434556bca491f",
+    "mission_trace_diagnosis.py": "640f84163bb2c868d8b103c942708b8a4548e0019b5af1a313d5bfdff4551de0",
+    "interleaved_experiments.py": "39dcc0e7f7ced5bfde6961629ca76d6dd82494b62ab0be0148f5faccf63704c6",
+    "probe_diagnostics.py": "e1396d7a05c5a880fbfe3b7d5b355d258e4c4a8412d82a1b3713e9c6b6448905",
+    "efficient_joint_policy.py": "c21064a13bb58f96b48afd8cea5ec76171990d34acfb92531e2b8bce95a69962",
+    "route_algorithm_checks.py": "540eb46eee716f93187a5d41fdc09c32f962ddbf49f6c335a63b24f59126a7a8",
+    "mission_postprocess.py": "1bb35dc9fd41ebf25696585819e353a2c726e5344b336b0450ee4fd1de02f0f8",
+    "peer_review_final_checks.py": "fb02f8cfef40e1c9ebf6457a451ffd439a43df9b543793901befa0cdc831816d",
+    "checks.py": "effe15405fdc93b44535039d28f1ad93876be949f9f4a6f48f6dc99d8a0e36cd",
+    "client.py": "f6fd4293bca4b9f9dbeed610dc0c1294d7bd2975032f47e3f59fb4e2cc567dd6",
+    "metaheuristic_experiments.py": "141ae48e45839fb71eb926563f8bcae1487824b8743103062ef65d8e4c8b4ad6",
+    "coverage.py": "35bcf544a6908eefcd7e98321216bea8f433d1fbe59feb26f34670c7e6e9949c",
+    "extract_sources.py": "c6dedb645acb40f6251952a5491397ab20c733d01c5ee2a4c5991896dcd52f67",
+    "summarize_metaheuristics.py": "50dda22722ff52cbe48f14f6d7dc41e577622dce690afa6891090443df6d8911",
+    "summarize.py": "12e26c6fdeaa2f386fd297d3e9c8806c072c9b4d96e54c94b18edc9232447d9f",
+    "ring_coverage.py": "60f6a52526a80b3dd7201a8a86f329104c0a253e15ca62ffe0a613b1d85d0d86",
+    "icra_final_checks.py": "00116f67d317ec629d1f7a7b4b640f8c503508a7e43455bf2c5cdd5a0080aa4c",
+    "summarize_icra_update.py": "d4baae9e8a7dd2b528601859a0d52e0bb06f1d31760da98edd2a13fae993e1e9",
+    "adaptive_routes.py": "dd07f0c9df4aae7e0e240dfb244c74b14d5f0c0b90686f59a63ea68021477b65",
+    "visibility_layout_search.py": "5f8c27c79e60fa30f788a669529e1e28b0dc9d8bf75572af109d571bed1e8157",
+    "q2_minimax_experiments.py": "069fd545d64208a65079dd70f510188fdc09fd6459b678029ffc2ac51c2a2477",
+    "joint_task_policy.py": "81b092d94754efa4685ea7baf29fcb23e133aeb6d44777f9bdf06c2ef30bd302",
+    "interleaved_policy.py": "d83453759f2fa623ae9917d15ff1ce65116072b470e620b71b45de11a8980839",
+    "peer_audit.py": "f4291876a8beead187adc7dbbdb6595f8bbdeba8ccee852a03be5d7cc1b15b32",
+    "intelligent.py": "63aa0d5d05e6c8a893536f62ddb64517730a360ec5251068930203cf38100445",
+    "route_confirmation.py": "9934bb879f66dc035393c057e8733c187d860590816de9ff22383d94b4a06430",
+    "signal_minimax.py": "b441bb73886c05d0272cc19fad0faa89a920b552734283dab0fb4a3805efc936",
+    "ring_experiments.py": "8fe4273d6f1b72cb4dbb134dbf40cd0677bae1c935672d21b1c9c2af7990cb8a",
+    "launch.py": "5d4e8cc1f880cd447adee638951351bc3d4bd17e3672eef3833dacaa95b8ea16",
+    "reception_layout_experiments.py": "d5fc61bfb92d7aaf93c0412fbd1cfa93b14630096f5897696c8722f1abd5f166",
+    "run_bounded_robot.py": "3945e93a839933e6f8e9b0412035ba5a02c1132160b404d5710fc9eefc04af36",
+    "icra_artifact_finalize.py": "364a950d5b2fd8eca996d6fe0c9bad774b8a3db79dcb2c2933d87350f4466c4d",
+    "mission_final_checks.py": "a6b4c7de404a9dba2ec697997447bd5a4cc44ec15f300a1acc42e9dd9f54090e",
+    "geometry.py": "513bbabd4092b7aa98c1bee46380be2ca4ae3857232854d7cd87dcfeb835c9a6",
+    "discovery_priority_policy.py": "85d93e21d3850a578ba3bb83e3d46a44004a80aa9e075d2030f192b23c8d741d",
+    "visibility_certificate.py": "525523f92a55bdd0e3628bf7c5231e3d0aa000095397b5bfa8e467612556c36c",
+    "route_ablation.py": "5323fd66a120359b4da60ebdb05afff1d9bbef8091c5803a49a950b68ece9815",
+    "simulator.py": "ce436b0cbd51b8e0eb336447050383b1f7e7214627cf4782e5030b71da884a8a",
+    "joint_task_experiments.py": "0cc462b15cdcf794d36edb0a30fbc299238457bf8395929ecbdb6d32e7955a8a",
+    "rotating_layout_policy.py": "9d0768e3d48c415614f8bf3b42b19a1c59fbb00271575707b4351ff5904bee6a",
+    "coverage_replacement.py": "a43c89224b4b8fb4dcbb474a91b3bac3b92c44da88da84d116716b366f37af64",
+    "run_experiments.py": "69969180d07f5374d4c9a544983c445c94d19dc18033f59e5c9753efa0d7d824",
+    "asymmetric_probe_experiments.py": "0cc5b11a409f71061d03f74c156e0d12e91fd9184985d2a368fbfc9f10a133d2",
+    "publish_metaheuristic_report.py": "6b9a588c9a3f5386f362cf63a7983814f898a94df2638368796e0ad2137e1c36",
+    "spatial_decision_experiments.py": "e5235ec4064d5ee078c0dd2fed205fbfe8b861adc254724b91f3ce017bcb589a",
+    "replacement_experiments.py": "12712821f595ccff34827dc5a705082a4d1d7719f9a131adeab527cff2c05744",
+    "policies.py": "bbbbb978182ee36f8417b865681f94d9aeb2da32a4bbd63c13efab654f57ae42",
+    "icra_confirmation.py": "0a8a6009953689419c9475fc6f9a246f9e2a0c63899221cb7bc33ed0bc10b064",
+    "clearance_policy.py": "8a2c717f93573b2b86a71c45ab458ef6a26166beefed45dfed3811593ca2ebb2",
+    "package_robot.py": "7c2a439f206400116ddac171e2d233e677e80f6a15a49d0c626caa5507e840ef",
+    "bracket_policy.py": "bd550dd36c80573b0740fc9073d812044333bf3282dd9b4f83d2cb76205f3ae0",
+    "layout_alternative_experiments.py": "60562103b26ce98cfc129364dd57a03a3a755fb7e5f01e8e7ca18b314525c413",
+    "layout_alternative_checks.py": "efb0b7cc8c984c7c3766af15b8809ebc3afa5b2c5791c1353d3dd96b64b5f8eb",
+    "safe_sensing_policy.py": "2c15166b84defbd6e838d967201294732e7f5c5bc524ae6e4094d793e46f6911",
+    "analysis_experiments.py": "c69cb1a4bed6589771e4b6f3e416277370a6ef75f5836de75fc86669535fb6e3",
+    "clearance_experiments.py": "9303d7a75d452099a82a6d158c0116e2a121d4b14229a73084bea9cd3b74ec0d",
+    "layout_certificates.py": "d403bd6417495ad3e65ed7d098fe404cff0483cc6e5fc218a2c53bd7df56fc38",
+    "write_report.py": "003448039d1a92b683b0e6d3e4f5eb8809b1c9d0a7088ac4f0344717dedad8c1"
+  },
+  "engine_reuse": "spatial_decision_experiments.run with explicit OUT/SPECS/build/freeze/all_layouts replacements",
+  "truth_to_policy": false,
+  "official_calls": 0,
+  "cpu_threads": 1,
+  "python": "/Users/dingdingzai/anaconda3/bin/python",
+  "peer_commit": "c477d3660368f27c7131a0591426b4c4f107ea5d"
+}

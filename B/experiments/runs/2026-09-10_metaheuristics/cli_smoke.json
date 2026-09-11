@@ -1,0 +1,10 @@
+{
+  "smoke_runs": 3,
+  "all_cleared": true,
+  "counted_in_5901": false,
+  "paths": [
+    "B/robot_runs/20260911-002213-702182-smart-offline/summary.json",
+    "B/robot_runs/20260911-002213-957192-smart-offline/summary.json",
+    "B/robot_runs/20260911-002214-227502-smart-offline/summary.json"
+  ]
+}

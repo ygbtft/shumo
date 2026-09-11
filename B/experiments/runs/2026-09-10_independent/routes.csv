@@ -1,0 +1,7 @@
+route,stations,length_m,precompute_wall_s
+square_greedy,49,33800.0,0.0
+square_cropped_2opt,45,31669.8484809835,0.0
+q3_triangle_2opt,19,30600.0,0.0
+q3_triangle_genetic,19,30600.0,0.2735120000434108
+q4_triangle_2opt,31,30424.73029949318,0.0
+q4_triangle_genetic,31,30424.73029949318,0.30357687501236796

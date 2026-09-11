@@ -1,0 +1,97 @@
+{
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    {
+      "problem": 3,
+      "method": "packet_center7",
+      "mode": "inprocess",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 156,
+      "total_virtual_s": 3091.9911,
+      "wall_s": 0.031858084024861455,
+      "official_calls": 0
+    },
+    {
+      "problem": 3,
+      "method": "packet_center7",
+      "mode": "owned_loopback_http",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 156,
+      "total_virtual_s": 3091.9911,
+      "wall_s": 0.07583704200806096,
+      "official_calls": 0
+    },
+    {
+      "problem": 4,
+      "method": "packet_center22",
+      "mode": "inprocess",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 321,
+      "total_virtual_s": 6487.496478,
+      "wall_s": 0.08312054100679234,
+      "official_calls": 0
+    },
+    {
+      "problem": 4,
+      "method": "packet_center22",
+      "mode": "owned_loopback_http",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 321,
+      "total_virtual_s": 6487.496478,
+      "wall_s": 0.1285752080148086,
+      "official_calls": 0
+    },
+    {
+      "problem": 4,
+      "method": "packet_action24_22",
+      "mode": "inprocess",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 313,
+      "total_virtual_s": 6730.42472,
+      "wall_s": 0.09625258296728134,
+      "official_calls": 0
+    },
+    {
+      "problem": 4,
+      "method": "packet_action24_22",
+      "mode": "owned_loopback_http",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 313,
+      "total_virtual_s": 6730.42472,
+      "wall_s": 0.13214375003008172,
+      "official_calls": 0
+    },
+    {
+      "problem": 4,
+      "method": "packet_discover300_22",
+      "mode": "inprocess",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 309,
+      "total_virtual_s": 6395.810928,
+      "wall_s": 0.09063425002386793,
+      "official_calls": 0
+    },
+    {
+      "problem": 4,
+      "method": "packet_discover300_22",
+      "mode": "owned_loopback_http",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 309,
+      "total_virtual_s": 6395.810928,
+      "wall_s": 0.1324417919968255,
+      "official_calls": 0
+    }
+  ],
+  "scored_execution_count": 0,
+  "official_calls": 0,
+  "binding": "Only this process's freshly created 127.0.0.1:0 server; no existing service contacted"
+}

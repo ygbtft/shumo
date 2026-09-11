@@ -1,0 +1,25 @@
+{
+  "recording_sha256": "854168090e781fb461e2a7f17a270394289ad4a088c46991da3dbd9c14f51d8c",
+  "requests": 1367,
+  "accepted_requests": 1367,
+  "unique_request_ids": true,
+  "serial_timestamp_order": true,
+  "raw_response_matches_parsed": true,
+  "all_response_shapes_valid": true,
+  "attachment_example_exact": true,
+  "max_abs_virtual_delta_residual_s": 4.943677822666359e-07,
+  "rtt_total_ms": 2303.1204979999998,
+  "request_span_ms": 2369.93212890625,
+  "outcomes": {
+    "no_signal": 659,
+    "direction": 245,
+    "no_target_in_range": 431,
+    "near": 20,
+    "success": 10
+  },
+  "source_count_from_gui": 15,
+  "omnidirectional_count_from_gui": 5,
+  "directional_count_from_gui": 10,
+  "practice_case_id": "CNDW-U29G-NUXR-UVKU",
+  "final_exit_reason": "user_exit"
+}

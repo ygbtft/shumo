@@ -1,0 +1,27 @@
+[
+  {
+    "label": "unit_tests",
+    "exit_code": 1,
+    "wall_s": 7.5270094169536605
+  },
+  {
+    "label": "q1_geometry",
+    "exit_code": 1,
+    "wall_s": 1.6641931250342168
+  },
+  {
+    "label": "q1_circle_cover",
+    "exit_code": 1,
+    "wall_s": 0.3883507080026902
+  },
+  {
+    "label": "q2_candidate",
+    "exit_code": 0,
+    "wall_s": 5.0639385000104085
+  },
+  {
+    "label": "q2_worst_diameter",
+    "exit_code": 1,
+    "wall_s": 93.91880583396414
+  }
+]
