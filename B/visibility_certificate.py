@@ -32,7 +32,7 @@ def sample_reject(points,arena_radius=1800.):
     return None
 
 
-def rectangle_certificate(points,arena_radius=1800.,receive_radius=1000.,max_depth=13,save_cells=True,max_cells=200000):
+def rectangle_certificate(points,arena_radius=1800.,receive_radius=1000.,max_depth=16,save_cells=True,max_cells=200000):
     """Finite continuous certificate. Numerical margins shrink allowable sets.
 
     Each leaf is a square [center-half,center+half]. Eligible stations have

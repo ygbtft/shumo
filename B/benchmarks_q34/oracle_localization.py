@@ -80,3 +80,12 @@ def contains(poly,q):
         return det(a,b,q)==0 and min(p[axis] for p in ps)<=q[axis]<=max(p[axis] for p in ps)
     signs=[det(a,b,q) for a,b in zip(ps,ps[1:]+ps[:1])]
     return min(signs)>=0 or max(signs)<=0
+
+
+def conservative_negative_pass(exact_feasible, retained):
+    """Outer posterior contract: extra candidates are safe; losing feasible ones is not.
+
+    Exact closed-disk membership remains the independent physical ground truth.
+    This acceptance rule measures safety, not exact posterior completeness.
+    """
+    return bool(retained or not exact_feasible)

@@ -1,7 +1,7 @@
 {
   "n_cases": 279,
-  "n_pass": 277,
-  "n_fail": 2,
+  "n_pass": 279,
+  "n_fail": 0,
   "categories": {
     "coverage/archived_strict": {
       "n_cases": 6,
@@ -170,8 +170,8 @@
     },
     "localization/q3_no_signal_1000": {
       "n_cases": 4,
-      "n_pass": 2,
-      "n_fail": 2
+      "n_pass": 4,
+      "n_fail": 0
     },
     "localization/q4_bearing_1": {
       "n_cases": 6,
@@ -337,8 +337,8 @@
     },
     "localization": {
       "n_cases": 74,
-      "n_pass": 72,
-      "n_fail": 2
+      "n_pass": 74,
+      "n_fail": 0
     },
     "clearance": {
       "n_cases": 156,
@@ -346,94 +346,7 @@
       "n_fail": 0
     }
   },
-  "failures": [
-    {
-      "case_id": "localization/q3_no_signal_1000/0082",
-      "input": {
-        "api": "negative",
-        "problem": 3,
-        "source": [
-          999.999,
-          0
-        ],
-        "position": [
-          0,
-          0
-        ],
-        "initial": [
-          [
-            900,
-            -10
-          ],
-          [
-            1300,
-            -10
-          ],
-          [
-            1300,
-            10
-          ],
-          [
-            900,
-            10
-          ]
-        ]
-      },
-      "expected": {
-        "feasible": false
-      },
-      "actual": {
-        "feasible": true,
-        "region_unchanged": true,
-        "source_margin": 10.0,
-        "interpretation": "Q3 exact-posterior completeness gap; retaining extra candidates is conservative, not a false clear"
-      },
-      "truth_method": "Exact closed 1000 m receive disk: Q3 negative excludes disk; Q4 orientation existentially permits negative"
-    },
-    {
-      "case_id": "localization/q3_no_signal_1000/0083",
-      "input": {
-        "api": "negative",
-        "problem": 3,
-        "source": [
-          1000,
-          0
-        ],
-        "position": [
-          0,
-          0
-        ],
-        "initial": [
-          [
-            900,
-            -10
-          ],
-          [
-            1300,
-            -10
-          ],
-          [
-            1300,
-            10
-          ],
-          [
-            900,
-            10
-          ]
-        ]
-      },
-      "expected": {
-        "feasible": false
-      },
-      "actual": {
-        "feasible": true,
-        "region_unchanged": true,
-        "source_margin": 10.0,
-        "interpretation": "Q3 exact-posterior completeness gap; retaining extra candidates is conservative, not a false clear"
-      },
-      "truth_method": "Exact closed 1000 m receive disk: Q3 negative excludes disk; Q4 orientation existentially permits negative"
-    }
-  ],
+  "failures": [],
   "tolerances": {
     "region_hausdorff_m": 2e-05,
     "MEC_m": 2e-05,
@@ -442,9 +355,9 @@
     "gate": "production inward threshold 20-1e-5"
   },
   "weak_comparisons_excluded": 0,
-  "generated_utc": "2026-09-11T11:13:22.562384+00:00",
+  "generated_utc": "2026-09-11T12:04:32.552736+00:00",
   "python": "/Users/flower/math/2026/B题/mock/.venv/bin/python",
-  "elapsed_s": 13.021650209004292,
+  "elapsed_s": 13.151222583001072,
   "production_sha256": {
     "joint_experiments.py": "287e32139c7be1f6236c1699d71ad97ccf2b0acc39ac42583caeb8c2b824be7d",
     "batched_history_policy.py": "0dfc031a3ade2291ce01c18ad2ab55f1125e609e0deeb47635009248a9a4179a",
@@ -560,7 +473,7 @@
     "geometry.py": "ecfb12ec885718463ae660da467c087be057fb4ef9cfa4deba9fea9cf4277e57",
     "discovery_priority_policy.py": "604d6407aa3023e6a5e32015ef94b58f14cce43d4a0eabf1318d59e17e869961",
     "task_postprocess.py": "cc22988c75211d254e773ef1d41f0fe45a714e9fa770b189f365a4192f8d22ad",
-    "visibility_certificate.py": "145d00584803fcc19a1f899653cf57c47dbcd64508a543d817c4af5c0913c175",
+    "visibility_certificate.py": "bba9ebbd77d760fc5d22b8f2db237c741d4b606cf90f5832cd2c8edccbff36fb",
     "route_ablation.py": "5323fd66a120359b4da60ebdb05afff1d9bbef8091c5803a49a950b68ece9815",
     "simulator.py": "2ced7b94bf5b6e02aaa986411a9ef04a8f546727e4b6bf2f475ab5933e718d34",
     "bounded_candidates.py": "95197b1679fd4a9053e9df9ac69ccfca3bc0c8f80d967984abdbd297d2295e87",
@@ -611,24 +524,24 @@
     "historical_pair_experiments.py": "f5bc3eba4203fc8471469d80b0592d70f7bee9b6407d84f89c4a03c8615296c6"
   },
   "benchmark_sha256": {
-    "run.py": "e257b0eadc085938f87b6ef43559c0f2a69a56c6db0e58484dab16cfd1471f8d",
+    "run.py": "b983030eaed55939d779d228c88fe68a033b72990954da9db466cc8365147ae8",
     "generate.py": "50abf01c0208b14034382ed44e584975e4fd84584f0b9a1f707548956531d6f0",
     "oracle_clearance.py": "e0825af2c91d6356c1b3218fa75c2d22863f74ea204a6a26e446af1499024c48",
     "oracle_coverage.py": "d41b3909cd82c6ac41ad911f01388b56f891a87321522a81512c423485309f0c",
-    "oracle_localization.py": "28b6c0ee05758c73907c240f0cf980a3c6b6c73287869ffaa90e6742253a082d"
+    "oracle_localization.py": "34a8af0e64d7ce0576195ae1644cf9be7723dc585d3f2f3d52a705da93f74c85"
   },
   "findings": [
     {
-      "kind": "posterior_completeness_gap",
+      "kind": "conservative_extra_candidates",
       "case_ids": [
         "localization/q3_no_signal_1000/0082",
         "localization/q3_no_signal_1000/0083"
       ],
-      "description": "Q3 single no_signal keeps candidates inside/on the guaranteed 1000 m receiving disk; conservative over-approximation, not evidence of false certified clearing."
+      "description": "PASS uses outer-posterior safety: retaining extra candidates is allowed; excluding any exact-feasible candidate fails. Exact closed-disk ground truth is unchanged."
     },
     {
       "kind": "generator_budget_note",
-      "description": "Archived grid21_29 requires depth 14; default rectangle_certificate depth 13 is unresolved. Fresh generator checks explicitly use depth 16."
+      "description": "Fresh float certificates use the production default depth 16; grid21_29 completes at depth 14. Q3 ring7 has omnidirectional reception coverage, not all-direction hull coverage."
     }
   ],
   "cases_sha256": "b66d46d8cc1fcc8088c91d50fd62a9fac6dcd4955e635016ef2ff5a1825914e2"

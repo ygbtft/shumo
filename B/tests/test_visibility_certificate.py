@@ -27,6 +27,23 @@ class CoverageCertificateTests(unittest.TestCase):
         context.update(overrides)
         return certify_layout_coverage(self.points, self.cert if cert is None else cert, **context)
 
+    def test_main_layout_default_depth_and_problem_scope(self):
+        from bounded_candidates import load_paths
+        from visibility_certificate import rectangle_certificate, directional_witness
+        from layout_certificates import omni_certificate
+        import numpy as np
+
+        q4 = load_paths(4)['grid21_29']
+        certificate = rectangle_certificate(q4)
+        self.assertTrue(certificate['covered'])
+        self.assertEqual(certificate['deepest'], 14)
+        self.assertEqual(verify_cells(q4, certificate)['verified_leaves'], 7420)
+        q3 = load_paths(3)['ring7']
+        self.assertTrue(omni_certificate(q3)['covered'])
+        # Q3 needs ordinary reception, not Q4's every-facing-direction coverage.
+        self.assertIsNotNone(directional_witness(q3, np.array([1800., 0.])))
+        self.assertFalse(rectangle_certificate(q3, save_cells=False)['covered'])
+
     def test_complete_partition_and_qualified_leaves(self):
         result = self.certify()
         self.assertTrue(result['coverage_guarantee'])
