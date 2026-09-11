@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/flower/math/2026/B题/B/../review-opt/q3-dominance/run_benchmarks.py", line 17, in <module>
+    runpy.run_module(f'models.q1q2.benchmarks.{name}.run', run_name='__main__')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 234, in run_module
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/flower/math/2026/B题/models/q1q2/benchmarks/q1_geometry/run.py", line 18, in <module>
+    from .generate import HERE
+  File "/Users/flower/math/2026/B题/models/q1q2/benchmarks/q1_geometry/generate.py", line 9, in <module>
+    import mpmath as mp
+ModuleNotFoundError: No module named 'mpmath'

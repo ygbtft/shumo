@@ -1,0 +1,106 @@
+................................................................................................... [ 73%]
+............................... [ 96%]
+.....                                                            [100%]
+=================================== FAILURES ===================================
+_ BoundedEntryTests.test_cli_matches_pre_refactor_in_both_backends_without_experiments (problem=3, mode='mock-http') _
+
+self = <test_bounded_entry.BoundedEntryTests testMethod=test_cli_matches_pre_refactor_in_both_backends_without_experiments>
+
+        def test_cli_matches_pre_refactor_in_both_backends_without_experiments(self):
+            # A fresh interpreter prevents another test's cached imports from hiding
+            # a dependency. Deny the entire historical tree, not just missing polar.
+            script = '''
+    import importlib.abc
+    from pathlib import Path
+    import sys
+    class NoExperiments(importlib.abc.MetaPathFinder):
+        def find_spec(self, fullname, path=None, target=None):
+            if any(word in fullname for word in ("experiments", "confirmation", "final_checks")):
+                raise AssertionError("Historical import: " + fullname)
+    sys.meta_path.insert(0, NoExperiments())
+    original_read = Path.read_text
+    def read(self, *args, **kwargs):
+        if "experiments" in self.parts:
+            raise FileNotFoundError(self)
+        return original_read(self, *args, **kwargs)
+    Path.read_text = read
+    import run_bounded_robot as runner
+    import bounded_http
+    destination = Path(sys.argv[1])
+    (destination / "client.py").write_bytes((runner.ROOT / "client.py").read_bytes())
+    runner.ROOT = bounded_http.ROOT = destination
+    sys.argv = ["run_bounded_robot.py"] + sys.argv[2:]
+    runner.main()
+    '''
+            for problem, method in ((3, "range_area7"), (4, "range_grid21_29")):
+                for mode in ("mock-http", "offline"):
+                    with self.subTest(problem=problem, mode=mode), tempfile.TemporaryDirectory() as tmp:
+                        subprocess.run([sys.executable, "-B", "-c", script, tmp,
+                                        "--problem", str(problem), "--method", method,
+                                        "--mode", mode, "--seed", "42"], cwd=ROOT,
+                                       check=True, capture_output=True, text=True, timeout=60)
+                        folder = next((Path(tmp) / "robot_runs").iterdir())
+                        summary = json.loads((folder / "summary.json").read_text())
+                        # Wall/CPU timings and real timestamps naturally vary;
+                        # every scoring field and policy statistic must be exact.
+                        for key in ("wall_s", "cpu_s", "initialization_s", "program_wall_s"):
+                            summary.pop(key, None)
+                        expected = BASELINE[f"q{problem}-{mode}"]
+>                       self.assertEqual(summary, expected["summary"])
+E                       AssertionError: {'mod[120 chars]': 3396.191321, 'per_source_s': 339.6191321, '[1417 chars].py'} != {'mod[120 chars]': 3304.341074, 'per_source_s': 330.4341074, '[1355 chars].py'}
+E                       Diff is 2959 characters long. Set self.maxDiff to None to see it.
+
+tests/test_bounded_entry.py:94: AssertionError
+_ BoundedEntryTests.test_cli_matches_pre_refactor_in_both_backends_without_experiments (problem=3, mode='offline') _
+
+self = <test_bounded_entry.BoundedEntryTests testMethod=test_cli_matches_pre_refactor_in_both_backends_without_experiments>
+
+        def test_cli_matches_pre_refactor_in_both_backends_without_experiments(self):
+            # A fresh interpreter prevents another test's cached imports from hiding
+            # a dependency. Deny the entire historical tree, not just missing polar.
+            script = '''
+    import importlib.abc
+    from pathlib import Path
+    import sys
+    class NoExperiments(importlib.abc.MetaPathFinder):
+        def find_spec(self, fullname, path=None, target=None):
+            if any(word in fullname for word in ("experiments", "confirmation", "final_checks")):
+                raise AssertionError("Historical import: " + fullname)
+    sys.meta_path.insert(0, NoExperiments())
+    original_read = Path.read_text
+    def read(self, *args, **kwargs):
+        if "experiments" in self.parts:
+            raise FileNotFoundError(self)
+        return original_read(self, *args, **kwargs)
+    Path.read_text = read
+    import run_bounded_robot as runner
+    import bounded_http
+    destination = Path(sys.argv[1])
+    (destination / "client.py").write_bytes((runner.ROOT / "client.py").read_bytes())
+    runner.ROOT = bounded_http.ROOT = destination
+    sys.argv = ["run_bounded_robot.py"] + sys.argv[2:]
+    runner.main()
+    '''
+            for problem, method in ((3, "range_area7"), (4, "range_grid21_29")):
+                for mode in ("mock-http", "offline"):
+                    with self.subTest(problem=problem, mode=mode), tempfile.TemporaryDirectory() as tmp:
+                        subprocess.run([sys.executable, "-B", "-c", script, tmp,
+                                        "--problem", str(problem), "--method", method,
+                                        "--mode", mode, "--seed", "42"], cwd=ROOT,
+                                       check=True, capture_output=True, text=True, timeout=60)
+                        folder = next((Path(tmp) / "robot_runs").iterdir())
+                        summary = json.loads((folder / "summary.json").read_text())
+                        # Wall/CPU timings and real timestamps naturally vary;
+                        # every scoring field and policy statistic must be exact.
+                        for key in ("wall_s", "cpu_s", "initialization_s", "program_wall_s"):
+                            summary.pop(key, None)
+                        expected = BASELINE[f"q{problem}-{mode}"]
+>                       self.assertEqual(summary, expected["summary"])
+E                       AssertionError: {'mod[1302 chars] 0, 'omni_negative_cuts': 0, 'omni_negative_in[122 chars] 19]} != {'mod[1302 chars] 0, 'discovered_channels': 15, 'policy_cleared[61 chars] 19]}
+E                       Diff is 2064 characters long. Set self.maxDiff to None to see it.
+
+tests/test_bounded_entry.py:94: AssertionError
+=========================== short test summary info ============================
+SUBFAILED(problem=3, mode='mock-http') tests/test_bounded_entry.py::BoundedEntryTests::test_cli_matches_pre_refactor_in_both_backends_without_experiments
+SUBFAILED(problem=3, mode='offline') tests/test_bounded_entry.py::BoundedEntryTests::test_cli_matches_pre_refactor_in_both_backends_without_experiments
+2 failed, 135 passed, 236 subtests passed in 10.70s
