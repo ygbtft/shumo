@@ -1,0 +1,623 @@
+{
+  "passed": 65,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__uniform__iid__97_peer_layout9_proxy",
+      "passed": true,
+      "commands": 142,
+      "region_updates": 31,
+      "minimum_truth_margin_m": 0.015568561893347068,
+      "certified_region_clears": 11,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__boundary_outward__n10__negative_peer_layout9_proxy",
+      "passed": true,
+      "commands": 168,
+      "region_updates": 27,
+      "minimum_truth_margin_m": 0.0035584205761935903,
+      "certified_region_clears": 10,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__near_collinear__n16__positive_peer_layout9_proxy",
+      "passed": true,
+      "commands": 108,
+      "region_updates": 42,
+      "minimum_truth_margin_m": 0.0030340366661374576,
+      "certified_region_clears": 16,
+      "certified_near_clears": 0,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__cluster_far20__n13__spatial_peer_layout9_proxy",
+      "passed": true,
+      "commands": 117,
+      "region_updates": 38,
+      "minimum_truth_margin_m": 0.0031813980159280907,
+      "certified_region_clears": 13,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__uniform__iid__97_clearance7",
+      "passed": true,
+      "commands": 148,
+      "region_updates": 29,
+      "minimum_truth_margin_m": 0.1327048746143519,
+      "certified_region_clears": 7,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__boundary_outward__n10__negative_clearance7",
+      "passed": true,
+      "commands": 159,
+      "region_updates": 30,
+      "minimum_truth_margin_m": 0.002745025278845876,
+      "certified_region_clears": 10,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__near_collinear__n16__positive_clearance7",
+      "passed": true,
+      "commands": 121,
+      "region_updates": 43,
+      "minimum_truth_margin_m": 0.0026895501955454884,
+      "certified_region_clears": 14,
+      "certified_near_clears": 0,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__cluster_far20__n13__spatial_clearance7",
+      "passed": true,
+      "commands": 102,
+      "region_updates": 30,
+      "minimum_truth_margin_m": 0.004267519135891189,
+      "certified_region_clears": 13,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__uniform__iid__97_clearance9",
+      "passed": true,
+      "commands": 162,
+      "region_updates": 32,
+      "minimum_truth_margin_m": 0.08299159082301982,
+      "certified_region_clears": 7,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__boundary_outward__n10__negative_clearance9",
+      "passed": true,
+      "commands": 186,
+      "region_updates": 30,
+      "minimum_truth_margin_m": 0.0029666993876147677,
+      "certified_region_clears": 10,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__near_collinear__n16__positive_clearance9",
+      "passed": true,
+      "commands": 133,
+      "region_updates": 43,
+      "minimum_truth_margin_m": 0.0026895501955454884,
+      "certified_region_clears": 16,
+      "certified_near_clears": 0,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__cluster_far20__n13__spatial_clearance9",
+      "passed": true,
+      "commands": 111,
+      "region_updates": 28,
+      "minimum_truth_margin_m": 0.004267519135891189,
+      "certified_region_clears": 13,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__uniform__iid__97_packet_center7",
+      "passed": true,
+      "commands": 152,
+      "region_updates": 32,
+      "minimum_truth_margin_m": 0.028223499113299837,
+      "certified_region_clears": 8,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__boundary_outward__n10__negative_packet_center7",
+      "passed": true,
+      "commands": 159,
+      "region_updates": 30,
+      "minimum_truth_margin_m": 0.002745025278845876,
+      "certified_region_clears": 10,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__near_collinear__n16__positive_packet_center7",
+      "passed": true,
+      "commands": 134,
+      "region_updates": 43,
+      "minimum_truth_margin_m": 0.0026895501955454884,
+      "certified_region_clears": 13,
+      "certified_near_clears": 0,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__cluster_far20__n13__spatial_packet_center7",
+      "passed": true,
+      "commands": 118,
+      "region_updates": 32,
+      "minimum_truth_margin_m": 0.004267519135891189,
+      "certified_region_clears": 13,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__uniform__iid__97_packet_center9",
+      "passed": true,
+      "commands": 151,
+      "region_updates": 31,
+      "minimum_truth_margin_m": 0.08299159082301982,
+      "certified_region_clears": 9,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__boundary_outward__n10__negative_packet_center9",
+      "passed": true,
+      "commands": 186,
+      "region_updates": 30,
+      "minimum_truth_margin_m": 0.0029666993876147677,
+      "certified_region_clears": 10,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__near_collinear__n16__positive_packet_center9",
+      "passed": true,
+      "commands": 112,
+      "region_updates": 40,
+      "minimum_truth_margin_m": 0.0026895501955454884,
+      "certified_region_clears": 16,
+      "certified_near_clears": 0,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q3__cluster_far20__n13__spatial_packet_center9",
+      "passed": true,
+      "commands": 137,
+      "region_updates": 30,
+      "minimum_truth_margin_m": 0.004267519135891189,
+      "certified_region_clears": 13,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__uniform__iid__97_quarter22",
+      "passed": true,
+      "commands": 321,
+      "region_updates": 43,
+      "minimum_truth_margin_m": 0.09527886504235136,
+      "certified_region_clears": 6,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__boundary_outward__n10__negative_quarter22",
+      "passed": true,
+      "commands": 397,
+      "region_updates": 32,
+      "minimum_truth_margin_m": 0.0011081056294065857,
+      "certified_region_clears": 7,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__near_collinear__n16__positive_quarter22",
+      "passed": true,
+      "commands": 309,
+      "region_updates": 74,
+      "minimum_truth_margin_m": 0.0011859541332327728,
+      "certified_region_clears": 7,
+      "certified_near_clears": 2,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__cluster_far20__n13__spatial_quarter22",
+      "passed": true,
+      "commands": 295,
+      "region_updates": 63,
+      "minimum_truth_margin_m": 0.0034202003941518214,
+      "certified_region_clears": 13,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__uniform__iid__97_clearance_f015_22",
+      "passed": true,
+      "commands": 328,
+      "region_updates": 48,
+      "minimum_truth_margin_m": 0.020748162075217874,
+      "certified_region_clears": 7,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__boundary_outward__n10__negative_clearance_f015_22",
+      "passed": true,
+      "commands": 382,
+      "region_updates": 24,
+      "minimum_truth_margin_m": 0.003083974356459755,
+      "certified_region_clears": 8,
+      "certified_near_clears": 2,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__near_collinear__n16__positive_clearance_f015_22",
+      "passed": true,
+      "commands": 320,
+      "region_updates": 92,
+      "minimum_truth_margin_m": 0.0012601630734311094,
+      "certified_region_clears": 7,
+      "certified_near_clears": 1,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__cluster_far20__n13__spatial_clearance_f015_22",
+      "passed": true,
+      "commands": 299,
+      "region_updates": 68,
+      "minimum_truth_margin_m": 0.0033005036114790737,
+      "certified_region_clears": 10,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__uniform__iid__97_packet_center22",
+      "passed": true,
+      "commands": 330,
+      "region_updates": 46,
+      "minimum_truth_margin_m": 0.019247233461950487,
+      "certified_region_clears": 9,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__boundary_outward__n10__negative_packet_center22",
+      "passed": true,
+      "commands": 397,
+      "region_updates": 32,
+      "minimum_truth_margin_m": 0.0011081056294065857,
+      "certified_region_clears": 7,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__near_collinear__n16__positive_packet_center22",
+      "passed": true,
+      "commands": 287,
+      "region_updates": 73,
+      "minimum_truth_margin_m": 0.0014066135126860428,
+      "certified_region_clears": 8,
+      "certified_near_clears": 1,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__cluster_far20__n13__spatial_packet_center22",
+      "passed": true,
+      "commands": 290,
+      "region_updates": 61,
+      "minimum_truth_margin_m": 0.0020685312151463024,
+      "certified_region_clears": 12,
+      "certified_near_clears": 1,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__uniform__iid__97_packet_action4_22",
+      "passed": true,
+      "commands": 331,
+      "region_updates": 54,
+      "minimum_truth_margin_m": 0.027407139903864754,
+      "certified_region_clears": 6,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__boundary_outward__n10__negative_packet_action4_22",
+      "passed": true,
+      "commands": 397,
+      "region_updates": 32,
+      "minimum_truth_margin_m": 0.0011081056294065857,
+      "certified_region_clears": 7,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__near_collinear__n16__positive_packet_action4_22",
+      "passed": true,
+      "commands": 318,
+      "region_updates": 76,
+      "minimum_truth_margin_m": 0.0011859541332327728,
+      "certified_region_clears": 7,
+      "certified_near_clears": 2,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__cluster_far20__n13__spatial_packet_action4_22",
+      "passed": true,
+      "commands": 295,
+      "region_updates": 66,
+      "minimum_truth_margin_m": 0.0034202003941518214,
+      "certified_region_clears": 12,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__uniform__iid__97_packet_action24_22",
+      "passed": true,
+      "commands": 331,
+      "region_updates": 54,
+      "minimum_truth_margin_m": 0.027407139903864754,
+      "certified_region_clears": 6,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__boundary_outward__n10__negative_packet_action24_22",
+      "passed": true,
+      "commands": 397,
+      "region_updates": 32,
+      "minimum_truth_margin_m": 0.0011081056294065857,
+      "certified_region_clears": 7,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__near_collinear__n16__positive_packet_action24_22",
+      "passed": true,
+      "commands": 301,
+      "region_updates": 73,
+      "minimum_truth_margin_m": 0.002124628775962635,
+      "certified_region_clears": 7,
+      "certified_near_clears": 2,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__cluster_far20__n13__spatial_packet_action24_22",
+      "passed": true,
+      "commands": 295,
+      "region_updates": 66,
+      "minimum_truth_margin_m": 0.0034202003941518214,
+      "certified_region_clears": 12,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__uniform__iid__97_packet_discover300_22",
+      "passed": true,
+      "commands": 329,
+      "region_updates": 52,
+      "minimum_truth_margin_m": 0.027407139903864754,
+      "certified_region_clears": 6,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__boundary_outward__n10__negative_packet_discover300_22",
+      "passed": true,
+      "commands": 405,
+      "region_updates": 32,
+      "minimum_truth_margin_m": 0.0011081056294065857,
+      "certified_region_clears": 7,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__near_collinear__n16__positive_packet_discover300_22",
+      "passed": true,
+      "commands": 318,
+      "region_updates": 76,
+      "minimum_truth_margin_m": 0.0011859541332327728,
+      "certified_region_clears": 7,
+      "certified_near_clears": 2,
+      "stop_reason": "public_upper_bound_16"
+    },
+    {
+      "test": "public_replay_regions_and_optical_certificates_q4__cluster_far20__n13__spatial_packet_discover300_22",
+      "passed": true,
+      "commands": 295,
+      "region_updates": 66,
+      "minimum_truth_margin_m": 0.0034202003941518214,
+      "certified_region_clears": 12,
+      "certified_near_clears": 0,
+      "stop_reason": "full_coverage_and_all_discovered_cleared"
+    },
+    {
+      "test": "scored_archive_stops_lifetime_budgets_and_hashes_interleaved-tasks",
+      "passed": true,
+      "executions": 1209
+    },
+    {
+      "test": "scored_archive_stops_lifetime_budgets_and_hashes_discovery-priority",
+      "passed": true,
+      "executions": 1581
+    },
+    {
+      "test": "scored_archive_stops_lifetime_budgets_and_hashes_task-confirmation-v2",
+      "passed": true,
+      "executions": 2145
+    },
+    {
+      "test": "all_confirmation_trace_physics_timing_quantization_and_fixed_errors",
+      "passed": true,
+      "executions": 2145,
+      "commands": 541960,
+      "direction_replies": 98958,
+      "near_replies": 416,
+      "repeated_location_replies": 0,
+      "maximum_absolute_bearing_error_deg": 1.004999820950502,
+      "directional_boundary_tolerance": "Within 3e-12 normalized dot product, accept either side of floating boundary"
+    },
+    {
+      "test": "aborted_collector_preserved_no_score_based_reselection_exact_policy_hashes",
+      "passed": true,
+      "aborted_scored_rows": 0,
+      "collector_only_repair_checks": 2
+    },
+    {
+      "test": "saved_protocol_and_zero_effect_checks_interleaved-tasks",
+      "passed": true,
+      "checks": 252
+    },
+    {
+      "test": "saved_protocol_and_zero_effect_checks_discovery-priority",
+      "passed": true,
+      "checks": 276
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex22_72",
+      "passed": true,
+      "verified_leaves": 2414,
+      "certified_area_m2": 10281027.83203125,
+      "cells": 2414,
+      "partition_nodes": 5261
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex23_112",
+      "passed": true,
+      "verified_leaves": 2144,
+      "certified_area_m2": 10281027.83203125,
+      "cells": 2144,
+      "partition_nodes": 4901
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex23_113",
+      "passed": true,
+      "verified_leaves": 2144,
+      "certified_area_m2": 10281027.83203125,
+      "cells": 2144,
+      "partition_nodes": 4901
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex25_132",
+      "passed": true,
+      "verified_leaves": 2376,
+      "certified_area_m2": 10253342.28515625,
+      "cells": 2376,
+      "partition_nodes": 5653
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex25_133",
+      "passed": true,
+      "verified_leaves": 1928,
+      "certified_area_m2": 10266641.235351562,
+      "cells": 1928,
+      "partition_nodes": 4565
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex25_134",
+      "passed": true,
+      "verified_leaves": 1128,
+      "certified_area_m2": 10384453.125,
+      "cells": 1128,
+      "partition_nodes": 1973
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex25_135",
+      "passed": true,
+      "verified_leaves": 1104,
+      "certified_area_m2": 10398691.40625,
+      "cells": 1104,
+      "partition_nodes": 1941
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex24_152",
+      "passed": true,
+      "verified_leaves": 1946,
+      "certified_area_m2": 10281027.83203125,
+      "cells": 1946,
+      "partition_nodes": 4637
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex24_153",
+      "passed": true,
+      "verified_leaves": 1928,
+      "certified_area_m2": 10281027.83203125,
+      "cells": 1928,
+      "partition_nodes": 4613
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex24_154",
+      "passed": true,
+      "verified_leaves": 1092,
+      "certified_area_m2": 10396318.359375,
+      "cells": 1092,
+      "partition_nodes": 1941
+    },
+    {
+      "test": "unchanged_continuous_coverage_partition_convex24_155",
+      "passed": true,
+      "verified_leaves": 1008,
+      "certified_area_m2": 10396318.359375,
+      "cells": 1008,
+      "partition_nodes": 1829
+    },
+    {
+      "test": "four_owned_loopback_http_equivalences",
+      "passed": true,
+      "official_calls": 0
+    },
+    {
+      "test": "two_task_cli_entrypoint_smokes",
+      "passed": true
+    },
+    {
+      "test": "original_inputs_peer_images_public_probe_and_upstreams_unchanged",
+      "passed": true
+    }
+  ],
+  "completed_runs": [
+    {
+      "run": "interleaved-tasks",
+      "executions": 1209,
+      "all_cleared": 1209,
+      "stop_reasons": {
+        "full_coverage_and_all_discovered_cleared": 1092,
+        "public_upper_bound_16": 117
+      }
+    },
+    {
+      "run": "discovery-priority",
+      "executions": 1581,
+      "all_cleared": 1581,
+      "stop_reasons": {
+        "full_coverage_and_all_discovered_cleared": 1428,
+        "public_upper_bound_16": 153
+      }
+    },
+    {
+      "run": "task-confirmation-v2",
+      "executions": 2145,
+      "all_cleared": 2145,
+      "stop_reasons": {
+        "full_coverage_and_all_discovered_cleared": 1986,
+        "public_upper_bound_16": 159
+      }
+    }
+  ],
+  "feedback_replays": 44,
+  "new_scored_executions": 4935,
+  "excluded_aborted_collector_attempts": 1,
+  "official_calls": 0,
+  "wall_s": 4.4243449170026
+}

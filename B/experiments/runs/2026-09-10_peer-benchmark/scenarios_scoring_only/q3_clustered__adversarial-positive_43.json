@@ -1,0 +1,107 @@
+{
+  "scenario": {
+    "seed": 43,
+    "sources": [
+      {
+        "channel": 10,
+        "x": 1188.6917932904926,
+        "y": -543.7728679800649,
+        "radius": 1024.459870827451,
+        "direction_deg": null
+      },
+      {
+        "channel": 5,
+        "x": -1119.0461995295088,
+        "y": -538.5208675895398,
+        "radius": 1082.8630599981539,
+        "direction_deg": null
+      },
+      {
+        "channel": 15,
+        "x": 1512.0945421223512,
+        "y": -604.903262769938,
+        "radius": 1051.5203550019542,
+        "direction_deg": null
+      },
+      {
+        "channel": 12,
+        "x": 1466.2792721529945,
+        "y": -731.0802078737145,
+        "radius": 1030.5196199346285,
+        "direction_deg": null
+      },
+      {
+        "channel": 4,
+        "x": 1363.6337518487799,
+        "y": -447.6869930754449,
+        "radius": 1361.6979209008628,
+        "direction_deg": null
+      },
+      {
+        "channel": 8,
+        "x": 1069.4514855663977,
+        "y": -514.6353826510167,
+        "radius": 1083.4091571209508,
+        "direction_deg": null
+      },
+      {
+        "channel": 20,
+        "x": -1132.775387984021,
+        "y": -654.2180253318829,
+        "radius": 1295.7041683350767,
+        "direction_deg": null
+      },
+      {
+        "channel": 18,
+        "x": 1308.0725501506897,
+        "y": -730.3545620451569,
+        "radius": 1035.1755580647828,
+        "direction_deg": null
+      },
+      {
+        "channel": 14,
+        "x": 1535.3713944405692,
+        "y": -645.2932791061901,
+        "radius": 1449.6832369980677,
+        "direction_deg": null
+      },
+      {
+        "channel": 1,
+        "x": 1553.856080293217,
+        "y": -561.3004136712226,
+        "radius": 1063.5783659106678,
+        "direction_deg": null
+      }
+    ],
+    "config": {
+      "count_min": 10,
+      "count_max": 16,
+      "position_distribution": "clustered",
+      "edge_power": 8.0,
+      "clusters": 3,
+      "cluster_sigma_m": 180.0,
+      "radius_distribution": "uniform",
+      "radius_min": 1000.0,
+      "radius_max": 1500.0,
+      "radius_fixed": 1250.0,
+      "radius_beta_a": 2.0,
+      "radius_beta_b": 2.0,
+      "directional_fraction": 0.0,
+      "ensure_mixed": true,
+      "direction_distribution": "uniform",
+      "direction_deg": 0.0,
+      "direction_kappa": 4.0,
+      "empirical_counts": [],
+      "empirical_positions": [],
+      "empirical_radius_intervals": []
+    }
+  },
+  "error": {
+    "model": "adversarial",
+    "length_scale_m": 200.0,
+    "cross_channel": "independent",
+    "adversarial_sign": "positive",
+    "empirical_samples_deg": [],
+    "empirical_base": "iid"
+  }
+}

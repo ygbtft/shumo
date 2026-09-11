@@ -1,0 +1,156 @@
+﻿[
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  6260,
+        "path":  "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\152.0.4191.66\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0xAA64"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  11140,
+        "path":  "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\152.0.4191.66\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0xAA64"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  11136,
+        "path":  "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\152.0.4191.66\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0xAA64"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  11064,
+        "path":  "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\152.0.4191.66\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0xAA64"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  7568,
+        "path":  "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\152.0.4191.66\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0xAA64"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  11060,
+        "path":  "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\152.0.4191.66\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0xAA64"
+    },
+    {
+        "name":  "jammers-simulator-full.exe",
+        "pid":  10760,
+        "path":  "C:\\JammersFull\\jammers-simulator-full.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0x8664"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  6484,
+        "path":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0x8664"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  6960,
+        "path":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0x8664"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  9852,
+        "path":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0x8664"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  6668,
+        "path":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0x8664"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  3344,
+        "path":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0x8664"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  5932,
+        "path":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0x8664"
+    },
+    {
+        "name":  "msedgewebview2.exe",
+        "pid":  4204,
+        "path":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "session":  2,
+        "success":  true,
+        "wow64_process_machine":  "0x0000",
+        "native_machine":  "0xAA64",
+        "machine_query_success":  true,
+        "process_machine":  "0x8664"
+    }
+]

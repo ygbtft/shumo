@@ -1,0 +1,3 @@
+# Install into models/q1q2/.venv; production requirements stay unchanged.
+scipy==1.18.1
+mpmath==1.4.1

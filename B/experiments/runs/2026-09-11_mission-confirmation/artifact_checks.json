@@ -1,0 +1,24 @@
+{
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "all_current_top_level_python_parses",
+      "passed": true,
+      "count": 69
+    },
+    {
+      "test": "current_report_links_resolve",
+      "passed": true
+    },
+    {
+      "test": "per_run_plans_commands_checks_logs_summaries_and_next_steps_exist",
+      "passed": true
+    },
+    {
+      "test": "previous_scored_manifest_preserved_before_increment",
+      "passed": true
+    }
+  ],
+  "official_calls": 0
+}

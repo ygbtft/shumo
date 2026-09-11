@@ -1,0 +1,17 @@
+[
+  {
+    "file": "slim-visual-5s.png",
+    "host_command_elapsed_s": 5.098039667000194,
+    "captured_utc": "2026-09-10T12:58:50.676877+00:00"
+  },
+  {
+    "file": "slim-visual-8s.png",
+    "host_command_elapsed_s": 8.120033834000424,
+    "captured_utc": "2026-09-10T12:58:53.698874+00:00"
+  },
+  {
+    "file": "slim-visual-13s.png",
+    "host_command_elapsed_s": 13.143971875000716,
+    "captured_utc": "2026-09-10T12:58:58.722822+00:00"
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "passed": 21,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "identity_refactor_exact_feedback_replay",
+      "passed": true,
+      "commands": 150
+    },
+    {
+      "test": "fast_sensing_universal_omni_certificate_0.0_False",
+      "passed": true
+    },
+    {
+      "test": "fast_sensing_universal_omni_certificate_0.0_True",
+      "passed": true
+    },
+    {
+      "test": "fast_sensing_universal_omni_certificate_30.0_False",
+      "passed": true
+    },
+    {
+      "test": "fast_sensing_universal_omni_certificate_30.0_True",
+      "passed": true
+    },
+    {
+      "test": "fast_sensing_universal_omni_certificate_90.0_False",
+      "passed": true
+    },
+    {
+      "test": "fast_sensing_universal_omni_certificate_90.0_True",
+      "passed": true
+    },
+    {
+      "test": "fast_sensing_universal_omni_certificate_359.99_False",
+      "passed": true
+    },
+    {
+      "test": "fast_sensing_universal_omni_certificate_359.99_True",
+      "passed": true
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_deferred9_boundary_min__n16__negative",
+      "passed": true,
+      "commands": 193
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_deferred9_unknown_count_late__n10__spatial",
+      "passed": true,
+      "commands": 211
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_opportunistic200_9_boundary_min__n16__negative",
+      "passed": true,
+      "commands": 193
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_opportunistic200_9_unknown_count_late__n10__spatial",
+      "passed": true,
+      "commands": 211
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_trial80_9_boundary_min__n16__negative",
+      "passed": true,
+      "commands": 182
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_trial80_9_unknown_count_late__n10__spatial",
+      "passed": true,
+      "commands": 140
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_cov_robust80_9_boundary_min__n16__negative",
+      "passed": true,
+      "commands": 167
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_cov_robust80_9_unknown_count_late__n10__spatial",
+      "passed": true,
+      "commands": 140
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_cov_dynamic80_9_boundary_min__n16__negative",
+      "passed": true,
+      "commands": 170
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_cov_dynamic80_9_unknown_count_late__n10__spatial",
+      "passed": true,
+      "commands": 140
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_cov_opportunistic80_9_boundary_min__n16__negative",
+      "passed": true,
+      "commands": 201
+    },
+    {
+      "test": "feedback_contract_all_clear_stop_cov_opportunistic80_9_unknown_count_late__n10__spatial",
+      "passed": true,
+      "commands": 219
+    }
+  ],
+  "scored_execution_count": 0
+}

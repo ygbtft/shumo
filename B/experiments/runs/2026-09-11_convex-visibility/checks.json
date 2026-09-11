@@ -1,0 +1,217 @@
+{
+  "passed": 36,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "angular_gap_removal_vs_independent_cell_hulls_0",
+      "passed": true,
+      "removed": 0
+    },
+    {
+      "test": "angular_gap_removal_vs_independent_cell_hulls_1",
+      "passed": true,
+      "removed": 0
+    },
+    {
+      "test": "angular_gap_removal_vs_independent_cell_hulls_2",
+      "passed": true,
+      "removed": 0
+    },
+    {
+      "test": "angular_gap_removal_vs_independent_cell_hulls_3",
+      "passed": true,
+      "removed": 1
+    },
+    {
+      "test": "angular_gap_removal_vs_independent_cell_hulls_4",
+      "passed": true,
+      "removed": 1
+    },
+    {
+      "test": "angular_gap_removal_vs_independent_cell_hulls_5",
+      "passed": true,
+      "removed": 1
+    },
+    {
+      "test": "full_protocol_q3_replace7_boundary_min__n10__spatial",
+      "passed": true,
+      "virtual_s": 4534.772376,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q3_replace9_nearest_boundary_min__n10__spatial",
+      "passed": true,
+      "virtual_s": 4640.768706,
+      "replaced": 2
+    },
+    {
+      "test": "full_protocol_q3_replace7_boundary_min__n16__negative",
+      "passed": true,
+      "virtual_s": 4743.579252,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q3_replace9_nearest_boundary_min__n16__negative",
+      "passed": true,
+      "virtual_s": 4645.207856,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q3_replace7_near_collinear_min__n10__spatial",
+      "passed": true,
+      "virtual_s": 3194.118777,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q3_replace9_nearest_near_collinear_min__n10__spatial",
+      "passed": true,
+      "virtual_s": 3499.542978,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q3_replace7_near_collinear_min__n16__negative",
+      "passed": true,
+      "virtual_s": 2812.96566,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q3_replace9_nearest_near_collinear_min__n16__negative",
+      "passed": true,
+      "virtual_s": 2925.637047,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q3_replace7_unknown_count_late__n10__spatial",
+      "passed": true,
+      "virtual_s": 2738.099823,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q3_replace9_nearest_unknown_count_late__n10__spatial",
+      "passed": true,
+      "virtual_s": 3125.720843,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q3_replace7_unknown_count_late__n16__negative",
+      "passed": true,
+      "virtual_s": 2729.458859,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q3_replace9_nearest_unknown_count_late__n16__negative",
+      "passed": true,
+      "virtual_s": 2493.696302,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace25_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "virtual_s": 8928.547272,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "virtual_s": 8565.968488,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_nearest_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "virtual_s": 8324.749011,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace25_boundary_outward_min__n16__negative",
+      "passed": true,
+      "virtual_s": 8400.539946,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "virtual_s": 9842.021664,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_nearest_boundary_outward_min__n16__negative",
+      "passed": true,
+      "virtual_s": 9833.19949,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace25_near_collinear_min__n10__spatial",
+      "passed": true,
+      "virtual_s": 8499.276358,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "virtual_s": 6776.501768,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_nearest_near_collinear_min__n10__spatial",
+      "passed": true,
+      "virtual_s": 7232.633117,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace25_near_collinear_min__n16__negative",
+      "passed": true,
+      "virtual_s": 9359.390983,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_near_collinear_min__n16__negative",
+      "passed": true,
+      "virtual_s": 5536.98833,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_nearest_near_collinear_min__n16__negative",
+      "passed": true,
+      "virtual_s": 8470.745704,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace25_unknown_count_late__n10__spatial",
+      "passed": true,
+      "virtual_s": 8119.504386,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "virtual_s": 7002.194368,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_nearest_unknown_count_late__n10__spatial",
+      "passed": true,
+      "virtual_s": 7388.118584,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace25_unknown_count_late__n16__negative",
+      "passed": true,
+      "virtual_s": 6634.093504,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_unknown_count_late__n16__negative",
+      "passed": true,
+      "virtual_s": 6878.340899,
+      "replaced": 0
+    },
+    {
+      "test": "full_protocol_q4_replace22_nearest_unknown_count_late__n16__negative",
+      "passed": true,
+      "virtual_s": 4979.677238,
+      "replaced": 0
+    }
+  ],
+  "scored_execution_count": 0
+}

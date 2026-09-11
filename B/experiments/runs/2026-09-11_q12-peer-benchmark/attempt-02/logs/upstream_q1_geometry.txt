@@ -1,0 +1,89 @@
+{
+  "n_cases": 285,
+  "n_pass": 274,
+  "n_fail": 11,
+  "categories": {
+    "adversarial": {
+      "n_cases": 34,
+      "n_pass": 31,
+      "n_fail": 3
+    },
+    "closed_form": {
+      "n_cases": 27,
+      "n_pass": 27,
+      "n_fail": 0
+    },
+    "degenerate": {
+      "n_cases": 36,
+      "n_pass": 36,
+      "n_fail": 0
+    },
+    "invariant": {
+      "n_cases": 32,
+      "n_pass": 28,
+      "n_fail": 4
+    },
+    "random": {
+      "n_cases": 156,
+      "n_pass": 152,
+      "n_fail": 4
+    }
+  },
+  "max_errors": {
+    "diameter_abs_m": {
+      "value": 1.3969838619232178e-09,
+      "case_id": "orthogonal_1000000_30"
+    },
+    "diameter_relative": {
+      "value": 0.045833595560945024,
+      "case_id": "narrow_obs_14"
+    },
+    "feasible_residual_m": {
+      "value": 1.2678611938099493e-08,
+      "case_id": "random_obs_8_1_redundant"
+    },
+    "isolated_diameter_abs_m": {
+      "value": 5.820766091346741e-11,
+      "case_id": "orthogonal_1000000_10"
+    },
+    "normal_l2": {
+      "value": 1.2959208739370123e-15,
+      "case_id": "random_obs_32_6"
+    },
+    "recession_residual": {
+      "value": 6.998920850723926e-16,
+      "case_id": "random_obs_1_9"
+    },
+    "vertex_constraint_residual_m": {
+      "value": 5.617728193740845e-08,
+      "case_id": "orthogonal_100_1_redundant"
+    },
+    "vertex_hausdorff_m": {
+      "value": 6.143906154658885e-08,
+      "case_id": "square_wedges_redundant"
+    }
+  },
+  "lp_disagreements": [
+    "long_triangle_10",
+    "tiny_gap_10",
+    "long_triangle_12",
+    "tiny_gap_12",
+    "long_triangle_14",
+    "tiny_gap_14"
+  ],
+  "failure_checks": {
+    "region_status": 10,
+    "classification": 8,
+    "pipeline_diameter_status": 11,
+    "invariant_classification": 1,
+    "vertices": 2,
+    "vertex_normalization": 2,
+    "vertices_feasible": 2,
+    "pipeline_diameter_length": 3,
+    "pipeline_diameter_squared": 3,
+    "pipeline_diameter_endpoints": 3,
+    "pipeline_diameter_indices": 3,
+    "invariant_diameter": 3,
+    "feasible_witness": 1
+  }
+}

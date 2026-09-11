@@ -1,0 +1,114 @@
+{
+  "scenario": {
+    "seed": 100,
+    "sources": [
+      {
+        "channel": 15,
+        "x": 708.2306476666164,
+        "y": -1555.0376101512388,
+        "radius": 1080.2109049874668,
+        "direction_deg": null
+      },
+      {
+        "channel": 20,
+        "x": 1030.8299663882813,
+        "y": 1019.1509224381791,
+        "radius": 1002.8225429458996,
+        "direction_deg": null
+      },
+      {
+        "channel": 6,
+        "x": 166.54669489778593,
+        "y": -1119.7029175492453,
+        "radius": 1283.078853646443,
+        "direction_deg": null
+      },
+      {
+        "channel": 13,
+        "x": 428.23394343703615,
+        "y": -663.9061794308615,
+        "radius": 1456.888421124614,
+        "direction_deg": null
+      },
+      {
+        "channel": 12,
+        "x": -830.6641810030889,
+        "y": 280.368012205438,
+        "radius": 1318.899903157041,
+        "direction_deg": null
+      },
+      {
+        "channel": 7,
+        "x": 1196.7151768286228,
+        "y": 1221.2551654743447,
+        "radius": 1276.9758096220405,
+        "direction_deg": null
+      },
+      {
+        "channel": 9,
+        "x": -1371.2836755613616,
+        "y": -1121.4271368443533,
+        "radius": 1358.6520389424095,
+        "direction_deg": null
+      },
+      {
+        "channel": 17,
+        "x": -1582.9858628166237,
+        "y": -70.79478805901931,
+        "radius": 1144.9276495343474,
+        "direction_deg": null
+      },
+      {
+        "channel": 2,
+        "x": -1361.4233607752594,
+        "y": -243.5981049666419,
+        "radius": 1171.6341396513599,
+        "direction_deg": null
+      },
+      {
+        "channel": 14,
+        "x": -1084.371973922275,
+        "y": 1261.6075405918145,
+        "radius": 1241.7819440429516,
+        "direction_deg": null
+      },
+      {
+        "channel": 16,
+        "x": 613.102531452058,
+        "y": -1446.1571591173936,
+        "radius": 1445.2284771945313,
+        "direction_deg": null
+      }
+    ],
+    "config": {
+      "count_min": 10,
+      "count_max": 16,
+      "position_distribution": "uniform",
+      "edge_power": 8.0,
+      "clusters": 3,
+      "cluster_sigma_m": 180.0,
+      "radius_distribution": "uniform",
+      "radius_min": 1000.0,
+      "radius_max": 1500.0,
+      "radius_fixed": 1250.0,
+      "radius_beta_a": 2.0,
+      "radius_beta_b": 2.0,
+      "directional_fraction": 0.0,
+      "ensure_mixed": true,
+      "direction_distribution": "uniform",
+      "direction_deg": 0.0,
+      "direction_kappa": 4.0,
+      "empirical_counts": [],
+      "empirical_positions": [],
+      "empirical_radius_intervals": []
+    }
+  },
+  "error": {
+    "model": "adversarial",
+    "length_scale_m": 200.0,
+    "cross_channel": "independent",
+    "adversarial_sign": "negative",
+    "empirical_samples_deg": [],
+    "empirical_base": "iid"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "diameter_circle_counterexample": {
+    "diameter_m": 40.0,
+    "minimum_circle_radius_m": 23.094010767585033,
+    "wrong_radius_m": 20.0,
+    "wrong_clear_can_fail": true
+  },
+  "interior_only_outward_source": {
+    "source": [
+      1800.0,
+      0.0
+    ],
+    "radius": 1000.0,
+    "facing_deg": 0.0,
+    "reason": "For any detector strictly inside the disk, detector.x < 1800, outside the east-facing hemisphere"
+  },
+  "stop_at_10": {
+    "cases_with_more_than_10_sources": 648,
+    "missed_per_case_if_stop_on_tenth_clear_min": 1,
+    "missed_per_case_if_stop_on_tenth_clear_max": 6,
+    "interpretation": "Counterfactual prefix of accepted success responses; hidden count used only to score the invalid stop rule"
+  },
+  "two_ray_point_at_90deg": {
+    "examples": [
+      {
+        "intersection_angle_deg": 90,
+        "error1": -1.0,
+        "error2": -1.0,
+        "pure_wedge_status": "bounded",
+        "pure_wedge_diameter_m": 49.38542582373391,
+        "pure_wedge_mec_radius_m": 24.69271291186696,
+        "with_public_prior_outer_radius_m": 24.939843773867796,
+        "certifies_20m": false,
+        "ray_intersection_error_m": 24.681429879653912
+      },
+      {
+        "intersection_angle_deg": 90,
+        "error1": -1.0,
+        "error2": 1.0,
+        "pure_wedge_status": "bounded",
+        "pure_wedge_diameter_m": 51.17240560417561,
+        "pure_wedge_mec_radius_m": 25.586202802087808,
+        "with_public_prior_outer_radius_m": 25.84228739016205,
+        "certifies_20m": false,
+        "ray_intersection_error_m": 25.123725818997627
+      },
+      {
+        "intersection_angle_deg": 90,
+        "error1": 1.0,
+        "error2": -1.0,
+        "pure_wedge_status": "bounded",
+        "pure_wedge_diameter_m": 49.385425823733925,
+        "pure_wedge_mec_radius_m": 24.692712911866963,
+        "with_public_prior_outer_radius_m": 24.939539766183003,
+        "certifies_20m": false,
+        "ray_intersection_error_m": 24.26170000473678
+      },
+      {
+        "intersection_angle_deg": 90,
+        "error1": 1.0,
+        "error2": 1.0,
+        "pure_wedge_status": "bounded",
+        "pure_wedge_diameter_m": 49.38542582373398,
+        "pure_wedge_mec_radius_m": 24.692712911867,
+        "with_public_prior_outer_radius_m": 24.939843773867718,
+        "certifies_20m": false,
+        "ray_intersection_error_m": 24.681429879653912
+      }
+    ]
+  },
+  "warning": "Finite +/-1 endpoint tests do not optimize an arbitrary worst-case spatial error field"
+}

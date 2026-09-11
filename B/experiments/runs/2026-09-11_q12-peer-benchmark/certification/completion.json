@@ -1,0 +1,20 @@
+{
+  "jobs": [
+    {
+      "label": "optional_unit_tests",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_s": 4.785251165973023
+    },
+    {
+      "label": "selected_fixed_q_certification",
+      "exit_code": 1,
+      "timed_out": false,
+      "wall_s": 22.54927204095293
+    }
+  ],
+  "source_and_cases_unchanged": true,
+  "checked_files": 65,
+  "official_calls": 0,
+  "scored_mission_executions": 0
+}

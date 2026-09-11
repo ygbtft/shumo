@@ -1,0 +1,284 @@
+{
+  "two_wedge_counterexample": {
+    "source": [
+      0,
+      0
+    ],
+    "observations": [
+      [
+        [
+          -1000.0,
+          0.0
+        ],
+        0.0
+      ],
+      [
+        [
+          0.0,
+          -1000.0
+        ],
+        90.0
+      ]
+    ],
+    "measurement_error_deg": 0,
+    "uncertainty_halfwidth_deg": 1,
+    "vertices": [
+      [
+        -17.15561259646294,
+        -17.155612596462976
+      ],
+      [
+        17.145161860798435,
+        -17.75433484170262
+      ],
+      [
+        17.76515689528484,
+        17.76515689528475
+      ],
+      [
+        -17.754334841702583,
+        17.145161860798346
+      ]
+    ],
+    "diagonal_midpoint_mismatch_m": 0.8617632528435101,
+    "kappa": 1.0
+  },
+  "two_wedge_kappa_search": {
+    "max_kappa": 1.0265287140600547,
+    "observations": [
+      [
+        [
+          -1000.0,
+          0.0
+        ],
+        0.0
+      ],
+      [
+        [
+          8.726535498373996,
+          -999.9619230641713
+        ],
+        90.5
+      ]
+    ],
+    "vertices": [
+      [
+        -17.00908649152848,
+        -17.158170219138285
+      ],
+      [
+        17.29810796589048,
+        -17.75700452589752
+      ],
+      [
+        17.60808124522861,
+        17.76241512961438
+      ],
+      [
+        -17.907280946794526,
+        17.14249217660345
+      ]
+    ],
+    "diameter_m": 49.57211190358225,
+    "diameter_midpoint": [
+      -0.3045864904520226,
+      -0.30725617464703525
+    ],
+    "diameter_circle_radius_m": 24.786055951791123,
+    "required_radius_at_that_midpoint_m": 25.443598142812707,
+    "source": [
+      0,
+      0
+    ],
+    "actual_station_source_distances_m": [
+      1000.0,
+      1000.0
+    ],
+    "caveat": "Finite search is not a universal maximum theorem. The selected example has both station-source distances 1000m and exact representable bearings 0.00 and 90.50, hence is physically valid at zero actual error."
+  },
+  "paper_three_station_construction": {
+    "side_m": 1200.0,
+    "source": [
+      600.0,
+      346.41016151377545
+    ],
+    "vertices": [
+      [
+        587.7836638730936,
+        339.35705656239514
+      ],
+      [
+        600.0000000000001,
+        332.5854308716614
+      ],
+      [
+        612.2163361269065,
+        339.35705656239503
+      ],
+      [
+        611.9725679365481,
+        353.3225268348326
+      ],
+      [
+        600.0000000000001,
+        360.51637141653634
+      ],
+      [
+        588.027432063452,
+        353.3225268348325
+      ]
+    ],
+    "vertex_count": 6,
+    "diameter_m": 27.930940544874982,
+    "mec_center": [
+      600.0000000000001,
+      346.4101615137755
+    ],
+    "mec_radius_m": 14.106209902760838,
+    "kappa_about_diameter_midpoint": 1.0151540467321911,
+    "twice_mec_radius_over_diameter": 1.0100776864350292
+  },
+  "three_bearing_ambiguity": {
+    "stations": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        100.0,
+        0.0
+      ],
+      [
+        200.0,
+        0.0
+      ]
+    ],
+    "returned_bearings_deg": [
+      0,
+      0,
+      0
+    ],
+    "consistent_source_a": [
+      600.0,
+      0.0
+    ],
+    "consistent_source_b": [
+      1400.0,
+      0.0
+    ],
+    "source_separation_m": 800,
+    "radius_m": 1500,
+    "error_deg": 0,
+    "smallest_possible_cover_radius_lower_bound_m": 400
+  },
+  "q2_reception_counterexample": {
+    "first_station": [
+      0,
+      0
+    ],
+    "first_bearing_deg": 30,
+    "source": [
+      86.60254037844388,
+      49.99999999999999
+    ],
+    "receive_radius_m": 1000,
+    "second_station": [
+      640.0,
+      931.3
+    ],
+    "first_distance_m": 100,
+    "second_distance_m": 1040.6432810120823,
+    "first_feedback": "direction 30.00",
+    "second_feedback": "no_signal"
+  },
+  "gdop_and_internal_arithmetic": {
+    "sigma_radians": 0.010076663134634544,
+    "d800_gamma90_major_m": 8.061330507707638,
+    "d800_gamma30_major_m": 22.02396452366228,
+    "paper_text_major_m": [
+      9.0,
+      17.6
+    ],
+    "best105_67_twenty_percent_limit": 126.804,
+    "paper_box_corner_1020_minus40_worst_m": 189.13,
+    "reduction_304_42_to105_67_percent": 65.28808882465015,
+    "baseline_excess_percent_using_new_denominator": 188.08554935175547
+  },
+  "ring_coverage": {
+    "peer_ring9_r1300": {
+      "n_outer": 8,
+      "stations": 9,
+      "ring_radius_m": 1300.0,
+      "coverage_radius_m": 778.6165859055264,
+      "coverage_margin_m": 221.38341409447355,
+      "static_open_route_m": 8264.838469044633,
+      "problem": 3,
+      "guarantees_arbitrary_direction": false,
+      "grid_max_m": 778.6165859055264
+    },
+    "ring7_r1140": {
+      "n_outer": 6,
+      "stations": 7,
+      "ring_radius_m": 1140.0,
+      "coverage_radius_m": 992.689147149632,
+      "coverage_margin_m": 7.310852850367951,
+      "static_open_route_m": 6839.999999999999,
+      "problem": 3,
+      "guarantees_arbitrary_direction": false,
+      "grid_max_m": 992.6891471496324
+    },
+    "ring9_r960": {
+      "n_outer": 8,
+      "stations": 9,
+      "ring_radius_m": 960.0,
+      "coverage_radius_m": 984.2115299268714,
+      "coverage_margin_m": 15.788470073128565,
+      "static_open_route_m": 6103.2653309868065,
+      "problem": 3,
+      "guarantees_arbitrary_direction": false,
+      "grid_max_m": 984.2115299268715
+    },
+    "ring13_r870": {
+      "n_outer": 12,
+      "stations": 13,
+      "ring_radius_m": 870.0,
+      "coverage_radius_m": 985.708025767589,
+      "coverage_margin_m": 14.291974232411008,
+      "static_open_route_m": 5823.796523262247,
+      "problem": 3,
+      "guarantees_arbitrary_direction": false,
+      "grid_max_m": 985.708025767589
+    }
+  },
+  "q4_boundary_outward_counterexample": {
+    "source": [
+      1786.5830729543795,
+      219.36481812926544
+    ],
+    "direction_deg": 7,
+    "receive_radius_m": 1000,
+    "paper_rings_n_radius": [
+      [
+        6,
+        900
+      ],
+      [
+        10,
+        1700
+      ],
+      [
+        12,
+        1500
+      ],
+      [
+        16,
+        1800
+      ]
+    ],
+    "nearest_station_distance_m": 219.77474232548474,
+    "max_front_halfplane_dot_m": -13.416927045620204,
+    "stations_tested": 45,
+    "detectable_stations": 0,
+    "scope": "Counterexample to proposed finite scan-set coverage; not an execution of unavailable peer policy."
+  }
+}

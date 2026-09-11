@@ -1,0 +1,95 @@
+{
+  "scenario": {
+    "seed": 1861,
+    "sources": [
+      {
+        "channel": 3,
+        "x": -736.0700303131837,
+        "y": -1631.6558799192383,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 16,
+        "x": -572.4987373042073,
+        "y": -1269.0657634001939,
+        "radius": 1000.0,
+        "direction_deg": 245.7189950714083
+      },
+      {
+        "channel": 12,
+        "x": -408.9276745053113,
+        "y": -906.4755430292222,
+        "radius": 1000.0,
+        "direction_deg": 245.71899475522656
+      },
+      {
+        "channel": 19,
+        "x": -245.35613653662259,
+        "y": -543.8855370159313,
+        "radius": 1000.0,
+        "direction_deg": 245.71904407438453
+      },
+      {
+        "channel": 5,
+        "x": -81.78475690344412,
+        "y": -181.29545957463017,
+        "radius": 1000.0,
+        "direction_deg": 245.71924063045788
+      },
+      {
+        "channel": 2,
+        "x": 81.78544284327722,
+        "y": 181.29515013477499,
+        "radius": 1000.0,
+        "direction_deg": 65.7190238487979
+      },
+      {
+        "channel": 4,
+        "x": 245.35678632600417,
+        "y": 543.885243884198,
+        "radius": 1000.0,
+        "direction_deg": 65.7189756221122
+      },
+      {
+        "channel": 1,
+        "x": 408.92680367582625,
+        "y": 906.4759358761406,
+        "radius": 1000.0,
+        "direction_deg": 65.71904979791465
+      },
+      {
+        "channel": 13,
+        "x": 572.4987530092725,
+        "y": 1269.0657563153552,
+        "radius": 1000.0,
+        "direction_deg": 65.71899436235609
+      },
+      {
+        "channel": 20,
+        "x": 736.069627679666,
+        "y": 1631.6560615544945,
+        "radius": 1000.0,
+        "direction_deg": 65.71900130173239
+      }
+    ],
+    "config": {
+      "stress_layout": "near_collinear",
+      "source_rng": [
+        42,
+        114,
+        4,
+        2,
+        10
+      ]
+    }
+  },
+  "error": {
+    "model": "adversarial",
+    "length_scale_m": 200.0,
+    "cross_channel": "independent",
+    "adversarial_sign": "negative",
+    "empirical_samples_deg": [],
+    "empirical_base": "iid"
+  }
+}

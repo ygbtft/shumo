@@ -1,0 +1,355 @@
+                                     Sensor Placement and Selection
+                     for Bearing Sensors with Bounded Uncertainty
+
+                                                 Pratap Tokekar and Volkan Isler
+
+
+
+   Abstract—We  study  the  problem  of  placing  bearing                 sensors measuring bearing corrupted by unknown but
+sensors  so  as  to  estimate  the  location  of  a  target  in  a        bounded noise. Bounded noise models provide a useful
+square environment. We consider sensors with unknown                      alternative  to  probabilistic  models  especially  when  a
+but  bounded  noise:  the  true  location  of  the  target  is            precise device model is not available (perhaps due to the
+guaranteed to be in a 2α-wedge around the measurement,                    difﬁculty of calibration or changing device parameters).
+where α is the maximum noise. The quality of the place-
+ment is given by the area or diameter of the intersection                 Suchmodelshavelongbeenusedforstateestimation[2]
+of measurements from all sensors in the worst-case (i.e.                  and for sensor fusion in robotics applications [7].
+regardless of the target’s location). We study the bi-criteria               As an example, consider an application where sensors
+optimization problem of placing a small number of sensors                 are  deployed  to  be  used  as  beacons  for  localizing  a
+while guaranteeing a worst-case bound on the uncertainty.                 navigating robot (Figure 1). At each time instant, the
+   Our  main  result  is  a  constant-factor  approximation:
+We  show  that  in  general  when  α  ≤    π4,  at  most  9n∗             robot can query the sensor network for their bearing
+sensors placed on a triangular grid has diameter and area                 measurements towards the robot. In the bounded uncer-
+uncertainty of at most 5.88U∗D  and 7.76U∗A  respectively,                tainty model, the true bearing to the robot is guaranteed
+where n∗,U∗D and U∗A are the number of sensors, diameter                  to lie in a 2D wedge which is centered at the measured
+and area uncertainty of an optimal algorithm. In obtaining                bearing and has an apex angle equal to the maximum
+these results, we present some structural properties which
+may  be  of  independent  interest.  We  also  show  that  in             sensing noise. Measurements from multiple sensors are
+the  triangular  grid  placement,  only  a  constant  number              combinedbyintersectingthecorrespondingwedges.The
+of  sensors  need  to  be  activated  to  achieve  the  desired           uncertainty in the robot’s estimate is usually taken to be
+uncertainty,  a  property  that  can  be  used  for  designing            the diameter or area of the intersection. We seek worst-
+energy/bandwidth efﬁcient sensor selection schemes.                       case quality guarantees for our estimate: Given the true
+
+                      I.  INTRODUCTION                                    location of the robot, imagine an adversary choosing
+   Sensor placement for target localization is a funda-                   the noise values for sensors. The true location can be
+mental problem in robotics and sensor networks. A good                    anywhere in the intersection and we would like this set
+placement scheme can improve the performance of sen-                      to be “small” no matter where the robot is.
+
+sornetworks inapplications such as intruder detection in
+surveillance, robot navigation using exteroceptive mea-
+surements, and providing location information to mobile
+devices  for  location-aware  computing  –  a  technology
+identiﬁed as key for the advancement of robotics [3].
+   Most sensors employed for localization have a strong
+structureassociatedwiththeirsensingmodel.Thisstruc-                       Fig. 1: Here, the area of intersection for a square grid1(middle)
+ture plays a critical role in how information from multi-                 and  random  placement  (right),  for  the  true  robot  location
+ple sensors can be combined. In this paper, we study the                  (marked  by  triangle),  is  1.32  and  3.27  times  that  of  the
+sensor placement problem for bearing sensors which are                    triangular placement (left). In this paper, we derive the rela-
+commonly used in robotic and networked sensor sys-                        tionship between the triangular grid parameters and worst-case
+                                                                          uncertainty, and show that the number of sensors required are
+tems: monocular cameras, microphone/acoustic arrays,                      near optimal.
+directional  radio  antennas,  passive  infrared  receivers,
+etc., all measure bearing towards a target. We consider                      We  consider  a  simple  workspace  for  the  problem:
+
+  The  authors  are  with  the  Department  of  Computer  Science  and    The  target  can  lie  anywhere  within  a  square  without
+Engineering,  University  of  Minnesota,  Minneapolis,  MN,  USA.         any obstacles or visibility constraints. Even in this basic
+{tokekar,isler}@cs.umn.edu                                                setting, devising a sensor placement scheme is tricky. It
+
+is intuitively clear that the optimal placement should be                is visible from at least two sensors and their relative
+some kind of a uniform grid. However it is not clear                     angle lies within a desired interval. They presented a
+if the grid should be square, triangular or some other                   log factor approximation, up to a ﬁne discretization.
+shape. Further, optimizing parameters of the grid (e.g.                     In addition to the relative angles, the uncertainty is
+resolution) is not straightforward because as illustrated                also affected by the distance between the sensors and
+in  Figure 1,  the  estimate  is  obtained  by  combining                the  target.  Geometric  Dilution  of  Precision  (GDOP)
+measurements from all sensors. This makes it difﬁcult                    is one  measure relating the uncertainty  with distance
+to express its area or diameter in closed-form in order                  and relative angles. Tekdas and Isler [12] presented a
+to  optimize  grid  parameters.  While  there  have  been                placement scheme which guarantees that for any target
+attempts to ﬁnd the optimal solution [14], the problem                   location there are always two sensors whose GDOP is
+of optimal placement for bearing sensors remains open.                   a constant factor of the GDOP achieved by any two
+   In  this  paper,  we  make  progress  towards  solving                sensors from an optimal placement. We do not restrict
+this fundamental problem. We focus on placement on                       the estimator to use only two sensors, instead, allow
+a  triangular  grid  and  derive  the  relationship  between             combining all measurements. Ercan et al. [6] studied the
+uncertainty and grid resolution. We prove that the num-                  problem of placing horizontal scan-line cameras along
+ber of sensors required to achieve a desired uncertainty                 the  boundary  of  a  circular  room  to  minimize  least-
+is only a constant times that of an optimal algorithm.                   squares localization error for a target with a given prior.
+Furthermore for a triangular grid, only a constant num-                  Their placement result shows that a uniform placement
+ber  of  sensors  can  be  queried  to  obtain  performance              along the boundary is optimal. We allow sensors to be
+comparable  to  querying  all  sensors.  This  implies  for              placed  anywhere  within  a  square  workspace,  without
+our motivating example, the robot may query only a                       assuming any prior for the target’s location.
+ﬁxed number of nearby sensors to localize itself without                    Isler and Magdon-Ismail [9] considered the problem
+losing much estimation quality.                                          of  selecting  a  small  subset  of  sensors  from  a  given
+   The  rest  of  the  paper  is  organized  as  follows:  We            placement; each sensor’s output is a convex subset of the
+begin by presenting the related work in Section              II. We      plane. They proved that irrespective of the total number
+describe the sensing model and formalize the problem                     ofsensors,thereisalwaysasubsetoffourmeasurements
+in  Section   III.  The  analysis  for  lower  bounds  for  an           that can be selected, which when combined yield an
+optimal placement, and upper bounds for a triangular                     intersection  area  at  most  twice  of  that  obtained  by
+grid  placement  is  presented  in  Sections          IV   and    V.     intersecting  all  measurements.  In  their  problem,  the
+Complete proofs for the analysis are presented in the                    placement  of  the  sensors  and  the  actual  sensor  mea-
+accompanying technical report [13]. We conclude with                     surements are already given. For the same placement of
+a discussion of our results in Section         VI.                       sensors, this subset would change if the measurement
+                     II.  RELATED WORK                                   changes.  This  poses  an  interesting  question  whether
+   The  problem  of  optimizing  the  placement  of  sen-                there is some placement of sensors for which the same
+sor  nodes  has  received  signiﬁcant  attention  from  the              subset can be used to approximate the uncertainty region
+sensor  networks  community  [15].  A  large  amount  of                 for different (but perhaps “nearby”) measurements. In
+research has focused on self-localization of networks,                   this  paper,  we  present  a  result  in  this  direction  for
+for example in the case of mobile, reconﬁgurable sensor                  bearing measurements with bounded noise.
+networks [8] and for stationary sensor networks with                        Bounded  uncertainty  models  have  previously  been
+reference  anchor  nodes  [1].  In  our  present  work,  we              used  in  robotics  problems.  Detweiler  et  al.  [4]  and
+assume  that  the  locations  of  the  sensors  themselves               Spletzer and Taylor [11] studied the problem of self-
+are accurately known and focus on the complementary                      localization in passive beacon ﬁelds and robot networks
+problem of placing sensors so as to localize targets.                    respectively, using sensors yielding bounded uncertainty
+   For  bearing  sensors,  the  uncertainty  in  target’s  es-           measurements. Song and O’Kane [10] studied the prob-
+timate depends on the relative position of the sensors                   lem of maintaining approximation for robot’s possible
+and the target. Motivated by this, Efrat et al. [5] studied              locations obtained by intersecting pre-images from sen-
+the problem of minimizing the number of sensors to be                    sors  yielding  measurements  with  bounded  noise.  Set
+placed in a polygon, such that each point in the polygon                 membership estimation [2] is an estimator designed for
+                                                                         sensors yielding unknown but bounded noise, which has
+
+  1We randomly place additional sensors to the square grid, so that      been applied for robot localization using bearing mea-
+it has the same number of sensors as the triangular grid.                surements [7]. We describe our bounded noise sensing
+
+                                                                      2
+
+and uncertainty model in the next section.                                                    s /three.taboldstyles /four.taboldstyle
+
+               III.  PROBLEM FORMULATION
+   In this section, we ﬁrst describe the notation, deﬁne                       s /two.taboldstyle
+                                                                               s /one.taboldstyle
+the  sensing  and  estimation  models,  and  use  them  to
+formulate the problem studied in this paper.
+A.  Notation and Sensing Model
+
+                                                                          Fig. 3: Two estimates for the same sensors and target location,
+                                                                          but different measurements resulting in different uncertainty.
+                                                                          We use worst-case intersection as the uncertainty measure.
+
+
+
+                 s i  /two.taboldstyle x                                  set  of  measurements  to  maximize  the  uncertainty  in
+                                                                          the  target  estimate.  We  use  two  measures  (area  and
+                                                                          diameter2    of  ˆP) to deﬁne the uncertainty. The diameter
+Fig.2:Theactualmeasurementθmi  liesanywherebetweenθti±                    uncertainty of a placement S is deﬁned as:
+α. θti is the true bearing. The wedge for a given measurement                     UD(S) ≜ max
+is guaranteed to contain the true target location x.                                           x∈A   maxθm∈θ(x)diameter(ˆP(S,θ m)),      (1)
+
+   The workspace A is a d× d square. The target’s true                    where θ(x) is the set of valid measurements that can
+location x can be anywhere within A. Consider a sensor                    be obtained from S  for a target location x. The area
+placement S = {s1,...,s       n} where each si ∈ A denotes                uncertainty can be similarly deﬁned.
+the sensor location. Each sensor measures the bearing                     C.  Objective
+towards the target as θmi   = θti +ni, where θti ∈ [0, 2π)
+is the  true  bearing  (Figure 2). ni  ∈  [− α,  +α]  is the                 Broadly, there are two factors that affect the worst-
+bounded sensor noise. α  is the bound on the absolute                     case uncertainty: (i) the number of sensors, and (ii) the
+noise in the sensor. The pre-image of a measurement                       location of placed sensors. In this work, we take the
+θmi   is a 2D wedge (denoted by W(si,θ mi  )) as shown in                 approach thattheuserspeciﬁes adesireduncertainty and
+Figure 2. This wedge is not the same as a ﬁxed ﬁeld-                      the objective is to minimize the number of sensors and
+of-view sensor; for the same target location, the sensor                  ﬁnd the corresponding placement to guarantee that the
+can receive any sensing wedge of angular width 2α  so                     worst-case uncertainty is below the user-speciﬁed value.
+long as it contains the true target location.                             In particular, we address the following problem:
+   The target estimate obtained by combining a set of                          Find the minimum number of sensors required and
+measurements  θm  =  [θm1 ,...,θ       mn ]T  from  n  sensors,           the corresponding placement to achieve a desired diam-
+is deﬁned as the intersection of the n sensing wedges                     eter uncertainty U∗D (or area uncertainty U∗A).
+W(si,θ mi  ). That is,  ˆP(S,θ m) ≜ ⋂ni=1W(si,θ mi  ). Here                  Our main result shows that by placing sensors on a
+ˆP  is a convex polygonal region which can possibly be                    triangular grid-like placement, 9 times as many sensors
+unbounded.                                                                as an optimal algorithm are sufﬁcient to guarantee 5.88
+B.  Adversarial Formulation of Uncertainty                                timesthedesireddiameteruncertainty(respectively,7.76
+                                                                          times the area uncertainty) when the maximum sensing
+   The size of  ˆP  depends on the actual measurements.                   noise is less than  π4.
+Figure 3   shows two instances where the sizeof ˆP differs                   Theorem 1: Let  the  maximum  absolute  noise  for
+signiﬁcantly for different measurements obtained from                     bearing  sensors  be  0   <   α   ≤      π4.  Let  the  desired
+thesameplacementofsensors.Theactualmeasurements                           diameter  uncertainty  for  a  d ×  d  square  environment
+obtained by the sensors cannot be controlled by the user.                 be  U∗D   <          d7sinα   (respectively,  area  uncertainty  be
+However, we will show that by carefully placing the                       U∗A  <   πsin2 α
+sensors one can guarantee there always exists a good                      achieves U∗D (respectively, U∗A) with n∗ sensors, then a196   d2). If an optimal placement algorithm
+set of valid measurements.                                                triangular grid-like placement achieves at most 5. 88U∗D
+   We model the objective using an adversarial process:
+Given a placement of sensors, an adversary selects a                         2The diameter of a polygon is the length of the largest segment
+target location within the square and a corresponding                     contained completely within the polygon.
+
+                                                                       3
+
+(respectively, at most 7. 76U∗A) with at most 9n∗ sensors.              S  of  n  bearing  sensors,  then  the  diameter  uncer-
+                                                                        tainty  is  bounded  as  UD(S) ≥  2rsinα  (respectively,
+The  analysis  for    Theorem 1      is  based  on  covering  a         UA(S) ≥  πr2sin2α).
+d× d square with equilateral triangles of sensors. When                    To prove     Lemma 2, we show that when the target
+the desired uncertainty is higher than the restriction in               lies  at  the  center  of  C  and  each  sensor  receives  a
+Theorem 1     and comparable to the size of A, an optimal               measurement equal to the true bearing, a circle of radius
+placement may use very few sensors. Nevertheless, even                  rsinα  centered at the target lies completely within the
+for that case the total number of sensors for the grid-like             intersection of all sensing wedges. This instance gives a
+placement is bounded (given by          Lemma 6).                       lower bound for the worst-case uncertainty.
+   In the following sections, we analyze the number of                     When a desired uncertainty is given, we can apply
+sensors  required  for  an  optimal  algorithm  and  for  a             Lemma 2      to ﬁnd the radius of the largest such circle
+triangular grid-like placement. In this paper, we state                 lying in the workspace A and not containing any sensor.
+the key lemmas and sketch their proofs. The full proofs                    Corollary 1:  Let S∗ be an optimal placement achiev-
+are included in the accompanying technical report [13].                 ing a desired diameter uncertainty U∗D (respectively, area
+                                                                        uncertainty U∗A) in a square workspace of side d. If r∗ is
+   IV.  LOWER BOUNDS FOR OPTIMAL PLACEMENT                              the radius of the largest circle lying completely within
+   In this section, we ﬁrst present lower bounds on the                 A and not containing any sensor in its interior, then√
+
+                                                                                   D                              U∗A   1
+uncertainty achieved by any placement of sensors in the                 r∗ ≤      U∗2sinα (respectively, r∗ ≤      π   sinα).
+plane. We apply this to bound the number of sensors                        Corollary 1    implies an upper bound on how far each
+placed within A by an optimal algorithm.                                point  in  A  can  be  from  any  sensor  or  the  boundary
+   First consider the case when the maximum sensing                     of A. This allows us to bound the number of sensors
+noise α ≥    π2, i.e., the sensing wedges are at least half-            required for an optimal algorithm as a function of r∗.
+planes. We show that the adversary can always choose a                  Corollary 2     states  that  Ω(d2r2)  sensors  are  needed  to
+valid measurement set for any placement, such that the                  guarantee coverage of a d×  d area.
+sensing wedges have an unbounded intersection.                             Corollary 2:  Let r∗ be the radius of the largest circle
+   Lemma 1:  For any placement S of n bearing sensors                   within a square of side d, not containing any sensor
+with maximum absolute noise α  ≥     π2, there exists a                 from an optimal placement in its interior. If the desired
+measurement set θm  such that the intersection of the                   diameter  uncertainty  is  U∗D   <  dsinα  (respectively,
+wedges (⋂ni=1W (si,θ mi  )) is unbounded.                               U∗A  <  d2πsin2 α4     ) then the number of sensors for an
+   Lemma 1     implies that when α  ≥    π2  the uncertainty            optimal algorithm n∗ ≥   (d−2r∗)2πr∗2   .
+can  be  as  large  as  A,  i.e.,  UA(S)   =   Θ(d2)  and                  When d ≤  2r∗, the desired uncertainty is comparable
+UD(S) = Θ(d) for any placement of sensors, including                    to A, and the optimal algorithm would place very few
+the optimal. The proof is based on constructing a simple                sensors, yielding a trivial lower bound. The bound on
+instance when α =  π2, i.e., the sensing wedges are half-               the uncertainty implies that d > 2r∗ is an interesting
+planes. We create a measurement set where the lines                     case: If d > 2r∗, then there is a smaller square within
+corresponding to all half-planes pass through the target                A where all points are more than r∗  away from the
+location.Weassigndirectionstoallhalf-planestoensure                     boundary and hence require at least one sensor within
+that their intersection is unbounded.                                   r∗. We can show that the set of circles of radii r∗ drawn
+   Lemma 1     is not surprising, since α ≥   π2  corresponds           about each sensor in the optimal placement, should form
+to very high noise. In practice, bearing sensors are much               a cover of this smaller square, yielding the bound.
+more accurate. For the rest of the paper, we only focus                     V.  PERFORMANCE OF THE TRIANGULAR GRID
+on the case when the maximum sensing noise α <   π2.
+   In the following, we will lower bound the uncertainty                   Next,  we  analyze  the  number  of  sensors  required
+for any placement parametrized by the distance of the                   and the uncertainty for a triangular grid-like placement.
+target  to  the  closest  sensor.  Recall  from       Equation 1,       While for lower bounds it sufﬁced to consider speciﬁc
+the uncertainty is deﬁned as the max over all possible                  instances, upper bounds require considering all possible
+target locations, and all valid measurements. Hence, for                target locations and sets of measurements.
+a lower bound, it is sufﬁcient to consider a particular                 A.  Uncertainty with Triangular Grid
+target location and valid measurement set, as given next.
+   Lemma 2:  If  there  exists  a  circle  C  with  radius  r              Before the main analysis, ﬁrst consider two special
+which  doesn’t  contain  any  sensor  from  a  placement                conﬁgurations  of sensors: (i) three sensors placed  on
+
+                                                                     4
+
+the vertices of an equilateral triangle △ s1s2s3 with side                                              s /one.taboldstyle
+                                                                                                                  s /two.taboldstyler
+r, when 0  <  α  <    π6, and (ii) six sensors placed on                                                        e
+                                                                                       s /one.taboldstyler
+the  vertices  of  a  regular  hexagon  when   π6   ≤   α   ≤
+π                                                                                                      a
+4.  For  case  (i),  the  target  may  lie  anywhere  within                                       s /six.taboldstyle  s /three.taboldstyle
+△ s1s2s3 (Figure 4(a)). We further divide the analysis                          s /three.taboldstyler                    s /two.taboldstyle
+into intervals based on α, given next.                                                                  s /five.taboldstyle               s /four.taboldstyle
+   Lemma 3:  Let △ s1s2s3 be an equilateral triangle of                                            (a)                               (b)
+side r with a bearing sensor placed at each vertex. If the
+target lies within △ s1s2s3 and S = {s1,s 2,s 3} then                    Fig.  4:  (a)  Based  on  α,  we  upper  bound  the  uncertainty
+                         11. 35rsinα      0 < α <   π                        when the target lies within an equilateral triangle or a circle
+                                                           18,               contained within a regular hexagon of sensors. (b) We pad the
+         UD(S) ≤         2. 04r                      π18 ≤  α <   π12,       three regions with additional sensors to ensure any point in A
+                       (          )                                       is enclosed by an equilateral triangle of sensors.
+                           1+   1√3    r        π12 ≤  α <   π6
+
+and,                                                                      2ǫ then O(k2) sensors placed on a triangular grid are
+                   23. 46r2sin2α                   0 < α <   π√  18,         sufﬁcient for bounded intersection of sensing wedges
+   UA(S) ≤           3r2                                                     when the target lies within a circle of radius    r√
+                   4    +10. 1(rsinα)2       π18 ≤  α <   π12,                                                                            3.
+                   3√3r2                            π
+                      4                            12 ≤  α <   π6.           B.  Number of Sensors with Triangular Grid
+The proof partitions the triangle into three regions, and                        Lemma 3       gives an upper bound on the uncertainty
+assigns  sensors  for  each  region  such  that  any  valid                  for  a  placement  of  sensors  in  A,  if  there  exists  an
+set  of  measurements  results  in  bounded  intersection.                   equilateral triangle of sensors enclosing any point in A.
+The sensing wedges corresponding to each partition are                       Since the sensors cannot be placed outside of A, regions
+approximated to bound their intersection.                                    near  the  boundary  of  A  may  not  have  an  enclosing
+   When α ≥    π6, the sensing wedges become too large                       equilateral  triangle  if  sensors  are  placed  only  on  a
+to result in bounded intersection with just three sensors.                   triangular grid. The three regions where this occurs are
+Instead we use six sensors, placed on a regular hexagon                      marked A1, A2, A3 in           Figure 4(b). We place additional
+with center o and side r, to bound their intersection.                       sensors within these regions to ensure that any point
+The target can lie anywhere within a circle of radius                        in A is enclosed by an equilateral triangle of sensors.
+√r                                                                           Lemma 6        states  that  O(d2r2)  sensors  are  sufﬁcient  to
+  3  centered  at  o.  We  ﬁnd  an  upper  bound  to  the                    cover a square of area d×  d.
+uncertainty, by ﬁnding the intersection of the union of
+all sensing wedges for each sensor, corresponding to all                         Lemma 6 (Upper Bound on Number of Sensors):  If
+target locations within the circle.                                          wr = ⌊d/r  ⌋+1, , wc = ⌊d/ √⌊⌋        3r⌋+1, br = ⌊(d−   r2)/r  ⌋,
+                                                                                           √3r
+   Lemma 4:  Lets1...s    6 bearegularhexagonofsider                         bc =      d−√   2     + 1 are the number of sensors in odd
+and center o with a bearing sensor placed at each vertex,                                  3r
+and maximum absolute noise  π6 ≤  α ≤    π4. If the target                   and   even   rows   and   columns,   respectively   of   a
+lies inside a circle of radius    r√                                         triangular grid with side r in a square of side d, then
+                                        3 centered at o then,                wrwc + brbc + 3(2wr + br) + 8 sensors are sufﬁcient
+  UD({s1,...,s       6}) ≤  r( sin2α +3. 76sinα +1. 232)                     to cover the square with equilateral triangles of side r.
+and, UA({s1,...,s       6}) ≤  1. 5rUD({s1,...,s       6}.                       The  lower  and  upper  bounds  obtained  can  be  ap-
+   Lemma 4       bounds the intersection when the sensing                    plied to get the main result of this paper: Recall from
+wedges are at most a quadrant (α ≤    π                                      Corollary 1,  that  an  optimal  algorithm  has  to  place
+                                                  4), and the target         a  sensor  within  distance  r∗   ≤         U∗D
+lies within a circle of radius    r√3.       Lemma 1       shows that                √                                      2sinα  (equivalently,
+when sensing wedges are at least a half-plane (α ≥   π                       r∗ ≤       U∗A    1
+                                                                     2),                 π   sinα) of every point A to ensure the desired
+the resulting intersection can be unbounded in the worst-                    uncertainty. For the triangular grid placement, set the√
+case.Wecanextendtheresultin               Lemma 4      forα =  π2− ǫ         grid length as r =     U∗D                                    U∗A   1
+with  0  <  ǫ,  to  bound  the  number  of  sensors placed                   Hence, r∗  ≤   r.       Corollary 22sinα (respectively, r =gives a lower bound onπsinα).
+on  a  triangular  grid,  sufﬁcient  to  guarantee  that  the                the number of sensors required for an optimal algorithm
+intersection of all wedges is bounded.                                       in  terms  of  r∗,  and      Lemma 6        gives  an  upper  bound
+   Lemma 5:  Let the maximum absolute sensing noise)                         for  the  grid-like  placement  in  terms  of  r.            Lemma 3
+be α =  π                                        √1      +       π           and    Lemma 4       bound  the  uncertainty  of  the  grid-like
+           2 −  ǫ with 0 < ǫ. If sin−1(            3k        6(k−1) <
+
+                                                                          5
+
+placement in terms of r. Using r∗ ≤  r and substituting                         question we pursue in our future work. Future work also
+the value of r, the result in        Theorem 1       can be obtained.           includes addressing sensing limitations such as visibility
+   The  upper  bounds  from             Lemma 3        and    Lemma 4           constraints and placement in complex environments.
+reveal  that  only  a  small  number  of  sensors  in  our                                            ACKNOWLEDGEMENT
+placement sufﬁce to achieve an uncertainty comparable
+to that obtained by combining all measurements. This is                            This material is based upon work supported by the
+useful when there is prior knowledge about the target                           National Science Foundation under Grant Nos. 1111638,
+location  (e.g.  a  subset  of  A)  and  only  those  sensors                   0916209, 0917676, 0936710.
+corresponding to the enclosing triangle or hexagon need                                                     REFERENCES
+be queried for their measurements.
+   Corollary 3:  Givenatargetlocationxwithinasquare                              [1]  F. Benbadis, K. Obraczka, J. Cort´es, and A. Brandwajn. Explor-
+and desired diameter uncertainty U∗D (respectively, area                              ing landmark placement strategies for topology-based localiza-
+                                                                                      tion in wireless sensor networks. EURASIP Journal on Advances
+uncertainty U∗A), if sensors are placed on a triangular√                              in Signal Processing, 2008:138, 2008.
+                                                               U∗A   1           [2]  D. Bertsekas and I. Rhodes.   Recursive state estimation for a
+grid with side r =     U∗D                                                            set-membership description of uncertainty.  IEEE Transactions
+                          2sinα (respectively, r =              π  sinα),             on Automatic Control, 16(2):117–128, 1971.
+three sensors are sufﬁcient when 0 < α <   π6  and six                           [3]  R. D’Andrea. Guest editorial: A revolution in the warehouse: a
+sensors are sufﬁcient when  π6 ≤  α ≤   π4 to ensure diam-                            retrospective on Kiva systems and the grand challenges ahead.
+eter uncertainty at most 5. 88U∗D (respectively, 7. 76U∗A).                           IEEE  Transactions  on  Automation  Science  and  Engineering,
+                                                                                      9(4):638–639, 2012.
+   Corollary 3     provides a sensor selection method which                      [4]  C. Detweiler, J. Leonard, D. Rus, and S. Teller. Passive mobile
+                                                                                      robot  localization  within  a  ﬁxed  beacon  ﬁeld.    Algorithmic
+may  be  useful  in  sensor  network  applications  with                              Foundation of Robotics VII, pages 425–440, 2008.
+energy or bandwidth constraints that require activating                          [5]  A. Efrat, S. Har-Peled, and J. Mitchell.   Approximation algo-
+only a small number of sensors.                                                       rithms for two optimal location problems in sensor networks.
+                                                                                      In 2nd International Conference on Broadband Networks, pages
+                 VI.  CONCLUDING REMARKS                                              714–723. IEEE, 2005.
+                                                                                 [6]  A.  Ercan,  D.  Yang,  A.  El  Gamal,  and  L.  Guibas.    Optimal
+   In this paper, we studied a placement problem for                                  placement  and  selection  of  camera  network  nodes  for  target
+bearing sensors. We used a bounded uncertainty formu-                                 localization.  In International Conference on Distributed Com-
+lation which allowed us to represent each measurement                                 puting in Sensor Systems, pages 389–404. Springer, 2006.
+                                                                                 [7]  A. Garulli and A. Vicino. Set membership localization of mobile
+as a wedge containing the target’s location. The quality                              robots via angle measurements. IEEE Transactions on Robotics
+of the estimated target location was quantiﬁed by the                                 and Automation, 17(4):450–463, 2001.
+diameter or the area of the intersection of wedges. In                           [8]  L. Hu and D. Evans.  Localization for mobile sensor networks.
+                                                                                      In Proceedings of the 10th annual international conference on
+this setting, a fundamental question that arises is: What                             Mobile computing and networking, pages 45–57. ACM, 2004.
+is the minimum number and placement of sensors that                              [9]  V. Isler and M. Magdon-Ismail.   Sensor selection in arbitrary
+guarantees that no matter where the target is, or what the                            dimensions.    IEEE  Transactions  on  Automation  Science  and
+                                                                                      Engineering, 5(4):651–660, 2008.
+actual measurements are, the uncertainty in the estimate                        [10]  Y. Song and J. M. O’Kane.   Comparison of constrained geo-
+is below a desired level?                                                             metric approximation strategies for planar information states. In
+   This  basic  question  turned  out  to  be  surprisingly                           Proceedings of the IEEE International Conference on Robotics
+                                                                                      and Automation, 2012.
+hard due to the fact that the quality of the estimation                         [11]  J.  Spletzer  and  C.  Taylor.    A  bounded  uncertainty  approach
+depends on the locations of all sensors as well as the ac-                            to  multi-robot  localization.    In  Proceedings  of  the  IEEE/RSJ
+tual measurements. Our results provided insights about                                International  Conference  on  Intelligent  Robots  and  Systems,
+                                                                                      volume 2, pages 1258–1265, 2003.
+the structure of this problem and yielded a placement                           [12]  O.  Tekdas  and  V.  Isler.    Sensor  placement  for  triangulation-
+scheme with constant-factor approximation guarantees.                                 based localization.   IEEE Transactions on Automation Science
+In particular, we showed that unless the sensor noise is                              and Engineering, 7(3):681–685, 2010.
+                                                                                [13]  P.  Tokekar  and  V.  Isler.   Sensor  placement  and  selection  for
+too large, a placement of sensors on a triangular grid                                bearing  sensors  with  bounded  uncertainty.    Technical  Report
+yields  a  good  performance.  Further,  (excluding  some                             12-006,  Department   of  Computer  Science   &   Engineering,
+extreme cases) we showed that for the triangular grid                                 University  of  Minnesota,  February  2012.         http://www.
+                                                                                      cs.umn.edu/research/technical_reports.php?
+placement, if a rough estimate of the target location is                              page=report&report_id=12-006.
+available, one can obtain a good estimate by querying                           [14]  E. Yfantis, G. Flatman, and J. Behar. Efﬁciency of kriging esti-
+only  a  ﬁxed  number  of  sensors.  This  latter  sensor                             mation for square, triangular, and hexagonal grids. Mathematical
+                                                                                      Geology, 19(3):183–205, 1987.
+selection scheme is particularly appealing for resource                         [15]  M. Younis and K. Akkaya.  Strategies and techniques for node
+constrained sensor-network applications.                                              placement  in  wireless  sensor  networks:  A  survey.    Ad  Hoc
+   Can  this  result  be  improved,  perhaps  by  showing                             Networks, 6(4):621–655, 2008.
+that  the  triangular  placement  is  optimal?  This  is  a
+
+                                                                             6

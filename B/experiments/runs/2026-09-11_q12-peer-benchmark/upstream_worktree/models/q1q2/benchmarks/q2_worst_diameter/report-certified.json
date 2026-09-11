@@ -1,0 +1,2630 @@
+{
+  "area": "q2_worst_diameter",
+  "generated_utc": "2026-09-10T19:28:23.819832+00:00",
+  "n_cases": 7,
+  "n_pass": 7,
+  "n_fail": 0,
+  "categories": {
+    "closed_form": {
+      "n_cases": 4,
+      "n_pass": 4,
+      "n_fail": 0
+    },
+    "degenerate": {
+      "n_cases": 3,
+      "n_pass": 3,
+      "n_fail": 0
+    },
+    "adversarial": {
+      "n_cases": 3,
+      "n_pass": 3,
+      "n_fail": 0
+    },
+    "narrow_angle": {
+      "n_cases": 2,
+      "n_pass": 2,
+      "n_fail": 0
+    },
+    "tangent_optimum": {
+      "n_cases": 1,
+      "n_pass": 1,
+      "n_fail": 0
+    },
+    "supremum": {
+      "n_cases": 1,
+      "n_pass": 1,
+      "n_fail": 0
+    }
+  },
+  "tolerances": {
+    "reachable_pair_m": 1e-06,
+    "closed_form_absolute_m": 0.1,
+    "closed_form_relative": 0.01,
+    "invariant_m": 1e-07,
+    "radius_m": 1e-06,
+    "note": "Pair dominance is strict up to floating tolerance. Closed forms separately use max(0.1 m,1% J); this is an approximation acceptance threshold, never a certified error bound."
+  },
+  "failures": [],
+  "results": [
+    {
+      "case_id": "segment_10_100_20_1",
+      "grade": "C",
+      "grade_label": "通过",
+      "J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "primary",
+          "J_hat": 15.459510178551454,
+          "independent_reachable_lower_bound_m": 15.459510178551454,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": 15.459510178683203,
+          "closed_form_signed_gap_m": -1.3174883406463778e-10,
+          "approximation_threshold_m": 0.15459510178683203,
+          "regression_target": null
+        }
+      ],
+      "refined_J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "refined",
+          "J_hat": 15.459510178551454,
+          "independent_reachable_lower_bound_m": 15.459510178551454,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": 15.459510178683203,
+          "closed_form_signed_gap_m": -1.3174883406463778e-10,
+          "approximation_threshold_m": 0.15459510178683203,
+          "regression_target": null
+        }
+      ],
+      "regression_targets": [],
+      "passed": true,
+      "input": {
+        "S": [
+          0.0,
+          0.0
+        ],
+        "theta": 0.0,
+        "eps1": 0.0,
+        "center": [
+          55.0,
+          0.0
+        ],
+        "radius": 45.0,
+        "q": [
+          0.0,
+          20
+        ],
+        "eps2": 1,
+        "a": 10,
+        "b": 100
+      },
+      "expected": {
+        "J_exact_m": 15.459510178683203,
+        "lower_bound_m": 15.267857142517855,
+        "pair": [
+          [
+            84.73214285648214,
+            0.0
+          ],
+          [
+            99.999999999,
+            0.0
+          ]
+        ],
+        "branch": "direction",
+        "bearing_deg": 347.7045862064789,
+        "sample_count": 113
+      },
+      "actual": {
+        "J_hat": 15.459510178551454,
+        "sample_count": 241,
+        "status": "NUMERICAL_CANDIDATE",
+        "witness": {
+          "x": [
+            84.54048982144855,
+            0.0
+          ],
+          "y": [
+            100.0,
+            0.0
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 347.6900675259898,
+          "distance_m": 15.459510178551454,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              81.87401463757989,
+              96.9803902718557
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -1.000444171950221e-11,
+              -1.000444171950221e-11
+            ]
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                84.54048982144855,
+                0.0
+              ],
+              "rho": 1000.0,
+              "first_distance_m": 84.54048982144855,
+              "second_distance_m": 86.87401463757989,
+              "first_error_deg": 0.0,
+              "second_error_deg": 0.9999999999899956
+            },
+            {
+              "p": [
+                100.0,
+                0.0
+              ],
+              "rho": 1000.0,
+              "first_distance_m": 100.0,
+              "second_distance_m": 101.9803902718557,
+              "first_error_deg": 0.0,
+              "second_error_deg": -0.9999999999899956
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        "certification": {
+          "lower_m": 15.446777343749998,
+          "upper_m": 15.527343750000002,
+          "gap_m": 0.08056640625000357,
+          "converged": true,
+          "status": "CERTIFIED_FIXED_Q_TOL",
+          "stop_reason": "gap",
+          "nodes": 368,
+          "active_boxes": 79,
+          "elapsed_seconds": 0.1250812499965832,
+          "witness": {
+            "parameters": [
+              0.0,
+              0.827880859375,
+              0.0,
+              0.99951171875
+            ],
+            "branch": "direction",
+            "coordinate_enclosures": [
+              [
+                [
+                  84.50927734374999,
+                  84.50927734375001
+                ],
+                [
+                  -5e-324,
+                  5e-324
+                ]
+              ],
+              [
+                [
+                  99.95605468749999,
+                  99.95605468750001
+                ],
+                [
+                  -5e-324,
+                  5e-324
+                ]
+              ]
+            ],
+            "distance_interval_m": [
+              15.446777343749998,
+              15.446777343750002
+            ]
+          },
+          "dps": 30,
+          "backend": "mpmath.iv 1.3.0",
+          "verdict": "PASS",
+          "J_hat": 15.459510178551454,
+          "comparison_tol_m": 0.1,
+          "acceptance_band_m": [
+            15.346777343749995,
+            15.627343750000003
+          ]
+        },
+        "underestimate_m": 0.0,
+        "production_cloud_independent_oracle": {
+          "lower_bound_m": 15.459510178551454,
+          "pair": [
+            [
+              84.54048982144855,
+              0.0
+            ],
+            [
+              100.0,
+              0.0
+            ]
+          ],
+          "branch": "direction",
+          "bearing_deg": 347.6900675259898,
+          "sample_count": 241
+        },
+        "closed_form_signed_gap_m": -1.3174883406463778e-10,
+        "refined_J_hat": 15.459510178551454,
+        "refined_closed_form_signed_gap_m": -1.3174883406463778e-10,
+        "missing_nested_samples": [
+          {
+            "from_level": 0,
+            "to_level": 1,
+            "count": 0,
+            "examples": []
+          },
+          {
+            "from_level": 1,
+            "to_level": 2,
+            "count": 0,
+            "examples": []
+          }
+        ],
+        "nested_score_values_m": [
+          15.459510178551454,
+          15.459510178551454,
+          15.459510178551454
+        ]
+      },
+      "checks": [
+        {
+          "name": "certified_J_band",
+          "passed": true,
+          "expected": [
+            15.346777343749995,
+            15.627343750000003
+          ],
+          "actual": 15.459510178551454,
+          "semantics": "independent interval lower/upper bounds; inspect convergence and gap"
+        },
+        {
+          "name": "certified_gap",
+          "passed": true,
+          "expected": 0.1,
+          "actual": 0.08056640625000357,
+          "semantics": "certification completeness; budget exhaustion is not a production bug"
+        },
+        {
+          "name": "certified_closed_form_enclosure",
+          "passed": true,
+          "expected": 15.459510178683203,
+          "actual": [
+            15.446777343749998,
+            15.527343750000002
+          ],
+          "semantics": "stored float closed form; optional tests additionally use 80-digit formulas"
+        },
+        {
+          "name": "independent_reachable_pair_dominance",
+          "passed": true,
+          "expected": 15.267857142517855,
+          "actual": 15.459510178551454,
+          "semantics": "independent lower-bound approximation; not exact J"
+        },
+        {
+          "name": "production_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 15.459510178551454,
+          "actual": 15.459510178551454,
+          "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
+        },
+        {
+          "name": "same_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 15.267857142517855,
+          "actual": 15.267857142517855,
+          "semantics": "independent strict finite-cloud lower-bound dominance"
+        },
+        {
+          "name": "refined_closed_form_approximation",
+          "passed": true,
+          "expected": 15.459510178683203,
+          "actual": 15.459510178551454,
+          "semantics": "continuous J approximation after default pair refinement"
+        },
+        {
+          "name": "refined_reachable_pair_dominance",
+          "passed": true,
+          "expected": 15.267857142517855,
+          "actual": 15.459510178551454,
+          "semantics": "independent lower bound after default pair refinement"
+        },
+        {
+          "name": "closed_form_approximation",
+          "passed": true,
+          "expected": 15.459510178683203,
+          "actual": 15.459510178551454,
+          "semantics": "continuous J approximation, not exact equality"
+        },
+        {
+          "name": "sample_sources_nested",
+          "passed": true,
+          "expected": true,
+          "actual": [
+            76,
+            139,
+            241
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "q_augmented_score_monotonicity",
+          "passed": true,
+          "expected": "nondecreasing",
+          "actual": [
+            15.459510178551454,
+            15.459510178551454,
+            15.459510178551454
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "reported_witness_reachable",
+          "passed": true,
+          "expected": 15.459510178551454,
+          "actual": 15.459510178551454,
+          "semantics": "correctness"
+        }
+      ],
+      "truth_method": "segment_tangent_closed_form + independent_all_pairs",
+      "tags": [
+        "closed_form",
+        "degenerate"
+      ],
+      "elapsed_seconds": 1.0357997079991037
+    },
+    {
+      "case_id": "segment_20_80_40_1",
+      "grade": "C",
+      "grade_label": "通过",
+      "J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "primary",
+          "J_hat": 6.528213425812737,
+          "independent_reachable_lower_bound_m": 6.528213425812737,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": 6.528213425873787,
+          "closed_form_signed_gap_m": -6.104983185650781e-11,
+          "approximation_threshold_m": 0.1,
+          "regression_target": null
+        }
+      ],
+      "refined_J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "refined",
+          "J_hat": 6.528213425812737,
+          "independent_reachable_lower_bound_m": 6.528213425812737,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": 6.528213425873787,
+          "closed_form_signed_gap_m": -6.104983185650781e-11,
+          "approximation_threshold_m": 0.1,
+          "regression_target": null
+        }
+      ],
+      "regression_targets": [],
+      "passed": true,
+      "input": {
+        "S": [
+          0.0,
+          0.0
+        ],
+        "theta": 0.0,
+        "eps1": 0.0,
+        "center": [
+          50.0,
+          0.0
+        ],
+        "radius": 30.0,
+        "q": [
+          0.0,
+          40
+        ],
+        "eps2": 1,
+        "a": 20,
+        "b": 80
+      },
+      "expected": {
+        "J_exact_m": 6.528213425873787,
+        "lower_bound_m": 6.428571428357145,
+        "pair": [
+          [
+            73.03571428494642,
+            0.0
+          ],
+          [
+            79.46428571330357,
+            0.0
+          ]
+        ],
+        "branch": "direction",
+        "bearing_deg": 332.28606667749494,
+        "sample_count": 113
+      },
+      "actual": {
+        "J_hat": 6.528213425812737,
+        "sample_count": 215,
+        "status": "NUMERICAL_CANDIDATE",
+        "witness": {
+          "x": [
+            73.47178657418726,
+            0.0
+          ],
+          "y": [
+            80.0,
+            0.0
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 332.43494882293203,
+          "distance_m": 6.528213425812737,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              78.65466766656193,
+              84.44271909999159
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -1.000444171950221e-11,
+              -1.000444171950221e-11
+            ]
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                73.47178657418726,
+                0.0
+              ],
+              "rho": 1000.0,
+              "first_distance_m": 73.47178657418726,
+              "second_distance_m": 83.65466766656193,
+              "first_error_deg": 0.0,
+              "second_error_deg": 0.9999999999899956
+            },
+            {
+              "p": [
+                80.0,
+                0.0
+              ],
+              "rho": 1000.0,
+              "first_distance_m": 80.0,
+              "second_distance_m": 89.44271909999159,
+              "first_error_deg": 0.0,
+              "second_error_deg": -0.9999999999899956
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        "certification": {
+          "lower_m": 6.503906249999999,
+          "upper_m": 6.601562500000001,
+          "gap_m": 0.09765625000000179,
+          "converged": true,
+          "status": "CERTIFIED_FIXED_Q_TOL",
+          "stop_reason": "gap",
+          "nodes": 1171,
+          "active_boxes": 373,
+          "elapsed_seconds": 0.4925281249998079,
+          "witness": {
+            "parameters": [
+              0.0,
+              0.9970703125,
+              0.0,
+              0.888671875
+            ],
+            "branch": "direction",
+            "coordinate_enclosures": [
+              [
+                [
+                  79.82421874999999,
+                  79.82421875000001
+                ],
+                [
+                  -5e-324,
+                  5e-324
+                ]
+              ],
+              [
+                [
+                  73.32031249999999,
+                  73.32031250000001
+                ],
+                [
+                  -5e-324,
+                  5e-324
+                ]
+              ]
+            ],
+            "distance_interval_m": [
+              6.503906249999999,
+              6.503906250000001
+            ]
+          },
+          "dps": 30,
+          "backend": "mpmath.iv 1.3.0",
+          "verdict": "PASS",
+          "J_hat": 6.528213425812737,
+          "comparison_tol_m": 0.1,
+          "acceptance_band_m": [
+            6.403906249999998,
+            6.701562500000001
+          ]
+        },
+        "underestimate_m": 0.0,
+        "production_cloud_independent_oracle": {
+          "lower_bound_m": 6.528213425812737,
+          "pair": [
+            [
+              73.47178657418726,
+              0.0
+            ],
+            [
+              80.0,
+              0.0
+            ]
+          ],
+          "branch": "direction",
+          "bearing_deg": 332.43494882293203,
+          "sample_count": 215
+        },
+        "closed_form_signed_gap_m": -6.104983185650781e-11,
+        "refined_J_hat": 6.528213425812737,
+        "refined_closed_form_signed_gap_m": -6.104983185650781e-11,
+        "missing_nested_samples": [
+          {
+            "from_level": 0,
+            "to_level": 1,
+            "count": 0,
+            "examples": []
+          },
+          {
+            "from_level": 1,
+            "to_level": 2,
+            "count": 0,
+            "examples": []
+          }
+        ],
+        "nested_score_values_m": [
+          6.528213425812737,
+          6.528213425812737,
+          6.528213425812737
+        ]
+      },
+      "checks": [
+        {
+          "name": "certified_J_band",
+          "passed": true,
+          "expected": [
+            6.403906249999998,
+            6.701562500000001
+          ],
+          "actual": 6.528213425812737,
+          "semantics": "independent interval lower/upper bounds; inspect convergence and gap"
+        },
+        {
+          "name": "certified_gap",
+          "passed": true,
+          "expected": 0.1,
+          "actual": 0.09765625000000179,
+          "semantics": "certification completeness; budget exhaustion is not a production bug"
+        },
+        {
+          "name": "certified_closed_form_enclosure",
+          "passed": true,
+          "expected": 6.528213425873787,
+          "actual": [
+            6.503906249999999,
+            6.601562500000001
+          ],
+          "semantics": "stored float closed form; optional tests additionally use 80-digit formulas"
+        },
+        {
+          "name": "independent_reachable_pair_dominance",
+          "passed": true,
+          "expected": 6.428571428357145,
+          "actual": 6.528213425812737,
+          "semantics": "independent lower-bound approximation; not exact J"
+        },
+        {
+          "name": "production_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 6.528213425812737,
+          "actual": 6.528213425812737,
+          "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
+        },
+        {
+          "name": "same_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 6.428571428357145,
+          "actual": 6.428571428357145,
+          "semantics": "independent strict finite-cloud lower-bound dominance"
+        },
+        {
+          "name": "refined_closed_form_approximation",
+          "passed": true,
+          "expected": 6.528213425873787,
+          "actual": 6.528213425812737,
+          "semantics": "continuous J approximation after default pair refinement"
+        },
+        {
+          "name": "refined_reachable_pair_dominance",
+          "passed": true,
+          "expected": 6.428571428357145,
+          "actual": 6.528213425812737,
+          "semantics": "independent lower bound after default pair refinement"
+        },
+        {
+          "name": "closed_form_approximation",
+          "passed": true,
+          "expected": 6.528213425873787,
+          "actual": 6.528213425812737,
+          "semantics": "continuous J approximation, not exact equality"
+        },
+        {
+          "name": "sample_sources_nested",
+          "passed": true,
+          "expected": true,
+          "actual": [
+            35,
+            107,
+            215
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "q_augmented_score_monotonicity",
+          "passed": true,
+          "expected": "nondecreasing",
+          "actual": [
+            6.528213425812737,
+            6.528213425812737,
+            6.528213425812737
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "reported_witness_reachable",
+          "passed": true,
+          "expected": 6.528213425812737,
+          "actual": 6.528213425812737,
+          "semantics": "correctness"
+        }
+      ],
+      "truth_method": "segment_tangent_closed_form + independent_all_pairs",
+      "tags": [
+        "closed_form",
+        "degenerate"
+      ],
+      "elapsed_seconds": 1.2457567500023288
+    },
+    {
+      "case_id": "tangent_polar_0",
+      "grade": "C",
+      "grade_label": "通过",
+      "J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "primary",
+          "J_hat": 8.917424315025677,
+          "independent_reachable_lower_bound_m": 8.911519712119391,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": null,
+          "closed_form_signed_gap_m": null,
+          "approximation_threshold_m": null,
+          "regression_target": null
+        }
+      ],
+      "refined_J_assessments": [],
+      "regression_targets": [],
+      "passed": true,
+      "input": {
+        "S": [
+          0.0,
+          0.0
+        ],
+        "eps1": 0.001,
+        "eps2": 0.03,
+        "q": [
+          400.0,
+          150.0
+        ],
+        "oracle_extra_points": [
+          [
+            1491.4607573377552,
+            0.026030900856444262
+          ],
+          [
+            1499.999999671537,
+            0.02617993875066053
+          ]
+        ]
+      },
+      "expected": {
+        "lower_bound_m": 8.539402045668561,
+        "pair": [
+          [
+            1491.4607573377552,
+            0.026030900856444262
+          ],
+          [
+            1499.999999770537,
+            -0.026179938516768964
+          ]
+        ],
+        "branch": "direction",
+        "bearing_deg": 352.20483398420095,
+        "sample_count": 3957
+      },
+      "actual": {
+        "J_hat": 8.917424315025677,
+        "sample_count": 3667,
+        "status": "NUMERICAL_CANDIDATE",
+        "witness": {
+          "x": [
+            1491.0827282644348,
+            0.02602430302898571
+          ],
+          "y": [
+            1499.9999997715354,
+            -0.026179938777085774
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 352.20349524185394,
+          "distance_m": 8.917424315025677,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              1096.3417786061318,
+              1105.1837028908324
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -2.546574062733953e-13,
+              -3.115008251342033e-13
+            ]
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1491.0827282644348,
+                0.02602430302898571
+              ],
+              "rho": 1491.0827284915397,
+              "first_distance_m": 1491.0827284915397,
+              "second_distance_m": 1101.3417786061318,
+              "first_error_deg": -0.0009999999999479314,
+              "second_error_deg": 0.02999999999974534
+            },
+            {
+              "p": [
+                1499.9999997715354,
+                -0.026179938777085774
+              ],
+              "rho": 1499.9999999999984,
+              "first_distance_m": 1499.9999999999984,
+              "second_distance_m": 1110.1837028908324,
+              "first_error_deg": 0.0009999999999195097,
+              "second_error_deg": -0.029999999999688498
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        "certification": {
+          "lower_m": 8.89679005123512,
+          "upper_m": 8.988494109453882,
+          "gap_m": 0.09170405821876139,
+          "converged": true,
+          "status": "CERTIFIED_FIXED_Q_TOL",
+          "stop_reason": "gap",
+          "nodes": 4687,
+          "active_boxes": 1666,
+          "elapsed_seconds": 3.1131915419973666,
+          "witness": {
+            "parameters": [
+              0.001,
+              0.993804931640625,
+              -0.001,
+              0.999755859375
+            ],
+            "branch": "direction",
+            "coordinate_enclosures": [
+              [
+                [
+                  1490.7383725756815,
+                  1490.738372575682
+                ],
+                [
+                  0.02601829288990946,
+                  0.026018292889909467
+                ]
+              ],
+              [
+                [
+                  1499.6350095372172,
+                  1499.6350095372177
+                ],
+                [
+                  -0.026173568497258656,
+                  -0.02617356849725865
+                ]
+              ]
+            ],
+            "distance_interval_m": [
+              8.89679005123512,
+              8.896790051235124
+            ]
+          },
+          "dps": 30,
+          "backend": "mpmath.iv 1.3.0",
+          "verdict": "PASS",
+          "J_hat": 8.917424315025677,
+          "comparison_tol_m": 0.1,
+          "acceptance_band_m": [
+            8.796790051235117,
+            9.088494109453883
+          ]
+        },
+        "underestimate_m": 0.0,
+        "production_cloud_independent_oracle": {
+          "lower_bound_m": 8.911519712119391,
+          "pair": [
+            [
+              1491.0886329691941,
+              0.02602440608552512
+            ],
+            [
+              1499.9999997715354,
+              -0.026179938777085774
+            ]
+          ],
+          "branch": "direction",
+          "bearing_deg": 352.2035161596216,
+          "sample_count": 3667
+        },
+        "missing_nested_samples": [
+          {
+            "from_level": 0,
+            "to_level": 1,
+            "count": 0,
+            "examples": []
+          },
+          {
+            "from_level": 1,
+            "to_level": 2,
+            "count": 0,
+            "examples": []
+          }
+        ],
+        "nested_score_values_m": [
+          8.917424315025677,
+          8.917424315025677,
+          8.917424315025677
+        ]
+      },
+      "checks": [
+        {
+          "name": "certified_J_band",
+          "passed": true,
+          "expected": [
+            8.796790051235117,
+            9.088494109453883
+          ],
+          "actual": 8.917424315025677,
+          "semantics": "independent interval lower/upper bounds; inspect convergence and gap"
+        },
+        {
+          "name": "certified_gap",
+          "passed": true,
+          "expected": 0.1,
+          "actual": 0.09170405821876139,
+          "semantics": "certification completeness; budget exhaustion is not a production bug"
+        },
+        {
+          "name": "independent_reachable_pair_dominance",
+          "passed": true,
+          "expected": 8.539402045668561,
+          "actual": 8.917424315025677,
+          "semantics": "independent lower-bound approximation; not exact J"
+        },
+        {
+          "name": "production_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 8.911519712119391,
+          "actual": 8.917424315025677,
+          "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
+        },
+        {
+          "name": "same_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 8.539402045668561,
+          "actual": 8.539402045668561,
+          "semantics": "independent strict finite-cloud lower-bound dominance"
+        },
+        {
+          "name": "sample_sources_nested",
+          "passed": true,
+          "expected": true,
+          "actual": [
+            314,
+            1086,
+            3667
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "q_augmented_score_monotonicity",
+          "passed": true,
+          "expected": "nondecreasing",
+          "actual": [
+            8.917424315025677,
+            8.917424315025677,
+            8.917424315025677
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "reported_witness_reachable",
+          "passed": true,
+          "expected": 8.917424315025677,
+          "actual": 8.917424315025677,
+          "semantics": "correctness"
+        }
+      ],
+      "truth_method": "independent_near_angular_boundary_tangent_pair + dense_polar_atan2_all_pairs",
+      "tags": [
+        "adversarial",
+        "narrow_angle",
+        "tangent_optimum"
+      ],
+      "elapsed_seconds": 5.809500957999262
+    },
+    {
+      "case_id": "polar_same_station_closed_2",
+      "grade": "C",
+      "grade_label": "通过",
+      "J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "primary",
+          "J_hat": 1495.0001221539821,
+          "independent_reachable_lower_bound_m": 1495.0001221539821,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": 1495.0001222539813,
+          "closed_form_signed_gap_m": -9.99991698336089e-08,
+          "approximation_threshold_m": 14.950001222539813,
+          "regression_target": null
+        }
+      ],
+      "refined_J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "refined",
+          "J_hat": 1495.0001221539821,
+          "independent_reachable_lower_bound_m": 1495.0001221539821,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": 1495.0001222539813,
+          "closed_form_signed_gap_m": -9.99991698336089e-08,
+          "approximation_threshold_m": 14.950001222539813,
+          "regression_target": null
+        }
+      ],
+      "regression_targets": [],
+      "passed": true,
+      "input": {
+        "S": [
+          0.0,
+          0.0
+        ],
+        "q": [
+          0.0,
+          0.0
+        ],
+        "eps1": 0.2
+      },
+      "expected": {
+        "J_exact_m": 1495.0001222539813,
+        "lower_bound_m": 1495.0001221519838,
+        "pair": [
+          [
+            4.999969639288337,
+            -0.017453257428657002
+          ],
+          [
+            1499.9908614856856,
+            5.235977122826871
+          ]
+        ],
+        "branch": "same_station",
+        "bearing_deg": null,
+        "sample_count": 3955
+      },
+      "actual": {
+        "J_hat": 1495.0001221539821,
+        "sample_count": 3321,
+        "status": "NUMERICAL_CANDIDATE",
+        "witness": {
+          "x": [
+            1499.990861486684,
+            -5.235977122834092
+          ],
+          "y": [
+            4.999969638288343,
+            0.017453257425183805
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 0.0,
+          "distance_m": 1495.0001221539821,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              1494.9999999999984,
+              1.0000000028043132e-07
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -6.822320486321587e-14,
+              -1.1379786002407855e-14
+            ]
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1499.990861486684,
+                -5.235977122834092
+              ],
+              "rho": 1499.9999999999984,
+              "first_distance_m": 1499.9999999999984,
+              "second_distance_m": 1499.9999999999984,
+              "first_error_deg": 0.1999999999999318,
+              "second_error_deg": 0.1999999999999318
+            },
+            {
+              "p": [
+                4.999969638288343,
+                0.017453257425183805
+              ],
+              "rho": 1000.0,
+              "first_distance_m": 5.0000001,
+              "second_distance_m": 5.0000001,
+              "first_error_deg": -0.19999999999998863,
+              "second_error_deg": -0.19999999999998863
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        "certification": {
+          "lower_m": 1495.0001221044847,
+          "upper_m": 1495.0875297685648,
+          "gap_m": 0.08740766408004676,
+          "converged": true,
+          "status": "CERTIFIED_FIXED_Q_TOL",
+          "stop_reason": "gap",
+          "nodes": 27,
+          "active_boxes": 2,
+          "elapsed_seconds": 0.013709666000067955,
+          "witness": {
+            "parameters": [
+              -0.2,
+              1e-10,
+              0.2,
+              1.0
+            ],
+            "branch": "same_station",
+            "coordinate_enclosures": [
+              [
+                [
+                  4.99996968778804,
+                  4.999969687788042
+                ],
+                [
+                  -0.01745325759797105,
+                  -0.017453257597971044
+                ]
+              ],
+              [
+                [
+                  1499.9908614866852,
+                  1499.9908614866856
+                ],
+                [
+                  5.235977122835598,
+                  5.2359771228356
+                ]
+              ]
+            ],
+            "distance_interval_m": [
+              1495.0001221044847,
+              1495.0001221044852
+            ]
+          },
+          "dps": 30,
+          "backend": "mpmath.iv 1.3.0",
+          "verdict": "PASS",
+          "J_hat": 1495.0001221539821,
+          "comparison_tol_m": 0.1,
+          "acceptance_band_m": [
+            1494.9001221044844,
+            1495.187529768565
+          ]
+        },
+        "underestimate_m": 0.0,
+        "production_cloud_independent_oracle": {
+          "lower_bound_m": 1495.0001221539821,
+          "pair": [
+            [
+              4.999969638288343,
+              -0.017453257425183805
+            ],
+            [
+              1499.990861486684,
+              5.235977122834092
+            ]
+          ],
+          "branch": "same_station",
+          "bearing_deg": null,
+          "sample_count": 3321
+        },
+        "closed_form_signed_gap_m": -9.99991698336089e-08,
+        "refined_J_hat": 1495.0001221539821,
+        "refined_closed_form_signed_gap_m": -9.99991698336089e-08,
+        "missing_nested_samples": [
+          {
+            "from_level": 0,
+            "to_level": 1,
+            "count": 0,
+            "examples": []
+          },
+          {
+            "from_level": 1,
+            "to_level": 2,
+            "count": 0,
+            "examples": []
+          }
+        ],
+        "nested_score_values_m": [
+          1495.0001221539821,
+          1495.0001221539821,
+          1495.0001221539821
+        ]
+      },
+      "checks": [
+        {
+          "name": "certified_J_band",
+          "passed": true,
+          "expected": [
+            1494.9001221044844,
+            1495.187529768565
+          ],
+          "actual": 1495.0001221539821,
+          "semantics": "independent interval lower/upper bounds; inspect convergence and gap"
+        },
+        {
+          "name": "certified_gap",
+          "passed": true,
+          "expected": 0.1,
+          "actual": 0.08740766408004676,
+          "semantics": "certification completeness; budget exhaustion is not a production bug"
+        },
+        {
+          "name": "certified_closed_form_enclosure",
+          "passed": true,
+          "expected": 1495.0001222539813,
+          "actual": [
+            1495.0001221044847,
+            1495.0875297685648
+          ],
+          "semantics": "stored float closed form; optional tests additionally use 80-digit formulas"
+        },
+        {
+          "name": "independent_reachable_pair_dominance",
+          "passed": true,
+          "expected": 1495.0001221519838,
+          "actual": 1495.0001221539821,
+          "semantics": "independent lower-bound approximation; not exact J"
+        },
+        {
+          "name": "production_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 1495.0001221539821,
+          "actual": 1495.0001221539821,
+          "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
+        },
+        {
+          "name": "same_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 1495.0001221519838,
+          "actual": 1495.0001221519838,
+          "semantics": "independent strict finite-cloud lower-bound dominance"
+        },
+        {
+          "name": "refined_closed_form_approximation",
+          "passed": true,
+          "expected": 1495.0001222539813,
+          "actual": 1495.0001221539821,
+          "semantics": "continuous J approximation after default pair refinement"
+        },
+        {
+          "name": "refined_reachable_pair_dominance",
+          "passed": true,
+          "expected": 1495.0001221519838,
+          "actual": 1495.0001221539821,
+          "semantics": "independent lower bound after default pair refinement"
+        },
+        {
+          "name": "closed_form_approximation",
+          "passed": true,
+          "expected": 1495.0001222539813,
+          "actual": 1495.0001221539821,
+          "semantics": "continuous J approximation, not exact equality"
+        },
+        {
+          "name": "sample_sources_nested",
+          "passed": true,
+          "expected": true,
+          "actual": [
+            254,
+            891,
+            3321
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "q_augmented_score_monotonicity",
+          "passed": true,
+          "expected": "nondecreasing",
+          "actual": [
+            1495.0001221539821,
+            1495.0001221539821,
+            1495.0001221539821
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "reported_witness_reachable",
+          "passed": true,
+          "expected": 1495.0001221539821,
+          "actual": 1495.0001221539821,
+          "semantics": "correctness"
+        }
+      ],
+      "truth_method": "annular_sector_diameter_closed_form + independent_actual_inward_pairs",
+      "tags": [
+        "closed_form",
+        "narrow_angle",
+        "supremum"
+      ],
+      "elapsed_seconds": 0.8628391250022105
+    },
+    {
+      "case_id": "segment_special_18",
+      "grade": "C",
+      "grade_label": "通过",
+      "J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "primary",
+          "J_hat": 8.0,
+          "independent_reachable_lower_bound_m": 8.0,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": 8,
+          "closed_form_signed_gap_m": 0.0,
+          "approximation_threshold_m": 0.1,
+          "regression_target": null
+        }
+      ],
+      "refined_J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "refined",
+          "J_hat": 8.0,
+          "independent_reachable_lower_bound_m": 8.0,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": 8,
+          "closed_form_signed_gap_m": 0.0,
+          "approximation_threshold_m": 0.1,
+          "regression_target": null
+        }
+      ],
+      "regression_targets": [],
+      "passed": true,
+      "input": {
+        "S": [
+          0.0,
+          0.0
+        ],
+        "theta": 0.0,
+        "eps1": 0.0,
+        "center": [
+          14.0,
+          0.0
+        ],
+        "radius": 4.0,
+        "q": [
+          14.0,
+          0.0
+        ],
+        "eps2": 1.0,
+        "a": 10,
+        "b": 18
+      },
+      "expected": {
+        "J_exact_m": 8,
+        "lower_bound_m": 7.999999998,
+        "pair": [
+          [
+            10.000000001,
+            0.0
+          ],
+          [
+            17.999999999,
+            0.0
+          ]
+        ],
+        "branch": "near",
+        "bearing_deg": null,
+        "sample_count": 113
+      },
+      "actual": {
+        "J_hat": 8.0,
+        "sample_count": 99,
+        "status": "NUMERICAL_CANDIDATE",
+        "witness": {
+          "x": [
+            10.0,
+            0.0
+          ],
+          "y": [
+            18.0,
+            0.0
+          ],
+          "branch": "near",
+          "common_bearing_deg": null,
+          "distance_m": 8.0,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              -1.0,
+              -1.0
+            ]
+          },
+          "near_boundary": false,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                10.0,
+                0.0
+              ],
+              "rho": 1000.0,
+              "first_distance_m": 10.0,
+              "second_distance_m": 4.0,
+              "first_error_deg": 0.0,
+              "second_error_deg": null
+            },
+            {
+              "p": [
+                18.0,
+                0.0
+              ],
+              "rho": 1000.0,
+              "first_distance_m": 18.0,
+              "second_distance_m": 4.0,
+              "first_error_deg": 0.0,
+              "second_error_deg": null
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        "certification": {
+          "lower_m": 7.999999999999999,
+          "upper_m": 8.093750000000002,
+          "gap_m": 0.09375000000000268,
+          "converged": true,
+          "status": "CERTIFIED_FIXED_Q_TOL",
+          "stop_reason": "gap",
+          "nodes": 140,
+          "active_boxes": 30,
+          "elapsed_seconds": 0.04414475000157836,
+          "witness": {
+            "parameters": [
+              -0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "branch": "near",
+            "coordinate_enclosures": [
+              [
+                [
+                  9.999999999999998,
+                  10.000000000000002
+                ],
+                [
+                  -5e-324,
+                  5e-324
+                ]
+              ],
+              [
+                [
+                  17.999999999999996,
+                  18.000000000000004
+                ],
+                [
+                  -5e-324,
+                  5e-324
+                ]
+              ]
+            ],
+            "distance_interval_m": [
+              7.999999999999999,
+              8.000000000000002
+            ]
+          },
+          "dps": 30,
+          "backend": "mpmath.iv 1.3.0",
+          "verdict": "PASS",
+          "J_hat": 8.0,
+          "comparison_tol_m": 0.1,
+          "acceptance_band_m": [
+            7.899999999999998,
+            8.193750000000003
+          ]
+        },
+        "underestimate_m": 0.0,
+        "production_cloud_independent_oracle": {
+          "lower_bound_m": 8.0,
+          "pair": [
+            [
+              10.0,
+              0.0
+            ],
+            [
+              18.0,
+              0.0
+            ]
+          ],
+          "branch": "near",
+          "bearing_deg": null,
+          "sample_count": 99
+        },
+        "closed_form_signed_gap_m": 0.0,
+        "refined_J_hat": 8.0,
+        "refined_closed_form_signed_gap_m": 0.0,
+        "missing_nested_samples": [
+          {
+            "from_level": 0,
+            "to_level": 1,
+            "count": 0,
+            "examples": []
+          },
+          {
+            "from_level": 1,
+            "to_level": 2,
+            "count": 0,
+            "examples": []
+          }
+        ],
+        "nested_score_values_m": [
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "checks": [
+        {
+          "name": "certified_J_band",
+          "passed": true,
+          "expected": [
+            7.899999999999998,
+            8.193750000000003
+          ],
+          "actual": 8.0,
+          "semantics": "independent interval lower/upper bounds; inspect convergence and gap"
+        },
+        {
+          "name": "certified_gap",
+          "passed": true,
+          "expected": 0.1,
+          "actual": 0.09375000000000268,
+          "semantics": "certification completeness; budget exhaustion is not a production bug"
+        },
+        {
+          "name": "certified_closed_form_enclosure",
+          "passed": true,
+          "expected": 8,
+          "actual": [
+            7.999999999999999,
+            8.093750000000002
+          ],
+          "semantics": "stored float closed form; optional tests additionally use 80-digit formulas"
+        },
+        {
+          "name": "independent_reachable_pair_dominance",
+          "passed": true,
+          "expected": 7.999999998,
+          "actual": 8.0,
+          "semantics": "independent lower-bound approximation; not exact J"
+        },
+        {
+          "name": "production_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 8.0,
+          "actual": 8.0,
+          "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
+        },
+        {
+          "name": "same_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 7.999999998,
+          "actual": 7.999999998,
+          "semantics": "independent strict finite-cloud lower-bound dominance"
+        },
+        {
+          "name": "refined_closed_form_approximation",
+          "passed": true,
+          "expected": 8,
+          "actual": 8.0,
+          "semantics": "continuous J approximation after default pair refinement"
+        },
+        {
+          "name": "refined_reachable_pair_dominance",
+          "passed": true,
+          "expected": 7.999999998,
+          "actual": 8.0,
+          "semantics": "independent lower bound after default pair refinement"
+        },
+        {
+          "name": "closed_form_approximation",
+          "passed": true,
+          "expected": 8,
+          "actual": 8.0,
+          "semantics": "continuous J approximation, not exact equality"
+        },
+        {
+          "name": "sample_sources_nested",
+          "passed": true,
+          "expected": true,
+          "actual": [
+            28,
+            51,
+            99
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "q_augmented_score_monotonicity",
+          "passed": true,
+          "expected": "nondecreasing",
+          "actual": [
+            8.0,
+            8.0,
+            8.0
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "reported_witness_reachable",
+          "passed": true,
+          "expected": 8.0,
+          "actual": 8.0,
+          "semantics": "correctness"
+        }
+      ],
+      "truth_method": "near_disk_or_same_station_diameter",
+      "tags": [
+        "closed_form",
+        "degenerate"
+      ],
+      "elapsed_seconds": 0.3070767089993751
+    },
+    {
+      "case_id": "polar_0",
+      "grade": "C",
+      "grade_label": "通过",
+      "J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "primary",
+          "J_hat": 147.27202039123046,
+          "independent_reachable_lower_bound_m": 147.27202039123046,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": null,
+          "closed_form_signed_gap_m": null,
+          "approximation_threshold_m": null,
+          "regression_target": null
+        }
+      ],
+      "refined_J_assessments": [],
+      "regression_targets": [],
+      "passed": true,
+      "input": {
+        "S": [
+          0.0,
+          0.0
+        ],
+        "q": [
+          750.0,
+          400.0
+        ]
+      },
+      "expected": {
+        "lower_bound_m": 142.53006605202796,
+        "pair": [
+          [
+            1366.3097298624427,
+            23.84902504678052
+          ],
+          [
+            1499.7715427335875,
+            -26.178609655881644
+          ]
+        ],
+        "branch": "direction",
+        "bearing_deg": 329.49436648661924,
+        "sample_count": 3955
+      },
+      "actual": {
+        "J_hat": 147.27202039123046,
+        "sample_count": 3710,
+        "status": "NUMERICAL_CANDIDATE",
+        "witness": {
+          "x": [
+            1361.2249574740094,
+            23.760270014619053
+          ],
+          "y": [
+            1499.7715427345854,
+            -26.17860965592374
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 329.38561112649506,
+          "distance_m": 147.27202039123046,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              712.7410975125898,
+              857.4300398425697
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -1.000444171950221e-11,
+              -1.000444171950221e-11
+            ]
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1361.2249574740094,
+                23.760270014619053
+              ],
+              "rho": 1361.4323102090998,
+              "first_distance_m": 1361.4323102090998,
+              "second_distance_m": 717.7410975125898,
+              "first_error_deg": -1.0,
+              "second_error_deg": 0.9999999999899956
+            },
+            {
+              "p": [
+                1499.7715427345854,
+                -26.17860965592374
+              ],
+              "rho": 1499.9999999999986,
+              "first_distance_m": 1499.9999999999986,
+              "second_distance_m": 862.4300398425697,
+              "first_error_deg": 0.9999999999999432,
+              "second_error_deg": -0.9999999999899956
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        "certification": {
+          "lower_m": 147.2216456399385,
+          "upper_m": 147.3199110818772,
+          "gap_m": 0.09826544193870747,
+          "converged": true,
+          "status": "CERTIFIED_FIXED_Q_TOL",
+          "stop_reason": "gap",
+          "nodes": 950,
+          "active_boxes": 134,
+          "elapsed_seconds": 0.679314290999173,
+          "witness": {
+            "parameters": [
+              1.0,
+              0.9073486328125,
+              -1.0,
+              1.0
+            ],
+            "branch": "direction",
+            "coordinate_enclosures": [
+              [
+                [
+                  1361.2788451109984,
+                  1361.2788451109989
+                ],
+                [
+                  23.76121062682153,
+                  23.761210626821537
+                ]
+              ],
+              [
+                [
+                  1499.7715427345865,
+                  1499.771542734587
+                ],
+                [
+                  -26.17860965592527,
+                  -26.178609655925264
+                ]
+              ]
+            ],
+            "distance_interval_m": [
+              147.2216456399385,
+              147.22164563993854
+            ]
+          },
+          "dps": 30,
+          "backend": "mpmath.iv 1.3.0",
+          "verdict": "PASS",
+          "J_hat": 147.27202039123046,
+          "comparison_tol_m": 0.1,
+          "acceptance_band_m": [
+            147.12164563993844,
+            147.41991108187722
+          ]
+        },
+        "underestimate_m": 0.0,
+        "production_cloud_independent_oracle": {
+          "lower_bound_m": 147.27202039123046,
+          "pair": [
+            [
+              1361.2249574740094,
+              23.760270014619053
+            ],
+            [
+              1499.7715427345854,
+              -26.17860965592374
+            ]
+          ],
+          "branch": "direction",
+          "bearing_deg": 329.38561112649506,
+          "sample_count": 3710
+        },
+        "missing_nested_samples": [
+          {
+            "from_level": 0,
+            "to_level": 1,
+            "count": 0,
+            "examples": []
+          },
+          {
+            "from_level": 1,
+            "to_level": 2,
+            "count": 0,
+            "examples": []
+          }
+        ],
+        "nested_score_values_m": [
+          147.27202039123046,
+          147.27202039123046,
+          147.27202039123046
+        ]
+      },
+      "checks": [
+        {
+          "name": "certified_J_band",
+          "passed": true,
+          "expected": [
+            147.12164563993844,
+            147.41991108187722
+          ],
+          "actual": 147.27202039123046,
+          "semantics": "independent interval lower/upper bounds; inspect convergence and gap"
+        },
+        {
+          "name": "certified_gap",
+          "passed": true,
+          "expected": 0.1,
+          "actual": 0.09826544193870747,
+          "semantics": "certification completeness; budget exhaustion is not a production bug"
+        },
+        {
+          "name": "independent_reachable_pair_dominance",
+          "passed": true,
+          "expected": 142.53006605202796,
+          "actual": 147.27202039123046,
+          "semantics": "independent lower-bound approximation; not exact J"
+        },
+        {
+          "name": "production_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 147.27202039123046,
+          "actual": 147.27202039123046,
+          "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
+        },
+        {
+          "name": "same_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 142.53006605202796,
+          "actual": 142.530066052028,
+          "semantics": "independent strict finite-cloud lower-bound dominance"
+        },
+        {
+          "name": "sample_sources_nested",
+          "passed": true,
+          "expected": true,
+          "actual": [
+            350,
+            1087,
+            3710
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "q_augmented_score_monotonicity",
+          "passed": true,
+          "expected": "nondecreasing",
+          "actual": [
+            147.27202039123046,
+            147.27202039123046,
+            147.27202039123046
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "reported_witness_reachable",
+          "passed": true,
+          "expected": 147.27202039123046,
+          "actual": 147.27202039123046,
+          "semantics": "correctness"
+        }
+      ],
+      "truth_method": "independent_polar_sampling + atan2_all_pairs_lower_bound",
+      "tags": [
+        "adversarial"
+      ],
+      "elapsed_seconds": 3.136635875001957
+    },
+    {
+      "case_id": "polar_5",
+      "grade": "C",
+      "grade_label": "通过",
+      "J_assessments": [
+        {
+          "grade": "C",
+          "label": "通过",
+          "profile": "primary",
+          "J_hat": 193.53728119216692,
+          "independent_reachable_lower_bound_m": 193.53728119216692,
+          "underestimate_m": 0.0,
+          "closed_form_J_m": null,
+          "closed_form_signed_gap_m": null,
+          "approximation_threshold_m": null,
+          "regression_target": null
+        }
+      ],
+      "refined_J_assessments": [],
+      "regression_targets": [],
+      "passed": true,
+      "input": {
+        "S": [
+          0.0,
+          0.0
+        ],
+        "q": [
+          700.0,
+          -300.0
+        ],
+        "theta": 359.0,
+        "eps1": 1.0
+      },
+      "expected": {
+        "lower_bound_m": 193.18909501289002,
+        "pair": [
+          [
+            1312.3250797411936,
+            -45.82740160785814
+          ],
+          [
+            1499.999999999,
+            -2.7012746630729955e-11
+          ]
+        ],
+        "branch": "direction",
+        "bearing_deg": 21.54955006807258,
+        "sample_count": 3955
+      },
+      "actual": {
+        "J_hat": 193.53728119216692,
+        "sample_count": 3569,
+        "status": "NUMERICAL_CANDIDATE",
+        "witness": {
+          "x": [
+            1311.963606540519,
+            -45.81477868556354
+          ],
+          "y": [
+            1500.0,
+            0.0
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 21.556045219573473,
+          "distance_m": 193.53728119216692,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              657.653440694869,
+              849.4003745317531
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -1.000444171950221e-11,
+              -1.000444171950221e-11
+            ]
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1311.963606540519,
+                -45.81477868556354
+              ],
+              "rho": 1312.7633064771476,
+              "first_distance_m": 1312.7633064771476,
+              "second_distance_m": 662.653440694869,
+              "first_error_deg": 1.0,
+              "second_error_deg": -0.9999999999899956
+            },
+            {
+              "p": [
+                1500.0,
+                0.0
+              ],
+              "rho": 1500.0,
+              "first_distance_m": 1500.0,
+              "second_distance_m": 854.4003745317531,
+              "first_error_deg": -1.0,
+              "second_error_deg": 0.9999999999899956
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        "certification": {
+          "lower_m": 193.49612824838906,
+          "upper_m": 193.58520131361362,
+          "gap_m": 0.08907306522456794,
+          "converged": true,
+          "status": "CERTIFIED_FIXED_Q_TOL",
+          "stop_reason": "gap",
+          "nodes": 413,
+          "active_boxes": 63,
+          "elapsed_seconds": 0.3231897500008927,
+          "witness": {
+            "parameters": [
+              1.0,
+              0.999969482421875,
+              -1.0,
+              0.874755859375
+            ],
+            "branch": "direction",
+            "coordinate_enclosures": [
+              [
+                [
+                  1499.9543762207027,
+                  1499.9543762207034
+                ],
+                [
+                  -5.086901869056396e-28,
+                  1.8578205471257245e-27
+                ]
+              ],
+              [
+                [
+                  1311.9603118372638,
+                  1311.9603118372643
+                ],
+                [
+                  -45.81466363199058,
+                  -45.81466363199056
+                ]
+              ]
+            ],
+            "distance_interval_m": [
+              193.49612824838906,
+              193.4961282483891
+            ]
+          },
+          "dps": 30,
+          "backend": "mpmath.iv 1.3.0",
+          "verdict": "PASS",
+          "J_hat": 193.53728119216692,
+          "comparison_tol_m": 0.1,
+          "acceptance_band_m": [
+            193.396128248389,
+            193.68520131361365
+          ]
+        },
+        "underestimate_m": 0.0,
+        "production_cloud_independent_oracle": {
+          "lower_bound_m": 193.53728119216692,
+          "pair": [
+            [
+              1311.963606540519,
+              -45.81477868556354
+            ],
+            [
+              1500.0,
+              0.0
+            ]
+          ],
+          "branch": "direction",
+          "bearing_deg": 21.55604521957347,
+          "sample_count": 3569
+        },
+        "missing_nested_samples": [
+          {
+            "from_level": 0,
+            "to_level": 1,
+            "count": 0,
+            "examples": []
+          },
+          {
+            "from_level": 1,
+            "to_level": 2,
+            "count": 0,
+            "examples": []
+          }
+        ],
+        "nested_score_values_m": [
+          193.53728119216692,
+          193.53728119216692,
+          193.53728119216692
+        ]
+      },
+      "checks": [
+        {
+          "name": "certified_J_band",
+          "passed": true,
+          "expected": [
+            193.396128248389,
+            193.68520131361365
+          ],
+          "actual": 193.53728119216692,
+          "semantics": "independent interval lower/upper bounds; inspect convergence and gap"
+        },
+        {
+          "name": "certified_gap",
+          "passed": true,
+          "expected": 0.1,
+          "actual": 0.08907306522456794,
+          "semantics": "certification completeness; budget exhaustion is not a production bug"
+        },
+        {
+          "name": "independent_reachable_pair_dominance",
+          "passed": true,
+          "expected": 193.18909501289002,
+          "actual": 193.53728119216692,
+          "semantics": "independent lower-bound approximation; not exact J"
+        },
+        {
+          "name": "production_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 193.53728119216692,
+          "actual": 193.53728119216692,
+          "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
+        },
+        {
+          "name": "same_cloud_pair_enumeration",
+          "passed": true,
+          "expected": 193.18909501289002,
+          "actual": 193.18909501289002,
+          "semantics": "independent strict finite-cloud lower-bound dominance"
+        },
+        {
+          "name": "sample_sources_nested",
+          "passed": true,
+          "expected": true,
+          "actual": [
+            318,
+            1017,
+            3569
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "q_augmented_score_monotonicity",
+          "passed": true,
+          "expected": "nondecreasing",
+          "actual": [
+            193.53728119216692,
+            193.53728119216692,
+            193.53728119216692
+          ],
+          "semantics": "correctness"
+        },
+        {
+          "name": "reported_witness_reachable",
+          "passed": true,
+          "expected": 193.53728119216692,
+          "actual": 193.53728119216692,
+          "semantics": "correctness"
+        }
+      ],
+      "truth_method": "independent_polar_sampling + atan2_all_pairs_lower_bound",
+      "tags": [
+        "adversarial"
+      ],
+      "elapsed_seconds": 2.2329770420001296
+    }
+  ],
+  "weak_comparisons_excluded": 0,
+  "elapsed_seconds": 14.630990333000227,
+  "production_sha256": {
+    "q2.py": "27dc886757f5b3f60e7c37a7affd81a9bfd5812ea2c65d043c0d471d7f43999e",
+    "diagnostics.py": "b4b5ad59d0a6fee531931f5f28af7fb8b4ee88b22e84c489eca6b4a8339fab90",
+    "feasible.py": "ac537fe8957f418f3ba7840adb754866c6872bf3880de339351e789af5f2aada",
+    "geometry.py": "5a0c75e2b8eccb3bcba10e7d8d4f204132cf6108eaf0ff6525eb7bee0c96d68e"
+  },
+  "scope_notes": [
+    "J_hat is NUMERICAL_CANDIDATE, not a certified upper bound. Strict oracle dominance is the user-requested adequacy criterion; a failure can expose insufficient sampling rather than incorrect pair algebra.",
+    "Selection tie order is checked on returned candidates; no global continuous optimum certificate is claimed. Conditional R support checks do not certify full K.",
+    "Known exact segment K checks independently decide E20. At equality R=20, conservative NOT_YET_GUARANTEED is valid, not mathematical impossibility."
+  ],
+  "schema_version": 2,
+  "grade_scope": "Primary J assessments only; refined profiles and non-J contracts are separate. C does not certify the continuous supremum or waive auxiliary failures.",
+  "grade_definitions": {
+    "A": "低估: J_hat < independently realizable pair distance - 1e-6 m; correctness regression",
+    "B": "逼近不够: no A, but closed-form absolute gap exceeds max(0.1 m, 1% exact J); numerical accuracy",
+    "C": "通过: applicable reachable-pair and closed-form criteria pass"
+  },
+  "grade_counts": {
+    "A": 0,
+    "B": 0,
+    "C": 7
+  },
+  "n_grade_not_applicable": 0,
+  "grade_case_ids": {
+    "A": [],
+    "B": [],
+    "C": [
+      "segment_10_100_20_1",
+      "segment_20_80_40_1",
+      "tangent_polar_0",
+      "polar_same_station_closed_2",
+      "segment_special_18",
+      "polar_0",
+      "polar_5"
+    ]
+  },
+  "refined_grade_counts": {
+    "A": 0,
+    "B": 0,
+    "C": 4
+  },
+  "regression_targets": [],
+  "non_J_contract_cases": [],
+  "J_passing_cases_with_other_check_failures": [],
+  "legacy_pass_fail_note": "n_pass/n_fail and failures retain all-check compatibility; use grade_counts for mutually exclusive A/B/C J results.",
+  "production_sha256_after": {
+    "q2.py": "27dc886757f5b3f60e7c37a7affd81a9bfd5812ea2c65d043c0d471d7f43999e",
+    "diagnostics.py": "b4b5ad59d0a6fee531931f5f28af7fb8b4ee88b22e84c489eca6b4a8339fab90",
+    "feasible.py": "ac537fe8957f418f3ba7840adb754866c6872bf3880de339351e789af5f2aada",
+    "geometry.py": "5a0c75e2b8eccb3bcba10e7d8d4f204132cf6108eaf0ff6525eb7bee0c96d68e"
+  },
+  "production_unchanged_during_run": true,
+  "certification": {
+    "enabled": true,
+    "options": {
+      "tol": 0.1,
+      "time_limit_s": 30.0,
+      "max_nodes": 200000
+    },
+    "results": [
+      {
+        "case_id": "segment_10_100_20_1",
+        "lower_m": 15.446777343749998,
+        "upper_m": 15.527343750000002,
+        "gap_m": 0.08056640625000357,
+        "converged": true,
+        "status": "CERTIFIED_FIXED_Q_TOL",
+        "stop_reason": "gap",
+        "nodes": 368,
+        "active_boxes": 79,
+        "elapsed_seconds": 0.1250812499965832,
+        "witness": {
+          "parameters": [
+            0.0,
+            0.827880859375,
+            0.0,
+            0.99951171875
+          ],
+          "branch": "direction",
+          "coordinate_enclosures": [
+            [
+              [
+                84.50927734374999,
+                84.50927734375001
+              ],
+              [
+                -5e-324,
+                5e-324
+              ]
+            ],
+            [
+              [
+                99.95605468749999,
+                99.95605468750001
+              ],
+              [
+                -5e-324,
+                5e-324
+              ]
+            ]
+          ],
+          "distance_interval_m": [
+            15.446777343749998,
+            15.446777343750002
+          ]
+        },
+        "dps": 30,
+        "backend": "mpmath.iv 1.3.0",
+        "verdict": "PASS",
+        "J_hat": 15.459510178551454,
+        "comparison_tol_m": 0.1,
+        "acceptance_band_m": [
+          15.346777343749995,
+          15.627343750000003
+        ]
+      },
+      {
+        "case_id": "segment_20_80_40_1",
+        "lower_m": 6.503906249999999,
+        "upper_m": 6.601562500000001,
+        "gap_m": 0.09765625000000179,
+        "converged": true,
+        "status": "CERTIFIED_FIXED_Q_TOL",
+        "stop_reason": "gap",
+        "nodes": 1171,
+        "active_boxes": 373,
+        "elapsed_seconds": 0.4925281249998079,
+        "witness": {
+          "parameters": [
+            0.0,
+            0.9970703125,
+            0.0,
+            0.888671875
+          ],
+          "branch": "direction",
+          "coordinate_enclosures": [
+            [
+              [
+                79.82421874999999,
+                79.82421875000001
+              ],
+              [
+                -5e-324,
+                5e-324
+              ]
+            ],
+            [
+              [
+                73.32031249999999,
+                73.32031250000001
+              ],
+              [
+                -5e-324,
+                5e-324
+              ]
+            ]
+          ],
+          "distance_interval_m": [
+            6.503906249999999,
+            6.503906250000001
+          ]
+        },
+        "dps": 30,
+        "backend": "mpmath.iv 1.3.0",
+        "verdict": "PASS",
+        "J_hat": 6.528213425812737,
+        "comparison_tol_m": 0.1,
+        "acceptance_band_m": [
+          6.403906249999998,
+          6.701562500000001
+        ]
+      },
+      {
+        "case_id": "tangent_polar_0",
+        "lower_m": 8.89679005123512,
+        "upper_m": 8.988494109453882,
+        "gap_m": 0.09170405821876139,
+        "converged": true,
+        "status": "CERTIFIED_FIXED_Q_TOL",
+        "stop_reason": "gap",
+        "nodes": 4687,
+        "active_boxes": 1666,
+        "elapsed_seconds": 3.1131915419973666,
+        "witness": {
+          "parameters": [
+            0.001,
+            0.993804931640625,
+            -0.001,
+            0.999755859375
+          ],
+          "branch": "direction",
+          "coordinate_enclosures": [
+            [
+              [
+                1490.7383725756815,
+                1490.738372575682
+              ],
+              [
+                0.02601829288990946,
+                0.026018292889909467
+              ]
+            ],
+            [
+              [
+                1499.6350095372172,
+                1499.6350095372177
+              ],
+              [
+                -0.026173568497258656,
+                -0.02617356849725865
+              ]
+            ]
+          ],
+          "distance_interval_m": [
+            8.89679005123512,
+            8.896790051235124
+          ]
+        },
+        "dps": 30,
+        "backend": "mpmath.iv 1.3.0",
+        "verdict": "PASS",
+        "J_hat": 8.917424315025677,
+        "comparison_tol_m": 0.1,
+        "acceptance_band_m": [
+          8.796790051235117,
+          9.088494109453883
+        ]
+      },
+      {
+        "case_id": "polar_same_station_closed_2",
+        "lower_m": 1495.0001221044847,
+        "upper_m": 1495.0875297685648,
+        "gap_m": 0.08740766408004676,
+        "converged": true,
+        "status": "CERTIFIED_FIXED_Q_TOL",
+        "stop_reason": "gap",
+        "nodes": 27,
+        "active_boxes": 2,
+        "elapsed_seconds": 0.013709666000067955,
+        "witness": {
+          "parameters": [
+            -0.2,
+            1e-10,
+            0.2,
+            1.0
+          ],
+          "branch": "same_station",
+          "coordinate_enclosures": [
+            [
+              [
+                4.99996968778804,
+                4.999969687788042
+              ],
+              [
+                -0.01745325759797105,
+                -0.017453257597971044
+              ]
+            ],
+            [
+              [
+                1499.9908614866852,
+                1499.9908614866856
+              ],
+              [
+                5.235977122835598,
+                5.2359771228356
+              ]
+            ]
+          ],
+          "distance_interval_m": [
+            1495.0001221044847,
+            1495.0001221044852
+          ]
+        },
+        "dps": 30,
+        "backend": "mpmath.iv 1.3.0",
+        "verdict": "PASS",
+        "J_hat": 1495.0001221539821,
+        "comparison_tol_m": 0.1,
+        "acceptance_band_m": [
+          1494.9001221044844,
+          1495.187529768565
+        ]
+      },
+      {
+        "case_id": "segment_special_18",
+        "lower_m": 7.999999999999999,
+        "upper_m": 8.093750000000002,
+        "gap_m": 0.09375000000000268,
+        "converged": true,
+        "status": "CERTIFIED_FIXED_Q_TOL",
+        "stop_reason": "gap",
+        "nodes": 140,
+        "active_boxes": 30,
+        "elapsed_seconds": 0.04414475000157836,
+        "witness": {
+          "parameters": [
+            -0.0,
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "branch": "near",
+          "coordinate_enclosures": [
+            [
+              [
+                9.999999999999998,
+                10.000000000000002
+              ],
+              [
+                -5e-324,
+                5e-324
+              ]
+            ],
+            [
+              [
+                17.999999999999996,
+                18.000000000000004
+              ],
+              [
+                -5e-324,
+                5e-324
+              ]
+            ]
+          ],
+          "distance_interval_m": [
+            7.999999999999999,
+            8.000000000000002
+          ]
+        },
+        "dps": 30,
+        "backend": "mpmath.iv 1.3.0",
+        "verdict": "PASS",
+        "J_hat": 8.0,
+        "comparison_tol_m": 0.1,
+        "acceptance_band_m": [
+          7.899999999999998,
+          8.193750000000003
+        ]
+      },
+      {
+        "case_id": "polar_0",
+        "lower_m": 147.2216456399385,
+        "upper_m": 147.3199110818772,
+        "gap_m": 0.09826544193870747,
+        "converged": true,
+        "status": "CERTIFIED_FIXED_Q_TOL",
+        "stop_reason": "gap",
+        "nodes": 950,
+        "active_boxes": 134,
+        "elapsed_seconds": 0.679314290999173,
+        "witness": {
+          "parameters": [
+            1.0,
+            0.9073486328125,
+            -1.0,
+            1.0
+          ],
+          "branch": "direction",
+          "coordinate_enclosures": [
+            [
+              [
+                1361.2788451109984,
+                1361.2788451109989
+              ],
+              [
+                23.76121062682153,
+                23.761210626821537
+              ]
+            ],
+            [
+              [
+                1499.7715427345865,
+                1499.771542734587
+              ],
+              [
+                -26.17860965592527,
+                -26.178609655925264
+              ]
+            ]
+          ],
+          "distance_interval_m": [
+            147.2216456399385,
+            147.22164563993854
+          ]
+        },
+        "dps": 30,
+        "backend": "mpmath.iv 1.3.0",
+        "verdict": "PASS",
+        "J_hat": 147.27202039123046,
+        "comparison_tol_m": 0.1,
+        "acceptance_band_m": [
+          147.12164563993844,
+          147.41991108187722
+        ]
+      },
+      {
+        "case_id": "polar_5",
+        "lower_m": 193.49612824838906,
+        "upper_m": 193.58520131361362,
+        "gap_m": 0.08907306522456794,
+        "converged": true,
+        "status": "CERTIFIED_FIXED_Q_TOL",
+        "stop_reason": "gap",
+        "nodes": 413,
+        "active_boxes": 63,
+        "elapsed_seconds": 0.3231897500008927,
+        "witness": {
+          "parameters": [
+            1.0,
+            0.999969482421875,
+            -1.0,
+            0.874755859375
+          ],
+          "branch": "direction",
+          "coordinate_enclosures": [
+            [
+              [
+                1499.9543762207027,
+                1499.9543762207034
+              ],
+              [
+                -5.086901869056396e-28,
+                1.8578205471257245e-27
+              ]
+            ],
+            [
+              [
+                1311.9603118372638,
+                1311.9603118372643
+              ],
+              [
+                -45.81466363199058,
+                -45.81466363199056
+              ]
+            ]
+          ],
+          "distance_interval_m": [
+            193.49612824838906,
+            193.4961282483891
+          ]
+        },
+        "dps": 30,
+        "backend": "mpmath.iv 1.3.0",
+        "verdict": "PASS",
+        "J_hat": 193.53728119216692,
+        "comparison_tol_m": 0.1,
+        "acceptance_band_m": [
+          193.396128248389,
+          193.68520131361365
+        ]
+      }
+    ],
+    "verdict_counts": {
+      "PASS": 7,
+      "UNDERESTIMATE": 0,
+      "OVERESTIMATE": 0
+    },
+    "converged_count": 7,
+    "scope": "continuous score cases only; finite clouds and selection contracts retain their own oracles"
+  }
+}

@@ -1,0 +1,76 @@
+CERTIFIED grid21_0 17806.73 {'source': 'odd21_0', 'decimals': 2}
+CERTIFIED grid21_1 17878.14 {'source': 'odd21_0', 'decimals': 0}
+CERTIFIED grid21_2 17876.64 {'source': 'odd21_4', 'decimals': 2}
+CERTIFIED grid21_4 17811.76 {'source': 'odd21_5', 'decimals': 2}
+CERTIFIED grid21_5 17881.74 {'source': 'odd21_5', 'decimals': 0}
+CERTIFIED grid21_6 17881.67 {'source': 'odd21_9', 'decimals': 2}
+CERTIFIED grid21_7 17812.15 {'source': 'odd21_9', 'decimals': 0}
+CERTIFIED grid21_8 17818.46 {'source': 'odd21_10', 'decimals': 2}
+CERTIFIED grid21_9 17890.68 {'source': 'odd21_10', 'decimals': 0}
+10 / 72 wall 2.9
+CERTIFIED grid21_10 17888.3 {'source': 'odd21_14', 'decimals': 2}
+CERTIFIED grid21_11 17819.63 {'source': 'odd21_14', 'decimals': 0}
+CERTIFIED grid21_12 17822.79 {'source': 'odd21_20', 'decimals': 2}
+CERTIFIED grid21_13 17894.33 {'source': 'odd21_20', 'decimals': 0}
+CERTIFIED grid21_14 17893.14 {'source': 'odd21_24', 'decimals': 2}
+CERTIFIED grid21_16 17827.82 {'source': 'odd21_25', 'decimals': 2}
+CERTIFIED grid21_17 17897.93 {'source': 'odd21_25', 'decimals': 0}
+CERTIFIED grid21_18 17898.16 {'source': 'odd21_29', 'decimals': 2}
+CERTIFIED grid21_19 17827.94 {'source': 'odd21_29', 'decimals': 0}
+20 / 72 wall 5.8
+CERTIFIED grid21_20 17834.53 {'source': 'odd21_30', 'decimals': 2}
+CERTIFIED grid21_21 17906.87 {'source': 'odd21_30', 'decimals': 0}
+CERTIFIED grid21_22 17904.8 {'source': 'odd21_34', 'decimals': 2}
+CERTIFIED grid21_23 17835.41 {'source': 'odd21_34', 'decimals': 0}
+CERTIFIED grid21_24 17854.62 {'source': 'odd21_35', 'decimals': 2}
+CERTIFIED grid21_25 17923.09 {'source': 'odd21_35', 'decimals': 0}
+CERTIFIED grid21_26 17924.76 {'source': 'odd21_39', 'decimals': 2}
+CERTIFIED grid21_27 17855.8 {'source': 'odd21_39', 'decimals': 0}
+CERTIFIED grid21_28 17898.65 {'source': 'odd21_40', 'decimals': 2}
+CERTIFIED grid21_29 17826.74 {'source': 'odd21_40', 'decimals': 0}
+30 / 72 wall 8.3
+CERTIFIED grid21_30 17868.59 {'source': 'odd21_41', 'decimals': 2}
+CERTIFIED grid21_31 17832.36 {'source': 'odd21_41', 'decimals': 0}
+CERTIFIED grid21_32 17832.77 {'source': 'odd21_43', 'decimals': 2}
+CERTIFIED grid21_33 17866.81 {'source': 'odd21_43', 'decimals': 0}
+CERTIFIED grid21_34 17828.17 {'source': 'odd21_44', 'decimals': 2}
+CERTIFIED grid21_36 17903.65 {'source': 'odd21_45', 'decimals': 2}
+CERTIFIED grid21_37 17830.59 {'source': 'odd21_45', 'decimals': 0}
+CERTIFIED grid21_38 17833.22 {'source': 'odd21_49', 'decimals': 2}
+CERTIFIED grid21_39 17900.4 {'source': 'odd21_49', 'decimals': 0}
+40 / 72 wall 11.6
+CERTIFIED grid21_40 17910.33 {'source': 'odd21_50', 'decimals': 2}
+CERTIFIED grid21_41 17838.35 {'source': 'odd21_50', 'decimals': 0}
+CERTIFIED grid21_42 17839.9 {'source': 'odd21_54', 'decimals': 2}
+CERTIFIED grid21_43 17908.18 {'source': 'odd21_54', 'decimals': 0}
+CERTIFIED grid21_44 17930.3 {'source': 'odd21_55', 'decimals': 2}
+CERTIFIED grid21_45 17855.58 {'source': 'odd21_55', 'decimals': 0}
+CERTIFIED grid21_46 17859.97 {'source': 'odd21_59', 'decimals': 2}
+CERTIFIED grid21_47 17928.2 {'source': 'odd21_59', 'decimals': 0}
+CERTIFIED grid21_48 17903.61 {'source': 'odd21_60', 'decimals': 2}
+CERTIFIED grid21_49 17833.62 {'source': 'odd21_60', 'decimals': 0}
+50 / 72 wall 14.1
+CERTIFIED grid21_50 17873.49 {'source': 'odd21_61', 'decimals': 2}
+CERTIFIED grid21_51 17839.25 {'source': 'odd21_61', 'decimals': 0}
+CERTIFIED grid21_52 17837.61 {'source': 'odd21_63', 'decimals': 2}
+CERTIFIED grid21_53 17873.77 {'source': 'odd21_63', 'decimals': 0}
+CERTIFIED grid21_54 17833.0 {'source': 'odd21_64', 'decimals': 2}
+CERTIFIED grid21_56 17908.61 {'source': 'odd21_65', 'decimals': 2}
+CERTIFIED grid21_57 17837.47 {'source': 'odd21_65', 'decimals': 0}
+CERTIFIED grid21_58 17878.51 {'source': 'odd21_66', 'decimals': 2}
+CERTIFIED grid21_59 17843.2 {'source': 'odd21_66', 'decimals': 0}
+60 / 72 wall 17.5
+CERTIFIED grid21_60 17842.62 {'source': 'odd21_68', 'decimals': 2}
+CERTIFIED grid21_61 17880.24 {'source': 'odd21_68', 'decimals': 0}
+CERTIFIED grid21_62 17838.05 {'source': 'odd21_69', 'decimals': 2}
+CERTIFIED grid21_63 17907.42 {'source': 'odd21_69', 'decimals': 0}
+CERTIFIED grid21_64 17915.29 {'source': 'odd21_70', 'decimals': 2}
+CERTIFIED grid21_65 17845.23 {'source': 'odd21_70', 'decimals': 0}
+CERTIFIED grid21_66 17844.73 {'source': 'odd21_74', 'decimals': 2}
+CERTIFIED grid21_67 17915.2 {'source': 'odd21_74', 'decimals': 0}
+CERTIFIED grid21_68 17935.26 {'source': 'odd21_75', 'decimals': 2}
+CERTIFIED grid21_69 17862.46 {'source': 'odd21_75', 'decimals': 0}
+70 / 72 wall 19.8
+CERTIFIED grid21_70 17864.81 {'source': 'odd21_79', 'decimals': 2}
+CERTIFIED grid21_71 17935.22 {'source': 'odd21_79', 'decimals': 0}
+COMPLETED {"candidates": 72, "certified": 68, "real_counterexamples": 0, "unresolved": 4, "wall_s": 20.585372250003275, "scored_executions": 0, "official_calls": 0}

@@ -1,0 +1,29 @@
+........................................................................ [ 17%]
+........................................................................ [ 34%]
+........................................................................ [ 51%]
+........................................................................ [ 69%]
+........................F............................................... [ 86%]
+.........................................................                [100%]
+=================================== FAILURES ===================================
+______________ test_observation_classifications[obs2-EMPTY-None] _______________
+
+obs = [BearingMeasurement(position=(0.0, 0.0), bearing_deg=180.0, half_width_deg=1.0, measurement_id='', channel=None, reque...RETICAL_1_DEG', rounding_assumption_source=None, session_id=None, stage_id=None, stability_id=None, raw_bearing_deg=0)]
+kind = <RegionKind.EMPTY: 'EMPTY'>, expected = None
+
+    @pytest.mark.parametrize('obs,kind,expected', [
+        ([Obs((-1,0),0,0), Obs((0,-1),90,0)], Kind.POINT,0),
+        ([Obs((0,0),0,0), Obs((10,0),180,0)], Kind.SEGMENT,10),
+        ([Obs((0,0),180), Obs((10,0),0)], Kind.EMPTY,None),
+        ([Obs((0,0),0)]*7, Kind.UNBOUNDED,math.inf),
+    ])
+    def test_observation_classifications(obs, kind, expected):
+        r = solve(obs, P)
+>       assert r.region.kind == kind
+E       AssertionError: assert None == <RegionKind.EMPTY: 'EMPTY'>
+E        +  where None = Region(kind=None, vertices=(), feasible_point=None, recession_direction=None, residual=None, status='NUMERICAL_UNRESOL...cremental_boundary', conflict_constraints=(), minimum_intersection_sine=None, condition_number=None, vertex_scale=None).kind
+E        +    where Region(kind=None, vertices=(), feasible_point=None, recession_direction=None, residual=None, status='NUMERICAL_UNRESOL...cremental_boundary', conflict_constraints=(), minimum_intersection_sine=None, condition_number=None, vertex_scale=None) = Q1Result(measurements=(BearingMeasurement(position=(0.0, 0.0), bearing_deg=180.0, half_width_deg=1.0, measurement_id='...nostics=(), policy=NumericPolicy(length_abs=1e-10, angle_abs=1e-12, relative=1e-12), object_name='pure_angular_region').region
+
+models/q1q2/tests/test_geometry.py:99: AssertionError
+=========================== short test summary info ============================
+FAILED models/q1q2/tests/test_geometry.py::test_observation_classifications[obs2-EMPTY-None]
+1 failed, 416 passed in 7.41s

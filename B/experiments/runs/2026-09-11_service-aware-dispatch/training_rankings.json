@@ -1,0 +1,16 @@
+{
+  "best_mean_only": {
+    "3": {
+      "ordinary": "service_locked1_area7",
+      "stress": "service_locked1_area7"
+    },
+    "4": {
+      "ordinary": "count_locked_grid21_29",
+      "stress": "service_free1_convex22"
+    }
+  },
+  "not_frozen_holdout_selection": true,
+  "heldout_seeds_157_166_generated": false,
+  "scored_executions": 0,
+  "official_calls": 0
+}

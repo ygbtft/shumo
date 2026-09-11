@@ -1,0 +1,52 @@
+Read all 35 original PNG pages directly. Apple Vision OCR helper failed with Foundation nilError, exit 133; no OCR-based evidence used. Original screenshots not edited.
+Ring designs selected analytically before paired online evaluation. Commands and precheck saved before launch.
+Frozen layouts {"old_triangle19": 30600.0, "peer_ring9_r1300": 8264.838469044635, "ring7_r1140": 6840.0, "ring9_r960": 6103.265330986806, "ring13_r870": 5823.796523262248}
+5/168 cases, 25 executions, 4.3s
+10/168 cases, 50 executions, 8.5s
+15/168 cases, 75 executions, 12.9s
+20/168 cases, 100 executions, 17.2s
+25/168 cases, 125 executions, 21.7s
+30/168 cases, 150 executions, 26.1s
+35/168 cases, 175 executions, 30.5s
+40/168 cases, 200 executions, 35.0s
+45/168 cases, 225 executions, 39.5s
+50/168 cases, 250 executions, 43.8s
+55/168 cases, 275 executions, 48.8s
+60/168 cases, 300 executions, 54.0s
+65/168 cases, 325 executions, 59.0s
+70/168 cases, 350 executions, 64.1s
+75/168 cases, 375 executions, 69.2s
+80/168 cases, 400 executions, 74.5s
+85/168 cases, 425 executions, 79.7s
+90/168 cases, 450 executions, 85.0s
+95/168 cases, 475 executions, 89.9s
+100/168 cases, 500 executions, 94.9s
+105/168 cases, 525 executions, 99.6s
+110/168 cases, 550 executions, 104.0s
+115/168 cases, 575 executions, 108.6s
+120/168 cases, 600 executions, 112.8s
+125/168 cases, 625 executions, 117.6s
+130/168 cases, 650 executions, 121.8s
+135/168 cases, 675 executions, 126.6s
+140/168 cases, 700 executions, 130.8s
+145/168 cases, 725 executions, 135.7s
+150/168 cases, 750 executions, 140.0s
+151/168 cases, 755 executions, 141.0s
+152/168 cases, 760 executions, 141.8s
+153/168 cases, 765 executions, 142.7s
+154/168 cases, 770 executions, 144.1s
+155/168 cases, 775 executions, 145.8s
+156/168 cases, 780 executions, 147.0s
+157/168 cases, 785 executions, 147.8s
+158/168 cases, 790 executions, 148.4s
+159/168 cases, 795 executions, 149.1s
+160/168 cases, 800 executions, 150.1s
+161/168 cases, 805 executions, 151.1s
+162/168 cases, 810 executions, 152.1s
+163/168 cases, 815 executions, 152.9s
+164/168 cases, 820 executions, 153.7s
+165/168 cases, 825 executions, 154.5s
+166/168 cases, 830 executions, 155.9s
+167/168 cases, 835 executions, 157.1s
+168/168 cases, 840 executions, 158.4s
+Completed 840 executions

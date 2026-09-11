@@ -1,0 +1,14 @@
+{
+  "source_summary_sha256": "5b8a1ad6b74130b795d113d87bf8128270dfcc909870e50a3743aafa67556e01",
+  "selected_layouts_sha256": "d109c109923e995cf79d55151879d72c82ef668e7672adf33c32af42fcf4ae2e",
+  "figure_files": [
+    "figures/cover21_layouts.png",
+    "figures/cover21_layouts.pdf",
+    "figures/cover21_tradeoffs.png",
+    "figures/cover21_tradeoffs.pdf"
+  ],
+  "means_only": true,
+  "does_not_replace_tail_or_pointwise_evidence": true,
+  "scored_executions": 0,
+  "official_calls": 0
+}

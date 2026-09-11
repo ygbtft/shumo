@@ -1,0 +1,3 @@
+Observed from exec session 11207 after the audit Python program had written its complete result:
+B/experiments/runs/2026-09-11_cover21-confirmation/command.sh:19: parse error near `;;'
+Outer shell exit_code=1.

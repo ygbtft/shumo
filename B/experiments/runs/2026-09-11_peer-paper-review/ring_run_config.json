@@ -1,0 +1,337 @@
+{
+  "base_seed": 42,
+  "random_seeds": [
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+  ],
+  "derivation": "42 + 25 + repeat, repeat=0..9; all new relative to earlier scored runs",
+  "stress_rng": "SeedSequence([42,35,layout_index,count]); error seed=42+200+case_index",
+  "matrix": "(3 locations x 5 errors x 10 seeds + 3 stress layouts x 2 counts x 3 errors) x 5 methods = 840",
+  "selection": "Four fixed geometrically certified layouts, parameters frozen before online evaluation; same angular start 0, counterclockwise open ring traversal",
+  "baseline": "Previously frozen q3_triangle/two_opt, not reoptimized",
+  "peer_paper_reproduced": "Only center+8 ring station layout; all five share our unchanged active localization/clearing/stopping policy. NOT full peer policy replication.",
+  "policy_parameters": {
+    "mixed": false,
+    "active": true,
+    "optimized": true,
+    "max_active": 3,
+    "time_weight": 0.08
+  },
+  "metadata": {
+    "peer_ring9_r1300": {
+      "n_outer": 8,
+      "stations": 9,
+      "ring_radius_m": 1300.0,
+      "coverage_radius_m": 778.6165859055264,
+      "coverage_margin_m": 221.38341409447355,
+      "static_open_route_m": 8264.838469044633,
+      "problem": 3,
+      "guarantees_arbitrary_direction": false
+    },
+    "ring7_r1140": {
+      "n_outer": 6,
+      "stations": 7,
+      "ring_radius_m": 1140.0,
+      "coverage_radius_m": 992.689147149632,
+      "coverage_margin_m": 7.310852850367951,
+      "static_open_route_m": 6839.999999999999,
+      "problem": 3,
+      "guarantees_arbitrary_direction": false
+    },
+    "ring9_r960": {
+      "n_outer": 8,
+      "stations": 9,
+      "ring_radius_m": 960.0,
+      "coverage_radius_m": 984.2115299268714,
+      "coverage_margin_m": 15.788470073128565,
+      "static_open_route_m": 6103.2653309868065,
+      "problem": 3,
+      "guarantees_arbitrary_direction": false
+    },
+    "ring13_r870": {
+      "n_outer": 12,
+      "stations": 13,
+      "ring_radius_m": 870.0,
+      "coverage_radius_m": 985.708025767589,
+      "coverage_margin_m": 14.291974232411008,
+      "static_open_route_m": 5823.796523262247,
+      "problem": 3,
+      "guarantees_arbitrary_direction": false
+    }
+  },
+  "paths": {
+    "old_triangle19": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -850.0,
+        -1472.2431864335456
+      ],
+      [
+        -1700.0,
+        -2944.486372867091
+      ],
+      [
+        -2550.0,
+        -1472.2431864335456
+      ],
+      [
+        -3400.0,
+        0.0
+      ],
+      [
+        -2550.0,
+        1472.2431864335456
+      ],
+      [
+        -1700.0,
+        0.0
+      ],
+      [
+        -850.0,
+        1472.2431864335456
+      ],
+      [
+        -1700.0,
+        2944.486372867091
+      ],
+      [
+        0.0,
+        2944.486372867091
+      ],
+      [
+        850.0,
+        1472.2431864335456
+      ],
+      [
+        1700.0,
+        0.0
+      ],
+      [
+        850.0,
+        -1472.2431864335456
+      ],
+      [
+        0.0,
+        -2944.486372867091
+      ],
+      [
+        1700.0,
+        -2944.486372867091
+      ],
+      [
+        2550.0,
+        -1472.2431864335456
+      ],
+      [
+        3400.0,
+        0.0
+      ],
+      [
+        2550.0,
+        1472.2431864335456
+      ],
+      [
+        1700.0,
+        2944.486372867091
+      ]
+    ],
+    "peer_ring9_r1300": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1300.0,
+        0.0
+      ],
+      [
+        919.2388155425118,
+        919.2388155425117
+      ],
+      [
+        7.960204194457796e-14,
+        1300.0
+      ],
+      [
+        -919.2388155425117,
+        919.2388155425118
+      ],
+      [
+        -1300.0,
+        1.5920408388915592e-13
+      ],
+      [
+        -919.238815542512,
+        -919.2388155425117
+      ],
+      [
+        -2.3880612583373384e-13,
+        -1300.0
+      ],
+      [
+        919.2388155425116,
+        -919.238815542512
+      ]
+    ],
+    "ring7_r1140": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1140.0,
+        0.0
+      ],
+      [
+        570.0000000000001,
+        987.26896031426
+      ],
+      [
+        -569.9999999999998,
+        987.2689603142601
+      ],
+      [
+        -1140.0,
+        1.3960973510279827e-13
+      ],
+      [
+        -570.0000000000005,
+        -987.2689603142597
+      ],
+      [
+        570.0000000000001,
+        -987.26896031426
+      ]
+    ],
+    "ring9_r960": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        960.0,
+        0.0
+      ],
+      [
+        678.8225099390856,
+        678.8225099390855
+      ],
+      [
+        5.878304635907296e-14,
+        960.0
+      ],
+      [
+        -678.8225099390855,
+        678.8225099390856
+      ],
+      [
+        -960.0,
+        1.1756609271814592e-13
+      ],
+      [
+        -678.8225099390858,
+        -678.8225099390855
+      ],
+      [
+        -1.7634913907721884e-13,
+        -960.0
+      ],
+      [
+        678.8225099390854,
+        -678.8225099390858
+      ]
+    ],
+    "ring13_r870": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        870.0,
+        0.0
+      ],
+      [
+        753.4421012924616,
+        434.99999999999994
+      ],
+      [
+        435.0000000000001,
+        753.4421012924615
+      ],
+      [
+        5.3272135762909865e-14,
+        870.0
+      ],
+      [
+        -434.99999999999983,
+        753.4421012924616
+      ],
+      [
+        -753.4421012924616,
+        434.99999999999994
+      ],
+      [
+        -870.0,
+        1.0654427152581973e-13
+      ],
+      [
+        -753.4421012924618,
+        -434.99999999999983
+      ],
+      [
+        -435.0000000000004,
+        -753.4421012924614
+      ],
+      [
+        -1.5981640728872957e-13,
+        -870.0
+      ],
+      [
+        435.0000000000001,
+        -753.4421012924615
+      ],
+      [
+        753.4421012924614,
+        -435.0000000000004
+      ]
+    ]
+  },
+  "path_lengths_m": {
+    "old_triangle19": 30600.0,
+    "peer_ring9_r1300": 8264.838469044635,
+    "ring7_r1140": 6840.0,
+    "ring9_r960": 6103.265330986806,
+    "ring13_r870": 5823.796523262248
+  },
+  "peer_commit": "c477d3660368f27c7131a0591426b4c4f107ea5d",
+  "python": "/Users/dingdingzai/anaconda3/bin/python",
+  "platform": "macOS-15.6-arm64-arm-64bit-Mach-O",
+  "code_sha256": {
+    "ring_coverage.py": "60f6a52526a80b3dd7201a8a86f329104c0a253e15ca62ffe0a613b1d85d0d86",
+    "ring_experiments.py": "8fe4273d6f1b72cb4dbb134dbf40cd0677bae1c935672d21b1c9c2af7990cb8a",
+    "policies.py": "bbbbb978182ee36f8417b865681f94d9aeb2da32a4bbd63c13efab654f57ae42",
+    "geometry.py": "513bbabd4092b7aa98c1bee46380be2ca4ae3857232854d7cd87dcfeb835c9a6",
+    "intelligent.py": "63aa0d5d05e6c8a893536f62ddb64517730a360ec5251068930203cf38100445",
+    "client.py": "f6fd4293bca4b9f9dbeed610dc0c1294d7bd2975032f47e3f59fb4e2cc567dd6",
+    "coverage.py": "35bcf544a6908eefcd7e98321216bea8f433d1fbe59feb26f34670c7e6e9949c",
+    "peer_benchmark.py": "bf868d03493d350253c0a0e7e3d76c1572c88e942c4bac531ff9098e6389b3e9",
+    "metaheuristic_experiments.py": "141ae48e45839fb71eb926563f8bcae1487824b8743103062ef65d8e4c8b4ad6",
+    "adaptive_routes.py": "dd07f0c9df4aae7e0e240dfb244c74b14d5f0c0b90686f59a63ea68021477b65",
+    "route_algorithms.py": "40838e471da2e6d09ed995563bc1512ad8195dbcd0114bb2de1c1afbff1f39f7"
+  },
+  "official_requests": 0,
+  "hidden_state_to_policy": false,
+  "count_to_policy": false,
+  "cpu_threads": 1
+}

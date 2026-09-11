@@ -1,0 +1,49 @@
+{
+  "runs": [
+    {
+      "run": "deferred-scans",
+      "scored": 2232,
+      "all_cleared": 2232,
+      "active_historical_executions": 0,
+      "historical_cuts": 0,
+      "deferred_skips": 16954,
+      "pair_skips": 289
+    },
+    {
+      "run": "batched-history",
+      "scored": 930,
+      "all_cleared": 930,
+      "active_historical_executions": 660,
+      "historical_cuts": 4006,
+      "deferred_skips": 0,
+      "pair_skips": 0
+    },
+    {
+      "run": "cheap-prediction",
+      "scored": 1116,
+      "all_cleared": 1116,
+      "active_historical_executions": 0,
+      "historical_cuts": 0,
+      "deferred_skips": 22362,
+      "pair_skips": 578
+    },
+    {
+      "run": "deferred-confirmation",
+      "scored": 3900,
+      "all_cleared": 3900,
+      "active_historical_executions": 294,
+      "historical_cuts": 1568,
+      "deferred_skips": 33831,
+      "pair_skips": 776
+    }
+  ],
+  "new_scored_executions": 8178,
+  "total_scored_executions": 51894,
+  "previous_goal_turn": "progress",
+  "current_goal_turn": "progress",
+  "goal_status": "active",
+  "ordinary_current_batch_thresholds_met": false,
+  "unresolved": "All-metric/pointwise superiority over competing routes, stable cross-batch 240/460, official comparison and complete peer source remain unestablished",
+  "scored_execution_count": 0,
+  "official_calls": 0
+}

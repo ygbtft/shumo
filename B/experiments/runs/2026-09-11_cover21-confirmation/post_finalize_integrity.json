@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "manifest_sha256": "73ce0cdb498f6560bbbfd57b41cb9994db004ee592e31692d84c31d66144f2f5",
+  "manifest_files": 293,
+  "runs": [
+    {
+      "run": "lean-scan",
+      "scored_rows": 1116,
+      "data_files": 1303
+    },
+    {
+      "run": "public-count-scan",
+      "scored_rows": 744,
+      "data_files": 931
+    },
+    {
+      "run": "cover21-training",
+      "scored_rows": 1860,
+      "data_files": 2143
+    },
+    {
+      "run": "cover21-confirmation",
+      "scored_rows": 3900,
+      "data_files": 4291
+    }
+  ],
+  "nested_data_files": 8668,
+  "total_offline_executions": 59514,
+  "new_scored_executions_verified": 7620,
+  "runtime_checks": 99,
+  "artifact_checks": 7,
+  "launcher_syntax_passed": true,
+  "scored_executions": 0,
+  "official_calls": 0,
+  "note": "Verification reads the closed archive; this record is intentionally outside the manifest it verifies."
+}

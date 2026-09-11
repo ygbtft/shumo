@@ -1,0 +1,97 @@
+{
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    {
+      "problem": 3,
+      "method": "area_return1_7",
+      "mode": "inprocess",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 160,
+      "total_virtual_s": 3172.209291,
+      "wall_s": 0.03480429097544402,
+      "official_calls": 0
+    },
+    {
+      "problem": 3,
+      "method": "area_return1_7",
+      "mode": "owned_loopback_http",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 160,
+      "total_virtual_s": 3172.209291,
+      "wall_s": 0.06331962498370558,
+      "official_calls": 0
+    },
+    {
+      "problem": 3,
+      "method": "expanded_area_return1_7",
+      "mode": "inprocess",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 160,
+      "total_virtual_s": 3214.278266,
+      "wall_s": 0.05496608302928507,
+      "official_calls": 0
+    },
+    {
+      "problem": 3,
+      "method": "expanded_area_return1_7",
+      "mode": "owned_loopback_http",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 160,
+      "total_virtual_s": 3214.278266,
+      "wall_s": 0.06850049999775365,
+      "official_calls": 0
+    },
+    {
+      "problem": 4,
+      "method": "packet_wide5_22",
+      "mode": "inprocess",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 281,
+      "total_virtual_s": 6261.730534,
+      "wall_s": 0.07747454202035442,
+      "official_calls": 0
+    },
+    {
+      "problem": 4,
+      "method": "packet_wide5_22",
+      "mode": "owned_loopback_http",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 281,
+      "total_virtual_s": 6261.730534,
+      "wall_s": 0.10548212501453236,
+      "official_calls": 0
+    },
+    {
+      "problem": 4,
+      "method": "width_uncertainty100_22",
+      "mode": "inprocess",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 263,
+      "total_virtual_s": 5749.974255,
+      "wall_s": 0.07471620797878131,
+      "official_calls": 0
+    },
+    {
+      "problem": 4,
+      "method": "width_uncertainty100_22",
+      "mode": "owned_loopback_http",
+      "all_cleared": true,
+      "cleared": 15,
+      "commands": 263,
+      "total_virtual_s": 5749.974255,
+      "wall_s": 0.09961325000040233,
+      "official_calls": 0
+    }
+  ],
+  "scored_execution_count": 0,
+  "official_calls": 0,
+  "binding": "Only this process's freshly created 127.0.0.1:0 server; no existing service contacted"
+}

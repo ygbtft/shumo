@@ -1,0 +1,16 @@
+80 public-feedback region and clearance replays passed
+All 7620 scored rows and 3900 confirmation physical traces passed
+Expanded/cost 2026-09-11_public-count-scan
+Expanded/cost 2026-09-11_cover21-training
+Expanded/cost 2026-09-11_cover21-confirmation
+948 actual same-decision pairs passed
+{
+  "passed": 99,
+  "failed": 0,
+  "feedback_region_replays": 80,
+  "expanded_deletion_replays": 2871,
+  "exact_computation_pairs": 948,
+  "new_scored_executions": 7620,
+  "official_calls": 0,
+  "wall_s": 109.34211800002959
+}

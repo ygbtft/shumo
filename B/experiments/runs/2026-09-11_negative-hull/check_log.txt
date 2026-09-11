@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/dingdingzai/Desktop/数学建模/B/negative_hull_experiments.py", line 191, in <module>
+    main()
+    ~~~~^^
+  File "/Users/dingdingzai/Desktop/数学建模/B/negative_hull_experiments.py", line 174, in main
+    check()
+    ~~~~~^^
+  File "/Users/dingdingzai/Desktop/数学建模/B/negative_hull_experiments.py", line 114, in check
+    source=Source(1,float(g[0]),float(g[1]),radius,direction)
+  File "<string>", line 8, in __init__
+  File "/Users/dingdingzai/Desktop/数学建模/B/reference/shumo-b/mock/scenario_gen.py", line 29, in __post_init__
+    raise ValueError('source outside arena')
+ValueError: source outside arena
+Passed 533 checks

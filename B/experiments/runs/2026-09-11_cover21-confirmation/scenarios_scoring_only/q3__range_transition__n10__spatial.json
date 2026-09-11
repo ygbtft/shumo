@@ -1,0 +1,95 @@
+{
+  "scenario": {
+    "seed": 3580,
+    "sources": [
+      {
+        "channel": 4,
+        "x": -698.0894833987103,
+        "y": 484.94440214123694,
+        "radius": 1500.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 3,
+        "x": -922.0154528656822,
+        "y": -19.52771971799774,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 5,
+        "x": -791.9650819051105,
+        "y": -601.4241948321096,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 13,
+        "x": -308.06339731156334,
+        "y": -1021.212378016755,
+        "radius": 1500.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 7,
+        "x": 374.7923726812599,
+        "y": -1075.452731929451,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 17,
+        "x": 994.6634469341097,
+        "y": -690.9665337698676,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 16,
+        "x": 1283.0456000721242,
+        "y": 27.17411599311662,
+        "radius": 1500.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 19,
+        "x": 1079.550167513112,
+        "y": 819.8184555253332,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 12,
+        "x": 412.35569327641565,
+        "y": 1366.9353184911772,
+        "radius": 1000.0,
+        "direction_deg": null
+      },
+      {
+        "channel": 20,
+        "x": -493.6289786533665,
+        "y": 1416.4499396143988,
+        "radius": 1500.0,
+        "direction_deg": null
+      }
+    ],
+    "config": {
+      "stress_layout": "range_transition",
+      "source_rng": [
+        42,
+        120,
+        3,
+        4,
+        10
+      ]
+    }
+  },
+  "error": {
+    "model": "adversarial",
+    "length_scale_m": 200.0,
+    "cross_channel": "independent",
+    "adversarial_sign": "spatial",
+    "empirical_samples_deg": [],
+    "empirical_base": "iid"
+  }
+}

@@ -1,0 +1,82 @@
+﻿[
+    {
+        "Name":  "jammers-simulator-full.exe",
+        "ProcessId":  10760,
+        "ParentProcessId":  2216,
+        "SessionId":  2,
+        "ExecutablePath":  "C:\\JammersFull\\jammers-simulator-full.exe",
+        "CommandLine":  "\"C:\\JammersFull\\jammers-simulator-full.exe\"",
+        "WorkingSetSize":  52502528,
+        "PrivatePageCount":  73658368
+    },
+    {
+        "Name":  "msedgewebview2.exe",
+        "ProcessId":  6484,
+        "ParentProcessId":  10760,
+        "SessionId":  2,
+        "ExecutablePath":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "CommandLine":  "\"C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe\" --embedded-browser-webview=1 --webview-exe-name=jammers-simulator-full.exe --webview-exe-version=1.0 --user-data-dir=\"C:\\Users\\flower\\AppData\\Roaming\\jammers-simulator-full.exe\\EBWebView\" --noerrdialogs --embedded-browser-webview-dpi-awareness=2 --disable-features=msSmartScreenProtection --mojo-named-platform-channel-pipe=10760.11752.18381622174146826397 /pfhostedapp:0ca49c191b419b29a0dc8b3def1b819790b57e69",
+        "WorkingSetSize":  192774144,
+        "PrivatePageCount":  86405120
+    },
+    {
+        "Name":  "msedgewebview2.exe",
+        "ProcessId":  6960,
+        "ParentProcessId":  6484,
+        "SessionId":  2,
+        "ExecutablePath":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "CommandLine":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe --type=crashpad-handler --user-data-dir=C:\\Users\\flower\\AppData\\Roaming\\jammers-simulator-full.exe\\EBWebView /prefetch:4 /pfhostedapp:0ca49c191b419b29a0dc8b3def1b819790b57e69 --monitor-self --monitor-self-argument=--type=crashpad-handler --monitor-self-argument=--user-data-dir=C:\\Users\\flower\\AppData\\Roaming\\jammers-simulator-full.exe\\EBWebView --monitor-self-argument=/prefetch:4 --monitor-self-argument=/pfhostedapp:0ca49c191b419b29a0dc8b3def1b819790b57e69 --monitor-self-annotation=ptype=crashpad-handler --database=C:\\Users\\flower\\AppData\\Roaming\\jammers-simulator-full.exe\\EBWebView\\Crashpad --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=151.0.7922.138 --annotation=exe=C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe --annotation=plat=Win64 \"--annotation=prod=Edge WebView2\" --annotation=ver=151.0.4129.86 --initial-client-data=0x1cc,0x1d0,0x1d4,0x1a4,0x1ec,0x7ff8af3e65f0,0x7ff8af3e6600,0x7ff8af3e6610",
+        "WorkingSetSize":  22556672,
+        "PrivatePageCount":  15683584
+    },
+    {
+        "Name":  "msedgewebview2.exe",
+        "ProcessId":  9852,
+        "ParentProcessId":  6960,
+        "SessionId":  2,
+        "ExecutablePath":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "CommandLine":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe --type=crashpad-handler --user-data-dir=C:\\Users\\flower\\AppData\\Roaming\\jammers-simulator-full.exe\\EBWebView /prefetch:4 /pfhostedapp:0ca49c191b419b29a0dc8b3def1b819790b57e69 --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler --database=C:\\Users\\flower\\AppData\\Roaming\\jammers-simulator-full.exe\\EBWebView\\Crashpad --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=151.0.7922.138 --annotation=exe=C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe --annotation=plat=Win64 \"--annotation=prod=Edge WebView2\" --annotation=ver=151.0.4129.86 --initial-client-data=0x260,0x264,0x268,0x25c,0x26c,0x7ff608bcce38,0x7ff608bcce48,0x7ff608bcce58",
+        "WorkingSetSize":  20422656,
+        "PrivatePageCount":  13692928
+    },
+    {
+        "Name":  "msedgewebview2.exe",
+        "ProcessId":  6668,
+        "ParentProcessId":  6484,
+        "SessionId":  2,
+        "ExecutablePath":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "CommandLine":  "\"C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=zh-CN --service-sandbox-type=none --noerrdialogs --user-data-dir=\"C:\\Users\\flower\\AppData\\Roaming\\jammers-simulator-full.exe\\EBWebView\" --webview-exe-name=jammers-simulator-full.exe --webview-exe-version=1.0 --embedded-browser-webview=1 --embedded-browser-webview-dpi-awareness=2 --startup-read-main-dll --metrics-shmem-handle=2464,i,14652220159713220342,551640865478006821,524288 --field-trial-handle=2412,i,14116855984175631698,14849989878113766829,262144 --disable-features=msSmartScreenProtection --variations-seed-version --pseudonymization-salt-handle=2420,i,16887089162288793492,1407701713140339036,4 --trace-process-track-uuid=3190708989122997041 --mojo-platform-channel-handle=2604 /prefetch:11 /pfhostedapp:0ca49c191b419b29a0dc8b3def1b819790b57e69",
+        "WorkingSetSize":  59965440,
+        "PrivatePageCount":  32628736
+    },
+    {
+        "Name":  "msedgewebview2.exe",
+        "ProcessId":  3344,
+        "ParentProcessId":  6484,
+        "SessionId":  2,
+        "ExecutablePath":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "CommandLine":  "\"C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe\" --type=gpu-process --noerrdialogs --user-data-dir=\"C:\\Users\\flower\\AppData\\Roaming\\jammers-simulator-full.exe\\EBWebView\" --webview-exe-name=jammers-simulator-full.exe --webview-exe-version=1.0 --embedded-browser-webview=1 --embedded-browser-webview-dpi-awareness=2 --gpu-preferences=WAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAQAAAAAAAAAADAAAAAAAAADgAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAoAAAAAAAAAAgAAAAAAAAAEAAAAAIAAAABAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --startup-read-main-dll --metrics-shmem-handle=2252,i,14094794700965732399,6172655233715510032,262144 --field-trial-handle=2412,i,14116855984175631698,14849989878113766829,262144 --disable-features=msSmartScreenProtection --variations-seed-version --pseudonymization-salt-handle=2420,i,16887089162288793492,1407701713140339036,4 --trace-process-track-uuid=3190708988185955192 --mojo-platform-channel-handle=2408 /prefetch:2 /pfhostedapp:0ca49c191b419b29a0dc8b3def1b819790b57e69",
+        "WorkingSetSize":  106156032,
+        "PrivatePageCount":  47296512
+    },
+    {
+        "Name":  "msedgewebview2.exe",
+        "ProcessId":  5932,
+        "ParentProcessId":  6484,
+        "SessionId":  2,
+        "ExecutablePath":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "CommandLine":  "\"C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=zh-CN --service-sandbox-type=service --noerrdialogs --user-data-dir=\"C:\\Users\\flower\\AppData\\Roaming\\jammers-simulator-full.exe\\EBWebView\" --webview-exe-name=jammers-simulator-full.exe --webview-exe-version=1.0 --embedded-browser-webview=1 --embedded-browser-webview-dpi-awareness=2 --startup-read-main-dll --metrics-shmem-handle=2968,i,2778598943931119309,10685197733053188909,524288 --field-trial-handle=2412,i,14116855984175631698,14849989878113766829,262144 --disable-features=msSmartScreenProtection --variations-seed-version --pseudonymization-salt-handle=2420,i,16887089162288793492,1407701713140339036,4 --trace-process-track-uuid=3190708990060038890 --mojo-platform-channel-handle=2980 /prefetch:13 /pfhostedapp:0ca49c191b419b29a0dc8b3def1b819790b57e69",
+        "WorkingSetSize":  38641664,
+        "PrivatePageCount":  25620480
+    },
+    {
+        "Name":  "msedgewebview2.exe",
+        "ProcessId":  4204,
+        "ParentProcessId":  6484,
+        "SessionId":  2,
+        "ExecutablePath":  "C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe",
+        "CommandLine":  "\"C:\\JammersFull\\WebView2Runtime\\msedgewebview2.exe\" --type=renderer --noerrdialogs --user-data-dir=\"C:\\Users\\flower\\AppData\\Roaming\\jammers-simulator-full.exe\\EBWebView\" --webview-exe-name=jammers-simulator-full.exe --webview-exe-version=1.0 --embedded-browser-webview=1 --embedded-browser-webview-dpi-awareness=2 --video-capture-use-gpu-memory-buffer --lang=zh-CN --js-flags=--expose-gc --device-scale-factor=2 --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1789042971014629 --launch-time-ticks=1747708334 --ssd-no-pressure-read-main-dll --metrics-shmem-handle=4524,i,8563936305570276892,3863722193150459553,2097152 --field-trial-handle=2412,i,14116855984175631698,14849989878113766829,262144 --disable-features=msSmartScreenProtection --variations-seed-version --pseudonymization-salt-handle=2420,i,16887089162288793492,1407701713140339036,4 --trace-process-track-uuid=3190708990997080739 --mojo-platform-channel-handle=4544 /pfhostedapp:0ca49c191b419b29a0dc8b3def1b819790b57e69 /prefetch:1",
+        "WorkingSetSize":  116436992,
+        "PrivatePageCount":  55029760
+    }
+]

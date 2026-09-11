@@ -1,0 +1,38 @@
+{
+  "instances": 7840,
+  "counterexample": {
+    "probe_angle_deg": 45.0,
+    "true_source": [
+      999.8476941565435,
+      17.452406419831107
+    ],
+    "anchor": [
+      0.0,
+      0.0
+    ],
+    "received_deg": 0.0,
+    "legal_first_error_deg": -1.0,
+    "radius": 1000.0,
+    "direction_deg": 270.0,
+    "length": 999.7477093871279,
+    "probes": [
+      [
+        999.7477093871279,
+        999.7477093871279
+      ],
+      [
+        999.7477093871279,
+        -999.7477093871279
+      ]
+    ],
+    "distances": [
+      982.2953080558653,
+      1017.2001207209155
+    ]
+  },
+  "source_distance_upper_m": 1734.3602086456358,
+  "first_wedge_mec_upper_m": 751.9848735180782,
+  "paired_safe_angle_limit_deg": 44.49,
+  "wide_virtual_upper_bound_s": 335136.0,
+  "instruction_upper_bound": 9766
+}

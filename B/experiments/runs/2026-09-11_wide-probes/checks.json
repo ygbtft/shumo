@@ -1,0 +1,1624 @@
+{
+  "passed": 285,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "wide_pair_distance_and_closed_halfplane_against_unchanged_backend",
+      "passed": true,
+      "instances": 7840
+    },
+    {
+      "test": "unsafe_45_degree_counterexample_retained",
+      "passed": true
+    },
+    {
+      "test": "new_action_domain_and_finite_time_bounds",
+      "passed": true,
+      "virtual_s": 335136.0
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__iid__67",
+      "passed": true,
+      "commands": 382
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__iid__68",
+      "passed": true,
+      "commands": 329
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__iid__69",
+      "passed": true,
+      "commands": 267
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__iid__70",
+      "passed": true,
+      "commands": 328
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__iid__71",
+      "passed": true,
+      "commands": 369
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__smooth__67",
+      "passed": true,
+      "commands": 351
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__smooth__68",
+      "passed": true,
+      "commands": 300
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__smooth__69",
+      "passed": true,
+      "commands": 336
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__smooth__70",
+      "passed": true,
+      "commands": 340
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__smooth__71",
+      "passed": true,
+      "commands": 363
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-positive__67",
+      "passed": true,
+      "commands": 361
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-positive__68",
+      "passed": true,
+      "commands": 326
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-positive__69",
+      "passed": true,
+      "commands": 325
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-positive__70",
+      "passed": true,
+      "commands": 352
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-positive__71",
+      "passed": true,
+      "commands": 340
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-negative__67",
+      "passed": true,
+      "commands": 316
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-negative__68",
+      "passed": true,
+      "commands": 319
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-negative__69",
+      "passed": true,
+      "commands": 333
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-negative__70",
+      "passed": true,
+      "commands": 345
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-negative__71",
+      "passed": true,
+      "commands": 335
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-spatial__67",
+      "passed": true,
+      "commands": 317
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-spatial__68",
+      "passed": true,
+      "commands": 328
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-spatial__69",
+      "passed": true,
+      "commands": 333
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-spatial__70",
+      "passed": true,
+      "commands": 328
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_uniform__adversarial-spatial__71",
+      "passed": true,
+      "commands": 339
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__iid__67",
+      "passed": true,
+      "commands": 362
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__iid__68",
+      "passed": true,
+      "commands": 331
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__iid__69",
+      "passed": true,
+      "commands": 318
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__iid__70",
+      "passed": true,
+      "commands": 347
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__iid__71",
+      "passed": true,
+      "commands": 367
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__smooth__67",
+      "passed": true,
+      "commands": 380
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__smooth__68",
+      "passed": true,
+      "commands": 321
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__smooth__69",
+      "passed": true,
+      "commands": 339
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__smooth__70",
+      "passed": true,
+      "commands": 347
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__smooth__71",
+      "passed": true,
+      "commands": 392
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-positive__67",
+      "passed": true,
+      "commands": 374
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-positive__68",
+      "passed": true,
+      "commands": 326
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-positive__69",
+      "passed": true,
+      "commands": 332
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-positive__70",
+      "passed": true,
+      "commands": 348
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-positive__71",
+      "passed": true,
+      "commands": 371
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-negative__67",
+      "passed": true,
+      "commands": 383
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-negative__68",
+      "passed": true,
+      "commands": 325
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-negative__69",
+      "passed": true,
+      "commands": 315
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-negative__70",
+      "passed": true,
+      "commands": 347
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-negative__71",
+      "passed": true,
+      "commands": 385
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-spatial__67",
+      "passed": true,
+      "commands": 369
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-spatial__68",
+      "passed": true,
+      "commands": 315
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-spatial__69",
+      "passed": true,
+      "commands": 334
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-spatial__70",
+      "passed": true,
+      "commands": 346
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_edge__adversarial-spatial__71",
+      "passed": true,
+      "commands": 366
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__iid__67",
+      "passed": true,
+      "commands": 312
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__iid__68",
+      "passed": true,
+      "commands": 306
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__iid__69",
+      "passed": true,
+      "commands": 282
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__iid__70",
+      "passed": true,
+      "commands": 410
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__iid__71",
+      "passed": true,
+      "commands": 322
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__smooth__67",
+      "passed": true,
+      "commands": 351
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__smooth__68",
+      "passed": true,
+      "commands": 313
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__smooth__69",
+      "passed": true,
+      "commands": 267
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__smooth__70",
+      "passed": true,
+      "commands": 350
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__smooth__71",
+      "passed": true,
+      "commands": 292
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-positive__67",
+      "passed": true,
+      "commands": 350
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-positive__68",
+      "passed": true,
+      "commands": 249
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-positive__69",
+      "passed": true,
+      "commands": 250
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-positive__70",
+      "passed": true,
+      "commands": 351
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-positive__71",
+      "passed": true,
+      "commands": 305
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-negative__67",
+      "passed": true,
+      "commands": 347
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-negative__68",
+      "passed": true,
+      "commands": 277
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-negative__69",
+      "passed": true,
+      "commands": 288
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-negative__70",
+      "passed": true,
+      "commands": 342
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-negative__71",
+      "passed": true,
+      "commands": 325
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-spatial__67",
+      "passed": true,
+      "commands": 315
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-spatial__68",
+      "passed": true,
+      "commands": 246
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-spatial__69",
+      "passed": true,
+      "commands": 261
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-spatial__70",
+      "passed": true,
+      "commands": 353
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_clustered__adversarial-spatial__71",
+      "passed": true,
+      "commands": 268
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_boundary_outward_min__n10__positive",
+      "passed": true,
+      "commands": 425
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_boundary_outward_min__n10__negative",
+      "passed": true,
+      "commands": 422
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "commands": 416
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_boundary_outward_min__n16__positive",
+      "passed": true,
+      "commands": 386
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "commands": 394
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "commands": 388
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_near_collinear_min__n10__positive",
+      "passed": true,
+      "commands": 358
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_near_collinear_min__n10__negative",
+      "passed": true,
+      "commands": 365
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "commands": 357
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_near_collinear_min__n16__positive",
+      "passed": true,
+      "commands": 334
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_near_collinear_min__n16__negative",
+      "passed": true,
+      "commands": 314
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_near_collinear_min__n16__spatial",
+      "passed": true,
+      "commands": 320
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_unknown_count_late__n10__positive",
+      "passed": true,
+      "commands": 321
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_unknown_count_late__n10__negative",
+      "passed": true,
+      "commands": 340
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "commands": 331
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_unknown_count_late__n16__positive",
+      "passed": true,
+      "commands": 235
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_unknown_count_late__n16__negative",
+      "passed": true,
+      "commands": 251
+    },
+    {
+      "test": "narrow_angle_exact_feedback_quarter22_unknown_count_late__n16__spatial",
+      "passed": true,
+      "commands": 227
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__iid__67",
+      "passed": true,
+      "commands": 379
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__iid__68",
+      "passed": true,
+      "commands": 303
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__iid__69",
+      "passed": true,
+      "commands": 257
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__iid__70",
+      "passed": true,
+      "commands": 340
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__iid__71",
+      "passed": true,
+      "commands": 330
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__smooth__67",
+      "passed": true,
+      "commands": 360
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__smooth__68",
+      "passed": true,
+      "commands": 321
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__smooth__69",
+      "passed": true,
+      "commands": 276
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__smooth__70",
+      "passed": true,
+      "commands": 339
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__smooth__71",
+      "passed": true,
+      "commands": 342
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-positive__67",
+      "passed": true,
+      "commands": 353
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-positive__68",
+      "passed": true,
+      "commands": 309
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-positive__69",
+      "passed": true,
+      "commands": 316
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-positive__70",
+      "passed": true,
+      "commands": 350
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-positive__71",
+      "passed": true,
+      "commands": 337
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-negative__67",
+      "passed": true,
+      "commands": 361
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-negative__68",
+      "passed": true,
+      "commands": 319
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-negative__69",
+      "passed": true,
+      "commands": 327
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-negative__70",
+      "passed": true,
+      "commands": 342
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-negative__71",
+      "passed": true,
+      "commands": 355
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-spatial__67",
+      "passed": true,
+      "commands": 357
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-spatial__68",
+      "passed": true,
+      "commands": 339
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-spatial__69",
+      "passed": true,
+      "commands": 315
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-spatial__70",
+      "passed": true,
+      "commands": 350
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_uniform__adversarial-spatial__71",
+      "passed": true,
+      "commands": 343
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__iid__67",
+      "passed": true,
+      "commands": 343
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__iid__68",
+      "passed": true,
+      "commands": 328
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__iid__69",
+      "passed": true,
+      "commands": 312
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__iid__70",
+      "passed": true,
+      "commands": 332
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__iid__71",
+      "passed": true,
+      "commands": 367
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__smooth__67",
+      "passed": true,
+      "commands": 372
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__smooth__68",
+      "passed": true,
+      "commands": 324
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__smooth__69",
+      "passed": true,
+      "commands": 309
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__smooth__70",
+      "passed": true,
+      "commands": 331
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__smooth__71",
+      "passed": true,
+      "commands": 387
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-positive__67",
+      "passed": true,
+      "commands": 359
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-positive__68",
+      "passed": true,
+      "commands": 311
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-positive__69",
+      "passed": true,
+      "commands": 302
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-positive__70",
+      "passed": true,
+      "commands": 342
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-positive__71",
+      "passed": true,
+      "commands": 373
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-negative__67",
+      "passed": true,
+      "commands": 380
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-negative__68",
+      "passed": true,
+      "commands": 318
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-negative__69",
+      "passed": true,
+      "commands": 306
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-negative__70",
+      "passed": true,
+      "commands": 332
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-negative__71",
+      "passed": true,
+      "commands": 381
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-spatial__67",
+      "passed": true,
+      "commands": 351
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-spatial__68",
+      "passed": true,
+      "commands": 327
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-spatial__69",
+      "passed": true,
+      "commands": 326
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-spatial__70",
+      "passed": true,
+      "commands": 338
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_edge__adversarial-spatial__71",
+      "passed": true,
+      "commands": 362
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__iid__67",
+      "passed": true,
+      "commands": 349
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__iid__68",
+      "passed": true,
+      "commands": 320
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__iid__69",
+      "passed": true,
+      "commands": 293
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__iid__70",
+      "passed": true,
+      "commands": 410
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__iid__71",
+      "passed": true,
+      "commands": 315
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__smooth__67",
+      "passed": true,
+      "commands": 344
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__smooth__68",
+      "passed": true,
+      "commands": 275
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__smooth__69",
+      "passed": true,
+      "commands": 266
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__smooth__70",
+      "passed": true,
+      "commands": 336
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__smooth__71",
+      "passed": true,
+      "commands": 396
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-positive__67",
+      "passed": true,
+      "commands": 349
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-positive__68",
+      "passed": true,
+      "commands": 239
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-positive__69",
+      "passed": true,
+      "commands": 230
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-positive__70",
+      "passed": true,
+      "commands": 338
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-positive__71",
+      "passed": true,
+      "commands": 386
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-negative__67",
+      "passed": true,
+      "commands": 344
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-negative__68",
+      "passed": true,
+      "commands": 293
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-negative__69",
+      "passed": true,
+      "commands": 288
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-negative__70",
+      "passed": true,
+      "commands": 348
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-negative__71",
+      "passed": true,
+      "commands": 330
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-spatial__67",
+      "passed": true,
+      "commands": 351
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-spatial__68",
+      "passed": true,
+      "commands": 241
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-spatial__69",
+      "passed": true,
+      "commands": 261
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-spatial__70",
+      "passed": true,
+      "commands": 336
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_clustered__adversarial-spatial__71",
+      "passed": true,
+      "commands": 268
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_boundary_outward_min__n10__positive",
+      "passed": true,
+      "commands": 425
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_boundary_outward_min__n10__negative",
+      "passed": true,
+      "commands": 422
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "commands": 416
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_boundary_outward_min__n16__positive",
+      "passed": true,
+      "commands": 386
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "commands": 394
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_boundary_outward_min__n16__spatial",
+      "passed": true,
+      "commands": 388
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_near_collinear_min__n10__positive",
+      "passed": true,
+      "commands": 376
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_near_collinear_min__n10__negative",
+      "passed": true,
+      "commands": 389
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "commands": 345
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_near_collinear_min__n16__positive",
+      "passed": true,
+      "commands": 286
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_near_collinear_min__n16__negative",
+      "passed": true,
+      "commands": 299
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_near_collinear_min__n16__spatial",
+      "passed": true,
+      "commands": 293
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_unknown_count_late__n10__positive",
+      "passed": true,
+      "commands": 338
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_unknown_count_late__n10__negative",
+      "passed": true,
+      "commands": 422
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "commands": 342
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_unknown_count_late__n16__positive",
+      "passed": true,
+      "commands": 232
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_unknown_count_late__n16__negative",
+      "passed": true,
+      "commands": 233
+    },
+    {
+      "test": "narrow_angle_exact_feedback_packet_center22_unknown_count_late__n16__spatial",
+      "passed": true,
+      "commands": 220
+    },
+    {
+      "test": "complete_protocol_wide3_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7613.678118,
+      "measurements": 39,
+      "negatives": 30
+    },
+    {
+      "test": "complete_protocol_wide3_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8335.427713,
+      "measurements": 62,
+      "negatives": 43
+    },
+    {
+      "test": "complete_protocol_wide3_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 6929.727318,
+      "measurements": 24,
+      "negatives": 11
+    },
+    {
+      "test": "complete_protocol_wide3_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 5270.374188,
+      "measurements": 33,
+      "negatives": 12
+    },
+    {
+      "test": "complete_protocol_wide3_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 6707.286556,
+      "measurements": 27,
+      "negatives": 12
+    },
+    {
+      "test": "complete_protocol_wide3_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 7085.130241,
+      "measurements": 59,
+      "negatives": 28
+    },
+    {
+      "test": "complete_protocol_packet_wide3_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7613.678118,
+      "measurements": 39,
+      "negatives": 30
+    },
+    {
+      "test": "complete_protocol_packet_wide3_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8335.427713,
+      "measurements": 62,
+      "negatives": 43
+    },
+    {
+      "test": "complete_protocol_packet_wide3_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 6767.397427,
+      "measurements": 15,
+      "negatives": 2
+    },
+    {
+      "test": "complete_protocol_packet_wide3_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 5165.356079,
+      "measurements": 22,
+      "negatives": 11
+    },
+    {
+      "test": "complete_protocol_packet_wide3_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 7796.708878,
+      "measurements": 22,
+      "negatives": 10
+    },
+    {
+      "test": "complete_protocol_packet_wide3_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 5114.254807,
+      "measurements": 33,
+      "negatives": 14
+    },
+    {
+      "test": "complete_protocol_wide5_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7662.731551,
+      "measurements": 36,
+      "negatives": 25
+    },
+    {
+      "test": "complete_protocol_wide5_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8438.075186,
+      "measurements": 60,
+      "negatives": 39
+    },
+    {
+      "test": "complete_protocol_wide5_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 6856.695302,
+      "measurements": 21,
+      "negatives": 11
+    },
+    {
+      "test": "complete_protocol_wide5_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 4975.840205,
+      "measurements": 26,
+      "negatives": 9
+    },
+    {
+      "test": "complete_protocol_wide5_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 7084.853248,
+      "measurements": 26,
+      "negatives": 11
+    },
+    {
+      "test": "complete_protocol_wide5_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 6579.200833,
+      "measurements": 45,
+      "negatives": 23
+    },
+    {
+      "test": "complete_protocol_packet_wide5_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7662.731551,
+      "measurements": 36,
+      "negatives": 25
+    },
+    {
+      "test": "complete_protocol_packet_wide5_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8438.075186,
+      "measurements": 60,
+      "negatives": 39
+    },
+    {
+      "test": "complete_protocol_packet_wide5_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7055.830534,
+      "measurements": 9,
+      "negatives": 3
+    },
+    {
+      "test": "complete_protocol_packet_wide5_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 6331.883584,
+      "measurements": 13,
+      "negatives": 7
+    },
+    {
+      "test": "complete_protocol_packet_wide5_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 6593.872357,
+      "measurements": 24,
+      "negatives": 11
+    },
+    {
+      "test": "complete_protocol_packet_wide5_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 5019.849324,
+      "measurements": 21,
+      "negatives": 7
+    },
+    {
+      "test": "complete_protocol_wide10_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7831.863533,
+      "measurements": 34,
+      "negatives": 22
+    },
+    {
+      "test": "complete_protocol_wide10_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8604.430826,
+      "measurements": 49,
+      "negatives": 33
+    },
+    {
+      "test": "complete_protocol_wide10_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 6813.049979,
+      "measurements": 15,
+      "negatives": 5
+    },
+    {
+      "test": "complete_protocol_wide10_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 5120.753044,
+      "measurements": 23,
+      "negatives": 7
+    },
+    {
+      "test": "complete_protocol_wide10_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 6728.205697,
+      "measurements": 23,
+      "negatives": 11
+    },
+    {
+      "test": "complete_protocol_wide10_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 6239.388783,
+      "measurements": 33,
+      "negatives": 14
+    },
+    {
+      "test": "complete_protocol_packet_wide10_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7831.863533,
+      "measurements": 34,
+      "negatives": 22
+    },
+    {
+      "test": "complete_protocol_packet_wide10_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8604.430826,
+      "measurements": 49,
+      "negatives": 33
+    },
+    {
+      "test": "complete_protocol_packet_wide10_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 6813.049979,
+      "measurements": 15,
+      "negatives": 5
+    },
+    {
+      "test": "complete_protocol_packet_wide10_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 5945.456206,
+      "measurements": 26,
+      "negatives": 7
+    },
+    {
+      "test": "complete_protocol_packet_wide10_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 6443.32574,
+      "measurements": 19,
+      "negatives": 8
+    },
+    {
+      "test": "complete_protocol_packet_wide10_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 7363.19896,
+      "measurements": 25,
+      "negatives": 12
+    },
+    {
+      "test": "complete_protocol_wide15_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7809.860992,
+      "measurements": 25,
+      "negatives": 14
+    },
+    {
+      "test": "complete_protocol_wide15_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8720.145007,
+      "measurements": 41,
+      "negatives": 26
+    },
+    {
+      "test": "complete_protocol_wide15_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7045.867433,
+      "measurements": 18,
+      "negatives": 9
+    },
+    {
+      "test": "complete_protocol_wide15_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 5098.321228,
+      "measurements": 21,
+      "negatives": 6
+    },
+    {
+      "test": "complete_protocol_wide15_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 6595.761547,
+      "measurements": 17,
+      "negatives": 7
+    },
+    {
+      "test": "complete_protocol_wide15_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 6359.266922,
+      "measurements": 27,
+      "negatives": 9
+    },
+    {
+      "test": "complete_protocol_packet_wide15_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7809.860992,
+      "measurements": 25,
+      "negatives": 14
+    },
+    {
+      "test": "complete_protocol_packet_wide15_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8720.145007,
+      "measurements": 41,
+      "negatives": 26
+    },
+    {
+      "test": "complete_protocol_packet_wide15_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7045.867433,
+      "measurements": 18,
+      "negatives": 9
+    },
+    {
+      "test": "complete_protocol_packet_wide15_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 6511.929247,
+      "measurements": 14,
+      "negatives": 6
+    },
+    {
+      "test": "complete_protocol_packet_wide15_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 6561.922083,
+      "measurements": 18,
+      "negatives": 8
+    },
+    {
+      "test": "complete_protocol_packet_wide15_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 5870.964914,
+      "measurements": 25,
+      "negatives": 9
+    },
+    {
+      "test": "complete_protocol_wide20_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7871.810662,
+      "measurements": 20,
+      "negatives": 9
+    },
+    {
+      "test": "complete_protocol_wide20_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 9058.979098,
+      "measurements": 40,
+      "negatives": 25
+    },
+    {
+      "test": "complete_protocol_wide20_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7168.942615,
+      "measurements": 17,
+      "negatives": 8
+    },
+    {
+      "test": "complete_protocol_wide20_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 5402.173564,
+      "measurements": 20,
+      "negatives": 5
+    },
+    {
+      "test": "complete_protocol_wide20_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 7048.389301,
+      "measurements": 20,
+      "negatives": 9
+    },
+    {
+      "test": "complete_protocol_wide20_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 6337.311963,
+      "measurements": 26,
+      "negatives": 12
+    },
+    {
+      "test": "complete_protocol_packet_wide20_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7871.810662,
+      "measurements": 20,
+      "negatives": 9
+    },
+    {
+      "test": "complete_protocol_packet_wide20_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8473.944959,
+      "measurements": 38,
+      "negatives": 24
+    },
+    {
+      "test": "complete_protocol_packet_wide20_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7168.942615,
+      "measurements": 17,
+      "negatives": 8
+    },
+    {
+      "test": "complete_protocol_packet_wide20_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 6771.103982,
+      "measurements": 14,
+      "negatives": 5
+    },
+    {
+      "test": "complete_protocol_packet_wide20_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 6886.857891,
+      "measurements": 17,
+      "negatives": 10
+    },
+    {
+      "test": "complete_protocol_packet_wide20_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 6092.214182,
+      "measurements": 23,
+      "negatives": 10
+    },
+    {
+      "test": "complete_protocol_wide30_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 8220.266027,
+      "measurements": 16,
+      "negatives": 5
+    },
+    {
+      "test": "complete_protocol_wide30_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 9569.299299,
+      "measurements": 30,
+      "negatives": 15
+    },
+    {
+      "test": "complete_protocol_wide30_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7464.252199,
+      "measurements": 15,
+      "negatives": 7
+    },
+    {
+      "test": "complete_protocol_wide30_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 5638.25281,
+      "measurements": 17,
+      "negatives": 5
+    },
+    {
+      "test": "complete_protocol_wide30_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 7260.384212,
+      "measurements": 19,
+      "negatives": 10
+    },
+    {
+      "test": "complete_protocol_wide30_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 6391.750304,
+      "measurements": 19,
+      "negatives": 7
+    },
+    {
+      "test": "complete_protocol_packet_wide30_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7522.008387,
+      "measurements": 15,
+      "negatives": 4
+    },
+    {
+      "test": "complete_protocol_packet_wide30_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 9014.147998,
+      "measurements": 31,
+      "negatives": 16
+    },
+    {
+      "test": "complete_protocol_packet_wide30_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7466.71977,
+      "measurements": 15,
+      "negatives": 7
+    },
+    {
+      "test": "complete_protocol_packet_wide30_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 6796.484009,
+      "measurements": 14,
+      "negatives": 5
+    },
+    {
+      "test": "complete_protocol_packet_wide30_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 6827.344735,
+      "measurements": 13,
+      "negatives": 8
+    },
+    {
+      "test": "complete_protocol_packet_wide30_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 6200.186273,
+      "measurements": 17,
+      "negatives": 7
+    },
+    {
+      "test": "complete_protocol_packet_decay20_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 7938.159099,
+      "measurements": 26,
+      "negatives": 15
+    },
+    {
+      "test": "complete_protocol_packet_decay20_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8482.339516,
+      "measurements": 42,
+      "negatives": 28
+    },
+    {
+      "test": "complete_protocol_packet_decay20_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7130.370201,
+      "measurements": 18,
+      "negatives": 9
+    },
+    {
+      "test": "complete_protocol_packet_decay20_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 6627.46487,
+      "measurements": 13,
+      "negatives": 4
+    },
+    {
+      "test": "complete_protocol_packet_decay20_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 6732.24442,
+      "measurements": 17,
+      "negatives": 10
+    },
+    {
+      "test": "complete_protocol_packet_decay20_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 5928.696039,
+      "measurements": 21,
+      "negatives": 8
+    },
+    {
+      "test": "complete_protocol_packet_first30_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 8146.866662,
+      "measurements": 16,
+      "negatives": 5
+    },
+    {
+      "test": "complete_protocol_packet_first30_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 9474.520428,
+      "measurements": 37,
+      "negatives": 22
+    },
+    {
+      "test": "complete_protocol_packet_first30_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7154.291386,
+      "measurements": 16,
+      "negatives": 6
+    },
+    {
+      "test": "complete_protocol_packet_first30_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 6677.439573,
+      "measurements": 15,
+      "negatives": 4
+    },
+    {
+      "test": "complete_protocol_packet_first30_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 6461.537948,
+      "measurements": 15,
+      "negatives": 9
+    },
+    {
+      "test": "complete_protocol_packet_first30_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 6201.281995,
+      "measurements": 19,
+      "negatives": 8
+    },
+    {
+      "test": "complete_protocol_packet_f015_15_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 6828.937878,
+      "measurements": 21,
+      "negatives": 11
+    },
+    {
+      "test": "complete_protocol_packet_f015_15_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 8190.930091,
+      "measurements": 38,
+      "negatives": 23
+    },
+    {
+      "test": "complete_protocol_packet_f015_15_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7582.520797,
+      "measurements": 16,
+      "negatives": 3
+    },
+    {
+      "test": "complete_protocol_packet_f015_15_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 6173.720548,
+      "measurements": 10,
+      "negatives": 2
+    },
+    {
+      "test": "complete_protocol_packet_f015_15_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 7198.917135,
+      "measurements": 14,
+      "negatives": 5
+    },
+    {
+      "test": "complete_protocol_packet_f015_15_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 7651.528097,
+      "measurements": 22,
+      "negatives": 7
+    },
+    {
+      "test": "complete_protocol_wide_f05_10_22_boundary_outward_min__n10__spatial",
+      "passed": true,
+      "total_s": 9100.119365,
+      "measurements": 55,
+      "negatives": 42
+    },
+    {
+      "test": "complete_protocol_wide_f05_10_22_boundary_outward_min__n16__negative",
+      "passed": true,
+      "total_s": 10517.832753,
+      "measurements": 78,
+      "negatives": 59
+    },
+    {
+      "test": "complete_protocol_wide_f05_10_22_near_collinear_min__n10__spatial",
+      "passed": true,
+      "total_s": 7050.75221,
+      "measurements": 17,
+      "negatives": 11
+    },
+    {
+      "test": "complete_protocol_wide_f05_10_22_near_collinear_min__n16__negative",
+      "passed": true,
+      "total_s": 5090.086927,
+      "measurements": 26,
+      "negatives": 12
+    },
+    {
+      "test": "complete_protocol_wide_f05_10_22_unknown_count_late__n10__spatial",
+      "passed": true,
+      "total_s": 7045.362421,
+      "measurements": 32,
+      "negatives": 23
+    },
+    {
+      "test": "complete_protocol_wide_f05_10_22_unknown_count_late__n16__negative",
+      "passed": true,
+      "total_s": 6410.96534,
+      "measurements": 39,
+      "negatives": 28
+    }
+  ],
+  "scored_execution_count": 0,
+  "official_calls": 0
+}

@@ -1,0 +1,85 @@
+
+==================================== ERRORS ====================================
+_____________ ERROR collecting models/q1q2/tests/test_adapters.py ______________
+ImportError while importing test module '/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/tests/test_adapters.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+models/q1q2/tests/test_adapters.py:5: in <module>
+    from mock.strategy import Action, Observation
+E   ModuleNotFoundError: No module named 'mock'
+_______ ERROR collecting models/q1q2/tests/test_benchmark_regressions.py _______
+ImportError while importing test module '/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/tests/test_benchmark_regressions.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+models/q1q2/tests/test_benchmark_regressions.py:11: in <module>
+    from models.q1q2.geometry import (BearingMeasurement, HalfPlane, NumericPolicy,
+models/q1q2/geometry.py:11: in <module>
+    from mock.geometry import bearing, angle_delta, distance, advance
+E   ModuleNotFoundError: No module named 'mock'
+______________ ERROR collecting models/q1q2/tests/test_circle.py _______________
+ImportError while importing test module '/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/tests/test_circle.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+models/q1q2/tests/test_circle.py:5: in <module>
+    from models.q1q2.geometry import NumericPolicy, Region, RegionKind, convex_hull, diameter
+models/q1q2/geometry.py:11: in <module>
+    from mock.geometry import bearing, angle_delta, distance, advance
+E   ModuleNotFoundError: No module named 'mock'
+_____________ ERROR collecting models/q1q2/tests/test_feasible.py ______________
+ImportError while importing test module '/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/tests/test_feasible.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+models/q1q2/tests/test_feasible.py:4: in <module>
+    from models.q1q2.geometry import BearingMeasurement as Obs, NumericPolicy
+models/q1q2/geometry.py:11: in <module>
+    from mock.geometry import bearing, angle_delta, distance, advance
+E   ModuleNotFoundError: No module named 'mock'
+_____________ ERROR collecting models/q1q2/tests/test_geometry.py ______________
+ImportError while importing test module '/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/tests/test_geometry.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+models/q1q2/tests/test_geometry.py:5: in <module>
+    from models.q1q2.geometry import (BearingMeasurement as Obs, NumericPolicy, HalfPlane as HP,
+models/q1q2/geometry.py:11: in <module>
+    from mock.geometry import bearing, angle_delta, distance, advance
+E   ModuleNotFoundError: No module named 'mock'
+____________ ERROR collecting models/q1q2/tests/test_mock_local.py _____________
+ImportError while importing test module '/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/tests/test_mock_local.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+models/q1q2/tests/test_mock_local.py:4: in <module>
+    from models.q1q2.geometry import BearingMeasurement, NumericPolicy
+models/q1q2/geometry.py:11: in <module>
+    from mock.geometry import bearing, angle_delta, distance, advance
+E   ModuleNotFoundError: No module named 'mock'
+________________ ERROR collecting models/q1q2/tests/test_q2.py _________________
+ImportError while importing test module '/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/tests/test_q2.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+models/q1q2/tests/test_q2.py:5: in <module>
+    from models.q1q2.geometry import NumericPolicy, BearingMeasurement as Obs
+models/q1q2/geometry.py:11: in <module>
+    from mock.geometry import bearing, angle_delta, distance, advance
+E   ModuleNotFoundError: No module named 'mock'
+________ ERROR collecting models/q1q2/tests/test_review_regressions.py _________
+ImportError while importing test module '/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/tests/test_review_regressions.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+models/q1q2/tests/test_review_regressions.py:6: in <module>
+    from models.q1q2 import q2, run
+models/q1q2/q2.py:9: in <module>
+    from .geometry import (Point2, NumericPolicy, Region, RegionKind, point, unit, distance,
+models/q1q2/geometry.py:11: in <module>
+    from mock.geometry import bearing, angle_delta, distance, advance
+E   ModuleNotFoundError: No module named 'mock'
+=========================== short test summary info ============================
+ERROR models/q1q2/tests/test_adapters.py
+ERROR models/q1q2/tests/test_benchmark_regressions.py
+ERROR models/q1q2/tests/test_circle.py
+ERROR models/q1q2/tests/test_feasible.py
+ERROR models/q1q2/tests/test_geometry.py
+ERROR models/q1q2/tests/test_mock_local.py
+ERROR models/q1q2/tests/test_q2.py
+ERROR models/q1q2/tests/test_review_regressions.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 8 errors during collection !!!!!!!!!!!!!!!!!!!!
+8 errors in 0.25s

@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "test": "feedback_only_replay_q3_active_2opt",
+      "passed": true,
+      "requests": 200,
+      "truth_available": false
+    },
+    {
+      "test": "feedback_only_replay_q4_active_2opt",
+      "passed": true,
+      "requests": 348,
+      "truth_available": false
+    },
+    {
+      "test": "feedback_only_replay_q4_square_cropped_2opt",
+      "passed": true,
+      "requests": 609,
+      "truth_available": false
+    },
+    {
+      "test": "old_probe_signed_zero_location_key",
+      "passed": false,
+      "expected": "Same physical location must give the same direction",
+      "plus_zero_feedback": {
+        "result": "direction",
+        "angle": 359.87
+      },
+      "minus_zero_feedback": {
+        "result": "direction",
+        "angle": 359.94
+      },
+      "interpretation": "Confirmed old-probe corner case if false; the new simulator and peer merge signed zeros"
+    },
+    {
+      "test": "original_documents_and_public_probe_unchanged",
+      "passed": true,
+      "files": 4
+    },
+    {
+      "test": "upstream_clone_unchanged_shumo-b",
+      "passed": true
+    },
+    {
+      "test": "upstream_clone_unchanged_shumo-b-macos-handoff",
+      "passed": true
+    },
+    {
+      "test": "portable_package_offline_q3",
+      "passed": true,
+      "score": {
+        "sources": 10,
+        "cleared": 10,
+        "clear_fraction": 1.0,
+        "all_cleared": true,
+        "total_virtual_s": 10050.425502,
+        "per_source_s": 1005.0425502,
+        "move_m": 42567.12751431598,
+        "measurements": 251,
+        "clear_calls": 10,
+        "switches": 232,
+        "commands": 263,
+        "missed_channels": []
+      },
+      "windows_tested": false
+    }
+  ],
+  "known_old_probe_bug_count": 1
+}

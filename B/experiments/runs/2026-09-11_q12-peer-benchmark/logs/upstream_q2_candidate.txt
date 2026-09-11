@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/benchmarks/q2_candidate/run.py", line 12, in <module>
+    from ...feasible import PhysicsConfig, Feedback, build_source_set, check_candidate, posterior_contains
+  File "/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/feasible.py", line 7, in <module>
+    from .geometry import (Point2, NumericPolicy, BearingMeasurement, HalfPlane, Region,
+                           point, unit, bearing, angle_delta, distance, wedge_halfplanes,
+                           intersect_halfplanes)
+  File "/Users/dingdingzai/Desktop/数学建模/B/experiments/runs/2026-09-11_q12-peer-benchmark/upstream_worktree/models/q1q2/geometry.py", line 11, in <module>
+    from mock.geometry import bearing, angle_delta, distance, advance
+ModuleNotFoundError: No module named 'mock'

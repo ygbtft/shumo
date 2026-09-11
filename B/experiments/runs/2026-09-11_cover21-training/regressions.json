@@ -1,0 +1,2956 @@
+[
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1355.3670379999994
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 1325.3070710000002
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 1325.3070710000002
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 1321.8564400000005
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 1321.8564400000005
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 1269.1405110000005
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 1269.1405110000005
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 1265.935821
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 1265.935821
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 1236.917833999999
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1217.3670379999994
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 1206.917833999999
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1205.3670379999994
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 1200.917833999999
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1147.2248520000003
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 1135.0164919999997
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 1105.0164919999997
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 1105.0164919999997
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1099.2248520000003
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 1081.2248520000003
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 1003.2287239999996
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 973.2287239999996
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 973.2287239999996
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 957.3460610000002
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 927.3460610000002
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 903.6263140000001
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 893.9837119999993
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 873.6263140000001
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 863.9837119999993
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 832.2762229999998
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 828.6251380000003
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 828.6251380000003
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 828.6251380000003
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 802.2762229999998
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 802.1705669999992
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 793.3462279999994
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 772.1705669999992
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 772.1705669999992
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 763.3462279999994
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 763.3462279999994
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 745.965083
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 745.7584640000005
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 723.7576330000002
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "unknown_count_late__n16__positive",
+    "split": "stress",
+    "delta_s": 723.7576330000002
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 677.591203
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 677.591203
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 673.4020719999999
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 673.4020719999999
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 668.2416430000003
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 666.8662119999999
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "unknown_count_late__n16__negative",
+    "split": "stress",
+    "delta_s": 666.8662119999999
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 654.1485929999999
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 644.4954279999993
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 641.0453459999999
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_29",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 619.7584640000005
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 606.7716909999999
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 606.5707849999999
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 605.9786599999998
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 599.1297350000004
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 576.5707849999999
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 576.1485929999999
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 575.9786599999998
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 575.9786599999998
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 575.3457710000002
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 570.7920670000003
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 569.1297350000004
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 563.0453459999999
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 562.4231140000002
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_29",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 542.2416430000003
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 539.965083
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 539.4739010000003
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 532.4122109999998
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 532.0146009999999
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 523.1313909999999
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 511.49542799999927
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 489.7716909999999
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 480.7716909999999
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 474.14521500000046
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 473.458654
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 467.4871830000002
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 466.5754230000002
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 460.74818099999993
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 452.01265500000045
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_29",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 449.34577100000024
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 446.7920670000003
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 445.3146020000004
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 444.14521500000046
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 444.14521500000046
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 443.6781209999999
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 440.7920670000003
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 437.4871830000002
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 437.4871830000002
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 434.55419099999926
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 419.78667700000005
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 415.3146020000004
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 413.6781209999999
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 411.39191199999914
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 400.3538090000002
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 398.95349799999985
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 390.55778199999986
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 390.1313909999999
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 388.4745219999995
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 386.97066800000084
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 385.82614399999966
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 383.06113300000015
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 374.869154
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 372.9464769999995
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 364.36024499999985
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 361.61659300000065
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 357.4938169999996
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 356.97066800000084
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 356.97066800000084
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 352.42311400000017
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 348.8385609999996
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 347.5754230000002
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 347.5754230000002
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 346.9318889999995
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 342.42311400000017
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 338.2949129999997
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_29",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 334.74818099999993
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 333.41221099999984
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 320.07924099999946
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 319.18122799999946
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 314.04373099999975
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 313.00253900000007
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 308.2949129999997
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 301.5053390000003
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 301.0500810000003
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 299.83313
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 299.51410899999973
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 298.43805900000007
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 290.55419099999926
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 290.33306100000027
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 290.25908999999956
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 287.6608409999999
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 286.01460099999986
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 286.01460099999986
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 284.2949129999997
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 281.44994400000087
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 281.44994400000087
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 278.55419099999926
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 277.00253900000007
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 275.29141100000015
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 273.81868099999974
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 273.4887550000003
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 271.00253900000007
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 267.81868099999974
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 267.81868099999974
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 266.0500810000003
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 264.55778199999986
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 264.51410899999973
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 262.7516149999992
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 262.4745219999995
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 261.6673180000007
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 261.39191199999914
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 258.55778199999986
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 257.31772399999954
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 256.8875390000003
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 256.75678100000005
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 256.4745219999995
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 256.39191199999914
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 255.18406499999946
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_29",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 252.83856099999957
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 252.81780700000036
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 251.9591790000004
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 251.9591790000004
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 251.8501639999995
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 251.2522710000003
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_29",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 251.06113300000015
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 249.12737099999958
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 249.12737099999958
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 249.12737099999958
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 247.1390969999993
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 243.4467620000005
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 243.3108689999999
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 242.68603299999995
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 240.39436600000045
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 240.17685400000028
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 233.92430799999966
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 233.86915399999998
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 231.86915399999998
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 231.3273049999998
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 229.53934799999934
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 228.56812600000012
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 224.2583999999997
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_29",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 223.18122799999946
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 222.81780700000036
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 221.2522710000003
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 220.9464769999995
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 218.9984029999996
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 209.92430799999966
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 209.75161499999922
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 209.75161499999922
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 205.2620709999992
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 204.31772399999954
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 204.31772399999954
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 202.18406499999946
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 202.18406499999946
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 202.10808999999972
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 200.68508800000018
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 200.1619269999992
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 198.56812600000012
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 197.78667700000005
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "uniform__smooth__68",
+    "split": "ordinary",
+    "delta_s": 197.78667700000005
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 197.36425599999984
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 197.36425599999984
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 197.36425599999984
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 194.3582319999996
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 192.13970299999983
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 189.3108689999999
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "near_collinear_min__n16__negative",
+    "split": "stress",
+    "delta_s": 189.3108689999999
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 187.97642300000007
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 186.46306600000025
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 183.74467899999945
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 182.9984029999996
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 181.07924099999946
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 180.39946599999985
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 180.09849799999938
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 179.29141100000015
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 178.15579799999978
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 177.4887550000003
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 176.17878699999983
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 175.82614399999966
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "uniform__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 175.82614399999966
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 174.56812600000012
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 167.13004100000035
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 165.50533900000028
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 163.50533900000028
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 162.60467900000003
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 162.4739010000003
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 162.07499800000005
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 161.4739010000003
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "uniform__iid__67",
+    "split": "ordinary",
+    "delta_s": 159.9377089999998
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 156.918764
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 156.45865400000002
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 156.45865400000002
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 153.011082
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 152.8561719999998
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 152.8561719999998
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 152.2620709999992
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 152.2620709999992
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 151.7397090000004
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "clustered__adversarial-negative__69",
+    "split": "ordinary",
+    "delta_s": 151.7397090000004
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 151.49381699999958
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 150.43668900000011
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 150.30869100000018
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 147.9318889999995
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 147.35380900000018
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 145.95349799999985
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 145.70980400000008
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 144.46306600000025
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 144.46306600000025
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 143.3933530000004
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 142.11639100000048
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 142.11639100000048
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 142.11639100000048
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 141.6673180000007
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 140.59327699999994
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 139.97642300000007
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "uniform__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 138.8044719999998
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 137.80804799999987
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 135.67715900000076
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 135.6673180000007
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 134.9949000000006
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 130.2820469999997
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "uniform__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 129.87377099999958
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 127.07193199999983
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 126.33306100000027
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "edge__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 124.92976699999963
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 124.23428700000022
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "boundary_outward_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 121.97642300000007
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 120.50475099999949
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 119.80804799999987
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 119.80804799999987
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 118.74781200000052
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "clustered__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 114.47480499999983
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "boundary_outward_min__n16__positive",
+    "split": "stress",
+    "delta_s": 112.8501639999995
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "uniform__iid__67",
+    "split": "ordinary",
+    "delta_s": 109.51280700000007
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 109.09849799999938
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 109.04061600000023
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 109.04061600000023
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 109.04061600000023
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 108.38220900000033
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 108.04373099999975
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 107.51153599999998
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 107.51153599999998
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "clustered__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 107.51153599999998
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 107.15579799999978
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 107.13004100000035
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 105.67715900000076
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 104.9949000000006
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 102.13004100000035
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 99.01108199999999
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "edge__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 98.66012899999987
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 98.52865399999973
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "edge__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 96.9802380000001
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 96.85827100000006
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 96.75497600000017
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 91.68603299999995
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 90.60371099999975
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 89.25021900000047
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "clustered__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 89.01108199999999
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 88.45336800000041
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 88.18245200000001
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 87.17335100000037
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "uniform__smooth__67",
+    "split": "ordinary",
+    "delta_s": 86.68603299999995
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 86.23309700000027
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__smooth__67",
+    "split": "ordinary",
+    "delta_s": 85.7731730000005
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 85.13909699999931
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 85.13909699999931
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 84.72404499999993
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 84.4888149999997
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 83.31921899999998
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "edge__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 82.79294600000048
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 81.23790399999962
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 79.97934900000018
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "unknown_count_late__n16__spatial",
+    "split": "stress",
+    "delta_s": 79.97934900000018
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 78.43668900000011
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 78.13321799999994
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 76.88753900000029
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 76.45373100000052
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "near_collinear_min__n10__positive",
+    "split": "stress",
+    "delta_s": 76.45373100000052
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "edge__iid__71",
+    "split": "ordinary",
+    "delta_s": 73.7976319999998
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 70.45336800000041
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "clustered__smooth__68",
+    "split": "ordinary",
+    "delta_s": 70.45336800000041
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__iid__69",
+    "split": "ordinary",
+    "delta_s": 70.04067499999928
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "boundary_outward_min__n16__negative",
+    "split": "stress",
+    "delta_s": 69.35823199999959
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 68.43668900000011
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 62.7569139999996
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "edge__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 58.88753900000029
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 57.3273049999998
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "uniform__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 55.539347999999336
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 55.38220900000033
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 55.38220900000033
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 53.76750799999991
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 53.529930999999124
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 53.045586000000185
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "unknown_count_late__n10__spatial",
+    "split": "stress",
+    "delta_s": 53.045586000000185
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__iid__71",
+    "split": "ordinary",
+    "delta_s": 52.97509100000025
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 51.70980400000008
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 51.60467900000003
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 51.424528000000464
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 50.17878699999983
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 50.10338700000011
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 49.079193999999916
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 48.73136700000032
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 48.70980400000008
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 48.6025010000003
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 47.83312999999998
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 46.43805900000007
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 46.104417999999896
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 45.864151000000675
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 45.161926999999196
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 44.92348399999992
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__smooth__70",
+    "split": "ordinary",
+    "delta_s": 44.77065399999992
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 44.17878699999983
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "edge__iid__70",
+    "split": "ordinary",
+    "delta_s": 44.161926999999196
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "boundary_outward_min__n10__positive",
+    "split": "stress",
+    "delta_s": 43.635943999999654
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "uniform__iid__68",
+    "split": "ordinary",
+    "delta_s": 41.710832000000664
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "boundary_outward_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 40.41200299999946
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 37.25908999999956
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 36.39946599999985
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 34.66084099999989
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "clustered__adversarial-negative__71",
+    "split": "ordinary",
+    "delta_s": 34.394366000000446
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__adversarial-spatial__67",
+    "split": "ordinary",
+    "delta_s": 34.151387999999315
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 33.23309700000027
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "edge__smooth__70",
+    "split": "ordinary",
+    "delta_s": 33.23309700000027
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "edge__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 31.99697600000036
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__smooth__69",
+    "split": "ordinary",
+    "delta_s": 31.987701000000015
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 30.399465999999848
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 29.767507999999907
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "clustered__adversarial-negative__67",
+    "split": "ordinary",
+    "delta_s": 29.74467899999945
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 28.431297000000086
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 28.40839799999958
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 27.864151000000675
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "clustered__adversarial-positive__67",
+    "split": "ordinary",
+    "delta_s": 27.864151000000675
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 27.030540000000656
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "uniform__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 27.023369999999886
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "clustered__adversarial-spatial__69",
+    "split": "ordinary",
+    "delta_s": 26.756913999999597
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 26.711530999999923
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_convex22",
+    "case_id": "clustered__smooth__71",
+    "split": "ordinary",
+    "delta_s": 26.26594600000044
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 25.228831999999784
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 24.803490000000238
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "edge__adversarial-positive__68",
+    "split": "ordinary",
+    "delta_s": 24.767507999999907
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "clustered__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 23.472357999999986
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 22.36024499999985
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "boundary_outward_min__n10__negative",
+    "split": "stress",
+    "delta_s": 21.601714999999786
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "clustered__adversarial-spatial__71",
+    "split": "ordinary",
+    "delta_s": 21.36392799999976
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 21.31268799999998
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_grid21_7",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 21.30869100000018
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "uniform__smooth__70",
+    "split": "ordinary",
+    "delta_s": 21.23960299999999
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_29",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 20.25839999999971
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "clustered__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 19.022249999999985
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "near_collinear_min__n16__positive",
+    "split": "stress",
+    "delta_s": 18.11443599999984
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 17.39335300000039
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 15.10808999999972
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 14.62173999999959
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 12.10808999999972
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 12.01265500000045
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_closed21_3",
+    "case_id": "uniform__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 11.593276999999944
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "clustered__iid__71",
+    "split": "ordinary",
+    "delta_s": 10.393353000000388
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "uniform__iid__70",
+    "split": "ordinary",
+    "delta_s": 9.760347000000365
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_29",
+    "case_id": "near_collinear_min__n16__spatial",
+    "split": "stress",
+    "delta_s": 9.395516999999927
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "uniform__adversarial-spatial__68",
+    "split": "ordinary",
+    "delta_s": 8.152541000000383
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "edge__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 7.6863350000003265
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "edge__adversarial-positive__69",
+    "split": "ordinary",
+    "delta_s": 7.049283000000287
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "near_collinear_min__n10__spatial",
+    "split": "stress",
+    "delta_s": 6.812832999999955
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_29",
+    "case_id": "edge__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 6.712422999999944
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "uniform__adversarial-spatial__70",
+    "split": "ordinary",
+    "delta_s": 6.401659000000109
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 5.2787850000004255
+  },
+  {
+    "problem": 4,
+    "method": "range_grid21_7",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 5.2787850000004255
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_7",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 5.2787850000004255
+  },
+  {
+    "problem": 4,
+    "method": "predict_grid21_29",
+    "case_id": "edge__adversarial-positive__70",
+    "split": "ordinary",
+    "delta_s": 5.25839999999971
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_grid21_7",
+    "case_id": "near_collinear_min__n10__negative",
+    "split": "stress",
+    "delta_s": 3.9748270000000048
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 3.7497440000006463
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 3.7497440000006463
+  },
+  {
+    "problem": 4,
+    "method": "predict_closed21_3",
+    "case_id": "clustered__iid__69",
+    "split": "ordinary",
+    "delta_s": 3.7497440000006463
+  },
+  {
+    "problem": 4,
+    "method": "range_closed21_3",
+    "case_id": "clustered__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 3.01265500000045
+  },
+  {
+    "problem": 4,
+    "method": "width_grid21_7",
+    "case_id": "clustered__adversarial-negative__68",
+    "split": "ordinary",
+    "delta_s": 2.5342899999996007
+  },
+  {
+    "problem": 4,
+    "method": "locked_full_closed21_3",
+    "case_id": "edge__adversarial-positive__71",
+    "split": "ordinary",
+    "delta_s": 2.531133000000409
+  },
+  {
+    "problem": 4,
+    "method": "count_locked_convex22",
+    "case_id": "uniform__adversarial-negative__70",
+    "split": "ordinary",
+    "delta_s": 0.5047509999994872
+  },
+  {
+    "problem": 4,
+    "method": "width_closed21_3",
+    "case_id": "clustered__iid__67",
+    "split": "ordinary",
+    "delta_s": 0.376589999999851
+  }
+]

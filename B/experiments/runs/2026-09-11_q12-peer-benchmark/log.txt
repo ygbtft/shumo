@@ -1,0 +1,42 @@
+START unit_tests
+DONE {"label": "unit_tests", "exit_code": 2, "wall_s": 0.43750987498788163}
+START q1_geometry
+DONE {"label": "q1_geometry", "exit_code": 1, "wall_s": 0.06931729201460257}
+START q1_circle_cover
+DONE {"label": "q1_circle_cover", "exit_code": 1, "wall_s": 0.05696745897876099}
+START q2_candidate
+DONE {"label": "q2_candidate", "exit_code": 1, "wall_s": 0.05721908301347867}
+START q2_worst_diameter
+DONE {"label": "q2_worst_diameter", "exit_code": 1, "wall_s": 0.054044666001573205}
+{
+  "jobs": [
+    {
+      "label": "unit_tests",
+      "exit_code": 2,
+      "wall_s": 0.43750987498788163
+    },
+    {
+      "label": "q1_geometry",
+      "exit_code": 1,
+      "wall_s": 0.06931729201460257
+    },
+    {
+      "label": "q1_circle_cover",
+      "exit_code": 1,
+      "wall_s": 0.05696745897876099
+    },
+    {
+      "label": "q2_candidate",
+      "exit_code": 1,
+      "wall_s": 0.05721908301347867
+    },
+    {
+      "label": "q2_worst_diameter",
+      "exit_code": 1,
+      "wall_s": 0.054044666001573205
+    }
+  ],
+  "source_and_cases_unchanged": true,
+  "checked_files": 34,
+  "official_calls": 0
+}
