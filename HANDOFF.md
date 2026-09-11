@@ -104,7 +104,6 @@ models/q1q2/.venv/bin/python -m models.q1q2.benchmarks.q2_worst_diameter.run --c
 
 ## 5. 工作方法约定（多 agent 协作）
 
-- 本项目用 Herdr 多 codex agent 协作（workspace `math`）。父 agent 派活后**必须自己轮询子 agent 状态到 idle 再收产物**——Herdr 不推完成通知。
 - 已验证有效的流程：规划 agent 出设计 → 反复审计 → 实现 agent → 静态 review agent → 动态运行 → benchmark agent（真值独立）→ 修 bug → 认证。每步产物落盘（PLAN/reviews/benchmarks/report.json）。
 - 评审要独立、真值不得调用被测生产函数；子 agent 结果不可全信，父 agent 要抽查/复跑关键结论。
 

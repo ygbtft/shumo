@@ -4,6 +4,8 @@ from dataclasses import dataclass, replace
 from itertools import combinations
 import math
 import random
+from fractions import Fraction as F
+from decimal import Decimal, localcontext
 from typing import Sequence
 import numpy as np
 from .geometry import (Point2, NumericPolicy, Region, RegionKind, DiameterResult,
@@ -40,45 +42,134 @@ class ForcedSupportError(ArithmeticError):
     pass
 
 
+def _rational_points(points):
+    return tuple(tuple(F(x) for x in point(v)) for v in points)
+
+
+def _distance2(a, b):
+    return sum((x-y)**2 for x, y in zip(a, b))
+
+
+def _exact_boundary(p):
+    """Circumcircle of binary64 inputs, with no geometric tolerance."""
+    if not p:
+        return None
+    c = p[0]
+    if len(p) == 2:
+        c = tuple((x+y)/2 for x, y in zip(*p))
+    elif len(p) == 3:
+        a = tuple(p[1][i]-p[0][i] for i in range(2))
+        b = tuple(p[2][i]-p[0][i] for i in range(2))
+        det = a[0]*b[1]-a[1]*b[0]
+        if not det:
+            raise ForcedSupportError('COLLINEAR_FORCED_SUPPORT')
+        aa, bb = sum(x*x for x in a), sum(x*x for x in b)
+        c = (p[0][0]+(aa*b[1]-bb*a[1])/(2*det),
+             p[0][1]+(a[0]*bb-b[0]*aa)/(2*det))
+    return c, _distance2(c, p[0])
+
+
+def _root(q):
+    # Avoid overflow/underflow of the squared radius before taking its root.
+    with localcontext() as ctx:
+        ctx.prec = 80
+        return float((Decimal(q.numerator)/Decimal(q.denominator)).sqrt())
+
+
+def _export_circle(exact, points, ids, method, seed=None):
+    c, r2 = exact
+    try:
+        center, radius = tuple(map(float, c)), _root(r2)
+        if not all(math.isfinite(x) for x in (*center, radius)):
+            raise OverflowError
+        # Certification is on the input floats; lost pre-input digits cannot be
+        # recovered. Do not publish OK when rounding the center destroys local
+        # geometry, even if a coordinate-ULP-based external check would allow it.
+        error = _root(_distance2(tuple(map(F, center)), c))
+        # Local length scale is the circle diameter, with the default
+        # NumericPolicy relative accuracy plus binary64 radius roundoff.
+        # There is no absolute metre floor or coordinate-magnitude allowance.
+        budget = 2e-12*radius + 64*math.ulp(radius)
+        residual = max(math.dist(center, v)-radius for v in points)
+        resolved_radius = (r2 == 0 or (radius > 0 and
+                           F(math.ulp(radius)) <= F(radius)*F(1e-12)))
+        status = 'OK' if resolved_radius and error <= budget and residual <= budget else 'NUMERICAL_UNRESOLVED'
+        return CircleResult(center, radius, ids, residual, status, seed, method,
+                            () if status == 'OK' else ('CENTER_ROUNDING_EXCEEDS_LOCAL_PRECISION',))
+    except (OverflowError, ValueError):
+        return CircleResult(None, None, status='NUMERICAL_UNRESOLVED', seed=seed,
+                            method=method, diagnostics=('UNREPRESENTABLE_CIRCLE',))
+
+
 def forced_circle(points: Sequence[Point2], policy: NumericPolicy) -> CircleResult:
-    """Every supplied point is required on the circumference, including obtuse triples."""
+    """Every supplied point is on the boundary, including obtuse triples.
+
+    Exact arithmetic distinguishes collinearity from small area at any scale.
+    """
     if len(points) > 3:
         raise ValueError('at most three forced boundary points')
-    p = np.asarray(points, dtype=float)
-    if len(p) == 0:
+    p = tuple(point(v) for v in points)
+    if not p:
         return CircleResult(None, None, method='forced_boundary')
-    if len(p) == 1:
-        return CircleResult(point(p[0]), 0., (0,), 0., method='forced_boundary')
-    if len(p) == 2:
-        c = (p[0]+p[1])/2
-        return CircleResult(point(c), distance(p[0], p[1])/2, (0, 1), 0., method='forced_boundary')
-    a, b = p[1]-p[0], p[2]-p[0]
-    det = cross(a, b)
-    if abs(det) <= policy.squared(max(np.linalg.norm(a), np.linalg.norm(b))):
-        raise ForcedSupportError('COLLINEAR_OR_NEAR_COLLINEAR_FORCED_SUPPORT')
-    c = p[0]+np.linalg.solve(2*np.array((a, b)), np.array((a @ a, b @ b)))
-    return CircleResult(point(c), distance(c, p[0]), (0, 1, 2), 0., method='forced_boundary')
+    return _export_circle(_exact_boundary(_rational_points(p)), p,
+                          tuple(range(len(p))), 'forced_boundary')
 
 
 def _contains(circle, p, policy):
-    return circle.center is not None and distance(circle.center, p) <= circle.radius+policy.length(circle.radius)
+    # Used only to propose a support; exact certification below is mandatory.
+    return (circle.center is not None and circle.radius is not None and
+            math.dist(circle.center, p) <= circle.radius+32*math.ulp(circle.radius))
 
 
 def enumerate_circle(vertices, policy):
     p = tuple(point(x) for x in vertices)
-    candidates = []
+    q = _rational_points(p)
+    best, support = None, ()
     for size in (1, 2, 3):
         for ids in combinations(range(len(p)), size):
             try:
-                c = forced_circle([p[i] for i in ids], policy)
+                c = _exact_boundary([q[i] for i in ids])
             except ForcedSupportError:
                 continue
-            if all(_contains(c, x, policy) for x in p):
-                candidates.append(replace(c, support_vertex_indices=ids, method='candidate_enumeration'))
-    if not candidates:
+            if best is not None and c[1] >= best[1]:
+                continue
+            if all(_distance2(c[0], x) <= c[1] for x in q):
+                best, support = c, ids
+    if best is None:
         return CircleResult(None, None, status='NUMERICAL_UNRESOLVED')
-    c = min(candidates, key=lambda v: (v.radius, v.support_vertex_indices))
-    return replace(c, containment_residual=max(distance(x, c.center)-c.radius for x in p))
+    return _export_circle(best, p, support, 'candidate_enumeration_exact')
+
+
+def _certified_support(q, ids):
+    """Containment + center in convex hull of boundary => global minimum."""
+    p = [q[i] for i in ids]
+    c = _exact_boundary(p)
+    if c is None or any(_distance2(c[0], v) > c[1] for v in q):
+        return None
+    if len(p) == 3:
+        a = tuple(p[1][i]-p[0][i] for i in range(2))
+        b = tuple(p[2][i]-p[0][i] for i in range(2))
+        v = tuple(c[0][i]-p[0][i] for i in range(2))
+        det = cross(a, b)
+        u, w = cross(v, b)/det, cross(a, v)/det
+        if u < 0 or w < 0 or u+w > 1:
+            return None
+    return c
+
+
+def _exact_welzl(q, order):
+    stack = [(len(order), (), 0)]
+    result, ids = None, ()
+    while stack:
+        n, boundary, state = stack.pop()
+        if n == 0 or len(boundary) == 3:
+            result, ids = _exact_boundary([q[i] for i in boundary]), boundary
+        elif state == 0:
+            stack.append((n, boundary, 1))
+            stack.append((n-1, boundary, 0))
+        elif result is None or _distance2(result[0], q[order[n-1]]) > result[1]:
+            stack.append((n-1, boundary+(order[n-1],), 0))
+    return result, ids
 
 
 def ordinary_three_point_circle(points: Sequence[Point2], policy: NumericPolicy) -> CircleResult:
@@ -92,45 +183,51 @@ def minimum_circle(vertices: Sequence[Point2], policy: NumericPolicy, seed: int)
     if not original:
         return CircleResult(None, None, status='EMPTY', seed=seed)
     unique = list(dict.fromkeys(original))
-    origin = np.asarray(unique[0])
-    scale = max(1., max(distance(p, origin) for p in unique))
-    normalized = [point((np.asarray(v)-origin)/scale) for v in unique]
+    q = _rational_points(unique)
     order = list(range(len(unique)))
     random.Random(seed).shuffle(order)
-    # Frames encode W(n, boundary); no Python recursion depends on the vertex count.
-    stack = [(len(order), (), 0)]
-    result = CircleResult(None, None)
-    diagnostics = ()
+    origin = np.asarray(unique[0])
+    scale = max(math.dist(p, origin) for p in unique)
+    method = 'welzl_certified_support'
     try:
-        while stack:
-            n, boundary, state = stack.pop()
-            if n == 0 or len(boundary) == 3:
-                result = forced_circle([normalized[i] for i in boundary], policy)
-                result = replace(result, support_vertex_indices=boundary)
-            elif state == 0:
-                stack.append((n, boundary, 1))
-                stack.append((n-1, boundary, 0))
-            elif not _contains(result, normalized[order[n-1]], policy):
-                stack.append((n-1, boundary+(order[n-1],), 0))
-        if not all(_contains(result, p, policy) for p in normalized):
-            raise ForcedSupportError('CONTAINMENT_RECHECK_FAILED')
-        support = ordinary_three_point_circle([normalized[i] for i in result.support_vertex_indices], policy)
-        if abs(support.radius-result.radius) > policy.length(result.radius)*4:
-            raise ForcedSupportError('SUPPORT_MINIMALITY_RECHECK_FAILED')
-    except ForcedSupportError as exc:
-        diagnostics = (str(exc),)
-        if len(normalized) > 80:
-            return CircleResult(None, None, status='NUMERICAL_UNRESOLVED', seed=seed, diagnostics=diagnostics)
-        result = enumerate_circle(normalized, policy)
-    if result.center is None:
-        return replace(result, seed=seed, diagnostics=diagnostics)
-    center = point(origin+scale*np.asarray(result.center))
-    radius = result.radius*scale
-    residual = max(distance(v, center)-radius for v in original)
-    return CircleResult(center, radius,
-                        tuple(original.index(unique[i]) for i in result.support_vertex_indices),
-                        residual, 'OK' if residual <= policy.length(scale)*4 else 'NUMERICAL_UNRESOLVED',
-                        seed, result.method, diagnostics)
+        if scale == 0:
+            ids = (0,)
+        elif not math.isfinite(scale):
+            raise ForcedSupportError('NORMALIZATION_OVERFLOW')
+        else:
+            # Normalize even sub-unit geometry. Tolerances are roundoff-relative,
+            # never a fixed length in metres or an area with a unit-scale floor.
+            normalized = [point((np.asarray(v)-origin)/scale) for v in unique]
+            stack = [(len(order), (), 0)]
+            result = CircleResult(None, None)
+            while stack:
+                n, boundary, state = stack.pop()
+                if n == 0 or len(boundary) == 3:
+                    result = forced_circle([normalized[i] for i in boundary], policy)
+                    result = replace(result, support_vertex_indices=boundary)
+                elif state == 0:
+                    stack.append((n, boundary, 1))
+                    stack.append((n-1, boundary, 0))
+                elif not _contains(result, normalized[order[n-1]], policy):
+                    stack.append((n-1, boundary+(order[n-1],), 0))
+            ids = result.support_vertex_indices
+        exact = _certified_support(q, ids)
+        if exact is None:
+            raise ForcedSupportError('SUPPORT_CERTIFICATE_FAILED')
+    except ForcedSupportError:
+        method = 'welzl_exact_fallback'
+        try:
+            _, ids = _exact_welzl(q, order)
+            exact = _certified_support(q, ids)
+        except ForcedSupportError:
+            exact = None
+        if exact is None:
+            if len(q) <= 80:
+                return replace(enumerate_circle(original, policy), seed=seed)
+            return CircleResult(None, None, status='NUMERICAL_UNRESOLVED', seed=seed,
+                                diagnostics=('EXACT_SUPPORT_CERTIFICATE_FAILED',))
+    return _export_circle(exact, original,
+                          tuple(original.index(unique[i]) for i in ids), method, seed)
 
 
 def diameter_circle_cover(region: Region, d: DiameterResult, policy: NumericPolicy) -> CoverResult:
@@ -138,30 +235,44 @@ def diameter_circle_cover(region: Region, d: DiameterResult, policy: NumericPoli
         return CoverResult('NOT_APPLICABLE')
     if region.kind == RegionKind.UNBOUNDED:
         return CoverResult('NOT_APPLICABLE', finite_cover=False)
-    if d.endpoints is None or region.status != 'OK':
+    if d.endpoints is None or d.status != 'OK' or region.status != 'OK':
         return CoverResult('UNRESOLVED')
-    a, b = map(np.asarray, d.endpoints)
-    center = point((a+b)/2)
-    if d.length == 0:
+    a, b = _rational_points(d.endpoints)
+    v = _rational_points(region.vertices)
+    if not v or d.length is None or not math.isfinite(d.length):
+        return CoverResult('UNRESOLVED')
+    center = tuple(float((x+y)/2) for x, y in zip(a, b))
+    d2 = _distance2(a, b)
+    if d2 == 0:
+        if any(x != a for x in v):
+            return CoverResult('UNRESOLVED')
         return CoverResult('YES', center, 0., finite_cover=True, midpoint_radius=0.)
-    v = np.asarray(region.vertices)
-    t = np.einsum('ij,ij->i', v-a, v-b)
-    k = int(np.argmax(t))
-    maximum = max(0., float(t[k]))
+    t = [sum((x[j]-a[j])*(x[j]-b[j]) for j in range(2)) for x in v]
+    k = max(range(len(t)), key=t.__getitem__)
+    maximum = max(F(0), t[k])
+    # Exact sign prevents a rounded negative/zero dot product from asserting YES.
+    # Retain the public policy's conservative indeterminate band for positive
+    # residuals; it never enlarges the set declared covered.
     tol = policy.squared(d.length)
-    # Diameter endpoints have algebraically zero Thales residual; test the other vertices.
-    others = [float(t[i]) for i in range(len(t)) if i not in d.indices]
-    status = 'NO' if maximum > tol else ('YES' if not others or max(others) <= 0 else 'UNRESOLVED')
+    if not math.isfinite(tol):
+        return CoverResult('UNRESOLVED')
+    status = 'YES' if maximum == 0 else 'NO' if maximum > F(tol) else 'UNRESOLVED'
     mec = minimum_circle(region.vertices, policy, 0)
-    kappa = 2*mec.radius/d.length if mec.status == 'OK' else None
-    eta = math.sqrt(1+4*maximum/d.squared)
-    return CoverResult(status, center, maximum, kappa, eta,
+    length = _root(d2)
+    kappa = 2*(mec.radius/length) if mec.status == 'OK' else None
+    eta = _root(1+4*maximum/d2)
+    midpoint_radius = _root(d2/4+maximum)
+    try:
+        maximum_float = float(maximum)
+    except OverflowError:
+        return CoverResult('UNRESOLVED')
+    return CoverResult(status, center, maximum_float, kappa, eta,
                        region.vertices[k] if status == 'NO' else None,
-                       k if status == 'NO' else None, True, eta*d.length/2, tol)
+                       k if status == 'NO' else None, True, midpoint_radius, tol)
 
 
 def clearance_diameter_regime(diameter_m: float, radius_m: float = 20.) -> str:
-    if not math.isfinite(diameter_m) or diameter_m < 0 or radius_m <= 0:
+    if not math.isfinite(diameter_m) or diameter_m < 0 or not math.isfinite(radius_m) or radius_m <= 0:
         raise ValueError('invalid diameter or clearance radius')
     if diameter_m <= math.sqrt(3)*radius_m:
         return 'EXISTS_COVER_CENTER'

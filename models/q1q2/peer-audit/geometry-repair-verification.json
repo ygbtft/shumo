@@ -1,0 +1,19 @@
+{
+  "seed": 2026091107,
+  "random_cases": 8000,
+  "total": 8602,
+  "geometry_before": {
+    "OK": 3286,
+    "UNRESOLVED": 804,
+    "WRONG": 195
+  },
+  "geometry_after": {
+    "OK": 4285
+  },
+  "isolated_diameter_failures_before": 3,
+  "isolated_diameter_failures_after": 0,
+  "audit_sources_unchanged": true,
+  "peer_unchanged_since_original_audit": true,
+  "geometry_sha256": "88753b8fc15581be91d5f7e3540a11a9db0de74547fe9191e216d80bfcc6c6b2",
+  "pytest": "1433 passed in 19.30s"
+}

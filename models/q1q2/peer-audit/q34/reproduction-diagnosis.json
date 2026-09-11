@@ -1,0 +1,281 @@
+[
+  {
+    "case": "uniform__adversarial-spatial__154",
+    "method": "range_grid21_29",
+    "recorded_s": 6747.541538,
+    "rerun_s": 5998.937246,
+    "first_request_difference": {
+      "index": 41,
+      "old": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-42",
+        "position": {
+          "x": 108.329107160765,
+          "y": -111.87680810376179
+        },
+        "channel": 18
+      },
+      "new": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-42",
+        "position": {
+          "x": 108.32910716076523,
+          "y": -111.87680810376213
+        },
+        "channel": 18
+      }
+    },
+    "first_physics_difference": {
+      "index": 44,
+      "old_request": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-45",
+        "position": {
+          "x": 157.24839314947843,
+          "y": -85.1191256456525
+        },
+        "channel": 16
+      },
+      "new_request": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-45",
+        "position": {
+          "x": 157.24839314947877,
+          "y": -85.11912564565279
+        },
+        "channel": 16
+      },
+      "old_response": {
+        "accepted": true,
+        "measure_result": "direction",
+        "svd_deg": 91.41
+      },
+      "new_response": {
+        "accepted": true,
+        "measure_result": "direction",
+        "svd_deg": 89.41
+      }
+    }
+  },
+  {
+    "case": "boundary_outward__n16__negative",
+    "method": "range_grid21_29",
+    "recorded_s": 8495.147416,
+    "rerun_s": 8467.147416,
+    "first_request_difference": {
+      "index": 197,
+      "old": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-198",
+        "position": {
+          "x": -377.7228806244599,
+          "y": 1802.2742567512944
+        },
+        "channel": 19
+      },
+      "new": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-198",
+        "position": {
+          "x": -377.7228806244606,
+          "y": 1802.2742567512942
+        },
+        "channel": 19
+      }
+    },
+    "first_physics_difference": {
+      "index": 257,
+      "old_request": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-258",
+        "position": {
+          "x": -1725.1022992503092,
+          "y": -356.6399734372125
+        },
+        "channel": 3
+      },
+      "new_request": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-258",
+        "position": {
+          "x": -1802.2742567512944,
+          "y": -377.7228806244614
+        },
+        "channel": 3
+      },
+      "old_response": {
+        "accepted": true,
+        "measure_result": "no_signal"
+      },
+      "new_response": {
+        "accepted": true,
+        "measure_result": "direction",
+        "svd_deg": 64.22
+      }
+    },
+    "replay_divergence": {
+      "index": 257,
+      "delta_m": 80.00000000000009,
+      "old_request": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-258",
+        "position": {
+          "x": -1725.1022992503092,
+          "y": -356.6399734372125
+        },
+        "channel": 3
+      },
+      "new_request": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-258",
+        "position": {
+          "x": -1802.2742567512944,
+          "y": -377.7228806244614
+        },
+        "channel": 3
+      },
+      "last_probe": {
+        "index_next": 257,
+        "ch": 3,
+        "step": 0,
+        "current": [
+          -1864.0,
+          0.0
+        ],
+        "points": [
+          [
+            -1802.2742567512944,
+            -377.7228806244614
+          ],
+          [
+            -1725.1022992503092,
+            -356.6399734372125
+          ]
+        ],
+        "distances": [
+          382.7331210214844,
+          382.73312102148446
+        ]
+      }
+    }
+  },
+  {
+    "case": "edge__adversarial-negative__152",
+    "method": "count_locked_grid21_29",
+    "recorded_s": 6705.65379,
+    "rerun_s": 6701.10704,
+    "first_request_difference": {
+      "index": 41,
+      "old": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-42",
+        "position": {
+          "x": 849.4352739351013,
+          "y": 666.600472862662
+        },
+        "channel": 11
+      },
+      "new": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-42",
+        "position": {
+          "x": 849.4352739351008,
+          "y": 666.600472862662
+        },
+        "channel": 11
+      }
+    },
+    "first_physics_difference": {
+      "index": 98,
+      "old_request": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-99",
+        "position": {
+          "x": -198.0220933004074,
+          "y": -1068.820571843394
+        },
+        "channel": 14
+      },
+      "new_request": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-99",
+        "position": {
+          "x": -209.76398412305483,
+          "y": -989.6869633075197
+        },
+        "channel": 14
+      },
+      "old_response": {
+        "accepted": true,
+        "measure_result": "direction",
+        "svd_deg": 186.5
+      },
+      "new_response": {
+        "accepted": true,
+        "measure_result": "direction",
+        "svd_deg": 190.76
+      }
+    },
+    "replay_divergence": {
+      "index": 98,
+      "delta_m": 79.99999999999977,
+      "old_request": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-99",
+        "position": {
+          "x": -198.0220933004074,
+          "y": -1068.820571843394
+        },
+        "channel": 14
+      },
+      "new_request": {
+        "arena_id": "default",
+        "robot_id": "mock-robot",
+        "request_id": "b42-99",
+        "position": {
+          "x": -209.76398412305483,
+          "y": -989.6869633075197
+        },
+        "channel": 14
+      },
+      "last_probe": {
+        "index_next": 98,
+        "ch": 14,
+        "step": 0,
+        "current": [
+          -0.0,
+          -999.0
+        ],
+        "points": [
+          [
+            -209.76398412305483,
+            -989.6869633075197
+          ],
+          [
+            -198.0220933004047,
+            -1068.8205718433937
+          ]
+        ],
+        "distances": [
+          209.97062101068494,
+          209.97062101068497
+        ]
+      }
+    }
+  }
+]

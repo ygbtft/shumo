@@ -1,0 +1,53 @@
+{
+  "before": {
+    "total": 8602,
+    "circles": 4317,
+    "circle_states": {
+      "OK": 3471,
+      "UNRESOLVED": 331,
+      "WRONG": 515
+    },
+    "cover_failures": {
+      "status": 3,
+      "kappa": 509,
+      "eta": 0
+    },
+    "circle_diameter_wrong": 3,
+    "pipeline_states": {
+      "OK": 2090,
+      "WRONG": 611,
+      "UNRESOLVED": 103
+    }
+  },
+  "after": {
+    "total": 8602,
+    "circles": 4317,
+    "circle_states": {
+      "OK": 4192,
+      "UNRESOLVED": 125
+    },
+    "cover_failures": {
+      "status": 0,
+      "kappa": 0,
+      "eta": 0
+    },
+    "circle_diameter_wrong": 0,
+    "pipeline_states": {
+      "OK": 2736,
+      "UNRESOLVED": 68
+    }
+  },
+  "source_stable": true,
+  "snapshot": "/var/folders/jt/zqnnfv9942qglzppjt2wjn000000gn/T/q1-circle-audit-by_qn31e",
+  "circle_sha256": "e7d39cc3a55d979d69ebb739b722bf84f7c3e6893360094e3c57dd2998b8f2cb",
+  "pytest": "1434 passed in 19.23s",
+  "benchmark": {
+    "cases": 330,
+    "passed": 312,
+    "failed": 18,
+    "checks": 21436,
+    "failed_fields": {
+      "forced.exception": 18
+    }
+  }
+}

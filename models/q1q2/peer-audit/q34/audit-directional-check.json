@@ -1,0 +1,103 @@
+{
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "numpy": "2.5.3",
+  "official_calls": 0,
+  "read_source_sha256": {
+    "negative_hull_policy.py": "fc4de73b4b0f9f58ca35e68851e26027b95d437e11bc15be03ada4c24b0d2b97",
+    "negative_hull_experiments.py": "87d63707077c55c9d09ba4640a5fb1ac0947eb1c6a1ee27730a2326d33d99185",
+    "visibility_certificate.py": "525523f92a55bdd0e3628bf7c5231e3d0aa000095397b5bfa8e467612556c36c",
+    "integer_visibility_certificate.py": "571eaf8688657bc7f6916c30317aa8578fd77c5f313aa98c27131d78984526d8",
+    "layout_certificates.py": "d403bd6417495ad3e65ed7d098fe404cff0483cc6e5fc218a2c53bd7df56fc38",
+    "rotating_layout_policy.py": "9d0768e3d48c415614f8bf3b42b19a1c59fbb00271575707b4351ff5904bee6a",
+    "reception_layout_experiments.py": "d5fc61bfb92d7aaf93c0412fbd1cfa93b14630096f5897696c8722f1abd5f166",
+    "visibility_layout_search.py": "5f8c27c79e60fa30f788a669529e1e28b0dc9d8bf75572af109d571bed1e8157",
+    "vector_service_policy.py": "75ba8ac29ef0eaacbb9647930517282d6214eba43035a37863c19931cba66755",
+    "interleaved_policy.py": "d83453759f2fa623ae9917d15ff1ce65116072b470e620b71b45de11a8980839",
+    "bounded_width_policy.py": "44e45fd0086626257f7a081fa884f536c998d04e1adc44d920fc6297e9ad0af8"
+  },
+  "grid21_29_stored": {
+    "verified_leaves": 7420,
+    "certified_area_m2": 10259338.824748993,
+    "cells": 7420,
+    "partition_nodes": 19429
+  },
+  "grid21_29_default_depth": {
+    "covered": false,
+    "reason": "unresolved_cell",
+    "cell": [
+      1279.9072265625,
+      1265.8447265625,
+      0.2197265625,
+      13
+    ],
+    "visited": 540,
+    "witness": null
+  },
+  "grid21_29_fresh": {
+    "covered": true,
+    "arena_radius": 1800.0,
+    "receive_radius": 1000.0,
+    "leaf_count": 7420,
+    "visited": 19429,
+    "deepest": 14,
+    "min_receiving_margin_m": 0.062188212983755875,
+    "min_convex_hull_margin_m": 0.0028863288087266903,
+    "proof": "source disk covered by disjoint certified squares; each square inside convex hull of uniformly receivable stations"
+  },
+  "grid21_29_exact_fresh": {
+    "verified_leaves": 6976,
+    "partition_nodes": 18837,
+    "boundary_corners": 16,
+    "independent_exact_corner_triangles": true,
+    "integer_partition": true
+  },
+  "closed21_3_stored": {
+    "verified_leaves": 8348,
+    "partition_nodes": 22533,
+    "boundary_corners": 48,
+    "independent_exact_corner_triangles": true,
+    "integer_partition": true
+  },
+  "incomplete_cells_local_check": {
+    "verified_leaves": 1,
+    "certified_area_m2": 12.359619140625
+  },
+  "incomplete_cells_partition_rejected": true,
+  "empty_cells_local_check": {
+    "verified_leaves": 0,
+    "certified_area_m2": 0.0
+  },
+  "wrong_radius_witness": {
+    "returned": {
+      "covered": false,
+      "reason": "unresolved_cell",
+      "cell": [
+        0.0,
+        0.0,
+        500.0,
+        0
+      ],
+      "visited": 1,
+      "witness": {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "direction_deg": 0.0,
+        "reason": "no_station_in_range"
+      }
+    },
+    "actually_receiving_stations": [
+      0,
+      1,
+      2
+    ]
+  },
+  "segment_midpoint_contains": false,
+  "independent_shadow_trials": {
+    "passed": 1000,
+    "changed_regions": 83
+  },
+  "wide_pair_trials": 10000,
+  "vector_scalar_route_pairs": 400
+}

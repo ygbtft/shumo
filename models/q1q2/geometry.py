@@ -3,7 +3,9 @@ from __future__ import annotations
 from collections import deque
 from dataclasses import dataclass
 from enum import Enum
-from functools import cmp_to_key
+from functools import lru_cache
+from fractions import Fraction
+from decimal import Decimal, localcontext
 from itertools import combinations
 import math
 from typing import Sequence
@@ -75,6 +77,7 @@ class BearingMeasurement:
             object.__setattr__(self, 'raw_bearing_deg', self.bearing_deg)
         elif not math.isfinite(self.raw_bearing_deg):
             raise ValueError('nonfinite raw bearing')
+        object.__setattr__(self, '_exact_bearing', Fraction(str(self.bearing_deg)) % 360)
         object.__setattr__(self, 'bearing_deg', self.bearing_deg % 360 + 0.0)
 
 
@@ -86,7 +89,9 @@ class HalfPlane:
 
     def __post_init__(self):
         n = np.array(point(self.normal))
-        length = np.linalg.norm(n)
+        raw = (*map(Fraction, map(float, n)), Fraction(float(self.offset)))
+        object.__setattr__(self, '_exact_row', raw)
+        length = math.hypot(*n)
         if length == 0 or not math.isfinite(self.offset):
             raise ValueError('invalid half plane')
         object.__setattr__(self, 'normal', point(n/length))
@@ -126,17 +131,90 @@ class DiameterResult:
     tie_rule: str = 'lexicographically_smallest_normalized_vertex_indices'
 
 
+@lru_cache(maxsize=4096)
+def _sincos_degrees(angle):
+    """80 digit trig with exact quadrant and diagonal identities (no snapping)."""
+    quadrant, r = divmod(angle % 360, 90)
+    with localcontext() as ctx:
+        ctx.prec = 90
+        if r == 0:
+            sn, cs = Decimal(0), Decimal(1)
+        elif r == 45:
+            sn = cs = Decimal('0.5').sqrt()
+        else:
+            pi = Decimal('3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679')
+            x = Decimal(r.numerator)/Decimal(r.denominator)*pi/180
+            sn, cs, st, ct = x, Decimal(1), x, Decimal(1)
+            for k in range(1, 100):
+                st *= -x*x/((2*k)*(2*k+1))
+                ct *= -x*x/((2*k-1)*(2*k))
+                sn += st
+                cs += ct
+        ctx.prec = 80
+        sn, cs = Fraction(+sn), Fraction(+cs)
+    return ((sn, cs), (cs, -sn), (-sn, -cs), (-cs, sn))[int(quadrant)]
+
+
 def wedge_halfplanes(obs: BearingMeasurement) -> tuple[HalfPlane, ...]:
-    theta, eps = map(math.radians, (obs.bearing_deg, obs.half_width_deg))
-    # Exact right-angle identities prevent trigonometric roundoff turning rays into slivers.
-    u = unit(theta)
-    u[np.abs(u) < 4*np.finfo(float).eps] = 0
-    n = np.array((-u[1], u[0]))
-    normals = (-u,) if obs.half_width_deg == 90 else (
-        math.sin(eps)*(-u)-math.cos(eps)*n,
-        math.sin(eps)*(-u)+math.cos(eps)*n, -u)
-    return tuple(HalfPlane(point(v), float(v @ obs.position),
-                           f'{obs.measurement_id}:{i}') for i, v in enumerate(normals))
+    # Keep the decimal measurement semantics and form offsets before rounding.
+    # Normalizing binary64 normals first changes exact rays and tiny regions.
+    t = obs._exact_bearing
+    e = Fraction(str(obs.half_width_deg))
+    x, y = map(lambda v: Fraction(str(v)), obs.position)
+    sn, cs = _sincos_degrees(t)
+    if e == 90:
+        normals = [(-cs, -sn)]
+    else:
+        sl, cl = _sincos_degrees(t-e)
+        su, cu = _sincos_degrees(t+e)
+        normals = [(sl, -cl), (-su, cu), (-cs, -sn)]
+    directions = [t+180] if e == 90 else [t-e-90, t+e+90, t+180]
+    result = []
+    for i, (a, b) in enumerate(normals):
+        c = a*x+b*y
+        hp = HalfPlane((float(a), float(b)), float(c), f'{obs.measurement_id}:{i}')
+        object.__setattr__(hp, '_exact_row', (a, b, c))
+        object.__setattr__(hp, '_normal_degrees', directions[i] % 360)
+        result.append(hp)
+    return tuple(result)
+
+
+def _orientation(a, b, c):
+    # Filter ordinary determinants, resolve cancellation with original floats.
+    x, y = b[0]-a[0], b[1]-a[1]
+    u, v = c[0]-a[0], c[1]-a[1]
+    z = x*v-y*u
+    if isinstance(z, Fraction):
+        return z
+    if math.isfinite(z) and abs(z) > 8*np.finfo(float).eps*(abs(x*v)+abs(y*u)):
+        return z
+    a, b, c = [tuple(map(Fraction, p)) for p in (a, b, c)]
+    return (b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0])
+
+
+def _exact_hull(points):
+    pts = sorted(set(points))
+    if len(pts) < 2:
+        return tuple(pts)
+    def half(seq):
+        out = []
+        for p in seq:
+            while len(out) > 1 and _orientation(out[-2], out[-1], p) <= 0:
+                out.pop()
+            out.append(p)
+        return out
+    return tuple(half(pts)[:-1]+half(pts[::-1])[:-1])
+
+
+def _farthest_pair(vertices):
+    v = [tuple(map(Fraction, p)) for p in vertices]
+    best, pair = Fraction(-1), (0, 0)
+    for i in range(len(v)):
+        for j in range(i, len(v)):
+            d = (v[i][0]-v[j][0])**2+(v[i][1]-v[j][1])**2
+            if d > best:
+                best, pair = d, (i, j)
+    return best, pair
 
 
 def convex_hull(points: Sequence[Point2], policy: NumericPolicy) -> tuple[Point2, ...]:
@@ -151,8 +229,7 @@ def convex_hull(points: Sequence[Point2], policy: NumericPolicy) -> tuple[Point2
     def half(seq):
         out = []
         for p in seq:
-            while len(out) > 1 and cross(np.subtract(out[-1], out[-2]),
-                                         np.subtract(p, out[-1])) <= 0:
+            while len(out) > 1 and _orientation(out[-2], out[-1], p) <= 0:
                 out.pop()
             out.append(p)
         return out
@@ -166,6 +243,8 @@ def convex_hull(points: Sequence[Point2], policy: NumericPolicy) -> tuple[Point2
     # length tolerance alone would erase genuine corners of a thin polygon.
     tol = min(policy.length(extent), polygon_area(hull)/perimeter/4)
     n = len(hull)
+    # Cleanup must never erase an endpoint needed for the true diameter.
+    _, protected = _farthest_pair(hull)
     previous = [(i-1) % n for i in range(n)]
     following = [(i+1) % n for i in range(n)]
     alive = [True]*n
@@ -173,7 +252,7 @@ def convex_hull(points: Sequence[Point2], policy: NumericPolicy) -> tuple[Point2
     remaining = n
     while pending and remaining > 3:
         i = pending.popleft()
-        if not alive[i]:
+        if not alive[i] or i in protected:
             continue
         left, right = previous[i], following[i]
         a, b, c = hull[left], hull[i], hull[right]
@@ -198,151 +277,125 @@ def polygon_area(vertices):
 
 
 def _intersection(a, b):
-    det = cross(a[:2], b[:2])
-    if det == 0:
+    a, b = tuple(map(Fraction, a)), tuple(map(Fraction, b))
+    det = cross(a, b)
+    if not det:
         return None
-    return np.array(((a[2]*b[1]-a[1]*b[2])/det,
-                     (a[0]*b[2]-a[2]*b[0])/det))
+    return ((a[2]*b[1]-a[1]*b[2])/det,
+            (a[0]*b[2]-a[2]*b[0])/det)
 
 
-def _enumerated_vertices(rows, tol):
-    found = []
+def _exact_vertices(rows):
+    found = set()
     for a, b in combinations(rows, 2):
         p = _intersection(a, b)
-        if p is not None and np.all(rows[:, :2] @ p-rows[:, 2] <= tol*(1+np.linalg.norm(p))):
-            found.append(point(p))
+        if p is not None and all(x*p[0]+y*p[1] <= z for x, y, z in rows):
+            found.add(p)
     return found
 
 
+def _enumerated_vertices(rows, tol):
+    # Compatibility entry point: tol must never enlarge the feasible set.
+    exact = [tuple(map(Fraction, row)) for row in rows]
+    return [point(p) for p in sorted(_exact_vertices(exact))]
+
+
 def _deque_vertices(rows, tol):
-    def compare(a, b):
-        va, vb = np.array((-a[1], a[0])), np.array((-b[1], b[0]))
-        ha = int(va[1] < 0 or (va[1] == 0 and va[0] < 0))
-        hb = int(vb[1] < 0 or (vb[1] == 0 and vb[0] < 0))
-        if ha != hb:
-            return ha-hb
-        z = cross(va, vb)
-        return -1 if z > 0 else 1 if z < 0 else 0
-    ordered = sorted(rows, key=cmp_to_key(compare))
-    unique = []
-    for row in ordered:
-        if unique and compare(unique[-1], row) == 0:
-            if row[2] < unique[-1][2]:
-                unique[-1] = row
-        else:
-            unique.append(row)
-    queue = deque()
-    def outside(row, a, b):
-        p = _intersection(a, b)
-        if p is None:
-            raise ArithmeticError('parallel deque boundaries')
-        return row[:2] @ p-row[2] > tol*(1+np.linalg.norm(p))
-    try:
-        for row in unique:
-            while len(queue) > 1 and outside(row, queue[-2], queue[-1]):
-                queue.pop()
-            while len(queue) > 1 and outside(row, queue[0], queue[1]):
-                queue.popleft()
-            queue.append(row)
-        while len(queue) > 2 and outside(queue[0], queue[-2], queue[-1]):
-            queue.pop()
-        while len(queue) > 2 and outside(queue[-1], queue[0], queue[1]):
-            queue.popleft()
-        if len(queue) < 3:
-            return []
-        q = list(queue)
-        vertices = [_intersection(q[i], q[(i+1) % len(q)]) for i in range(len(q))]
-        if any(p is None or np.any(rows[:, :2] @ p-rows[:, 2] > tol*(1+np.linalg.norm(p)))
-               for p in vertices):
-            return []
-        return [point(p) for p in vertices]
-    except ArithmeticError:
-        return []
+    # The old tolerance-based deque could discard an actual extreme vertex.
+    # Until a filtered deque has a completeness certificate, use exact fallback.
+    return _enumerated_vertices(rows, tol)
 
 
 def intersect_halfplanes(hps: Sequence[HalfPlane], policy: NumericPolicy) -> Region:
-    if not hps:
-        return Region(RegionKind.UNBOUNDED, feasible_point=(0., 0.),
-                      recession_direction=(1., 0.), residual=0., method='whole_plane')
-    normals = np.array([h.normal for h in hps])
-    offsets = np.array([h.offset for h in hps])
-    origin = np.linalg.lstsq(normals, offsets, rcond=None)[0]
-    scale = max(1., float(np.max(np.abs(offsets-normals @ origin))))
-    rows = np.column_stack((normals, (offsets-normals @ origin)/scale))
-    tol = policy.length()
-    p = np.zeros(2)
-    ambiguous = False
-    for i, row in enumerate(rows):
-        violation = float(row[:2] @ p-row[2])
-        if violation <= tol*(1+np.linalg.norm(p)):
-            ambiguous |= violation > 0
+    """Exact predicates on input coefficients; tolerance is only for display cleanup.
+
+    Incremental boundary feasibility and the recession cone use rational signs.
+    Enumeration is deliberately used for bounded intersections: accepting an
+    approximate deque vertex is not a certificate that no extreme was lost.
+    """
+    # Eighty digit trig is not an exact transcendental oracle. If distinct
+    # angular boundaries approach its precision floor, even rational signs
+    # of the approximants cannot establish the original topology.
+    angular = [h for h in hps if hasattr(h, '_normal_degrees')]
+    for a, b in combinations(angular, 2):
+        if ((a._normal_degrees-b._normal_degrees) % 180 and
+                abs(cross(a._exact_row, b._exact_row)) < Fraction(1, 10**70)):
+            return Region(None, status='NUMERICAL_UNRESOLVED', method='trig_precision_limit')
+    rows = list(dict.fromkeys(h._exact_row for h in hps))
+    p = (Fraction(0), Fraction(0))
+    for i, (a, b, c) in enumerate(rows):
+        if a*p[0]+b*p[1] <= c:
             continue
-        base = row[:2]*row[2]
-        v = np.array((-row[1], row[0]))
-        low, high = -math.inf, math.inf
-        conflict = [i]
-        for j in range(i):
-            a = float(rows[j, :2] @ v)
-            b = float(rows[j, 2]-rows[j, :2] @ base)
-            if a == 0:
-                if b < -tol:
-                    return Region(RegionKind.EMPTY, method='incremental', conflict_constraints=(j, i))
-                ambiguous |= b < 0
-                continue
-            if abs(a) < policy.angle_abs:
-                ambiguous = True
-            t = b/a
-            if a > 0 and t < high:
-                high = t
-                conflict = (conflict + [j])[-3:]
-            elif a < 0 and t > low:
-                low = t
-                conflict = (conflict + [j])[-3:]
-        if low > high:
-            if low-high <= tol*(1+abs(low)+abs(high)) or ambiguous:
-                return Region(None, status='NUMERICAL_UNRESOLVED', method='incremental_boundary')
-            return Region(RegionKind.EMPTY, method='incremental', conflict_constraints=tuple(conflict))
-        p = base+min(max(0., low), high)*v
-    feasible = point(origin+scale*p)
-    if ambiguous and np.max(rows[:, :2] @ p-rows[:, 2]) > 0:
-        # A tolerance-band feasible point cannot prove a nonempty set.
-        alternatives = _enumerated_vertices(rows, 0.)
-        if alternatives:
-            p = np.asarray(alternatives[0])
-            feasible = point(origin+scale*p)
-        elif np.any(normals @ np.asarray(feasible)-offsets >
-                    16*np.finfo(float).eps*(np.abs(normals) @ np.abs(feasible)+np.abs(offsets))):
-            # Boundary points need not have strictly negative floating residuals.
-            # Only arithmetic roundoff is excused here, not the policy tolerance:
-            # a genuinely inconsistent narrow strip must remain unresolved.
-            return Region(None, feasible_point=feasible, status='NUMERICAL_UNRESOLVED',
-                          method='feasibility_residual_recheck')
-    for n in normals:
-        for v in (np.array((-n[1], n[0])), np.array((n[1], -n[0]))):
-            residual = max(float(nj[0]*v[0]+nj[1]*v[1]) for nj in normals)
-            if residual <= 0:
+        base = (c/a, Fraction(0)) if a else (Fraction(0), c/b)
+        v = (-b, a)
+        lo = hi = None
+        for j, (aa, bb, cc) in enumerate(rows[:i]):
+            slope = aa*v[0]+bb*v[1]
+            rhs = cc-aa*base[0]-bb*base[1]
+            if not slope:
+                if rhs < 0:
+                    return Region(RegionKind.EMPTY, method='exact_feasibility', conflict_constraints=(j, i))
+            elif slope > 0:
+                hi = rhs/slope if hi is None else min(hi, rhs/slope)
+            else:
+                lo = rhs/slope if lo is None else max(lo, rhs/slope)
+        if lo is not None and hi is not None and lo > hi:
+            return Region(RegionKind.EMPTY, method='exact_feasibility')
+        t = max(Fraction(0), lo) if lo is not None else Fraction(0)
+        if hi is not None:
+            t = min(t, hi)
+        p = (base[0]+t*v[0], base[1]+t*v[1])
+    try:
+        feasible = point(p)
+        directions = [(Fraction(1), Fraction(0))] if not rows else [
+            v for a, b, _ in rows for v in ((-b, a), (b, -a))]
+        for v in directions:
+            if all(a*v[0]+b*v[1] <= 0 for a, b, _ in rows):
+                m = max(map(abs, v))
+                w = tuple(float(x/m) for x in v)
+                length = math.hypot(*w)
                 return Region(RegionKind.UNBOUNDED, feasible_point=feasible,
-                              recession_direction=point(v), residual=residual, method='recession')
-            # Tiny positive dot products do not establish recession.
-    vertices = _deque_vertices(rows, tol)
-    method = 'deque'
-    if len(vertices) < 3 or polygon_area(vertices) == 0:
-        vertices = _enumerated_vertices(rows, tol)
-        method = 'enumeration_fallback'
-    # Normalize in metres, after the affine transform: world-coordinate
-    # rounding can itself introduce duplicate or collinear vertices.
-    world = convex_hull([point(origin+scale*np.array(v)) for v in vertices], policy)
-    if not world:
-        return Region(None, feasible_point=feasible, status='NUMERICAL_UNRESOLVED', method=method)
-    residual = float(np.max(normals @ np.asarray(world).T-offsets[:, None]))
-    sines = [abs(cross(a, b)) for a, b in combinations(normals, 2) if cross(a, b) != 0]
-    sine = min(sines, default=1.)
-    status = 'NUMERICAL_UNRESOLVED' if residual > policy.length(max(map(lambda v: distance(v, feasible), world)))*4 else 'OK'
-    return Region((RegionKind.POINT if len(world) == 1 else RegionKind.SEGMENT if len(world) == 2
-                   else RegionKind.POLYGON), world, feasible, residual=residual, status=status,
-                  method=method, minimum_intersection_sine=sine,
-                  condition_number=(1+math.sqrt(max(0., 1-sine*sine)))/sine,
-                  vertex_scale=max(distance(v, feasible) for v in world))
+                              recession_direction=tuple(x/length for x in w),
+                              residual=0., method='exact_recession')
+        exact = _exact_hull(_exact_vertices(rows))
+        rounded = [point(v) for v in exact]
+        # Region cleanup may remove rounding noise, never metre-sized corners
+        # of a microscopic set. Public point-cloud cleanup retains its policy.
+        ulp = max((math.ulp(x) for v in rounded for x in v), default=0.)
+        cleanup = NumericPolicy(min(policy.length_abs, 4*ulp),
+                                policy.angle_abs, policy.relative)
+        world = convex_hull(rounded, cleanup)
+        dimension = lambda v: min(len(v), 3)
+        if not world or dimension(world) != dimension(exact):
+            return Region(None, status='NUMERICAL_UNRESOLVED', method='unrepresentable_dimension')
+        scale = max(math.dist(v, feasible) for v in world)
+        if not math.isfinite(scale):
+            raise OverflowError
+        # Reject coordinates whose float representation loses the local shape.
+        # Exact topology is insufficient when output metres cannot encode it.
+        exact_d2, _ = _farthest_pair(exact)
+        world_d2, _ = _farthest_pair(world)
+        rounding = 4*max(math.ulp(x) for v in world for x in v)
+        d2_float = float(exact_d2)
+        if not math.isfinite(d2_float) or (exact_d2 and not d2_float):
+            raise OverflowError
+        d = math.sqrt(d2_float)
+        error_bound = Fraction(rounding)*(2*Fraction(d)+Fraction(rounding))
+        if abs(world_d2-exact_d2) > error_bound:
+            return Region(None, status='NUMERICAL_UNRESOLVED', method='unrepresentable_diameter')
+        normals = [h.normal for h in hps]
+        sines = [abs(cross(a, b)) for a, b in combinations(normals, 2) if cross(a, b)]
+        sine = min(sines, default=1.)
+        residual = max((h.normal[0]*v[0]+h.normal[1]*v[1]-h.offset
+                        for h in hps for v in world), default=0.)
+        return Region(RegionKind.POINT if len(exact) == 1 else
+                      RegionKind.SEGMENT if len(exact) == 2 else RegionKind.POLYGON,
+                      world, feasible, residual=residual, method='exact_enumeration',
+                      minimum_intersection_sine=sine,
+                      condition_number=(1+math.sqrt(max(0., 1-sine*sine)))/sine,
+                      vertex_scale=scale)
+    except (OverflowError, ValueError):
+        return Region(None, status='NUMERICAL_UNRESOLVED', method='unrepresentable_coordinates')
 
 
 def diameter(region: Region, policy: NumericPolicy) -> DiameterResult:
@@ -352,30 +405,15 @@ def diameter(region: Region, policy: NumericPolicy) -> DiameterResult:
         return DiameterResult(None, None, status='EMPTY')
     if region.kind == RegionKind.UNBOUNDED:
         return DiameterResult(math.inf, math.inf, status='UNBOUNDED')
-    v = np.asarray(region.vertices)
-    n = len(v)
-    if n == 1:
-        return DiameterResult(0., 0., (point(v[0]), point(v[0])), (0, 0))
-    best, pair = -1., (0, 1)
-    def update(i, j):
-        nonlocal best, pair
-        ij = tuple(sorted((i % n, j % n)))
-        d2 = float(np.sum((v[ij[0]]-v[ij[1]])**2))
-        if d2 > best or (d2 == best and ij < pair):
-            best, pair = d2, ij
-    if n == 2:
-        update(0, 1)
-    else:
-        j = 1
-        for i in range(n):
-            edge = v[(i+1) % n]-v[i]
-            count = 0
-            while cross(edge, v[(j+1) % n]-v[i]) > cross(edge, v[j]-v[i]) and count < n:
-                j = (j+1) % n
-                count += 1
-            update(i, j)
-            update(i+1, j)
-            if abs(cross(edge, v[(j+1) % n]-v[j])) <= policy.squared(np.linalg.norm(edge)):
-                update(i, j+1)
-                update(i+1, j+1)
-    return DiameterResult(math.sqrt(best), best, tuple(point(v[k]) for k in pair), pair)
+    if not region.vertices:
+        return DiameterResult(None, None, status='NUMERICAL_UNRESOLVED')
+    best, pair = _farthest_pair(region.vertices)
+    endpoints = tuple(point(region.vertices[k]) for k in pair)
+    length = math.dist(*endpoints)
+    try:
+        squared = float(best)
+    except OverflowError:
+        squared = math.inf
+    if not math.isfinite(length) or not math.isfinite(squared) or (best and squared == 0):
+        return DiameterResult(None, None, status='NUMERICAL_UNRESOLVED')
+    return DiameterResult(length, squared, endpoints, pair)
