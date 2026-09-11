@@ -1,0 +1,38 @@
+{
+  "q1_geometry": {
+    "n_cases": 285,
+    "n_pass": 285,
+    "n_fail": 0
+  },
+  "q1_circle_cover": {
+    "n_cases": 330,
+    "n_pass": 330,
+    "n_fail": 0
+  },
+  "q2_candidate": {
+    "n_cases": 531,
+    "n_pass": 531,
+    "n_fail": 0,
+    "production_unchanged_during_run": true
+  },
+  "q2_worst_diameter": {
+    "n_cases": 48,
+    "n_pass": 48,
+    "n_fail": 0,
+    "production_unchanged_during_run": true
+  },
+  "tests": "1172 passed in 12.23s",
+  "source_sha256": {
+    "run.py": "5803b9d110b5c9969e3c3857032296b21d4b6afb986f8c55f6e78cad6ff6dd5c",
+    "q1.py": "4385554ed71fe1e0f2ebb8f5d915dfec7036fd4d82b2ba0995baab1d8a3e41cc",
+    "circle.py": "ace1d3e99b24bacd02afe70341b525583d730faabe0ebdb7815c351d2787bd2f",
+    "diagnostics.py": "a10a8048dcb0ad39de0614da6ca7ecbb628d795e2836458c71efae58c8e520a9",
+    "__init__.py": "dcfb61bbadc21affea177b019b99684c36cb390d08fb25d071ceb032c986570c",
+    "plots.py": "c2aff9bd473a347f80a896299edf686ef2796deb99987fe6d0c7c3943a051fdc",
+    "geometry.py": "e412801a585fb35a772b3f1479903b2c48e9e55790c677c2af5a62b3daa76935",
+    "feasible.py": "51f65bfe64a8d42b8b456b145382227a982d50303d5fa8bba4a232fef564706b",
+    "q2.py": "65408262158fb633482b7a049d504c8ac5c436b292aaa176eff8854c10707e80",
+    "adapters.py": "cb98d2645cd7d1793280a0de81325c999b62be1875811f3abccd24f718127fe7"
+  },
+  "optional_sha256": "a5886b4d087076358b5ac468f3d2f6dbb00a3baaa9c325b4f6b7f1461e8c4712"
+}

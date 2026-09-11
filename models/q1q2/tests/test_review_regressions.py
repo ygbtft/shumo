@@ -64,9 +64,9 @@ def test_b3_frontier_refreshes_same_or_changed_station_and_retains_witnesses(mon
                        stability='STABLE_UNDER_REFINEMENT',tie_threshold_m=.3,
                        improvement_status='NUMERICAL_IMPROVEMENT',clearance_diagnostics=('stale',),
                        angular_comparison=({'stale':True},),config=cfg)
-    monkeypatch.setattr(q2,'_search',lambda *args,**kwargs:old)
+    monkeypatch.setattr(q2,'select_second_point',lambda *args,**kwargs:old)
     base = q2.SourceSamples(((1000.,0.),(1100.,0.)),2,(3,3))
-    monkeypatch.setattr(q2,'_sample_sources',lambda *args,**kwargs:base)
+    monkeypatch.setattr(q2,'sample_sources',lambda *args,**kwargs:base)
     actual_score = q2.score_point
     scored_samples = []
     def checked_score(ss,q,samples,config,deadline=None):
@@ -174,7 +174,7 @@ def read_row(tmp_path,**fields):
     row = {'position':[0.,0.],'bearing_deg':0.}
     row.update(fields)
     path = tmp_path/'input.json'
-    path.write_text(json.dumps([row]))
+    path.write_text(json.dumps({'measurements': [row]}))
     return read_measurements(path)[0]
 
 
@@ -182,7 +182,7 @@ def test_manual_nearest_mode_derives_correct_width_and_assumption(tmp_path):
     mode = ErrorMode.NEAREST_ROUNDING_OUTER_1_005_DEG
     obs = read_row(tmp_path,error_mode=mode.value)
     assert obs.half_width_deg == 1.005
-    assert obs.rounding_mode == mode.value
+    assert obs.error_mode == mode.value
     assert obs.rounding_assumption_source == mode.assumption_source
 
 
@@ -213,7 +213,7 @@ def test_b4_search_assembly_observes_shifted_gain_without_rank_change(monkeypatc
     def samples(ss,level,grids,q=None,inward=1e-7,shifted=False,second_half_width_deg=1.,deadline=None):
         points = ((1000.,0.),(1100.,0.))+(((1200.,0.),) if shifted else ())
         return q2.SourceSamples(points,level,grids[level],shifted=shifted)
-    monkeypatch.setattr(q2,'_sample_sources',samples)
+    monkeypatch.setattr(q2,'sample_sources',samples)
     def score(ss,q,samples,config,deadline=None):
         value = 100. if (1200.,0.) in samples.points else 10.
         return q2.Score(value,None,value,len(samples.points),None,local_improvement_m=0.)

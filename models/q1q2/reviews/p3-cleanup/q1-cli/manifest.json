@@ -1,0 +1,94 @@
+{
+  "input": "models/q1q2/data/standard.json",
+  "config": {
+    "station_steps_m": [
+      50.0,
+      25.0
+    ],
+    "source_grids": [
+      [
+        9,
+        25
+      ],
+      [
+        17,
+        49
+      ],
+      [
+        33,
+        97
+      ]
+    ],
+    "starts": 12,
+    "station_initial_step_m": 25.0,
+    "station_min_step_m": 1.5625,
+    "pair_starts": 8,
+    "pair_rounds": 8,
+    "refine_pairs": false,
+    "time_budget_s": 180.0,
+    "movement_budget_m": null,
+    "policy": {
+      "length_abs": 1e-10,
+      "angle_abs": 1e-12,
+      "relative": 1e-12
+    },
+    "second_half_width_deg": 1.0,
+    "block_size": 256,
+    "boundary_step_deg": 5.0,
+    "boundary_precision_m": 1e-05,
+    "near_offset_m": 1e-07,
+    "require_direction": false,
+    "restrict_action_to_arena": false,
+    "tie_floor_m": 0.1,
+    "tie_multiplier": 1.0
+  },
+  "physics": {
+    "rho_lo": 1000.0,
+    "rho_hi": 1500.0,
+    "near_radius": 5.0,
+    "clearance_radius": 20.0,
+    "arena_radius": 1800.0,
+    "arena_center": [
+      0.0,
+      0.0
+    ],
+    "action_bounds": [
+      -2000000.0,
+      2000000.0,
+      -2000000.0,
+      2000000.0
+    ]
+  },
+  "search_randomness": "deterministic",
+  "circle_seed": 0,
+  "source_sha256": {
+    "run.py": "5803b9d110b5c9969e3c3857032296b21d4b6afb986f8c55f6e78cad6ff6dd5c",
+    "q1.py": "4385554ed71fe1e0f2ebb8f5d915dfec7036fd4d82b2ba0995baab1d8a3e41cc",
+    "circle.py": "ace1d3e99b24bacd02afe70341b525583d730faabe0ebdb7815c351d2787bd2f",
+    "diagnostics.py": "a10a8048dcb0ad39de0614da6ca7ecbb628d795e2836458c71efae58c8e520a9",
+    "__init__.py": "dcfb61bbadc21affea177b019b99684c36cb390d08fb25d071ceb032c986570c",
+    "plots.py": "c2aff9bd473a347f80a896299edf686ef2796deb99987fe6d0c7c3943a051fdc",
+    "geometry.py": "e412801a585fb35a772b3f1479903b2c48e9e55790c677c2af5a62b3daa76935",
+    "feasible.py": "51f65bfe64a8d42b8b456b145382227a982d50303d5fa8bba4a232fef564706b",
+    "q2.py": "65408262158fb633482b7a049d504c8ac5c436b292aaa176eff8854c10707e80",
+    "adapters.py": "cb98d2645cd7d1793280a0de81325c999b62be1875811f3abccd24f718127fe7"
+  },
+  "python": "3.14.6",
+  "dependencies": {
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.1",
+    "pytest": "9.1.1",
+    "mpmath": "1.3.0"
+  },
+  "files": [
+    "results.json",
+    "bundle.json",
+    "manifest.json"
+  ],
+  "command": {
+    "command": "q1",
+    "input": "models/q1q2/data/standard.json",
+    "config": null,
+    "output": "models/q1q2/reviews/p3-cleanup/q1-cli"
+  }
+}

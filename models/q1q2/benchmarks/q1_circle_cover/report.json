@@ -1,19 +1,19 @@
 {
   "area": "q1_circle_cover",
-  "generated_utc": "2026-09-11T10:35:37.823878+00:00",
+  "generated_utc": "2026-09-11T11:36:17.523369+00:00",
   "n_cases": 330,
-  "n_pass": 312,
-  "n_fail": 18,
+  "n_pass": 330,
+  "n_fail": 0,
   "categories": {
     "degenerate": {
       "n_cases": 11,
-      "n_pass": 10,
-      "n_fail": 1
+      "n_pass": 11,
+      "n_fail": 0
     },
     "closed_form": {
       "n_cases": 31,
-      "n_pass": 30,
-      "n_fail": 1
+      "n_pass": 31,
+      "n_fail": 0
     },
     "resolved_scale": {
       "n_cases": 222,
@@ -22,13 +22,13 @@
     },
     "scale_limit": {
       "n_cases": 95,
-      "n_pass": 77,
-      "n_fail": 18
+      "n_pass": 95,
+      "n_fail": 0
     },
     "adversarial": {
       "n_cases": 187,
-      "n_pass": 170,
-      "n_fail": 17
+      "n_pass": 187,
+      "n_fail": 0
     },
     "boundary": {
       "n_cases": 12,
@@ -57,8 +57,8 @@
     },
     "invariant": {
       "n_cases": 180,
-      "n_pass": 163,
-      "n_fail": 17
+      "n_pass": 180,
+      "n_fail": 0
     },
     "anchor": {
       "n_cases": 1,
@@ -87,3788 +87,9 @@
     "coverage_status": "Exact YES allows YES/UNRESOLVED in zero band; positive T <= policy tolerance requires UNRESOLVED; larger T requires NO",
     "support": "1..3 distinct valid indices, boundary contact and independent support MEC matches full MEC"
   },
-  "failures": [
-    {
-      "case_id": "isosceles_1e-14",
-      "input": {
-        "points": [
-          [
-            -1.0,
-            0.0
-          ],
-          [
-            1.0,
-            0.0
-          ],
-          [
-            0.0,
-            1e-14
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "scale_assessment": {
-          "coordinate_magnitude": 1.0,
-          "feature_m": 1e-14,
-          "min_nonzero_pair_distance_m": 1.0,
-          "min_nonzero_triangle_altitude_m": 1e-14,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          0.0
-        ],
-        "radius": 1.0,
-        "diameter": 2.0,
-        "diameter_squared": 4.0,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "1",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 1.0,
-        "tolerance_m2": 4.0800000000000004e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1.0,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1.0,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1.0,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1.0,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            0.0
-          ],
-          "radius": 1.0,
-          "support_vertex_indices": [
-            0,
-            1
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            -50000000000000.0
-          ],
-          "radius": 50000000000000.0,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1.0,
-          "tolerance_m2": 4.0800000000000004e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration+closed_form",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "collinear_three_transform_(1, 0.731, (123, -456))",
-      "input": {
-        "points": [
-          [
-            123.0,
-            -456.0
-          ],
-          [
-            124.48901432046769,
-            -454.6647710483059
-          ],
-          [
-            130.44507160233843,
-            -449.32385524152943
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "collinear_three",
-          "scale": 1,
-          "angle": 0.731,
-          "shift": [
-            123,
-            -456
-          ],
-          "reflect": 1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 456.0,
-          "feature_m": 1.8825607406022854e-14,
-          "min_nonzero_pair_distance_m": 1.999999999999989,
-          "min_nonzero_triangle_altitude_m": 1.8825607406022854e-14,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          126.72253580116922,
-          -452.6619276207647
-        ],
-        "radius": 5.000000000000004,
-        "diameter": 10.000000000000009,
-        "diameter_squared": 100.0000000000002,
-        "pair": [
-          0,
-          2
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            2
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            2
-          ]
-        ],
-        "forced_center": [
-          126.72253580116922,
-          -452.6619276207647
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "30948500982134567299938054985/1237940039285380274899124224",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 5.000000000000004,
-        "tolerance_m2": 2.200000000000002e-09
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              126.72253580116922,
-              -452.6619276207647
-            ],
-            "radius": 5.000000000000004,
-            "support_vertex_indices": [
-              2,
-              0
-            ],
-            "containment_residual": 1.9539925233402755e-14,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              126.72253580116922,
-              -452.6619276207647
-            ],
-            "radius": 5.000000000000004,
-            "support_vertex_indices": [
-              0,
-              2
-            ],
-            "containment_residual": 1.9539925233402755e-14,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              126.72253580116922,
-              -452.6619276207647
-            ],
-            "radius": 5.000000000000004,
-            "support_vertex_indices": [
-              0,
-              2
-            ],
-            "containment_residual": 1.9539925233402755e-14,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              126.72253580116922,
-              -452.6619276207647
-            ],
-            "radius": 5.000000000000004,
-            "support_vertex_indices": [
-              2,
-              0
-            ],
-            "containment_residual": 1.9539925233402755e-14,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            126.72253580116922,
-            -452.6619276207647
-          ],
-          "radius": 5.000000000000004,
-          "support_vertex_indices": [
-            0,
-            2
-          ],
-          "containment_residual": 1.9539925233402755e-14,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            -283704833080994.6,
-            316380616752726.1
-          ],
-          "radius": 424953087964670.2,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            126.72253580116922,
-            -452.6619276207647
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 5.000000000000004,
-          "tolerance_m2": 2.200000000000002e-09
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "isosceles_1e-14_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -1e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            0.0
-          ],
-          [
-            0.0,
-            -1e-20
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "isosceles_1e-14",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 1e-06,
-          "feature_m": 1e-20,
-          "min_nonzero_pair_distance_m": 1e-06,
-          "min_nonzero_triangle_altitude_m": 1e-20,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          0.0
-        ],
-        "radius": 1e-06,
-        "diameter": 2e-06,
-        "diameter_squared": 4e-12,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "22300745198530621123234062426025/22300745198530623141535718272648361505980416",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 1e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            0.0
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            50000000.0
-          ],
-          "radius": 50000000.0,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "isosceles_1e-14_transform_(1000000.0, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -1000000.0,
-            0.0
-          ],
-          [
-            1000000.0,
-            0.0
-          ],
-          [
-            0.0,
-            1e-08
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "isosceles_1e-14",
-          "scale": 1000000.0,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": 1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 1000000.0,
-          "feature_m": 1e-08,
-          "min_nonzero_pair_distance_m": 1000000.0,
-          "min_nonzero_triangle_altitude_m": 1e-08,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          0.0
-        ],
-        "radius": 1000000.0,
-        "diameter": 2000000.0,
-        "diameter_squared": 4000000000000.0,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "1000000000000",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 1000000.0,
-        "tolerance_m2": 8.000399999999999
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1000000.0,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1000000.0,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1000000.0,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1000000.0,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            0.0
-          ],
-          "radius": 1000000.0,
-          "support_vertex_indices": [
-            0,
-            1
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            -5e+19
-          ],
-          "radius": 5e+19,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1000000.0,
-          "tolerance_m2": 8.000399999999999
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "isosceles_1e-14_transform_(0.001, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -0.001,
-            0.0
-          ],
-          [
-            0.001,
-            0.0
-          ],
-          [
-            0.0,
-            1e-17
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "isosceles_1e-14",
-          "scale": 0.001,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": 1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 0.001,
-          "feature_m": 1e-17,
-          "min_nonzero_pair_distance_m": 0.001,
-          "min_nonzero_triangle_altitude_m": 1e-17,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          0.0
-        ],
-        "radius": 0.001,
-        "diameter": 0.002,
-        "diameter_squared": 4e-06,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "1329227995784915928244039281409/1329227995784915872903807060280344576",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 0.001,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 0.001,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 0.001,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 0.001,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 0.001,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            0.0
-          ],
-          "radius": 0.001,
-          "support_vertex_indices": [
-            0,
-            1
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            -50000000000.0
-          ],
-          "radius": 50000000000.0,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 0.001,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "isosceles_1e-09_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -1e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            0.0
-          ],
-          [
-            0.0,
-            -1e-15
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "isosceles_1e-09",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 1e-06,
-          "feature_m": 1e-15,
-          "min_nonzero_pair_distance_m": 1e-06,
-          "min_nonzero_triangle_altitude_m": 1e-15,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          0.0
-        ],
-        "radius": 1e-06,
-        "diameter": 2e-06,
-        "diameter_squared": 4e-12,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "22300745198530621123234062426025/22300745198530623141535718272648361505980416",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 1e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            0.0
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            499.99999999999994
-          ],
-          "radius": 499.99999999999994,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "isosceles_1e-09_transform_(0.001, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -0.001,
-            0.0
-          ],
-          [
-            0.001,
-            0.0
-          ],
-          [
-            0.0,
-            1.0000000000000002e-12
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "isosceles_1e-09",
-          "scale": 0.001,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": 1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 0.001,
-          "feature_m": 1.0000000000000002e-12,
-          "min_nonzero_pair_distance_m": 0.001,
-          "min_nonzero_triangle_altitude_m": 1.0000000000000002e-12,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          0.0
-        ],
-        "radius": 0.001,
-        "diameter": 0.002,
-        "diameter_squared": 4e-06,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "1329227995784915928244039281409/1329227995784915872903807060280344576",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 0.001,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 0.001,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 0.001,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 0.001,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 0.001,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            0.0
-          ],
-          "radius": 0.001,
-          "support_vertex_indices": [
-            0,
-            1
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            -499999.99999999994
-          ],
-          "radius": 499999.99999999994,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 0.001,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "isosceles_0.5_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -1e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            0.0
-          ],
-          [
-            0.0,
-            -5e-07
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "isosceles_0.5",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 1e-06,
-          "feature_m": 5e-07,
-          "min_nonzero_pair_distance_m": 1.1180339887498948e-06,
-          "min_nonzero_triangle_altitude_m": 5e-07,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          0.0
-        ],
-        "radius": 1e-06,
-        "diameter": 2e-06,
-        "diameter_squared": 4e-12,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "22300745198530621123234062426025/22300745198530623141535718272648361505980416",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 1e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            0.0
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            7.5e-07
-          ],
-          "radius": 1.2499999999999999e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "isosceles_1_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -1e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            0.0
-          ],
-          [
-            0.0,
-            -1e-06
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "isosceles_1",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 1e-06,
-          "feature_m": 1e-06,
-          "min_nonzero_pair_distance_m": 1.414213562373095e-06,
-          "min_nonzero_triangle_altitude_m": 1e-06,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          0.0
-        ],
-        "radius": 1e-06,
-        "diameter": 2e-06,
-        "diameter_squared": 4e-12,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            1,
-            2
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "22300745198530621123234062426025/22300745198530623141535718272648361505980416",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 1e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            0.0
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            0.0
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "isosceles_2_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -1e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            0.0
-          ],
-          [
-            0.0,
-            -2e-06
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "isosceles_2",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 2e-06,
-          "feature_m": 1.788854381999832e-06,
-          "min_nonzero_pair_distance_m": 2e-06,
-          "min_nonzero_triangle_altitude_m": 1.788854381999832e-06,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          -7.5e-07
-        ],
-        "radius": 1.2499999999999999e-06,
-        "diameter": 2.2360679774997895e-06,
-        "diameter_squared": 5e-12,
-        "pair": [
-          0,
-          2
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            2
-          ],
-          [
-            1,
-            2
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1,
-            2
-          ]
-        ],
-        "forced_center": [
-          -5e-07,
-          -1e-06
-        ],
-        "thales_max": 2e-12,
-        "thales_exact": "22300745198530621123234062426025/11150372599265311570767859136324180752990208",
-        "radius_squared_exact": "557518629963265528080851560650625/356811923176489970264571492362373784095686656",
-        "mathematical_cover": "NO",
-        "allowed_cover_status": [
-          "UNRESOLVED"
-        ],
-        "kappa": 1.118033988749895,
-        "eta": 1.61245154965971,
-        "midpoint_radius": 1.8027756377319946e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              -7.5e-07
-            ],
-            "radius": 1.2499999999999999e-06,
-            "support_vertex_indices": [
-              1,
-              2,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -7.5e-07
-            ],
-            "radius": 1.2499999999999999e-06,
-            "support_vertex_indices": [
-              0,
-              2,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -7.5e-07
-            ],
-            "radius": 1.2499999999999999e-06,
-            "support_vertex_indices": [
-              1,
-              0,
-              2
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -7.5e-07
-            ],
-            "radius": 1.2499999999999999e-06,
-            "support_vertex_indices": [
-              2,
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            -7.5e-07
-          ],
-          "radius": 1.2499999999999999e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            -7.5e-07
-          ],
-          "radius": 1.2499999999999999e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "UNRESOLVED",
-          "forced_center": [
-            -5e-07,
-            -1e-06
-          ],
-          "thales_max": 2e-12,
-          "kappa": 1.118033988749895,
-          "eta": 1.6124515496597098,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1.8027756377319946e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "isosceles_1.7320508075688772_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -1e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            0.0
-          ],
-          [
-            0.0,
-            -1.7320508075688771e-06
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "isosceles_1.7320508075688772",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 1.7320508075688771e-06,
-          "feature_m": 1.7320508075688771e-06,
-          "min_nonzero_pair_distance_m": 2e-06,
-          "min_nonzero_triangle_altitude_m": 1.7320508075688771e-06,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          -5.773502691896257e-07
-        ],
-        "radius": 1.1547005383792514e-06,
-        "diameter": 2e-06,
-        "diameter_squared": 4e-12,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1,
-            2
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 1.9999999999999996e-12,
-        "thales_exact": "5575186299632654540834185844433/2787593149816327892691964784081045188247552",
-        "radius_squared_exact": "1989292945639145944512817602483859105319117288860606674795315049/1491969709229359659421422010196718036060665001319866608678788285919263719424",
-        "mathematical_cover": "NO",
-        "allowed_cover_status": [
-          "UNRESOLVED"
-        ],
-        "kappa": 1.1547005383792515,
-        "eta": 1.7320508075688772,
-        "midpoint_radius": 1.7320508075688771e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              -5.773502691896257e-07
-            ],
-            "radius": 1.1547005383792514e-06,
-            "support_vertex_indices": [
-              1,
-              2,
-              0
-            ],
-            "containment_residual": 2.117582368135751e-22,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -5.773502691896257e-07
-            ],
-            "radius": 1.1547005383792514e-06,
-            "support_vertex_indices": [
-              0,
-              2,
-              1
-            ],
-            "containment_residual": 2.117582368135751e-22,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -5.773502691896257e-07
-            ],
-            "radius": 1.1547005383792514e-06,
-            "support_vertex_indices": [
-              1,
-              0,
-              2
-            ],
-            "containment_residual": 2.117582368135751e-22,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -5.773502691896257e-07
-            ],
-            "radius": 1.1547005383792514e-06,
-            "support_vertex_indices": [
-              2,
-              0,
-              1
-            ],
-            "containment_residual": 2.117582368135751e-22,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            -5.773502691896257e-07
-          ],
-          "radius": 1.1547005383792514e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 2.117582368135751e-22,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            -5.773502691896257e-07
-          ],
-          "radius": 1.1547005383792514e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 2.117582368135751e-22,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "UNRESOLVED",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 1.9999999999999996e-12,
-          "kappa": 1.1547005383792515,
-          "eta": 1.7320508075688772,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1.7320508075688771e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "thales_boundary_0.9999999999999999_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -1e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            0.0
-          ],
-          [
-            0.0,
-            -9.999999999999997e-07
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "thales_boundary_0.9999999999999999",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 1e-06,
-          "feature_m": 9.999999999999997e-07,
-          "min_nonzero_pair_distance_m": 1.4142135623730947e-06,
-          "min_nonzero_triangle_altitude_m": 9.999999999999997e-07,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          0.0
-        ],
-        "radius": 1e-06,
-        "diameter": 2e-06,
-        "diameter_squared": 4e-12,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "22300745198530621123234062426025/22300745198530623141535718272648361505980416",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 1e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              0.0
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            0.0
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            2.117582368135751e-22
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "thales_boundary_1.00000000001_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -1e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            0.0
-          ],
-          [
-            0.0,
-            -1.00000000001e-06
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "thales_boundary_1.00000000001",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 1.00000000001e-06,
-          "feature_m": 1.00000000001e-06,
-          "min_nonzero_pair_distance_m": 1.4142135623801662e-06,
-          "min_nonzero_triangle_altitude_m": 1.00000000001e-06,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          -1.000007097523427e-17
-        ],
-        "radius": 1e-06,
-        "diameter": 2e-06,
-        "diameter_squared": 4e-12,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1,
-            2
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 2.000014195066854e-23,
-        "thales_exact": "27876129348518896071/1393796574908163946345982392040522594123776",
-        "radius_squared_exact": "497323236419733087459731680408980913662434234515172742158835649/497323236419733132469312909087570824477296079995203694146092401096944254976",
-        "mathematical_cover": "NO",
-        "allowed_cover_status": [
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.00000000001,
-        "midpoint_radius": 1.00000000001e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              -1.000007097523427e-17
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              2,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -1.000007097523427e-17
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              2,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -1.000007097523427e-17
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0,
-              2
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -1.000007097523427e-17
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              2,
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            -1.000007097523427e-17
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            -1.000007097523427e-17
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "UNRESOLVED",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 2.000014195066854e-23,
-          "kappa": 1.0,
-          "eta": 1.00000000001,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1.00000000001e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "thales_boundary_1.00000001_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            -1e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            0.0
-          ],
-          [
-            0.0,
-            -1.00000001e-06
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "thales_boundary_1.00000001",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 1.00000001e-06,
-          "feature_m": 1.00000001e-06,
-          "min_nonzero_pair_distance_m": 1.4142135694441628e-06,
-          "min_nonzero_triangle_altitude_m": 1.00000001e-06,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          0.0,
-          -9.999999986274937e-15
-        ],
-        "radius": 1e-06,
-        "diameter": 2e-06,
-        "diameter_squared": 4e-12,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1,
-            2
-          ]
-        ],
-        "forced_center": [
-          0.0,
-          0.0
-        ],
-        "thales_max": 2.0000000172549874e-20,
-        "thales_exact": "446014907818603244330075/22300745198530623141535718272648361505980416",
-        "radius_squared_exact": "79571719417000226540358194090738061892938828989456287656780625/79571719417000225784727371993350488360053298466912841669723524619374166016",
-        "mathematical_cover": "NO",
-        "allowed_cover_status": [
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.00000001,
-        "midpoint_radius": 1.00000001e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              0.0,
-              -9.999999986274937e-15
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              2,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -9.999999986274937e-15
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              0,
-              2,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -9.999999986274937e-15
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              1,
-              0,
-              2
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              0.0,
-              -9.999999986274937e-15
-            ],
-            "radius": 1e-06,
-            "support_vertex_indices": [
-              2,
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            0.0,
-            -9.999999986274937e-15
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            0.0,
-            -9.999999986274937e-15
-          ],
-          "radius": 1e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "UNRESOLVED",
-          "forced_center": [
-            0.0,
-            0.0
-          ],
-          "thales_max": 2.0000000172549874e-20,
-          "kappa": 1.0,
-          "eta": 1.00000001,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 1.00000001e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "acute_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            0.0,
-            0.0
-          ],
-          [
-            4e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            -3e-06
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "acute",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 4e-06,
-          "feature_m": 2.8284271247461903e-06,
-          "min_nonzero_pair_distance_m": 3.162277660168379e-06,
-          "min_nonzero_triangle_altitude_m": 2.8284271247461903e-06,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          2e-06,
-          -1.0000000000000002e-06
-        ],
-        "radius": 2.2360679774997895e-06,
-        "diameter": 4.242640687119285e-06,
-        "diameter_squared": 1.8e-11,
-        "pair": [
-          1,
-          2
-        ],
-        "farthest_pairs": [
-          [
-            1,
-            2
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1,
-            2
-          ]
-        ],
-        "forced_center": [
-          2.4999999999999998e-06,
-          -1.5e-06
-        ],
-        "thales_max": 4e-12,
-        "thales_exact": "22300745198530621123234062426025/5575186299632655785383929568162090376495104",
-        "radius_squared_exact": "89518182553761597076966659093157712329115878148585082630429682841/17903636510752320024742046389570289545506002453429449265742226403625999007744",
-        "mathematical_cover": "NO",
-        "allowed_cover_status": [
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0540925533894598,
-        "eta": 1.3743685418725538,
-        "midpoint_radius": 2.9154759474226503e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              2e-06,
-              -1.0000000000000002e-06
-            ],
-            "radius": 2.2360679774997895e-06,
-            "support_vertex_indices": [
-              1,
-              2,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              2e-06,
-              -1.0000000000000002e-06
-            ],
-            "radius": 2.2360679774997895e-06,
-            "support_vertex_indices": [
-              0,
-              2,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              2e-06,
-              -1.0000000000000002e-06
-            ],
-            "radius": 2.2360679774997895e-06,
-            "support_vertex_indices": [
-              1,
-              0,
-              2
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              2e-06,
-              -1.0000000000000002e-06
-            ],
-            "radius": 2.2360679774997895e-06,
-            "support_vertex_indices": [
-              2,
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            2e-06,
-            -1.0000000000000002e-06
-          ],
-          "radius": 2.2360679774997895e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            2e-06,
-            -1.0000000000000002e-06
-          ],
-          "radius": 2.2360679774997895e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "UNRESOLVED",
-          "forced_center": [
-            2.4999999999999998e-06,
-            -1.5e-06
-          ],
-          "thales_max": 4e-12,
-          "kappa": 1.0540925533894598,
-          "eta": 1.3743685418725535,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 2.9154759474226503e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "obtuse_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            0.0,
-            0.0
-          ],
-          [
-            4e-06,
-            0.0
-          ],
-          [
-            1e-06,
-            -1e-06
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "obtuse",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 4e-06,
-          "feature_m": 1e-06,
-          "min_nonzero_pair_distance_m": 1.414213562373095e-06,
-          "min_nonzero_triangle_altitude_m": 1e-06,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          2e-06,
-          0.0
-        ],
-        "radius": 2e-06,
-        "diameter": 4e-06,
-        "diameter_squared": 1.6e-11,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1
-          ]
-        ],
-        "forced_center": [
-          2e-06,
-          0.0
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "22300745198530621123234062426025/5575186299632655785383929568162090376495104",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 2e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              2e-06,
-              0.0
-            ],
-            "radius": 2e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              2e-06,
-              0.0
-            ],
-            "radius": 2e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              2e-06,
-              0.0
-            ],
-            "radius": 2e-06,
-            "support_vertex_indices": [
-              1,
-              0
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              2e-06,
-              0.0
-            ],
-            "radius": 2e-06,
-            "support_vertex_indices": [
-              0,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            2e-06,
-            0.0
-          ],
-          "radius": 2e-06,
-          "support_vertex_indices": [
-            0,
-            1
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            2e-06,
-            1e-06
-          ],
-          "radius": 2.2360679774997895e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            2e-06,
-            0.0
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 2e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "right_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            0.0,
-            0.0
-          ],
-          [
-            4e-06,
-            0.0
-          ],
-          [
-            0.0,
-            -3e-06
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "right",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 4e-06,
-          "feature_m": 2.4000000000000003e-06,
-          "min_nonzero_pair_distance_m": 3e-06,
-          "min_nonzero_triangle_altitude_m": 2.4000000000000003e-06,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          2e-06,
-          -1.5e-06
-        ],
-        "radius": 2.4999999999999998e-06,
-        "diameter": 4.9999999999999996e-06,
-        "diameter_squared": 2.4999999999999998e-11,
-        "pair": [
-          1,
-          2
-        ],
-        "farthest_pairs": [
-          [
-            1,
-            2
-          ]
-        ],
-        "supports": [
-          [
-            1,
-            2
-          ],
-          [
-            0,
-            1,
-            2
-          ]
-        ],
-        "forced_center": [
-          2e-06,
-          -1.5e-06
-        ],
-        "thales_max": 0.0,
-        "thales_exact": "0",
-        "radius_squared_exact": "34844914372704097275940653616781/5575186299632655785383929568162090376495104",
-        "mathematical_cover": "YES",
-        "allowed_cover_status": [
-          "YES",
-          "UNRESOLVED"
-        ],
-        "kappa": 1.0,
-        "eta": 1.0,
-        "midpoint_radius": 2.4999999999999998e-06,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              2e-06,
-              -1.5e-06
-            ],
-            "radius": 2.4999999999999998e-06,
-            "support_vertex_indices": [
-              1,
-              2
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              2e-06,
-              -1.5e-06
-            ],
-            "radius": 2.4999999999999998e-06,
-            "support_vertex_indices": [
-              2,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              2e-06,
-              -1.5e-06
-            ],
-            "radius": 2.4999999999999998e-06,
-            "support_vertex_indices": [
-              1,
-              2
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              2e-06,
-              -1.5e-06
-            ],
-            "radius": 2.4999999999999998e-06,
-            "support_vertex_indices": [
-              2,
-              1
-            ],
-            "containment_residual": 0.0,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            2e-06,
-            -1.5e-06
-          ],
-          "radius": 2.4999999999999998e-06,
-          "support_vertex_indices": [
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            2e-06,
-            -1.5e-06
-          ],
-          "radius": 2.4999999999999998e-06,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 0.0,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "YES",
-          "forced_center": [
-            2e-06,
-            -1.5e-06
-          ],
-          "thales_max": 0.0,
-          "kappa": 1.0,
-          "eta": 1.0,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 2.4999999999999998e-06,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    },
-    {
-      "case_id": "equilateral_1_transform_(1e-06, 0, (0, 0))",
-      "input": {
-        "points": [
-          [
-            0.0,
-            0.0
-          ],
-          [
-            1e-06,
-            0.0
-          ],
-          [
-            5e-07,
-            -8.660254037844386e-07
-          ]
-        ],
-        "seeds": [
-          0,
-          1,
-          7,
-          42
-        ],
-        "transform": {
-          "base": "equilateral_1",
-          "scale": 1e-06,
-          "angle": 0,
-          "shift": [
-            0,
-            0
-          ],
-          "reflect": -1
-        },
-        "scale_assessment": {
-          "coordinate_magnitude": 1e-06,
-          "feature_m": 8.660254037844386e-07,
-          "min_nonzero_pair_distance_m": 1e-06,
-          "min_nonzero_triangle_altitude_m": 8.660254037844386e-07,
-          "scale_limit": true
-        }
-      },
-      "expected": {
-        "center": [
-          5e-07,
-          -2.8867513459481284e-07
-        ],
-        "radius": 5.773502691896257e-07,
-        "diameter": 1e-06,
-        "diameter_squared": 1e-12,
-        "pair": [
-          0,
-          1
-        ],
-        "farthest_pairs": [
-          [
-            0,
-            1
-          ]
-        ],
-        "supports": [
-          [
-            0,
-            1,
-            2
-          ]
-        ],
-        "forced_center": [
-          5e-07,
-          0.0
-        ],
-        "thales_max": 4.999999999999999e-13,
-        "thales_exact": "5575186299632654540834185844433/11150372599265311570767859136324180752990208",
-        "radius_squared_exact": "1989292945639145944512817602483859105319117288860606674795315049/5967878836917438637685688040786872144242660005279466434715153143677054877696",
-        "mathematical_cover": "NO",
-        "allowed_cover_status": [
-          "UNRESOLVED"
-        ],
-        "kappa": 1.1547005383792515,
-        "eta": 1.7320508075688772,
-        "midpoint_radius": 8.660254037844386e-07,
-        "tolerance_m2": 2.02e-10
-      },
-      "actual": {
-        "minimum_circle": [
-          {
-            "center": [
-              5e-07,
-              -2.8867513459481284e-07
-            ],
-            "radius": 5.773502691896257e-07,
-            "support_vertex_indices": [
-              1,
-              2,
-              0
-            ],
-            "containment_residual": 1.0587911840678754e-22,
-            "status": "OK",
-            "seed": 0,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              5e-07,
-              -2.8867513459481284e-07
-            ],
-            "radius": 5.773502691896257e-07,
-            "support_vertex_indices": [
-              0,
-              2,
-              1
-            ],
-            "containment_residual": 1.0587911840678754e-22,
-            "status": "OK",
-            "seed": 1,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              5e-07,
-              -2.8867513459481284e-07
-            ],
-            "radius": 5.773502691896257e-07,
-            "support_vertex_indices": [
-              1,
-              0,
-              2
-            ],
-            "containment_residual": 1.0587911840678754e-22,
-            "status": "OK",
-            "seed": 7,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          },
-          {
-            "center": [
-              5e-07,
-              -2.8867513459481284e-07
-            ],
-            "radius": 5.773502691896257e-07,
-            "support_vertex_indices": [
-              2,
-              0,
-              1
-            ],
-            "containment_residual": 1.0587911840678754e-22,
-            "status": "OK",
-            "seed": 42,
-            "method": "welzl_certified_support",
-            "diagnostics": []
-          }
-        ],
-        "ordinary": {
-          "center": [
-            5e-07,
-            -2.8867513459481284e-07
-          ],
-          "radius": 5.773502691896257e-07,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 1.0587911840678754e-22,
-          "status": "OK",
-          "seed": null,
-          "method": "candidate_enumeration_exact",
-          "diagnostics": []
-        },
-        "forced": {
-          "center": [
-            5e-07,
-            -2.8867513459481284e-07
-          ],
-          "radius": 5.773502691896257e-07,
-          "support_vertex_indices": [
-            0,
-            1,
-            2
-          ],
-          "containment_residual": 1.0587911840678754e-22,
-          "status": "OK",
-          "seed": null,
-          "method": "forced_boundary",
-          "diagnostics": []
-        },
-        "cover": {
-          "status": "UNRESOLVED",
-          "forced_center": [
-            5e-07,
-            0.0
-          ],
-          "thales_max": 4.999999999999999e-13,
-          "kappa": 1.1547005383792515,
-          "eta": 1.7320508075688772,
-          "counterexample_vertex": null,
-          "counterexample_index": null,
-          "finite_cover": true,
-          "midpoint_radius": 8.660254037844386e-07,
-          "tolerance_m2": 2.02e-10
-        }
-      },
-      "error": [
-        {
-          "field": "forced.exception",
-          "expected": "ForcedSupportError",
-          "actual": "circle"
-        }
-      ],
-      "truth_method": "exact_fraction_enumeration",
-      "note": "All failed checks retained; no expected-failure suppression."
-    }
-  ],
+  "failures": [],
   "weak_comparisons_excluded": 0,
-  "n_checks": 21436,
+  "n_checks": 22644,
   "scale_limit_policy": {
     "max_coordinate_m": 1000000.0,
     "min_nonzero_feature_m": 0.001,
@@ -3896,8 +117,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -3928,8 +149,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4003,7 +224,7 @@
           "tolerance_m2": 4.0800000000000004e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "isosceles_1e-09",
@@ -4024,8 +245,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4056,8 +277,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4152,8 +373,8 @@
             ],
             "radius": 1.9999999999999998e-05,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4184,8 +405,8 @@
             ],
             "radius": 1.9999999999999998e-05,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4279,8 +500,8 @@
             ],
             "radius": 20000000.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4311,8 +532,8 @@
             ],
             "radius": 20000000.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4406,8 +627,8 @@
             ],
             "radius": 20.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4438,8 +659,8 @@
             ],
             "radius": 20.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4533,8 +754,8 @@
             ],
             "radius": 4.9999999999999996e-06,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4581,8 +802,8 @@
             ],
             "radius": 4.9999999999999996e-06,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4628,8 +849,8 @@
             ],
             "radius": 5000000.0,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4676,8 +897,8 @@
             ],
             "radius": 5000000.0,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4723,8 +944,8 @@
             ],
             "radius": 5.0,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4771,8 +992,8 @@
             ],
             "radius": 5.0,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4818,8 +1039,8 @@
             ],
             "radius": 5.000000000000004,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 1.9539925233402755e-14,
             "status": "OK",
@@ -4866,8 +1087,8 @@
             ],
             "radius": 5.000000000000004,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 1.9539925233402755e-14,
             "status": "OK",
@@ -4925,7 +1146,7 @@
           "tolerance_m2": 2.200000000000002e-09
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "collinear_three_transform_(1e-06, 0, (0, 0))",
@@ -4946,8 +1167,8 @@
             ],
             "radius": 4.9999999999999996e-06,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -4994,8 +1215,8 @@
             ],
             "radius": 4.9999999999999996e-06,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5058,8 +1279,8 @@
             ],
             "radius": 5000000.0,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5106,8 +1327,8 @@
             ],
             "radius": 5000000.0,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5170,8 +1391,8 @@
             ],
             "radius": 5.0,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5218,8 +1439,8 @@
             ],
             "radius": 5.0,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5282,8 +1503,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5314,8 +1535,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5389,7 +1610,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "isosceles_1e-14_transform_(1000000.0, 0, (0, 0))",
@@ -5410,8 +1631,8 @@
             ],
             "radius": 1000000.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5442,8 +1663,8 @@
             ],
             "radius": 1000000.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5517,7 +1738,7 @@
           "tolerance_m2": 8.000399999999999
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "isosceles_1e-14_transform_(1, 0, (1000000000.0, -1000000000.0))",
@@ -5538,8 +1759,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5570,8 +1791,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5650,8 +1871,8 @@
             ],
             "radius": 0.001,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5682,8 +1903,8 @@
             ],
             "radius": 0.001,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5757,7 +1978,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "isosceles_1e-09_transform_(1, 0.731, (123, -456))",
@@ -5778,8 +1999,8 @@
             ],
             "radius": 1.0000000000000082,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5810,8 +2031,8 @@
             ],
             "radius": 1.0000000000000082,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5906,8 +2127,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -5938,8 +2159,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6013,7 +2234,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "isosceles_1e-09_transform_(1, 0, (1000000000.0, -1000000000.0))",
@@ -6034,8 +2255,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6066,8 +2287,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6146,8 +2367,8 @@
             ],
             "radius": 0.001,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6178,8 +2399,8 @@
             ],
             "radius": 0.001,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6253,7 +2474,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "isosceles_1e-09_transform_(1, 0, (100000, -100000))",
@@ -6274,8 +2495,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6306,8 +2527,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6402,8 +2623,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6434,8 +2655,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6509,7 +2730,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "isosceles_0.5_transform_(1, 0, (1000000000.0, -1000000000.0))",
@@ -6530,8 +2751,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6562,8 +2783,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6658,8 +2879,8 @@
             ],
             "radius": 0.001,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6690,8 +2911,8 @@
             ],
             "radius": 0.001,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6786,8 +3007,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6818,8 +3039,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6893,7 +3114,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "isosceles_1_transform_(1, 0, (1000000000.0, -1000000000.0))",
@@ -6914,8 +3135,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -6946,8 +3167,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7042,9 +3263,9 @@
             ],
             "radius": 1.2499999999999999e-06,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7060,8 +3281,8 @@
             "radius": 1.2499999999999999e-06,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7076,8 +3297,8 @@
             ],
             "radius": 1.2499999999999999e-06,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -7093,9 +3314,9 @@
             ],
             "radius": 1.2499999999999999e-06,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7154,7 +3375,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "isosceles_2_transform_(1000000.0, 0, (0, 0))",
@@ -7175,9 +3396,9 @@
             ],
             "radius": 1250000.0,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7193,8 +3414,8 @@
             "radius": 1250000.0,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7209,8 +3430,8 @@
             ],
             "radius": 1250000.0,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -7226,9 +3447,9 @@
             ],
             "radius": 1250000.0,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7311,9 +3532,9 @@
             ],
             "radius": 1.25,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7329,8 +3550,8 @@
             "radius": 1.25,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7345,8 +3566,8 @@
             ],
             "radius": 1.25,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -7362,9 +3583,9 @@
             ],
             "radius": 1.25,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7447,9 +3668,9 @@
             ],
             "radius": 1.1547005383792514e-06,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 2.117582368135751e-22,
             "status": "OK",
@@ -7465,8 +3686,8 @@
             "radius": 1.1547005383792514e-06,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 2.117582368135751e-22,
             "status": "OK",
@@ -7481,8 +3702,8 @@
             ],
             "radius": 1.1547005383792514e-06,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 2.117582368135751e-22,
@@ -7498,9 +3719,9 @@
             ],
             "radius": 1.1547005383792514e-06,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 2.117582368135751e-22,
             "status": "OK",
@@ -7559,7 +3780,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "isosceles_1.7320508075688772_transform_(1000000.0, 0, (0, 0))",
@@ -7580,9 +3801,9 @@
             ],
             "radius": 1154700.5383792515,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7598,8 +3819,8 @@
             "radius": 1154700.5383792515,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7614,8 +3835,8 @@
             ],
             "radius": 1154700.5383792515,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -7631,9 +3852,9 @@
             ],
             "radius": 1154700.5383792515,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7723,9 +3944,9 @@
             ],
             "radius": 1.1547005280168354,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 5.181207907156704e-09,
             "status": "NUMERICAL_UNRESOLVED",
@@ -7743,8 +3964,8 @@
             "radius": 1.1547005280168354,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 5.181207907156704e-09,
             "status": "NUMERICAL_UNRESOLVED",
@@ -7761,8 +3982,8 @@
             ],
             "radius": 1.1547005280168354,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 5.181207907156704e-09,
@@ -7780,9 +4001,9 @@
             ],
             "radius": 1.1547005280168354,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 5.181207907156704e-09,
             "status": "NUMERICAL_UNRESOLVED",
@@ -7871,8 +4092,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7903,8 +4124,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -7978,7 +4199,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "thales_boundary_0.9999999999999999_transform_(1, 0, (1000000000.0, -1000000000.0))",
@@ -7999,8 +4220,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8031,8 +4252,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8127,8 +4348,8 @@
             ],
             "radius": 0.001,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8159,8 +4380,8 @@
             ],
             "radius": 0.001,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8255,9 +4476,9 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8273,8 +4494,8 @@
             "radius": 1e-06,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8289,8 +4510,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -8306,9 +4527,9 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8367,7 +4588,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "thales_boundary_1.00000000001_transform_(1000000.0, 0, (0, 0))",
@@ -8388,9 +4609,9 @@
             ],
             "radius": 1000000.0,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8406,8 +4627,8 @@
             "radius": 1000000.0,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8422,8 +4643,8 @@
             ],
             "radius": 1000000.0,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -8439,9 +4660,9 @@
             ],
             "radius": 1000000.0,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8524,8 +4745,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8556,8 +4777,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8652,9 +4873,9 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8670,8 +4891,8 @@
             "radius": 1e-06,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8686,8 +4907,8 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -8703,9 +4924,9 @@
             ],
             "radius": 1e-06,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8764,7 +4985,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "thales_boundary_1.00000001_transform_(1000000.0, 0, (0, 0))",
@@ -8785,9 +5006,9 @@
             ],
             "radius": 1000000.0,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8803,8 +5024,8 @@
             "radius": 1000000.0,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8819,8 +5040,8 @@
             ],
             "radius": 1000000.0,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -8836,9 +5057,9 @@
             ],
             "radius": 1000000.0,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8921,8 +5142,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -8953,8 +5174,8 @@
             ],
             "radius": 1.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9049,9 +5270,9 @@
             ],
             "radius": 2.2360679774997895e-06,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9067,8 +5288,8 @@
             "radius": 2.2360679774997895e-06,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9083,8 +5304,8 @@
             ],
             "radius": 2.2360679774997895e-06,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -9100,9 +5321,9 @@
             ],
             "radius": 2.2360679774997895e-06,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9161,7 +5382,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "acute_transform_(1000000.0, 0, (0, 0))",
@@ -9182,9 +5403,9 @@
             ],
             "radius": 2236067.9774997896,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9200,8 +5421,8 @@
             "radius": 2236067.9774997896,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9216,8 +5437,8 @@
             ],
             "radius": 2236067.9774997896,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -9233,9 +5454,9 @@
             ],
             "radius": 2236067.9774997896,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9318,9 +5539,9 @@
             ],
             "radius": 2.23606797749979,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9336,8 +5557,8 @@
             "radius": 2.23606797749979,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9352,8 +5573,8 @@
             ],
             "radius": 2.23606797749979,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -9369,9 +5590,9 @@
             ],
             "radius": 2.23606797749979,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9454,8 +5675,8 @@
             ],
             "radius": 2e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9486,8 +5707,8 @@
             ],
             "radius": 2e-06,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9561,7 +5782,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "obtuse_transform_(1000000.0, 0, (0, 0))",
@@ -9582,8 +5803,8 @@
             ],
             "radius": 2000000.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9614,8 +5835,8 @@
             ],
             "radius": 2000000.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9710,8 +5931,8 @@
             ],
             "radius": 2.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9742,8 +5963,8 @@
             ],
             "radius": 2.0,
             "support_vertex_indices": [
-              1,
-              0
+              0,
+              1
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9854,8 +6075,8 @@
             ],
             "radius": 2.4999999999999998e-06,
             "support_vertex_indices": [
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9886,8 +6107,8 @@
             ],
             "radius": 2.4999999999999998e-06,
             "support_vertex_indices": [
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -9945,7 +6166,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "right_transform_(1000000.0, 0, (0, 0))",
@@ -9982,8 +6203,8 @@
             ],
             "radius": 2500000.0,
             "support_vertex_indices": [
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10014,8 +6235,8 @@
             ],
             "radius": 2500000.0,
             "support_vertex_indices": [
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10110,8 +6331,8 @@
             ],
             "radius": 2.5,
             "support_vertex_indices": [
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10142,8 +6363,8 @@
             ],
             "radius": 2.5,
             "support_vertex_indices": [
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10222,9 +6443,9 @@
             ],
             "radius": 5.773502691896257e-07,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 1.0587911840678754e-22,
             "status": "OK",
@@ -10240,8 +6461,8 @@
             "radius": 5.773502691896257e-07,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 1.0587911840678754e-22,
             "status": "OK",
@@ -10256,8 +6477,8 @@
             ],
             "radius": 5.773502691896257e-07,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 1.0587911840678754e-22,
@@ -10273,9 +6494,9 @@
             ],
             "radius": 5.773502691896257e-07,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 1.0587911840678754e-22,
             "status": "OK",
@@ -10334,7 +6555,7 @@
           "tolerance_m2": 2.02e-10
         }
       },
-      "passed": false
+      "passed": true
     },
     {
       "case_id": "equilateral_1_transform_(1, 0, (1000000000.0, -1000000000.0))",
@@ -10362,9 +6583,9 @@
             ],
             "radius": 0.5773502838766329,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 1.2524713155492861e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -10382,8 +6603,8 @@
             "radius": 0.5773502838766329,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 1.2524713155492861e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -10400,8 +6621,8 @@
             ],
             "radius": 0.5773502838766329,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 1.2524713155492861e-08,
@@ -10419,9 +6640,9 @@
             ],
             "radius": 0.5773502838766329,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 1.2524713155492861e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -10510,9 +6731,9 @@
             ],
             "radius": 0.0005773502691896258,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10528,8 +6749,8 @@
             "radius": 0.0005773502691896258,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10544,8 +6765,8 @@
             ],
             "radius": 0.0005773502691896258,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -10561,9 +6782,9 @@
             ],
             "radius": 0.0005773502691896258,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10646,9 +6867,9 @@
             ],
             "radius": 1.1547005383792514e-05,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10664,8 +6885,8 @@
             "radius": 1.1547005383792514e-05,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10680,8 +6901,8 @@
             ],
             "radius": 1.1547005383792514e-05,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -10697,9 +6918,9 @@
             ],
             "radius": 1.1547005383792514e-05,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10779,9 +7000,9 @@
             ],
             "radius": 11547005.383792516,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10797,8 +7018,8 @@
             "radius": 11547005.383792516,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10813,8 +7034,8 @@
             ],
             "radius": 11547005.383792516,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -10830,9 +7051,9 @@
             ],
             "radius": 11547005.383792516,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -10922,9 +7143,9 @@
             ],
             "radius": 11.547005399377642,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 1.558512607857665e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -10942,8 +7163,8 @@
             "radius": 11.547005399377642,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 1.558512607857665e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -10960,8 +7181,8 @@
             ],
             "radius": 11.547005399377642,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 1.558512607857665e-08,
@@ -10979,9 +7200,9 @@
             ],
             "radius": 11.547005399377642,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 1.558512607857665e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -11070,9 +7291,9 @@
             ],
             "radius": 1.9999999999999995e-05,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 3.3881317890172014e-21,
             "status": "OK",
@@ -11088,8 +7309,8 @@
             "radius": 1.9999999999999995e-05,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 3.3881317890172014e-21,
             "status": "OK",
@@ -11104,8 +7325,8 @@
             ],
             "radius": 1.9999999999999995e-05,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 3.3881317890172014e-21,
@@ -11121,9 +7342,9 @@
             ],
             "radius": 1.9999999999999995e-05,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 3.3881317890172014e-21,
             "status": "OK",
@@ -11206,9 +7427,9 @@
             ],
             "radius": 20000000.0,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11224,8 +7445,8 @@
             "radius": 20000000.0,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11240,8 +7461,8 @@
             ],
             "radius": 20000000.0,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -11257,9 +7478,9 @@
             ],
             "radius": 20000000.0,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11349,9 +7570,9 @@
             ],
             "radius": 19.999999992581472,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 4.790987517822032e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -11369,8 +7590,8 @@
             "radius": 19.999999992581472,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 4.790987517822032e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -11387,8 +7608,8 @@
             ],
             "radius": 19.999999992581472,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 4.790987517822032e-08,
@@ -11406,9 +7627,9 @@
             ],
             "radius": 19.999999992581472,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 4.790987517822032e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -11497,9 +7718,9 @@
             ],
             "radius": 2.0784609690826528e-05,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11515,8 +7736,8 @@
             "radius": 2.0784609690826528e-05,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11531,8 +7752,8 @@
             ],
             "radius": 2.0784609690826528e-05,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -11548,9 +7769,9 @@
             ],
             "radius": 2.0784609690826528e-05,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11633,9 +7854,9 @@
             ],
             "radius": 20784609.690826528,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11651,8 +7872,8 @@
             "radius": 20784609.690826528,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11667,8 +7888,8 @@
             ],
             "radius": 20784609.690826528,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -11684,9 +7905,9 @@
             ],
             "radius": 20784609.690826528,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11776,9 +7997,9 @@
             ],
             "radius": 20.784609702985183,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 1.3788888253429832e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -11796,8 +8017,8 @@
             "radius": 20.784609702985183,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 1.3788888253429832e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -11814,8 +8035,8 @@
             ],
             "radius": 20.784609702985183,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 1.3788888253429832e-08,
@@ -11833,9 +8054,9 @@
             ],
             "radius": 20.784609702985183,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 1.3788888253429832e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -11924,9 +8145,9 @@
             ],
             "radius": 2.3094010767585028e-05,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11942,8 +8163,8 @@
             "radius": 2.3094010767585028e-05,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -11958,8 +8179,8 @@
             ],
             "radius": 2.3094010767585028e-05,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -11975,9 +8196,9 @@
             ],
             "radius": 2.3094010767585028e-05,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12060,9 +8281,9 @@
             ],
             "radius": 23094010.76758503,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12078,8 +8299,8 @@
             "radius": 23094010.76758503,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12094,8 +8315,8 @@
             ],
             "radius": 23094010.76758503,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -12111,9 +8332,9 @@
             ],
             "radius": 23094010.76758503,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12203,9 +8424,9 @@
             ],
             "radius": 23.094010759018854,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 2.415130495592166e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -12223,8 +8444,8 @@
             "radius": 23.094010759018854,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 2.415130495592166e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -12241,8 +8462,8 @@
             ],
             "radius": 23.094010759018854,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 2.415130495592166e-08,
@@ -12260,9 +8481,9 @@
             ],
             "radius": 23.094010759018854,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 2.415130495592166e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -12351,9 +8572,9 @@
             ],
             "radius": 0.0005773502691896258,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12369,8 +8590,8 @@
             "radius": 0.0005773502691896258,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12385,8 +8606,8 @@
             ],
             "radius": 0.0005773502691896258,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -12402,9 +8623,9 @@
             ],
             "radius": 0.0005773502691896258,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12487,9 +8708,9 @@
             ],
             "radius": 577350269.1896257,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12505,8 +8726,8 @@
             "radius": 577350269.1896257,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12521,8 +8742,8 @@
             ],
             "radius": 577350269.1896257,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 0.0,
@@ -12538,9 +8759,9 @@
             ],
             "radius": 577350269.1896257,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12630,9 +8851,9 @@
             ],
             "radius": 577.3502691741535,
             "support_vertex_indices": [
+              0,
               1,
-              2,
-              0
+              2
             ],
             "containment_residual": 2.426418177492451e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -12650,8 +8871,8 @@
             "radius": 577.3502691741535,
             "support_vertex_indices": [
               0,
-              2,
-              1
+              1,
+              2
             ],
             "containment_residual": 2.426418177492451e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -12668,8 +8889,8 @@
             ],
             "radius": 577.3502691741535,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               2
             ],
             "containment_residual": 2.426418177492451e-08,
@@ -12687,9 +8908,9 @@
             ],
             "radius": 577.3502691741535,
             "support_vertex_indices": [
-              2,
               0,
-              1
+              1,
+              2
             ],
             "containment_residual": 2.426418177492451e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -12794,8 +9015,8 @@
             ],
             "radius": 2.82842712474619e-06,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12826,8 +9047,8 @@
             ],
             "radius": 2.82842712474619e-06,
             "support_vertex_indices": [
-              3,
-              1
+              1,
+              3
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12889,8 +9110,8 @@
             ],
             "radius": 2828427.12474619,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12921,8 +9142,8 @@
             ],
             "radius": 2828427.12474619,
             "support_vertex_indices": [
-              3,
-              1
+              1,
+              3
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -12984,8 +9205,8 @@
             ],
             "radius": 2.8284271247461903,
             "support_vertex_indices": [
-              2,
-              0
+              0,
+              2
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13016,8 +9237,8 @@
             ],
             "radius": 2.8284271247461903,
             "support_vertex_indices": [
-              3,
-              1
+              1,
+              3
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13063,9 +9284,9 @@
             ],
             "radius": 7.817430965603752e-05,
             "support_vertex_indices": [
-              3,
               0,
-              2
+              2,
+              3
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13081,8 +9302,8 @@
             "radius": 7.817430965603752e-05,
             "support_vertex_indices": [
               0,
-              3,
-              2
+              2,
+              3
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13097,9 +9318,9 @@
             ],
             "radius": 7.817430965603752e-05,
             "support_vertex_indices": [
+              0,
               2,
-              3,
-              0
+              3
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13165,9 +9386,9 @@
             ],
             "radius": 78174309.65603752,
             "support_vertex_indices": [
-              3,
               0,
-              2
+              2,
+              3
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13183,8 +9404,8 @@
             "radius": 78174309.65603752,
             "support_vertex_indices": [
               0,
-              3,
-              2
+              2,
+              3
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13199,9 +9420,9 @@
             ],
             "radius": 78174309.65603752,
             "support_vertex_indices": [
+              0,
               2,
-              3,
-              0
+              3
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13272,9 +9493,9 @@
             ],
             "radius": 78.17430966093544,
             "support_vertex_indices": [
-              3,
               0,
-              2
+              2,
+              3
             ],
             "containment_residual": 5.1396881417531404e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -13292,8 +9513,8 @@
             "radius": 78.17430966093544,
             "support_vertex_indices": [
               0,
-              3,
-              2
+              2,
+              3
             ],
             "containment_residual": 5.1396881417531404e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -13310,9 +9531,9 @@
             ],
             "radius": 78.17430966093544,
             "support_vertex_indices": [
+              0,
               2,
-              3,
-              0
+              3
             ],
             "containment_residual": 5.1396881417531404e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -13382,9 +9603,9 @@
             ],
             "radius": 0.00011522906106017744,
             "support_vertex_indices": [
-              11,
               3,
-              9
+              9,
+              11
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13399,8 +9620,8 @@
             ],
             "radius": 0.00011522906106017744,
             "support_vertex_indices": [
-              9,
               3,
+              9,
               11
             ],
             "containment_residual": 0.0,
@@ -13416,8 +9637,8 @@
             ],
             "radius": 0.00011522906106017744,
             "support_vertex_indices": [
-              9,
               3,
+              9,
               11
             ],
             "containment_residual": 0.0,
@@ -13434,8 +9655,8 @@
             "radius": 0.00011522906106017744,
             "support_vertex_indices": [
               3,
-              11,
-              9
+              9,
+              11
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13484,9 +9705,9 @@
             ],
             "radius": 115229061.06017745,
             "support_vertex_indices": [
-              11,
               3,
-              9
+              9,
+              11
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13501,8 +9722,8 @@
             ],
             "radius": 115229061.06017745,
             "support_vertex_indices": [
-              9,
               3,
+              9,
               11
             ],
             "containment_residual": 0.0,
@@ -13518,8 +9739,8 @@
             ],
             "radius": 115229061.06017745,
             "support_vertex_indices": [
-              9,
               3,
+              9,
               11
             ],
             "containment_residual": 0.0,
@@ -13536,8 +9757,8 @@
             "radius": 115229061.06017745,
             "support_vertex_indices": [
               3,
-              11,
-              9
+              9,
+              11
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13591,9 +9812,9 @@
             ],
             "radius": 115.22906107233673,
             "support_vertex_indices": [
-              11,
               3,
-              9
+              9,
+              11
             ],
             "containment_residual": 2.646839902809006e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -13610,8 +9831,8 @@
             ],
             "radius": 115.22906107233673,
             "support_vertex_indices": [
-              9,
               3,
+              9,
               11
             ],
             "containment_residual": 2.646839902809006e-08,
@@ -13629,8 +9850,8 @@
             ],
             "radius": 115.22906107233673,
             "support_vertex_indices": [
-              9,
               3,
+              9,
               11
             ],
             "containment_residual": 2.646839902809006e-08,
@@ -13649,8 +9870,8 @@
             "radius": 115.22906107233673,
             "support_vertex_indices": [
               3,
-              11,
-              9
+              9,
+              11
             ],
             "containment_residual": 2.646839902809006e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -13701,8 +9922,8 @@
             ],
             "radius": 8.028309426647679e-05,
             "support_vertex_indices": [
-              4,
-              0
+              0,
+              4
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13796,8 +10017,8 @@
             ],
             "radius": 80283094.2664768,
             "support_vertex_indices": [
-              4,
-              0
+              0,
+              4
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -13896,8 +10117,8 @@
             ],
             "radius": 80.28309430287922,
             "support_vertex_indices": [
-              4,
-              0
+              0,
+              4
             ],
             "containment_residual": 5.8752263498718094e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -13999,9 +10220,9 @@
             ],
             "radius": 8.724488821156438e-05,
             "support_vertex_indices": [
-              5,
               0,
-              4
+              4,
+              5
             ],
             "containment_residual": 1.3552527156068805e-20,
             "status": "OK",
@@ -14016,8 +10237,8 @@
             ],
             "radius": 8.724488821156438e-05,
             "support_vertex_indices": [
-              4,
               0,
+              4,
               5
             ],
             "containment_residual": 1.3552527156068805e-20,
@@ -14033,9 +10254,9 @@
             ],
             "radius": 8.724488821156438e-05,
             "support_vertex_indices": [
-              5,
               0,
-              4
+              4,
+              5
             ],
             "containment_residual": 1.3552527156068805e-20,
             "status": "OK",
@@ -14050,9 +10271,9 @@
             ],
             "radius": 8.724488821156438e-05,
             "support_vertex_indices": [
-              5,
               0,
-              4
+              4,
+              5
             ],
             "containment_residual": 1.3552527156068805e-20,
             "status": "OK",
@@ -14101,9 +10322,9 @@
             ],
             "radius": 87244888.21156439,
             "support_vertex_indices": [
-              5,
               0,
-              4
+              4,
+              5
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14118,8 +10339,8 @@
             ],
             "radius": 87244888.21156439,
             "support_vertex_indices": [
-              4,
               0,
+              4,
               5
             ],
             "containment_residual": 0.0,
@@ -14135,9 +10356,9 @@
             ],
             "radius": 87244888.21156439,
             "support_vertex_indices": [
-              5,
               0,
-              4
+              4,
+              5
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14152,9 +10373,9 @@
             ],
             "radius": 87244888.21156439,
             "support_vertex_indices": [
-              5,
               0,
-              4
+              4,
+              5
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14208,9 +10429,9 @@
             ],
             "radius": 87.24488815899954,
             "support_vertex_indices": [
-              5,
               0,
-              4
+              4,
+              5
             ],
             "containment_residual": 4.649905349651817e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -14227,8 +10448,8 @@
             ],
             "radius": 87.24488815899954,
             "support_vertex_indices": [
-              4,
               0,
+              4,
               5
             ],
             "containment_residual": 4.649905349651817e-08,
@@ -14246,9 +10467,9 @@
             ],
             "radius": 87.24488815899954,
             "support_vertex_indices": [
-              5,
               0,
-              4
+              4,
+              5
             ],
             "containment_residual": 4.649905349651817e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -14265,9 +10486,9 @@
             ],
             "radius": 87.24488815899954,
             "support_vertex_indices": [
-              5,
               0,
-              4
+              4,
+              5
             ],
             "containment_residual": 4.649905349651817e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -14318,9 +10539,9 @@
             ],
             "radius": 7.161264550784393e-05,
             "support_vertex_indices": [
-              7,
+              4,
               5,
-              4
+              7
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14336,8 +10557,8 @@
             "radius": 7.161264550784393e-05,
             "support_vertex_indices": [
               4,
-              7,
-              5
+              5,
+              7
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14352,8 +10573,8 @@
             ],
             "radius": 7.161264550784393e-05,
             "support_vertex_indices": [
-              5,
               4,
+              5,
               7
             ],
             "containment_residual": 0.0,
@@ -14369,9 +10590,9 @@
             ],
             "radius": 7.161264550784393e-05,
             "support_vertex_indices": [
+              4,
               5,
-              7,
-              4
+              7
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14420,9 +10641,9 @@
             ],
             "radius": 71612645.50784393,
             "support_vertex_indices": [
-              7,
+              4,
               5,
-              4
+              7
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14438,8 +10659,8 @@
             "radius": 71612645.50784393,
             "support_vertex_indices": [
               4,
-              7,
-              5
+              5,
+              7
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14454,8 +10675,8 @@
             ],
             "radius": 71612645.50784393,
             "support_vertex_indices": [
-              5,
               4,
+              5,
               7
             ],
             "containment_residual": 0.0,
@@ -14471,9 +10692,9 @@
             ],
             "radius": 71612645.50784393,
             "support_vertex_indices": [
+              4,
               5,
-              7,
-              4
+              7
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14527,9 +10748,9 @@
             ],
             "radius": 71.61264548139565,
             "support_vertex_indices": [
-              7,
+              4,
               5,
-              4
+              7
             ],
             "containment_residual": 9.008189749692974e-09,
             "status": "NUMERICAL_UNRESOLVED",
@@ -14547,8 +10768,8 @@
             "radius": 71.61264548139565,
             "support_vertex_indices": [
               4,
-              7,
-              5
+              5,
+              7
             ],
             "containment_residual": 9.008189749692974e-09,
             "status": "NUMERICAL_UNRESOLVED",
@@ -14565,8 +10786,8 @@
             ],
             "radius": 71.61264548139565,
             "support_vertex_indices": [
-              5,
               4,
+              5,
               7
             ],
             "containment_residual": 9.008189749692974e-09,
@@ -14584,9 +10805,9 @@
             ],
             "radius": 71.61264548139565,
             "support_vertex_indices": [
+              4,
               5,
-              7,
-              4
+              7
             ],
             "containment_residual": 9.008189749692974e-09,
             "status": "NUMERICAL_UNRESOLVED",
@@ -14637,9 +10858,9 @@
             ],
             "radius": 6.279589039512506e-05,
             "support_vertex_indices": [
-              6,
               2,
-              4
+              4,
+              6
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14654,8 +10875,8 @@
             ],
             "radius": 6.279589039512506e-05,
             "support_vertex_indices": [
-              4,
               2,
+              4,
               6
             ],
             "containment_residual": 0.0,
@@ -14688,9 +10909,9 @@
             ],
             "radius": 6.279589039512506e-05,
             "support_vertex_indices": [
-              6,
               2,
-              4
+              4,
+              6
             ],
             "containment_residual": 0.0,
             "status": "OK",
@@ -14739,9 +10960,9 @@
             ],
             "radius": 62795890.39512506,
             "support_vertex_indices": [
-              6,
               2,
-              4
+              4,
+              6
             ],
             "containment_residual": 7.450580596923828e-09,
             "status": "OK",
@@ -14756,8 +10977,8 @@
             ],
             "radius": 62795890.39512506,
             "support_vertex_indices": [
-              4,
               2,
+              4,
               6
             ],
             "containment_residual": 7.450580596923828e-09,
@@ -14790,9 +11011,9 @@
             ],
             "radius": 62795890.39512506,
             "support_vertex_indices": [
-              6,
               2,
-              4
+              4,
+              6
             ],
             "containment_residual": 7.450580596923828e-09,
             "status": "OK",
@@ -14846,9 +11067,9 @@
             ],
             "radius": 62.79589039467134,
             "support_vertex_indices": [
-              6,
               2,
-              4
+              4,
+              6
             ],
             "containment_residual": 6.386351003584423e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -14865,8 +11086,8 @@
             ],
             "radius": 62.79589039467134,
             "support_vertex_indices": [
-              4,
               2,
+              4,
               6
             ],
             "containment_residual": 6.386351003584423e-08,
@@ -14903,9 +11124,9 @@
             ],
             "radius": 62.79589039467134,
             "support_vertex_indices": [
-              6,
               2,
-              4
+              4,
+              6
             ],
             "containment_residual": 6.386351003584423e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -14956,8 +11177,8 @@
             ],
             "radius": 9.610847053255653e-05,
             "support_vertex_indices": [
-              3,
               1,
+              3,
               9
             ],
             "containment_residual": 1.3552527156068805e-20,
@@ -14973,9 +11194,9 @@
             ],
             "radius": 9.610847053255653e-05,
             "support_vertex_indices": [
-              9,
               1,
-              3
+              3,
+              9
             ],
             "containment_residual": 1.3552527156068805e-20,
             "status": "OK",
@@ -14990,9 +11211,9 @@
             ],
             "radius": 9.610847053255653e-05,
             "support_vertex_indices": [
-              9,
+              1,
               3,
-              1
+              9
             ],
             "containment_residual": 1.3552527156068805e-20,
             "status": "OK",
@@ -15008,8 +11229,8 @@
             "radius": 9.610847053255653e-05,
             "support_vertex_indices": [
               1,
-              9,
-              3
+              3,
+              9
             ],
             "containment_residual": 1.3552527156068805e-20,
             "status": "OK",
@@ -15058,8 +11279,8 @@
             ],
             "radius": 96108470.53255653,
             "support_vertex_indices": [
-              3,
               1,
+              3,
               9
             ],
             "containment_residual": 1.4901161193847656e-08,
@@ -15075,9 +11296,9 @@
             ],
             "radius": 96108470.53255653,
             "support_vertex_indices": [
-              9,
               1,
-              3
+              3,
+              9
             ],
             "containment_residual": 1.4901161193847656e-08,
             "status": "OK",
@@ -15092,9 +11313,9 @@
             ],
             "radius": 96108470.53255653,
             "support_vertex_indices": [
-              9,
+              1,
               3,
-              1
+              9
             ],
             "containment_residual": 1.4901161193847656e-08,
             "status": "OK",
@@ -15110,8 +11331,8 @@
             "radius": 96108470.53255653,
             "support_vertex_indices": [
               1,
-              9,
-              3
+              3,
+              9
             ],
             "containment_residual": 1.4901161193847656e-08,
             "status": "OK",
@@ -15165,8 +11386,8 @@
             ],
             "radius": 96.1084705364861,
             "support_vertex_indices": [
-              3,
               1,
+              3,
               9
             ],
             "containment_residual": 1.877987187981489e-08,
@@ -15184,9 +11405,9 @@
             ],
             "radius": 96.1084705364861,
             "support_vertex_indices": [
-              9,
               1,
-              3
+              3,
+              9
             ],
             "containment_residual": 1.877987187981489e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -15203,9 +11424,9 @@
             ],
             "radius": 96.1084705364861,
             "support_vertex_indices": [
-              9,
+              1,
               3,
-              1
+              9
             ],
             "containment_residual": 1.877987187981489e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -15223,8 +11444,8 @@
             "radius": 96.1084705364861,
             "support_vertex_indices": [
               1,
-              9,
-              3
+              3,
+              9
             ],
             "containment_residual": 1.877987187981489e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -15275,9 +11496,9 @@
             ],
             "radius": 4.847800970195656e-05,
             "support_vertex_indices": [
-              3,
+              0,
               1,
-              0
+              3
             ],
             "containment_residual": 6.776263578034403e-21,
             "status": "OK",
@@ -15292,8 +11513,8 @@
             ],
             "radius": 4.847800970195656e-05,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               3
             ],
             "containment_residual": 6.776263578034403e-21,
@@ -15327,8 +11548,8 @@
             "radius": 4.847800970195656e-05,
             "support_vertex_indices": [
               0,
-              3,
-              1
+              1,
+              3
             ],
             "containment_residual": 6.776263578034403e-21,
             "status": "OK",
@@ -15377,9 +11598,9 @@
             ],
             "radius": 48478009.70195656,
             "support_vertex_indices": [
-              3,
+              0,
               1,
-              0
+              3
             ],
             "containment_residual": 7.450580596923828e-09,
             "status": "OK",
@@ -15394,8 +11615,8 @@
             ],
             "radius": 48478009.70195656,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               3
             ],
             "containment_residual": 7.450580596923828e-09,
@@ -15429,8 +11650,8 @@
             "radius": 48478009.70195656,
             "support_vertex_indices": [
               0,
-              3,
-              1
+              1,
+              3
             ],
             "containment_residual": 7.450580596923828e-09,
             "status": "OK",
@@ -15484,9 +11705,9 @@
             ],
             "radius": 48.478009692393925,
             "support_vertex_indices": [
-              3,
+              0,
               1,
-              0
+              3
             ],
             "containment_residual": 3.93723382785538e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -15503,8 +11724,8 @@
             ],
             "radius": 48.478009692393925,
             "support_vertex_indices": [
-              1,
               0,
+              1,
               3
             ],
             "containment_residual": 3.93723382785538e-08,
@@ -15542,8 +11763,8 @@
             "radius": 48.478009692393925,
             "support_vertex_indices": [
               0,
-              3,
-              1
+              1,
+              3
             ],
             "containment_residual": 3.93723382785538e-08,
             "status": "NUMERICAL_UNRESOLVED",
@@ -15628,7 +11849,7 @@
     "relative": 1e-12
   },
   "cases_sha256": "d32f8c8b18564445f6aa68917a1362f7b463344201b016d6cf90cc01d6e742c8",
-  "production_circle_sha256": "e7d39cc3a55d979d69ebb739b722bf84f7c3e6893360094e3c57dd2998b8f2cb",
+  "production_circle_sha256": "ace1d3e99b24bacd02afe70341b525583d730faabe0ebdb7815c351d2787bd2f",
   "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
   "observed_cover_statuses": {
     "YES": 124,

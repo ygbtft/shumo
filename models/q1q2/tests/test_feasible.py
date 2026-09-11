@@ -99,7 +99,7 @@ def test_target_boundary_and_outside_first(s,angle,expected,assert_source_member
     assert ss.status == expected
     if expected == 'OK':
         assert check_candidate(ss,s,True,P).status == 'IN'
-        samples = sample_sources(ss,0)
+        samples = sample_sources(ss, 0, SearchConfig().source_grids, inward=1e-7, second_half_width_deg=1.)
         assert len(samples.points) > 0
         assert_source_members(ss.first,ss.physics,samples.points)
 

@@ -1,6 +1,5 @@
 """Read-only production runner; independent truth lives in generate.py."""
 import hashlib
-import inspect
 import json
 import math
 import time
@@ -23,10 +22,8 @@ def build(inp):
 def samples(points):return SourceSamples(tuple(map(tuple,points)),2,(35,113))
 
 def production_samples(ss,level,q,eps2=1.):
-    # New production API accepts epsilon2; older snapshots remain runnable.
-    if 'second_half_width_deg' in inspect.signature(sample_sources).parameters:
-        return sample_sources(ss,level,q,second_half_width_deg=eps2)
-    return sample_sources(ss,level,q)
+    return sample_sources(ss, level, SearchConfig().source_grids, q,
+                          inward=1e-7, second_half_width_deg=eps2)
 
 def compact(summary):return asdict(summary)
 
@@ -98,10 +95,10 @@ def evaluate(case, certified_options=None):
     elif kind=='monotone':
         mode=inp['mode'];q=tuple(inp['q']);cfg=SearchConfig();ss=build({})
         if mode=='epsilon':
-            common=sample_sources(ss,2,q)
+            common=sample_sources(ss, 2, SearchConfig().source_grids, q, inward=1e-7, second_half_width_deg=1.)
             values=[score_point(ss,q,common,replace(cfg,second_half_width_deg=e)).J_hat for e in [.25,.5,1.,2.,4.]]
         elif mode=='nested':
-            values=[score_point(ss,q,sample_sources(ss,k,q),cfg).J_hat for k in range(3)]
+            values=[score_point(ss,q,sample_sources(ss, k, SearchConfig().source_grids, q, inward=1e-7, second_half_width_deg=1.),cfg).J_hat for k in range(3)]
         else:
             values=[];points=set()
             for width in [.25,.5,1.]:
@@ -140,7 +137,7 @@ def evaluate(case, certified_options=None):
         actual={'config':asdict(cfg),'results':[]}
         for result in results:
             budget=result.config.movement_budget_m
-            row=dict(budget=budget,q_best=result.q_best,J_hat=result.diameter_estimate_m,status=result.status,stop_reason=result.stop_reason,completed_stages=result.completed_stages,tie_threshold_m=result.tie_threshold_m,clearance_diagnostics=[compact(c) for c in result.clearance_diagnostics])
+            row=dict(budget=budget,q_best=result.q_best,J_hat=(result.score.J_hat if result.score else None),status=result.status,stop_reason=result.stop_reason,completed_stages=result.completed_stages,tie_threshold_m=result.tie_threshold_m,clearance_diagnostics=[compact(c) for c in result.clearance_diagnostics])
             actual['results'].append(row)
             if budget==0:
                 check('zero_budget_no_distinct_point',result.q_best is None,None,result.q_best)

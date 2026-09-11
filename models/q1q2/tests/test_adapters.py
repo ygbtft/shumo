@@ -96,6 +96,6 @@ def test_json_finite_and_status_preserved(tmp_path):
 
 def test_manual_unknown_fields_refused(tmp_path):
     path = tmp_path/'input.json'
-    path.write_text(json.dumps([{'position':[0,0],'bearing_deg':0,'truth':[1,1]}]))
+    path.write_text(json.dumps({'measurements': [{'position':[0,0],'bearing_deg':0,'truth':[1,1]}]}))
     with pytest.raises(ValueError,match='unknown measurement fields'):
         read_measurements(path)

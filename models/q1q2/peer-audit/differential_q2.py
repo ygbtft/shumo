@@ -209,7 +209,7 @@ def closed_band(i,gt):
 
 def score(cid,i,gt,args):
     ss=build(i);q=tuple(i['q']);eps=i.get('eps2',1.);cfg=SearchConfig(second_half_width_deg=eps)
-    prod=sample_sources(ss,2,q,second_half_width_deg=eps)
+    prod=sample_sources(ss, 2, SearchConfig().source_grids, q, second_half_width_deg=eps, inward=1e-7)
     a=score_point(ss,q,prod,cfg)
     refined=score_point(ss,q,prod,replace(cfg,refine_pairs=True))
     _,p=adapter.outer_source(i)
@@ -218,11 +218,11 @@ def score(cid,i,gt,args):
     upper=2*b['radius_upper_m']
     raw=SimpleNamespace(first=SimpleNamespace(position=tuple(i['S']),bearing_deg=i['theta'],half_width_deg=i['eps']),
                         physics=SimpleNamespace(arena_center=tuple(i['center']),arena_radius=i['arena_radius'],rho_hi=i['rho_hi'],near_radius=5.))
-    try: cert=certify(raw,q,eps,tol=.1,max_nodes=args.cert_nodes,time_limit_s=30).to_dict()
+    try: cert=asdict(certify(raw,q,eps,tol=.1,max_nodes=args.cert_nodes,time_limit_s=30))
     except ValueError as exc: cert=dict(error=str(exc))
     if args.extra_cert_nodes>args.cert_nodes and cert.get('upper_m',math.inf)>upper and 'J_exact_m' not in gt:
         try:
-            cert=certify(raw,q,eps,tol=.1,max_nodes=args.extra_cert_nodes,time_limit_s=30).to_dict()
+            cert=asdict(certify(raw,q,eps,tol=.1,max_nodes=args.extra_cert_nodes,time_limit_s=30))
             cert['escalated_node_budget']=args.extra_cert_nodes
         except ValueError:pass
     lower=gt['lower_bound_m']; exact=gt.get('J_exact_m')

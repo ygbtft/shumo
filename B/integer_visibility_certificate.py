@@ -10,13 +10,17 @@ def cross(a,b,c):
 
 def convex_vertices(points):
     ordered=sorted(set(tuple(map(int,p)) for p in points))
-    if len(ordered)<3:return None
-    lower=[];upper=[]
+    if len(ordered)<3:
+        return None
+    lower=[]
+    upper=[]
     for point in ordered:
-        while len(lower)>=2 and cross(lower[-2],lower[-1],point)<=0:lower.pop()
+        while len(lower)>=2 and cross(lower[-2],lower[-1],point)<=0:
+            lower.pop()
         lower.append(point)
     for point in reversed(ordered):
-        while len(upper)>=2 and cross(upper[-2],upper[-1],point)<=0:upper.pop()
+        while len(upper)>=2 and cross(upper[-2],upper[-1],point)<=0:
+            upper.pop()
         upper.append(point)
     hull=lower[:-1]+upper[:-1]
     return np.array(hull,dtype=np.int64) if len(hull)>=3 else None
@@ -42,21 +46,30 @@ def certify_integer_stations(points,arena_radius=1800,receive_radius=1000,max_de
     # |station|<=1950, |corner|<=1800, scale<=65536 bound the squared-distance
     # sum by 2*(3750*65536)**2 < 1.21e17. Hull support intermediates are bounded
     # by 2*3900*(3750+1800)*65536**2 < 1.86e17, safely below int64's 2**63-1.
-    scale=2**int(max_depth);p=np.asarray(raw,dtype=np.int64)*scale
-    arena=1800*scale;arena2=arena*arena
+    scale=2**int(max_depth)
+    p=np.asarray(raw,dtype=np.int64)*scale
+    arena=1800*scale
+    arena2=arena*arena
     # Rational 10^-5 m inward distance margin; no floating-point norm decides eligibility.
     safe_radius_numerator=1000*100000-1
     # Floor the squared limit: integer comparison cannot admit an out-of-range station.
     limit=(safe_radius_numerator**2*scale**2)//100000**2
-    stack=[(0,0,arena,0)];cache={};cells=[];visited=0
+    stack=[(0,0,arena,0)]
+    cache={}
+    cells=[]
+    visited=0
     while stack:
-        x,y,h,depth=stack.pop();visited+=1
-        nearx=max(abs(x)-h,0);neary=max(abs(y)-h,0)
-        if nearx*nearx+neary*neary>arena2:continue
+        x,y,h,depth=stack.pop()
+        visited+=1
+        nearx=max(abs(x)-h,0)
+        neary=max(abs(y)-h,0)
+        if nearx*nearx+neary*neary>arena2:
+            continue
         center=np.array([x,y],dtype=np.int64)
         far=np.abs(p-center)+h
         ids=tuple(np.flatnonzero(np.sum(far*far,axis=1)<=limit).tolist())
-        if ids not in cache:cache[ids]=convex_vertices(p[list(ids)]) if len(ids)>=3 else None
+        if ids not in cache:
+            cache[ids]=convex_vertices(p[list(ids)]) if len(ids)>=3 else None
         hull=cache[ids]
         accepted=False
         if hull is not None:
@@ -95,19 +108,24 @@ def verify_integer_certificate(points,certificate):
     raw = _integer_points(points)
     # Independent predicates use Python int (unbounded), not the generator's int64.
     p=[tuple(int(v)*scale for v in point) for point in raw]
-    arena=1800*scale;radius=1000*scale
+    arena=1800*scale
+    radius=1000*scale
     cells = certificate.get("cells")
     if cells is None or not len(cells):
         raise ValueError("missing nonempty leaf partition")
     # [-1800,1800]^2 is the fixed quadtree root; as in the floating verifier,
     # cells wholly outside the source disk may be omitted. No full-square claim.
-    leaves={};boundary_corners=0
+    leaves=set()
+    boundary_corners=0
     def det(a,b,c):
-        ax,ay=a;bx,by=b;cx,cy=c
+        ax,ay=a
+        bx,by=b
+        cx,cy=c
         return (bx-ax)*(cy-ay)-(by-ay)*(cx-ax)
     def triangle_contains(q,a,b,c):
         direction=det(a,b,c)
-        if not direction:return False
+        if not direction:
+            return False
         signs=(det(a,b,q),det(b,c,q),det(c,a,q))
         return min(signs)>=0 if direction>0 else max(signs)<=0
     for cell in cells:
@@ -125,10 +143,11 @@ def verify_integer_certificate(points,certificate):
         values=[x*scale,y*scale,h*scale]
         if not all(v==int(v) for v in values):
             raise ValueError("leaf coordinates must be integral at certificate scale")
-        xi,yi,hi=map(int,values);key=(xi,yi,hi)
+        xi,yi,hi=map(int,values)
+        key=(xi,yi,hi)
         if key in leaves:
             raise ValueError("duplicate partition leaves")
-        leaves[key]=True
+        leaves.add(key)
         selected=[p[i] for i in ids]
         triples=list(combinations(selected,3))
         for q in ((xi-hi,yi-hi),(xi+hi,yi-hi),(xi+hi,yi+hi),(xi-hi,yi+hi)):
@@ -138,17 +157,26 @@ def verify_integer_certificate(points,certificate):
             if not any(triangle_contains(q,*triangle) for triangle in triples):
                 raise ValueError("corner is outside the closed station hull")
             boundary_corners+=int(abs(q[0])==arena or abs(q[1])==arena)
-    stack=[(0,0,arena)];seen=set();visited=0;minimum=min(c[2] for c in leaves)
+    stack=[(0,0,arena)]
+    seen=set()
+    visited=0
+    minimum=min(c[2] for c in leaves)
     while stack:
-        x,y,h=stack.pop();visited+=1;key=(x,y,h)
-        if key in leaves:seen.add(key);continue
-        dx=max(abs(x)-h,0);dy=max(abs(y)-h,0)
-        if dx*dx+dy*dy>arena*arena:continue
+        x,y,h=stack.pop()
+        visited+=1
+        key=(x,y,h)
+        if key in leaves:
+            seen.add(key)
+            continue
+        dx=max(abs(x)-h,0)
+        dy=max(abs(y)-h,0)
+        if dx*dx+dy*dy>arena*arena:
+            continue
         if h < minimum or h%2 != 0:
             raise ValueError(f"uncovered integer partition: {key}")
         half=h//2
         stack.extend((x+a*half,y+b*half,half) for a in (-1,1) for b in (-1,1))
-    if seen != set(leaves):
+    if seen != leaves:
         raise ValueError("partition contains overlapping or non-quadtree leaves")
     return dict(verified_leaves=len(leaves),partition_nodes=visited,boundary_corners=boundary_corners,
                 independent_exact_corner_triangles=True,integer_partition=True)

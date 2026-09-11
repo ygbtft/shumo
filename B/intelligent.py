@@ -88,6 +88,8 @@ def genetic_route(points, seed=42, population=96, generations=180):
 
 def guaranteed_omni(q, poly, first_point):
     """Two sufficient certificates; never infer radius from a non-reception."""
+    # Each branch must hold across the whole region; signal_minimax allows
+    # different locations to satisfy different branches. Keep this cheaper predicate unchanged.
     q,first_point=np.asarray(q),np.asarray(first_point)
     radius1000=float(np.linalg.norm(poly-q,axis=1).max())<=1000.-1e-6
     dominance=float(np.max(q@q-first_point@first_point-2*poly@(q-first_point)))<=-1e-6
@@ -109,8 +111,15 @@ def candidate_points(poly, observations, current):
             result.append(mid+b*v)
     for b in [-60.,60.,-150.,150.]:
         result.append(center+b*u)
-    return np.array([q for q in result if np.linalg.norm(q-current)>1. and
-                     all(np.linalg.norm(q-p)>1. for p,a in observations)])
+    candidates = []
+    for q in result:
+        far_from_current = np.linalg.norm(q-current) > 1.
+        if not far_from_current:
+            continue
+        new_measurement = all(np.linalg.norm(q-p) > 1. for p, a in observations)
+        if new_measurement:
+            candidates.append(q)
+    return np.array(candidates)
 
 
 def hypotheses(poly, limit=8):
@@ -121,6 +130,8 @@ def hypotheses(poly, limit=8):
 
 
 def reception_probability(q, g, observations, mixed):
+    # Artificial uniform radius prior on [lower,1500] and 48 equal orientation hypotheses.
+    # mixed applies the directional prior, not a mixture over source types. Ranking only.
     lower=max(1000.,max(np.linalg.norm(g-p) for p,a in observations))
     dq=float(np.linalg.norm(g-q))
     prob=float(np.clip((1500.-dq)/max(1e-9,1500.-lower),0.,1.)) if dq>lower else 1.
@@ -132,6 +143,7 @@ def reception_probability(q, g, observations, mixed):
     for p,a in observations:
         admissible &= (faces@(np.asarray(p)-g)>=-1e-8)
     if not admissible.any():
+        # Empirical fallback, not a certified reception probability.
         return prob*.5
     return prob*float(np.mean(faces[admissible]@(q-g)>=-1e-8))
 
@@ -161,6 +173,7 @@ def choose_second(poly, observations, current, mixed=False, time_weight=.08, can
                 continue
             theta=math.degrees(math.atan2(g[1]-q[1],g[0]-q[0]))
             worst=0.
+            # Three error hypotheses are not a continuous worst-error certificate.
             for error in (-1.01,0.,1.01):
                 post=bearing_clip(poly,q,theta+error)
                 if not len(post):
@@ -169,6 +182,7 @@ def choose_second(poly, observations, current, mixed=False, time_weight=.08, can
                 c=post.mean(axis=0)
                 worst=max(worst,float(np.linalg.norm(post-c,axis=1).max()))
             residuals.append(prob*min(worst,r0)+(1-prob)*r0)
+        # Same-channel local proxy: excludes switch/clear/future failure cost; weight is m/s.
         travel=float(np.linalg.norm(q-current))/5+5
         expected=float(np.mean(residuals))
         rows.append({"x":float(q[0]),"y":float(q[1]),"guaranteed_omni":certificate,

@@ -61,10 +61,16 @@ def main():
     # Offline deliberately retains the peer backend. Equal seeds across the
     # two modes do not mean equal source fixtures or equal virtual-time scores.
     from peer_benchmark import PeerTransport,ErrorConfig,ErrorField,ScenarioConfig,generate,Simulator,Limits,Protocol
-    scenario=generate(args.seed,ScenarioConfig(directional_fraction=.5 if args.problem==4 else 0.));error=ErrorConfig()
+    scenario=generate(args.seed,ScenarioConfig(directional_fraction=.5 if args.problem==4 else 0.))
+    error=ErrorConfig()
     sim=Simulator(scenario,ErrorField(args.seed,error),Limits(countdown_s=0))
-    initialized=time.perf_counter();policy=build(Client(PeerTransport(Protocol(sim)),robot_id="mock-robot"),spec,args.problem,paths)
-    initialization=time.perf_counter()-initialized;began=time.perf_counter();cpu=time.process_time();stats=policy.run()
+    initialized=time.perf_counter()
+    policy=build(Client(PeerTransport(Protocol(sim)),robot_id="mock-robot"),spec,args.problem,paths)
+    # wall_s/cpu_s cover policy.run only, excluding imports, paths and initialization.
+    initialization=time.perf_counter()-initialized
+    began=time.perf_counter()
+    cpu=time.process_time()
+    stats=policy.run()
     result=dict(mode="offline_peer_only",series=args.series,problem=args.problem,method=args.method,seed=args.seed,
         all_cleared=len(sim.cleared)==len(scenario.sources),cleared=len(sim.cleared),source_count_scoring_only=len(scenario.sources),
         total_virtual_s=sim.virtual_time_s,per_source_s=sim.virtual_time_s/len(sim.cleared) if sim.cleared else None,
@@ -75,8 +81,11 @@ def main():
     (dest/"summary.json").write_text(json.dumps(result,indent=2))
     (dest/"scoring_only.json").write_text(json.dumps(dict(scenario=scenario.to_dict(),error=asdict(error)),indent=2))
     with gzip.open(dest/"trace.jsonl.gz","wt") as stream:
-        for entry in sim.trace:stream.write(json.dumps(entry)+"\n")
-    print(json.dumps(result,ensure_ascii=False,indent=2));print(dest)
+        for entry in sim.trace:
+            stream.write(json.dumps(entry)+"\n")
+    print(json.dumps(result,ensure_ascii=False,indent=2))
+    print(dest)
 
 
-if __name__=="__main__":main()
+if __name__=="__main__":
+    main()

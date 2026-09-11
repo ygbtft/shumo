@@ -73,7 +73,7 @@ def test_segment_angular_contact_matches_continuous_closed_form(a, b, h, eps, re
                           PhysicsConfig(arena_center=((a+b)/2, 0), arena_radius=(b-a)/2), POLICY)
     config = SearchConfig(second_half_width_deg=eps)
     # Also exercise scoring a default-angle augmented cloud with custom epsilon.
-    samples = sample_sources(ss, 0, (0, h))
+    samples = sample_sources(ss, 0, SearchConfig().source_grids, (0, h), inward=1e-7, second_half_width_deg=1.)
     result = score_point(ss, (0, h), samples, config)
     inner = max(a, h*math.tan(math.atan(b/h)-math.radians(2*eps)))
     exact = b-inner
@@ -90,7 +90,7 @@ def test_boundary_enrichment_retains_nested_cloud_and_scores():
     q = (750., 400.)
     previous, previous_score = set(), 0.
     for level in range(3):
-        samples = sample_sources(ss, level, q)
+        samples = sample_sources(ss, level, SearchConfig().source_grids, q, inward=1e-7, second_half_width_deg=1.)
         assert previous.issubset(samples.points)
         score = score_point(ss, q, samples, SearchConfig())
         assert score.J_hat >= previous_score
@@ -124,7 +124,7 @@ def test_polar_scores_dominate_independent_reachable_pairs(q, width, x, y, asser
     angles = [math.atan2(p[1]-q[1], p[0]-q[0]) for p in (x, y)]
     assert abs(math.remainder(angles[1]-angles[0], 2*math.pi)) <= math.radians(2)
     ss = build_source_set(first, physics, POLICY)
-    result = score_point(ss, q, sample_sources(ss, 0, q), SearchConfig())
+    result = score_point(ss, q, sample_sources(ss, 0, SearchConfig().source_grids, q, inward=1e-7, second_half_width_deg=1.), SearchConfig())
     assert result.J_hat >= math.dist(x, y)
     assert_source_members(first, physics, [result.witness.x, result.witness.y])
 

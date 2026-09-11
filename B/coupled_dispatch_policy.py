@@ -26,7 +26,10 @@ def arc_route(entries, exits, current, polish=True):
             changed = False
             for i in range(n-1):
                 for j in range(i+1, n):
-                    delta = start[route[j]]-start[route[i]] if i == 0 else costs[route[i-1], route[j]]-costs[route[i-1], route[i]]
+                    if i == 0:
+                        delta = start[route[j]]-start[route[i]]
+                    else:
+                        delta = costs[route[i-1], route[j]]-costs[route[i-1], route[i]]
                     if j+1 < n:
                         delta += costs[route[i], route[j+1]]-costs[route[j], route[j+1]]
                     # Reversing a directed path changes all its internal arcs.
@@ -42,6 +45,8 @@ def arc_route(entries, exits, current, polish=True):
 
 def insert_sources(tasks, station_count, current):
     """Cheapest insertion of known-source centers; scan order stays fixed."""
+    # The task prefix contains station_count scans; the suffix contains known sources.
+    # Preserve scan relative order only; cheapest insertion is not globally optimal.
     points = np.asarray([task[2] for task in tasks])
     route, pending = list(range(station_count)), list(range(station_count, len(tasks)))
     while pending:
@@ -73,9 +78,11 @@ class CertifiedRangeSkipMixin:
                 # receiving radius. This is an inference, not a fabricated RF
                 # response: no client position/channel/time is modified.
                 self.stats["certified_range_scan_skips"] += 1
+                # Q4 memory only filters sharing usefulness via cooldown; it never clips region.
                 if hasattr(self, "_last_negative"):
                     self._last_negative[ch] = np.asarray(p).copy()
                     self.stats["inferred_negative_memory_updates"] += 1
+                # Internal event only: never serialize this as an official RF response.
                 return "certified_no_reception"
         return super().measure(p, ch)
 

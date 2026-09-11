@@ -1,4 +1,8 @@
-"""Read-only verification of saved mock HTTP runs and CLI no-network guards."""
+"""Read-only verification of fault-free mock HTTP smoke runs and CLI guards.
+
+This deliberately requires one HTTP attempt per action. Retry/failure logs use
+the send-failure regression tests instead; their attempt/action counts differ.
+"""
 import contextlib
 import io
 import json

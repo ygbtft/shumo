@@ -1,3 +1,4 @@
+from models.q1q2.q2 import SearchConfig
 """Audited P2 contracts: original-index proofs, legal worlds and fair interruption."""
 from dataclasses import replace
 import math
@@ -60,7 +61,7 @@ def test_q21_boundary_existence_worlds_share_a_legal_radius():
 def test_q22_custom_grids_retain_all_earlier_samples(q):
     ss = source(BearingMeasurement((1000, 0), 0))
     grids = ((4, 4), (5, 5), (6, 6))
-    clouds = [q2._sample_sources(ss, level, grids, q) for level in range(3)]
+    clouds = [q2.sample_sources(ss, level, grids, q, inward=1e-7, second_half_width_deg=1.) for level in range(3)]
     assert set(clouds[0].points) <= set(clouds[1].points) <= set(clouds[2].points)
 
 
@@ -97,7 +98,7 @@ def test_d2_configured_contact_sampling_and_common_witness_retention(monkeypatch
         scored.append(set(cloud.points))
         w = q2._pair_witness(ss, q, (1000, 0), (1001, 0), config)
         return q2.Score(1., None, 1., len(cloud.points), None, (w,) if w else ())
-    monkeypatch.setattr(q2, '_sample_sources', sample)
+    monkeypatch.setattr(q2, 'sample_sources', sample)
     monkeypatch.setattr(q2, 'score_point', score)
     result = diagnostics.compare_heuristics(ss, cfg, (100, 0))
     assert all(offset == cfg.near_offset_m for _, offset, _ in calls)
@@ -119,7 +120,7 @@ def test_plot1_figures_close_even_when_render_fails(tmp_path, monkeypatch, failu
         def fail(*args, **kwargs):
             raise ValueError('save failed')
         monkeypatch.setattr(Figure, 'savefig', fail)
-    bundle = ResultBundle(figures=({'id': 'failure', 'kind': kind},))
+    bundle = ResultBundle(figures=({'id': 'failure', 'panels': [{'kind': kind}]},))
     with pytest.raises(ValueError):
         render(bundle, tmp_path, PlotStyle(font_family='DejaVu Sans'))
     assert plt.get_fignums() == before
@@ -128,7 +129,7 @@ def test_plot1_figures_close_even_when_render_fails(tmp_path, monkeypatch, failu
 def test_r1_r2_panels_and_area_curves_use_their_own_feedback_and_widths():
     ss, q = source(BearingMeasurement((0, 0), 0, 2.)), (100, 0)
     cfg = q2.SearchConfig(source_grids=((3, 4),) * 3, pair_rounds=0, second_half_width_deg=2.)
-    cloud = q2._sample_sources(ss, 0, cfg.source_grids, q, second_half_width_deg=2.)
+    cloud = q2.sample_sources(ss, 0, cfg.source_grids, q, second_half_width_deg=2., inward=1e-7)
     score = q2.score_point(ss, q, cloud, cfg)
     clear, angular = q2._conditional_diagnostics(ss, q, score, cloud, cfg)
     result = q2.Q2Result(q, check_candidate(ss, q, False, P), score, 100, 20, 5,
@@ -140,7 +141,7 @@ def test_r1_r2_panels_and_area_curves_use_their_own_feedback_and_widths():
         for line in figure['panels'][0].get('lines', ()):
             assert posterior_contains(ss, q, summary.feedback, line['values'], P).all()
     f8 = next(f for f in figures if f['id'] == 'F8')
-    first_area = f8['series'][0]['y'][0]
+    first_area = f8['panels'][0]['series'][0]['y'][0]
     expected = diagnostics.compare_geometry(ss.actual_point, (ss.first.position, (750, 10)),
                                             diagnostics.DiagnosticConfig(half_widths_deg=(2., 2.)))
     assert first_area == pytest.approx(expected.linear_area_m2)
@@ -175,7 +176,7 @@ def test_q24_deadline_interrupts_inside_work(monkeypatch, operation):
     monkeypatch.setattr(q2.time, 'monotonic', lambda: next(ticks, 2.))
     with pytest.raises(q2._BudgetExpired):
         if operation == 'sources':
-            q2._sample_sources(ss, 2, ((4, 4),) * 3, deadline=1.)
+            q2.sample_sources(ss, 2, ((4, 4),) * 3, deadline=1., inward=1e-7, second_half_width_deg=1.)
         elif operation == 'contacts':
             q2._direction_boundary_samples(ss, (100, 0), 4, 1., 1e-7, deadline=1.)
         else:
@@ -192,8 +193,8 @@ def test_q24_frontier_does_not_publish_partial_common_round(monkeypatch):
                        for q in ((100., 0.), (200., 0.)))
     old = q2.Q2Result(candidates[0].q, candidates[0].check, candidates[0].score, 100, 20, 5,
                       alternatives=candidates, config=cfg)
-    monkeypatch.setattr(q2, '_search', lambda *args: old)
-    monkeypatch.setattr(q2, '_sample_sources', lambda *args, **kwargs: cloud)
+    monkeypatch.setattr(q2, 'select_second_point', lambda *args: old)
+    monkeypatch.setattr(q2, 'sample_sources', lambda *args, **kwargs: cloud)
     calls = []
     def score(*args, deadline=None):
         assert deadline is not None

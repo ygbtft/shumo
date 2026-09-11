@@ -48,9 +48,18 @@ class Problem:
         # Prove integer multiples of h for the actual input floats. Even an
         # exactly integral floating-point quotient can hide division rounding.
         spacing = Fraction(self.min_edge)
-        scaled = [[Fraction(float(x)) / spacing for x in point] for point in self.points]
-        if all(x.denominator == 1 for point in scaled for x in point):
-            colors = np.array([sum(x.numerator for x in point) % 2 for point in scaled])
+        integer_grid = True
+        parities = []
+        for point in self.points:
+            numerator_sum = 0
+            for coordinate in point:
+                scaled_coordinate = Fraction(float(coordinate)) / spacing
+                if scaled_coordinate.denominator != 1:
+                    integer_grid = False
+                numerator_sum += scaled_coordinate.numerator
+            parities.append(numerator_sum % 2)
+        if integer_grid:
+            colors = np.array(parities)
             a = int(np.count_nonzero(colors == colors[self.origin]))
             b = self.n-a
             # A-start path: at most A runs of B and at most B+1 runs of A.
@@ -228,7 +237,10 @@ def genetic(search):
         pop.sort(key=lambda t: t[1])
         new = pop[:4]
         while len(new) < 32 and search.running:
-            a, b = [pop[min(search.rng.integers(len(pop), size=3))][0] for _ in range(2)]
+            first_tournament = search.rng.integers(len(pop), size=3)
+            a = pop[min(first_tournament)][0]
+            second_tournament = search.rng.integers(len(pop), size=3)
+            b = pop[min(second_tournament)][0]
             child = order_crossover(a, b, search.rng)
             if search.rng.random() < .65:
                 child = perturb(child, search.rng, 1 + int(search.rng.random() < .15))
@@ -347,7 +359,11 @@ def fireworks(search):
         selected = [available.pop(0)]
         # Elite retained; others maximize Hamming diversity weighted by quality.
         while available and len(selected) < 6:
-            scores = [min(np.count_nonzero(q != s[0]) for s in selected) * (search.best_cost/v)**3 for q, v in available]
+            scores = []
+            for q, value in available:
+                nearest_selected_distance = min(np.count_nonzero(q != s[0]) for s in selected)
+                quality_weight = (search.best_cost/value)**3
+                scores.append(nearest_selected_distance * quality_weight)
             selected.append(available.pop(int(np.argmax(scores))))
         pop = selected
 
@@ -382,13 +398,18 @@ def optimize(points, method, seed=42, budget=100000, polish=True):
     elif method == "two_opt":
         best = problem.initial
     else:
-        globals()[method](search)
+        algorithms = {"genetic": genetic, "immune": immune, "ant_colony": ant_colony,
+                      "particle_swarm": particle_swarm, "fireworks": fireworks,
+                      "iterated_search": iterated_search}
+        algorithms[method](search)
         best = search.best
     problem.validate(best)
     result = problem.points[best]
     value = route_length(result)
     if method in STOCHASTIC:
         assert value <= problem.cost(problem.initial)+1e-6
+    # Budget excludes shared initialization (including initial 2-opt), not total algorithm work.
+    # history/raw_proposal_best describe stochastic search; deterministic methods retain setup values.
     return result, {"method": method, "seed": seed, "stations": problem.n,
         "best_m": value, "initial_2opt_m": problem.cost(problem.initial),
         "lower_bound_m": problem.lower_bound, "bound_kind": problem.bound_kind,

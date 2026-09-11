@@ -184,6 +184,8 @@ def run_http(args, factory, spec, paths, program_started):
                 result.update(score)
                 result.update(entered=world.entered, exited=world.exited,
                               http_requests=backend_journal.count, backend="B/simulator.py")
+                # Three ledgers: confirmed client responses, backend HTTP attempts, and
+                # unique accepted world actions. Retries can add attempts without actions.
                 if not (world.entered and world.exited and
                         world.commands == result["commands"] == len(backend_journal.request_ids)):
                     raise RuntimeError("Mock HTTP lifecycle or command count mismatch")

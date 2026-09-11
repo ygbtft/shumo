@@ -23,6 +23,8 @@ GEOMETRY_RUNS=("odd-ring-cover","rounded-cover21","closed-cover21")
 REPORTS=("REPORT.md","REPORT_COVER21_UPDATE.md","REGULAR_RING_OBSTRUCTION.md","PUBLIC_COUNT_SCAN_GUARANTEE.md",
          "INTEGER_COVERAGE_GUARANTEE.md","GOAL.md","ICRA_CONNECTION.md","COMMANDS.md")
 BASIC_CASES=("uniform__iid__147","boundary_outward__n10__negative","near_collinear__n16__positive","range_transition__n13__negative")
+# Historical confirmation methods below belong to the archived experiment.
+# They are not the frozen delivery smoke list; use verify_bounded_http.py for that.
 HTTP_METHODS=((3,"lean_deferred_area7"),(4,"range_grid21_29"),(4,"predict_grid21_29"),(4,"count_locked_grid21_29"))
 
 

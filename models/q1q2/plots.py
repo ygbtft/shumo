@@ -27,8 +27,8 @@ def _geometry(ax, panel):
         points = np.asarray(polygon['vertices'])
         if len(points) >= 3:
             ax.add_patch(Polygon(points, closed=True, fill=polygon.get('fill', False), alpha=.35,
-                                 edgecolor=polygon.get('color', 'C0'), facecolor=polygon.get('color', 'C0'),
-                                 label=polygon.get('label')))
+                edgecolor=polygon.get('color', 'C0'), facecolor=polygon.get('color', 'C0'),
+                label=polygon.get('label')))
         elif len(points):
             ax.plot(points[:, 0], points[:, 1], 'o-', label=polygon.get('label'))
     for group in panel.get('points', ()):
@@ -43,8 +43,8 @@ def _geometry(ax, panel):
     for circle in panel.get('circles', ()):
         if circle.get('radius') is not None:
             ax.add_patch(Circle(circle['center'], circle['radius'], fill=False,
-                                linestyle=circle.get('style', '--'), edgecolor=circle.get('color', 'C1'),
-                                label=circle.get('label')))
+                linestyle=circle.get('style', '--'), edgecolor=circle.get('color', 'C1'),
+                label=circle.get('label')))
     for arrow in panel.get('arrows', ()):
         ax.annotate('', xy=arrow['end'], xytext=arrow['start'], arrowprops={'arrowstyle': '->'})
     ax.autoscale_view()
@@ -58,6 +58,17 @@ def _geometry(ax, panel):
 
 
 def render(results: ResultBundle, output_dir: Path, style: PlotStyle) -> tuple[Path, ...]:
+    """Render figures with an id and a nonempty panels array, then save PDF/PNG.
+
+    Panel kind is geometry (default), heatmap, curve or bars. Geometry lists
+    are optional/empty: polygons require vertices, points/lines require values,
+    circles require center/radius (null radius skips drawing), arrows start/end.
+    All geometric coordinates and radii are metres. Heatmap requires records
+    with q/status/diameter_estimate_m; null estimates mean unassessed, never zero.
+    Curve series require x/y, with optional paired low/high bands; axis labels
+    specify units. Bars require labels/values. Titles, colours and legends are
+    optional. Output assumes these numerical payloads were computed beforehand.
+    """
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -68,7 +79,7 @@ def render(results: ResultBundle, output_dir: Path, style: PlotStyle) -> tuple[P
     files = []
     with plt.rc_context({'font.family': style.font_family, 'axes.unicode_minus': False}):
         for spec in results.figures:
-            panels = spec.get('panels', (spec,))
+            panels = spec['panels']
             fig, axes = plt.subplots(1, len(panels), figsize=(style.figsize[0]*len(panels), style.figsize[1]), squeeze=False)
             try:
                 for ax, panel in zip(axes[0], panels):
@@ -122,8 +133,13 @@ def render(results: ResultBundle, output_dir: Path, style: PlotStyle) -> tuple[P
                 writer = csv.DictWriter(stream, fieldnames=keys)
                 writer.writeheader()
                 for row in rows:
-                    writer.writerow({k: json.dumps(v, ensure_ascii=False) if isinstance(v, (dict, list, tuple)) else v
-                                     for k, v in row.items()})
+                    exported = {}
+                    for key, value in row.items():
+                        # None stays blank (unassessed), never silently becomes zero.
+                        if isinstance(value, (dict, list, tuple)):
+                            value = json.dumps(value, ensure_ascii=False)
+                        exported[key] = value
+                    writer.writerow(exported)
             files.append(path)
     log = output_dir/'plot_manifest.json'
     log.write_text(json.dumps({'requested_font': style.font_family, 'resolved_font_file': font,

@@ -5,7 +5,7 @@ from dataclasses import fields, is_dataclass, replace
 from datetime import datetime, timezone
 from enum import Enum
 import hashlib
-from importlib.metadata import version
+from importlib.metadata import PackageNotFoundError, version
 import json
 import math
 from pathlib import Path
@@ -16,7 +16,7 @@ from .adapters import read_measurements
 from .q1 import solve
 from .feasible import PhysicsConfig, build_source_set, check_candidate, posterior_contains
 from .q2 import (SearchConfig, select_second_point, sample_sources, movement_frontier,
-                 short_baseline_lower_bound, _sample_sources)
+                 short_baseline_lower_bound)
 from .diagnostics import (analytic_cases, sensitivity_cases, compare_heuristics,
                           compare_geometry, DiagnosticConfig, reassess_old_point)
 from .plots import ResultBundle, PlotStyle, render
@@ -24,10 +24,7 @@ from .plots import ResultBundle, PlotStyle, render
 
 def jsonable(value):
     if is_dataclass(value):
-        result = {f.name: jsonable(getattr(value, f.name)) for f in fields(value)}
-        if hasattr(value, 'diameter_estimate_m'):
-            result['diameter_estimate_m'] = value.diameter_estimate_m
-        return result
+        return {f.name: jsonable(getattr(value, f.name)) for f in fields(value) if not f.name.startswith('_')}
     if isinstance(value, Enum):
         return value.value
     if isinstance(value, np.ndarray):
@@ -83,7 +80,11 @@ def q1_bundle(results, cases=None):
     figures, rows = [], []
     for name, result in results.items():
         case = (cases or {}).get(name, {})
-        code = 'F2' if name == 'orthogonal' else 'F3' if name == 'equilateral20' else 'F3_36' if name == 'equilateral36' else f'F4_{name}' if name in ('empty', 'segment', 'thin', 'unbounded') else 'F1'
+        codes = {'orthogonal': 'F2', 'equilateral20': 'F3', 'equilateral36': 'F3_36'}
+        if name in ('empty', 'segment', 'thin', 'unbounded'):
+            code = f'F4_{name}'
+        else:
+            code = codes.get(name, 'F1')
         panels = [_q1_panel(result, name)]
         if name.startswith('equilateral'):
             panels.insert(0, _q1_panel(result, name, True, case.get('synthetic_truth')))
@@ -94,24 +95,22 @@ def q1_bundle(results, cases=None):
                      'diameter_m': result.diameter.length, 'radius_m': result.minimum_circle.radius,
                      'kappa': result.coverage.kappa, 'eta': result.coverage.eta, 'T': result.coverage.thales_max,
                      'cover': result.coverage.status})
-    return ResultBundle(tuple(figures), {'T2': rows, 'T3': [
+    return ResultBundle(figures=tuple(figures), tables={'T2': rows, 'T3': [
         {'operation': 'feasibility/recession', 'complexity': 'O(M^2)'},
         {'operation': 'exact_enumeration: bounded intersections and constraint checks', 'complexity': 'O(M^3)'},
         {'operation': 'diameter: all vertex pairs', 'complexity': 'O(V^2)'},
         {'operation': 'Welzl with exact support recheck', 'complexity': 'expected O(V), worst O(V^3)'},
         {'operation': 'circle enumeration fallback', 'complexity': 'O(V^4)',
-         'note': 'Arithmetic operation counts; high-precision/rational bit-length costs are additional'}]}, {'design': 'PLAN v3'})
+         'note': 'Arithmetic operation counts; high-precision/rational bit-length costs are additional'}]}, metadata={'design': 'PLAN v3'})
 
 
 def q2_bundle(ss, result):
     if ss.status != 'OK' or ss.actual_point is None or result.q_best is None:
         return ResultBundle(tables={'T4': [{'status': result.status, 'stop_reason': result.stop_reason,
-                                           'q': result.q_best, 'J_hat': result.diameter_estimate_m}]},
+                                           'q': result.q_best, 'J_hat': (result.score.J_hat if result.score else None)}]},
                             metadata={'source_status': ss.status, 'result_status': result.status,
                                       'figures_skipped': 'source_or_recommendation_unavailable'})
-    source_samples = _sample_sources(ss, 2, result.config.source_grids, result.q_best,
-                                     result.config.near_offset_m,
-                                     second_half_width_deg=result.config.second_half_width_deg)
+    source_samples = sample_sources(ss, 2, result.config.source_grids, result.q_best, second_half_width_deg=result.config.second_half_width_deg, inward=result.config.near_offset_m)
     p, s = ss.physics, ss.first.position
     candidate_points = {'IN': [], 'BOUNDARY': [], 'OUT': []}
     for row in result.grid_records:
@@ -130,9 +129,7 @@ def q2_bundle(ss, result):
             panel['points'].append({'values': centers, 'label': '5米极限位置' if r == p.near_radius else '半径分界位置', 'open': r == p.near_radius})
             panel['circles'].extend({'center': c, 'radius': p.rho_lo, 'label': '四圆盘约化', 'style': ':'} for c in centers)
     figures = [{'id': 'F5', 'panels': [panel], 'caption': f'{ss.first.error_mode}；保收不等于获得新示向信息'},
-               {'id': 'F6', 'kind': 'heatmap', 'records': result.grid_records,
-                'title': '最坏物理后验直径数值估计',
-                'caption': f'{result.completed_stages}；{result.stop_reason}；非全局最优保证'}]
+               {'id': 'F6', 'caption': f'{result.completed_stages}；{result.stop_reason}；非全局最优保证', 'panels': [{'kind': 'heatmap', 'records': result.grid_records, 'title': '最坏物理后验直径数值估计'}]}]
     for i, clear in enumerate(result.clearance_diagnostics):
         q, feedback = result.q_best, clear.feedback
         pts = np.asarray(source_samples.points)
@@ -163,18 +160,16 @@ def q2_bundle(ss, result):
                                                                             source_origin='assumed_source_in_F'))
         distances.append(float(y))
         area.append(diagnostic.linear_area_m2)
-        exact = solve((BearingMeasurement(s, bearing(s, assumed), ss.first.half_width_deg),
-                       BearingMeasurement(q, bearing(q, assumed), result.config.second_half_width_deg)), ss.policy)
+        exact = solve((BearingMeasurement(position=s, bearing_deg=bearing(s, assumed), half_width_deg=ss.first.half_width_deg),
+                       BearingMeasurement(position=q, bearing_deg=bearing(q, assumed), half_width_deg=result.config.second_half_width_deg)), ss.policy)
         exact_area.append(exact.area_m2)
-    figures.append({'id': 'F8', 'kind': 'curve', 'series': [{'x': distances, 'y': area, 'label': '局部条带面积近似'},
-                                                          {'x': distances, 'y': exact_area, 'label': '同构型纯角锥面积'}],
-                    'xlabel': '侧移 / m', 'ylabel': '面积 / m²', 'caption': f'假定源位置；两曲线半宽均为 ({ss.first.half_width_deg}, {result.config.second_half_width_deg})°；r2 与交角同时变化；90°仅固定距离最优'})
-    table = [{'q': result.q_best, 'J_hat': result.diameter_estimate_m, 'movement_m': result.movement_m,
+    figures.append({'id': 'F8', 'caption': f'假定源位置；两曲线半宽均为 ({ss.first.half_width_deg}, {result.config.second_half_width_deg})°；r2 与交角同时变化；90°仅固定距离最优', 'panels': [{'kind': 'curve', 'series': [{'x': distances, 'y': area, 'label': '局部条带面积近似'},
+                                                          {'x': distances, 'y': exact_area, 'label': '同构型纯角锥面积'}], 'xlabel': '侧移 / m', 'ylabel': '面积 / m²'}]})
+    table = [{'q': result.q_best, 'J_hat': (result.score.J_hat if result.score else None), 'movement_m': result.movement_m,
               'source_change_m': result.source_change_m, 'station_change_m': result.station_change_m,
               'tolerance_change_m': result.tolerance_change_m, 'status': result.status,
               'conditional_clearance': jsonable(result.clearance_diagnostics)}]
-    return ResultBundle(tuple(figures), {'T4': table, 'T6': list(result.refinement_history)},
-                        {'first': jsonable(ss.first), 'physics': jsonable(p), 'config': jsonable(result.config)})
+    return ResultBundle(figures=tuple(figures), tables={'T4': table, 'T6': list(result.refinement_history)}, metadata={'first': jsonable(ss.first), 'physics': jsonable(p), 'config': jsonable(result.config)})
 
 
 def _config(path):
@@ -210,7 +205,7 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.command == 'figures':
         payload = json.loads(args.bundle.read_text(encoding='utf-8'))
-        render(ResultBundle(tuple(payload['figures']), payload.get('tables', {}), payload.get('metadata', {})),
+        render(ResultBundle(figures=tuple(payload['figures']), tables=payload.get('tables', {}), metadata=payload.get('metadata', {})),
                args.output, PlotStyle(font_family=args.font))
         return
     output = args.output or Path(__file__).parent/'outputs'/datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
@@ -228,7 +223,7 @@ def main(argv=None):
         payload.update(q1=results, analytic_inputs=cases)
         bundles.append(q1_bundle(results, cases))
     if args.command == 'q2' or (args.command == 'examples' and args.include_q2):
-        measurements = read_measurements(args.input) if args.command == 'q2' else (BearingMeasurement((0., 0.), 0., measurement_id='standard'),)
+        measurements = read_measurements(args.input) if args.command == 'q2' else (BearingMeasurement(position=(0., 0.), bearing_deg=0., measurement_id='standard'),)
         if len(measurements) != 1:
             raise ValueError('Q2 requires exactly one first omnidirectional direction measurement')
         first = measurements[0]
@@ -245,9 +240,7 @@ def main(argv=None):
                  'conditional_R_hat': r['clearance'].R_hat if r['clearance'] else None,
                  'clearance': r['clearance'].status if r['clearance'] else 'INFEASIBLE',
                  'movement_m': r['movement_m']} for r in payload['heuristics']]
-        bundles.append(ResultBundle(({'id': 'F10', 'kind': 'bars', 'labels': [r['strategy'] for r in rows if r['J_hat'] is not None],
-                                      'values': [r['J_hat'] for r in rows if r['J_hat'] is not None], 'ylabel': 'J_hat / m',
-                                      'caption': '同信息、同精度；条件覆盖状态另列 T5'},), {'T5': rows}))
+        bundles.append(ResultBundle(figures=({'id': 'F10', 'caption': '同信息、同精度；条件覆盖状态另列 T5', 'panels': [{'kind': 'bars', 'labels': [r['strategy'] for r in rows if r['J_hat'] is not None], 'values': [r['J_hat'] for r in rows if r['J_hat'] is not None], 'ylabel': 'J_hat / m'}]},), tables={'T5': rows}))
         if args.frontier and ss.status == 'OK':
             budgets = (0, 10, 50, 100, 200, 400, 600, 800, 1000, 1500, 2000, 3000)
             frontier = movement_frontier(ss, budgets, config)
@@ -258,8 +251,7 @@ def main(argv=None):
                        'label': '预算最坏直径样本估计'}]
             if bound:
                 series.append({'x': [10], 'y': [bound['lower_bound_m']], 'label': 'B=10解析下界（非最优值）', 'style': 'x'})
-            bundles.append(ResultBundle(({'id': 'F9', 'kind': 'curve', 'series': series, 'xlabel': '预算 B / m',
-                                          'ylabel': 'V(B) 数值估计 / m', 'caption': '实际移动与预算分列；有限网格结果'},)))
+            bundles.append(ResultBundle(figures=({'id': 'F9', 'caption': '实际移动与预算分列；有限网格结果', 'panels': [{'kind': 'curve', 'series': series, 'xlabel': '预算 B / m', 'ylabel': 'V(B) 数值估计 / m'}]},)))
         if args.sensitivity and ss.status == 'OK':
             experiments = []
             for group, name, variant, overrides in sensitivity_cases(first, physics, policy):
@@ -271,25 +263,29 @@ def main(argv=None):
                                     'old_q_score': old_assessment['score'], 'new_result': new})
             payload['sensitivity'] = experiments
             s1 = [r for r in experiments if r['group'] == 'S1']
-            bundles.append(ResultBundle(({'id': 'F11', 'kind': 'bars', 'labels': [r['name'] for r in s1],
-                                          'values': [r['new_result'].diameter_estimate_m for r in s1], 'ylabel': 'J_hat / m',
-                                          'caption': '理论1° 与最近舍入外包1.005°；非官方舍入事实'},),
-                                        {'T6_sensitivity': jsonable(experiments)}))
-    tables = {k: v for b in bundles for k, v in b.tables.items()}
+            bundles.append(ResultBundle(figures=({'id': 'F11', 'caption': '理论1° 与最近舍入外包1.005°；非官方舍入事实', 'panels': [{'kind': 'bars', 'labels': [r['name'] for r in s1], 'values': [(r['new_result'].score.J_hat if r['new_result'].score else None) for r in s1], 'ylabel': 'J_hat / m'}]},), tables={'T6_sensitivity': jsonable(experiments)}))
+    tables = {}
+    for item in bundles:
+        for name, rows in item.tables.items():
+            tables.setdefault(name, []).extend(rows)
     tables['T1'] = [
         {'category': '题面事实', 'statement': '每源固定未知半径1000—1500米；5米near；20米清除；东0°逆时针', 'source': '题面附录2'},
         {'category': '附件事实', 'statement': '允许域外检测；合法反馈direction/near/no_signal；示向度两位小数', 'source': '附件2'},
         {'category': '合理推断', 'statement': '同一定位时段静止源、同一会话与未清除阶段', 'source': 'PLAN §0.5'},
         {'category': '主动简化', 'statement': '异点未知固定有界误差场的全组合外包；最坏直径优先且保收', 'source': 'PLAN §0.5—0.6'},
         {'category': '待明确', 'statement': '官方舍入顺序及±1°是否包含量化未知；1.005°仅最近舍入外包', 'source': 'PLAN §0.6'}]
-    bundle = ResultBundle(tuple(f for b in bundles for f in b.figures), tables,
-                          {'design': 'PLAN.md v3', 'numerical_claim': 'NUMERICAL_CANDIDATE; refinement spread is not a bound'})
+    bundle = ResultBundle(figures=tuple(f for b in bundles for f in b.figures), tables=tables, metadata={'design': 'PLAN.md v3', 'numerical_claim': 'NUMERICAL_CANDIDATE; refinement spread is not a bound'})
     write_json(output/'results.json', payload)
     write_json(output/'bundle.json', bundle)
     sources = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in Path(__file__).parent.glob('*.py')}
+    dependencies = {name: version(name) for name in ('numpy', 'matplotlib', 'pytest')}
+    try:
+        dependencies['mpmath'] = version('mpmath')
+    except PackageNotFoundError:
+        pass  # The interval certificate is an optional dependency.
     manifest = {'input': str(getattr(args, 'input', 'analytic')), 'config': config, 'physics': physics,
-                'seed': config.seed, 'source_sha256': sources, 'python': platform.python_version(),
-                'dependencies': {name: version(name) for name in ('numpy', 'matplotlib', 'pytest')},
+                'search_randomness': 'deterministic', 'circle_seed': 0, 'source_sha256': sources, 'python': platform.python_version(),
+                'dependencies': dependencies,
                 'files': ['results.json', 'bundle.json', 'manifest.json'], 'command': vars(args)}
     write_json(output/'manifest.json', manifest)
 

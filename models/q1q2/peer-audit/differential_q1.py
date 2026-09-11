@@ -131,7 +131,7 @@ def evaluate(case):
             else:
                 hp=[h for o in inp['observations'] for h in ours_g.wedge_halfplanes(ours_g.BearingMeasurement(**o))] if 'observations' in inp else [ours_g.HalfPlane(tuple(r[:2]),r[2]) for r in inp['halfplanes']]
                 reg=ours_g.intersect_halfplanes(hp,policy)
-            d=ours_g.diameter(reg,policy)
+            d=ours_g.diameter(reg)
             return dict(status=reg.status,kind=reg.kind.value if reg.kind else None,vertices=reg.vertices,diameter=d.length,region=asdict(reg),diameter_result=asdict(d))
         def theirs():
             if any(o['half_width_deg']>=90 for o in inp.get('observations',[])): return dict(status='API_UNPROVIDED')
@@ -164,7 +164,7 @@ def evaluate(case):
         if gt['vertices'] and t.get('status')!='API_UNPROVIDED':
             cgt=co.oracle([[F(x) for x in v] for v in gt['vertices']])
             ov=o.get('vertices',[]);tv=t.get('vertices',[])
-            om=attempt(lambda:asdict(ours_c.minimum_circle(ov,policy,0))) if o.get('status')=='OK' and len(ov) else dict(status=o.get('status'),center=None,radius=None)
+            om=attempt(lambda:asdict(ours_c.minimum_circle(ov, 0))) if o.get('status')=='OK' and len(ov) else dict(status=o.get('status'),center=None,radius=None)
             if t.get('status')=='numerically_unresolved':tm=dict(status='UNRESOLVED')
             elif 'center' in t:tm=dict(status=t['status'],center=t['center'],radius=t.get('radius'))
             elif len(tv):
@@ -179,7 +179,7 @@ def evaluate(case):
             extra['pipeline_circle']=dict(oracle=cgt,ours=om,theirs=tm,checks=dict(ours=opc,theirs=tpc),side_states=dict(ours=state(om,opc),theirs=state(tm,tpc)),category=category(state(om,opc),state(tm,tpc)),baseline_category=category(state(om,opb),state(tm,tpb)),containment_residual=dict(ours=opr,theirs=tpr))
     else:
         pts=inp['points'];gt=co.oracle(pts)
-        o=attempt(lambda:asdict(ours_c.minimum_circle(pts,policy,case.get('circle_seed',0))))
+        o=attempt(lambda:asdict(ours_c.minimum_circle(pts, case.get('circle_seed',0))))
         def theirs():
             center,radius=peer.minimum_circle(np.asarray(pts,float))
             return dict(status='OK',center=center,radius=radius)
@@ -192,14 +192,14 @@ def evaluate(case):
         def odia():
             v=ours_g.convex_hull(pts,policy)
             reg=ours_g.Region(ours_g.RegionKind.POINT if len(v)==1 else ours_g.RegionKind.SEGMENT if len(v)==2 else ours_g.RegionKind.POLYGON,v)
-            return asdict(ours_g.diameter(reg,policy))
+            return asdict(ours_g.diameter(reg))
         od=attempt(odia);td=attempt(lambda:dict(length=peer.diameter(np.asarray(pts))[0]))
         extra=dict(containment_residual=dict(ours=ores,theirs=tres),isolated_diameter=dict(ours=od,theirs=td,ours_ok=near(od.get('length'),gt['diameter'],strict),theirs_ok=near(td.get('length'),gt['diameter'],strict)))
         # Isolate coverage from diameter failure: oracle independently selects
         # a farthest pair on the original cloud, as the existing cover runner.
         i,j=gt['pair'];d=ours_g.DiameterResult(gt['diameter'],gt['diameter_squared'],(tuple(pts[i]),tuple(pts[j])),(i,j))
         reg=ours_g.Region(ours_g.RegionKind.POINT if gt['diameter']==0 else ours_g.RegionKind.POLYGON,tuple(map(tuple,pts)))
-        cov=attempt(lambda:asdict(ours_c.diameter_circle_cover(reg,d,policy)))
+        cov=attempt(lambda:asdict(ours_c.diameter_circle_cover(reg, d, policy, ours_c.minimum_circle(reg.vertices, seed=0))))
         cov_checks=dict(status=cov.get('status') in gt['allowed_cover_status'])
         for k in ('kappa','eta'):
             val=cov.get(k);expected=gt[k]

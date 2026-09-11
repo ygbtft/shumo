@@ -8,7 +8,7 @@
 
 | 文件 | 职责 |
 |---|---|
-| `geometry.py` | 角锥→半平面、半平面交与区域分类（空/点/线段/多边形/无界）、凸包、旋转卡壳直径 |
+| `geometry.py` | 角锥→半平面、半平面交与区域分类（空/点/线段/多边形/无界）、凸包、精确全对枚举直径 |
 | `circle.py` | Welzl 最小覆盖圆、强制/普通三点圆、Thales 覆盖判定、κ/η 膨胀系数、20 米三段判据 |
 | `q1.py` | 任意 N 组观测校验与问题 1 结果装配 |
 | `feasible.py` | 首测可行集 F、C_sig / C_dir 候选域、四圆盘约化、物理后验与外包 |
@@ -16,7 +16,7 @@
 | `diagnostics.py` | 条件 R(K)、清除三态、面积近似、GDOP（可选辅助）、敏感性接口 |
 | `adapters.py` | 手工 JSON / mock 观测 / JSONL 转换，三种误差模式，真值隔离 |
 | `plots.py` | 从已保存结果生成论文图表，不参与求解 |
-| `run.py` | 命令入口（q1/q2/examples/figures）与结果 + 复现清单输出；`--certify` 惰性调用认证模块 |
+| `run.py` | 命令入口（q1/q2/examples/figures）与结果 + 复现清单输出；benchmark 的 `--certify` 惰性调用认证模块 |
 
 ### 设计、论文与评审
 
@@ -62,7 +62,7 @@ models/q1q2/.venv/bin/python -m models.q1q2.benchmarks.q1_geometry.run   # 四�
 ## 当前状态
 
 - 实现完成，经静态代码审查（5 个阻断 bug 已修）与动态运行；`tests/` 全套通过。
-- 四块正确性 benchmark 已跑，真值独立于生产：抓出并修复 3 个真 bug（单角锥/无界分类、Q2 最坏直径低估、C_dir 见证元数据）。修复后通过率 q1_geometry 264/285、q1_circle_cover 329/330、q2_candidate 502/531（核心 IN/OUT 判定 0 错）、q2_worst_diameter 46/48（低估 grade A 归零）。残留为 benchmark 过严或几何无害的顶点去重瑕疵，非错答案。
+- 四块正确性 benchmark：285/285、330/330、531/531、48/48。P3 整理及本轮验证见 [处理记录](reviews/p3-cleanup/README.md)。
 - Q2 认证式上下界 [L,U] 已实现并接入 benchmark（补上此前只有下界、抓不到高估的空缺），线段闭式、polar 等 7 案例全部收敛且夹住真 J。
 - 论文正文草稿 `paper-q1q2.md` 已成稿，引用与文献调研一致。
 
@@ -72,4 +72,14 @@ models/q1q2/.venv/bin/python -m models.q1q2.benchmarks.q1_geometry.run   # 四�
 - 部分论文图表合同（F1/F4/F8/F10 等标注）与配图生成。
 - 认证模块在 Windows guest 的实跑验证（附录 A 要求；当前仅宿主验证）。
 - mock 真实后端集成测试（现 mock 局部测试用合成观测）。
-- benchmark 残留过严项收敛（极端尺度归 scale_limit、变换边界源探针容差）与顶点去重打磨。
+
+## 简化后的接口
+
+手工输入统一为 `{"measurements": [...]}`。命名误差模型保留 `error_mode` 与 `rounding_assumption_source`，不再接受冗余 `rounding_mode`。绘图统一使用 `panels` 数组；旧保存产物需转换该结构后再渲染。
+
+- `diameter(region)`、`forced_circle(points)`、`enumerate_circle(points)`、`ordinary_three_point_circle(points)` 不接收无效 policy；`minimum_circle(vertices, seed)` 保留实际使用的随机种子。
+- `diameter_circle_cover(region, diameter, policy, mec)` 必须传入同一顶点集已算好的 MEC；Thales 判定独立于 MEC。
+- `sample_sources(ss, level, grids, q=None, *, inward, second_half_width_deg, shifted=False, deadline=None)` 是唯一采样入口；网格、内移距离与第二角宽明确传入。
+- `select_second_point(ss, config, extra_points=())` 是唯一搜索入口。搜索无随机步骤；manifest 记录搜索确定性与圆算法固定 seed=0。
+- Q2 数值从 `result.score.J_hat` 读取。`evaluations` 是各次搜索的 `score_point` 调用数（含中断调用，不含缓存命中）；frontier 共享调用数/耗时仅记在首行的 `frontier_shared_evaluations` / `frontier_shared_elapsed_seconds`，不会重复加进各行搜索耗时。
+- 可选证书直接用 `dataclasses.asdict` 导出；backend 写 `mpmath.iv`，真实依赖版本由运行 manifest 记录。

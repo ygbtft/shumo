@@ -40,6 +40,7 @@ def completion_choice(poly, observations, current, remainder_weight=0., area_pri
     if remainder_weight == 0. and not area_prior and not expanded:
         return choose_covariance(poly, observations, current, False, weight)
     center, radius = minimum_circle(poly)
+    # Uniform area is a ranking prior, not the official source distribution; covariance is m².
     if area_prior:
         samples, weights = area_quadrature(poly)
         reference = poly[0]
@@ -76,14 +77,18 @@ def completion_choice(poly, observations, current, remainder_weight=0., area_pri
         distance = np.maximum(1., np.linalg.norm(delta, axis=1))
         normal = np.column_stack((-delta[:, 1], delta[:, 0])) / distance[:, None]
         cn = normal @ covariance
+        # Linearized uniform angular error ±1.01° has variance bound²/3.
         noise = (distance*math.radians(1.01))**2 / 3
         denominator = np.sum(cn*normal, axis=1) + noise
         post = covariance[None, :, :] - cn[:, :, None]*cn[:, None, :] / denominator[:, None, None]
         disc = np.maximum(0., (post[:, 0, 0]-post[:, 1, 1])**2 + 4*post[:, 0, 1]**2)
         eigen = (post[:, 0, 0]+post[:, 1, 1]+np.sqrt(disc))/2
+        # sqrt(3 * largest eigenvalue) is a ranking proxy, never a certified radius.
         uncertainty = np.sqrt(np.maximum(0., eigen))*math.sqrt(3)
         residual = float(weights @ uncertainty)
         # The MEC center is a completion-location proxy, never true position.
+        # /5 + 5 uses 5 m/s and 5 s RF. Weighted return travel is only a ranking
+        # term; it is never charged to the virtual-time ledger.
         travel = (np.linalg.norm(q-current) + remainder_weight*np.linalg.norm(q-center))/5 + 5
         choices.append((float(residual + weight*travel), q))
     if choices:
@@ -105,6 +110,7 @@ class CompletionClearancePolicy(ClearanceJointPolicy):
     def complete_source(self, ch):
         if ch in self.cleared:
             return
+        # max_active (3 in the frozen Q3 candidate) counts primary rounds; sharing RF is separate.
         for _ in range(self.max_active):
             poly = self.regions[ch]
             center, radius = self.circle(ch)
@@ -112,6 +118,7 @@ class CompletionClearancePolicy(ClearanceJointPolicy):
                 if not self.clear(center, ch, True):
                     raise RuntimeError("Certified optical clear failed")
                 return
+            # At most one uncertified trial per source (frozen Q3 gate: 50 m).
             if radius <= self.trial_radius and ch not in self._trial_done:
                 self._trial_done.add(ch)
                 self.stats["early_optical_trials"] += 1
@@ -129,6 +136,7 @@ class CompletionClearancePolicy(ClearanceJointPolicy):
                 return
             if result == "no_signal":
                 break
+        # Disable further active RF so the fallback terminates via finite optical coverage.
         old_active = self.active
         self.active = False
         try:

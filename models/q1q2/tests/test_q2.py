@@ -124,9 +124,9 @@ def test_open_endpoint_supremum_fixture(assert_source_members):
 
 def test_nested_sources_and_score_monotonicity(assert_source_members):
     ss = source()
-    coarse,medium = sample_sources(ss,0),sample_sources(ss,1)
+    coarse,medium = sample_sources(ss, 0, SearchConfig().source_grids, inward=1e-7, second_half_width_deg=1.),sample_sources(ss, 1, SearchConfig().source_grids, inward=1e-7, second_half_width_deg=1.)
     assert set(coarse.points) <= set(medium.points)
-    fine = sample_sources(ss,2)
+    fine = sample_sources(ss, 2, SearchConfig().source_grids, inward=1e-7, second_half_width_deg=1.)
     assert set(medium.points) <= set(fine.points)
     for samples in (coarse,medium,fine):
         assert_source_members(ss.first,ss.physics,samples.points)
@@ -140,7 +140,7 @@ def test_nested_sources_and_score_monotonicity(assert_source_members):
 
 def test_pair_refinement_never_lowers_legal_score(assert_source_members):
     ss = source()
-    samples = sample_sources(ss,0)
+    samples = sample_sources(ss, 0, SearchConfig().source_grids, inward=1e-7, second_half_width_deg=1.)
     plain = score_point(ss,(750,400),samples,SearchConfig())
     refined = score_point(ss,(750,400),samples,SearchConfig(refine_pairs=True,pair_rounds=2,pair_starts=2))
     assert refined.J_hat >= plain.J_hat

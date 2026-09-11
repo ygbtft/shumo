@@ -23,6 +23,7 @@ class InterleavedMixin:
             raise ValueError("Unknown task prediction or dispatcher")
         super().__init__(*args, **kwargs)
         self.pause_limit, self.prediction, self.dispatch = pause_limit, prediction, dispatch
+        # Lifetime counts per channel survive task switches; primary counts exclude sharing RF.
         self._rounds = defaultdict(int)
         self._primary_counts = defaultdict(int)
         self._last_partial = None
@@ -51,6 +52,7 @@ class InterleavedMixin:
         if len(set(self.regions) | self.cleared) == 16:
             self.stats["known_upper_bound_skips"] += len(unused)
             unused.clear()
+        # source_interruptions is a global budget, not a fresh allowance for each source.
         previous = self._last_partial
         if previous is not None and previous not in self.cleared and self.stats["source_interruptions"] >= self.pause_limit:
             self.stats["forced_continuations"] += 1
@@ -128,12 +130,15 @@ class InterleavedMixin:
                     both_negative = False
                     break
             if both_negative:
+                # Only the completed negative pair licenses this cut. u follows an observed
+                # bearing; anchor projection + length is the cutoff, expanded by 1e-6 m.
                 restricted = clip(self.regions[ch], u, float(u @ anchor) + length + 1e-6)
                 if not len(restricted):
                     self.stats["bracket_cut_inconsistencies"] += 1
                     self.fallback(ch)
                     return
                 self.regions[ch] = restricted
+                # Region changed: its cached enclosing circle is now stale.
                 self._circles.pop(ch, None)
                 self.stats["bracket_pair_cuts"] += 1
         else:
@@ -162,6 +167,7 @@ class InterleavedMixin:
     def run(self):
         self.client.enter()
         unused = list(range(len(self.stations)))
+        # 16 is only the public upper bound; fewer sources require complete station coverage.
         while len(self.cleared) < 16:
             task = self.next_task(unused)
             if task is None:
@@ -187,6 +193,7 @@ class InterleavedMixin:
                         self.stats["skipped_precise_measurements"] += 1
                         continue
                     self.measure(p, ch)
+                    # Processed includes certified skip; unknown channels must still receive real RF.
                     self.surveyed[ch].add(key)
             finally:
                 self._surveying = False

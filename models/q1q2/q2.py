@@ -34,7 +34,6 @@ class SearchConfig:
     restrict_action_to_arena: bool = False
     tie_floor_m: float = .1
     tie_multiplier: float = 1.
-    seed: int = 0
 
     def __post_init__(self):
         if not 0 < self.second_half_width_deg < 45:
@@ -128,6 +127,7 @@ class Q2Result:
     status: str = 'NUMERICAL_CANDIDATE'
     stop_reason: str = 'COMPLETED'
     completed_stages: tuple[str, ...] = ()
+    # score_point invocations, including interrupted calls; cache hits excluded.
     evaluations: int = 0
     elapsed_seconds: float = 0.
     config: SearchConfig | None = None
@@ -141,10 +141,9 @@ class Q2Result:
     clearance_diagnostics: tuple[object, ...] = ()
     objective: str = 'physical_posterior_worst_diameter'
     numerical_assessment: dict = field(default_factory=dict)
-
-    @property
-    def diameter_estimate_m(self):
-        return self.score.J_hat if self.score else None
+    # Frontier shared cost is recorded once on the first result, never per row.
+    frontier_shared_evaluations: int = 0
+    frontier_shared_elapsed_seconds: float = 0.
 
 
 class _BudgetExpired(Exception):
@@ -180,7 +179,7 @@ def _direction_boundary_samples(ss, q, count, half_width, inward, deadline=None)
             x = ss.parameter_point(*params, inward=inward) if params else None
         return x if x is not None and ss.contains([x])[0] else None
 
-    def evaluate(piece, t):
+    def evaluate_and_record_pair(piece, t):
         _check_deadline(deadline)
         x = legal(piece.at(t))
         if x is None or distance(x, q) <= ss.physics.near_radius:
@@ -232,10 +231,10 @@ def _direction_boundary_samples(ss, q, count, half_width, inward, deadline=None)
 
     for piece in pieces:
         if piece.kind == 'point':
-            evaluate(piece, 0.)
+            evaluate_and_record_pair(piece, 0.)
             continue
         ts = np.linspace(0., 1., count)
-        values = [evaluate(piece, float(t))[0] for t in ts]
+        values = [evaluate_and_record_pair(piece, float(t))[0] for t in ts]
         for i in range(1, len(ts)-1):
             if values[i] < 0 or not (values[i] >= values[i-1] and values[i] >= values[i+1]):
                 continue
@@ -243,23 +242,30 @@ def _direction_boundary_samples(ss, q, count, half_width, inward, deadline=None)
                 continue
             lo, hi = ts[i-1], ts[i+1]
             # Golden-section search retains every tested legal contact pair.
+            # It explores local maxima and supplies no global upper certificate.
             ratio = (math.sqrt(5)-1)/2
             a, b = hi-ratio*(hi-lo), lo+ratio*(hi-lo)
-            fa, fb = evaluate(piece, a)[0], evaluate(piece, b)[0]
+            fa, fb = evaluate_and_record_pair(piece, a)[0], evaluate_and_record_pair(piece, b)[0]
             for _ in range(18):
                 if fa < fb:
                     lo, a, fa = a, b, fb
                     b = lo+ratio*(hi-lo)
-                    fb = evaluate(piece, b)[0]
+                    fb = evaluate_and_record_pair(piece, b)[0]
                 else:
                     hi, b, fb = b, a, fa
                     a = hi-ratio*(hi-lo)
-                    fa = evaluate(piece, a)[0]
+                    fa = evaluate_and_record_pair(piece, a)[0]
     return tuple(sorted(result))
 
 
-def _sample_sources(ss, level, grids, q=None, inward=1e-7, shifted=False,
-                    second_half_width_deg=1., deadline=None):
+def sample_sources(ss, level, grids, q=None, *, inward, shifted=False,
+                   second_half_width_deg, deadline=None):
+    """Nested legal source samples; grids, inward metres and angle degrees explicit.
+
+    Coordinates are world metres; alpha is a first-bearing offset in radians,
+    while radial interpolation t is dimensionless. Sampling is deterministic
+    exploration of bounded uncertainty, not draws from a probability prior.
+    """
     _check_deadline(deadline)
     if level not in (0, 1, 2):
         raise ValueError('source level must be 0, 1, or 2')
@@ -326,24 +332,26 @@ def _sample_sources(ss, level, grids, q=None, inward=1e-7, shifted=False,
             found.extend(_direction_boundary_samples(ss, q, grids[k][0],
                                                       second_half_width_deg, inward, deadline=deadline))
     pts = tuple(sorted(set(found)))
-    return SourceSamples(pts, level, grids[level], excluded, len(pts)-base, inward, shifted,
-                         second_half_width_deg if q is not None else None,
-                         point(q) if q is not None else None)
-
-
-def sample_sources(source_set: SourceSet, level: int, q: Point2 | None = None,
-                   second_half_width_deg: float = 1.) -> SourceSamples:
-    return _sample_sources(source_set, level, SearchConfig().source_grids, q,
-                           second_half_width_deg=second_half_width_deg)
+    return SourceSamples(
+        points=pts,
+        level=level,
+        grid=grids[level],
+        excluded_boundary_samples=excluded,
+        additional_count=len(pts)-base,
+        offset_m=inward,
+        shifted=shifted,
+        direction_half_width_deg=second_half_width_deg if q is not None else None,
+        augmentation_q=point(q) if q is not None else None,
+    )
 
 
 def _sample_diameter(points, policy):
     hull = convex_hull(points, policy)
     if not hull:
         return None
-    region = Region(RegionKind.POINT if len(hull) == 1 else RegionKind.SEGMENT if len(hull) == 2
-                    else RegionKind.POLYGON, hull)
-    return diameter(region, policy)
+    region = Region(kind=RegionKind.POINT if len(hull) == 1 else RegionKind.SEGMENT if len(hull) == 2
+                    else RegionKind.POLYGON, vertices=hull)
+    return diameter(region)
 
 
 def _pair_witness(ss, q, x, y, config, same_point=False):
@@ -390,7 +398,17 @@ def _pair_witness(ss, q, x, y, config, same_point=False):
     if beta is not None:
         boundary |= any(abs(v) <= math.degrees(config.policy.angle_abs)
                         for v in residuals['second_angle_minus_halfwidth_deg'])
-    return PairWitness(x, y, branch, beta, distance(x, y), residuals, boundary, True, worlds)
+    return PairWitness(
+        x=x,
+        y=y,
+        branch=branch,
+        common_bearing_deg=beta,
+        distance_m=distance(x, y),
+        constraint_residuals=residuals,
+        near_boundary=boundary,
+        actual_legal=True,
+        worlds=worlds,
+    )
 
 
 def _refine_pair(ss, q, witness, samples, config, deadline=None):
@@ -433,17 +451,39 @@ def score_point(source_set: SourceSet, q: Point2, samples: SourceSamples, config
                                             config.second_half_width_deg, samples.offset_m, deadline=deadline)
         samples = replace(samples, points=tuple(sorted(set(samples.points).union(extra))))
     if not samples.points:
-        return Score(None, None, None, 0, None, status='NUMERICAL_UNRESOLVED')
+        return Score(
+            J_hat=None,
+            near_score_m=None,
+            direction_score_m=None,
+            sample_count=0,
+            witness=None,
+            status='NUMERICAL_UNRESOLVED',
+        )
     points = np.asarray(samples.points, dtype=float)
     if not ss.contains(points).all():
         raise ValueError('source samples must be actual legal F members')
     if q == ss.first.position:
         d = _sample_diameter(samples.points, config.policy)
         w = _pair_witness(ss, q, *d.endpoints, config, same_point=True)
-        return Score(d.length, None, d.length, len(points), w, (w,), 'IMPOSSIBLE_BY_FIRST_DIRECTION')
+        return Score(
+            J_hat=d.length,
+            near_score_m=None,
+            direction_score_m=d.length,
+            sample_count=len(points),
+            witness=w,
+            top_pairs=(w,),
+            near_possibility='IMPOSSIBLE_BY_FIRST_DIRECTION',
+        )
     points = points[np.linalg.norm(points-q, axis=1) <= ss.physics.rho_hi]
     if not len(points):
-        return Score(None, None, None, 0, None, status='NUMERICAL_UNRESOLVED')
+        return Score(
+            J_hat=None,
+            near_score_m=None,
+            direction_score_m=None,
+            sample_count=0,
+            witness=None,
+            status='NUMERICAL_UNRESOLVED',
+        )
     a = points-q
     r = np.linalg.norm(a, axis=1)
     near_mask = r <= ss.physics.near_radius
@@ -506,8 +546,17 @@ def score_point(source_set: SourceSet, q: Point2, samples: SourceSamples, config
                    (near_distance == ss.physics.near_radius and attained) else
                    'IMPOSSIBLE' if near_distance > ss.physics.near_radius else 'BOUNDARY_UNRESOLVED')
     value = max(v for v in (near_score, direction_score) if v is not None)
-    return Score(value, near_score, direction_score, len(points), best, tuple(top), possibility,
-                 value-before if config.refine_pairs else None, threshold_exploration_m=threshold_exploration)
+    return Score(
+        J_hat=value,
+        near_score_m=near_score,
+        direction_score_m=direction_score,
+        sample_count=len(points),
+        witness=best,
+        top_pairs=tuple(top),
+        near_possibility=possibility,
+        local_improvement_m=value-before if config.refine_pairs else None,
+        threshold_exploration_m=threshold_exploration,
+    )
 
 
 def short_baseline_lower_bound(source_set, a, b, budget_m, half_width_deg=1.):
@@ -607,13 +656,13 @@ def _conditional_diagnostics(ss, q, score, samples, config, deadline=None):
     feedbacks = []
     if score.witness:
         w = score.witness
-        feedbacks.append(Feedback(w.branch, w.common_bearing_deg, config.second_half_width_deg))
+        feedbacks.append(Feedback(kind=w.branch, bearing_deg=w.common_bearing_deg, half_width_deg=config.second_half_width_deg))
     if score.near_score_m is not None and not any(f.kind == 'near' for f in feedbacks):
-        feedbacks.append(Feedback('near'))
+        feedbacks.append(Feedback(kind='near'))
     if not any(f.kind == 'direction' for f in feedbacks):
         for p in samples.points:
             if distance(p, q) > ss.physics.near_radius:
-                feedbacks.append(Feedback('direction', bearing(q, p), config.second_half_width_deg))
+                feedbacks.append(Feedback(kind='direction', bearing_deg=bearing(q, p), half_width_deg=config.second_half_width_deg))
                 break
     clear, angular = [], []
     for feedback in feedbacks:
@@ -661,15 +710,15 @@ def _choose_spread(records, count):
     return selected
 
 
-def select_second_point(source_set: SourceSet, config: SearchConfig) -> Q2Result:
-    return _search(source_set, config)
-
-
-def _search(ss, config, extra_points=()):
+def select_second_point(ss: SourceSet, config: SearchConfig, extra_points=()) -> Q2Result:
     started = time.monotonic()
     deadline = started+config.time_budget_s
     history, completed, grid_records, records, cache = [], [], [], {}, {}
     evaluations = 0
+    def counted_score(*args, **kwargs):
+        nonlocal evaluations
+        evaluations += 1
+        return score_point(*args, **kwargs)
     samples_by_level = {}
     baseline = None
     stage_winners = []
@@ -678,10 +727,9 @@ def _search(ss, config, extra_points=()):
         return time.monotonic() >= deadline
     def samples(level):
         if level not in samples_by_level:
-            samples_by_level[level] = _sample_sources(ss, level, config.source_grids, inward=config.near_offset_m, deadline=deadline)
+            samples_by_level[level] = sample_sources(ss, level, config.source_grids, inward=config.near_offset_m, deadline=deadline, second_half_width_deg=config.second_half_width_deg)
         return samples_by_level[level]
-    def evaluate(q, level, stage):
-        nonlocal evaluations
+    def evaluate(q, level):
         _check_deadline(deadline)
         q = point(q)
         check = _admissible(ss, q, config)
@@ -696,11 +744,10 @@ def _search(ss, config, extra_points=()):
                     break
         key = (q, level)
         if key not in cache:
-            score = score_point(ss, q, samples(level), replace(config, refine_pairs=False), deadline=deadline)
-            evaluations += 1
+            score = counted_score(ss, q, samples(level), replace(config, refine_pairs=False), deadline=deadline)
             if score.J_hat is None:
                 return None
-            cache[key] = CandidateResult(q, check, score, distance(q, ss.first.position))
+            cache[key] = CandidateResult(q=q, check=check, score=score, movement_m=distance(q, ss.first.position))
         result = cache[key]
         records[q] = result
         return result
@@ -731,26 +778,49 @@ def _search(ss, config, extra_points=()):
                       if best.sensitivity_range_m else math.inf)
             improvement = ('NO_CLEAR_NUMERICAL_IMPROVEMENT' if baseline.J_hat-best.score.J_hat <= spread
                            else 'NUMERICAL_IMPROVEMENT')
-        return Q2Result(best.q if best else None, best.check if best else None, best.score if best else None,
-                        best.movement_m if best else None, best.movement_m/5 if best else None,
-                        5. if best else None, tuple(eligible), tuple(history),
-                        best.sensitivity_range_m if best else None, best.source_change_m if best else None,
-                        station_change, best.tolerance_change_m if best else None, stability, status, reason,
-                        tuple(completed), evaluations, time.monotonic()-started, config, ss.first, ss.physics,
-                        tuple(grid_records), baseline, tie, improvement, angular, clear, numerical_assessment=assessment)
+        return Q2Result(
+            q_best=best.q if best else None,
+            candidate_check=best.check if best else None,
+            score=best.score if best else None,
+            movement_m=best.movement_m if best else None,
+            movement_seconds=best.movement_m/5 if best else None,
+            measurement_seconds=5. if best else None,
+            alternatives=tuple(eligible),
+            refinement_history=tuple(history),
+            sensitivity_range_m=best.sensitivity_range_m if best else None,
+            source_change_m=best.source_change_m if best else None,
+            station_change_m=station_change,
+            tolerance_change_m=best.tolerance_change_m if best else None,
+            stability=stability,
+            status=status,
+            stop_reason=reason,
+            completed_stages=tuple(completed),
+            evaluations=evaluations,
+            elapsed_seconds=time.monotonic()-started,
+            config=config,
+            first=ss.first,
+            physics=ss.physics,
+            grid_records=tuple(grid_records),
+            baseline=baseline,
+            tie_threshold_m=tie,
+            improvement_status=improvement,
+            angular_comparison=angular,
+            clearance_diagnostics=clear,
+            numerical_assessment=assessment,
+        )
     try:
         if ss.status != 'OK':
             return output('INCONSISTENT_FIRST_OBSERVATION', ss.status)
         if config.movement_budget_m == 0:
-            baseline = score_point(ss, ss.first.position, samples(0), config, deadline=deadline)
+            baseline = counted_score(ss, ss.first.position, samples(0), config, deadline=deadline)
             return output('NO_DISTINCT_CANDIDATE', 'ZERO_BUDGET_EXCLUDES_S')
         if config.restrict_action_to_arena and config.movement_budget_m is not None:
             if distance(ss.first.position, ss.physics.arena_center) > ss.physics.arena_radius+config.movement_budget_m:
                 return output('EMPTY_ADMISSIBLE_SET', 'BUDGET_DISJOINT_FROM_ADDED_ARENA_ACTION_CONSTRAINT')
         if expired():
             return output('NUMERICAL_UNRESOLVED', 'TIME_BUDGET')
-        baseline = score_point(ss, ss.first.position, samples(0), config, deadline=deadline)
-        evaluate(ss.first.position, 0, 'baseline')
+        baseline = counted_score(ss, ss.first.position, samples(0), config, deadline=deadline)
+        evaluate(ss.first.position, 0)
         box = candidate_bbox(ss, config)
         if box[0] > box[1] or box[2] > box[3]:
             return output('EMPTY_ADMISSIBLE_SET', 'ADDITIONAL_ACTION_CONSTRAINTS')
@@ -770,7 +840,7 @@ def _search(ss, config, extra_points=()):
         for q in extras:
             if expired():
                 return output(reason='TIME_BUDGET')
-            evaluate(q, 0, 'extras')
+            evaluate(q, 0)
         for step in config.station_steps_m:
             xs = np.arange(math.ceil(box[0]/step)*step, box[1]+step*1e-10, step)
             ys = np.arange(math.ceil(box[2]/step)*step, box[3]+step*1e-10, step)
@@ -782,7 +852,7 @@ def _search(ss, config, extra_points=()):
                                          'status': 'NOT_EVALUATED', 'diameter_estimate_m': None}
                                         for j, (xx, yy) in enumerate(product(xs, ys)) if j >= index)
                     return output(reason='TIME_BUDGET')
-                r = evaluate((x, y), 0, 'grid')
+                r = evaluate((x, y), 0)
                 grid_records.append({'q': (float(x), float(y)), 'step_m': step,
                                      'status': r.check.status if r else 'OUT',
                                      'diameter_estimate_m': r.score.J_hat if r else None})
@@ -809,7 +879,7 @@ def _search(ss, config, extra_points=()):
                 starts.append(b)
         local = []
         for initial in starts:
-            current = evaluate(initial.q, 1, 'local')
+            current = evaluate(initial.q, 1)
             step = config.station_initial_step_m
             while step >= config.station_min_step_m:
                 if expired():
@@ -819,7 +889,7 @@ def _search(ss, config, extra_points=()):
                     q = point(np.asarray(current.q)+(dx, dy))
                     if q == ss.first.position:
                         continue
-                    r = evaluate(q, 1, 'local')
+                    r = evaluate(q, 1)
                     if r:
                         neighbours.append(r)
                 best = min(neighbours, key=lambda r: (r.score.J_hat, r.movement_m))
@@ -837,7 +907,7 @@ def _search(ss, config, extra_points=()):
                     q = boundary_point(ss, angle, config, deadline=deadline)
                     if q is not None:
                         for inward in (1., .999):
-                            r = evaluate(point(s+inward*(np.asarray(q)-s)), 1, 'boundary_local')
+                            r = evaluate(point(s+inward*(np.asarray(q)-s)), 1)
                             if r and r.q != ss.first.position:
                                 options.append((r, angle))
                 if options:
@@ -858,12 +928,12 @@ def _search(ss, config, extra_points=()):
         for q in tuple(local):
             if expired():
                 return output(reason='TIME_BUDGET')
-            origin_score = evaluate(q, 1, 'shifted_station_audit')
+            origin_score = evaluate(q, 1)
             options = [origin_score]
             for dx, dy in product((-half_step, half_step), repeat=2):
                 candidate = point(np.asarray(q)+(dx, dy))
                 if candidate != ss.first.position:
-                    candidate_score = evaluate(candidate, 1, 'shifted_station_audit')
+                    candidate_score = evaluate(candidate, 1)
                     if candidate_score:
                         options.append(candidate_score)
             best = min(options, key=lambda r: r.score.J_hat)
@@ -878,26 +948,25 @@ def _search(ss, config, extra_points=()):
         for q in local:
             if expired():
                 return output(reason='TIME_BUDGET')
-            near_samples = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m,
-                                           second_half_width_deg=config.second_half_width_deg, deadline=deadline)
+            near_samples = sample_sources(ss, 2, config.source_grids, q, second_half_width_deg=config.second_half_width_deg, deadline=deadline, inward=config.near_offset_m)
             counts[q] = near_samples.additional_count
             additions.update(near_samples.points)
-            score = score_point(ss, q, near_samples, final_config, deadline=deadline)
+            score = counted_score(ss, q, near_samples, final_config, deadline=deadline)
             refined[q] = score
-            evaluations += 1
             for w in score.top_pairs:
                 additions.update((w.x, w.y))
         common = replace(common, points=tuple(sorted(additions)), additional_count=len(additions)-len(common.points))
-        # Same retained boundary points and witness endpoints for every finalist.
+        # Freeze this sample generation for every finalist. Source/tolerance
+        # audits below describe their own generations, not a full-chain S7 bound.
         final = []
-        shifted = _sample_sources(ss, 2, config.source_grids, inward=config.near_offset_m, shifted=True, deadline=deadline)
+        shifted = sample_sources(ss, 2, config.source_grids, inward=config.near_offset_m, shifted=True, deadline=deadline, second_half_width_deg=config.second_half_width_deg)
         audit_samples = replace(common, points=tuple(sorted(set(common.points) | set(shifted.points))))
         for q in local:
             if expired():
                 return output(reason='TIME_BUDGET')
-            score = score_point(ss, q, common, final_config, deadline=deadline)
-            source_values = tuple(score_point(ss, q, samples(k), replace(config, refine_pairs=False), deadline=deadline).J_hat for k in range(3))
-            shifted_score = score_point(ss, q, audit_samples, final_config, deadline=deadline)
+            score = counted_score(ss, q, common, final_config, deadline=deadline)
+            source_values = tuple(counted_score(ss, q, samples(k), replace(config, refine_pairs=False), deadline=deadline).J_hat for k in range(3))
+            shifted_score = counted_score(ss, q, audit_samples, final_config, deadline=deadline)
             # Witness points from independent audit become common input for the final fair pass.
             for w in shifted_score.top_pairs:
                 additions.update((w.x, w.y))
@@ -905,35 +974,31 @@ def _search(ss, config, extra_points=()):
             for factor in (.1, 10.):
                 policy = replace(config.policy, length_abs=config.policy.length_abs*factor,
                                  relative=config.policy.relative*factor, angle_abs=config.policy.angle_abs*factor)
-                varied = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m*factor,
-                                           second_half_width_deg=config.second_half_width_deg, deadline=deadline)
+                varied = sample_sources(ss, 2, config.source_grids, q, second_half_width_deg=config.second_half_width_deg, deadline=deadline, inward=config.near_offset_m*factor)
                 varied = replace(varied, points=tuple(sorted(set(common.points) | set(varied.points))))
-                tol_values.append(score_point(ss, q, varied, replace(final_config, policy=policy), deadline=deadline).J_hat)
+                tol_values.append(counted_score(ss, q, varied, replace(final_config, policy=policy), deadline=deadline).J_hat)
             values = (*source_values, score.J_hat, shifted_score.J_hat, *tol_values)
-            final.append(CandidateResult(q, _admissible(ss, q, config), score, distance(q, s), source_values,
-                                         (min(values), max(values)), abs(source_values[-1]-source_values[-2]),
-                                         max(tol_values+[score.J_hat])-min(tol_values+[score.J_hat]), counts[q],
-                                         {'source': source_values, 'tolerance': tuple([score.J_hat]+tol_values),
+            final.append(CandidateResult(q=q, check=_admissible(ss, q, config), score=score, movement_m=distance(q, s), source_values_m=source_values, sensitivity_range_m=(min(values), max(values)), source_change_m=abs(source_values[-1]-source_values[-2]), tolerance_change_m=max(tol_values+[score.J_hat])-min(tol_values+[score.J_hat]), additional_samples=counts[q], audit_values_m={'source': source_values, 'tolerance': tuple([score.J_hat]+tol_values),
                                           'shifted': (score.J_hat, shifted_score.J_hat),
                                           'local_refinement': (refined[q].J_hat-(refined[q].local_improvement_m or 0.), refined[q].J_hat)}))
-            evaluations += 7
+        # Freeze the union after shifted audit; old audit values remain historical
+        # comparisons and common_final records the change to this generation.
         common = replace(audit_samples, points=tuple(sorted(set(audit_samples.points) | additions)))
         fair = []
         for r in final:
             if expired():
                 return output(reason='TIME_BUDGET')
-            score = score_point(ss, r.q, common, final_config, deadline=deadline)
+            score = counted_score(ss, r.q, common, final_config, deadline=deadline)
             fair.append(replace(r, score=score, sensitivity_range_m=(min(r.sensitivity_range_m[0], score.J_hat),
                                                                    max(r.sensitivity_range_m[1], score.J_hat)),
                                 audit_values_m=dict(r.audit_values_m, common_final=(r.score.J_hat, score.J_hat))))
-            evaluations += 1
         samples_by_level[2] = common
-        baseline = score_point(ss, ss.first.position, common, config, deadline=deadline)
+        baseline = counted_score(ss, ss.first.position, common, config, deadline=deadline)
         completed.extend(('common_final_reassessment', 'source_tolerance_shifted_audit'))
         completed_fair = tuple(fair)
         before_order = [r.q for r in sorted(final, key=lambda r: r.score.J_hat)]
         after_order = [r.q for r in sorted(fair, key=lambda r: r.score.J_hat)]
-        coarse_best = min(local, key=lambda q: score_point(ss, q, samples(0), replace(config, refine_pairs=False), deadline=deadline).J_hat)
+        coarse_best = min(local, key=lambda q: counted_score(ss, q, samples(0), replace(config, refine_pairs=False), deadline=deadline).J_hat)
         final_best = min(fair, key=lambda r: r.score.J_hat)
         coarse_final = next(r for r in fair if r.q == coarse_best)
         significant_flip = coarse_final.score.J_hat-final_best.score.J_hat > max(.1, .01*final_best.score.J_hat)
@@ -949,7 +1014,7 @@ def _search(ss, config, extra_points=()):
             for x, y in product(xs, ys):
                 if expired():
                     break
-                r = evaluate((x, y), 1, 'rank_flip_medium_rescan')
+                r = evaluate((x, y), 1)
                 if r is not None and r.q != ss.first.position:
                     rescue.append(r)
                 rescanned += 1
@@ -962,20 +1027,21 @@ def _search(ss, config, extra_points=()):
             for q in new_qs:
                 if expired():
                     break
-                extra = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m,
-                                           second_half_width_deg=config.second_half_width_deg, deadline=deadline)
+                extra = sample_sources(ss, 2, config.source_grids, q, second_half_width_deg=config.second_half_width_deg, deadline=deadline, inward=config.near_offset_m)
                 additions.update(extra.points)
-                score = score_point(ss, q, extra, final_config, deadline=deadline)
+                score = counted_score(ss, q, extra, final_config, deadline=deadline)
                 for w in score.top_pairs:
                     additions.update((w.x, w.y))
-                new_records.append(CandidateResult(q, _admissible(ss, q, config), score, distance(q, s)))
+                new_records.append(CandidateResult(q=q, check=_admissible(ss, q, config), score=score, movement_m=distance(q, s)))
             if new_records and not expired():
+                # Rescue adds a generation: commit only after all candidates
+                # finish on its frozen union; earlier audits keep their scope.
                 rescue_common = replace(common, points=tuple(sorted(set(common.points) | additions)))
                 updated = []
                 for r in fair+new_records:
                     if expired():
                         break
-                    score = score_point(ss, r.q, rescue_common, final_config, deadline=deadline)
+                    score = counted_score(ss, r.q, rescue_common, final_config, deadline=deadline)
                     old_range = r.sensitivity_range_m
                     updated.append(replace(r, score=score, sensitivity_range_m=(min(old_range[0], score.J_hat),
                                             max(old_range[1], score.J_hat)) if old_range else None,
@@ -1005,15 +1071,20 @@ def movement_frontier(source_set: SourceSet, budgets_m: Sequence[float], config:
         raise ValueError('nonnegative finite budgets required')
     results, candidates = [], set()
     for budget in budgets:
-        result = _search(source_set, replace(config, movement_budget_m=budget), candidates)
+        result = select_second_point(source_set, replace(config, movement_budget_m=budget), candidates)
         candidates.update(r.q for r in result.alternatives)
         results.append(result)
     if not results or source_set.status != 'OK':
         return tuple(results)
+    shared_evaluations = 0
+    def counted_score(*args, **kwargs):
+        nonlocal shared_evaluations
+        shared_evaluations += 1
+        return score_point(*args, **kwargs)
     started = time.monotonic()
     deadline = started+config.time_budget_s
     try:
-        common = _sample_sources(source_set, 2, config.source_grids, inward=config.near_offset_m, deadline=deadline)
+        common = sample_sources(source_set, 2, config.source_grids, inward=config.near_offset_m, deadline=deadline, second_half_width_deg=config.second_half_width_deg)
         points = set(common.points)
         retained = set()
         for result in results:
@@ -1025,16 +1096,15 @@ def movement_frontier(source_set: SourceSet, budgets_m: Sequence[float], config:
         candidates = sorted(q for q in candidates if _admissible(source_set, q, replace(config, movement_budget_m=None)))
         for q in candidates:
             _check_deadline(deadline)
-            points.update(_sample_sources(source_set, 2, config.source_grids, q, config.near_offset_m,
-                                           second_half_width_deg=config.second_half_width_deg, deadline=deadline).points)
+            points.update(sample_sources(source_set, 2, config.source_grids, q, second_half_width_deg=config.second_half_width_deg, deadline=deadline, inward=config.near_offset_m).points)
         common = replace(common, points=tuple(sorted(points)))
         fine = replace(config, refine_pairs=True)
-        preliminary = {q: score_point(source_set, q, common, fine, deadline=deadline) for q in candidates}
+        preliminary = {q: counted_score(source_set, q, common, fine, deadline=deadline) for q in candidates}
         retained.update(_retained_points(preliminary.values()))
         points.update(retained)
         common = replace(common, points=tuple(sorted(points)))
-        scores = {q: score_point(source_set, q, common, fine, deadline=deadline) for q in candidates}
-        baseline = score_point(source_set, source_set.first.position, common, fine, deadline=deadline)
+        scores = {q: counted_score(source_set, q, common, fine, deadline=deadline) for q in candidates}
+        baseline = counted_score(source_set, source_set.first.position, common, fine, deadline=deadline)
         retained.update(_retained_points((*scores.values(), baseline)))
         diagnostic_samples = replace(common, points=tuple(sorted(set(common.points) | retained)))
         # No old fixed-q audit is valid for this new sample/feedback generation.
@@ -1043,12 +1113,18 @@ def movement_frontier(source_set: SourceSet, budgets_m: Sequence[float], config:
         for budget, old in zip(budgets, results):
             _check_deadline(deadline)
             cfg = replace(config, movement_budget_m=budget)
-            alternatives = tuple(CandidateResult(q, check, scores[q], distance(q, source_set.first.position))
-                                 for q in candidates if (check := _admissible(source_set, q, cfg)) is not None
-                                 and scores[q].J_hat is not None)
-            minimum = min((r.score.J_hat for r in alternatives), default=None)
-            best = (min((r for r in alternatives if r.score.J_hat <= minimum+tie), key=lambda r: (r.movement_m, r.q))
-                    if alternatives else None)
+            alternatives = []
+            for q in candidates:
+                check = _admissible(source_set, q, cfg)
+                if check is not None and scores[q].J_hat is not None:
+                    alternatives.append(CandidateResult(q=q, check=check, score=scores[q],
+                        movement_m=distance(q, source_set.first.position)))
+            alternatives = tuple(alternatives)
+            minimum, best = None, None
+            if alternatives:
+                minimum = min(r.score.J_hat for r in alternatives)
+                tied = [r for r in alternatives if r.score.J_hat <= minimum+tie]
+                best = min(tied, key=lambda r: (r.movement_m, r.q))
             clear, angular = _conditional_diagnostics(source_set, best.q, best.score, diagnostic_samples, cfg, deadline=deadline) if best else ((), ())
             assessment = refinement_assessment(best)
             assessment.update(reception_guarantee='PROVEN' if best and best.check.status == 'IN' else 'UNRESOLVED',
@@ -1070,12 +1146,16 @@ def movement_frontier(source_set: SourceSet, budgets_m: Sequence[float], config:
                                   clearance_diagnostics=clear, angular_comparison=angular, config=cfg,
                                   status='NUMERICAL_CANDIDATE' if best else old.status,
                                   completed_stages=('frontier_common_reassessment',),
-                                  evaluations=old.evaluations+2*len(candidates)+1,
-                                  elapsed_seconds=old.elapsed_seconds+time.monotonic()-started,
                                   refinement_history=history, numerical_assessment=assessment))
         _check_deadline(deadline)
+        # Store the shared cost once, on the first row; per-search counters and
+        # elapsed_seconds exclude it, so summing the frontier cannot double bill.
+        output[0] = replace(output[0], frontier_shared_evaluations=shared_evaluations,
+                            frontier_shared_elapsed_seconds=time.monotonic()-started)
         return tuple(output)
     except _BudgetExpired:
+        results[0] = replace(results[0], frontier_shared_evaluations=shared_evaluations,
+                             frontier_shared_elapsed_seconds=time.monotonic()-started)
         return tuple(replace(r, stop_reason='FRONTIER_COMMON_TIME_BUDGET',
                              numerical_assessment=dict(r.numerical_assessment,
                                  frontier_common_comparison='NOT_COMPLETED',

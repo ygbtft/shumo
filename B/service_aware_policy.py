@@ -20,6 +20,8 @@ def route_objective(route, costs, start, precedence):
 def reversal_prefix(route, costs, precedence):
     r = np.asarray(route, dtype=int)
     arc = np.r_[0., np.cumsum(costs[r[1:], r[:-1]] - costs[r[:-1], r[1:]])]
+    # precedence[a,b] is the cost when a precedes b. Reversal changes only
+    # internal ordered pairs; square is their padded 2D prefix sum for rectangle queries.
     w = precedence[np.ix_(r, r)]
     square = np.pad(np.triu(w.T-w, 1).cumsum(0).cumsum(1), ((1, 0), (1, 0)))
     return arc, square
@@ -47,6 +49,8 @@ def directed_insertion(costs, start, precedence, station_count):
             pending.remove(item)
             continue
         r, p = np.asarray(route), np.asarray(pending)
+        # Rows are pending sources, columns insertion positions: incoming + outgoing
+        # minus replaced edge, plus precedence costs against the left/right tasks.
         before = np.column_stack((start[p], costs[np.ix_(r, p)].T))
         after = np.column_stack((costs[np.ix_(p, r)], np.zeros(len(p))))
         removed = np.r_[start[r[0]], costs[r[:-1], r[1:]], 0.]
@@ -87,6 +91,8 @@ def service_route(entries, exits, current, precedence, station_count, mode="free
                     if mode == "locked" and np.count_nonzero(route[i:j+1] < station_count) > 1:
                         continue
                     delta = reversal_delta(route, i, j, costs, start, prefixes)
+                    # Near the 1e-7 acceptance threshold, recompute in a 1e-6 band
+                    # to protect against cancellation in the incremental delta.
                     if abs(delta+1e-7) < 1e-6:
                         candidate = route.copy()
                         candidate[i:j+1] = candidate[i:j+1][::-1]
@@ -125,6 +131,8 @@ class ServiceAwareMixin:
             radius = self.circle(ch)[1]
             if radius <= 20.-1e-5:
                 continue  # already skipped by the actual scan policy
+            # Mirrors range_skip=True in these experiments. Frozen-region ranking
+            # ignores future shrinkage, switching and early clear; it is not total future cost.
             needed = np.linalg.norm(stations-center, axis=1) <= 1500.+radius+1e-5
             self.stats["modeled_known_scan_pairs"] += int(needed.sum())
             # 5 s RF cost, converted to route meters at the specified 5 m/s.

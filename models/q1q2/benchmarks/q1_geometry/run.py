@@ -277,7 +277,7 @@ def evaluate(c):
             res=max(residual(p) for p in region.vertices)
             checks['vertices_feasible']=res<=vtol
             errors['vertex_constraint_residual_m']=res
-    dr=g.diameter(region,policy)
+    dr=g.diameter(region)
     if len(region.vertices)>=3:
         # Exact orientation on returned binary64 coordinates; no producer predicates.
         pv=[tuple(Fraction.from_float(x) for x in p) for p in region.vertices]
@@ -292,7 +292,7 @@ def evaluate(c):
         errors['diameter_relative']=errors['diameter_abs_m']/max(d,1e-300)
     # Feed exact oracle vertices directly, isolating calipers from intersection/hull.
     if vv:
-        isolated=g.diameter(g.Region(g.RegionKind(truth['kind']),vertices=tuple(vv)),policy)
+        isolated=g.diameter(g.Region(g.RegionKind(truth['kind']),vertices=tuple(vv)))
         actual['isolated_diameter']=asdict(isolated)
         errors['isolated_diameter_abs_m']=check_diameter(isolated,truth,vv,tolerance,checks,'isolated_diameter_')
         # Exact ties on float-representable vertices exercise documented lexicographic rule.

@@ -50,6 +50,7 @@ class BoundaryPiece:
     radius: float | None = None
     angle_start: float = 0.
     angle_end: float = 0.
+    # Piece-source metadata only; endpoints still need _boundary_witness checks.
     attained: bool = True
 
     def at(self, t):
@@ -82,7 +83,7 @@ class SourceSet:
     actual_point: Point2 | None = None
     strict_boundary: str = 'distance_from_first > near_radius'
 
-    def radial_interval(self, alpha: float, lower=None, upper=None):
+    def radial_interval(self, alpha: float):
         eps = math.radians(self.first.half_width_deg)
         if not -eps <= alpha <= eps:
             return None
@@ -94,11 +95,11 @@ class SourceSet:
         if discriminant < 0:
             return None
         root = math.sqrt(discriminant)
-        low = max(p.near_radius, -projection-root, lower if lower is not None else 0.)
-        high = min(p.rho_hi, -projection+root, upper if upper is not None else math.inf)
+        low = max(p.near_radius, -projection-root)
+        high = min(p.rho_hi, -projection+root)
         if high < low or high <= p.near_radius:
             return None
-        return RadialInterval(low, high, low == p.near_radius)
+        return RadialInterval(low=low, high=high, low_open=low == p.near_radius)
 
     def contains(self, points: ArrayLike, closed=False) -> BoolArray:
         a = np.atleast_2d(np.asarray(points, dtype=float))
@@ -175,6 +176,7 @@ def circle_intersections(c1, r1, c2, r2):
         return ()
     a = (r1*r1-r2*r2+d*d)/(2*d)
     h2 = r1*r1-a*a
+    # This clips squared-height roundoff (m²), not a distance tolerance.
     if h2 < -1e-8:
         return ()
     base = np.asarray(c1)+a*delta/d
@@ -221,13 +223,21 @@ def _boundaries(ss, lower, upper):
         for a, b in zip(events[:-1], events[1:]):
             midpoint = np.asarray(center)+radius*unit((a+b)/2)
             if legal(midpoint):
-                result.append(BoundaryPiece('arc', label, point(np.asarray(center)+radius*unit(a)),
-                                            point(np.asarray(center)+radius*unit(b)), point(center),
-                                            radius, a, b, label != 'inner_limit'))
+                result.append(BoundaryPiece(
+                    kind='arc',
+                    source=label,
+                    start=point(np.asarray(center)+radius*unit(a)),
+                    end=point(np.asarray(center)+radius*unit(b)),
+                    center=point(center),
+                    radius=radius,
+                    angle_start=a,
+                    angle_end=b,
+                    attained=label != 'inner_limit',
+                ))
         for a in events[:-1]:
             x = point(np.asarray(center)+radius*unit(a))
             if legal(x) and distance(x, s) > p.near_radius:
-                result.append(BoundaryPiece('point', label, x, x))
+                result.append(BoundaryPiece(kind='point', source=label, start=x, end=x))
     for hp in hps:
         n = np.asarray(hp.normal)
         base, v = hp.offset*n, np.array((-n[1], n[0]))
@@ -242,13 +252,13 @@ def _boundaries(ss, lower, upper):
         for a, b in zip(events[:-1], events[1:]):
             if legal(base+(a+b)/2*v):
                 x, y = point(base+a*v), point(base+b*v)
-                result.append(BoundaryPiece('segment', 'wedge', x, y))
+                result.append(BoundaryPiece(kind='segment', source='wedge', start=x, end=y))
     return tuple(result)
 
 
 def build_source_set(first: BearingMeasurement, physics: PhysicsConfig, policy: NumericPolicy) -> SourceSet:
     from dataclasses import replace
-    ss = SourceSet(first, physics, policy, 'INCONSISTENT_FIRST_OBSERVATION')
+    ss = SourceSet(first=first, physics=physics, policy=policy, status='INCONSISTENT_FIRST_OBSERVATION')
     eps, theta = math.radians(first.half_width_deg), math.radians(first.bearing_deg)
     events = [-eps, eps]
     d = distance(first.position, physics.arena_center)
@@ -332,7 +342,9 @@ def _boundary_witness(ss, x):
         alpha, t = params
         eps = math.radians(ss.first.half_width_deg)
         for inset in (1e-15, 1e-14, 1e-13, 1e-12):
-            a = min(max(0., eps-inset), max(min(0., -eps+inset), alpha))
+            # Move inward to construct an actual witness; never enlarge F.
+            inner_eps = max(0., eps-inset)
+            a = min(inner_eps, max(-inner_eps, alpha))
             candidate = ss.parameter_point(a, min(1-inset, max(inset, t)))
             if candidate is not None:
                 return candidate, True
@@ -343,13 +355,21 @@ def check_candidate(source_set: SourceSet, q: Point2, require_direction: bool, p
     q = point(q)
     ss, p = source_set, source_set.physics
     if ss.status != 'OK':
-        return CandidateCheck('UNRESOLVED', None, reason=ss.status)
+        return CandidateCheck(status='UNRESOLVED', max_violation=None, reason=ss.status)
     if not p.action_contains(q):
-        return CandidateCheck('OUT', None, reason='outside_action_domain')
+        return CandidateCheck(status='OUT', max_violation=None, reason='outside_action_domain')
     if q == ss.first.position:
-        return CandidateCheck('IN', 0., direction_status='IN', reason='same_point_first_direction',
-                              distance_to_closure=closure_distance(ss, q)[0],
-                              exact_definition='S in C_dir subset C_sig; repeated bearing is fixed')
+        return CandidateCheck(
+            status='IN',
+            max_violation=0.,
+            direction_status='IN',
+            reason='same_point_first_direction',
+            distance_to_closure=closure_distance(ss, q)[0],
+            exact_definition='S in C_dir subset C_sig; repeated bearing is fixed',
+        )
+    # The worst admissible rho is max(rho_lo, r1), hence the radial split.
+    # Below rho_lo maximize r2²-rho_lo²; above it cancel r1² to obtain
+    # |h|²-2 h·(x-S), a linear support objective. All violations are in m².
     low = [(distance(q, x)**2-p.rho_lo**2, x) for x in
            _extrema_points(ss.low_boundaries, lambda piece: np.asarray(piece.center)-q)]
     h = np.asarray(q)-ss.first.position
@@ -357,7 +377,7 @@ def check_candidate(source_set: SourceSet, q: Point2, require_direction: bool, p
             _extrema_points(ss.high_boundaries, lambda piece: -h)]
     combined = low+high
     if not combined:
-        return CandidateCheck('UNRESOLVED', None, reason='no_analytic_boundary')
+        return CandidateCheck(status='UNRESOLVED', max_violation=None, reason='no_analytic_boundary')
     violation, witness = max(combined, key=lambda z: z[0])
     witness, witness_attained = _boundary_witness(ss, witness)
     tol = policy.squared(max(p.rho_hi, np.linalg.norm(h)))
@@ -390,12 +410,8 @@ def check_candidate(source_set: SourceSet, q: Point2, require_direction: bool, p
                             break
         elif ds == 'BOUNDARY_UNRESOLVED':
             status = 'UNRESOLVED'
-    return CandidateCheck(status, violation, witness, witness_attained,
-                          max((v for v, _ in low), default=None),
-                          max((v for v, _ in high), default=None), ds, near_distance, inside,
-                          reason='near_separating_world' if ds == 'OUT' else '',
-                          exact_definition=('q in C_sig and forall p in F: |q-p| > near_radius'
-                                            if require_direction else CandidateCheck.exact_definition))
+    return CandidateCheck(status=status, max_violation=violation, extremal_source=witness, witness_attained=witness_attained, g_low=max((v for v, _ in low), default=None), g_high=max((v for v, _ in high), default=None), direction_status=ds, distance_to_closure=near_distance, conservative_direction_interior=inside, reason='near_separating_world' if ds == 'OUT' else '', exact_definition='q in C_sig and forall p in F: |q-p| > near_radius'
+                                            if require_direction else CandidateCheck.exact_definition)
 
 
 def posterior_contains(source_set: SourceSet, q: Point2, feedback: Feedback,
@@ -423,11 +439,16 @@ def posterior_outer_polygon(source_set: SourceSet, q: Point2, feedback: Feedback
     ss, p = source_set, source_set.physics
     hps = list(wedge_halfplanes(ss.first))
     if feedback.kind == 'direction' and point(q) != ss.first.position:
-        hps.extend(wedge_halfplanes(BearingMeasurement(q, feedback.bearing_deg, feedback.half_width_deg, 'second')))
+        hps.extend(wedge_halfplanes(BearingMeasurement(
+            position=q,
+            bearing_deg=feedback.bearing_deg,
+            half_width_deg=feedback.half_width_deg,
+            measurement_id='second',
+        )))
     disks = [(p.arena_center, p.arena_radius, 'arena'), (ss.first.position, p.rho_hi, 'first_receiving'),
              (q, p.near_radius if feedback.kind == 'near' else p.rho_hi, 'second')]
     for center, radius, label in disks:
         for i in range(sides):
             n = unit(TAU*i/sides)
-            hps.append(HalfPlane(point(n), float(n @ center+radius), label))
+            hps.append(HalfPlane(normal=point(n), offset=float(n @ center+radius), source=label))
     return intersect_halfplanes(hps, ss.policy)

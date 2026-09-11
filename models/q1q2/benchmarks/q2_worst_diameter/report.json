@@ -1,6 +1,6 @@
 {
   "area": "q2_worst_diameter",
-  "generated_utc": "2026-09-11T10:37:27.005554+00:00",
+  "generated_utc": "2026-09-11T11:38:08.555816+00:00",
   "n_cases": 48,
   "n_pass": 48,
   "n_fail": 0,
@@ -313,7 +313,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.915483459000825
+      "elapsed_seconds": 0.9538901660052943
     },
     {
       "case_id": "segment_10_100_20_0.5",
@@ -567,7 +567,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.8156640419983887
+      "elapsed_seconds": 0.8318080839962931
     },
     {
       "case_id": "segment_10_100_20_2",
@@ -821,7 +821,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.9246984999990673
+      "elapsed_seconds": 0.9294279160021688
     },
     {
       "case_id": "segment_20_80_40_1",
@@ -1075,7 +1075,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.7655410829975153
+      "elapsed_seconds": 0.7822082080019754
     },
     {
       "case_id": "segment_10_100_200_1",
@@ -1329,7 +1329,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.8243732920018374
+      "elapsed_seconds": 0.843666166998446
     },
     {
       "case_id": "tangent_segment_0",
@@ -1596,7 +1596,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.7370469579982455
+      "elapsed_seconds": 0.7538760839961469
     },
     {
       "case_id": "tangent_segment_1",
@@ -1863,7 +1863,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.7384757920008269
+      "elapsed_seconds": 0.7476867920049699
     },
     {
       "case_id": "tangent_segment_2",
@@ -2130,7 +2130,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.9129117499978747
+      "elapsed_seconds": 0.9538540830035345
     },
     {
       "case_id": "tangent_segment_3",
@@ -2397,7 +2397,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.6918807080000988
+      "elapsed_seconds": 0.7113487499955227
     },
     {
       "case_id": "tangent_segment_4",
@@ -2664,7 +2664,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.7242003329956788
+      "elapsed_seconds": 0.740890875000332
     },
     {
       "case_id": "tangent_segment_5",
@@ -2931,7 +2931,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.9228411250005593
+      "elapsed_seconds": 0.9354613339964999
     },
     {
       "case_id": "tangent_polar_0",
@@ -3150,7 +3150,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.6766562089978834
+      "elapsed_seconds": 2.752660874997673
     },
     {
       "case_id": "tangent_polar_1",
@@ -3369,7 +3369,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.2652438750010333
+      "elapsed_seconds": 2.285492457995133
     },
     {
       "case_id": "tangent_polar_2",
@@ -3588,7 +3588,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.707561416995304
+      "elapsed_seconds": 2.7267370830013533
     },
     {
       "case_id": "tangent_polar_3",
@@ -3807,7 +3807,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.4618967910064384
+      "elapsed_seconds": 2.5175242089972016
     },
     {
       "case_id": "tangent_polar_4",
@@ -4026,7 +4026,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.4084391669966863
+      "elapsed_seconds": 2.4229261669970583
     },
     {
       "case_id": "tangent_polar_5",
@@ -4245,7 +4245,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.3347553330022492
+      "elapsed_seconds": 2.3734342079987982
     },
     {
       "case_id": "polar_same_station_closed_0",
@@ -4491,7 +4491,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8647526660060976
+      "elapsed_seconds": 0.8769360840014997
     },
     {
       "case_id": "polar_same_station_closed_1",
@@ -4737,7 +4737,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.899762583001575
+      "elapsed_seconds": 0.9244723750016419
     },
     {
       "case_id": "polar_same_station_closed_2",
@@ -4983,7 +4983,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8939927090032143
+      "elapsed_seconds": 0.9103065419985796
     },
     {
       "case_id": "segment_special_18",
@@ -5233,7 +5233,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.2768772080016788
+      "elapsed_seconds": 0.29138275000150315
     },
     {
       "case_id": "segment_special_100",
@@ -5487,7 +5487,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.2527566669959924
+      "elapsed_seconds": 0.2614445419967524
     },
     {
       "case_id": "polar_0",
@@ -5692,7 +5692,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.4568443750031292
+      "elapsed_seconds": 2.5128547080021235
     },
     {
       "case_id": "polar_1",
@@ -5897,7 +5897,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 3.078892375000578
+      "elapsed_seconds": 3.072156249996624
     },
     {
       "case_id": "polar_2",
@@ -6102,7 +6102,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.2844626659934875
+      "elapsed_seconds": 2.302833041998383
     },
     {
       "case_id": "polar_3",
@@ -6307,7 +6307,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.4368542919983156
+      "elapsed_seconds": 2.46847912499652
     },
     {
       "case_id": "polar_4",
@@ -6512,7 +6512,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 0.86841162500059
+      "elapsed_seconds": 0.8890106249964447
     },
     {
       "case_id": "polar_5",
@@ -6719,7 +6719,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 1.877697874995647
+      "elapsed_seconds": 1.9289378749963362
     },
     {
       "case_id": "polar_6",
@@ -6924,7 +6924,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 3.009073500004888
+      "elapsed_seconds": 3.0123735000015586
     },
     {
       "case_id": "polar_7",
@@ -7130,7 +7130,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.6449132089983323
+      "elapsed_seconds": 3.7002333749987883
     },
     {
       "case_id": "polar_8",
@@ -7336,7 +7336,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.1213974589991267
+      "elapsed_seconds": 3.199234166997485
     },
     {
       "case_id": "polar_9",
@@ -7542,7 +7542,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.1268542909965618
+      "elapsed_seconds": 3.211803874997713
     },
     {
       "case_id": "polar_10",
@@ -7748,7 +7748,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.901096375004272
+      "elapsed_seconds": 2.956222750006418
     },
     {
       "case_id": "polar_11",
@@ -7954,7 +7954,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.42596679199778
+      "elapsed_seconds": 2.4729781659989385
     },
     {
       "case_id": "polar_12",
@@ -8160,7 +8160,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.3976411250041565
+      "elapsed_seconds": 2.4886809589952463
     },
     {
       "case_id": "monotone_epsilon",
@@ -8216,7 +8216,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 2.6616996669981745
+      "elapsed_seconds": 2.7055751670050086
     },
     {
       "case_id": "monotone_expansion",
@@ -8278,7 +8278,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 0.07764962499641115
+      "elapsed_seconds": 0.07927999999810709
     },
     {
       "case_id": "monotone_nested",
@@ -8330,7 +8330,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 1.231553666999389
+      "elapsed_seconds": 1.2552719169980264
     },
     {
       "case_id": "clearance_10_18",
@@ -8400,11 +8400,11 @@
         ],
         "support_points": [
           [
-            18.0,
+            10.0,
             0.0
           ],
           [
-            10.0,
+            18.0,
             0.0
           ]
         ],
@@ -8457,7 +8457,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.0013411659965640865
+      "elapsed_seconds": 0.001347916004306171
     },
     {
       "case_id": "clearance_10_30",
@@ -8527,11 +8527,11 @@
         ],
         "support_points": [
           [
-            30.0,
+            10.0,
             0.0
           ],
           [
-            10.0,
+            30.0,
             0.0
           ]
         ],
@@ -8593,7 +8593,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.03436529099417385
+      "elapsed_seconds": 0.033910792000824586
     },
     {
       "case_id": "clearance_50_86",
@@ -8663,11 +8663,11 @@
         ],
         "support_points": [
           [
-            86.0,
+            50.0,
             0.0
           ],
           [
-            50.0,
+            86.0,
             0.0
           ]
         ],
@@ -8729,7 +8729,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.03425095800048439
+      "elapsed_seconds": 0.0340520829995512
     },
     {
       "case_id": "clearance_50_90",
@@ -8799,11 +8799,11 @@
         ],
         "support_points": [
           [
-            90.0,
+            50.0,
             0.0
           ],
           [
-            50.0,
+            90.0,
             0.0
           ]
         ],
@@ -8858,7 +8858,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.15697458299837308
+      "elapsed_seconds": 0.15732916699926136
     },
     {
       "case_id": "clearance_50_92",
@@ -8928,11 +8928,11 @@
         ],
         "support_points": [
           [
-            92.0,
+            50.0,
             0.0
           ],
           [
-            50.0,
+            92.0,
             0.0
           ]
         ],
@@ -8952,11 +8952,11 @@
         "must_move_proven": true,
         "impossibility_witness": [
           [
-            92.0,
+            50.0,
             0.0
           ],
           [
-            50.0,
+            92.0,
             0.0
           ]
         ],
@@ -8989,11 +8989,11 @@
           "expected": true,
           "actual": [
             [
-              92.0,
+              50.0,
               0.0
             ],
             [
-              50.0,
+              92.0,
               0.0
             ]
           ],
@@ -9012,7 +9012,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.0336990829964634
+      "elapsed_seconds": 0.033920333997230045
     },
     {
       "case_id": "feedback_near_boundary",
@@ -9336,7 +9336,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0012564170028781518
+      "elapsed_seconds": 0.001311166000959929
     },
     {
       "case_id": "feedback_wrap_zero",
@@ -9942,7 +9942,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0017198329951497726
+      "elapsed_seconds": 0.0017682089965092018
     },
     {
       "case_id": "feedback_singleton",
@@ -10144,7 +10144,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.001043417003529612
+      "elapsed_seconds": 0.0010516670008655638
     },
     {
       "case_id": "short_baseline_select",
@@ -10234,8 +10234,7 @@
           "require_direction": false,
           "restrict_action_to_arena": false,
           "tie_floor_m": 0.1,
-          "tie_multiplier": 1.0,
-          "seed": 0
+          "tie_multiplier": 1.0
         },
         "results": [
           {
@@ -10270,12 +10269,12 @@
                 ],
                 "support_points": [
                   [
-                    1499.771542734586,
-                    -26.17860965592525
-                  ],
-                  [
                     9.999243660667709,
                     0.08697023211267413
+                  ],
+                  [
+                    1499.771542734586,
+                    -26.17860965592525
                   ],
                   [
                     1499.774806140085,
@@ -10298,12 +10297,12 @@
                 "must_move_proven": true,
                 "impossibility_witness": [
                   [
-                    1499.771542734586,
-                    -26.17860965592525
-                  ],
-                  [
                     9.999243660667709,
                     0.08697023211267413
+                  ],
+                  [
+                    1499.771542734586,
+                    -26.17860965592525
                   ],
                   [
                     1499.774806140085,
@@ -10346,16 +10345,16 @@
                 ],
                 "support_points": [
                   [
+                    4.999238575766726,
+                    0.08726203393165821
+                  ],
+                  [
                     9.996954135095478,
                     -0.17449748351250485
                   ],
                   [
                     9.996954135095493,
                     0.174497483512068
-                  ],
-                  [
-                    4.999238575766726,
-                    0.08726203393165821
                   ]
                 ],
                 "r_U": 5.0,
@@ -10461,7 +10460,7 @@
         {
           "name": "B10.0_conditional_R_support_1",
           "passed": true,
-          "expected": 2.502664068379047,
+          "expected": 2.502664068379046,
           "actual": 2.5026640683790466,
           "semantics": "support consistency; not exact full posterior radius"
         },
@@ -10478,7 +10477,7 @@
         "closed_form",
         "adversarial"
       ],
-      "elapsed_seconds": 11.004678041004809
+      "elapsed_seconds": 11.164576374998433
     },
     {
       "case_id": "short_baseline_frontier",
@@ -10574,8 +10573,7 @@
           "require_direction": false,
           "restrict_action_to_arena": false,
           "tie_floor_m": 0.1,
-          "tie_multiplier": 1.0,
-          "seed": 0
+          "tie_multiplier": 1.0
         },
         "results": [
           {
@@ -10685,12 +10683,12 @@
                 ],
                 "support_points": [
                   [
-                    7.192056158932996,
-                    -0.1255378072215625
-                  ],
-                  [
                     4.999238575766726,
                     0.08726203393165821
+                  ],
+                  [
+                    7.192056158932996,
+                    -0.1255378072215625
                   ]
                 ],
                 "r_U": 5.0,
@@ -10827,12 +10825,12 @@
                 ],
                 "support_points": [
                   [
-                    7.192056158932996,
-                    -0.1255378072215625
-                  ],
-                  [
                     4.999238575766726,
                     0.08726203393165821
+                  ],
+                  [
+                    7.192056158932996,
+                    -0.1255378072215625
                   ]
                 ],
                 "r_U": 5.0,
@@ -11052,16 +11050,16 @@
         "closed_form",
         "invariant"
       ],
-      "elapsed_seconds": 27.648140292003518
+      "elapsed_seconds": 28.055895042001794
     }
   ],
   "weak_comparisons_excluded": 0,
-  "elapsed_seconds": 103.53678054200282,
+  "elapsed_seconds": 105.27107841600082,
   "production_sha256": {
-    "q2.py": "6b9c7af6282f4b0a8885fa878193b4dd0a96dbd0b1de5b8c8e6523f9ad925a39",
-    "diagnostics.py": "3c3b651d8e22a7088334fd0acf3492b31112b45767a385b1e641ed8a7446e704",
-    "feasible.py": "4b6a922594e128c8f06c2b8a36376f9a96189a7d623b89b4560a5ee2ea4315d5",
-    "geometry.py": "6acc95167e815c7781207bae8cc3699053a003523a4589e1fbc245d56e71150d"
+    "q2.py": "65408262158fb633482b7a049d504c8ac5c436b292aaa176eff8854c10707e80",
+    "diagnostics.py": "a10a8048dcb0ad39de0614da6ca7ecbb628d795e2836458c71efae58c8e520a9",
+    "feasible.py": "51f65bfe64a8d42b8b456b145382227a982d50303d5fa8bba4a232fef564706b",
+    "geometry.py": "e412801a585fb35a772b3f1479903b2c48e9e55790c677c2af5a62b3daa76935"
   },
   "scope_notes": [
     "J_hat is NUMERICAL_CANDIDATE, not a certified upper bound. Strict oracle dominance is the user-requested adequacy criterion; a failure can expose insufficient sampling rather than incorrect pair algebra.",
@@ -11171,10 +11169,10 @@
   "J_passing_cases_with_other_check_failures": [],
   "legacy_pass_fail_note": "n_pass/n_fail and failures retain all-check compatibility; use grade_counts for mutually exclusive A/B/C J results.",
   "production_sha256_after": {
-    "q2.py": "6b9c7af6282f4b0a8885fa878193b4dd0a96dbd0b1de5b8c8e6523f9ad925a39",
-    "diagnostics.py": "3c3b651d8e22a7088334fd0acf3492b31112b45767a385b1e641ed8a7446e704",
-    "feasible.py": "4b6a922594e128c8f06c2b8a36376f9a96189a7d623b89b4560a5ee2ea4315d5",
-    "geometry.py": "6acc95167e815c7781207bae8cc3699053a003523a4589e1fbc245d56e71150d"
+    "q2.py": "65408262158fb633482b7a049d504c8ac5c436b292aaa176eff8854c10707e80",
+    "diagnostics.py": "a10a8048dcb0ad39de0614da6ca7ecbb628d795e2836458c71efae58c8e520a9",
+    "feasible.py": "51f65bfe64a8d42b8b456b145382227a982d50303d5fa8bba4a232fef564706b",
+    "geometry.py": "e412801a585fb35a772b3f1479903b2c48e9e55790c677c2af5a62b3daa76935"
   },
   "production_unchanged_during_run": true,
   "certification": {

@@ -52,7 +52,7 @@
     }
   },
   "area": "q2_candidate",
-  "generated_utc": "2026-09-11T10:35:43.332261+00:00",
+  "generated_utc": "2026-09-11T11:36:23.139192+00:00",
   "seed": 20260911,
   "n_cases": 531,
   "n_pass": 531,
@@ -48385,9 +48385,9 @@
       }
     }
   ],
-  "elapsed_seconds": 5.3986532499984605,
-  "source_sha256": "4b6a922594e128c8f06c2b8a36376f9a96189a7d623b89b4560a5ee2ea4315d5",
-  "source_sha256_start": "4b6a922594e128c8f06c2b8a36376f9a96189a7d623b89b4560a5ee2ea4315d5",
+  "elapsed_seconds": 5.492452291000518,
+  "source_sha256": "51f65bfe64a8d42b8b456b145382227a982d50303d5fa8bba4a232fef564706b",
+  "source_sha256_start": "51f65bfe64a8d42b8b456b145382227a982d50303d5fa8bba4a232fef564706b",
   "production_unchanged_during_run": true,
   "cases_sha256": "c8fcb4514190897b7e422c54dfcbc2656c2d1ed078b721495556f6e372db3805",
   "notes": [

@@ -19,7 +19,7 @@ class Source:
     x: float
     y: float
     radius: float = 1000.
-    facing: float | None = None
+    facing: float | None = None  # radians; None denotes an omnidirectional source
 
 
 class World:
@@ -29,6 +29,7 @@ class World:
         self.sources = {s.channel:s for s in sources}
         self.seed, self.noise, self.rounding = seed, noise, rounding
         self.position, self.channel = (0.,0.), 1
+        # Integer microseconds: round each movement segment separately, never the summed distance.
         self.time_us = 0
         self.cleared = set()
         self.entered, self.exited = False, False
@@ -51,6 +52,7 @@ class World:
         return 2*int.from_bytes(hashlib.blake2b(key,digest_size=8).digest(),"big")/(2**64-1)-1
 
     def response(self, accepted, **extra):
+        # A rejected response reports zero without resetting the accumulated world ledger.
         return {"accepted":accepted, "real_timestamp_ms":int(time.time()*1000),
                 "virtual_time_s": self.time_us/1e6 if accepted else 0, **extra}
 
@@ -64,6 +66,7 @@ class World:
                                  remaining_real_duration_s=self.remaining_real_s)
         if not self.entered or self.exited:
             return self.response(False)
+        # Check before registration: an admitted action may finish beyond the virtual limit.
         if self.time_us >= 360000_000000 or time.monotonic()-self.start >= self.remaining_real_s:
             self.exited = True
             raise ConnectionError("Offline deadline closed the simulated interface")
@@ -80,6 +83,8 @@ class World:
         s = self.sources.get(channel)
         alive = s is not None and channel not in self.cleared
         if path == "/clear":
+            # Clear ignores antenna orientation and leaves the current RF channel unchanged.
+            # Success costs 5 s, failure 3 s; RF below costs 5 s plus 1 s if switching.
             self.clears += 1
             success = alive and math.dist(q,(s.x,s.y)) <= 20.
             self.time_us += (5 if success else 3)*1_000000
@@ -100,6 +105,7 @@ class World:
                 r = math.hypot(dx,dy)
                 # Boundary tolerance only absorbs floating arithmetic at exact 90 degrees.
                 in_angle = s.facing is None or dx*math.cos(s.facing)+dy*math.sin(s.facing) >= -1e-10
+                # near still requires reception direction; svd_deg points measurement -> source.
                 if r <= s.radius and in_angle:
                     if r <= 5.:
                         result = "near"
@@ -125,6 +131,7 @@ class World:
 class Protocol:
     def __init__(self, world, robot_id="offline-robot"):
         self.world, self.robot_id = world, robot_id
+        # Single-session cache retains the first accepted response for each unique request.
         self.cache = {}
         self.lock = threading.Lock()
 
@@ -208,4 +215,5 @@ class Protocol:
 
 
 def serialize_sources(sources):
+    # Scoring fixture uses Source.facing in radians, unlike degree-based external fixtures.
     return [asdict(s) for s in sources]

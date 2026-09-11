@@ -12,7 +12,9 @@ def cross(a, b):
 
 
 def hull(points):
-    pts = sorted(set(map(tuple, np.asarray(points, float).reshape(-1, 2))))
+    coordinates = np.asarray(points, float).reshape(-1, 2)
+    unique_points = set(map(tuple, coordinates))
+    pts = sorted(unique_points)
     if len(pts) < 3:
         return np.array(pts, float).reshape(-1, 2)
     def half(seq):
@@ -48,6 +50,7 @@ def clip(poly, normal, bound):
 def bearing_planes(position, angle_deg, error_deg=ANGLE_BOUND_DEG):
     if not 0 <= error_deg < 90:
         raise ValueError("This implementation requires 0 <= angular error < 90 degrees")
+    # Halfplanes use n·g <= b; the bearing points from the measurement to the source.
     p = np.asarray(position, float)
     t, e = math.radians(angle_deg % 360), math.radians(error_deg)
     normals = np.array([[math.sin(t-e), -math.cos(t-e)],
@@ -58,7 +61,9 @@ def bearing_planes(position, angle_deg, error_deg=ANGLE_BOUND_DEG):
 
 def bearing_clip(poly, position, angle_deg, error_deg=ANGLE_BOUND_DEG):
     normals, bounds = bearing_planes(position, angle_deg, error_deg)
-    for n, b in zip(normals[:2 if error_deg else 3], bounds):
+    # At zero error the first two planes leave a full line; the third keeps its forward ray.
+    plane_count = 2 if error_deg else 3
+    for n, b in zip(normals[:plane_count], bounds):
         poly = clip(poly, n, b)
     return poly
 
@@ -72,6 +77,8 @@ NORMALS = np.column_stack([np.cos(np.arange(64)*2*math.pi/64), np.sin(np.arange(
 
 
 def update_region(poly, position, angle_deg, error_deg=ANGLE_BOUND_DEG):
+    # Both the 1800 m source domain and 1500 m reception bound use OUTER polygons.
+    # This success update neither excludes a no-signal disk nor infers antenna orientation.
     if poly is None:
         poly = disk_outer([0., 0.], 1800.)
     poly = bearing_clip(poly, position, angle_deg, error_deg)
@@ -102,6 +109,7 @@ def circumcircle(a, b, c):
     ab, ac = b-a, c-a
     det = 2*float(cross(ab, ac))
     if abs(det) < 1e-13 * max(1., np.linalg.norm(ab)*np.linalg.norm(ac)):
+        # Near collinearity may sacrifice minimality, but must preserve containment.
         pts = np.array([a, b, c])
         _, (u, v) = diameter(pts)
         o = (u+v)/2
@@ -128,6 +136,7 @@ def minimum_circle(poly):
             for s in pts[:j]:
                 if np.linalg.norm(s-o) > r+1e-9:
                     o, r = circumcircle(p, q, s)
+    # Recheck all vertices: this enclosing radius supports safe clear/scan-skip decisions.
     r = max(r, float(np.linalg.norm(pts-o, axis=1).max()))
     return o, r
 
@@ -200,12 +209,18 @@ def optical_cover(poly, first_angle, step=28.):
     t = math.radians(first_angle)
     u = np.array([math.cos(t), math.sin(t)])
     v = np.array([-u[1], u[0]])
+    # Columns are orthonormal world axes; right multiplication gives local coordinates.
     basis = np.column_stack([u, v])
     coords = poly @ basis
+    # Expand by 1e-6 m; default 28 m cells have worst center distance 28/sqrt(2) < 20 m.
     low, high = coords.min(axis=0)-1e-6, coords.max(axis=0)+1e-6
     counts = np.maximum(1, np.ceil((high-low)/step).astype(int))
     axes = [low[k]+(np.arange(counts[k])+.5)*(high[k]-low[k])/counts[k] for k in (0,1)]
-    local = [(x,y) for j,y in enumerate(axes[1]) for x in (axes[0] if j%2==0 else axes[0][::-1])]
+    local = []
+    for j, y in enumerate(axes[1]):
+        row = axes[0] if j % 2 == 0 else axes[0][::-1]
+        for x in row:
+            local.append((x, y))
     points = np.asarray(local) @ basis.T
     cover_radius = float(np.linalg.norm((high-low)/counts)/2)
     return points, cover_radius

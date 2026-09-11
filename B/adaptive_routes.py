@@ -20,7 +20,12 @@ def remaining_route(points, current, polish=False):
             changed = False
             for i in range(n-1):
                 for j in range(i+1, n):
-                    delta = start[path[j]]-start[path[i]] if i == 0 else distances[path[i-1], path[j]]-distances[path[i-1], path[i]]
+                    # Open route from the accepted current position, with a free end.
+                    # Symmetric internal edges cancel; suffix reversal has no return edge.
+                    if i == 0:
+                        delta = start[path[j]]-start[path[i]]
+                    else:
+                        delta = distances[path[i-1], path[j]]-distances[path[i-1], path[i]]
                     if j+1 < n:
                         delta += distances[path[i], path[j+1]]-distances[path[j], path[j+1]]
                     if delta < -1e-7:

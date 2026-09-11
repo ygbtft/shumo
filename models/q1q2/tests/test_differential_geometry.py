@@ -28,7 +28,7 @@ def test_original_differential_wrong(case):
         region = intersect_halfplanes(hps, POLICY)
     # These particular saved cases are representable; require an actual answer.
     assert region.status == 'OK'
-    result = diameter(region, POLICY)
+    result = diameter(region)
     assert result.status == 'OK'
     assert abs(result.length-truth['diameter']) <= tol
     if 'kind' in truth:
@@ -50,7 +50,7 @@ def test_exact_gap_and_dimension_at_every_scale(scale):
 
 def test_underflowing_squared_diameter_is_unresolved():
     r = Region(RegionKind.SEGMENT, ((0.,0.), (1e-200,0.)))
-    assert diameter(r,POLICY).status == 'NUMERICAL_UNRESOLVED'
+    assert diameter(r).status == 'NUMERICAL_UNRESOLVED'
 
 
 def test_trig_precision_limit_does_not_collapse_positive_width():

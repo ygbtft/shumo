@@ -22,9 +22,11 @@ class ErrorMode(str, Enum):
 
     @property
     def assumption_source(self):
-        return ('theoretical ±1 degree returned-reading model' if self == ErrorMode.THEORETICAL_1_DEG else
-                'assumed latent ±1 degree followed by nearest 0.01 degree rounding; not official fact' if
-                self == ErrorMode.NEAREST_ROUNDING_OUTER_1_005_DEG else 'official rounding procedure unspecified')
+        if self == ErrorMode.THEORETICAL_1_DEG:
+            return 'theoretical ±1 degree returned-reading model'
+        if self == ErrorMode.NEAREST_ROUNDING_OUTER_1_005_DEG:
+            return 'assumed latent ±1 degree followed by nearest 0.01 degree rounding; not official fact'
+        return 'official rounding procedure unspecified'
 
 
 @dataclass(frozen=True)
@@ -54,10 +56,17 @@ def _interface_position(value):
 
 def observation_record(observation, *, request_id=None, session_id=None, stability_id=None):
     action = observation.last_action
-    return ObservationRecord(action.path, _interface_position(observation.position),
-                             action.channel if action.channel is not None else observation.current_channel,
-                             observation.response, request_id, session_id, stability_id=stability_id,
-                             cleared_channels=frozenset(observation.cleared_channels), origin='synthetic_mock')
+    return ObservationRecord(
+        action=action.path,
+        position=_interface_position(observation.position),
+        channel=action.channel if action.channel is not None else observation.current_channel,
+        response=observation.response,
+        request_id=request_id,
+        session_id=session_id,
+        stability_id=stability_id,
+        cleared_channels=frozenset(observation.cleared_channels),
+        origin='synthetic_mock',
+    )
 
 
 def read_jsonl(path: Path):
@@ -69,12 +78,20 @@ def read_jsonl(path: Path):
             row = json.loads(line)
             request = row.get('request') or {}
             position = row.get('position', request.get('position'))
-            records.append(ObservationRecord(row['action'], _interface_position(position) if position is not None else None,
-                                             row.get('channel', request.get('channel')), row.get('response'),
-                                             row.get('request_id', request.get('request_id')), row.get('run_id'),
-                                             row.get('stage_id', 'uncleared'), row.get('stability_id'),
-                                             row.get('http_status'), row.get('transport_error'),
-                                             frozenset(row.get('cleared_channels', ())), row.get('backend', 'public_jsonl')))
+            records.append(ObservationRecord(
+                action=row['action'],
+                position=_interface_position(position) if position is not None else None,
+                channel=row.get('channel', request.get('channel')),
+                response=row.get('response'),
+                request_id=row.get('request_id', request.get('request_id')),
+                session_id=row.get('run_id'),
+                stage_id=row.get('stage_id', 'uncleared'),
+                stability_id=row.get('stability_id'),
+                http_status=row.get('http_status'),
+                transport_error=row.get('transport_error'),
+                cleared_channels=frozenset(row.get('cleared_channels', ())),
+                origin=row.get('backend', 'public_jsonl'),
+            ))
     return tuple(records)
 
 
@@ -87,6 +104,8 @@ def observations_to_bearings(rows: Iterable[ObservationRecord], channel: int, mo
         response = row.response or {}
         if row.transport_error is not None or row.http_status not in (None, 200) or response.get('accepted') is not True:
             continue
+        # Request dedup detects conflicting retransmissions; geometry dedup below
+        # removes repeated measurements without conflating distinct requests.
         key = row.session_id, row.request_id
         if row.request_id is not None:
             public = (row.action, row.position, row.channel, response)
@@ -115,17 +134,28 @@ def observations_to_bearings(rows: Iterable[ObservationRecord], channel: int, mo
         if identity in positions:
             continue
         positions.add(identity)
-        observations.append(BearingMeasurement(p, raw, mode.half_width_deg, row.request_id or f'observation_{len(observations)}',
-                                               channel, row.request_id, row.origin, mode.value, mode.value,
-                                               mode.assumption_source, row.session_id, row.stage_id,
-                                               row.stability_id, raw))
+        observations.append(BearingMeasurement(
+            position=p,
+            bearing_deg=raw,
+            half_width_deg=mode.half_width_deg,
+            measurement_id=row.request_id or f'observation_{len(observations)}',
+            channel=channel,
+            request_id=row.request_id,
+            origin=row.origin,
+            error_mode=mode.value,
+            rounding_assumption_source=mode.assumption_source,
+            session_id=row.session_id,
+            stage_id=row.stage_id,
+            stability_id=row.stability_id,
+            raw_bearing_deg=raw,
+        ))
     return tuple(observations)
 
 
 def read_measurements(path: Path) -> tuple[BearingMeasurement, ...]:
     data = json.loads(Path(path).read_text(encoding='utf-8'))
-    rows = data['measurements'] if isinstance(data, dict) else data
-    allowed = {f.name for f in fields(BearingMeasurement)}
+    rows = data['measurements']
+    allowed = {f.name for f in fields(BearingMeasurement) if f.init}
     out = []
     for row in rows:
         unknown = set(row)-allowed
@@ -134,7 +164,7 @@ def read_measurements(path: Path) -> tuple[BearingMeasurement, ...]:
         row = dict(row)
         mode_name = row.get('error_mode')
         if mode_name is None:
-            if row.get('rounding_mode') is not None or row.get('rounding_assumption_source') is not None:
+            if row.get('rounding_assumption_source') is not None:
                 raise ValueError('rounding metadata requires an explicit error_mode')
             # Custom mathematical half widths carry no named physical error-model claim.
             row['error_mode'] = None
@@ -143,12 +173,10 @@ def read_measurements(path: Path) -> tuple[BearingMeasurement, ...]:
             width = mode.half_width_deg
             if row.get('half_width_deg', width) != width:
                 raise ValueError('half_width_deg conflicts with error_mode')
-            if row.get('rounding_mode', mode.value) not in (None, mode.value):
-                raise ValueError('rounding_mode conflicts with error_mode')
             supplied_source = row.get('rounding_assumption_source')
             if supplied_source is not None and supplied_source != mode.assumption_source:
                 raise ValueError('rounding_assumption_source conflicts with error_mode')
-            row.update(half_width_deg=width, rounding_mode=mode.value,
+            row.update(half_width_deg=width,
                        rounding_assumption_source=mode.assumption_source)
         out.append(BearingMeasurement(**row))
     return tuple(out)

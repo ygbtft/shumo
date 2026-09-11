@@ -36,7 +36,7 @@ def assert_circle(result, points, gt):
 def test_all_minimized_circle_failures(case):
     points = case['points']
     gt = oracle(points)
-    for result in (minimum_circle(points, P, case['seed']), enumerate_circle(points, P)):
+    for result in (minimum_circle(points, case['seed']), enumerate_circle(points)):
         assert_circle(result, points, gt)
         # These small unshifted counterexamples are resolvable; blanket abstention
         # is not an acceptable replacement for fixing their numerical predicates.
@@ -45,7 +45,7 @@ def test_all_minimized_circle_failures(case):
     i, j = gt['pair']
     d = DiameterResult(gt['diameter'], gt['diameter_squared'],
                        (tuple(points[i]), tuple(points[j])), (i,j))
-    cover = diameter_circle_cover(Region(RegionKind.POLYGON, tuple(map(tuple, points))), d, P)
+    cover = diameter_circle_cover(Region(RegionKind.POLYGON, tuple(map(tuple, points))), d, P, minimum_circle(Region(RegionKind.POLYGON, tuple(map(tuple, points))).vertices, seed=0))
     assert cover.status in gt['allowed_cover_status']
     for field in ('kappa','eta'):
         value = getattr(cover, field)
@@ -58,7 +58,7 @@ def test_resolvable_segment_and_equilateral_at_all_scales(scale):
     segment = ((0.,0.), (scale,0.))
     triangle = (*segment, (scale/2, scale*math.sqrt(3)/2))
     for points, radius in ((segment,scale/2), (triangle,scale/math.sqrt(3))):
-        for result in (minimum_circle(points,P,7), enumerate_circle(points,P), forced_circle(points,P)):
+        for result in (minimum_circle(points, 7), enumerate_circle(points), forced_circle(points)):
             assert result.status == 'OK'
             assert result.radius == pytest.approx(radius,rel=2e-14,abs=0)
 
@@ -66,17 +66,17 @@ def test_resolvable_segment_and_equilateral_at_all_scales(scale):
 def test_unrepresentable_midpoint_abstains_without_inflating_radius():
     a = 1e9
     points = ((a,a), (math.nextafter(a,math.inf),a))
-    for result in (minimum_circle(points,P,0), enumerate_circle(points,P), forced_circle(points,P)):
+    for result in (minimum_circle(points, 0), enumerate_circle(points), forced_circle(points)):
         assert result.status == 'NUMERICAL_UNRESOLVED'
         assert result.radius == (points[1][0]-a)/2
 
 
 def test_near_collinear_forced_circle_uses_exact_fallback():
     points = ((0.,0.), (1.,1e-30), (2.,0.))
-    c = forced_circle(points,P)
+    c = forced_circle(points)
     assert c.status == 'OK'
     assert c.radius == pytest.approx(5e29)
-    assert minimum_circle(points,P,0).radius == 1.
+    assert minimum_circle(points, 0).radius == 1.
 
 
 @pytest.mark.parametrize('radius', [math.nan, math.inf, -math.inf])
@@ -87,13 +87,13 @@ def test_clearance_rejects_nonfinite_radius(radius):
 
 def test_subnormal_radius_cannot_be_reported_as_zero_ok():
     points = ((0.,0.), (math.ulp(0.),0.))
-    for result in (minimum_circle(points,P,0), enumerate_circle(points,P)):
+    for result in (minimum_circle(points, 0), enumerate_circle(points)):
         assert result.status == 'NUMERICAL_UNRESOLVED'
 
 
 def test_cover_squared_scale_overflow_is_honest_unresolved():
     points = ((0.,0.), (1e200,0.), (5e199,8e199))
     d = DiameterResult(1e200, math.inf, points[:2], (0,1))
-    cover = diameter_circle_cover(Region(RegionKind.POLYGON,points),d,P)
+    cover = diameter_circle_cover(Region(RegionKind.POLYGON,points), d, P, minimum_circle(Region(RegionKind.POLYGON,points).vertices, seed=0))
     assert cover.status == 'UNRESOLVED'
-    assert minimum_circle(points,P,0).status == 'OK'
+    assert minimum_circle(points, 0).status == 'OK'

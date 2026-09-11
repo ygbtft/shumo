@@ -85,7 +85,7 @@ def test_halfplane_classification(hps, kind, feasible):
             p = np.array(region.feasible_point)+t*v
             assert all(np.dot(h.normal, p)-h.offset <= 1e-7 for h in hps)
     if kind == Kind.EMPTY:
-        assert diameter(region, P).length is None
+        assert diameter(region).length is None
 
 
 @pytest.mark.parametrize('obs,kind,expected', [
@@ -120,7 +120,7 @@ def test_orthogonal_closed_form_ccw(a, eps):
     expected = 2*math.sqrt(2)*a*t/(1-t*t)
     assert result.diameter.length == pytest.approx(expected, rel=1e-9)
     assert result.area_m2 == pytest.approx(4*a*a*t*t/(1-t**4), rel=1e-9)
-    assert diameter(Region(Kind.POLYGON, vertices), P).length == pytest.approx(expected)
+    assert diameter(Region(Kind.POLYGON, vertices)).length == pytest.approx(expected)
     assert result.minimum_circle.radius == pytest.approx(expected/2)
     assert all(min(math.dist(v,w) for w in vertices) < 1e-7 for v in result.region.vertices)
 
@@ -129,14 +129,14 @@ def test_orthogonal_closed_form_ccw(a, eps):
 def test_calipers_independent_all_pairs(seed):
     points = np.random.default_rng(seed).normal(size=(30,2))
     hull = convex_hull(points, P)
-    result = diameter(Region(Kind.POLYGON, hull), P)
+    result = diameter(Region(Kind.POLYGON, hull))
     assert result.length == pytest.approx(brute_diameter(points))
 
 
 def test_square_parallel_ties_and_collinear_interior():
     hull = convex_hull([(0,0),(1,0),(2,0),(2,2),(0,2),(0,0)], P)
     assert len(hull) == 4
-    d = diameter(Region(Kind.POLYGON,hull), P)
+    d = diameter(Region(Kind.POLYGON,hull))
     assert d.length == pytest.approx(math.sqrt(8))
     assert d.indices == (0,2)
 
@@ -164,11 +164,11 @@ def test_hull_merges_near_duplicates_and_collinear_vertices(scale, shift):
         a, b, c = exact[i], exact[(i+1) % 4], exact[(i+2) % 4]
         assert (b[0]-a[0])*(c[1]-b[1])-(b[1]-a[1])*(c[0]-b[0]) > 0
     region = Region(Kind.POLYGON, hull)
-    d = diameter(region, P)
+    d = diameter(region)
     tolerance = P.length(3*scale)
     assert abs(d.length-brute_diameter(raw)) <= tolerance
-    assert abs(minimum_circle(hull, P, 0).radius-math.sqrt(2)*scale) <= tolerance
-    assert diameter_circle_cover(region, d, P).status != 'NO'
+    assert abs(minimum_circle(hull, 0).radius-math.sqrt(2)*scale) <= tolerance
+    assert diameter_circle_cover(region, d, P, minimum_circle(region.vertices, seed=0)).status != 'NO'
 
 
 @pytest.mark.parametrize('width', [1e-7, 1e-12, 1e-15])
@@ -223,7 +223,7 @@ def test_tighter_duplicate_and_order_invariance():
     hps = [HP((1,0),2),HP((1,0),1),HP((-1,0),0),HP((0,1),1),HP((0,-1),0)]
     r1 = intersect_halfplanes(hps,P)
     r2 = intersect_halfplanes(list(reversed(hps)),P)
-    assert diameter(r1,P).length == pytest.approx(math.sqrt(2))
+    assert diameter(r1).length == pytest.approx(math.sqrt(2))
     assert set(r1.vertices) == set(r2.vertices)
 
 

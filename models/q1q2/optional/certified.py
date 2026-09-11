@@ -2,9 +2,12 @@
 
 Only raw SourceSet fields are read; no production geometry/sampling is called.
 Float inputs denote their exact binary values. Angles are in degrees, converted
-with interval pi. See benchmark README for the covering/pruning proof.
+with interval pi. Production wedges instead use decimal-degree semantics.
+This certificate bounds the raw binary-input continuous problem, not every
+production intermediate approximation; the two semantics are not identical.
+See benchmark README for the covering/pruning proof.
 """
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
 from functools import lru_cache
 from itertools import product
 import heapq
@@ -12,6 +15,11 @@ import math
 import time
 
 from mpmath.ctx_iv import MPIntervalContext
+
+
+# Moving one float outward after conversion encloses endpoint rounding.
+_SOURCE_CACHE_LIMIT = 32768  # Performance only; eviction cannot change bounds.
+_CORNER_TRY_FREQUENCY = 8  # Performance only; every witness is still verified.
 
 
 def _down(x):
@@ -35,10 +43,7 @@ class Certificate:
     elapsed_seconds: float
     witness: dict | None
     dps: int
-    backend: str = 'mpmath.iv 1.3.0'
-
-    def to_dict(self):
-        return asdict(self)
+    backend: str = 'mpmath.iv'
 
 
 def certify(source_set, q, epsilon2=1., *, tol=.1, max_nodes=200000,
@@ -74,13 +79,14 @@ def certify(source_set, q, epsilon2=1., *, tol=.1, max_nodes=200000,
     cos2, tan = iv.cos(delta)**2, iv.tan(delta)
     same = tuple(q) == tuple(first.position)
 
+    # min/max are monotone in each endpoint, giving interval outer bounds.
     def maximum(a, b):
         return V([max(a.a, b.a), max(a.b, b.b)])
 
     def minimum(a, b):
         return V([min(a.a, b.a), min(a.b, b.b)])
 
-    @lru_cache(maxsize=32768)
+    @lru_cache(maxsize=_SOURCE_CACHE_LIMIT)
     def source(ab, tb):
         # Full [-eps,eps] is covered, including rays absent from float F events.
         angle = (theta+V(ab))*iv.pi/180
@@ -131,6 +137,8 @@ def certify(source_set, q, epsilon2=1., *, tol=.1, max_nodes=200000,
         poly = w**2-cos2*aa*bb
         det = a[0]*b[1]-a[1]*b[0]
         left, right = tan*w-det, tan*w+det
+        # Pruning needs one constraint false throughout the box; a lower-bound
+        # witness needs every constraint proven at a legal point parameter.
         if witness:
             return dist if (aa.a > n2.b and bb.a > n2.b and w.a >= 0
                             and poly.a >= 0) else None
@@ -145,13 +153,21 @@ def certify(source_set, q, epsilon2=1., *, tol=.1, max_nodes=200000,
         d = pair_data(box, branch, True)
         if d is not None and (witness is None or _down(d) > lower):
             lower = max(0., _down(d))
+            enclosures = []
+            for i in (0, 2):
+                coordinates = []
+                for z in source(box[i], box[i+1])[0]:
+                    coordinates.append([_down(z), _up(z)])
+                enclosures.append(coordinates)
             witness = dict(parameters=list(params), branch=branch,
-                           coordinate_enclosures=[[[ _down(z), _up(z)] for z in source(box[i], box[i+1])[0]] for i in (0, 2)],
+                           coordinate_enclosures=enclosures,
                            distance_interval_m=[max(0., _down(d)), _up(d)])
 
     root = ((-eps, eps), (0., 1.), (-eps, eps), (0., 1.))
     branches = ('same_station',) if same else ('near', 'direction')
     # Independent seeds, including inward approximants to the open first edge.
+    # Seeding counts in elapsed time but finishes before budget checks: very
+    # small time limits are soft limits, not a hard-real-time deadline.
     for params in product(sorted(set([-eps, 0., eps])), (0., 1e-10, .5, 1.),
                           sorted(set([-eps, 0., eps])), (0., 1e-10, .5, 1.)):
         for branch in branches:
@@ -188,7 +204,7 @@ def certify(source_set, q, epsilon2=1., *, tol=.1, max_nodes=200000,
         # Midpoints are dense; corners accelerate boundary maxima. Every seed
         # goes through the same interval proof, without feasibility tolerances.
         try_point([a+(b-a)/2 for a, b in box], branch)
-        if nodes % 8 == 0:
+        if nodes % _CORNER_TRY_FREQUENCY == 0:
             for params in product(*[sorted(set([a, b])) for a, b in box]):
                 try_point(params, branch)
         for half in ((a, mid), (mid, b)):
@@ -201,10 +217,19 @@ def certify(source_set, q, epsilon2=1., *, tol=.1, max_nodes=200000,
     upper = max(lower, -heap[0][0] if heap else lower)
     gap = max(0., _up(V(upper)-V(lower))) if upper > lower else 0.
     converged = gap <= tol
-    return Certificate(lower, upper, gap, converged,
-                       'CERTIFIED_FIXED_Q_TOL' if converged else 'CERTIFIED_BOUNDS',
-                       'gap' if converged else reason, nodes, len(heap),
-                       time.monotonic()-started, witness, dps)
+    return Certificate(
+        lower_m=lower,
+        upper_m=upper,
+        gap_m=gap,
+        converged=converged,
+        status='CERTIFIED_FIXED_Q_TOL' if converged else 'CERTIFIED_BOUNDS',
+        stop_reason='gap' if converged else reason,
+        nodes=nodes,
+        active_boxes=len(heap),
+        elapsed_seconds=time.monotonic()-started,
+        witness=witness,
+        dps=dps,
+    )
 
 
 def assess(j_hat, certificate, tol):

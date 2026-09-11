@@ -1,4 +1,8 @@
-"""Certified square/triangle cell coverage and open-path route optimization."""
+"""Square/triangle coverage layouts and open-path route optimization.
+
+Q4 cell sufficiency requires sqrt(2)*h <= 1000 or triangle side <= 1000;
+parameterized generation alone is not a coverage certificate.
+"""
 import math
 import numpy as np
 from geometry import cross
@@ -25,6 +29,8 @@ def square_stations(h=650., cropped=False, radius=1800.):
     m = math.ceil(radius/h)
     if not cropped:
         return np.array([(i*h,j*h) for j in range(-m,m+1) for i in range(-m,m+1)])
+    # Retain every vertex of intersecting cells, including stations outside the source disk.
+    # Projecting/deleting those vertices would invalidate the cell-coverage argument.
     selected = set()
     for j in range(-m,m):
         for i in range(-m,m):
@@ -37,6 +43,8 @@ def square_stations(h=650., cropped=False, radius=1800.):
 def triangle_stations(side=990., radius=1800.):
     basis = np.array([[side,0.],[side/2,side*math.sqrt(3)/2]])
     m = math.ceil(2*radius/side)+3
+    # Retain every vertex of intersecting cells, including stations outside the source disk.
+    # Projecting/deleting those vertices would invalidate the cell-coverage argument.
     selected = set()
     for i in range(-m,m+1):
         for j in range(-m,m+1):
@@ -48,7 +56,10 @@ def triangle_stations(side=990., radius=1800.):
 
 
 def route_length(points, start=(0.,0.)):
-    return float(np.linalg.norm(np.diff(np.vstack([start,points]),axis=0),axis=1).sum()) if len(points) else 0.
+    if not len(points):
+        return 0.
+    edges = np.diff(np.vstack([start,points]),axis=0)
+    return float(np.linalg.norm(edges,axis=1).sum())
 
 
 def route(points, optimized=True):
@@ -64,6 +75,7 @@ def route(points, optimized=True):
     if not optimized:
         return path
     # Fixed origin, free terminal point; strict descent, deterministic tie handling.
+    # CPU cap only; reaching 30 passes does not certify a 2-opt local optimum.
     for _ in range(30):
         changed = False
         for i in range(len(path)-1):

@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "q1_mec_calls": 1,
+  "zero_budget_score_calls": 1,
+  "frontier_shared_score_calls_once": 1,
+  "serialization": "PASS",
+  "certificate": {
+    "lower_m": 1495.0030558992114,
+    "upper_m": 1505.9165262597212,
+    "gap_m": 10.913470360509793,
+    "converged": false,
+    "status": "CERTIFIED_BOUNDS",
+    "stop_reason": "node_budget",
+    "nodes": 0,
+    "active_boxes": 1,
+    "elapsed_seconds": 0.0034292500058654696,
+    "witness": {
+      "parameters": [
+        -1.0,
+        1e-10,
+        1.0,
+        1.0
+      ],
+      "branch": "same_station",
+      "coordinate_enclosures": [
+        [
+          [
+            4.999238625259185,
+            4.999238625259187
+          ],
+          [
+            -0.08726203479555233,
+            -0.0872620347955523
+          ]
+        ],
+        [
+          [
+            1499.7715427345865,
+            1499.771542734587
+          ],
+          [
+            26.178609655925264,
+            26.17860965592527
+          ]
+        ]
+      ],
+      "distance_interval_m": [
+        1495.0030558992114,
+        1495.0030558992119
+      ]
+    },
+    "dps": 30,
+    "backend": "mpmath.iv"
+  },
+  "dependencies": {
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.1",
+    "pytest": "9.1.1",
+    "mpmath": "1.3.0"
+  }
+}

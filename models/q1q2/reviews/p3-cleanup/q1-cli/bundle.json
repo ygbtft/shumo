@@ -1,0 +1,154 @@
+{
+  "figures": [
+    {
+      "id": "F1",
+      "panels": [
+        {
+          "kind": "geometry",
+          "title": "input: UNBOUNDED（绘图范围非约束）",
+          "polygons": [],
+          "circles": [],
+          "points": [
+            {
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              "label": "检测点"
+            }
+          ],
+          "lines": [
+            {
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1599.756312250226,
+                  -27.92385029965362
+                ]
+              ],
+              "style": ":",
+              "label": null
+            },
+            {
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1600.0,
+                  0.0
+                ]
+              ],
+              "style": "--",
+              "label": "0° ±1°"
+            },
+            {
+              "values": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1599.756312250226,
+                  27.92385029965362
+                ]
+              ],
+              "style": ":",
+              "label": null
+            }
+          ],
+          "arrows": [
+            {
+              "start": [
+                0.0,
+                0.0
+              ],
+              "end": [
+                99.98476951563912,
+                -1.7452406437283512
+              ]
+            }
+          ]
+        }
+      ],
+      "caption": "manual；纯角锥；T=None；κ=None；η=None"
+    }
+  ],
+  "tables": {
+    "T2": [
+      {
+        "case": "input",
+        "N": 1,
+        "kind": "UNBOUNDED",
+        "vertices": 0,
+        "area_m2": null,
+        "diameter_m": null,
+        "radius_m": null,
+        "kappa": null,
+        "eta": null,
+        "T": null,
+        "cover": "NOT_APPLICABLE"
+      }
+    ],
+    "T3": [
+      {
+        "operation": "feasibility/recession",
+        "complexity": "O(M^2)"
+      },
+      {
+        "operation": "exact_enumeration: bounded intersections and constraint checks",
+        "complexity": "O(M^3)"
+      },
+      {
+        "operation": "diameter: all vertex pairs",
+        "complexity": "O(V^2)"
+      },
+      {
+        "operation": "Welzl with exact support recheck",
+        "complexity": "expected O(V), worst O(V^3)"
+      },
+      {
+        "operation": "circle enumeration fallback",
+        "complexity": "O(V^4)",
+        "note": "Arithmetic operation counts; high-precision/rational bit-length costs are additional"
+      }
+    ],
+    "T1": [
+      {
+        "category": "题面事实",
+        "statement": "每源固定未知半径1000—1500米；5米near；20米清除；东0°逆时针",
+        "source": "题面附录2"
+      },
+      {
+        "category": "附件事实",
+        "statement": "允许域外检测；合法反馈direction/near/no_signal；示向度两位小数",
+        "source": "附件2"
+      },
+      {
+        "category": "合理推断",
+        "statement": "同一定位时段静止源、同一会话与未清除阶段",
+        "source": "PLAN §0.5"
+      },
+      {
+        "category": "主动简化",
+        "statement": "异点未知固定有界误差场的全组合外包；最坏直径优先且保收",
+        "source": "PLAN §0.5—0.6"
+      },
+      {
+        "category": "待明确",
+        "statement": "官方舍入顺序及±1°是否包含量化未知；1.005°仅最近舍入外包",
+        "source": "PLAN §0.6"
+      }
+    ]
+  },
+  "metadata": {
+    "design": "PLAN.md v3",
+    "numerical_claim": "NUMERICAL_CANDIDATE; refinement spread is not a bound"
+  }
+}

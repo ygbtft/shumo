@@ -102,13 +102,18 @@ def truth_margin(poly, point):
 
 class RecordedRegions(dict):
     """Observe public-derived regions without giving the policy any truth."""
-    def __init__(self):super().__init__();self.history=[]
+    def __init__(self):
+        super().__init__()
+        self.history=[]
     def __setitem__(self,ch,poly):
-        self.history.append((ch,np.asarray(poly).copy()));super().__setitem__(ch,poly)
+        # Copy at assignment so later in-place changes cannot contaminate replay evidence.
+        self.history.append((ch,np.asarray(poly).copy()))
+        super().__setitem__(ch,poly)
 
 
 def main():
     checks=[];paths=all_paths();cfg=json.loads((OUT/"run_config.json").read_text())
+    feedback_replays=0
     for problem,methods in SPECS.items():
         for method,spec in methods.items():
             for case_id in ("uniform__iid__77","boundary_outward__n10__negative","near_collinear__n16__positive","cluster_far20__n13__spatial"):
@@ -134,6 +139,7 @@ def main():
                     margin=truth_margin(poly,sources[ch]);min_margin=min(min_margin,margin)
                     if margin < -1e-5:
                         raise ValueError(f"truth outside recorded region: {(problem,method,case_id,ch,margin)}")
+                feedback_replays+=1
                 checks.append(dict(test=f"feedback_only_replay_and_region_containment_q{problem}_{method}_{case_id}",passed=True,commands=index,region_updates=len(recorded.history),minimum_truth_margin_m=min_margin))
     certified=json.loads((ROOT/"experiments/runs/2026-09-11_convex-visibility/certified_layouts.json").read_text())
     for name,item in certified.items():
@@ -190,7 +196,7 @@ def main():
     if broken:
         raise ValueError(broken)
     checks.append(dict(test="report_links_resolve",passed=True))
-    result=dict(passed=len(checks),failed=0,checks=checks,completed_runs=completed,official_calls=0,feedback_replays=40,new_scored_executions=sum(RUNS.values()))
+    result=dict(passed=len(checks),failed=0,checks=checks,completed_runs=completed,official_calls=0,feedback_replays=feedback_replays,new_scored_executions=sum(RUNS.values()))
     (OUT/"final_checks.json").write_text(json.dumps(result,indent=2,ensure_ascii=False))
     previous=OUT/"previous_final_manifest_6741.json"
     if not previous.exists():previous.write_bytes((ROOT/"FINAL_MANIFEST.json").read_bytes())

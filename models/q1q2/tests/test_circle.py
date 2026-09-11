@@ -29,7 +29,7 @@ def oracle_circle(points):
 def test_welzl_against_independent_enumeration(seed):
     points = np.random.default_rng(seed).normal(size=(9,2))*100
     expected_center, expected_radius = oracle_circle(points)
-    actual = minimum_circle(points,P,seed)
+    actual = minimum_circle(points, seed)
     assert actual.status == 'OK'
     assert actual.radius == pytest.approx(expected_radius,rel=1e-8)
     assert math.dist(actual.center,expected_center) < 1e-6
@@ -40,15 +40,15 @@ def test_welzl_against_independent_enumeration(seed):
                                      ((0,0),(2,0),(0,2)),((0,0),(0,0),(0,0)),
                                      ((0,0),(1,1e-11),(2,0))])
 def test_ordinary_degenerate_triples(points):
-    c = ordinary_three_point_circle(points,P)
+    c = ordinary_three_point_circle(points)
     assert c.radius == pytest.approx(oracle_circle(points)[1])
     assert all(math.dist(c.center,p) <= c.radius+1e-8 for p in points)
 
 
 def test_forced_obtuse_triple_is_circumcircle():
     points = ((0,0),(2,0),(1,.1))
-    forced = forced_circle(points,P)
-    ordinary = ordinary_three_point_circle(points,P)
+    forced = forced_circle(points)
+    ordinary = ordinary_three_point_circle(points)
     assert forced.radius > ordinary.radius
     assert all(math.dist(forced.center,p) == pytest.approx(forced.radius) for p in points)
     assert ordinary.radius == pytest.approx(1.)
@@ -56,8 +56,8 @@ def test_forced_obtuse_triple_is_circumcircle():
 
 def test_collinear_forced_support_reports_invariant_exception():
     with pytest.raises(ForcedSupportError,match='FORCED_SUPPORT'):
-        forced_circle(((0,0),(1,0),(2,0)),P)
-    assert minimum_circle(((0,0),(1,0),(2,0)),P,0).radius == pytest.approx(1.)
+        forced_circle(((0,0),(1,0),(2,0)))
+    assert minimum_circle(((0,0),(1,0),(2,0)), 0).radius == pytest.approx(1.)
 
 
 @pytest.mark.parametrize('side',[20.,36.])
@@ -82,8 +82,8 @@ def test_real_wedge_triangle_thales_and_tight_ratios(side):
 def test_square_diameter_centers_coincide():
     vertices = ((0.,0.),(2.,0.),(2.,2.),(0.,2.))
     region = Region(RegionKind.POLYGON,vertices)
-    d = diameter(region,P)
-    cover = diameter_circle_cover(region,d,P)
+    d = diameter(region)
+    cover = diameter_circle_cover(region, d, P, minimum_circle(region.vertices, seed=0))
     assert cover.status == 'YES'
     assert cover.forced_center == (1.,1.)
     assert cover.kappa == pytest.approx(1.)
@@ -93,7 +93,7 @@ def test_square_diameter_centers_coincide():
 
 def test_point_ratios_not_applicable():
     region = Region(RegionKind.POINT,((3.,4.),))
-    cover = diameter_circle_cover(region,diameter(region,P),P)
+    cover = diameter_circle_cover(region, diameter(region), P, minimum_circle(region.vertices, seed=0))
     assert cover.status == 'YES'
     assert cover.kappa is None and cover.eta is None
 
@@ -106,12 +106,12 @@ def test_clearance_three_diameter_regimes(d,expected):
 
 def test_e20_shape_counterexample_and_support_lipschitz():
     triangle = ((0.,0.),(36.,0.),(18.,18*math.sqrt(3)))
-    triangle_circle = minimum_circle(triangle,P,0)
-    segment_circle = minimum_circle(((0.,0.),(36.,0.)),P,0)
+    triangle_circle = minimum_circle(triangle, 0)
+    segment_circle = minimum_circle(((0.,0.),(36.,0.)), 0)
     assert triangle_circle.radius > 20 and segment_circle.radius <= 20
     # Symmetry forces the triangle minimax center; the segment midpoint lies in both 20m disks.
     assert triangle_circle.radius == pytest.approx(12*math.sqrt(3))
     assert all(math.dist(segment_circle.center,p) <= 20 for p in ((0,0),(36,0)))
     perturbed = [(x+.01,y-.02) for x,y in triangle]
-    assert abs(minimum_circle(perturbed,P,0).radius-triangle_circle.radius) <= math.hypot(.01,.02)
+    assert abs(minimum_circle(perturbed, 0).radius-triangle_circle.radius) <= math.hypot(.01,.02)
     assert worst_radius_scale(36) == pytest.approx((18,12*math.sqrt(3)))

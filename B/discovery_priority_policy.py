@@ -25,6 +25,9 @@ class DiscoveryPriorityMixin:
         interior = radial[:, None] * np.column_stack((np.cos(theta), np.sin(theta)))
         boundary_angle = np.arange(128) * 2 * math.pi / 128 + rng.uniform(0., 2 * math.pi)
         boundary = 1800. * np.column_stack((np.cos(boundary_angle), np.sin(boundary_angle)))
+        # 384 area samples + 128 boundary samples give the boundary an artificial 1/4
+        # weight. The 12 orientations are equally weighted; gains are ranking scores,
+        # not true discovery probabilities. 1000 m is the minimum receiving radius.
         locations = np.vstack((interior, boundary))
         delta = self.stations[:, None, :] - locations[None, :, :]
         in_range = np.sum(delta ** 2, axis=2) < 1000. ** 2 - 1e-6
@@ -65,15 +68,20 @@ class DiscoveryPriorityMixin:
             unvisited_mask = np.zeros(len(self.stations), dtype=bool)
             unvisited_mask[unused] = True
             seen = ~unvisited_mask
-            remaining_worlds = ~self._visible_worlds[seen].any(axis=0) if seen.any() else np.ones(self._visible_worlds.shape[1], dtype=bool)
+            # Seen stations were processed for every unknown channel; this is search
+            # history, not an individual known source's RF posterior.
+            if seen.any():
+                remaining_worlds = ~self._visible_worlds[seen].any(axis=0)
+            else:
+                remaining_worlds = np.ones(self._visible_worlds.shape[1], dtype=bool)
             total = int(remaining_worlds.sum())
             self.stats["last_sampled_unknown_worlds"] = total
             gains = np.sum(self._visible_worlds[:, remaining_worlds], axis=1) / max(1, total)
             scores = []
             for j in range(min(self.choice_count, len(route))):
                 candidate = int(route[j])
-                promoted = np.r_[route[j], route[:j], route[j + 1:]]
-                sequence = points[promoted]
+                promoted_order = np.concatenate((route[j:j + 1], route[:j], route[j + 1:]))
+                sequence = points[promoted_order]
                 length = np.linalg.norm(sequence[0] - self.client.position)
                 if len(sequence) > 1:
                     length += np.linalg.norm(np.diff(sequence, axis=0), axis=1).sum()

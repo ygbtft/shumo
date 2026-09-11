@@ -46,12 +46,12 @@ def main():
                 kind=inp['special']; region=Region(RegionKind(kind) if kind in ('EMPTY','UNBOUNDED') else RegionKind.SEGMENT,
                     ((0.,0.),(1.,0.)),status='NUMERICAL_UNRESOLVED' if kind=='region_unresolved' else 'OK')
                 d=DiameterResult(None,None) if kind=='missing_endpoints' else DiameterResult(1.,1.,((0.,0.),(1.,0.)),(0,1))
-                result=diameter_circle_cover(region,d,policy); actual['cover']=asdict(result)
+                result=diameter_circle_cover(region, d, policy, minimum_circle(region.vertices, seed=0)); actual['cover']=asdict(result)
                 check(result.status==gt['status'],'cover.status',gt['status'],result.status)
                 check(result.kappa is None and result.eta is None,'inapplicable_ratios',None,[result.kappa,result.eta])
                 check(not result.finite_cover,'finite_cover',False,result.finite_cover)
                 if kind=='EMPTY':
-                    empty=minimum_circle([],policy,0); actual['empty_circle']=asdict(empty)
+                    empty=minimum_circle([], 0); actual['empty_circle']=asdict(empty)
                     check(empty.status=='EMPTY' and empty.center is None and empty.radius is None,'empty_circle','EMPTY/null',asdict(empty))
             else:
                 pts=[tuple(p) for p in inp['points']]; d=gt['diameter']
@@ -75,10 +75,11 @@ def main():
                         for k in range(2): near(prefix+'.center.'+str(k),c.center[k],expected['center'][k],tol)
                 actual['minimum_circle']=[]
                 for seed in inp['seeds']:
-                    c=minimum_circle(pts,policy,seed); actual['minimum_circle'].append(asdict(c)); circle_check(c,'minimum.'+str(seed))
+                    c=minimum_circle(pts, seed); actual['minimum_circle'].append(asdict(c)); circle_check(c,'minimum.'+str(seed))
                     if scale_limit and c.status=='NUMERICAL_UNRESOLVED':
                         continue
                     ids=c.support_vertex_indices
+                    check(ids==tuple(sorted(ids)), 'support.canonical_order', sorted(ids), ids)
                     valid=1<=len(ids)<=3 and len(set(ids))==len(ids) and all(0<=i<len(pts) for i in ids)
                     check(valid,'support.indices','1..3 distinct in-range',ids)
                     if valid and c.center is not None:
@@ -91,12 +92,14 @@ def main():
                         check(residual<=tol,'containment',f'<= {tol}',residual)
                         near('containment_residual',c.containment_residual,residual,tol)
                 if len(pts)<=3:
-                    ordinary=ordinary_three_point_circle(pts,policy); actual['ordinary']=asdict(ordinary); circle_check(ordinary,'ordinary')
+                    ordinary=ordinary_three_point_circle(pts); actual['ordinary']=asdict(ordinary); circle_check(ordinary,'ordinary')
                     p=[tuple(F(x) for x in v) for v in pts]; fc=candidate(p)
                     det=abs((p[1][0]-p[0][0])*(p[2][1]-p[0][1])-(p[1][1]-p[0][1])*(p[2][0]-p[0][0])) if len(p)==3 else None
-                    force_reject=det is not None and float(det)<=2*(1e-10+1e-12*max(1,max(math.dist(pts[0],v) for v in pts)))*max(1,max(math.dist(pts[0],v) for v in pts))
+                    # forced_circle rejects exact collinearity only. Near-collinear
+                    # circles still undergo the independent center/radius checks below.
+                    force_reject = det == 0 if det is not None else False
                     try:
-                        forced=forced_circle(pts,policy); actual['forced']=asdict(forced)
+                        forced=forced_circle(pts); actual['forced']=asdict(forced)
                         check(not force_reject,'forced.exception','ForcedSupportError' if force_reject else 'circle','circle')
                         if fc:
                             circle_check(forced,'forced',dict(center=list(map(float,fc[0])),radius=root(fc[1])))
@@ -108,7 +111,7 @@ def main():
                     near('wedge.Jung_equality',gt['radius'],inp['ideal_side']/math.sqrt(3),tol)
                 i,j=gt['pair']; dia=DiameterResult(d,gt['diameter_squared'],(pts[i],pts[j]),(i,j))
                 region=Region(RegionKind.POINT if d==0 else RegionKind.SEGMENT if len(pts)<=2 else RegionKind.POLYGON,tuple(pts))
-                cover=diameter_circle_cover(region,dia,policy); actual['cover']=asdict(cover)
+                cover=diameter_circle_cover(region, dia, policy, minimum_circle(region.vertices, seed=0)); actual['cover']=asdict(cover)
                 check(cover.status in gt['allowed_cover_status'],'cover.status',gt['allowed_cover_status'],cover.status)
                 check(cover.finite_cover,'cover.finite_cover',True,cover.finite_cover)
                 for k in range(2): near('forced_center',None if cover.forced_center is None else cover.forced_center[k],gt['forced_center'][k],tol)
