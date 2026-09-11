@@ -1,5 +1,29 @@
 # Windows guest cover21 部署就绪说明
 
+## 2026-09-12 重新部署（当前有效，对应仓库 HEAD `aeb33000f`）
+
+上一版部署（下方 2026-09-11 节）已**失效**：入口重构后 `run_bounded_robot.py` 依赖新增的 `bounded_candidates.py` 与 `layouts/`，旧 guest 缺这两项会直接崩；清除门也仍是旧的 80/40。
+
+- **旧目录保留**：`C:\BRobot-old-20260912-004600`（含此前演练产出的 `robot_runs`）。官方模拟器自身的权威统计库在 `C:\Jammers`，未受影响。
+- **新部署**：`C:\BRobot`，共 199 个文件（顶层全部 `.py` + `layouts/` + `reference/shumo-b/mock/` 代码 + `tests/`），1.7 MB。清单 `C:\BRobot\DEPLOY_MANIFEST.json`。
+- **SHA 校验**：199/199 与宿主逐字节一致，零不符、零缺失。
+- **不再部署 `experiments/` 冻结 JSON（约 60 MB）**：入口重构后已与实验树解耦，`tests/test_bounded_entry.py` 明确禁止 import `experiments/confirmation/final_checks` 且禁止读取含 `experiments` 的路径，四种执行组合仍通过。
+- **环境**：`C:\Python314-arm64\python.exe`（3.14.7 ARM64）、NumPy 2.5.3、SciPy 1.18.1。
+- **冒烟（仅进程内 mock，未连官方）**：Q3 `range_area7` 与 Q4 `range_grid21_29` 的 offline 均 `all_cleared=true`，`stop_reason=full_coverage_and_all_discovered_cleared`。
+
+### guest 内测试的已知偏差（非缺陷，勿误判）
+
+在 guest 跑 `python -m unittest discover -s tests` 会有 5 ERROR + 5 FAIL，均已定性：
+
+- **5 ERROR 为测试专属依赖缺失**：guest 未装 `pytest`；未部署 `benchmarks_q34`；`mock` 包不在 `sys.path`；有意排除的 `experiments/*.json`。另 `test_q34_protocol` 的半包拆除用例在 Windows 上抛 `WinError 10053`，属平台 socket 行为差异，只涉及本地 mock 服务。均不在正式运行路径上。
+- **5 FAIL 为跨平台浮点差异**：`test_bounded_entry` 比对的是**宿主录制的基线夹具**。Q3 站点 `stations(6,1140.)` 的三角函数在 guest 上差 1 ULP（`-987.2689603142599` vs `...97`，1.1e-13 m），经贪心/2-opt 平局翻转放大为整局时间差异。覆盖余量 7.3 m、清除判据余量 1e-5 m，对 1e-13 m 免疫，**无正确性风险**；guest 实跑仍全清，且本例中略快（Q3 3090.42 vs 宿主 3105.88；Q4 6176.68 vs 6328.58）。
+
+**推论**：宿主数值不能逐位外推到 guest；应以 guest 自身的演练结果为准（历史演练成绩本就产自 guest）。正式测试前须在本部署上另跑演练验证。
+
+---
+
+## 2026-09-11 首次部署（已被上节取代，仅作历史记录）
+
 2026-09-11：已部署，Q3/Q4 本地 offline 冒烟通过。**未连接官方模拟器，未发起正式测试，未执行或发起演练。** 本次仅使用进程内 mock，不访问 127.0.0.1:2026；未执行 mock-http，也未操作 GUI、登录或官方会话。
 
 ## 部署位置与环境
