@@ -28,6 +28,9 @@ TEMPLATES={"width":deferred.SPECS[4]["width40_f015_22"],
            "locked_full":deferred.SPECS[4]["locked_noskip_width015"],
            "count_locked":builders.SPECS[4]["count_cheap_predict8_locked_width015"]}
 SPECS={4:{f"{label}_{layout}":dict(spec,layout=layout) for layout in LAYOUTS for label,spec in TEMPLATES.items()}}
+# Tune only the selected Q4 configuration; retain the paired-probe geometry.
+# See CLEAR_GATE_TRADEOFF.md for paired sweeps against the original 40 m gate.
+SPECS[4]["range_grid21_29"]["trial_radius"] = 35.
 EXPECTED=1860
 build=builders.build
 

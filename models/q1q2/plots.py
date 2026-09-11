@@ -70,49 +70,51 @@ def render(results: ResultBundle, output_dir: Path, style: PlotStyle) -> tuple[P
         for spec in results.figures:
             panels = spec.get('panels', (spec,))
             fig, axes = plt.subplots(1, len(panels), figsize=(style.figsize[0]*len(panels), style.figsize[1]), squeeze=False)
-            for ax, panel in zip(axes[0], panels):
-                kind = panel.get('kind', 'geometry')
-                if kind == 'geometry':
-                    _geometry(ax, panel)
-                elif kind == 'heatmap':
-                    # OUT and unassessed cells retain distinct colours, never a zero score.
-                    rows = panel['records']
-                    out = np.array([r['q'] for r in rows if r['status'] == 'OUT']).reshape(-1, 2)
-                    pending = np.array([r['q'] for r in rows if r['status'] == 'NOT_EVALUATED']).reshape(-1, 2)
-                    if len(out):
-                        ax.scatter(out[:, 0], out[:, 1], c='lightgrey', marker='s', s=4, label='不可行')
-                    if len(pending):
-                        ax.scatter(pending[:, 0], pending[:, 1], c='white', edgecolor='grey', marker='s', s=5, label='未评估')
-                    valid = [r for r in rows if r.get('diameter_estimate_m') is not None]
-                    if valid:
-                        p = np.array([r['q'] for r in valid])
-                        artist = ax.scatter(p[:, 0], p[:, 1], c=[r['diameter_estimate_m'] for r in valid], s=9, marker='s')
-                        fig.colorbar(artist, ax=ax, label='最坏物理后验直径样本估计 / m')
-                    _geometry(ax, panel)
-                elif kind == 'curve':
-                    for series in panel.get('series', ()):
-                        ax.plot(series['x'], series['y'], series.get('style', 'o-'), label=series.get('label'))
-                        if series.get('low') is not None:
-                            ax.fill_between(series['x'], series['low'], series['high'], alpha=.2)
-                    ax.set_xlabel(panel.get('xlabel', ''))
-                    ax.set_ylabel(panel.get('ylabel', ''))
-                elif kind == 'bars':
-                    ax.bar(panel['labels'], panel['values'])
-                    ax.tick_params(axis='x', rotation=25)
-                    ax.set_ylabel(panel.get('ylabel', ''))
-                else:
-                    raise ValueError(f'unknown saved figure kind: {kind}')
-                ax.set_title(panel.get('title', ''))
-                if ax.get_legend_handles_labels()[0]:
-                    ax.legend(fontsize='small')
-                ax.grid(alpha=.2)
-            fig.suptitle(spec.get('caption', ''))
-            fig.tight_layout()
-            for suffix in ('pdf', 'png'):
-                path = output_dir/f"{spec['id']}.{suffix}"
-                fig.savefig(path, dpi=style.dpi, bbox_inches='tight')
-                files.append(path)
-            plt.close(fig)
+            try:
+                for ax, panel in zip(axes[0], panels):
+                    kind = panel.get('kind', 'geometry')
+                    if kind == 'geometry':
+                        _geometry(ax, panel)
+                    elif kind == 'heatmap':
+                        # OUT and unassessed cells retain distinct colours, never a zero score.
+                        rows = panel['records']
+                        out = np.array([r['q'] for r in rows if r['status'] == 'OUT']).reshape(-1, 2)
+                        pending = np.array([r['q'] for r in rows if r['status'] == 'NOT_EVALUATED']).reshape(-1, 2)
+                        if len(out):
+                            ax.scatter(out[:, 0], out[:, 1], c='lightgrey', marker='s', s=4, label='不可行')
+                        if len(pending):
+                            ax.scatter(pending[:, 0], pending[:, 1], c='white', edgecolor='grey', marker='s', s=5, label='未评估')
+                        valid = [r for r in rows if r.get('diameter_estimate_m') is not None]
+                        if valid:
+                            p = np.array([r['q'] for r in valid])
+                            artist = ax.scatter(p[:, 0], p[:, 1], c=[r['diameter_estimate_m'] for r in valid], s=9, marker='s')
+                            fig.colorbar(artist, ax=ax, label='最坏物理后验直径样本估计 / m')
+                        _geometry(ax, panel)
+                    elif kind == 'curve':
+                        for series in panel.get('series', ()):
+                            ax.plot(series['x'], series['y'], series.get('style', 'o-'), label=series.get('label'))
+                            if series.get('low') is not None:
+                                ax.fill_between(series['x'], series['low'], series['high'], alpha=.2)
+                        ax.set_xlabel(panel.get('xlabel', ''))
+                        ax.set_ylabel(panel.get('ylabel', ''))
+                    elif kind == 'bars':
+                        ax.bar(panel['labels'], panel['values'])
+                        ax.tick_params(axis='x', rotation=25)
+                        ax.set_ylabel(panel.get('ylabel', ''))
+                    else:
+                        raise ValueError(f'unknown saved figure kind: {kind}')
+                    ax.set_title(panel.get('title', ''))
+                    if ax.get_legend_handles_labels()[0]:
+                        ax.legend(fontsize='small')
+                    ax.grid(alpha=.2)
+                fig.suptitle(spec.get('caption', ''))
+                fig.tight_layout()
+                for suffix in ('pdf', 'png'):
+                    path = output_dir/f"{spec['id']}.{suffix}"
+                    fig.savefig(path, dpi=style.dpi, bbox_inches='tight')
+                    files.append(path)
+            finally:
+                plt.close(fig)
         for name, rows in results.tables.items():
             path = output_dir/f'{name}.csv'
             keys = list(dict.fromkeys(key for row in rows for key in row))

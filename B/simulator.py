@@ -191,12 +191,14 @@ class Protocol:
             return self.rejected(400)
         canonical=path+json.dumps(p,sort_keys=True,separators=(",",":"))
         rid=p["request_id"]
-        if rid in self.cache:
-            old,response=self.cache[rid]
-            return (200,dict(response)) if old==canonical else self.rejected(409)
         if not self.lock.acquire(blocking=False):
             return self.rejected(409)
         try:
+            # Lookup, conflict detection, execution and caching must be atomic:
+            # a retry may have completed while this request approached the lock.
+            if rid in self.cache:
+                old,response=self.cache[rid]
+                return (200,dict(response)) if old==canonical else self.rejected(409)
             response=self.world.act(path,p)
             if response["accepted"]:
                 self.cache[rid]=(canonical,dict(response))

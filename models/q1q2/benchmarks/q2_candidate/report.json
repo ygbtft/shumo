@@ -52,7 +52,7 @@
     }
   },
   "area": "q2_candidate",
-  "generated_utc": "2026-09-10T19:59:59.703631+00:00",
+  "generated_utc": "2026-09-11T10:35:43.332261+00:00",
   "seed": 20260911,
   "n_cases": 531,
   "n_pass": 531,
@@ -42948,7 +42948,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 4.999999999999957,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -42961,7 +42961,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 4.999999999999957,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -43028,12 +43028,12 @@
           "status": "IN",
           "max_violation": -284904.0480879237,
           "extremal_source": [
-            -980.0666931480798,
+            -980.0666931480797,
             442.7010880236334
           ],
           "witness_attained": false,
           "g_low": -284904.0480879237,
-          "g_high": -763309.617584759,
+          "g_high": -763309.6175847597,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -43044,14 +43044,14 @@
           "status": "IN",
           "max_violation": -284904.0480879237,
           "extremal_source": [
-            -980.0666931480798,
+            -980.0666931480797,
             442.7010880236334
           ],
           "witness_attained": false,
           "g_low": -284904.0480879237,
-          "g_high": -763309.617584759,
+          "g_high": -763309.6175847597,
           "direction_status": "IN",
-          "distance_to_closure": 386.84977323459435,
+          "distance_to_closure": 386.8497732345939,
           "conservative_direction_interior": true,
           "reason": "",
           "exact_definition": "q in C_sig and forall p in F: |q-p| > near_radius"
@@ -43204,13 +43204,13 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "IN",
-          "max_violation": -9973.476951561635,
+          "max_violation": -9973.476951563265,
           "extremal_source": [
-            -477.08239912277,
-            2867.4263555574307
+            -477.08239912277025,
+            2867.42635555743
           ],
           "witness_attained": true,
-          "g_low": -9973.476951561635,
+          "g_low": -9973.476951563265,
           "g_high": -9973.476951564038,
           "direction_status": null,
           "distance_to_closure": null,
@@ -43220,13 +43220,13 @@
         },
         "dir": {
           "status": "OUT",
-          "max_violation": -9973.476951561635,
+          "max_violation": -9973.476951563265,
           "extremal_source": [
             -135.64271875184164,
             1932.8433107098172
           ],
           "witness_attained": true,
-          "g_low": -9973.476951561635,
+          "g_low": -9973.476951563265,
           "g_high": -9973.476951564038,
           "direction_status": "OUT",
           "distance_to_closure": 0.0,
@@ -43295,13 +43295,13 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "IN",
-          "max_violation": -19896.953903127578,
+          "max_violation": -19896.953903127876,
           "extremal_source": [
-            452.19752101730126,
-            159.27815480619273
+            442.1101290593487,
+            192.69357767191718
           ],
           "witness_attained": true,
-          "g_low": -19896.953903127578,
+          "g_low": -19896.953903128044,
           "g_high": -19896.953903127876,
           "direction_status": null,
           "distance_to_closure": null,
@@ -43311,13 +43311,13 @@
         },
         "dir": {
           "status": "OUT",
-          "max_violation": -19896.953903127578,
+          "max_violation": -19896.953903127876,
           "extremal_source": [
             -500.4570223589984,
             -110.07731122590079
           ],
           "witness_attained": true,
-          "g_low": -19896.953903127578,
+          "g_low": -19896.953903128044,
           "g_high": -19896.953903127876,
           "direction_status": "OUT",
           "distance_to_closure": 0.0,
@@ -43483,7 +43483,7 @@
           ],
           "witness_attained": false,
           "g_low": 2980028.046096873,
-          "g_high": 609.2193744359538,
+          "g_high": 609.2193744364195,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -43499,7 +43499,7 @@
           ],
           "witness_attained": false,
           "g_low": 2980028.046096873,
-          "g_high": 609.2193744359538,
+          "g_high": 609.2193744364195,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -43572,7 +43572,7 @@
             -298.70422911475043
           ],
           "witness_attained": true,
-          "g_low": 1034904.8128745675,
+          "g_low": 1034904.8128745686,
           "g_high": 1052357.219311853,
           "direction_status": null,
           "distance_to_closure": null,
@@ -43588,7 +43588,7 @@
             -298.70422911475043
           ],
           "witness_attained": true,
-          "g_low": 1034904.8128745675,
+          "g_low": 1034904.8128745686,
           "g_high": 1052357.219311853,
           "direction_status": null,
           "distance_to_closure": null,
@@ -43658,12 +43658,12 @@
           "status": "IN",
           "max_violation": -0.01999999990221113,
           "extremal_source": [
-            945.610697237439,
-            1707.7011415832446
+            945.6106972374389,
+            1707.7011415832444
           ],
           "witness_attained": false,
           "g_low": -0.01999999990221113,
-          "g_high": -999668.875253234,
+          "g_high": -999668.8752532342,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -43679,7 +43679,7 @@
           ],
           "witness_attained": true,
           "g_low": -0.01999999990221113,
-          "g_high": -999668.875253234,
+          "g_high": -999668.8752532342,
           "direction_status": "OUT",
           "distance_to_closure": 0.0,
           "conservative_direction_interior": false,
@@ -43748,8 +43748,8 @@
           "status": "BOUNDARY",
           "max_violation": 2.3283064365386963e-10,
           "extremal_source": [
-            1139.0643744693186,
-            925.0663067434432
+            1139.2352086267329,
+            925.0306088484667
           ],
           "witness_attained": false,
           "g_low": 2.3283064365386963e-10,
@@ -43836,14 +43836,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "OUT",
-          "max_violation": 0.020000001648440957,
+          "max_violation": 0.02000000048428774,
           "extremal_source": [
-            -1568.3237856144792,
-            1564.3253995085577
+            -1568.3237856144788,
+            1564.3253995085574
           ],
           "witness_attained": false,
-          "g_low": 0.020000001648440957,
-          "g_high": -999668.8750471722,
+          "g_low": 0.02000000048428774,
+          "g_high": -999668.875047172,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -43852,14 +43852,14 @@
         },
         "dir": {
           "status": "OUT",
-          "max_violation": 0.020000001648440957,
+          "max_violation": 0.02000000048428774,
           "extremal_source": [
-            -1568.3237856144792,
-            1564.3253995085577
+            -1568.3237856144788,
+            1564.3253995085574
           ],
           "witness_attained": false,
-          "g_low": 0.020000001648440957,
-          "g_high": -999668.8750471722,
+          "g_low": 0.02000000048428774,
+          "g_high": -999668.875047172,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -44103,14 +44103,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "IN",
-          "max_violation": -0.001066354801878333,
+          "max_violation": -0.0010663549037417397,
           "extremal_source": [
-            59.286917028391485,
+            59.28691702839137,
             -1478.3622110898432
           ],
           "witness_attained": true,
-          "g_low": -0.001066354801878333,
-          "g_high": -0.0010663548891898245,
+          "g_low": -0.0010663550347089767,
+          "g_high": -0.0010663549037417397,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -44119,16 +44119,16 @@
         },
         "dir": {
           "status": "IN",
-          "max_violation": -0.001066354801878333,
+          "max_violation": -0.0010663549037417397,
           "extremal_source": [
-            59.286917028391485,
+            59.28691702839137,
             -1478.3622110898432
           ],
           "witness_attained": true,
-          "g_low": -0.001066354801878333,
-          "g_high": -0.0010663548891898245,
+          "g_low": -0.0010663550347089767,
+          "g_high": -0.0010663549037417397,
           "direction_status": "IN",
-          "distance_to_closure": 106.22050139627983,
+          "distance_to_closure": 106.22050139628001,
           "conservative_direction_interior": true,
           "reason": "",
           "exact_definition": "q in C_sig and forall p in F: |q-p| > near_radius"
@@ -44283,14 +44283,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "OUT",
-          "max_violation": 0.0010663550347089767,
+          "max_violation": 0.0010663552675396204,
           "extremal_source": [
-            985.035199199395,
-            1660.497464319853
+            985.0351991993949,
+            1660.4974643198527
           ],
           "witness_attained": true,
-          "g_low": 0.0010663550347089767,
-          "g_high": 0.0010663550274330191,
+          "g_low": 0.0010663552675396204,
+          "g_high": 0.0010663550201570615,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -44299,14 +44299,14 @@
         },
         "dir": {
           "status": "OUT",
-          "max_violation": 0.0010663550347089767,
+          "max_violation": 0.0010663552675396204,
           "extremal_source": [
-            985.035199199395,
-            1660.497464319853
+            985.0351991993949,
+            1660.4974643198527
           ],
           "witness_attained": true,
-          "g_low": 0.0010663550347089767,
-          "g_high": 0.0010663550274330191,
+          "g_low": 0.0010663552675396204,
+          "g_high": 0.0010663550201570615,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -44371,14 +44371,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "IN",
-          "max_violation": -0.002597960061393678,
+          "max_violation": -0.002597959595732391,
           "extremal_source": [
-            600.9012308972913,
-            -1425.839218512978
+            600.9012308972916,
+            -1425.8392185129778
           ],
           "witness_attained": true,
-          "g_low": -0.002597960061393678,
-          "g_high": -0.0025979601487051696,
+          "g_low": -0.002597959595732391,
+          "g_high": -0.002597959974082187,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -44387,16 +44387,16 @@
         },
         "dir": {
           "status": "IN",
-          "max_violation": -0.002597960061393678,
+          "max_violation": -0.002597959595732391,
           "extremal_source": [
-            600.9012308972913,
-            -1425.839218512978
+            600.9012308972916,
+            -1425.8392185129778
           ],
           "witness_attained": true,
-          "g_low": -0.002597960061393678,
-          "g_high": -0.0025979601487051696,
+          "g_low": -0.002597959595732391,
+          "g_high": -0.002597959974082187,
           "direction_status": "IN",
-          "distance_to_closure": 256.26016744728383,
+          "distance_to_closure": 256.2601674472839,
           "conservative_direction_interior": true,
           "reason": "",
           "exact_definition": "q in C_sig and forall p in F: |q-p| > near_radius"
@@ -44484,7 +44484,7 @@
           "g_low": 2.3283064365386963e-10,
           "g_high": 0.0,
           "direction_status": "IN",
-          "distance_to_closure": 256.26017731118355,
+          "distance_to_closure": 256.2601773111838,
           "conservative_direction_interior": true,
           "reason": "",
           "exact_definition": "q in C_sig and forall p in F: |q-p| > near_radius"
@@ -44639,13 +44639,13 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "IN",
-          "max_violation": -0.004114199778996408,
+          "max_violation": -0.004114200535696,
           "extremal_source": [
-            -375.7663114521388,
-            -1708.8014873105471
+            -375.76631145213855,
+            -1708.8014873105467
           ],
           "witness_attained": true,
-          "g_low": -0.004114199778996408,
+          "g_low": -0.004114200710318983,
           "g_high": -0.004114200535696,
           "direction_status": null,
           "distance_to_closure": null,
@@ -44655,13 +44655,13 @@
         },
         "dir": {
           "status": "IN",
-          "max_violation": -0.004114199778996408,
+          "max_violation": -0.004114200535696,
           "extremal_source": [
-            -375.7663114521388,
-            -1708.8014873105471
+            -375.76631145213855,
+            -1708.8014873105467
           ],
           "witness_attained": true,
-          "g_low": -0.004114199778996408,
+          "g_low": -0.004114200710318983,
           "g_high": -0.004114200535696,
           "direction_status": "IN",
           "distance_to_closure": 399.4220620189505,
@@ -44727,14 +44727,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "BOUNDARY",
-          "max_violation": 0.0,
+          "max_violation": -1.1641532182693481e-10,
           "extremal_source": [
-            2425.419378580383,
+            2425.4193785803827,
             -1200.6606708785025
           ],
           "witness_attained": true,
-          "g_low": 0.0,
-          "g_high": -1.7462298274040222e-10,
+          "g_low": -4.656612873077393e-10,
+          "g_high": -1.1641532182693481e-10,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -44743,14 +44743,14 @@
         },
         "dir": {
           "status": "BOUNDARY",
-          "max_violation": 0.0,
+          "max_violation": -1.1641532182693481e-10,
           "extremal_source": [
-            2425.419378580383,
+            2425.4193785803827,
             -1200.6606708785025
           ],
           "witness_attained": true,
-          "g_low": 0.0,
-          "g_high": -1.7462298274040222e-10,
+          "g_low": -4.656612873077393e-10,
+          "g_high": -1.1641532182693481e-10,
           "direction_status": "IN",
           "distance_to_closure": 399.42207172732725,
           "conservative_direction_interior": true,
@@ -44815,14 +44815,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "OUT",
-          "max_violation": 0.004114200710318983,
+          "max_violation": 0.004114200302865356,
           "extremal_source": [
             79.58004522238855,
-            862.267220922751
+            862.2672209227501
           ],
           "witness_attained": true,
-          "g_low": 0.004114200710318983,
-          "g_high": 0.004114200652111322,
+          "g_low": 0.004114200244657695,
+          "g_high": 0.004114200302865356,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -44831,14 +44831,14 @@
         },
         "dir": {
           "status": "OUT",
-          "max_violation": 0.004114200710318983,
+          "max_violation": 0.004114200302865356,
           "extremal_source": [
             79.58004522238855,
-            862.267220922751
+            862.2672209227501
           ],
           "witness_attained": true,
-          "g_low": 0.004114200710318983,
-          "g_high": 0.004114200652111322,
+          "g_low": 0.004114200244657695,
+          "g_high": 0.004114200302865356,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -44905,14 +44905,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "IN",
-          "max_violation": -0.005606107413768768,
+          "max_violation": -0.005606107879430056,
           "extremal_source": [
-            -904.4829574965846,
-            530.993955868936
+            -904.4829574965848,
+            530.9939558689358
           ],
           "witness_attained": true,
-          "g_low": -0.005606107413768768,
-          "g_high": -0.005606107646599412,
+          "g_low": -0.005606107879430056,
+          "g_high": -0.0056061079958453774,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -44921,16 +44921,16 @@
         },
         "dir": {
           "status": "IN",
-          "max_violation": -0.005606107413768768,
+          "max_violation": -0.005606107879430056,
           "extremal_source": [
-            -904.4829574965846,
-            530.993955868936
+            -904.4829574965848,
+            530.9939558689358
           ],
           "witness_attained": true,
-          "g_low": -0.005606107413768768,
-          "g_high": -0.005606107646599412,
+          "g_low": -0.005606107879430056,
+          "g_high": -0.0056061079958453774,
           "direction_status": "IN",
-          "distance_to_closure": 532.3244159624517,
+          "distance_to_closure": 532.3244159624512,
           "conservative_direction_interior": true,
           "reason": "",
           "exact_definition": "q in C_sig and forall p in F: |q-p| > near_radius"
@@ -44995,14 +44995,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "BOUNDARY",
-          "max_violation": 4.656612873077393e-10,
+          "max_violation": -1.7462298274040222e-10,
           "extremal_source": [
             657.4917256000394,
-            370.00031376098457
+            370.0003137609841
           ],
           "witness_attained": true,
-          "g_low": 4.656612873077393e-10,
-          "g_high": 3.4924596548080444e-10,
+          "g_low": -2.3283064365386963e-10,
+          "g_high": -1.7462298274040222e-10,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -45011,16 +45011,16 @@
         },
         "dir": {
           "status": "BOUNDARY",
-          "max_violation": 4.656612873077393e-10,
+          "max_violation": -1.7462298274040222e-10,
           "extremal_source": [
             657.4917256000394,
-            370.00031376098457
+            370.0003137609841
           ],
           "witness_attained": true,
-          "g_low": 4.656612873077393e-10,
-          "g_high": 3.4924596548080444e-10,
+          "g_low": -2.3283064365386963e-10,
+          "g_high": -1.7462298274040222e-10,
           "direction_status": "IN",
-          "distance_to_closure": 532.3244254578874,
+          "distance_to_closure": 532.3244254578873,
           "conservative_direction_interior": true,
           "reason": "",
           "exact_definition": "q in C_sig and forall p in F: |q-p| > near_radius"
@@ -45845,7 +45845,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 200.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -45858,7 +45858,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 200.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -46438,7 +46438,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 200.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -46451,7 +46451,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 200.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -46683,7 +46683,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 100.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -46696,7 +46696,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 100.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -46757,7 +46757,7 @@
           "max_violation": -259467.63420018624,
           "extremal_source": [
             900.1523048436087,
-            -17.45240643728351
+            -17.452406437283518
           ],
           "witness_attained": true,
           "g_low": -259467.63420018624,
@@ -46773,7 +46773,7 @@
           "max_violation": -259467.63420018624,
           "extremal_source": [
             900.1523048436087,
-            -17.45240643728351
+            -17.452406437283518
           ],
           "witness_attained": true,
           "g_low": -259467.63420018624,
@@ -46924,7 +46924,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 200.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -46937,7 +46937,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 200.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -46999,14 +46999,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "IN",
-          "max_violation": -238050.24015606317,
+          "max_violation": -238050.24015606323,
           "extremal_source": [
-            1001.3704652454262,
-            -52.33595624294396
+            1001.3704652454261,
+            -52.33595624294382
           ],
           "witness_attained": true,
           "g_low": -238050.24015606323,
-          "g_high": -238050.24015606317,
+          "g_high": -238050.2401560633,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -47015,16 +47015,16 @@
         },
         "dir": {
           "status": "IN",
-          "max_violation": -238050.24015606317,
+          "max_violation": -238050.24015606323,
           "extremal_source": [
-            1001.3704652454262,
-            -52.33595624294396
+            1001.3704652454261,
+            -52.33595624294382
           ],
           "witness_attained": true,
           "g_low": -238050.24015606323,
-          "g_high": -238050.24015606317,
+          "g_high": -238050.2401560633,
           "direction_status": "IN",
-          "distance_to_closure": 296.46382725946074,
+          "distance_to_closure": 296.4638272594607,
           "conservative_direction_interior": true,
           "reason": "",
           "exact_definition": "q in C_sig and forall p in F: |q-p| > near_radius"
@@ -47086,14 +47086,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "OUT",
-          "max_violation": 1093382.4420900436,
+          "max_violation": 1093382.4420900433,
           "extremal_source": [
-            502.05569786813913,
-            -78.50393436441594
+            502.05569786813925,
+            -78.50393436441573
           ],
           "witness_attained": true,
-          "g_low": 862254.9613933624,
-          "g_high": 1093382.4420900436,
+          "g_low": 862254.9613933617,
+          "g_high": 1093382.4420900433,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -47102,14 +47102,14 @@
         },
         "dir": {
           "status": "OUT",
-          "max_violation": 1093382.4420900436,
+          "max_violation": 1093382.4420900433,
           "extremal_source": [
-            502.05569786813913,
-            -78.50393436441594
+            502.05569786813925,
+            -78.50393436441573
           ],
           "witness_attained": true,
-          "g_low": 862254.9613933624,
-          "g_high": 1093382.4420900436,
+          "g_low": 862254.9613933617,
+          "g_high": 1093382.4420900433,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -47171,7 +47171,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 300.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -47184,7 +47184,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 300.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -47247,7 +47247,7 @@
           "max_violation": -216184.43358810333,
           "extremal_source": [
             1103.8053019082545,
-            -87.1557427476581
+            -87.15574274765817
           ],
           "witness_attained": true,
           "g_low": -216184.4335881034,
@@ -47263,13 +47263,13 @@
           "max_violation": -216184.43358810333,
           "extremal_source": [
             1103.8053019082545,
-            -87.1557427476581
+            -87.15574274765817
           ],
           "witness_attained": true,
           "g_low": -216184.4335881034,
           "g_high": -216184.43358810333,
           "direction_status": "IN",
-          "distance_to_closure": 311.26669368822564,
+          "distance_to_closure": 311.2666936882257,
           "conservative_direction_interior": true,
           "reason": "",
           "exact_definition": "q in C_sig and forall p in F: |q-p| > near_radius"
@@ -47332,7 +47332,7 @@
           "max_violation": 1154597.155800832,
           "extremal_source": [
             605.7079528623817,
-            -130.73361412148716
+            -130.73361412148728
           ],
           "witness_attained": true,
           "g_low": 903064.7705338881,
@@ -47348,7 +47348,7 @@
           "max_violation": 1154597.155800832,
           "extremal_source": [
             605.7079528623817,
-            -130.73361412148716
+            -130.73361412148728
           ],
           "witness_attained": true,
           "g_low": 903064.7705338881,
@@ -47415,7 +47415,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 400.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -47428,7 +47428,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 400.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -47489,14 +47489,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "IN",
-          "max_violation": -193896.85461344046,
+          "max_violation": -193896.85461344034,
           "extremal_source": [
             1207.453848358678,
-            -121.86934340514728
+            -121.86934340514748
           ],
           "witness_attained": true,
-          "g_low": -193896.85461344058,
-          "g_high": -193896.85461344046,
+          "g_low": -193896.85461344034,
+          "g_high": -193896.85461344034,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -47505,16 +47505,16 @@
         },
         "dir": {
           "status": "IN",
-          "max_violation": -193896.85461344046,
+          "max_violation": -193896.85461344034,
           "extremal_source": [
             1207.453848358678,
-            -121.86934340514728
+            -121.86934340514748
           ],
           "witness_attained": true,
-          "g_low": -193896.85461344058,
-          "g_high": -193896.85461344046,
+          "g_low": -193896.85461344034,
+          "g_high": -193896.85461344034,
           "direction_status": "IN",
-          "distance_to_closure": 354.7743108898175,
+          "distance_to_closure": 354.77431088981757,
           "conservative_direction_interior": true,
           "reason": "",
           "exact_definition": "q in C_sig and forall p in F: |q-p| > near_radius"
@@ -47575,14 +47575,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "OUT",
-          "max_violation": 1214892.5091140582,
+          "max_violation": 1214892.5091140587,
           "extremal_source": [
             711.1807725380179,
             -182.8040151077195
           ],
           "witness_attained": true,
           "g_low": 943261.6727427056,
-          "g_high": 1214892.5091140582,
+          "g_high": 1214892.5091140587,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -47591,14 +47591,14 @@
         },
         "dir": {
           "status": "OUT",
-          "max_violation": 1214892.5091140582,
+          "max_violation": 1214892.5091140587,
           "extremal_source": [
             711.1807725380179,
             -182.8040151077195
           ],
           "witness_attained": true,
           "g_low": 943261.6727427056,
-          "g_high": 1214892.5091140582,
+          "g_high": 1214892.5091140587,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -47658,7 +47658,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 500.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -47671,7 +47671,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 500.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -47897,7 +47897,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 600.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -47910,7 +47910,7 @@
           "g_low": null,
           "g_high": null,
           "direction_status": "IN",
-          "distance_to_closure": 5.0,
+          "distance_to_closure": 600.0,
           "conservative_direction_interior": false,
           "reason": "same_point_first_direction",
           "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
@@ -47970,14 +47970,14 @@
         "source_probe_mismatches": [],
         "sig": {
           "status": "IN",
-          "max_violation": -148165.47615313873,
+          "max_violation": -148165.47615313868,
           "extremal_source": [
             1418.3728165523362,
-            -190.80899537654466
+            -190.80899537654471
           ],
           "witness_attained": true,
           "g_low": -148165.47615313902,
-          "g_high": -148165.47615313873,
+          "g_high": -148165.47615313868,
           "direction_status": null,
           "distance_to_closure": null,
           "conservative_direction_interior": false,
@@ -47986,16 +47986,16 @@
         },
         "dir": {
           "status": "IN",
-          "max_violation": -148165.47615313873,
+          "max_violation": -148165.47615313868,
           "extremal_source": [
             1418.3728165523362,
-            -190.80899537654466
+            -190.80899537654471
           ],
           "witness_attained": true,
           "g_low": -148165.47615313902,
-          "g_high": -148165.47615313873,
+          "g_high": -148165.47615313868,
           "direction_status": "IN",
-          "distance_to_closure": 493.81163528101496,
+          "distance_to_closure": 493.811635281015,
           "conservative_direction_interior": true,
           "reason": "",
           "exact_definition": "q in C_sig and forall p in F: |q-p| > near_radius"
@@ -48058,10 +48058,10 @@
           "max_violation": 1332432.5017463788,
           "extremal_source": [
             927.5592248285041,
-            -286.213493064817
+            -286.2134930648171
           ],
           "witness_attained": true,
-          "g_low": 1021621.6678309187,
+          "g_low": 1021621.6678309191,
           "g_high": 1332432.5017463788,
           "direction_status": null,
           "distance_to_closure": null,
@@ -48074,10 +48074,10 @@
           "max_violation": 1332432.5017463788,
           "extremal_source": [
             927.5592248285041,
-            -286.213493064817
+            -286.2134930648171
           ],
           "witness_attained": true,
-          "g_low": 1021621.6678309187,
+          "g_low": 1021621.6678309191,
           "g_high": 1332432.5017463788,
           "direction_status": null,
           "distance_to_closure": null,
@@ -48385,9 +48385,9 @@
       }
     }
   ],
-  "elapsed_seconds": 5.434429417000501,
-  "source_sha256": "ac537fe8957f418f3ba7840adb754866c6872bf3880de339351e789af5f2aada",
-  "source_sha256_start": "ac537fe8957f418f3ba7840adb754866c6872bf3880de339351e789af5f2aada",
+  "elapsed_seconds": 5.3986532499984605,
+  "source_sha256": "4b6a922594e128c8f06c2b8a36376f9a96189a7d623b89b4560a5ee2ea4315d5",
+  "source_sha256_start": "4b6a922594e128c8f06c2b8a36376f9a96189a7d623b89b4560a5ee2ea4315d5",
   "production_unchanged_during_run": true,
   "cases_sha256": "c8fcb4514190897b7e422c54dfcbc2656c2d1ed078b721495556f6e372db3805",
   "notes": [

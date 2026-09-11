@@ -69,7 +69,7 @@ def test_b3_frontier_refreshes_same_or_changed_station_and_retains_witnesses(mon
     monkeypatch.setattr(q2,'_sample_sources',lambda *args,**kwargs:base)
     actual_score = q2.score_point
     scored_samples = []
-    def checked_score(ss,q,samples,config):
+    def checked_score(ss,q,samples,config,deadline=None):
         scored_samples.append(samples.points)
         assert set(endpoints) <= set(samples.points)
         return actual_score(ss,q,samples,config)
@@ -210,15 +210,15 @@ def test_b4_search_assembly_observes_shifted_gain_without_rank_change(monkeypatc
                           starts=1,pair_rounds=0,boundary_step_deg=180,
                           station_initial_step_m=2.,station_min_step_m=2.,time_budget_s=20)
     monkeypatch.setattr(q2,'candidate_bbox',lambda *args:(10.,20.,10.,20.))
-    def samples(ss,level,grids,q=None,inward=1e-7,shifted=False,second_half_width_deg=1.):
+    def samples(ss,level,grids,q=None,inward=1e-7,shifted=False,second_half_width_deg=1.,deadline=None):
         points = ((1000.,0.),(1100.,0.))+(((1200.,0.),) if shifted else ())
         return q2.SourceSamples(points,level,grids[level],shifted=shifted)
     monkeypatch.setattr(q2,'_sample_sources',samples)
-    def score(ss,q,samples,config):
+    def score(ss,q,samples,config,deadline=None):
         value = 100. if (1200.,0.) in samples.points else 10.
         return q2.Score(value,None,value,len(samples.points),None,local_improvement_m=0.)
     monkeypatch.setattr(q2,'score_point',score)
-    monkeypatch.setattr(q2,'_conditional_diagnostics',lambda *args:((),()))
+    monkeypatch.setattr(q2,'_conditional_diagnostics',lambda *args,**kwargs:((),()))
     result = q2.select_second_point(ss,cfg)
     assert result.stop_reason == 'COMPLETED'
     assert result.score.J_hat == 100.

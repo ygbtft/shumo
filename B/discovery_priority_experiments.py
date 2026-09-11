@@ -20,13 +20,13 @@ import spatial_decision_experiments as engine
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "experiments/runs/2026-09-11_discovery-priority"
+# Removed clear-reward variants are archived in the original run snapshot;
+# see ../code-review/fix-discovery-clear-weight.md for the historical mapping.
 SPECS = {3: {
     "packet_center7": dict(kind="packet_clearance", layout="ring7"),
     "discover300_7": dict(kind="discovery_clearance", layout="ring7", discovery_weight=300.),
     "discover900_7": dict(kind="discovery_clearance", layout="ring7", discovery_weight=900.),
     "discover1800_7": dict(kind="discovery_clearance", layout="ring7", discovery_weight=1800.),
-    "discover300_clear7": dict(kind="discovery_clearance", layout="ring7", discovery_weight=300., clear_weight=1.),
-    "clear_reward7": dict(kind="discovery_clearance", layout="ring7", discovery_weight=0., clear_weight=1.),
     "packet_discover300_7": dict(kind="discovery_packet_clearance", layout="ring7", discovery_weight=300.),
     "packet_discover900_7": dict(kind="discovery_packet_clearance", layout="ring7", discovery_weight=900.),
 }, 4: {
@@ -34,8 +34,6 @@ SPECS = {3: {
     "discover300_22": dict(kind="discovery_probe", layout="convex22", fraction=.25, share_cooldown=150., discovery_weight=300.),
     "discover900_22": dict(kind="discovery_probe", layout="convex22", fraction=.25, share_cooldown=150., discovery_weight=900.),
     "discover1800_22": dict(kind="discovery_probe", layout="convex22", fraction=.25, share_cooldown=150., discovery_weight=1800.),
-    "discover900_clear22": dict(kind="discovery_probe", layout="convex22", fraction=.25, share_cooldown=150., discovery_weight=900., clear_weight=1.),
-    "clear_reward22": dict(kind="discovery_probe", layout="convex22", fraction=.25, share_cooldown=150., discovery_weight=0., clear_weight=1.),
     "packet_discover300_22": dict(kind="discovery_packet_probe", layout="convex22", fraction=.25, share_cooldown=150., discovery_weight=300., prediction="action", pause_limit=4),
     "packet_discover900_22": dict(kind="discovery_packet_probe", layout="convex22", fraction=.25, share_cooldown=150., discovery_weight=900., prediction="action", pause_limit=4),
     "packet_discover1800_22": dict(kind="discovery_packet_probe", layout="convex22", fraction=.25, share_cooldown=150., discovery_weight=1800., prediction="action", pause_limit=4),
@@ -76,18 +74,19 @@ def freeze(all_paths):
         raw = path.read_bytes()
         (snapshot / path.name).write_bytes(raw)
         hashes[path.name] = hashlib.sha256(raw).hexdigest()
+    candidate_count = sum(len(methods) for methods in SPECS.values())
     write_json(OUT / "run_config.json", dict(base_seed=42, training_seeds=list(range(67, 72)),
         derivation="42+25+repeat,0..4; already-used training scenes", untouched_future_seeds=list(range(97, 107)),
         stress_derivation="Q3 SeedSequence([42,35,layout_index,count]); Q4 [42,20,layout_index,count]; errors42+200+index/Q3,42+100+index/Q4",
-        specs=SPECS, paths={k: v.tolist() for k, v in all_paths.items()}, expected_executions=1581,
+        specs=SPECS, paths={k: v.tolist() for k, v in all_paths.items()}, expected_executions=candidate_count * 93,
         prior="seed42,384 uniform-disc positions +128 boundary positions, radius1000; Q4 12 faces including outward per position; ranking only",
-        ranking="Promote each of first four 2-opt tasks; open path metres/5 minus weighted new visible prior fraction and optional guaranteed-clear saved-scan reward",
+        ranking="Promote each of first four 2-opt tasks; open path metres/5 minus weighted new visible prior fraction; zero discovery weight retains the base route",
         coverage_or_stop_depends_on_samples=False, initialization_measured_separately=True,
         virtual_upper_bound_s=314016, instruction_upper_bound=9766, code_sha256=hashes,
         engine_reuse="spatial_decision_experiments.run with explicit OUT/SPECS/build/freeze/all_layouts replacements",
         truth_to_policy=False, official_calls=0, cpu_threads=1, python=sys.executable,
         peer_commit="c477d3660368f27c7131a0591426b4c4f107ea5d"))
-    (OUT / "precheck.md").write_text(f"# 运行前检查\n\n{checked['passed']}项检查通过，含零权重公开反馈等价、完整压力任务全清和打断/每源预算检查。有限位置/朝向先验仅用于排序，实际unknown覆盖扫描保留。17候选×93=1581次训练，97—106未生成，正式请求0。\n")
+    (OUT / "precheck.md").write_text(f"# 运行前检查\n\n{checked['passed']}项检查通过，含零权重公开反馈等价、完整压力任务全清和打断/每源预算检查。有限位置/朝向先验仅用于排序，实际unknown覆盖扫描保留。{candidate_count}候选×93={candidate_count * 93}次训练，97—106未生成，正式请求0。\n")
 
 
 def check():

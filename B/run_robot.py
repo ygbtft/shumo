@@ -61,6 +61,10 @@ def main():
         print(json.dumps(summary,ensure_ascii=False,indent=2))
     except Exception as exc:
         (folder/"failure.txt").write_text(repr(exc))
+        summary={"status":"failed","error":repr(exc),"mode":args.mode,
+                 "virtual_s":cli.virtual_s,"execution_state":"unknown",
+                 "source_truth":world.score() if world else None}
+        (folder/"summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2))
         raise
     finally:
         print(f"Local logs: {folder}")

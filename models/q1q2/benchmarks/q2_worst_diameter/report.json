@@ -1,9 +1,9 @@
 {
   "area": "q2_worst_diameter",
-  "generated_utc": "2026-09-10T20:01:35.673058+00:00",
+  "generated_utc": "2026-09-11T10:37:27.005554+00:00",
   "n_cases": 48,
-  "n_pass": 46,
-  "n_fail": 2,
+  "n_pass": 48,
+  "n_fail": 0,
   "categories": {
     "closed_form": {
       "n_cases": 23,
@@ -17,8 +17,8 @@
     },
     "adversarial": {
       "n_cases": 23,
-      "n_pass": 21,
-      "n_fail": 2
+      "n_pass": 23,
+      "n_fail": 0
     },
     "tangent_optimum": {
       "n_cases": 12,
@@ -59,488 +59,7 @@
     "radius_m": 1e-06,
     "note": "Pair dominance is strict up to floating tolerance. Closed forms separately use max(0.1 m,1% J); this is an approximation acceptance threshold, never a certified error bound."
   },
-  "failures": [
-    {
-      "case_id": "polar_1",
-      "grade": "C",
-      "grade_label": "通过",
-      "J_assessments": [
-        {
-          "grade": "C",
-          "label": "通过",
-          "profile": "primary",
-          "J_hat": 995.1172831737146,
-          "independent_reachable_lower_bound_m": 995.1172831737146,
-          "underestimate_m": 0.0,
-          "closed_form_J_m": null,
-          "closed_form_signed_gap_m": null,
-          "approximation_threshold_m": null,
-          "regression_target": null
-        }
-      ],
-      "refined_J_assessments": [],
-      "regression_targets": [],
-      "passed": false,
-      "failure_attribution": {
-        "J_underestimate_detected": false,
-        "continuous_certificate_verdict": null,
-        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
-        "sampling_contract_failures": [
-          "sample_sources_nested"
-        ],
-        "other_failed_checks": [],
-        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
-      },
-      "input": {
-        "S": [
-          0.0,
-          0.0
-        ],
-        "q": [
-          500.0,
-          0.0
-        ]
-      },
-      "expected": {
-        "lower_bound_m": 987.8863222966053,
-        "pair": [
-          [
-            512.2321429235357,
-            0.0
-          ],
-          [
-            1499.7715427335875,
-            -26.178609655881644
-          ]
-        ],
-        "branch": "direction",
-        "bearing_deg": 359.25003807137955,
-        "sample_count": 3955
-      },
-      "actual": {
-        "J_hat": 995.1172831737146,
-        "sample_count": 4410,
-        "status": "NUMERICAL_CANDIDATE",
-        "witness": {
-          "x": [
-            504.9906744975683,
-            -0.3052360714615596
-          ],
-          "y": [
-            1499.7715427345854,
-            -26.17860965592374
-          ],
-          "branch": "direction",
-          "common_bearing_deg": 357.50007614276814,
-          "distance_m": 995.1172831737146,
-          "constraint_residuals": {
-            "second_range_minus_near_m": [
-              9.99999949513608e-08,
-              995.11422210936
-            ],
-            "second_angle_minus_halfwidth_deg": [
-              -1.000444171950221e-11,
-              -1.000444171950221e-11
-            ]
-          },
-          "near_boundary": true,
-          "actual_legal": true,
-          "worlds": [
-            {
-              "p": [
-                504.9906744975683,
-                -0.3052360714615596
-              ],
-              "rho": 1000.0,
-              "first_distance_m": 504.9907667458568,
-              "second_distance_m": 5.000000099999995,
-              "first_error_deg": 0.03463180094854579,
-              "second_error_deg": 0.9999999999899956
-            },
-            {
-              "p": [
-                1499.7715427345854,
-                -26.17860965592374
-              ],
-              "rho": 1499.9999999999986,
-              "first_distance_m": 1499.9999999999986,
-              "second_distance_m": 1000.11422210936,
-              "first_error_deg": 0.9999999999999432,
-              "second_error_deg": -0.9999999999899956
-            }
-          ],
-          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
-        },
-        "underestimate_m": 0.0,
-        "production_cloud_independent_oracle": {
-          "lower_bound_m": 995.1172831737144,
-          "pair": [
-            [
-              504.9906744975683,
-              -0.3052360714615596
-            ],
-            [
-              1499.7715427345854,
-              -26.17860965592374
-            ]
-          ],
-          "branch": "direction",
-          "bearing_deg": 357.50007614276814,
-          "sample_count": 4410
-        },
-        "missing_nested_samples": [
-          {
-            "from_level": 0,
-            "to_level": 1,
-            "count": 128,
-            "examples": [
-              [
-                495.0759611364582,
-                -0.868240905699468
-              ],
-              [
-                495.0759611364582,
-                0.8682409056994714
-              ],
-              [
-                495.075961234939,
-                -0.8682408883346502
-              ],
-              [
-                495.075961234939,
-                0.8682408883346536
-              ]
-            ]
-          },
-          {
-            "from_level": 1,
-            "to_level": 2,
-            "count": 256,
-            "examples": [
-              [
-                495.0213290189514,
-                -0.4613418065433463
-              ],
-              [
-                495.0213290189514,
-                0.4613418065433452
-              ],
-              [
-                495.0213291185248,
-                -0.46134179731651026
-              ],
-              [
-                495.0213291185248,
-                0.46134179731650926
-              ]
-            ]
-          }
-        ],
-        "nested_score_values_m": [
-          995.1172831737146,
-          995.1172831737146,
-          995.1172831737146
-        ]
-      },
-      "checks": [
-        {
-          "name": "independent_reachable_pair_dominance",
-          "passed": true,
-          "expected": 987.8863222966053,
-          "actual": 995.1172831737146,
-          "semantics": "independent lower-bound approximation; not exact J"
-        },
-        {
-          "name": "production_cloud_pair_enumeration",
-          "passed": true,
-          "expected": 995.1172831737144,
-          "actual": 995.1172831737146,
-          "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
-        },
-        {
-          "name": "same_cloud_pair_enumeration",
-          "passed": true,
-          "expected": 987.8863222966053,
-          "actual": 987.8863222966053,
-          "semantics": "independent strict finite-cloud lower-bound dominance"
-        },
-        {
-          "name": "sample_sources_nested",
-          "passed": false,
-          "expected": true,
-          "actual": [
-            543,
-            1457,
-            4410
-          ],
-          "semantics": "correctness"
-        },
-        {
-          "name": "q_augmented_score_monotonicity",
-          "passed": true,
-          "expected": "nondecreasing",
-          "actual": [
-            995.1172831737146,
-            995.1172831737146,
-            995.1172831737146
-          ],
-          "semantics": "correctness"
-        },
-        {
-          "name": "reported_witness_reachable",
-          "passed": true,
-          "expected": 995.1172831737146,
-          "actual": 995.1172831737146,
-          "semantics": "correctness"
-        }
-      ],
-      "truth_method": "independent_polar_sampling + atan2_all_pairs_lower_bound",
-      "tags": [
-        "adversarial"
-      ],
-      "elapsed_seconds": 2.5759060830023373
-    },
-    {
-      "case_id": "polar_6",
-      "grade": "C",
-      "grade_label": "通过",
-      "J_assessments": [
-        {
-          "grade": "C",
-          "label": "通过",
-          "profile": "primary",
-          "J_hat": 995.1716327073365,
-          "independent_reachable_lower_bound_m": 995.1716327073365,
-          "underestimate_m": 0.0,
-          "closed_form_J_m": null,
-          "closed_form_signed_gap_m": null,
-          "approximation_threshold_m": null,
-          "regression_target": null
-        }
-      ],
-      "refined_J_assessments": [],
-      "regression_targets": [],
-      "passed": false,
-      "failure_attribution": {
-        "J_underestimate_detected": false,
-        "continuous_certificate_verdict": null,
-        "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
-        "sampling_contract_failures": [
-          "sample_sources_nested"
-        ],
-        "other_failed_checks": [],
-        "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
-      },
-      "input": {
-        "S": [
-          0.0,
-          0.0
-        ],
-        "q": [
-          500.0,
-          2.0
-        ]
-      },
-      "expected": {
-        "lower_bound_m": 987.931817405163,
-        "pair": [
-          [
-            512.229713317319,
-            1.5776688165304342
-          ],
-          [
-            1499.7715427335875,
-            -26.178609655881644
-          ]
-        ],
-        "branch": "direction",
-        "bearing_deg": 358.20386110203793,
-        "sample_count": 3955
-      },
-      "actual": {
-        "J_hat": 995.1716327073365,
-        "sample_count": 4382,
-        "status": "NUMERICAL_CANDIDATE",
-        "witness": {
-          "x": [
-            504.9900543662953,
-            1.684788291116353
-          ],
-          "y": [
-            1499.7715427345854,
-            -26.17860965592374
-          ],
-          "branch": "direction",
-          "common_bearing_deg": 357.3855430781577,
-          "distance_m": 995.1716327073365,
-          "constraint_residuals": {
-            "second_range_minus_near_m": [
-              9.999999583953922e-08,
-              995.1685716438174
-            ],
-            "second_angle_minus_halfwidth_deg": [
-              -1.000444171950221e-11,
-              -1.000444171950221e-11
-            ]
-          },
-          "near_boundary": true,
-          "actual_legal": true,
-          "worlds": [
-            {
-              "p": [
-                504.9900543662953,
-                1.684788291116353
-              ],
-              "rho": 1000.0,
-              "first_distance_m": 504.9928648213356,
-              "second_distance_m": 5.000000099999996,
-              "first_error_deg": -0.19115406227547282,
-              "second_error_deg": 0.9999999999899956
-            },
-            {
-              "p": [
-                1499.7715427345854,
-                -26.17860965592374
-              ],
-              "rho": 1499.9999999999986,
-              "first_distance_m": 1499.9999999999986,
-              "second_distance_m": 1000.1685716438174,
-              "first_error_deg": 0.9999999999999432,
-              "second_error_deg": -0.9999999999899956
-            }
-          ],
-          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
-        },
-        "underestimate_m": 0.0,
-        "production_cloud_independent_oracle": {
-          "lower_bound_m": 995.1716327073365,
-          "pair": [
-            [
-              504.9900543662953,
-              1.684788291116353
-            ],
-            [
-              1499.7715427345854,
-              -26.17860965592374
-            ]
-          ],
-          "branch": "direction",
-          "bearing_deg": 357.3855430781577,
-          "sample_count": 4382
-        },
-        "missing_nested_samples": [
-          {
-            "from_level": 0,
-            "to_level": 1,
-            "count": 128,
-            "examples": [
-              [
-                495.0759611364582,
-                1.131759094300532
-              ],
-              [
-                495.0759611364582,
-                2.8682409056994715
-              ],
-              [
-                495.075961234939,
-                1.1317591116653498
-              ],
-              [
-                495.075961234939,
-                2.8682408883346535
-              ]
-            ]
-          },
-          {
-            "from_level": 1,
-            "to_level": 2,
-            "count": 256,
-            "examples": [
-              [
-                495.0213290189514,
-                1.5386581934566537
-              ],
-              [
-                495.0213290189514,
-                2.461341806543345
-              ],
-              [
-                495.0213291185248,
-                1.5386582026834899
-              ],
-              [
-                495.0213291185248,
-                2.4613417973165093
-              ]
-            ]
-          }
-        ],
-        "nested_score_values_m": [
-          995.1716327073365,
-          995.1716327073365,
-          995.1716327073365
-        ]
-      },
-      "checks": [
-        {
-          "name": "independent_reachable_pair_dominance",
-          "passed": true,
-          "expected": 987.931817405163,
-          "actual": 995.1716327073365,
-          "semantics": "independent lower-bound approximation; not exact J"
-        },
-        {
-          "name": "production_cloud_pair_enumeration",
-          "passed": true,
-          "expected": 995.1716327073365,
-          "actual": 995.1716327073365,
-          "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
-        },
-        {
-          "name": "same_cloud_pair_enumeration",
-          "passed": true,
-          "expected": 987.931817405163,
-          "actual": 987.931817405163,
-          "semantics": "independent strict finite-cloud lower-bound dominance"
-        },
-        {
-          "name": "sample_sources_nested",
-          "passed": false,
-          "expected": true,
-          "actual": [
-            543,
-            1451,
-            4382
-          ],
-          "semantics": "correctness"
-        },
-        {
-          "name": "q_augmented_score_monotonicity",
-          "passed": true,
-          "expected": "nondecreasing",
-          "actual": [
-            995.1716327073365,
-            995.1716327073365,
-            995.1716327073365
-          ],
-          "semantics": "correctness"
-        },
-        {
-          "name": "reported_witness_reachable",
-          "passed": true,
-          "expected": 995.1716327073365,
-          "actual": 995.1716327073365,
-          "semantics": "correctness"
-        }
-      ],
-      "truth_method": "independent_polar_sampling + atan2_all_pairs_lower_bound",
-      "tags": [
-        "adversarial"
-      ],
-      "elapsed_seconds": 2.5321671670026262
-    }
-  ],
+  "failures": [],
   "results": [
     {
       "case_id": "segment_10_100_20_1",
@@ -645,7 +164,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -793,7 +313,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.8912845000013476
+      "elapsed_seconds": 0.915483459000825
     },
     {
       "case_id": "segment_10_100_20_0.5",
@@ -898,7 +418,8 @@
             "second_angle_minus_halfwidth_deg": [
               -5.002220859751105e-12,
               -5.002220859751105e-12
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -1046,7 +567,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.7857357500033686
+      "elapsed_seconds": 0.8156640419983887
     },
     {
       "case_id": "segment_10_100_20_2",
@@ -1151,7 +672,8 @@
             "second_angle_minus_halfwidth_deg": [
               -2.000888343900442e-11,
               -2.000888343900442e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -1299,7 +821,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.8875939999998081
+      "elapsed_seconds": 0.9246984999990673
     },
     {
       "case_id": "segment_20_80_40_1",
@@ -1404,7 +926,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -1552,7 +1075,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.7319007080004667
+      "elapsed_seconds": 0.7655410829975153
     },
     {
       "case_id": "segment_10_100_200_1",
@@ -1657,7 +1180,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -1805,7 +1329,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.7907007920002798
+      "elapsed_seconds": 0.8243732920018374
     },
     {
       "case_id": "tangent_segment_0",
@@ -1921,7 +1445,8 @@
             "second_angle_minus_halfwidth_deg": [
               -2.546574062733953e-13,
               -3.115008251342033e-13
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -2071,7 +1596,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.7055540830042446
+      "elapsed_seconds": 0.7370469579982455
     },
     {
       "case_id": "tangent_segment_1",
@@ -2187,7 +1712,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.0004497230653442e-12,
               -1.0004497230653442e-12
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -2337,7 +1863,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.6942952500030515
+      "elapsed_seconds": 0.7384757920008269
     },
     {
       "case_id": "tangent_segment_2",
@@ -2453,7 +1979,8 @@
             "second_angle_minus_halfwidth_deg": [
               -2.5011104298755527e-12,
               -2.5011104298755527e-12
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -2603,7 +2130,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.9021877919949475
+      "elapsed_seconds": 0.9129117499978747
     },
     {
       "case_id": "tangent_segment_3",
@@ -2719,7 +2246,8 @@
             "second_angle_minus_halfwidth_deg": [
               -6.593857404535441e-14,
               -1.2278199290616243e-13
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -2729,7 +2257,7 @@
                 1366.6006637279993,
                 0.0
               ],
-              "rho": 1366.6006637279993,
+              "rho": 1366.747004423938,
               "first_distance_m": 1366.6006637279993,
               "second_distance_m": 1366.747004423938,
               "first_error_deg": 0.0,
@@ -2740,7 +2268,7 @@
                 1400.0,
                 0.0
               ],
-              "rho": 1400.0,
+              "rho": 1400.142849854971,
               "first_distance_m": 1400.0,
               "second_distance_m": 1400.142849854971,
               "first_error_deg": 0.0,
@@ -2869,7 +2397,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.6720817090026685
+      "elapsed_seconds": 0.6918807080000988
     },
     {
       "case_id": "tangent_segment_4",
@@ -2985,7 +2513,8 @@
             "second_angle_minus_halfwidth_deg": [
               -6.889488979311409e-13,
               -7.457923167919489e-13
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -3135,7 +2664,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.684873250000237
+      "elapsed_seconds": 0.7242003329956788
     },
     {
       "case_id": "tangent_segment_5",
@@ -3251,7 +2780,8 @@
             "second_angle_minus_halfwidth_deg": [
               -2.9956481739645824e-11,
               -3.001332515850663e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -3401,7 +2931,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.8899860409946996
+      "elapsed_seconds": 0.9228411250005593
     },
     {
       "case_id": "tangent_polar_0",
@@ -3472,7 +3002,7 @@
       },
       "actual": {
         "J_hat": 8.917424315025677,
-        "sample_count": 3667,
+        "sample_count": 3672,
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
@@ -3494,7 +3024,8 @@
             "second_angle_minus_halfwidth_deg": [
               -2.546574062733953e-13,
               -3.115008251342033e-13
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -3539,7 +3070,7 @@
           ],
           "branch": "direction",
           "bearing_deg": 352.2035161596216,
-          "sample_count": 3667
+          "sample_count": 3672
         },
         "missing_nested_samples": [
           {
@@ -3588,9 +3119,9 @@
           "passed": true,
           "expected": true,
           "actual": [
-            314,
-            1086,
-            3667
+            316,
+            1089,
+            3672
           ],
           "semantics": "correctness"
         },
@@ -3619,7 +3150,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.6731845829999656
+      "elapsed_seconds": 2.6766562089978834
     },
     {
       "case_id": "tangent_polar_1",
@@ -3712,7 +3243,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.0572931419261522e-12,
               -1.0572931419261522e-12
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -3837,7 +3369,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.2768623340016347
+      "elapsed_seconds": 2.2652438750010333
     },
     {
       "case_id": "tangent_polar_2",
@@ -3930,7 +3462,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.9440560272698804e-12,
               -1.9440560272698804e-12
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -4055,7 +3588,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.6394960839970736
+      "elapsed_seconds": 2.707561416995304
     },
     {
       "case_id": "tangent_polar_3",
@@ -4148,7 +3681,8 @@
             "second_angle_minus_halfwidth_deg": [
               -6.593857404535441e-14,
               -6.593857404535441e-14
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -4273,7 +3807,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.435381834002328
+      "elapsed_seconds": 2.4618967910064384
     },
     {
       "case_id": "tangent_polar_4",
@@ -4366,7 +3900,8 @@
             "second_angle_minus_halfwidth_deg": [
               -5.002220859751105e-12,
               -5.002220859751105e-12
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -4491,7 +4026,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.3908298340029432
+      "elapsed_seconds": 2.4084391669966863
     },
     {
       "case_id": "tangent_polar_5",
@@ -4584,7 +4119,8 @@
             "second_angle_minus_halfwidth_deg": [
               -3.115008251342033e-13,
               -3.115008251342033e-13
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -4709,7 +4245,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.295879833000072
+      "elapsed_seconds": 2.3347553330022492
     },
     {
       "case_id": "polar_same_station_closed_0",
@@ -4720,11 +4256,11 @@
           "grade": "C",
           "label": "通过",
           "profile": "primary",
-          "J_hat": 1494.9999999028669,
+          "J_hat": 1494.9999999028666,
           "independent_reachable_lower_bound_m": 1494.9999999028666,
           "underestimate_m": 0.0,
           "closed_form_J_m": 1495.0000000030564,
-          "closed_form_signed_gap_m": -1.0018948159995489e-07,
+          "closed_form_signed_gap_m": -1.0018970897363033e-07,
           "approximation_threshold_m": 14.950000000030563,
           "regression_target": null
         }
@@ -4734,11 +4270,11 @@
           "grade": "C",
           "label": "通过",
           "profile": "refined",
-          "J_hat": 1494.9999999028669,
+          "J_hat": 1494.9999999028666,
           "independent_reachable_lower_bound_m": 1494.9999999028666,
           "underestimate_m": 0.0,
           "closed_form_J_m": 1495.0000000030564,
-          "closed_form_signed_gap_m": -1.0018948159995489e-07,
+          "closed_form_signed_gap_m": -1.0018970897363033e-07,
           "approximation_threshold_m": 14.950000000030563,
           "regression_target": null
         }
@@ -4782,8 +4318,8 @@
         "sample_count": 3955
       },
       "actual": {
-        "J_hat": 1494.9999999028669,
-        "sample_count": 3152,
+        "J_hat": 1494.9999999028666,
+        "sample_count": 3157,
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
@@ -4805,7 +4341,8 @@
             "second_angle_minus_halfwidth_deg": [
               -6.250000003637981e-05,
               -5.2068592493181853e-14
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -4850,11 +4387,11 @@
           ],
           "branch": "same_station",
           "bearing_deg": null,
-          "sample_count": 3152
+          "sample_count": 3157
         },
-        "closed_form_signed_gap_m": -1.0018948159995489e-07,
-        "refined_J_hat": 1494.9999999028669,
-        "refined_closed_form_signed_gap_m": -1.0018948159995489e-07,
+        "closed_form_signed_gap_m": -1.0018970897363033e-07,
+        "refined_J_hat": 1494.9999999028666,
+        "refined_closed_form_signed_gap_m": -1.0018970897363033e-07,
         "missing_nested_samples": [
           {
             "from_level": 0,
@@ -4872,7 +4409,7 @@
         "nested_score_values_m": [
           1494.9999999023385,
           1494.9999999026847,
-          1494.9999999028669
+          1494.9999999028666
         ]
       },
       "checks": [
@@ -4880,14 +4417,14 @@
           "name": "independent_reachable_pair_dominance",
           "passed": true,
           "expected": 1494.9999999010565,
-          "actual": 1494.9999999028669,
+          "actual": 1494.9999999028666,
           "semantics": "independent lower-bound approximation; not exact J"
         },
         {
           "name": "production_cloud_pair_enumeration",
           "passed": true,
           "expected": 1494.9999999028669,
-          "actual": 1494.9999999028669,
+          "actual": 1494.9999999028666,
           "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
         },
         {
@@ -4901,21 +4438,21 @@
           "name": "refined_closed_form_approximation",
           "passed": true,
           "expected": 1495.0000000030564,
-          "actual": 1494.9999999028669,
+          "actual": 1494.9999999028666,
           "semantics": "continuous J approximation after default pair refinement"
         },
         {
           "name": "refined_reachable_pair_dominance",
           "passed": true,
           "expected": 1494.9999999010565,
-          "actual": 1494.9999999028669,
+          "actual": 1494.9999999028666,
           "semantics": "independent lower bound after default pair refinement"
         },
         {
           "name": "closed_form_approximation",
           "passed": true,
           "expected": 1495.0000000030564,
-          "actual": 1494.9999999028669,
+          "actual": 1494.9999999028666,
           "semantics": "continuous J approximation, not exact equality"
         },
         {
@@ -4923,9 +4460,9 @@
           "passed": true,
           "expected": true,
           "actual": [
-            211,
-            809,
-            3152
+            213,
+            812,
+            3157
           ],
           "semantics": "correctness"
         },
@@ -4936,7 +4473,7 @@
           "actual": [
             1494.9999999023385,
             1494.9999999026847,
-            1494.9999999028669
+            1494.9999999028666
           ],
           "semantics": "correctness"
         },
@@ -4954,7 +4491,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8032591250012047
+      "elapsed_seconds": 0.8647526660060976
     },
     {
       "case_id": "polar_same_station_closed_1",
@@ -5032,48 +4569,49 @@
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
-            5.000000023845645,
-            -0.0008726646390199766
+            1499.9999771536936,
+            -0.2617993864700052
           ],
           "y": [
-            1499.9999771536936,
-            0.2617993864700052
+            5.000000023845645,
+            0.0008726646390199767
           ],
           "branch": "direction",
           "common_bearing_deg": 0.0,
           "distance_m": 1495.0000002056363,
           "constraint_residuals": {
             "second_range_minus_near_m": [
-              1.0000000116860974e-07,
-              1495.0
+              1495.0,
+              1.0000000116860974e-07
             ],
             "second_angle_minus_halfwidth_deg": [
               -9.0951551845464e-15,
               -9.0951551845464e-15
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
           "worlds": [
             {
               "p": [
-                5.000000023845645,
-                -0.0008726646390199766
+                1499.9999771536936,
+                -0.2617993864700052
               ],
-              "rho": 1000.0,
-              "first_distance_m": 5.000000100000001,
-              "second_distance_m": 5.000000100000001,
+              "rho": 1500.0,
+              "first_distance_m": 1500.0,
+              "second_distance_m": 1500.0,
               "first_error_deg": 0.009999999999990905,
               "second_error_deg": 0.009999999999990905
             },
             {
               "p": [
-                1499.9999771536936,
-                0.2617993864700052
+                5.000000023845645,
+                0.0008726646390199767
               ],
-              "rho": 1500.0,
-              "first_distance_m": 1500.0,
-              "second_distance_m": 1500.0,
+              "rho": 1000.0,
+              "first_distance_m": 5.000000100000001,
+              "second_distance_m": 5.000000100000001,
               "first_error_deg": -0.009999999999990905,
               "second_error_deg": -0.009999999999990905
             }
@@ -5199,7 +4737,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8609486669956823
+      "elapsed_seconds": 0.899762583001575
     },
     {
       "case_id": "polar_same_station_closed_2",
@@ -5295,7 +4833,8 @@
             "second_angle_minus_halfwidth_deg": [
               4.546363285840016e-14,
               -6.822320486321587e-14
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -5444,7 +4983,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8327535829957924
+      "elapsed_seconds": 0.8939927090032143
     },
     {
       "case_id": "segment_special_18",
@@ -5531,12 +5070,12 @@
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
-            10.0,
+            18.0,
             0.0
           ],
           "y": [
-            18.0,
-            0.0
+            10.0,
+            4.898587196589413e-16
           ],
           "branch": "near",
           "common_bearing_deg": null,
@@ -5545,22 +5084,12 @@
             "second_range_minus_near_m": [
               -1.0,
               -1.0
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": false,
           "actual_legal": true,
           "worlds": [
-            {
-              "p": [
-                10.0,
-                0.0
-              ],
-              "rho": 1000.0,
-              "first_distance_m": 10.0,
-              "second_distance_m": 4.0,
-              "first_error_deg": 0.0,
-              "second_error_deg": null
-            },
             {
               "p": [
                 18.0,
@@ -5568,6 +5097,17 @@
               ],
               "rho": 1000.0,
               "first_distance_m": 18.0,
+              "second_distance_m": 4.0,
+              "first_error_deg": 0.0,
+              "second_error_deg": null
+            },
+            {
+              "p": [
+                10.0,
+                4.898587196589413e-16
+              ],
+              "rho": 1000.0,
+              "first_distance_m": 10.0,
               "second_distance_m": 4.0,
               "first_error_deg": 0.0,
               "second_error_deg": null
@@ -5693,7 +5233,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.2601777919990127
+      "elapsed_seconds": 0.2768772080016788
     },
     {
       "case_id": "segment_special_100",
@@ -5798,7 +5338,8 @@
             "second_angle_minus_halfwidth_deg": [
               0.0,
               0.0
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -5946,7 +5487,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.228317708002578
+      "elapsed_seconds": 0.2527566669959924
     },
     {
       "case_id": "polar_0",
@@ -6027,7 +5568,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -6150,7 +5692,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.4766136670004926
+      "elapsed_seconds": 2.4568443750031292
     },
     {
       "case_id": "polar_1",
@@ -6172,14 +5714,12 @@
       ],
       "refined_J_assessments": [],
       "regression_targets": [],
-      "passed": false,
+      "passed": true,
       "failure_attribution": {
         "J_underestimate_detected": false,
         "continuous_certificate_verdict": null,
         "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
-        "sampling_contract_failures": [
-          "sample_sources_nested"
-        ],
+        "sampling_contract_failures": [],
         "other_failed_checks": [],
         "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
       },
@@ -6211,7 +5751,7 @@
       },
       "actual": {
         "J_hat": 995.1172831737146,
-        "sample_count": 4410,
+        "sample_count": 4770,
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
@@ -6233,7 +5773,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -6278,54 +5819,20 @@
           ],
           "branch": "direction",
           "bearing_deg": 357.50007614276814,
-          "sample_count": 4410
+          "sample_count": 4770
         },
         "missing_nested_samples": [
           {
             "from_level": 0,
             "to_level": 1,
-            "count": 128,
-            "examples": [
-              [
-                495.0759611364582,
-                -0.868240905699468
-              ],
-              [
-                495.0759611364582,
-                0.8682409056994714
-              ],
-              [
-                495.075961234939,
-                -0.8682408883346502
-              ],
-              [
-                495.075961234939,
-                0.8682408883346536
-              ]
-            ]
+            "count": 0,
+            "examples": []
           },
           {
             "from_level": 1,
             "to_level": 2,
-            "count": 256,
-            "examples": [
-              [
-                495.0213290189514,
-                -0.4613418065433463
-              ],
-              [
-                495.0213290189514,
-                0.4613418065433452
-              ],
-              [
-                495.0213291185248,
-                -0.46134179731651026
-              ],
-              [
-                495.0213291185248,
-                0.46134179731650926
-              ]
-            ]
+            "count": 0,
+            "examples": []
           }
         ],
         "nested_score_values_m": [
@@ -6358,12 +5865,12 @@
         },
         {
           "name": "sample_sources_nested",
-          "passed": false,
+          "passed": true,
           "expected": true,
           "actual": [
             543,
-            1457,
-            4410
+            1585,
+            4770
           ],
           "semantics": "correctness"
         },
@@ -6390,7 +5897,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.5759060830023373
+      "elapsed_seconds": 3.078892375000578
     },
     {
       "case_id": "polar_2",
@@ -6471,7 +5978,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -6594,7 +6102,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.243888874996628
+      "elapsed_seconds": 2.2844626659934875
     },
     {
       "case_id": "polar_3",
@@ -6675,7 +6183,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -6798,7 +6307,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.3920390420025797
+      "elapsed_seconds": 2.4368542919983156
     },
     {
       "case_id": "polar_4",
@@ -6879,7 +6388,8 @@
             "second_angle_minus_halfwidth_deg": [
               0.0,
               -5.684341886080802e-14
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -7002,7 +6512,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 0.875721208001778
+      "elapsed_seconds": 0.86841162500059
     },
     {
       "case_id": "polar_5",
@@ -7013,8 +6523,8 @@
           "grade": "C",
           "label": "通过",
           "profile": "primary",
-          "J_hat": 193.53728119216692,
-          "independent_reachable_lower_bound_m": 193.53728119216692,
+          "J_hat": 193.53728119216646,
+          "independent_reachable_lower_bound_m": 193.53728119216646,
           "underestimate_m": 0.0,
           "closed_form_J_m": null,
           "closed_form_signed_gap_m": null,
@@ -7062,42 +6572,43 @@
         "sample_count": 3955
       },
       "actual": {
-        "J_hat": 193.53728119216692,
-        "sample_count": 3569,
+        "J_hat": 193.53728119216646,
+        "sample_count": 3567,
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
-            1311.963606540519,
-            -45.81477868556354
+            1311.9636065405195,
+            -45.81477868556349
           ],
           "y": [
             1500.0,
             0.0
           ],
           "branch": "direction",
-          "common_bearing_deg": 21.556045219573473,
-          "distance_m": 193.53728119216692,
+          "common_bearing_deg": 21.556045219573463,
+          "distance_m": 193.53728119216646,
           "constraint_residuals": {
             "second_range_minus_near_m": [
-              657.653440694869,
+              657.6534406948695,
               849.4003745317531
             ],
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
           "worlds": [
             {
               "p": [
-                1311.963606540519,
-                -45.81477868556354
+                1311.9636065405195,
+                -45.81477868556349
               ],
-              "rho": 1312.7633064771476,
-              "first_distance_m": 1312.7633064771476,
-              "second_distance_m": 662.653440694869,
+              "rho": 1312.763306477148,
+              "first_distance_m": 1312.763306477148,
+              "second_distance_m": 662.6534406948695,
               "first_error_deg": 1.0,
               "second_error_deg": -0.9999999999899956
             },
@@ -7117,11 +6628,11 @@
         },
         "underestimate_m": 0.0,
         "production_cloud_independent_oracle": {
-          "lower_bound_m": 193.53728119216692,
+          "lower_bound_m": 193.53728119216643,
           "pair": [
             [
-              1311.963606540519,
-              -45.81477868556354
+              1311.9636065405195,
+              -45.81477868556349
             ],
             [
               1500.0,
@@ -7129,8 +6640,8 @@
             ]
           ],
           "branch": "direction",
-          "bearing_deg": 21.55604521957347,
-          "sample_count": 3569
+          "bearing_deg": 21.556045219573463,
+          "sample_count": 3567
         },
         "missing_nested_samples": [
           {
@@ -7147,9 +6658,9 @@
           }
         ],
         "nested_score_values_m": [
-          193.53728119216692,
-          193.53728119216692,
-          193.53728119216692
+          193.53728119216646,
+          193.53728119216646,
+          193.53728119216646
         ]
       },
       "checks": [
@@ -7157,14 +6668,14 @@
           "name": "independent_reachable_pair_dominance",
           "passed": true,
           "expected": 193.18909501289002,
-          "actual": 193.53728119216692,
+          "actual": 193.53728119216646,
           "semantics": "independent lower-bound approximation; not exact J"
         },
         {
           "name": "production_cloud_pair_enumeration",
           "passed": true,
-          "expected": 193.53728119216692,
-          "actual": 193.53728119216692,
+          "expected": 193.53728119216643,
+          "actual": 193.53728119216646,
           "semantics": "independent strict finite-cloud lower bound; equality is not required for threshold-band pairs"
         },
         {
@@ -7179,9 +6690,9 @@
           "passed": true,
           "expected": true,
           "actual": [
-            318,
-            1017,
-            3569
+            316,
+            1015,
+            3567
           ],
           "semantics": "correctness"
         },
@@ -7190,17 +6701,17 @@
           "passed": true,
           "expected": "nondecreasing",
           "actual": [
-            193.53728119216692,
-            193.53728119216692,
-            193.53728119216692
+            193.53728119216646,
+            193.53728119216646,
+            193.53728119216646
           ],
           "semantics": "correctness"
         },
         {
           "name": "reported_witness_reachable",
           "passed": true,
-          "expected": 193.53728119216692,
-          "actual": 193.53728119216692,
+          "expected": 193.53728119216646,
+          "actual": 193.53728119216646,
           "semantics": "correctness"
         }
       ],
@@ -7208,7 +6719,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 1.8550442080013454
+      "elapsed_seconds": 1.877697874995647
     },
     {
       "case_id": "polar_6",
@@ -7230,14 +6741,12 @@
       ],
       "refined_J_assessments": [],
       "regression_targets": [],
-      "passed": false,
+      "passed": true,
       "failure_attribution": {
         "J_underestimate_detected": false,
         "continuous_certificate_verdict": null,
         "J_scope": "Reachable lower bounds only unless an exact J or continuous certificate is present; C is not an upper-bound certificate.",
-        "sampling_contract_failures": [
-          "sample_sources_nested"
-        ],
+        "sampling_contract_failures": [],
         "other_failed_checks": [],
         "benchmark_correction": "Separate sampling-contract failures from J under/overestimation; retain all failed checks."
       },
@@ -7269,7 +6778,7 @@
       },
       "actual": {
         "J_hat": 995.1716327073365,
-        "sample_count": 4382,
+        "sample_count": 4742,
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
@@ -7291,7 +6800,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -7336,54 +6846,20 @@
           ],
           "branch": "direction",
           "bearing_deg": 357.3855430781577,
-          "sample_count": 4382
+          "sample_count": 4742
         },
         "missing_nested_samples": [
           {
             "from_level": 0,
             "to_level": 1,
-            "count": 128,
-            "examples": [
-              [
-                495.0759611364582,
-                1.131759094300532
-              ],
-              [
-                495.0759611364582,
-                2.8682409056994715
-              ],
-              [
-                495.075961234939,
-                1.1317591116653498
-              ],
-              [
-                495.075961234939,
-                2.8682408883346535
-              ]
-            ]
+            "count": 0,
+            "examples": []
           },
           {
             "from_level": 1,
             "to_level": 2,
-            "count": 256,
-            "examples": [
-              [
-                495.0213290189514,
-                1.5386581934566537
-              ],
-              [
-                495.0213290189514,
-                2.461341806543345
-              ],
-              [
-                495.0213291185248,
-                1.5386582026834899
-              ],
-              [
-                495.0213291185248,
-                2.4613417973165093
-              ]
-            ]
+            "count": 0,
+            "examples": []
           }
         ],
         "nested_score_values_m": [
@@ -7416,12 +6892,12 @@
         },
         {
           "name": "sample_sources_nested",
-          "passed": false,
+          "passed": true,
           "expected": true,
           "actual": [
             543,
-            1451,
-            4382
+            1579,
+            4742
           ],
           "semantics": "correctness"
         },
@@ -7448,7 +6924,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.5321671670026262
+      "elapsed_seconds": 3.009073500004888
     },
     {
       "case_id": "polar_7",
@@ -7530,7 +7006,8 @@
             "second_angle_minus_halfwidth_deg": [
               -9.919176591210999e-12,
               -9.919176591210999e-12
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -7653,7 +7130,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.6037990410040948
+      "elapsed_seconds": 3.6449132089983323
     },
     {
       "case_id": "polar_8",
@@ -7735,7 +7212,8 @@
             "second_angle_minus_halfwidth_deg": [
               -9.947598300641403e-12,
               -9.890754881780595e-12
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -7830,7 +7308,7 @@
           "expected": true,
           "actual": [
             420,
-            1224,
+            1225,
             3866
           ],
           "semantics": "correctness"
@@ -7858,7 +7336,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.116180457996961
+      "elapsed_seconds": 3.1213974589991267
     },
     {
       "case_id": "polar_9",
@@ -7940,7 +7418,8 @@
             "second_angle_minus_halfwidth_deg": [
               -9.947598300641403e-12,
               -9.947598300641403e-12
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -8063,7 +7542,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.134429291996639
+      "elapsed_seconds": 3.1268542909965618
     },
     {
       "case_id": "polar_10",
@@ -8123,7 +7602,7 @@
       },
       "actual": {
         "J_hat": 440.7916292028732,
-        "sample_count": 3744,
+        "sample_count": 3751,
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
@@ -8145,7 +7624,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -9.947598300641403e-12
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -8190,7 +7670,7 @@
           ],
           "branch": "direction",
           "bearing_deg": 350.96310682706354,
-          "sample_count": 3744
+          "sample_count": 3751
         },
         "missing_nested_samples": [
           {
@@ -8239,9 +7719,9 @@
           "passed": true,
           "expected": true,
           "actual": [
-            334,
-            1137,
-            3744
+            337,
+            1143,
+            3751
           ],
           "semantics": "correctness"
         },
@@ -8268,7 +7748,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.926736624998739
+      "elapsed_seconds": 2.901096375004272
     },
     {
       "case_id": "polar_11",
@@ -8328,19 +7808,19 @@
       },
       "actual": {
         "J_hat": 974.9921398405972,
-        "sample_count": 3878,
+        "sample_count": 3843,
         "status": "NUMERICAL_CANDIDATE",
         "witness": {
           "x": [
             525.3483952981233,
-            -8.33158708609681
+            -8.331587086096809
           ],
           "y": [
             1499.8114007306024,
             23.785757051407316
           ],
           "branch": "direction",
-          "common_bearing_deg": 3.082244007668944,
+          "common_bearing_deg": 3.082244007668945,
           "distance_m": 974.9921398405972,
           "constraint_residuals": {
             "second_range_minus_near_m": [
@@ -8350,7 +7830,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.000444171950221e-11,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -8358,7 +7839,7 @@
             {
               "p": [
                 525.3483952981233,
-                -8.33158708609681
+                -8.331587086096809
               ],
               "rho": 1000.0,
               "first_distance_m": 525.41445715329,
@@ -8386,7 +7867,7 @@
           "pair": [
             [
               525.3483952981233,
-              -8.33158708609681
+              -8.331587086096809
             ],
             [
               1499.8114007306024,
@@ -8394,8 +7875,8 @@
             ]
           ],
           "branch": "direction",
-          "bearing_deg": 3.082244007668939,
-          "sample_count": 3878
+          "bearing_deg": 3.08224400766894,
+          "sample_count": 3843
         },
         "missing_nested_samples": [
           {
@@ -8444,9 +7925,9 @@
           "passed": true,
           "expected": true,
           "actual": [
-            360,
-            1172,
-            3878
+            341,
+            1149,
+            3843
           ],
           "semantics": "correctness"
         },
@@ -8473,7 +7954,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.447671417001402
+      "elapsed_seconds": 2.42596679199778
     },
     {
       "case_id": "polar_12",
@@ -8555,7 +8036,8 @@
             "second_angle_minus_halfwidth_deg": [
               -9.947598300641403e-12,
               -1.000444171950221e-11
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -8678,7 +8160,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.458546750000096
+      "elapsed_seconds": 2.3976411250041565
     },
     {
       "case_id": "monotone_epsilon",
@@ -8734,7 +8216,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 2.7025634169986006
+      "elapsed_seconds": 2.6616996669981745
     },
     {
       "case_id": "monotone_expansion",
@@ -8796,7 +8278,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 0.07888804099638946
+      "elapsed_seconds": 0.07764962499641115
     },
     {
       "case_id": "monotone_nested",
@@ -8848,7 +8330,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 1.2206912500041653
+      "elapsed_seconds": 1.231553666999389
     },
     {
       "case_id": "clearance_10_18",
@@ -8975,7 +8457,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.001036791996739339
+      "elapsed_seconds": 0.0013411659965640865
     },
     {
       "case_id": "clearance_10_30",
@@ -9111,7 +8593,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.030897959004505537
+      "elapsed_seconds": 0.03436529099417385
     },
     {
       "case_id": "clearance_50_86",
@@ -9247,7 +8729,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.04911241700028768
+      "elapsed_seconds": 0.03425095800048439
     },
     {
       "case_id": "clearance_50_90",
@@ -9376,7 +8858,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.14617400000133784
+      "elapsed_seconds": 0.15697458299837308
     },
     {
       "case_id": "clearance_50_92",
@@ -9530,7 +9012,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.03065141700062668
+      "elapsed_seconds": 0.0336990829964634
     },
     {
       "case_id": "feedback_near_boundary",
@@ -9653,7 +9135,8 @@
             "second_range_minus_near_m": [
               0.0,
               0.0
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -9700,7 +9183,8 @@
               "second_range_minus_near_m": [
                 0.0,
                 0.0
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": true,
             "actual_legal": true,
@@ -9750,7 +9234,8 @@
               "second_angle_minus_halfwidth_deg": [
                 -1.0,
                 -1.0
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": false,
             "actual_legal": true,
@@ -9800,7 +9285,8 @@
               "second_angle_minus_halfwidth_deg": [
                 -1.0,
                 -1.0
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": false,
             "actual_legal": true,
@@ -9850,7 +9336,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0011201250017620623
+      "elapsed_seconds": 0.0012564170028781518
     },
     {
       "case_id": "feedback_wrap_zero",
@@ -9996,7 +9482,8 @@
             "second_angle_minus_halfwidth_deg": [
               0.0,
               0.0
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": true,
           "actual_legal": true,
@@ -10047,7 +9534,8 @@
               "second_angle_minus_halfwidth_deg": [
                 0.0,
                 0.0
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": true,
             "actual_legal": true,
@@ -10097,7 +9585,8 @@
               "second_angle_minus_halfwidth_deg": [
                 0.0,
                 0.0
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": true,
             "actual_legal": true,
@@ -10147,7 +9636,8 @@
               "second_angle_minus_halfwidth_deg": [
                 0.0,
                 0.0
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": true,
             "actual_legal": true,
@@ -10197,7 +9687,8 @@
               "second_angle_minus_halfwidth_deg": [
                 0.0,
                 0.0
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": true,
             "actual_legal": true,
@@ -10247,7 +9738,8 @@
               "second_angle_minus_halfwidth_deg": [
                 -0.009999999999990905,
                 -0.009999999999990905
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": false,
             "actual_legal": true,
@@ -10297,7 +9789,8 @@
               "second_angle_minus_halfwidth_deg": [
                 -0.009999999999990905,
                 -0.009999999999990905
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": false,
             "actual_legal": true,
@@ -10347,7 +9840,8 @@
               "second_angle_minus_halfwidth_deg": [
                 -0.49500000000000455,
                 -0.49500000000000455
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": false,
             "actual_legal": true,
@@ -10397,7 +9891,8 @@
               "second_angle_minus_halfwidth_deg": [
                 -0.49500000000000455,
                 -0.49500000000000455
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": false,
             "actual_legal": true,
@@ -10447,7 +9942,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0016266249949694611
+      "elapsed_seconds": 0.0017198329951497726
     },
     {
       "case_id": "feedback_singleton",
@@ -10546,7 +10041,8 @@
             "second_angle_minus_halfwidth_deg": [
               -1.0,
               -1.0
-            ]
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
           },
           "near_boundary": false,
           "actual_legal": true,
@@ -10597,7 +10093,8 @@
               "second_angle_minus_halfwidth_deg": [
                 -1.0,
                 -1.0
-              ]
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
             },
             "near_boundary": false,
             "actual_legal": true,
@@ -10647,7 +10144,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0009714589978102595
+      "elapsed_seconds": 0.001043417003529612
     },
     {
       "case_id": "short_baseline_select",
@@ -10766,34 +10263,34 @@
                   "bearing_deg": 359.99665568988735,
                   "half_width_deg": 1.0
                 },
-                "R_hat": 745.1153344691901,
+                "R_hat": 745.1153344691902,
                 "estimated_center": [
-                  755.1145660437293,
-                  -0.04723528017266778
+                  755.1145660437292,
+                  -0.047235280174514525
                 ],
                 "support_points": [
                   [
+                    1499.771542734586,
+                    -26.17860965592525
+                  ],
+                  [
+                    9.999243660667709,
+                    0.08697023211267413
+                  ],
+                  [
                     1499.774806140085,
                     25.990976654800768
-                  ],
-                  [
-                    9.999243660667712,
-                    0.08697023211267489
-                  ],
-                  [
-                    1499.7715427345859,
-                    -26.178609655925246
                   ]
                 ],
                 "r_U": 747.7277502323589,
                 "cover_center": [
                   752.7277451077712,
-                  -0.08728190531224374
+                  -0.0872819053124303
                 ],
                 "H_U": 1495.229256166799,
                 "status": "NOT_YET_GUARANTEED",
                 "evidence": "impossible_triple",
-                "residual": 2.345346139520643e-15,
+                "residual": 3.552713678800501e-15,
                 "threshold_margin_m": -727.7277502323589,
                 "outer_sides": 32,
                 "subsequent_movement_seconds": null,
@@ -10801,16 +10298,16 @@
                 "must_move_proven": true,
                 "impossibility_witness": [
                   [
+                    1499.771542734586,
+                    -26.17860965592525
+                  ],
+                  [
+                    9.999243660667709,
+                    0.08697023211267413
+                  ],
+                  [
                     1499.774806140085,
                     25.990976654800768
-                  ],
-                  [
-                    9.999243660667712,
-                    0.08697023211267489
-                  ],
-                  [
-                    1499.7715427345859,
-                    -26.178609655925246
                   ]
                 ],
                 "reason": "impossible_single_guaranteed_clear",
@@ -10819,19 +10316,19 @@
                 "outer_vertices": [
                   [
                     5.0,
-                    1.835943913173696e-18
+                    0.0
                   ],
                   [
-                    1499.7715383022305,
-                    -26.178609578558195
-                  ],
-                  [
-                    1500.0,
-                    -26.182597392326375
+                    1499.7715382959593,
+                    -26.178609578448736
                   ],
                   [
                     1500.0,
-                    26.008033581701888
+                    -26.18259739232638
+                  ],
+                  [
+                    1500.0,
+                    26.00803358170152
                   ]
                 ],
                 "clearance_radius_m": 20.0
@@ -10842,10 +10339,10 @@
                   "bearing_deg": null,
                   "half_width_deg": 1.0
                 },
-                "R_hat": 2.502664068379047,
+                "R_hat": 2.5026640683790466,
                 "estimated_center": [
-                  7.500380870117379,
-                  -1.1507461650239748e-13
+                  7.50038087011738,
+                  -1.167636151979019e-13
                 ],
                 "support_points": [
                   [
@@ -10958,14 +10455,14 @@
           "name": "B10.0_conditional_R_support_0",
           "passed": true,
           "expected": 745.1153344691902,
-          "actual": 745.1153344691901,
+          "actual": 745.1153344691902,
           "semantics": "support consistency; not exact full posterior radius"
         },
         {
           "name": "B10.0_conditional_R_support_1",
           "passed": true,
           "expected": 2.502664068379047,
-          "actual": 2.502664068379047,
+          "actual": 2.5026640683790466,
           "semantics": "support consistency; not exact full posterior radius"
         },
         {
@@ -10981,7 +10478,7 @@
         "closed_form",
         "adversarial"
       ],
-      "elapsed_seconds": 9.610815374995582
+      "elapsed_seconds": 11.004678041004809
     },
     {
       "case_id": "short_baseline_frontier",
@@ -11128,16 +10625,16 @@
                     26.178609655923772
                   ]
                 ],
-                "r_U": 724.2370199053198,
+                "r_U": 724.2370199053216,
                 "cover_center": [
-                  775.661088131518,
-                  12.639395002206282
+                  775.6610881315198,
+                  12.639395002206317
                 ],
-                "H_U": 1496.5345016140661,
+                "H_U": 1496.5345016140698,
                 "status": "NOT_YET_GUARANTEED",
                 "evidence": "impossible_pair",
-                "residual": 2.220446049250313e-16,
-                "threshold_margin_m": -704.2370199053198,
+                "residual": 3.552713678800501e-15,
+                "threshold_margin_m": -704.2370199053216,
                 "outer_sides": 32,
                 "subsequent_movement_seconds": null,
                 "subsequent_total_seconds": null,
@@ -11158,15 +10655,15 @@
                 "outer_vertices": [
                   [
                     51.55063341910755,
-                    -0.8998196534212655
+                    -0.8998196534212656
                   ],
                   [
-                    96.54090547848453,
-                    -1.685127773355864
+                    96.54090547848455,
+                    -1.6851277733558647
                   ],
                   [
-                    1499.7715428439285,
-                    26.17860965783383
+                    1499.7715428439321,
+                    26.1786096578339
                   ],
                   [
                     99.72012504835233,
@@ -11181,7 +10678,7 @@
                   "bearing_deg": null,
                   "half_width_deg": 1.0
                 },
-                "R_hat": 1.101559431605712,
+                "R_hat": 1.1015594316057118,
                 "estimated_center": [
                   6.09564736734986,
                   -0.01913788664495214
@@ -11270,16 +10767,16 @@
                     26.178609655923772
                   ]
                 ],
-                "r_U": 724.2370199053198,
+                "r_U": 724.2370199053216,
                 "cover_center": [
-                  775.661088131518,
-                  12.639395002206282
+                  775.6610881315198,
+                  12.639395002206317
                 ],
-                "H_U": 1496.5345016140661,
+                "H_U": 1496.5345016140698,
                 "status": "NOT_YET_GUARANTEED",
                 "evidence": "impossible_pair",
-                "residual": 2.220446049250313e-16,
-                "threshold_margin_m": -704.2370199053198,
+                "residual": 3.552713678800501e-15,
+                "threshold_margin_m": -704.2370199053216,
                 "outer_sides": 32,
                 "subsequent_movement_seconds": null,
                 "subsequent_total_seconds": null,
@@ -11300,15 +10797,15 @@
                 "outer_vertices": [
                   [
                     51.55063341910755,
-                    -0.8998196534212655
+                    -0.8998196534212656
                   ],
                   [
-                    96.54090547848453,
-                    -1.685127773355864
+                    96.54090547848455,
+                    -1.6851277733558647
                   ],
                   [
-                    1499.7715428439285,
-                    26.17860965783383
+                    1499.7715428439321,
+                    26.1786096578339
                   ],
                   [
                     99.72012504835233,
@@ -11323,7 +10820,7 @@
                   "bearing_deg": null,
                   "half_width_deg": 1.0
                 },
-                "R_hat": 1.101559431605712,
+                "R_hat": 1.1015594316057118,
                 "estimated_center": [
                   6.09564736734986,
                   -0.01913788664495214
@@ -11456,7 +10953,7 @@
           "name": "B5.0_conditional_R_support_1",
           "passed": true,
           "expected": 1.1015594316057118,
-          "actual": 1.101559431605712,
+          "actual": 1.1015594316057118,
           "semantics": "support consistency; not exact full posterior radius"
         },
         {
@@ -11528,7 +11025,7 @@
           "name": "B10.0_conditional_R_support_1",
           "passed": true,
           "expected": 1.1015594316057118,
-          "actual": 1.101559431605712,
+          "actual": 1.1015594316057118,
           "semantics": "support consistency; not exact full posterior radius"
         },
         {
@@ -11555,16 +11052,16 @@
         "closed_form",
         "invariant"
       ],
-      "elapsed_seconds": 22.983126875005837
+      "elapsed_seconds": 27.648140292003518
     }
   ],
   "weak_comparisons_excluded": 0,
-  "elapsed_seconds": 95.8309490419997,
+  "elapsed_seconds": 103.53678054200282,
   "production_sha256": {
-    "q2.py": "27dc886757f5b3f60e7c37a7affd81a9bfd5812ea2c65d043c0d471d7f43999e",
-    "diagnostics.py": "b4b5ad59d0a6fee531931f5f28af7fb8b4ee88b22e84c489eca6b4a8339fab90",
-    "feasible.py": "ac537fe8957f418f3ba7840adb754866c6872bf3880de339351e789af5f2aada",
-    "geometry.py": "2e0feb1bf9c52e9c3c43150dc368c759f36861c0ba67f4ac6017a9089bf8e2a5"
+    "q2.py": "6b9c7af6282f4b0a8885fa878193b4dd0a96dbd0b1de5b8c8e6523f9ad925a39",
+    "diagnostics.py": "3c3b651d8e22a7088334fd0acf3492b31112b45767a385b1e641ed8a7446e704",
+    "feasible.py": "4b6a922594e128c8f06c2b8a36376f9a96189a7d623b89b4560a5ee2ea4315d5",
+    "geometry.py": "6acc95167e815c7781207bae8cc3699053a003523a4589e1fbc245d56e71150d"
   },
   "scope_notes": [
     "J_hat is NUMERICAL_CANDIDATE, not a certified upper bound. Strict oracle dominance is the user-requested adequacy criterion; a failure can expose insufficient sampling rather than incorrect pair algebra.",
@@ -11671,16 +11168,13 @@
       "passed": true
     }
   ],
-  "J_passing_cases_with_other_check_failures": [
-    "polar_1",
-    "polar_6"
-  ],
+  "J_passing_cases_with_other_check_failures": [],
   "legacy_pass_fail_note": "n_pass/n_fail and failures retain all-check compatibility; use grade_counts for mutually exclusive A/B/C J results.",
   "production_sha256_after": {
-    "q2.py": "27dc886757f5b3f60e7c37a7affd81a9bfd5812ea2c65d043c0d471d7f43999e",
-    "diagnostics.py": "b4b5ad59d0a6fee531931f5f28af7fb8b4ee88b22e84c489eca6b4a8339fab90",
-    "feasible.py": "ac537fe8957f418f3ba7840adb754866c6872bf3880de339351e789af5f2aada",
-    "geometry.py": "2e0feb1bf9c52e9c3c43150dc368c759f36861c0ba67f4ac6017a9089bf8e2a5"
+    "q2.py": "6b9c7af6282f4b0a8885fa878193b4dd0a96dbd0b1de5b8c8e6523f9ad925a39",
+    "diagnostics.py": "3c3b651d8e22a7088334fd0acf3492b31112b45767a385b1e641ed8a7446e704",
+    "feasible.py": "4b6a922594e128c8f06c2b8a36376f9a96189a7d623b89b4560a5ee2ea4315d5",
+    "geometry.py": "6acc95167e815c7781207bae8cc3699053a003523a4589e1fbc245d56e71150d"
   },
   "production_unchanged_during_run": true,
   "certification": {

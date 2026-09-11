@@ -7,7 +7,7 @@ from .geometry import (Point2, NumericPolicy, BearingMeasurement, point, unit,
                        distance, angle_delta, bearing)
 from .circle import minimum_circle, ordinary_three_point_circle
 from .feasible import (SourceSet, Feedback, build_source_set, posterior_contains,
-                       posterior_outer_polygon, check_candidate)
+                       posterior_outer_polygon, check_candidate, closure_distance)
 from .q2 import SourceSamples
 
 
@@ -38,7 +38,25 @@ class ClearanceSummary:
 
 def clearance_summary(source_set: SourceSet, q: Point2, feedback: Feedback,
                       samples: SourceSamples, policy: NumericPolicy) -> ClearanceSummary:
+    # Feedback is conditional on an accepted observation consistent with this model.
+    # An empty sample alone is not a proof of an impossible feedback.
     ss, p = source_set, source_set.physics
+    reason = None
+    if ss.status != 'OK':
+        reason = 'inconsistent_first_observation'
+    elif point(q) == ss.first.position and (feedback.kind != 'direction' or
+            angle_delta(feedback.bearing_deg, ss.first.bearing_deg) != 0):
+        reason = 'contradicts_fixed_first_feedback'
+    elif feedback.kind == 'near' and closure_distance(ss, q)[0] > p.near_radius:
+        reason = 'near_disjoint_from_source_closure'
+    if reason:
+        return ClearanceSummary(feedback, None, None, (), None, None, None,
+                                'INCONSISTENT_FEEDBACK', 'analytic_contradiction', None,
+                                None, 0, None, None, reason=reason)
+    if check_candidate(ss, q, False, policy).status != 'IN':
+        return ClearanceSummary(feedback, None, None, (), None, None, None,
+                                'RECEPTION_UNRESOLVED', 'reception_not_proven', None,
+                                None, 0, None, None, reason='requires_guaranteed_reception')
     pts = np.asarray(samples.points, dtype=float).reshape(-1, 2)
     pts = pts[posterior_contains(ss, q, feedback, pts, policy)]
     circle = minimum_circle(pts, policy, seed=0)
@@ -241,10 +259,17 @@ def compare_heuristics(ss, config, recommended=None):
                   'orthogonal_assumed_midrange': point(s+750*u+750*v)}
     if recommended is not None:
         candidates['main'] = recommended
-    points = set(_sample_sources(ss, 2, config.source_grids).points)
+    points = set(_sample_sources(ss, 2, config.source_grids, inward=config.near_offset_m).points)
     for q in candidates.values():
-        points.update(_sample_sources(ss, 2, config.source_grids, q).points)
+        points.update(_sample_sources(ss, 2, config.source_grids, q, config.near_offset_m,
+                                      second_half_width_deg=config.second_half_width_deg).points)
     samples = SourceSamples(tuple(sorted(points)), 2, config.source_grids[2])
+    for q in candidates.values():
+        if check_candidate(ss, q, config.require_direction, config.policy).status == 'IN':
+            local_score = score_point(ss, q, samples, replace(config, refine_pairs=True))
+            for witness in local_score.top_pairs:
+                points.update((witness.x, witness.y))
+    samples = replace(samples, points=tuple(sorted(points)), offset_m=config.near_offset_m)
     results = []
     for name, q in candidates.items():
         check = check_candidate(ss, q, config.require_direction, config.policy)
@@ -274,6 +299,7 @@ def reassess_old_point(ss, q, config):
     assessment = check_admissibility(ss, q, config)
     score = None
     if assessment['status'] == 'IN':
-        samples = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m)
+        samples = _sample_sources(ss, 2, config.source_grids, q, config.near_offset_m,
+                                  second_half_width_deg=config.second_half_width_deg)
         score = score_point(ss, q, samples, replace(config, refine_pairs=True))
     return dict(assessment, score=score)

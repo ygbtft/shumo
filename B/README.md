@@ -30,7 +30,7 @@
 当前 Q3/Q4 主力的 HTTP 入口是 `run_bounded_robot.py --series cover21`，分别指定
 `--problem 3 --method range_area7`、`--problem 4 --method range_grid21_29`。
 默认 `--mode mock-http` 会启动自带 `simulator.py` 的独立回环 HTTP 服务，使用系统分配端口，跑完关闭；不会访问官方端口。
-`--series` 默认仍为历史 `icra`，运行主力时必须明确写 `cover21`。
+`--series` 默认为 `cover21`，主入口只注册这两个定型候选。历史实验 CLI 保留在 `experiments/run_bounded_robot.py`。
 本地完整命令、两局实测证据、时间口径和用户登录演练后的切换开关见 [BOUNDED_HTTP.md](BOUNDED_HTTP.md)。
 
 使用 Python 及 NumPy、SciPy、pandas、Matplotlib；Q1/Q2 测试还使用 pytest 和 mpmath。历史运行环境为 macOS ARM64、Python 3.13.5；新研究的基础随机种子为 42。已有上游固定夹具保留原始内容，不重生成来改变通过率。

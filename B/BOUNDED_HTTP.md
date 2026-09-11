@@ -19,7 +19,7 @@ Q34_PYTHON=/Users/flower/math/2026/B题/models/q1q2/.venv/bin/python
 
 - 默认 `--mode mock-http`：自建 `HTTPServer(('127.0.0.1', 0))`，操作系统分配空闲端口；只请求本进程拥有的服务，退出时关闭。显式指定 `--mode mock-http` 效果相同。该模式拒绝 `--base-url` 等演练参数，避免误连已有服务。
 - `--mode offline`：保留原来的参考 peer mock 进程内运行，结果标为 `offline_peer_only`。这与自带 World 使用不同场景/误差生成器，不能按同 seed 当作同一场景比较。
-- `--series` 默认仍是旧 `icra`，主力必须指定 `--series cover21`。方法不自动替换。
+- `--series` 默认且仅支持 `cover21`，方法不自动替换。旧实验系列使用 `experiments/run_bounded_robot.py`，其历史默认值仍为 `icra`。
 - 沿用 `cover21_confirmation` 的工厂、规格、已保存的路线数据及其依赖；没有重算站点、修改测向/清除/终止数学口径。仍需完整 B/ checkout，历史 `dist` 包尚不包含此新入口。
 
 ## 本次实际输出

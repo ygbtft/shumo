@@ -1,6 +1,6 @@
 {
   "area": "q1_geometry",
-  "generated_utc": "2026-09-11T06:40:12.218474+00:00",
+  "generated_utc": "2026-09-11T10:35:36.552970+00:00",
   "n_cases": 285,
   "n_pass": 285,
   "n_fail": 0,
@@ -726,7 +726,7 @@
           "method": "exact_feasibility",
           "conflict_constraints": [
             2,
-            3
+            5
           ],
           "minimum_intersection_sine": null,
           "condition_number": null,
@@ -86729,13 +86729,13 @@
     "isolated_diameter_cases": 183,
     "isolated_diameter_failures": 0
   },
-  "elapsed_seconds": 3.475790666998364,
+  "elapsed_seconds": 5.119178250002733,
   "provenance": {
     "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
     "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
     "numpy": "2.5.3",
     "scipy": "1.18.1",
-    "production_sha256": "88753b8fc15581be91d5f7e3540a11a9db0de74547fe9191e216d80bfcc6c6b2",
+    "production_sha256": "6acc95167e815c7781207bae8cc3699053a003523a4589e1fbc245d56e71150d",
     "production_stable_during_run": true,
     "cases_sha256": "1bcf92bcc38732429e3bf49e0d68eb61c9b87edfdb7445b1af7c821d0eda650b",
     "seed": 20260911

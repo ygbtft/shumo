@@ -9,7 +9,16 @@ from geometry import bearing_clip, minimum_circle
 def genetic_route(points, seed=42, population=96, generations=180):
     """Elitist order-crossover GA, inversion mutation and local 2-opt polishing."""
     began=time.perf_counter()
-    p=np.asarray(points)
+    p=np.asarray(points).reshape(-1, 2)
+    # Coverage stations need one visit per coordinate. Preserve first-occurrence
+    # order so distinct station sets keep the same seeded search and tie handling.
+    _, unique_ids=np.unique(p, axis=0, return_index=True)
+    p=p[np.sort(unique_ids)]
+    if len(p)<2:
+        distance=route_length(p)
+        return p.copy(),{"seed":seed,"population":population,"generations":generations,
+                         "wall_s":time.perf_counter()-began,"initial_2opt_m":distance,
+                         "best_m":distance,"history":[]}
     rng=np.random.default_rng(seed)
     n=len(p)
     distances=np.linalg.norm(p[:,None]-p[None,:],axis=2)

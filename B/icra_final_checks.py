@@ -22,17 +22,82 @@ RUNS={"joint-search":1488,"layout-alternatives":1488,"spatial-decisions":1767,
 
 
 def partition_check(certificate):
-    leaves={tuple(c[:3]) for c in certificate["cells"]};assert len(leaves)==len(certificate["cells"])
-    r=certificate["arena_radius"];stack=[(0.,0.,r)];seen=set();minimum=min(c[2] for c in leaves);visited=0
+    if certificate.get("arena_radius") != 1800.:
+        raise ValueError("partition requires arena_radius=1800")
+    cells = certificate.get("cells")
+    if cells is None or not len(cells):
+        raise ValueError("missing nonempty partition leaves")
+    leaves = set()
+    ancestors = set()
+    for cell in cells:
+        if len(cell) != 4:
+            raise ValueError("malformed partition leaf")
+        x,y,h = cell[:3]
+        if not np.isfinite([x,y,h]).all() or h <= 0:
+            raise ValueError("partition leaf must be finite with positive half-width")
+        key = (x,y,h)
+        if key in leaves:
+            raise ValueError("duplicate partition leaves")
+        leaves.add(key)
+        cx,cy,ch = 0.,0.,1800.
+        # Only ancestors of submitted leaves can need subdivision. Validate each
+        # path first so tiny/off-tree inputs cannot trigger an exponential search.
+        # From radius 1800, binary64 reaches zero within 1086 halvings.
+        for _ in range(1086):
+            if (cx,cy,ch) == key:
+                break
+            half = ch/2
+            if ch <= h or half == 0 or half == ch:
+                raise ValueError("partition contains non-quadtree leaves")
+            ancestors.add((cx,cy,ch))
+            cx += half if x > cx else -half
+            cy += half if y > cy else -half
+            ch = half
+        else:
+            raise ValueError("partition leaf exceeds binary64 subdivision depth")
+    r=1800.;stack=[(0.,0.,r)];seen=set();visited=0
     while stack:
         x,y,h=stack.pop();visited+=1
         if (x,y,h) in leaves:seen.add((x,y,h));continue
         nearest=np.maximum(np.abs([x,y])-h,0.)
         if nearest@nearest>r*r+1e-6:continue
-        assert h>=minimum,(x,y,h,"uncovered quadtree cell")
+        if (x,y,h) not in ancestors:
+            raise ValueError(f"incomplete partition: uncovered quadtree cell {(x,y,h)}")
         half=h/2;stack.extend((x+dx*half,y+dy*half,half) for dx in (-1,1) for dy in (-1,1))
-    assert seen==leaves
+    if seen!=leaves:
+        raise ValueError("partition contains overlapping or non-quadtree leaves")
     return dict(cells=len(seen),partition_nodes=visited)
+
+
+def truth_margin(poly, point):
+    """Signed containment margin in metres for a convex, CCW recorded region."""
+    poly = np.asarray(poly, dtype=float)
+    point = np.asarray(point, dtype=float)
+    if (poly.ndim != 2 or poly.shape[1] != 2 or not len(poly)
+            or not np.isfinite(poly).all() or point.shape != (2,)
+            or not np.isfinite(point).all()):
+        raise ValueError("truth containment requires a nonempty finite region and point")
+    # Use the extreme endpoints for collinear regions, including repeated vertices.
+    # Two opposite edge half-planes alone constrain a line, not a finite segment.
+    axis = int(np.ptp(poly, axis=0).argmax())
+    a = poly[poly[:,axis].argmin()]
+    b = poly[poly[:,axis].argmax()]
+    edge = b-a
+    length = float(np.linalg.norm(edge))
+    if length == 0:
+        return -float(np.linalg.norm(point-a))
+    offsets = poly-a
+    cross = edge[0]*offsets[:,1]-edge[1]*offsets[:,0]
+    if np.all(cross == 0):
+        projection = float((point-a)@edge/(length*length))
+        closest = a+min(1.,max(0.,projection))*edge
+        return -float(np.linalg.norm(point-closest))
+    edges = np.roll(poly,-1,axis=0)-poly
+    norms = np.linalg.norm(edges,axis=1)
+    good = norms > 0
+    relative = point-poly
+    crosses = edges[:,0]*relative[:,1]-edges[:,1]*relative[:,0]
+    return float((crosses[good]/norms[good]).min())
 
 
 class RecordedRegions(dict):
@@ -52,22 +117,23 @@ def main():
                 index=0
                 def replay(endpoint,raw):
                     nonlocal index
-                    entry=trace[index];assert endpoint==entry["path"] and json.loads(raw)==entry["request"],(method,index)
+                    entry=trace[index]
+                    if not (endpoint==entry["path"] and json.loads(raw)==entry["request"]):
+                        raise ValueError((method,index))
                     index+=1;return 200,entry["response"]
                 policy=build(Client(replay,robot_id="mock-robot"),spec,problem,paths)
                 recorded=RecordedRegions();policy.regions=recorded
-                stats=policy.run();assert index==len(trace)
+                stats=policy.run()
+                if not (index==len(trace)):
+                    raise ValueError('replay did not consume the full trace')
                 # Only AFTER the feedback-only replay, read scoring truth.
                 fixture=json.loads((OUT/"scenarios_scoring_only"/f"{case}.json").read_text())
                 sources={s["channel"]:np.array([s["x"],s["y"]]) for s in fixture["scenario"]["sources"]}
                 min_margin=math.inf
                 for ch,poly in recorded.history:
-                    point=sources[ch];edges=np.roll(poly,-1,axis=0)-poly;norm=np.linalg.norm(edges,axis=1)
-                    good=norm>1e-9
-                    if good.any():
-                        relative=point-poly;cross=edges[:,0]*relative[:,1]-edges[:,1]*relative[:,0]
-                        margin=float((cross[good]/norm[good]).min());min_margin=min(min_margin,margin)
-                        assert margin>=-1e-5,(problem,method,case_id,ch,margin)
+                    margin=truth_margin(poly,sources[ch]);min_margin=min(min_margin,margin)
+                    if margin < -1e-5:
+                        raise ValueError(f"truth outside recorded region: {(problem,method,case_id,ch,margin)}")
                 checks.append(dict(test=f"feedback_only_replay_and_region_containment_q{problem}_{method}_{case_id}",passed=True,commands=index,region_updates=len(recorded.history),minimum_truth_margin_m=min_margin))
     certified=json.loads((ROOT/"experiments/runs/2026-09-11_convex-visibility/certified_layouts.json").read_text())
     for name,item in certified.items():
@@ -78,27 +144,40 @@ def main():
     completed=[]
     for name,count in RUNS.items():
         folder=ROOT/"experiments/runs"/f"2026-09-11_{name}"
-        completion=json.loads((folder/"completion.json").read_text());assert completion["executions"]==count
+        completion=json.loads((folder/"completion.json").read_text())
+        if not (completion["executions"]==count):
+            raise ValueError('archive execution count mismatch')
         rows=[json.loads(line) for line in (folder/"trials.jsonl").read_text().splitlines()]
-        assert len(rows)==count and all(r["all_cleared"] and not r["failure"] for r in rows)
-        assert all(r.get("inconsistent_updates",0)==0 and r.get("bracket_cut_inconsistencies",0)==0 for r in rows)
-        assert all(r["cleared"]==16 for r in rows if r["stop_reason"]=="public_upper_bound_16")
-        assert all(r["total_virtual_s"]<360000 and r["commands"]<=9766 for r in rows)
+        if not (len(rows)==count and all(r["all_cleared"] and not r["failure"] for r in rows)):
+            raise ValueError('archive rows must match the count and all clear without failures')
+        if not (all(r.get("inconsistent_updates",0)==0 and r.get("bracket_cut_inconsistencies",0)==0 for r in rows)):
+            raise ValueError('archive contains inconsistent region updates')
+        if not (all(r["cleared"]==16 for r in rows if r["stop_reason"]=="public_upper_bound_16")):
+            raise ValueError('public upper-bound stop requires 16 cleared sources')
+        if not (all(r["total_virtual_s"]<360000 and r["commands"]<=9766 for r in rows)):
+            raise ValueError('archive exceeds virtual time or command limits')
         config_name="evaluation_config.json" if name=="layout-alternatives" else "run_config.json"
         snapshot_name="evaluation_code_snapshot" if name=="layout-alternatives" else "code_snapshot"
         config=json.loads((folder/config_name).read_text())
         for filename,sha in config["code_sha256"].items():
-            assert hashlib.sha256((folder/snapshot_name/filename).read_bytes()).hexdigest()==sha,(name,filename)
+            if not (hashlib.sha256((folder/snapshot_name/filename).read_bytes()).hexdigest()==sha):
+                raise ValueError((name,filename))
         completed.append(dict(run=name,executions=count,all_cleared=count,stop_reasons=dict(Counter(r["stop_reason"] for r in rows))))
         checks.append(dict(test=f"completed_archive_counts_stops_snapshots_{name}",passed=True,executions=count))
     for relative,sha in json.loads((ROOT/"inputs_readonly_extract/input_sha256.json").read_text()).items():
-        assert hashlib.sha256((ROOT.parent/relative).read_bytes()).hexdigest()==sha
+        if not (hashlib.sha256((ROOT.parent/relative).read_bytes()).hexdigest()==sha):
+            raise ValueError('original input hash mismatch')
     old=json.loads((ROOT/"experiments/runs/2026-09-10_independent/run_config.json").read_text())
-    public="project/topic_probes/b_probe.py";assert hashlib.sha256((ROOT.parent/public).read_bytes()).hexdigest()==old["input_sha256"][public]
+    public="project/topic_probes/b_probe.py"
+    if not (hashlib.sha256((ROOT.parent/public).read_bytes()).hexdigest()==old["input_sha256"][public]):
+        raise ValueError('public probe hash mismatch')
     for item in json.loads((ROOT/"experiments/runs/2026-09-11_peer-paper-review/paper_sha256.json").read_text()):
-        assert hashlib.sha256((ROOT/"别人的结果/同学一"/item["name"]).read_bytes()).hexdigest()==item["sha256"]
+        if not (hashlib.sha256((ROOT/"别人的结果/同学一"/item["name"]).read_bytes()).hexdigest()==item["sha256"]):
+            raise ValueError('peer paper hash mismatch')
     for repo in ("shumo-b","shumo-b-macos-handoff"):
-        process=subprocess.run(["git","-C",str(ROOT/"reference"/repo),"status","--porcelain"],capture_output=True,text=True,check=True);assert not process.stdout.strip()
+        process=subprocess.run(["git","-C",str(ROOT/"reference"/repo),"status","--porcelain"],capture_output=True,text=True,check=True)
+        if process.stdout.strip():
+            raise ValueError('upstream clone has local changes')
     checks.append(dict(test="original_documents_35_peer_images_public_probe_and_upstream_clones_unchanged",passed=True))
     for p in ROOT.glob("*.py"):ast.parse(p.read_text(),filename=str(p))
     checks.append(dict(test="all_top_level_python_parses",passed=True))
@@ -108,13 +187,16 @@ def main():
         for target in re.findall(r"\]\(([^)]+)\)",p.read_text()):
             if target.startswith(("https:","http:","#")):continue
             if not (p.parent/target.split("#")[0]).exists():broken.append([p.name,target])
-    assert not broken,broken
+    if broken:
+        raise ValueError(broken)
     checks.append(dict(test="report_links_resolve",passed=True))
     result=dict(passed=len(checks),failed=0,checks=checks,completed_runs=completed,official_calls=0,feedback_replays=40,new_scored_executions=sum(RUNS.values()))
     (OUT/"final_checks.json").write_text(json.dumps(result,indent=2,ensure_ascii=False))
     previous=OUT/"previous_final_manifest_6741.json"
     if not previous.exists():previous.write_bytes((ROOT/"FINAL_MANIFEST.json").read_bytes())
-    prior=json.loads(previous.read_text());assert prior["total_offline_executions"]==6741
+    prior=json.loads(previous.read_text())
+    if not (prior["total_offline_executions"]==6741):
+        raise ValueError('previous manifest execution count mismatch')
     artifacts=list(ROOT.glob("*.py"))+report_files+[OUT/"summary.md",OUT/"trials.csv",OUT/"run_config.json",OUT/"final_checks.json"]
     manifest={**{k:v for k,v in prior.items() if k!="sha256"},"python_files_parsed":len(list(ROOT.glob("*.py"))),
         "icra_related_training_and_confirmation_executions":sum(RUNS.values()),"total_offline_executions":6741+sum(RUNS.values()),

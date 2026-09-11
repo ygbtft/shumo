@@ -1,0 +1,53 @@
+{
+  "before": {
+    "I1": {
+      "exit_code": 0,
+      "output": "{'verified_leaves': 1, 'partition_nodes': 1, 'boundary_corners': 4, 'independent_exact_corner_triangles': True, 'integer_partition': True}"
+    },
+    "I2": {
+      "exit_code": 0,
+      "output": "{'verified_leaves': 1, 'partition_nodes': 1, 'boundary_corners': 4, 'independent_exact_corner_triangles': True, 'integer_partition': True}"
+    },
+    "F2": {
+      "timeout_s": 2
+    },
+    "V1": {
+      "exit_code": 0,
+      "output": "{'position': [0.0, 0.0], 'direction_deg': 0.0, 'reason': 'no_station_in_range'}"
+    }
+  },
+  "after": {
+    "I1": {
+      "exit_code": 1,
+      "output": "ValueError: corner receiving distance must be strictly below 1000 m"
+    },
+    "I2": {
+      "exit_code": 1,
+      "output": "ValueError: coverage requires arena_radius=1800 and receive_radius=1000"
+    },
+    "F2": {
+      "exit_code": 1,
+      "output": "ValueError: partition requires arena_radius=1800"
+    },
+    "V1": {
+      "exit_code": 0,
+      "output": "{'position': [0.0, 0.0], 'direction_deg': 182.38182084536308, 'empty_angle_deg': 355.23635830927384}"
+    }
+  },
+  "mock_http_comparison": [
+    {
+      "problem": 3,
+      "before": "/Users/flower/math/2026/B题/B/robot_runs/20260911-182406-060475-bounded-mock-http",
+      "after": "/Users/flower/math/2026/B题/B/robot_runs/20260911-182337-368708-bounded-mock-http",
+      "identical_requests_responses": true,
+      "commands": 140
+    },
+    {
+      "problem": 4,
+      "before": "/Users/flower/math/2026/B题/B/robot_runs/20260911-182406-415122-bounded-mock-http",
+      "after": "/Users/flower/math/2026/B题/B/robot_runs/20260911-182337-724064-bounded-mock-http",
+      "identical_requests_responses": true,
+      "commands": 293
+    }
+  ]
+}

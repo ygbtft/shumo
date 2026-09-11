@@ -134,11 +134,19 @@ def minimum_circle(poly):
 
 def minimum_circle_enumerated(poly):
     """Independent support enumeration, reserved for verification."""
-    p = np.asarray(poly)
+    p = np.asarray(poly, float)
     choices = [(a.copy(), 0.) for a in p]
     choices += [((a+b)/2, float(np.linalg.norm(a-b)/2)) for a, b in itertools.combinations(p, 2)]
     choices += [circumcircle(a, b, c) for a, b, c in itertools.combinations(p, 3)]
-    return min((c for c in choices if np.all(np.linalg.norm(p-c[0], axis=1) <= c[1]+1e-7)), key=lambda c:c[1])
+    enclosing = []
+    for center, radius in choices:
+        # Rank actual enclosing radii, not radii accepted with an inward slack.
+        # Every support center is usable after expansion; the MEC center is among them.
+        radius = max(radius, float(np.linalg.norm(p-center, axis=1).max()))
+        if radius > 0:
+            radius = math.nextafter(radius, math.inf)
+        enclosing.append((center, radius))
+    return min(enclosing, key=lambda c:c[1])
 
 
 def halfplane_region(normals, bounds):

@@ -1,0 +1,30 @@
+{
+  "before": {
+    "A": {
+      "returncode": 0,
+      "stdout": "TimeoutError 0.35748558300110744"
+    },
+    "B": {
+      "returncode": 0,
+      "stdout": "['/enter', '/measure', '/measure']"
+    },
+    "C": {
+      "timeout_s": 1.5,
+      "stdout": "leaving context"
+    }
+  },
+  "after": {
+    "A": {
+      "returncode": 0,
+      "stdout": "TimeoutError 0.12437108399899444"
+    },
+    "B": {
+      "returncode": 0,
+      "stdout": "new action blocked\n['/enter', '/measure']"
+    },
+    "C": {
+      "returncode": 0,
+      "stdout": "leaving context\nclosed"
+    }
+  }
+}

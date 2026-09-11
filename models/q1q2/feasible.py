@@ -348,7 +348,7 @@ def check_candidate(source_set: SourceSet, q: Point2, require_direction: bool, p
         return CandidateCheck('OUT', None, reason='outside_action_domain')
     if q == ss.first.position:
         return CandidateCheck('IN', 0., direction_status='IN', reason='same_point_first_direction',
-                              distance_to_closure=p.near_radius,
+                              distance_to_closure=closure_distance(ss, q)[0],
                               exact_definition='S in C_dir subset C_sig; repeated bearing is fixed')
     low = [(distance(q, x)**2-p.rho_lo**2, x) for x in
            _extrema_points(ss.low_boundaries, lambda piece: np.asarray(piece.center)-q)]
@@ -400,6 +400,8 @@ def check_candidate(source_set: SourceSet, q: Point2, require_direction: bool, p
 
 def posterior_contains(source_set: SourceSet, q: Point2, feedback: Feedback,
                        points: ArrayLike, policy: NumericPolicy) -> BoolArray:
+    # K membership uses the guaranteed-reception premise; this mask does not prove it.
+    # Clearance/conditional diagnostics must check that premise before offering actions.
     points = np.atleast_2d(np.asarray(points, dtype=float))
     mask = source_set.contains(points)
     if point(q) == source_set.first.position:

@@ -55,7 +55,7 @@ def rectangle_certificate(points,arena_radius=1800.,receive_radius=1000.,max_dep
                 cells.append([x,y,h,list(ids)]);continue
         if depth>=max_depth or visited>=max_cells:
             return dict(covered=False,reason="unresolved_cell",cell=[x,y,h,depth],visited=visited,
-                        witness=directional_witness(p,c) if np.linalg.norm(c)<=arena_radius else None)
+                        witness=directional_witness(p,c,receive_radius) if np.linalg.norm(c)<=arena_radius else None)
         half=h/2
         stack.extend((x+dx*half,y+dy*half,half,depth+1) for dx in (-1,1) for dy in (-1,1))
     return dict(covered=True,arena_radius=arena_radius,receive_radius=receive_radius,
@@ -65,13 +65,97 @@ def rectangle_certificate(points,arena_radius=1800.,receive_radius=1000.,max_dep
                 proof="source disk covered by disjoint certified squares; each square inside convex hull of uniformly receivable stations")
 
 
-def verify_cells(points,certificate):
-    """Independent vertex check for each exported square and its selected sites."""
-    p=np.asarray(points,float);area=0.
-    for x,y,h,ids in certificate["cells"]:
-        corners=np.array([[x-h,y-h],[x+h,y-h],[x+h,y+h],[x-h,y+h]])
-        stations=p[ids];assert np.linalg.norm(stations[:,None,:]-corners[None,:,:],axis=2).max()<certificate["receive_radius"]
-        hull=ConvexHull(stations);values=corners@hull.equations[:,:2].T+hull.equations[:,-1]
-        assert values.max()<1e-7
-        area+=4*h*h
-    return dict(verified_leaves=len(certificate["cells"]),certified_area_m2=area)
+def _point_array(points, label):
+    p = np.asarray(points, float)
+    if p.ndim != 2 or p.shape[1] != 2 or not len(p) or not np.isfinite(p).all():
+        raise ValueError(f"{label}: expected a nonempty finite Nx2 coordinate array")
+    return p
+
+
+def verify_cells(points, certificate):
+    """Verify source-disk partition and strict leaf geometry, not a layout claim.
+
+    Legacy certificates omit squares wholly outside the source disk. The shared
+    quadtree check validates those omissions as well as disjointness. This alone
+    does NOT certify a route/problem or coverage of the entire root square;
+    use certify_layout_coverage for that stronger, context-bound guarantee.
+    Invalid geometry/partitions raise ValueError, including under python -O.
+    """
+    # Import lazily: icra_final_checks itself imports this module.
+    from icra_final_checks import partition_check
+
+    p = _point_array(points, "points")
+    if certificate.get("covered") is not True:
+        raise ValueError("certificate is not marked covered")
+    if certificate.get("arena_radius") != 1800. or certificate.get("receive_radius") != 1000.:
+        raise ValueError("coverage requires arena_radius=1800 and receive_radius=1000")
+    cells = certificate.get("cells")
+    if cells is None or not len(cells):
+        raise ValueError("missing nonempty leaf partition")
+    for cell in cells:
+        if len(cell) != 4:
+            raise ValueError("malformed leaf: expected x, y, half-width, station ids")
+        x, y, h, ids = cell
+        if not np.isfinite([x, y, h]).all() or h <= 0:
+            raise ValueError("leaf coordinates must be finite with positive half-width")
+        if (not isinstance(ids, (list, tuple)) or len(ids) < 3
+                or any(isinstance(i, (bool, np.bool_)) or not isinstance(i, (int, np.integer))
+                       or i < 0 or i >= len(p) for i in ids)):
+            raise ValueError("leaf requires at least three valid station indices")
+    partition_check(certificate)
+    area = 0.
+    for index, (x, y, h, ids) in enumerate(cells):
+        corners = np.array([[x-h, y-h], [x+h, y-h], [x+h, y+h], [x-h, y+h]])
+        # A tuple denotes row IDs, not NumPy multi-axis indexing.
+        stations = p[list(ids)]
+        distances = np.linalg.norm(stations[:, None, :]-corners[None, :, :], axis=2)
+        if not distances.max() <= 1000.-1e-5:
+            raise ValueError(f"leaf {index}: receiving distance violates 1e-5 m inward margin")
+        try:
+            hull = ConvexHull(stations)
+        except QhullError as exc:
+            raise ValueError(f"leaf {index}: stations have no two-dimensional convex hull") from exc
+        values = corners@hull.equations[:, :2].T+hull.equations[:, -1]
+        if not values.max() < -1e-5:
+            raise ValueError(f"leaf {index}: square is not strictly inside hull by 1e-5 m")
+        area += 4*h*h
+    return dict(verified_leaves=len(cells), certified_area_m2=area,
+                coverage_guarantee=False,
+                missing_requirements=["explicit layout coordinates, route and problem type",
+                                      "full root-square partition (source-disk partition only checked)"])
+
+
+def certify_layout_coverage(points, certificate, *, layout_points=None, route=None,
+                            problem=None, layout_problem=None):
+    """Certify the entire [-1800,1800]^2 for an explicitly bound Q4 layout.
+
+    points retains certificate index order; layout_points and route may permute
+    it. Exact coordinate-set equality follows cover21_geometry_audit's existing
+    route check (no rounding/allclose). The Q4 restriction follows the directional
+    certificate's scope. Missing context fails closed; historical disk-only
+    certificates must not be advertised as full-square certificates.
+    """
+    missing = [name for name, value in (("layout_points", layout_points),
+               ("route", route), ("problem", problem), ("layout_problem", layout_problem))
+               if value is None]
+    if missing:
+        raise ValueError("missing coverage prerequisites: " + ", ".join(missing))
+    if problem != 4 or layout_problem != problem:
+        raise ValueError("problem type must match the Q4 layout")
+    p = _point_array(points, "points")
+    layout = _point_array(layout_points, "layout_points")
+    path = _point_array(route, "route")
+    if set(map(tuple, p)) != set(map(tuple, layout)):
+        raise ValueError("layout coordinate set differs from verified points")
+    if set(map(tuple, p)) != set(map(tuple, path)):
+        raise ValueError("route coordinate set differs from verified points")
+    result = verify_cells(p, certificate)
+    # Shared quadtree verification already proves these are disjoint dyadic
+    # root descendants. Their exact binary-rational areas must fill the root;
+    # Fraction avoids a summation tolerance hiding a small missing square.
+    from fractions import Fraction
+    area = sum((4*Fraction(float(c[2]))**2 for c in certificate["cells"]), Fraction())
+    if area != 3600**2:
+        raise ValueError("incomplete root-square partition: disk-only coverage is insufficient")
+    return {**result, "coverage_guarantee": True, "missing_requirements": [],
+            "problem": problem, "domain": "[-1800,1800]^2"}

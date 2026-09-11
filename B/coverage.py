@@ -6,13 +6,17 @@ from geometry import cross
 
 def segment_distance_origin(a, b):
     ab = b-a
+    if ab@ab == 0:
+        return float(np.linalg.norm(a))
     return float(np.linalg.norm(a+np.clip(-a@ab/(ab@ab), 0., 1.)*ab))
 
 
 def triangle_intersects_disk(triangle, radius):
     t = np.asarray(triangle)
     signs = cross(np.roll(t,-1,axis=0)-t, -t)
-    if np.all(signs >= -1e-9) or np.all(signs <= 1e-9):
+    # A zero-area triangle has only edges: same-side signs do not imply interior.
+    # Do not collapse thin but nonzero-area triangles with an area tolerance.
+    if cross(t[1]-t[0], t[2]-t[0]) != 0 and (np.all(signs >= -1e-9) or np.all(signs <= 1e-9)):
         return True
     return min(segment_distance_origin(t[i-1],t[i]) for i in range(3)) <= radius+1e-8
 

@@ -16,7 +16,7 @@ from .adapters import read_measurements
 from .q1 import solve
 from .feasible import PhysicsConfig, build_source_set, check_candidate, posterior_contains
 from .q2 import (SearchConfig, select_second_point, sample_sources, movement_frontier,
-                 short_baseline_lower_bound)
+                 short_baseline_lower_bound, _sample_sources)
 from .diagnostics import (analytic_cases, sensitivity_cases, compare_heuristics,
                           compare_geometry, DiagnosticConfig, reassess_old_point)
 from .plots import ResultBundle, PlotStyle, render
@@ -96,9 +96,11 @@ def q1_bundle(results, cases=None):
                      'cover': result.coverage.status})
     return ResultBundle(tuple(figures), {'T2': rows, 'T3': [
         {'operation': 'feasibility/recession', 'complexity': 'O(M^2)'},
-        {'operation': 'deque/vertex recheck', 'complexity': 'O(M log M)+O(MV)'},
-        {'operation': 'degenerate enumeration', 'complexity': 'O(M^3)'},
-        {'operation': 'Welzl', 'complexity': 'expected O(V), worst O(V^3)'}]}, {'design': 'PLAN v3'})
+        {'operation': 'exact_enumeration: bounded intersections and constraint checks', 'complexity': 'O(M^3)'},
+        {'operation': 'diameter: all vertex pairs', 'complexity': 'O(V^2)'},
+        {'operation': 'Welzl with exact support recheck', 'complexity': 'expected O(V), worst O(V^3)'},
+        {'operation': 'circle enumeration fallback', 'complexity': 'O(V^4)',
+         'note': 'Arithmetic operation counts; high-precision/rational bit-length costs are additional'}]}, {'design': 'PLAN v3'})
 
 
 def q2_bundle(ss, result):
@@ -107,7 +109,9 @@ def q2_bundle(ss, result):
                                            'q': result.q_best, 'J_hat': result.diameter_estimate_m}]},
                             metadata={'source_status': ss.status, 'result_status': result.status,
                                       'figures_skipped': 'source_or_recommendation_unavailable'})
-    source_samples = sample_sources(ss, 2, result.q_best)
+    source_samples = _sample_sources(ss, 2, result.config.source_grids, result.q_best,
+                                     result.config.near_offset_m,
+                                     second_half_width_deg=result.config.second_half_width_deg)
     p, s = ss.physics, ss.first.position
     candidate_points = {'IN': [], 'BOUNDARY': [], 'OUT': []}
     for row in result.grid_records:
@@ -141,19 +145,22 @@ def q2_bundle(ss, result):
             physical['circles'].append({'center': clear.cover_center, 'radius': clear.r_U, 'label': '保守覆盖圆', 'color': 'C2'})
         if clear.outer_vertices:
             physical['polygons'].append({'vertices': clear.outer_vertices, 'label': '保守外包 U'})
-        if result.score.witness:
+        # A global pair belongs only in panels accepting both endpoints (including beta).
+        if result.score.witness and posterior_contains(
+                ss, q, feedback, (result.score.witness.x, result.score.witness.y), ss.policy).all():
             physical['lines'] = [{'values': (result.score.witness.x, result.score.witness.y), 'label': '不可区分位置对'}]
         panels = [physical]
         angular = next((x for x in result.angular_comparison if x['feedback'] == feedback), None)
         if angular:
             panels.append(_q1_panel(angular['result'], '同反馈纯角锥 P'))
         figures.append({'id': f'F7_{i}', 'panels': panels,
-                        'caption': f'条件R_hat={clear.R_hat}；r_U={clear.r_U}；{clear.evidence}；不是 J_R'})
+                        'caption': f'绘图样本按结果配置重建，非终选完整点集；条件R_hat={clear.R_hat}；r_U={clear.r_U}；{clear.evidence}；不是 J_R'})
     assumed = ss.actual_point
     distances, area, exact_area = [], [], []
     for y in np.linspace(10, 1000, 80):
         q = point(np.asarray(s)+750*unit(math.radians(ss.first.bearing_deg))+y*unit(math.radians(ss.first.bearing_deg+90)))
-        diagnostic = compare_geometry(assumed, (s, q), DiagnosticConfig(source_origin='assumed_source_in_F'))
+        diagnostic = compare_geometry(assumed, (s, q), DiagnosticConfig(half_widths_deg=(ss.first.half_width_deg, result.config.second_half_width_deg),
+                                                                            source_origin='assumed_source_in_F'))
         distances.append(float(y))
         area.append(diagnostic.linear_area_m2)
         exact = solve((BearingMeasurement(s, bearing(s, assumed), ss.first.half_width_deg),
@@ -161,7 +168,7 @@ def q2_bundle(ss, result):
         exact_area.append(exact.area_m2)
     figures.append({'id': 'F8', 'kind': 'curve', 'series': [{'x': distances, 'y': area, 'label': '局部条带面积近似'},
                                                           {'x': distances, 'y': exact_area, 'label': '同构型纯角锥面积'}],
-                    'xlabel': '侧移 / m', 'ylabel': '面积 / m²', 'caption': '假定源位置；r2 与交角同时变化；90°仅固定距离最优'})
+                    'xlabel': '侧移 / m', 'ylabel': '面积 / m²', 'caption': f'假定源位置；两曲线半宽均为 ({ss.first.half_width_deg}, {result.config.second_half_width_deg})°；r2 与交角同时变化；90°仅固定距离最优'})
     table = [{'q': result.q_best, 'J_hat': result.diameter_estimate_m, 'movement_m': result.movement_m,
               'source_change_m': result.source_change_m, 'station_change_m': result.station_change_m,
               'tolerance_change_m': result.tolerance_change_m, 'status': result.status,

@@ -22,14 +22,31 @@ def convex_vertices(points):
     return np.array(hull,dtype=np.int64) if len(hull)>=3 else None
 
 
+def _integer_points(points):
+    raw = np.asarray(points, dtype=float)
+    if (raw.ndim != 2 or raw.shape[1] != 2 or not len(raw)
+            or not np.isfinite(raw).all() or not np.array_equal(raw, np.round(raw))
+            or np.max(np.abs(raw)) > 1950):
+        raise ValueError("stations must be a nonempty finite integer Nx2 array with |coordinate|<=1950")
+    return raw
+
+
 def certify_integer_stations(points,arena_radius=1800,receive_radius=1000,max_depth=16,max_cells=150000):
-    raw=np.asarray(points)
-    assert np.array_equal(raw,np.round(raw))
-    assert max_depth<=16 and np.max(abs(raw))<=1950 and arena_radius==1800 and receive_radius==1000
-    scale=2**max_depth;p=np.asarray(raw,dtype=np.int64)*scale
-    arena=arena_radius*scale;arena2=arena*arena
+    raw=_integer_points(points)
+    if (isinstance(max_depth, (bool, np.bool_)) or not isinstance(max_depth, (int, np.integer))
+            or not 0 <= max_depth <= 16):
+        raise ValueError("max_depth must be an integer in [0,16]")
+    if arena_radius != 1800 or receive_radius != 1000:
+        raise ValueError("coverage requires arena_radius=1800 and receive_radius=1000")
+    # 2**depth makes every root subdivision integral, including the last level.
+    # |station|<=1950, |corner|<=1800, scale<=65536 bound the squared-distance
+    # sum by 2*(3750*65536)**2 < 1.21e17. Hull support intermediates are bounded
+    # by 2*3900*(3750+1800)*65536**2 < 1.86e17, safely below int64's 2**63-1.
+    scale=2**int(max_depth);p=np.asarray(raw,dtype=np.int64)*scale
+    arena=1800*scale;arena2=arena*arena
     # Rational 10^-5 m inward distance margin; no floating-point norm decides eligibility.
-    safe_radius_numerator=receive_radius*100000-1
+    safe_radius_numerator=1000*100000-1
+    # Floor the squared limit: integer comparison cannot admit an out-of-range station.
     limit=(safe_radius_numerator**2*scale**2)//100000**2
     stack=[(0,0,arena,0)];cache={};cells=[];visited=0
     while stack:
@@ -45,6 +62,8 @@ def certify_integer_stations(points,arena_radius=1800,receive_radius=1000,max_de
         if hull is not None:
             edges=np.roll(hull,-1,axis=0)-hull
             relative=center-hull
+            # CCW edges put the interior on the left; subtract the square support.
+            # Equality is allowed: the receiving face and convex hull are closed.
             lower=edges[:,0]*relative[:,1]-edges[:,1]*relative[:,0]-h*(abs(edges[:,0])+abs(edges[:,1]))
             accepted=bool(np.all(lower>=0))
         if accepted:
@@ -52,7 +71,8 @@ def certify_integer_stations(points,arena_radius=1800,receive_radius=1000,max_de
         elif depth>=max_depth or visited>=max_cells:
             return dict(covered=False,reason="unresolved_exact_cell",cell=[x/scale,y/scale,h/scale,depth],visited=visited)
         else:
-            assert h%2==0
+            if h%2 != 0:
+                raise ValueError("nonintegral quadtree subdivision")
             half=h//2
             stack.extend((x+dx*half,y+dy*half,half,depth+1) for dx in (-1,1) for dy in (-1,1))
     return dict(covered=True,arena_radius=arena_radius,receive_radius=receive_radius,scale=scale,
@@ -64,10 +84,23 @@ def certify_integer_stations(points,arena_radius=1800,receive_radius=1000,max_de
 def verify_integer_certificate(points,certificate):
     """Independent corner-triangle containment, pair distances, and integer partition."""
     scale=certificate["scale"]
-    assert scale<=65536 and certificate["covered"]
-    p=[tuple(int(v)*scale for v in point) for point in points]
-    assert all(tuple(v/scale for v in q)==tuple(map(float,raw)) for q,raw in zip(p,points))
-    arena=certificate["arena_radius"]*scale;radius=certificate["receive_radius"]*scale
+    if (isinstance(scale, (bool, np.bool_)) or not isinstance(scale, (int, np.integer))
+            or not 1 <= scale <= 65536 or int(scale) & (int(scale)-1)):
+        raise ValueError("scale must be a power of two in [1,65536]")
+    scale = int(scale)
+    if certificate.get("covered") is not True:
+        raise ValueError("certificate is not marked covered")
+    if certificate.get("arena_radius") != 1800 or certificate.get("receive_radius") != 1000:
+        raise ValueError("coverage requires arena_radius=1800 and receive_radius=1000")
+    raw = _integer_points(points)
+    # Independent predicates use Python int (unbounded), not the generator's int64.
+    p=[tuple(int(v)*scale for v in point) for point in raw]
+    arena=1800*scale;radius=1000*scale
+    cells = certificate.get("cells")
+    if cells is None or not len(cells):
+        raise ValueError("missing nonempty leaf partition")
+    # [-1800,1800]^2 is the fixed quadtree root; as in the floating verifier,
+    # cells wholly outside the source disk may be omitted. No full-square claim.
     leaves={};boundary_corners=0
     def det(a,b,c):
         ax,ay=a;bx,by=b;cx,cy=c
@@ -77,16 +110,33 @@ def verify_integer_certificate(points,certificate):
         if not direction:return False
         signs=(det(a,b,q),det(b,c,q),det(c,a,q))
         return min(signs)>=0 if direction>0 else max(signs)<=0
-    for x,y,h,ids in certificate["cells"]:
+    for cell in cells:
+        if len(cell) != 4:
+            raise ValueError("malformed leaf: expected x, y, half-width, station ids")
+        x,y,h,ids = cell
+        if (not np.isfinite([x,y,h]).all() or h <= 0
+                or abs(x)+h > 1800 or abs(y)+h > 1800):
+            raise ValueError("leaf must be finite, positive and within the root square")
+        # IDs are zero-based rows of the supplied points, never Python negative indices.
+        if (not isinstance(ids, (list, tuple)) or len(ids) < 3
+                or any(isinstance(i, (bool, np.bool_)) or not isinstance(i, (int, np.integer))
+                       or i < 0 or i >= len(p) for i in ids)):
+            raise ValueError("leaf requires at least three valid station indices")
         values=[x*scale,y*scale,h*scale]
-        assert all(v==int(v) for v in values)
+        if not all(v==int(v) for v in values):
+            raise ValueError("leaf coordinates must be integral at certificate scale")
         xi,yi,hi=map(int,values);key=(xi,yi,hi)
-        assert key not in leaves;leaves[key]=True
+        if key in leaves:
+            raise ValueError("duplicate partition leaves")
+        leaves[key]=True
         selected=[p[i] for i in ids]
         triples=list(combinations(selected,3))
         for q in ((xi-hi,yi-hi),(xi+hi,yi-hi),(xi+hi,yi+hi),(xi-hi,yi+hi)):
-            assert all((q[0]-a[0])**2+(q[1]-a[1])**2<radius**2 for a in selected)
-            assert any(triangle_contains(q,*triangle) for triangle in triples)
+            # Recheck strict <1000 m, not the generator's rational 1e-5 m margin.
+            if not all((q[0]-a[0])**2+(q[1]-a[1])**2<radius**2 for a in selected):
+                raise ValueError("corner receiving distance must be strictly below 1000 m")
+            if not any(triangle_contains(q,*triangle) for triangle in triples):
+                raise ValueError("corner is outside the closed station hull")
             boundary_corners+=int(abs(q[0])==arena or abs(q[1])==arena)
     stack=[(0,0,arena)];seen=set();visited=0;minimum=min(c[2] for c in leaves)
     while stack:
@@ -94,9 +144,11 @@ def verify_integer_certificate(points,certificate):
         if key in leaves:seen.add(key);continue
         dx=max(abs(x)-h,0);dy=max(abs(y)-h,0)
         if dx*dx+dy*dy>arena*arena:continue
-        assert h>=minimum and h%2==0,(key,"uncovered integer partition")
+        if h < minimum or h%2 != 0:
+            raise ValueError(f"uncovered integer partition: {key}")
         half=h//2
         stack.extend((x+a*half,y+b*half,half) for a in (-1,1) for b in (-1,1))
-    assert seen==set(leaves)
+    if seen != set(leaves):
+        raise ValueError("partition contains overlapping or non-quadtree leaves")
     return dict(verified_leaves=len(leaves),partition_nodes=visited,boundary_corners=boundary_corners,
                 independent_exact_corner_triangles=True,integer_partition=True)

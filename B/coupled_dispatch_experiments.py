@@ -25,7 +25,9 @@ WIDTH = dict(layout="convex22", fraction=.15, share_cooldown=150., transverse_m=
 WIDE = dict(layout="convex22", fraction=.25, share_cooldown=150., probe_angle=5.)
 SPECS = {3: {
     "area_return1_7": dict(kind="completion", **Q3),
-    "range_area7": dict(kind="coupled_completion", dispatch_model="base", range_skip=True, **Q3),
+    # Small time/risk tradeoff validated in CLEAR_GATE_TRADEOFF.md; explicit
+    # overrides (including the original 80 m baseline) remain available.
+    "range_area7": dict(kind="coupled_completion", dispatch_model="base", range_skip=True, trial_radius=50., **Q3),
     "locked_area7": dict(kind="coupled_completion", dispatch_model="locked", **Q3),
     "range_locked_area7": dict(kind="coupled_completion", dispatch_model="locked", range_skip=True, **Q3),
 }, 4: {

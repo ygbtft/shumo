@@ -7,6 +7,7 @@ These are auditable implementations of the named mechanisms, not reproductions
 of paper-specific parameter settings or claims of a new AI algorithm.
 """
 from dataclasses import dataclass
+from fractions import Fraction
 import math
 import time
 import numpy as np
@@ -44,9 +45,12 @@ class Problem:
         self.min_edge = float(self.d[np.triu_indices(self.n, 1)].min())
         self.lower_bound = (self.n - 1) * self.min_edge
         self.bound_kind = "(n-1) times minimum interstation distance"
-        scaled = self.points / self.min_edge
-        if np.allclose(scaled, np.rint(scaled), atol=1e-8, rtol=0.):
-            colors = np.rint(scaled).astype(int).sum(axis=1) % 2
+        # Prove integer multiples of h for the actual input floats. Even an
+        # exactly integral floating-point quotient can hide division rounding.
+        spacing = Fraction(self.min_edge)
+        scaled = [[Fraction(float(x)) / spacing for x in point] for point in self.points]
+        if all(x.denominator == 1 for point in scaled for x in point):
+            colors = np.array([sum(x.numerator for x in point) % 2 for point in scaled])
             a = int(np.count_nonzero(colors == colors[self.origin]))
             b = self.n-a
             # A-start path: at most A runs of B and at most B+1 runs of A.
@@ -121,6 +125,10 @@ def insertion_greedy(problem, budget):
         best = None
         for v in sorted(unused):
             for k in range(1, len(order)+1):
+                if budget.remaining <= 0:
+                    # Keep completed insertions and complete the feasible path
+                    # in shared-initialization order without scoring candidates.
+                    return np.array(order + [int(v) for v in problem.initial if v in unused])
                 a = order[k-1]
                 delta = problem.d[a, v]
                 if k < len(order):
@@ -384,10 +392,64 @@ def optimize(points, method, seed=42, budget=100000, polish=True):
     return result, {"method": method, "seed": seed, "stations": problem.n,
         "best_m": value, "initial_2opt_m": problem.cost(problem.initial),
         "lower_bound_m": problem.lower_bound, "bound_kind": problem.bound_kind,
-        "certified_optimal": value <= problem.lower_bound+1e-6,
+        "certified_optimal": 0. <= value-problem.lower_bound <= 1e-6,
         "wall_s": time.perf_counter()-began, "shared_setup_s": setup_s,
         "comparison_budget": budget, "comparisons": search.budget.comparisons,
         "full_scores": search.budget.full_scores, "delta_scores": search.budget.delta_scores,
         "generated_candidates": search.candidates, "local_polishes": search.polishes,
         "polish_enabled": polish, "raw_proposal_best_m": search.raw_best,
         "indices": best.tolist(), "history": search.history}
+
+
+def _regression_checks():
+    """Run audit B1/B2 regressions without writing files (execute this module)."""
+    from itertools import permutations
+    import json
+
+    reports = []
+    for x in (999.999995, 999.9999988, 1000.):
+        points = np.array([[0., 0.], [1000., 0.], [x, 1000.], [2000., 0.]])
+        p = Problem(points)
+        optimum = min(route_length(points[[0, *tail]]) for tail in permutations(range(1, 4)))
+        assert p.lower_bound <= optimum
+        _, meta = optimize(points, "insertion_greedy")
+        if x != 1000.:
+            assert p.bound_kind == "(n-1) times minimum interstation distance"
+            assert not meta["certified_optimal"]
+            assert Search(p, 42, 100).running
+        else:
+            assert p.bound_kind.startswith("square checkerboard:")
+            assert meta["certified_optimal"]
+        assert not meta["certified_optimal"] or meta["best_m"] - optimum <= 1e-6
+        # Includes exhaustion before insertion, within a round, at a round
+        # boundary, and enough budget to finish the original greedy algorithm.
+        for limit in range(1, 13):
+            result, bounded = optimize(points, "insertion_greedy", budget=limit)
+            p.validate(np.array(bounded["indices"]))
+            assert np.array_equal(result, points[bounded["indices"]])
+            assert bounded["comparisons"] == min(limit, 11)
+            assert bounded["full_scores"] == 1
+            assert bounded["delta_scores"] == bounded["comparisons"] - 1
+            if limit >= 11:
+                assert bounded["indices"] == meta["indices"]
+        empty = Budget(0)
+        assert np.array_equal(insertion_greedy(p, empty), p.initial)
+        assert empty.comparisons == 0
+        _, bounded = optimize(points, "insertion_greedy", budget=2)
+        reports.append({"third_station_x": x, "optimum_m": optimum,
+                        "lower_bound_m": p.lower_bound, "best_m": meta["best_m"],
+                        "certified_optimal": meta["certified_optimal"],
+                        "budget_2_comparisons": bounded["comparisons"],
+                        "budget_2_best_m": bounded["best_m"]})
+    # A nonzero origin index must also survive every budget cutoff.
+    points = points[[1, 2, 0, 3]]
+    p = Problem(points)
+    for limit in range(1, 13):
+        _, meta = optimize(points, "insertion_greedy", budget=limit)
+        p.validate(np.array(meta["indices"]))
+        assert meta["comparisons"] <= limit
+    print(json.dumps({"audit_regressions": "passed", "cases": reports}, indent=2))
+
+
+if __name__ == "__main__":
+    _regression_checks()

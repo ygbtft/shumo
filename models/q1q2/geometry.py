@@ -321,7 +321,11 @@ def intersect_halfplanes(hps: Sequence[HalfPlane], policy: NumericPolicy) -> Reg
         if ((a._normal_degrees-b._normal_degrees) % 180 and
                 abs(cross(a._exact_row, b._exact_row)) < Fraction(1, 10**70)):
             return Region(None, status='NUMERICAL_UNRESOLVED', method='trig_precision_limit')
-    rows = list(dict.fromkeys(h._exact_row for h in hps))
+    # Conflict indices belong to the caller, even when equal rows are removed.
+    original_indices = {}
+    for index, h in enumerate(hps):
+        original_indices.setdefault(h._exact_row, index)
+    rows = list(original_indices)
     p = (Fraction(0), Fraction(0))
     for i, (a, b, c) in enumerate(rows):
         if a*p[0]+b*p[1] <= c:
@@ -334,7 +338,8 @@ def intersect_halfplanes(hps: Sequence[HalfPlane], policy: NumericPolicy) -> Reg
             rhs = cc-aa*base[0]-bb*base[1]
             if not slope:
                 if rhs < 0:
-                    return Region(RegionKind.EMPTY, method='exact_feasibility', conflict_constraints=(j, i))
+                    return Region(RegionKind.EMPTY, method='exact_feasibility',
+                                  conflict_constraints=(original_indices[rows[j]], original_indices[rows[i]]))
             elif slope > 0:
                 hi = rhs/slope if hi is None else min(hi, rhs/slope)
             else:

@@ -7,12 +7,10 @@ from contextlib import contextmanager
 from http.client import IncompleteRead
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import inspect
-import io
 import json
 import threading
 import unittest
 from unittest.mock import patch
-from urllib.error import HTTPError
 
 import numpy as np
 from client import Client, HttpTransport, Rejected
@@ -22,6 +20,7 @@ from simulator import Protocol, Source, World
 class Response:
     def __init__(self, body, fault=None, code=200):
         self.body,self.fault,self.code=body,fault,code
+        self.length=0
 
     def __enter__(self):
         return self
@@ -29,10 +28,11 @@ class Response:
     def __exit__(self,*args):
         pass
 
-    def read(self):
+    def read1(self, size):
         if self.fault:
             raise self.fault
-        return self.body
+        body, self.body = self.body, b""
+        return body
 
 
 class Clock:
@@ -104,7 +104,7 @@ class ClientTests(unittest.TestCase):
                         raise ConnectionResetError('after execution')
                     return Response(body,code=status)
 
-                with patch('client.urlopen',side_effect=open_mock),patch('client.time.sleep'):
+                with patch('client.open_response',side_effect=open_mock),patch('client.time.sleep'):
                     client.enter()
                     self.assertEqual(client.measure((100,0),2)['measure_result'],'near')
                 self.assertEqual(len(sent),2)
@@ -126,7 +126,7 @@ class ClientTests(unittest.TestCase):
         journal=[]
         transport=HttpTransport('http://127.0.0.1:1')
         client=Client(transport,transcript=journal)
-        with patch('client.urlopen',side_effect=lambda *a,**k:Response(b'',IncompleteRead(b'partial',9))) as opened,patch('client.time.sleep'):
+        with patch('client.open_response',side_effect=lambda *a,**k:Response(b'',IncompleteRead(b'partial',9))) as opened,patch('client.time.sleep'):
             with self.assertRaises(IncompleteRead):
                 client.enter()
             with self.assertRaises(RuntimeError):
@@ -141,13 +141,13 @@ class ClientTests(unittest.TestCase):
         raw=b'{"request_id":"one"}'
         good=b'{"accepted":false,"virtual_time_s":0}'
         for bad in (b'{',):
-            failures=[HTTPError('mock',400,'bad',{},io.BytesIO(bad)),
-                      HTTPError('mock',400,'bad',{},io.BytesIO(good))]
+            failures=[Response(bad, code=400),
+                      Response(good, code=400)]
             transport=HttpTransport('http://127.0.0.1:1')
-            with patch('client.urlopen',side_effect=failures) as opened,patch('client.time.sleep'):
+            with patch('client.open_response',side_effect=failures) as opened,patch('client.time.sleep'):
                 self.assertEqual(transport('/measure',raw),(400,json.loads(good)))
                 self.assertEqual(opened.call_count,2)
-            with patch('client.urlopen',side_effect=HTTPError('mock',400,'bad',{},io.BytesIO(good))) as opened:
+            with patch('client.open_response',return_value=Response(good, code=400)) as opened:
                 self.assertEqual(transport('/measure',raw)[0],400)
                 self.assertEqual(opened.call_count,1)
 
@@ -187,7 +187,7 @@ class ClientTests(unittest.TestCase):
             clock.now+=.2 if len(timeouts)==1 else timeout
             raise TimeoutError('injected timeout')
 
-        with patch('client.time.monotonic',clock.monotonic),patch('client.time.sleep',clock.sleep),patch('client.urlopen',side_effect=fail):
+        with patch('client.time.monotonic',clock.monotonic),patch('client.time.sleep',clock.sleep),patch('client.open_response',side_effect=fail):
             with self.assertRaises(TimeoutError):
                 client.measure((0,0),1)
             with self.assertRaises(RuntimeError):
@@ -202,15 +202,15 @@ class ClientTests(unittest.TestCase):
         clock=Clock()
         client=Client(HttpTransport('http://127.0.0.1:1'))
         client.deadline=101.
-        with patch('client.time.monotonic',clock.monotonic),patch('client.urlopen') as opened:
+        with patch('client.time.monotonic',clock.monotonic),patch('client.open_response') as opened:
             with self.assertRaises(TimeoutError):
                 client.measure((0,0),1)
             with self.assertRaises(TimeoutError):
                 client.exit()
             opened.assert_not_called()
         client.deadline=101.5
-        body=b'{"accepted":true,"virtual_time_s":0,"exit_reason":"user_exit"}'
-        with patch('client.time.monotonic',clock.monotonic),patch('client.urlopen',return_value=Response(body)) as opened:
+        body=b'{"accepted":true,"virtual_time_s":0,"real_timestamp_ms":0,"exit_reason":"user_exit"}'
+        with patch('client.time.monotonic',clock.monotonic),patch('client.open_response',return_value=Response(body)) as opened:
             with self.assertRaises(TimeoutError):
                 client.clear((0,0),1)
             client.exit()
@@ -223,7 +223,7 @@ class ClientTests(unittest.TestCase):
                 clock.now+=.6
                 return b'{'  # Bytes keep arriving, but the absolute deadline wins.
         transport=HttpTransport('http://127.0.0.1:1')
-        with patch('client.time.monotonic',clock.monotonic),patch('client.urlopen',return_value=SlowResponse(b'')) as opened:
+        with patch('client.time.monotonic',clock.monotonic),patch('client.open_response',return_value=SlowResponse(b'')) as opened:
             with self.assertRaises(TimeoutError):
                 transport('/enter',b'{"request_id":"one"}',deadline=101.)
         self.assertEqual(opened.call_count,1)

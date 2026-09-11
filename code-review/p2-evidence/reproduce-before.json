@@ -1,0 +1,110 @@
+{
+  "G1": {
+    "indices": [
+      0,
+      2
+    ],
+    "subset_kind": "UNBOUNDED"
+  },
+  "F1": {
+    "reported": 5.0,
+    "actual": 999.0
+  },
+  "D1": {
+    "status": "ON_SITE",
+    "seconds": 5.0
+  },
+  "Q2-1": {
+    "status": "BOUNDARY",
+    "legal": true,
+    "worlds": [
+      {
+        "p": [
+          1000.0,
+          0.0
+        ],
+        "rho": 1000.0,
+        "first_distance_m": 1000.0,
+        "second_distance_m": 1000.0000000001,
+        "first_error_deg": 0.0,
+        "second_error_deg": 0.0
+      },
+      {
+        "p": [
+          1500.0,
+          0.0
+        ],
+        "rho": 1500.0,
+        "first_distance_m": 1500.0,
+        "second_distance_m": 1500.0000000001,
+        "first_error_deg": 0.0,
+        "second_error_deg": 0.0
+      }
+    ]
+  },
+  "Q2-2": {
+    "counts": [
+      32,
+      51
+    ],
+    "lost": 11
+  },
+  "Q2-4": [
+    {
+      "budget": 0.001,
+      "elapsed": 0.21933395799715072,
+      "stop": "TIME_BUDGET"
+    },
+    {
+      "budget": 0.01,
+      "elapsed": 0.21930891699594213,
+      "stop": "TIME_BUDGET"
+    }
+  ],
+  "PLOT1": {
+    "leaked": 1
+  },
+  "R1": [
+    {
+      "feedback": "direction",
+      "lines": [
+        [
+          true,
+          true
+        ]
+      ]
+    },
+    {
+      "feedback": "near",
+      "lines": [
+        [
+          false,
+          false
+        ]
+      ]
+    }
+  ],
+  "R2": {
+    "linear_area": 9.742045856553673,
+    "expected": 38.9681834262147,
+    "ratio": 0.24999999999999994
+  },
+  "R3": [
+    {
+      "operation": "feasibility/recession",
+      "complexity": "O(M^2)"
+    },
+    {
+      "operation": "deque/vertex recheck",
+      "complexity": "O(M log M)+O(MV)"
+    },
+    {
+      "operation": "degenerate enumeration",
+      "complexity": "O(M^3)"
+    },
+    {
+      "operation": "Welzl",
+      "complexity": "expected O(V), worst O(V^3)"
+    }
+  ]
+}

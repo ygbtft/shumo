@@ -1,0 +1,110 @@
+{
+  "G1": {
+    "indices": [
+      0,
+      3
+    ],
+    "subset_kind": "EMPTY"
+  },
+  "F1": {
+    "reported": 999.0,
+    "actual": 999.0
+  },
+  "D1": {
+    "status": "INCONSISTENT_FEEDBACK",
+    "seconds": null
+  },
+  "Q2-1": {
+    "status": "BOUNDARY",
+    "legal": true,
+    "worlds": [
+      {
+        "p": [
+          1000.0,
+          0.0
+        ],
+        "rho": 1000.0000000001,
+        "first_distance_m": 1000.0,
+        "second_distance_m": 1000.0000000001,
+        "first_error_deg": 0.0,
+        "second_error_deg": 0.0
+      },
+      {
+        "p": [
+          1000.0,
+          0.0
+        ],
+        "rho": 1000.0000000001,
+        "first_distance_m": 1000.0,
+        "second_distance_m": 1000.0000000001,
+        "first_error_deg": 0.0,
+        "second_error_deg": 0.0
+      }
+    ]
+  },
+  "Q2-2": {
+    "counts": [
+      32,
+      62
+    ],
+    "lost": 0
+  },
+  "Q2-4": [
+    {
+      "budget": 0.001,
+      "elapsed": 0.0011115000015706755,
+      "stop": "TIME_BUDGET"
+    },
+    {
+      "budget": 0.01,
+      "elapsed": 0.010071584001707379,
+      "stop": "TIME_BUDGET"
+    }
+  ],
+  "PLOT1": {
+    "leaked": 0
+  },
+  "R1": [
+    {
+      "feedback": "direction",
+      "lines": [
+        [
+          true,
+          true
+        ]
+      ]
+    },
+    {
+      "feedback": "near",
+      "lines": []
+    }
+  ],
+  "R2": {
+    "linear_area": 38.968183426214694,
+    "expected": 38.9681834262147,
+    "ratio": 0.9999999999999998
+  },
+  "R3": [
+    {
+      "operation": "feasibility/recession",
+      "complexity": "O(M^2)"
+    },
+    {
+      "operation": "exact_enumeration: bounded intersections and constraint checks",
+      "complexity": "O(M^3)"
+    },
+    {
+      "operation": "diameter: all vertex pairs",
+      "complexity": "O(V^2)"
+    },
+    {
+      "operation": "Welzl with exact support recheck",
+      "complexity": "expected O(V), worst O(V^3)"
+    },
+    {
+      "operation": "circle enumeration fallback",
+      "complexity": "O(V^4)",
+      "note": "Arithmetic operation counts; high-precision/rational bit-length costs are additional"
+    }
+  ]
+}

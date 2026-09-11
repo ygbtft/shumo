@@ -13,11 +13,12 @@ from interleaved_policy import InterleavedClearancePolicy, InterleavedProbePolic
 
 
 class DiscoveryPriorityMixin:
-    def __init__(self, *args, discovery_weight=900., clear_weight=0., choice_count=4, **kwargs):
+    def __init__(self, *args, discovery_weight=900., choice_count=4, **kwargs):
         super().__init__(*args, **kwargs)
-        if discovery_weight < 0 or clear_weight < 0 or not 1 <= choice_count <= 8:
+        if discovery_weight < 0 or not 1 <= choice_count <= 8:
             raise ValueError("Invalid nonnegative priority weight or shortlist")
-        self.discovery_weight, self.clear_weight, self.choice_count = discovery_weight, clear_weight, choice_count
+        self.discovery_weight = discovery_weight
+        self.choice_count = choice_count
         rng = np.random.default_rng(42)
         theta = rng.uniform(0., 2 * math.pi, 384)
         radial = 1800. * np.sqrt(rng.uniform(0., 1., 384))
@@ -58,7 +59,9 @@ class DiscoveryPriorityMixin:
         self.stats["joint_route_solves"] += 1
         route = remaining_route(points, self.client.position, True)
         chosen = int(route[0])
-        if self.discovery_weight or self.clear_weight:
+        # Zero discovery reward must retain the base route, without shortlist
+        # promotion becoming an independent route optimization switch.
+        if self.discovery_weight:
             unvisited_mask = np.zeros(len(self.stations), dtype=bool)
             unvisited_mask[unused] = True
             seen = ~unvisited_mask
@@ -76,8 +79,9 @@ class DiscoveryPriorityMixin:
                     length += np.linalg.norm(np.diff(sequence, axis=0), axis=1).sum()
                 kind, key, _ = tasks[candidate]
                 reward = self.discovery_weight * gains[key] if kind == "survey" else 0.
-                if kind == "source" and self.circle(key)[1] <= 20. - 1e-5:
-                    reward += self.clear_weight * 6. * len(unused)
+                # JointTaskPolicy.run already skips survey RF for known
+                # sources with MEC <= 20 - 1e-5. Clearing them adds zero
+                # future RF savings, so source tasks receive no extra reward.
                 scores.append((float(length / 5. - reward), j, candidate))
             chosen = min(scores)[2]
             self.stats["discovery_priority_overrides"] += int(chosen != route[0])

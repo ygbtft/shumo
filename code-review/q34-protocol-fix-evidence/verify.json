@@ -1,0 +1,20 @@
+{
+  "runs": [
+    {
+      "folder": "/Users/flower/math/2026/B\u9898/B/robot_runs/20260911-182449-603198-bounded-mock-http",
+      "passed": true,
+      "commands": 140,
+      "total_virtual_s": 3304.341074
+    },
+    {
+      "folder": "/Users/flower/math/2026/B\u9898/B/robot_runs/20260911-182449-907021-bounded-mock-http",
+      "passed": true,
+      "commands": 293,
+      "total_virtual_s": 5847.482087
+    }
+  ],
+  "guards": {
+    "passed": 5,
+    "network_calls": 0
+  }
+}

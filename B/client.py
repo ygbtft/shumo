@@ -3,12 +3,66 @@ import json
 import math
 import time
 import base64
-from http.client import IncompleteRead
+from contextlib import contextmanager
+import socket
+import threading
+from http.client import HTTPConnection, HTTPException, IncompleteRead
 from numbers import Real
 from uuid import uuid4
-from urllib.request import Request, urlopen
-from urllib.error import HTTPError, URLError
+from urllib.request import Request
+from urllib.error import URLError
 from urllib.parse import urlsplit
+
+
+@contextmanager
+def open_response(request, timeout):
+    # The fixed transport only talks to loopback HTTP. Own the socket before
+    # connect so one watchdog can interrupt connect, send, headers and body.
+    parts = urlsplit(request.full_url)
+    host = "127.0.0.1" if parts.hostname == "localhost" else parts.hostname
+    sock = socket.socket(socket.AF_INET6 if host == "::1" else socket.AF_INET)
+    conn = HTTPConnection(host, parts.port or 80, timeout=timeout)
+    expired = threading.Event()
+
+    def close_socket():
+        try:
+            sock.shutdown(socket.SHUT_RDWR)
+        except OSError:
+            pass
+        sock.close()
+
+    def expire():
+        expired.set()
+        close_socket()
+
+    def connect(address, timeout, source_address):
+        sock.settimeout(timeout)
+        sock.connect(address)
+        return sock
+
+    conn._create_connection = connect
+    timer = threading.Timer(timeout, expire)
+    response = None
+    timer.start()
+    try:
+        conn.request("POST", parts.path, body=request.data,
+                     headers={"Content-Type": "application/json"})
+        response = conn.getresponse()
+        response.code = response.status
+        yield response
+        if expired.is_set():
+            raise TimeoutError("HTTP absolute deadline expired")
+    except Exception as exc:
+        if expired.is_set():
+            raise TimeoutError("HTTP absolute deadline expired") from exc
+        raise
+    finally:
+        timer.cancel()
+        timer.join()
+        close_socket()
+        if response is not None:
+            response.close()
+        conn.close()
 
 
 class Rejected(RuntimeError):
@@ -38,44 +92,37 @@ class HttpTransport:
             body=bytearray()
             status=None
             try:
-                try:
-                    response=urlopen(request,timeout=self._timeout(deadline))
-                except HTTPError as exc:
-                    # Error bodies can also be truncated; parse inside the retry scope.
-                    response=exc
-                with response:
+                with open_response(request, timeout=self._timeout(deadline)) as response:
                     status=response.code
-                    # read1 returns available bytes, retaining fragments even if the
-                    # next read resets. Recompute the socket timeout after headers
-                    # and each chunk instead of granting a fresh full timeout.
-                    reader=getattr(response,"read1",None)
-                    if reader is None:
+                    # read1 preserves received fragments on a later disconnect.
+                    # The watchdog also covers getresponse's status/header reads.
+                    while True:
                         self._timeout(deadline)
-                        body.extend(response.read())
-                    else:
-                        while True:
-                            timeout=self._timeout(deadline)
-                            fp=getattr(response,"fp",None)
-                            sock=getattr(getattr(fp,"raw",None),"_sock",None)
-                            if sock is not None:
-                                sock.settimeout(timeout)
-                            chunk=reader(65536)
-                            if not chunk:
-                                if getattr(response,"length",0):
-                                    raise IncompleteRead(b"",response.length)
-                                break
-                            body.extend(chunk)
+                        chunk=response.read1(65536)
+                        if not chunk:
+                            if response.length:
+                                raise IncompleteRead(b"",response.length)
+                            break
+                        body.extend(chunk)
                 result=json.loads(body.decode("utf-8"))
                 if not isinstance(result,dict):
                     raise ValueError("Expected a JSON response object")
+                self._timeout(deadline)
                 return status,result
-            except (URLError,TimeoutError,ConnectionError,OSError,IncompleteRead,
+            except (URLError,OSError,HTTPException,
                     ValueError) as exc:
+                # OSError includes socket.error/timeout, ConnectionError,
+                # BrokenPipeError and connect/send failures.
+                # HTTPException also covers RemoteDisconnected, bad
+                # status lines and truncated headers/bodies. A send failure does
+                # NOT prove non-execution: never mint a new ID to recover it.
                 if isinstance(exc,IncompleteRead):
                     body.extend(exc.partial)
                 row={"event":"transport_failure","path":path,"attempt":attempt+1,
                      "request":json.loads(raw),"request_body_b64":base64.b64encode(raw).decode("ascii"),
                      "http_status":status,"error":repr(exc),
+                     "phase":"response_body" if status is not None else "connect_send_or_headers",
+                     "execution_state":"unknown",
                      "response_body_b64":base64.b64encode(body).decode("ascii")}
                 self.failures.append(row)
                 if transcript is not None:
@@ -130,23 +177,63 @@ class Client:
                 status,response=self.__transport(path,raw,deadline=deadline,transcript=self.transcript)
             else:
                 status,response=self.__transport(path,raw)
+            if not isinstance(response, dict):
+                raise ValueError("Expected a JSON response object")
+            if status == 200 and type(response.get("accepted")) is not bool:
+                raise ValueError("Missing or invalid accepted flag")
+            if status!=200 or response.get("accepted") is not True:
+                if self.transcript is not None:
+                    self.transcript.append({"path":path,"request":payload,"http_status":status,"response":response})
         except Exception:
             self.__stopped=True
             raise
-        if self.transcript is not None:
-            self.transcript.append({"path":path,"request":payload,"http_status":status,"response":response})
         if status!=200 or response.get("accepted") is not True:
             raise Rejected(f"{path}: HTTP {status}, accepted={response.get('accepted')}")
-        self.virtual_s=float(response["virtual_time_s"])
-        if path=="/enter":
-            self.deadline=began+int(response["remaining_real_duration_s"])
-            self.__max_virtual_s=float(response["max_virtual_duration_s"])
-        if path=="/exit" or (self.__max_virtual_s is not None and self.virtual_s>=self.__max_virtual_s):
+        try:
+            def finite_number(field):
+                value = response[field]
+                if isinstance(value, bool) or not isinstance(value, Real) or not math.isfinite(value):
+                    raise ValueError(f"Invalid finite number: {field}")
+                return float(value)
+
+            # Parse the entire fixed response before changing confirmed state.
+            # virtual_s is the server's cumulative value, never local travel cost.
+            virtual_s = finite_number("virtual_time_s")
+            finite_number("real_timestamp_ms")
+            new_deadline = self.deadline
+            max_virtual_s = self.__max_virtual_s
+            if path == "/enter":
+                finite_number("max_real_duration_s")
+                remaining = finite_number("remaining_real_duration_s")
+                max_virtual_s = finite_number("max_virtual_duration_s")
+                # Use request start: conservatively deduct response latency.
+                new_deadline = began + remaining
+                if not math.isfinite(new_deadline):
+                    raise ValueError("Invalid real-time deadline")
+            elif path == "/measure":
+                if response["measure_result"] not in ("near", "direction", "no_signal"):
+                    raise ValueError("Invalid measure_result")
+                if response["measure_result"] == "direction":
+                    angle = finite_number("svd_deg")
+                    if not 0 <= angle < 360:
+                        raise ValueError("Invalid svd_deg")
+            elif path == "/clear":
+                if response["clear_result"] not in ("success", "no_target_in_range"):
+                    raise ValueError("Invalid clear_result")
+            elif path == "/exit" and response["exit_reason"] != "user_exit":
+                raise ValueError("Invalid exit_reason")
+            new_position = self.position if position is None else tuple(p)
+            new_channel = int(channel) if path == "/measure" else self.channel
+            stopped = path == "/exit" or (max_virtual_s is not None and virtual_s >= max_virtual_s)
+            if self.transcript is not None:
+                self.transcript.append({"path":path,"request":payload,"http_status":status,"response":response})
+        except Exception:
+            # An unparseable acknowledgement or failed persistence leaves the
+            # action unresolved. Catching it must never permit a new action ID.
             self.__stopped=True
-        if position is not None:
-            self.position=tuple(p)
-        if path=="/measure":
-            self.channel=int(channel)
+            raise
+        self.virtual_s, self.deadline, self.__max_virtual_s, self.position, self.channel, self.__stopped = (
+            virtual_s, new_deadline, max_virtual_s, new_position, new_channel, stopped)
         return response
 
     def enter(self):
