@@ -1,0 +1,75 @@
+{
+  "n_cases": 285,
+  "n_pass": 285,
+  "n_fail": 0,
+  "categories": {
+    "adversarial": {
+      "n_cases": 34,
+      "n_pass": 34,
+      "n_fail": 0
+    },
+    "closed_form": {
+      "n_cases": 27,
+      "n_pass": 27,
+      "n_fail": 0
+    },
+    "degenerate": {
+      "n_cases": 36,
+      "n_pass": 36,
+      "n_fail": 0
+    },
+    "invariant": {
+      "n_cases": 32,
+      "n_pass": 32,
+      "n_fail": 0
+    },
+    "random": {
+      "n_cases": 156,
+      "n_pass": 156,
+      "n_fail": 0
+    }
+  },
+  "max_errors": {
+    "diameter_abs_m": {
+      "value": 4.656612873077393e-10,
+      "case_id": "orthogonal_1000000_30"
+    },
+    "diameter_relative": {
+      "value": 4.962852094021176e-13,
+      "case_id": "random_obs_32_1"
+    },
+    "feasible_residual_m": {
+      "value": 1.1368683772161603e-13,
+      "case_id": "random_obs_1_9"
+    },
+    "isolated_diameter_abs_m": {
+      "value": 4.656612873077393e-10,
+      "case_id": "orthogonal_1000000_30"
+    },
+    "normal_l2": {
+      "value": 0.0,
+      "case_id": "wrap_719.9"
+    },
+    "recession_residual": {
+      "value": 5.988673373666965e-17,
+      "case_id": "single_89_45"
+    },
+    "vertex_constraint_residual_m": {
+      "value": 2.3283064365386963e-10,
+      "case_id": "square_wedges_large_translate"
+    },
+    "vertex_hausdorff_m": {
+      "value": 4.656612873077393e-10,
+      "case_id": "square_wedges_large_translate"
+    }
+  },
+  "lp_disagreements": [
+    "long_triangle_10",
+    "tiny_gap_10",
+    "long_triangle_12",
+    "tiny_gap_12",
+    "long_triangle_14",
+    "tiny_gap_14"
+  ],
+  "failure_checks": {}
+}

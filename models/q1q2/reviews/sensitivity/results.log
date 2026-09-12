@@ -1,0 +1,35 @@
+START standard_default
+DONE standard_default TIME_BUDGET {'sample_count': 2480, 'base_sample_count': 903, 'common_additions': 1577, 'shifted_sample_count': 1318, 'score_calls': 6, 'elapsed_seconds': 1.787770459006424}
+START standard_S1
+DONE standard_S1 TIME_BUDGET {'sample_count': 2504, 'base_sample_count': 912, 'common_additions': 1592, 'shifted_sample_count': 1324, 'score_calls': 6, 'elapsed_seconds': 2.0511848750029458}
+START standard_known_rho_1000
+DONE standard_known_rho_1000 TIME_BUDGET {'sample_count': 2602, 'base_sample_count': 891, 'common_additions': 1711, 'shifted_sample_count': 1291, 'score_calls': 8, 'elapsed_seconds': 2.5868582910043187}
+START standard_known_rho_1250
+DONE standard_known_rho_1250 TIME_BUDGET {'sample_count': 2570, 'base_sample_count': 874, 'common_additions': 1696, 'shifted_sample_count': 1282, 'score_calls': 8, 'elapsed_seconds': 2.297667916995124}
+START standard_known_rho_1500
+DONE standard_known_rho_1500 TIME_BUDGET {'sample_count': 2447, 'base_sample_count': 886, 'common_additions': 1561, 'shifted_sample_count': 1288, 'score_calls': 6, 'elapsed_seconds': 2.1147107080032583}
+START ordinary_default
+DONE ordinary_default TIME_BUDGET {'sample_count': 2313, 'base_sample_count': 871, 'common_additions': 1442, 'shifted_sample_count': 1292, 'score_calls': 6, 'elapsed_seconds': 1.7701429160078987}
+START ordinary_S1
+DONE ordinary_S1 TIME_BUDGET {'sample_count': 2301, 'base_sample_count': 886, 'common_additions': 1415, 'shifted_sample_count': 1303, 'score_calls': 4, 'elapsed_seconds': 0.9650277079927037}
+START tangent_default
+DONE tangent_default TIME_BUDGET {'sample_count': 2862, 'base_sample_count': 859, 'common_additions': 2003, 'shifted_sample_count': 1257, 'score_calls': 6, 'elapsed_seconds': 1.8280640000011772}
+START tangent_S1
+DONE tangent_S1 TIME_BUDGET {'sample_count': 2839, 'base_sample_count': 849, 'common_additions': 1990, 'shifted_sample_count': 1250, 'score_calls': 6, 'elapsed_seconds': 2.3592355829896405}
+START edge_default
+DONE edge_default TIME_BUDGET {'sample_count': 2471, 'base_sample_count': 911, 'common_additions': 1560, 'shifted_sample_count': 1323, 'score_calls': 6, 'elapsed_seconds': 1.7179727089969674}
+START edge_known_rho_1000
+DONE edge_known_rho_1000 TIME_BUDGET {'sample_count': 2424, 'base_sample_count': 894, 'common_additions': 1530, 'shifted_sample_count': 1292, 'score_calls': 6, 'elapsed_seconds': 1.7421294579980895}
+START edge_known_rho_1250
+DONE edge_known_rho_1250 TIME_BUDGET {'sample_count': 2484, 'base_sample_count': 896, 'common_additions': 1588, 'shifted_sample_count': 1298, 'score_calls': 6, 'elapsed_seconds': 1.4255939169961493}
+START edge_known_rho_1500
+DONE edge_known_rho_1500 TIME_BUDGET {'sample_count': 2477, 'base_sample_count': 894, 'common_additions': 1583, 'shifted_sample_count': 1293, 'score_calls': 6, 'elapsed_seconds': 1.4351168749999488}
+START edge_S4
+DONE edge_S4 TIME_BUDGET {'sample_count': 2471, 'base_sample_count': 911, 'common_additions': 1560, 'shifted_sample_count': 1323, 'score_calls': 6, 'elapsed_seconds': 1.4555838329979451}
+START F9_B10
+DONE F9_B10 COMPLETED {'sample_count': 2722, 'base_sample_count': 903, 'common_additions': 1819, 'shifted_sample_count': 1318, 'score_calls': 6, 'elapsed_seconds': 1.7314917920011794}
+START F9_B200
+DONE F9_B200 COMPLETED {'sample_count': 2448, 'base_sample_count': 903, 'common_additions': 1545, 'shifted_sample_count': 1318, 'score_calls': 6, 'elapsed_seconds': 1.4595257500041043}
+START F9_B600
+DONE F9_B600 COMPLETED {'sample_count': 2490, 'base_sample_count': 903, 'common_additions': 1587, 'shifted_sample_count': 1318, 'score_calls': 6, 'elapsed_seconds': 1.4233113750087796}
+FINISHED models/q1q2/reviews/sensitivity/results

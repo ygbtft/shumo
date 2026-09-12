@@ -23,3 +23,6 @@ __pycache__/
 /models/q1q2/benchmarks/q2_outer/exclusion/before/
 /models/q1q2/benchmarks/q2_outer/exclusion/after-final/
 /review-opt/q12-budget-rounding/
+/models/q1q2/reviews/sensitivity/results/
+/B/experiments/runs/2026-09-12_param-sensitivity/
+/models/q1q2/reviews/sensitivity/*_report.json

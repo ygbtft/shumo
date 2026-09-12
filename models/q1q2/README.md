@@ -4,7 +4,7 @@
 
 ## 目录与文件职责
 
-### 生产代码（九个职责模块）
+### 生产代码与离线实验模块
 
 | 文件 | 职责 |
 |---|---|
@@ -14,6 +14,7 @@
 | `feasible.py` | 首测可行集 F、C_sig / C_dir 候选域、四圆盘约化、物理后验与外包 |
 | `q2.py` | 源采样、不可区分点对评分、全域网格 + 局部细化、预算曲线、第二点选择 |
 | `diagnostics.py` | 条件 R(K)、清除三态、面积近似、GDOP（可选辅助）、敏感性接口 |
+| `sensitivity.py` | PLAN §11.6 精简离线运行器：模型重建、公共终评、S2/S7与F11/F9复用 |
 | `adapters.py` | 手工 JSON / mock 观测 / JSONL 转换，三种误差模式，真值隔离 |
 | `plots.py` | 从已保存结果生成论文图表，不参与求解 |
 | `run.py` | 命令入口（q1/q2/examples/figures）与结果 + 复现清单输出；benchmark 的 `--certify` 惰性调用认证模块 |
@@ -68,7 +69,7 @@ models/q1q2/.venv/bin/python -m models.q1q2.benchmarks.q1_geometry.run   # 四�
 
 ## 待办（非阻断）
 
-- 完整敏感性方案 S1–S9（当前 S1/S3/S4/S7 为骨架）与全链路容差审计。
+- S1/S2/S3/S4/S7 与复用 S8/S9 的精简敏感性执行记录、T6 和论文草稿见 [敏感性结果](reviews/sensitivity/README.md)；S5/S6 未执行，未稳定搜索原样标注。全链路容差认证仍未完成。
 - 部分论文图表合同（F1/F4/F8/F10 等标注）与配图生成。
 - 认证模块在 Windows guest 的实跑验证（附录 A 要求；当前仅宿主验证）。
 - mock 真实后端集成测试（现 mock 局部测试用合成观测）。

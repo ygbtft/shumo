@@ -1,6 +1,6 @@
 {
   "area": "q2_worst_diameter",
-  "generated_utc": "2026-09-12T05:07:08.205363+00:00",
+  "generated_utc": "2026-09-12T06:06:17.658286+00:00",
   "n_cases": 48,
   "n_pass": 48,
   "n_fail": 0,
@@ -313,7 +313,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.6180222499970114
+      "elapsed_seconds": 0.6786731669999426
     },
     {
       "case_id": "segment_10_100_20_0.5",
@@ -567,7 +567,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.5885610419936711
+      "elapsed_seconds": 0.6585692500084406
     },
     {
       "case_id": "segment_10_100_20_2",
@@ -821,7 +821,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.6140504580107518
+      "elapsed_seconds": 0.660671417004778
     },
     {
       "case_id": "segment_20_80_40_1",
@@ -1075,7 +1075,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.5889469170069788
+      "elapsed_seconds": 0.6009785829955945
     },
     {
       "case_id": "segment_10_100_200_1",
@@ -1329,7 +1329,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.5823474579956383
+      "elapsed_seconds": 0.6240128750068834
     },
     {
       "case_id": "tangent_segment_0",
@@ -1596,7 +1596,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.6038618339953246
+      "elapsed_seconds": 0.628818292010692
     },
     {
       "case_id": "tangent_segment_1",
@@ -1863,7 +1863,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.601633917001891
+      "elapsed_seconds": 0.6241450420056935
     },
     {
       "case_id": "tangent_segment_2",
@@ -2130,7 +2130,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.6343467080005212
+      "elapsed_seconds": 0.63828979099344
     },
     {
       "case_id": "tangent_segment_3",
@@ -2397,7 +2397,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.5539133330021286
+      "elapsed_seconds": 0.5917772919929121
     },
     {
       "case_id": "tangent_segment_4",
@@ -2664,7 +2664,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.5979699589952361
+      "elapsed_seconds": 0.6604427499987651
     },
     {
       "case_id": "tangent_segment_5",
@@ -2931,7 +2931,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.6377337500016438
+      "elapsed_seconds": 0.8411982090037782
     },
     {
       "case_id": "tangent_polar_0",
@@ -3150,7 +3150,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.171835832996294
+      "elapsed_seconds": 2.2670823340013158
     },
     {
       "case_id": "tangent_polar_1",
@@ -3369,7 +3369,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 1.9305678329983493
+      "elapsed_seconds": 1.9314947910024785
     },
     {
       "case_id": "tangent_polar_2",
@@ -3588,7 +3588,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.144846666997182
+      "elapsed_seconds": 2.173898500012001
     },
     {
       "case_id": "tangent_polar_3",
@@ -3807,7 +3807,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 1.9890969999978552
+      "elapsed_seconds": 2.010540208008024
     },
     {
       "case_id": "tangent_polar_4",
@@ -4026,7 +4026,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 1.921174750008504
+      "elapsed_seconds": 1.952984290997847
     },
     {
       "case_id": "tangent_polar_5",
@@ -4245,7 +4245,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 1.9799522909888765
+      "elapsed_seconds": 1.9861863749974873
     },
     {
       "case_id": "polar_same_station_closed_0",
@@ -4491,7 +4491,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8229607500106795
+      "elapsed_seconds": 0.8471174160076771
     },
     {
       "case_id": "polar_same_station_closed_1",
@@ -4737,7 +4737,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8334499579941621
+      "elapsed_seconds": 0.8629197919945
     },
     {
       "case_id": "polar_same_station_closed_2",
@@ -4983,7 +4983,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8439289579982869
+      "elapsed_seconds": 0.840346832992509
     },
     {
       "case_id": "segment_special_18",
@@ -5233,7 +5233,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.2763127920043189
+      "elapsed_seconds": 0.27521300000080373
     },
     {
       "case_id": "segment_special_100",
@@ -5487,7 +5487,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.2576271669968264
+      "elapsed_seconds": 0.26002475000859704
     },
     {
       "case_id": "polar_0",
@@ -5692,7 +5692,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 1.95873045900953
+      "elapsed_seconds": 1.9987712500005728
     },
     {
       "case_id": "polar_1",
@@ -5897,7 +5897,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.1371547500020824
+      "elapsed_seconds": 2.144575625003199
     },
     {
       "case_id": "polar_2",
@@ -6102,7 +6102,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 1.859087582997745
+      "elapsed_seconds": 1.8727875409967965
     },
     {
       "case_id": "polar_3",
@@ -6307,7 +6307,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 1.9309852919977857
+      "elapsed_seconds": 1.929661040994688
     },
     {
       "case_id": "polar_4",
@@ -6512,7 +6512,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 0.8371964580001077
+      "elapsed_seconds": 0.8351288749981904
     },
     {
       "case_id": "polar_5",
@@ -6719,7 +6719,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 1.748372540998389
+      "elapsed_seconds": 1.7810363750031684
     },
     {
       "case_id": "polar_6",
@@ -6924,7 +6924,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.0941029169916874
+      "elapsed_seconds": 2.104099750009482
     },
     {
       "case_id": "polar_7",
@@ -7130,7 +7130,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.7564334999915445
+      "elapsed_seconds": 2.790390916998149
     },
     {
       "case_id": "polar_8",
@@ -7336,7 +7336,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.4477637500094716
+      "elapsed_seconds": 2.4759846669912804
     },
     {
       "case_id": "polar_9",
@@ -7542,7 +7542,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.435045958001865
+      "elapsed_seconds": 2.4697791670041624
     },
     {
       "case_id": "polar_10",
@@ -7748,7 +7748,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.2865877500007628
+      "elapsed_seconds": 2.3304512920003617
     },
     {
       "case_id": "polar_11",
@@ -7954,7 +7954,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.1196416250022594
+      "elapsed_seconds": 2.1312137080094544
     },
     {
       "case_id": "polar_12",
@@ -8160,7 +8160,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 1.9567179170117015
+      "elapsed_seconds": 1.9612765000056243
     },
     {
       "case_id": "monotone_epsilon",
@@ -8216,7 +8216,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 2.0433279999997467
+      "elapsed_seconds": 2.077879083008156
     },
     {
       "case_id": "monotone_expansion",
@@ -8278,7 +8278,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 0.07774658300331794
+      "elapsed_seconds": 0.07950566700310446
     },
     {
       "case_id": "monotone_nested",
@@ -8330,7 +8330,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 0.9065313339960994
+      "elapsed_seconds": 0.9215410000033444
     },
     {
       "case_id": "clearance_10_18",
@@ -8457,7 +8457,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.0012569579994305968
+      "elapsed_seconds": 0.0012539169983938336
     },
     {
       "case_id": "clearance_10_30",
@@ -8593,7 +8593,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.005671165999956429
+      "elapsed_seconds": 0.005681167007423937
     },
     {
       "case_id": "clearance_50_86",
@@ -8729,7 +8729,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.0055042919993866235
+      "elapsed_seconds": 0.005514624994248152
     },
     {
       "case_id": "clearance_50_90",
@@ -8858,7 +8858,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.019141249998938292
+      "elapsed_seconds": 0.019112207999569364
     },
     {
       "case_id": "clearance_50_92",
@@ -9012,7 +9012,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.005577666990575381
+      "elapsed_seconds": 0.00557133300753776
     },
     {
       "case_id": "feedback_near_boundary",
@@ -9336,7 +9336,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0011938340030610561
+      "elapsed_seconds": 0.001200084006995894
     },
     {
       "case_id": "feedback_wrap_zero",
@@ -9942,7 +9942,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0017128330073319376
+      "elapsed_seconds": 0.0017387499974574894
     },
     {
       "case_id": "feedback_singleton",
@@ -10144,7 +10144,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0010192500049015507
+      "elapsed_seconds": 0.0010356669954489917
     },
     {
       "case_id": "short_baseline_select",
@@ -10477,7 +10477,7 @@
         "closed_form",
         "adversarial"
       ],
-      "elapsed_seconds": 7.407374041998992
+      "elapsed_seconds": 7.532410625004559
     },
     {
       "case_id": "short_baseline_frontier",
@@ -11050,11 +11050,11 @@
         "closed_form",
         "invariant"
       ],
-      "elapsed_seconds": 17.971969167003408
+      "elapsed_seconds": 18.38032199999725
     }
   ],
   "weak_comparisons_excluded": 0,
-  "elapsed_seconds": 76.81151308299741,
+  "elapsed_seconds": 78.47686895800871,
   "production_sha256": {
     "q2.py": "01c048bbac895927350d9a5e0896d3dd7694242bc69e99bf65df83ab9dac609b",
     "diagnostics.py": "a10a8048dcb0ad39de0614da6ca7ecbb628d795e2836458c71efae58c8e520a9",

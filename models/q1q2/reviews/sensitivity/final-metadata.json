@@ -1,0 +1,96 @@
+{
+  "case_count": 20,
+  "stopping": {
+    "TIME_BUDGET": 14,
+    "COMPLETED": 6
+  },
+  "stability": {
+    "NEEDS_REFINEMENT": 20
+  },
+  "complete_50_25_scans": 20,
+  "local_tests": {
+    "passed": 1315,
+    "baseline": 1311,
+    "new_contract_tests": 4,
+    "log": "tests.log"
+  },
+  "benchmarks": [
+    {
+      "area": "q1_geometry",
+      "expected": 285,
+      "n_cases": 285,
+      "n_pass": 285,
+      "n_fail": 0,
+      "returncode": 0,
+      "elapsed_seconds": 3.54413295800623,
+      "command": [
+        "/Users/flower/math/2026/B题/models/q1q2/.venv/bin/python",
+        "-m",
+        "models.q1q2.benchmarks.q1_geometry.run"
+      ]
+    },
+    {
+      "area": "q1_circle_cover",
+      "expected": 330,
+      "n_cases": 330,
+      "n_pass": 330,
+      "n_fail": 0,
+      "returncode": 0,
+      "elapsed_seconds": 0.8601932909950847,
+      "command": [
+        "/Users/flower/math/2026/B题/models/q1q2/.venv/bin/python",
+        "-m",
+        "models.q1q2.benchmarks.q1_circle_cover.run"
+      ]
+    },
+    {
+      "area": "q2_candidate",
+      "expected": 531,
+      "n_cases": 531,
+      "n_pass": 531,
+      "n_fail": 0,
+      "returncode": 0,
+      "elapsed_seconds": 8.654980000006617,
+      "command": [
+        "/Users/flower/math/2026/B题/models/q1q2/.venv/bin/python",
+        "-m",
+        "models.q1q2.benchmarks.q2_candidate.run"
+      ]
+    },
+    {
+      "area": "q2_worst_diameter",
+      "expected": 48,
+      "n_cases": 48,
+      "n_pass": 48,
+      "n_fail": 0,
+      "returncode": 0,
+      "elapsed_seconds": 117.916429082994,
+      "command": [
+        "/Users/flower/math/2026/B题/models/q1q2/.venv/bin/python",
+        "-m",
+        "models.q1q2.benchmarks.q2_worst_diameter.run"
+      ]
+    }
+  ],
+  "implementation_hashes": {
+    "models/q1q2/reviews/sensitivity/pack.py": "3986cb968d6f01b9e32b8043e6c4e39c3f7f3a0811f3f6d05662f5e3357f28cc",
+    "models/q1q2/reviews/sensitivity/budget_threshold.py": "47ac0ba07de53e71bd48ea0f00c66a013f0ea8080431a2bb6cc4c064a0d676fd",
+    "models/q1q2/reviews/sensitivity/verify.py": "c0d93188bc28daa60eb2e94aee7d744bd13c4f17cc3abf14b533e09bee21c7fe",
+    "models/q1q2/reviews/sensitivity/supplement.py": "ddda5a8ab353b01050268936dafcedebd54d4b943af876e2daf03a4efe68a387",
+    "models/q1q2/reviews/sensitivity/check_artifacts.py": "abcbcd37f5c7903f0889fda0921c1df135ce1f58aafa000b99959288c463b7bc",
+    "models/q1q2/reviews/sensitivity/report.py": "09c75e8411fb5586b0f447ceee34a9a650a7113ffabfa20f70b230ab3f0ed602",
+    "models/q1q2/sensitivity.py": "dfd4cb399b4ae4a3dbed1dc2a72dbd9ab5eb5b07e018b589fd6098602d3456f6",
+    "models/q1q2/tests/test_sensitivity_runner.py": "cdc16d92f472b012fa63ac62ec2d3623b17fe5714972605e1be3985416a8f201"
+  },
+  "supplemental_commands": [
+    "models/q1q2/.venv/bin/python -m models.q1q2.reviews.sensitivity.supplement models/q1q2/reviews/sensitivity/results",
+    "models/q1q2/.venv/bin/python -m models.q1q2.reviews.sensitivity.budget_threshold models/q1q2/reviews/sensitivity/results",
+    "models/q1q2/.venv/bin/python -m models.q1q2.reviews.sensitivity.report models/q1q2/reviews/sensitivity/results",
+    "models/q1q2/.venv/bin/python -m models.q1q2.reviews.sensitivity.pack models/q1q2/reviews/sensitivity/results",
+    "models/q1q2/.venv/bin/python -m models.q1q2.reviews.sensitivity.check_artifacts models/q1q2/reviews/sensitivity/results"
+  ],
+  "reported_cost_scope": "saved final campaign; excludes code-development probes, validation and artifact rendering",
+  "protected_file": "models/paper-full.md unchanged; verified with git diff --quiet",
+  "simulator_access": false,
+  "official_test_invocations": 0
+}

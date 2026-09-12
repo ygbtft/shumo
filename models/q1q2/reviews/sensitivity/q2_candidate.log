@@ -1,0 +1,59 @@
+{
+  "n_cases": 531,
+  "n_pass": 531,
+  "n_fail": 0,
+  "failure_check_counts": {},
+  "groups": {
+    "core_membership": {
+      "n_cases": 531,
+      "n_pass": 531,
+      "n_fail": 0,
+      "case_pass_rate": 1.0,
+      "n_checks": 1062,
+      "n_checks_pass": 1062,
+      "n_checks_fail": 0,
+      "check_pass_rate": 1.0,
+      "binary_decisions": {
+        "sig": {
+          "n_decisions": 438,
+          "n_correct": 438,
+          "n_incorrect": 0,
+          "n_boundary": 89,
+          "n_unresolved": 0,
+          "n_inconsistent": 4,
+          "accuracy": 1.0
+        },
+        "dir": {
+          "n_decisions": 440,
+          "n_correct": 440,
+          "n_incorrect": 0,
+          "n_boundary": 85,
+          "n_unresolved": 2,
+          "n_inconsistent": 4,
+          "accuracy": 1.0
+        }
+      }
+    },
+    "witness_metadata": {
+      "n_cases": 515,
+      "n_pass": 515,
+      "n_fail": 0,
+      "case_pass_rate": 1.0,
+      "n_checks": 3090,
+      "n_checks_pass": 3090,
+      "n_checks_fail": 0,
+      "check_pass_rate": 1.0
+    },
+    "auxiliary": {
+      "n_cases": 531,
+      "n_pass": 531,
+      "n_fail": 0,
+      "case_pass_rate": 1.0,
+      "n_checks": 6452,
+      "n_checks_pass": 6452,
+      "n_checks_fail": 0,
+      "check_pass_rate": 1.0
+    }
+  },
+  "elapsed_seconds": 8.49675320800452
+}

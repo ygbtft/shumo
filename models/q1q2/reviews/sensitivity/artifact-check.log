@@ -1,0 +1,1 @@
+{"status": "PASS", "case_count": 20, "row_and_hash_checks": 177, "all_three_conditional_states": ["MOVE_TO_COVER_CENTER", "NOT_YET_GUARANTEED", "ON_SITE"], "archives": "SHA256 verified", "source_hashes": "match run manifest"}

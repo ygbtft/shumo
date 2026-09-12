@@ -1,0 +1,58 @@
+[
+  {
+    "area": "q1_geometry",
+    "expected": 285,
+    "n_cases": 285,
+    "n_pass": 285,
+    "n_fail": 0,
+    "returncode": 0,
+    "elapsed_seconds": 3.54413295800623,
+    "command": [
+      "/Users/flower/math/2026/B\u9898/models/q1q2/.venv/bin/python",
+      "-m",
+      "models.q1q2.benchmarks.q1_geometry.run"
+    ]
+  },
+  {
+    "area": "q1_circle_cover",
+    "expected": 330,
+    "n_cases": 330,
+    "n_pass": 330,
+    "n_fail": 0,
+    "returncode": 0,
+    "elapsed_seconds": 0.8601932909950847,
+    "command": [
+      "/Users/flower/math/2026/B\u9898/models/q1q2/.venv/bin/python",
+      "-m",
+      "models.q1q2.benchmarks.q1_circle_cover.run"
+    ]
+  },
+  {
+    "area": "q2_candidate",
+    "expected": 531,
+    "n_cases": 531,
+    "n_pass": 531,
+    "n_fail": 0,
+    "returncode": 0,
+    "elapsed_seconds": 8.654980000006617,
+    "command": [
+      "/Users/flower/math/2026/B\u9898/models/q1q2/.venv/bin/python",
+      "-m",
+      "models.q1q2.benchmarks.q2_candidate.run"
+    ]
+  },
+  {
+    "area": "q2_worst_diameter",
+    "expected": 48,
+    "n_cases": 48,
+    "n_pass": 48,
+    "n_fail": 0,
+    "returncode": 0,
+    "elapsed_seconds": 117.916429082994,
+    "command": [
+      "/Users/flower/math/2026/B\u9898/models/q1q2/.venv/bin/python",
+      "-m",
+      "models.q1q2.benchmarks.q2_worst_diameter.run"
+    ]
+  }
+]
