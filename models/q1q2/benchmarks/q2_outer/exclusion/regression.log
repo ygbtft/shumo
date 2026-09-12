@@ -1,0 +1,23 @@
+q1_geometry 0
+q1_circle_cover 0
+q2_candidate 0
+q2_worst_diameter 0
+q12-tests 0
+q34-tests 0
+outer-tests 0
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/flower/math/2026/B题/models/q1q2/benchmarks/q2_outer/exclusion_regression.py", line 88, in <module>
+    main()
+    ~~~~^^
+  File "/Users/flower/math/2026/B题/models/q1q2/benchmarks/q2_outer/exclusion_regression.py", line 71, in main
+    report = json.loads((folder/'summary.json').read_text())
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Local logs: /Users/flower/math/2026/B题/B/robot_runs/20260912-061129-632724-bounded-mock-http/summary.json'

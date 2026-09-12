@@ -13,3 +13,12 @@ __pycache__/
 /practice-logs/**/*.png
 /verification/evidence/**/*.png
 /mock/materials/*.png
+
+# 审计/优化的大体量证据转储（结论见 review-opt/*.md，证据可由同目录脚本复现）
+/review-opt/verify-q12-data/
+/review-opt/verify-q34-evidence/
+/review-opt/q12-production/
+/review-opt/q3-dominance/
+/review-opt/opt-q34-evidence.tar.gz
+/models/q1q2/benchmarks/q2_outer/exclusion/before/
+/models/q1q2/benchmarks/q2_outer/exclusion/after-final/

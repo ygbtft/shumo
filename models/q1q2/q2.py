@@ -172,7 +172,17 @@ def _direction_boundary_samples(ss, q, count, half_width, inward, deadline=None)
     pieces = tuple(dict.fromkeys(ss.boundaries))
     result = set()
 
+    legal_cache = {}
+
     def legal(x):
+        key = tuple(x)  # Exact coordinates, scoped to this ss/q/angle/inward call.
+        if key in legal_cache:
+            return legal_cache[key]  # Includes cached None.
+        value = construct_legal(x)
+        legal_cache[key] = value
+        return value
+
+    def construct_legal(x):
         x, attained = _boundary_witness(ss, x)
         if not attained:
             params = ss.parameters(x)
@@ -574,6 +584,69 @@ def short_baseline_lower_bound(source_set, a, b, budget_m, half_width_deg=1.):
         return None
     return {'lower_bound_m': b-a, 'budget_m': budget_m, 'pair': (x, y),
             'angle_bound_deg': math.degrees(angle), 'kind': 'analytic_impossibility_lower_bound',
+            'requires_nonempty_budget_domain': True}
+
+
+def same_ray_max_angle_deg(a, b, budget_m):
+    """G3: maximum angle over the entire movement disk, in degrees.
+
+    Analytic formula evaluated in binary64, not an outward-rounded certificate.
+    The disk is unrestricted by signal/action constraints, so this remains an
+    upper bound when those constraints remove stations.
+    """
+    if not all(math.isfinite(v) for v in (a, b, budget_m)) or not 0 <= budget_m < a < b:
+        raise ValueError('expected 0 <= budget < a < b')
+    u, v = budget_m/a, budget_m/b
+    return math.degrees(math.atan2(u*((b-a)/b),
+                                   math.sqrt((1-u)*(1+u))*math.sqrt((1-v)*(1+v))))
+
+
+def tight_short_baseline_lower_bound(source_set, a, b, budget_m, half_width_deg=1.):
+    """G4, additional same-ray sufficient condition; the legacy API is unchanged.
+
+    Applies to signal-guaranteeing stations within the budget. A failed condition
+    says nothing about achievability. This is not the exact minimax value V(B).
+    """
+    if not all(math.isfinite(v) for v in (a, b, budget_m, half_width_deg)) or budget_m < 0 or not 0 <= half_width_deg <= 90:
+        raise ValueError('invalid lower-bound parameters')
+    ss = source_set
+    if not ss.physics.near_radius < a < b or budget_m >= a-ss.physics.near_radius:
+        return None
+    u = unit(math.radians(ss.first.bearing_deg))
+    x, y = point(np.asarray(ss.first.position)+a*u), point(np.asarray(ss.first.position)+b*u)
+    if not ss.contains([x, y]).all():
+        return None
+    angle = same_ray_max_angle_deg(a, b, budget_m)
+    if angle > 2*half_width_deg:
+        return None
+    return {'lower_bound_m': b-a, 'budget_m': budget_m, 'pair': (x, y),
+            'angle_bound_deg': angle, 'kind': 'analytic_same_ray_tight_lower_bound',
+            'requires_nonempty_budget_domain': True}
+
+
+def source_pair_budget_lower_bound(source_set, x, y, budget_m, half_width_deg=1.):
+    """G1/G2: sufficient budget bound for any actual first-compatible source pair.
+
+    Adds their initial angular separation to the two movement deflections.
+    Checks one supplied pair, not the supremum over all source pairs. Restricted
+    to signal-guaranteeing stations; strict near exclusion is mandatory.
+    """
+    if not all(math.isfinite(v) for v in (budget_m, half_width_deg)) or budget_m < 0 or not 0 <= half_width_deg <= 90:
+        raise ValueError('invalid lower-bound parameters')
+    x, y = point(x), point(y)
+    ss = source_set
+    if not ss.contains([x, y]).all():
+        return None
+    rx, ry = distance(ss.first.position, x), distance(ss.first.position, y)
+    if budget_m >= min(rx, ry)-ss.physics.near_radius:
+        return None
+    gamma = abs(angle_delta(bearing(ss.first.position, x), bearing(ss.first.position, y)))
+    angle = gamma+math.degrees(math.asin(budget_m/rx)+math.asin(budget_m/ry))
+    if angle > 2*half_width_deg:
+        return None
+    return {'lower_bound_m': distance(x, y), 'budget_m': budget_m, 'pair': (x, y),
+            'angle_bound_deg': angle, 'initial_angle_deg': gamma,
+            'kind': 'analytic_source_pair_budget_lower_bound',
             'requires_nonempty_budget_domain': True}
 
 

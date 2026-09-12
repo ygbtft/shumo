@@ -136,6 +136,32 @@ def forced_circle(points: Sequence[Point2]) -> CircleResult:
                           tuple(range(len(p))), 'forced_boundary')
 
 
+def _proposal_circle(points):
+    """Normalized floating circumcircle, ONLY a proposal for exact certification.
+
+    An unreliable triple triggers the existing exact fallback. In particular an
+    obtuse triple still forces all three points onto the circumference.
+    """
+    if not points:
+        return CircleResult(center=None, radius=None)
+    c = tuple(points[0])
+    if len(points) == 2:
+        c = tuple((a+b)/2 for a, b in zip(*points))
+    elif len(points) == 3:
+        x, y = points[0]
+        ax, ay = points[1][0]-x, points[1][1]-y
+        bx, by = points[2][0]-x, points[2][1]-y
+        det = ax*by-ay*bx
+        if not math.isfinite(det) or abs(det) <= 1e-14*(abs(ax*by)+abs(ay*bx)):
+            raise ForcedSupportError('UNRELIABLE_FLOAT_PROPOSAL')
+        aa, bb = ax*ax+ay*ay, bx*bx+by*by
+        c = (x+(aa*by-bb*ay)/(2*det), y+(ax*bb-bx*aa)/(2*det))
+    radius = math.dist(c, points[0])
+    if not all(math.isfinite(v) for v in (*c, radius)):
+        raise ForcedSupportError('NONFINITE_FLOAT_PROPOSAL')
+    return CircleResult(center=c, radius=radius)
+
+
 def _contains(circle, p):
     # Used only to propose a support; exact certification below is mandatory.
     return (circle.center is not None and circle.radius is not None and
@@ -228,7 +254,7 @@ def minimum_circle(vertices: Sequence[Point2], seed: int) -> CircleResult:
             while stack:
                 n, boundary, state = stack.pop()
                 if n == 0 or len(boundary) == 3:
-                    result = forced_circle([normalized[i] for i in boundary])
+                    result = _proposal_circle([normalized[i] for i in boundary])
                     result = replace(result, support_vertex_indices=boundary)
                 elif state == 0:
                     stack.append((n, boundary, 1))

@@ -1,0 +1,70 @@
+{
+  "valid": true,
+  "complete": false,
+  "counts": {
+    "disk": 2,
+    "pending": 6
+  },
+  "leaves": 8,
+  "x_slabs": 5,
+  "area_exact": "1005000",
+  "lower": "0",
+  "upper": "244025833413685/2199023255552",
+  "gap": "244025833413685/2199023255552",
+  "display_lower": "0.000000",
+  "display_upper": "110.970102",
+  "display_gap": "110.970102",
+  "minimum_pair_distance_squared": "None",
+  "verified_source_points": 0,
+  "fresh_certificate": {
+    "lower_m": 110.96913484045108,
+    "upper_m": 110.97010129273485,
+    "gap_m": 0.0009664522837766755,
+    "converged": true,
+    "status": "CERTIFIED_FIXED_Q_TOL",
+    "stop_reason": "gap",
+    "nodes": 2144,
+    "active_boxes": 183,
+    "elapsed_seconds": 1.204846249995171,
+    "witness": {
+      "parameters": [
+        -1.0,
+        0.9999995231628418,
+        1.0,
+        0.9339399337768555
+      ],
+      "branch": "direction",
+      "coordinate_enclosures": [
+        [
+          [
+            1499.7708299716087,
+            1499.7708299716091
+          ],
+          [
+            -26.178597214601215,
+            -26.178597214601208
+          ]
+        ],
+        [
+          [
+            1401.0267853267276,
+            1401.026785326728
+          ],
+          [
+            24.45501350404999,
+            24.455013504049997
+          ]
+        ]
+      ],
+      "distance_interval_m": [
+        110.96913484045108,
+        110.9691348404511
+      ]
+    },
+    "dps": 30,
+    "backend": "mpmath.iv"
+  },
+  "checker_dps": 60,
+  "scope": "Standard symmetric continuous model; relies on mpmath.iv inclusion, not formal verification",
+  "artifact_sha256": "e271e72f53e38e3b8a63c3053fc8437156fff346d0a0e7daadaa91c8666fd3ff"
+}

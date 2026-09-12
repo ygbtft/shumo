@@ -4,6 +4,7 @@ from pathlib import Path
 
 import numpy as np
 from coupled_dispatch_policy import CoupledCompletionPolicy, CoupledWidthPolicy
+from omni_negative_policy import OmniNegativeCompletionPolicy
 from ring_coverage import stations
 
 ROOT = Path(__file__).resolve().parent
@@ -39,7 +40,7 @@ def build(client, spec, problem, paths):
     parameters.pop("kind")
     points = paths[parameters.pop("layout")]
     if problem == 3:
-        return CoupledCompletionPolicy(client, points, mixed=False, **parameters)
+        return OmniNegativeCompletionPolicy(client, points, mixed=False, **parameters)
     if problem == 4:
         return CoupledWidthPolicy(client, points, mixed=True, **parameters)
     raise ValueError("Only problems 3 and 4 are registered")

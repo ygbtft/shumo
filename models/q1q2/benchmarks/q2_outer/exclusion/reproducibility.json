@@ -1,0 +1,22 @@
+{
+  "equal_fields": {
+    "root": true,
+    "q": true,
+    "tau": true,
+    "k": true,
+    "target": true,
+    "lower": true,
+    "upper": true,
+    "gap": true,
+    "converged": true,
+    "status": true,
+    "stop_reason": true,
+    "nodes": true,
+    "pending": true,
+    "leaves": true
+  },
+  "leaf_sha256": "910f76a8cf2a64109276159e616b570ebeaf49d96c1d74cf7ec59ae865229d03",
+  "replay_verified_with_python_O": true,
+  "first_search_seconds": 3.194889292004518,
+  "replay_search_seconds": 3.1809791670093546
+}

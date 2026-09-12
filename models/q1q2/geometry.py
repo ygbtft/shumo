@@ -215,6 +215,19 @@ def _exact_hull(points):
 
 
 def _farthest_pair(vertices):
+    # Binary64 coordinates (and dyadic Fractions) share a power-of-two
+    # denominator. Preserve exact rational inputs; never round them to float.
+    ratios = [tuple(Fraction(c).as_integer_ratio() for c in p) for p in vertices]
+    if ratios and all(d & (d-1) == 0 for p in ratios for _, d in p):
+        denominator = max(d for p in ratios for _, d in p)
+        v = [tuple(n*(denominator//d) for n, d in p) for p in ratios]
+        best, pair = -1, (0, 0)
+        for i, (x, y) in enumerate(v):
+            for j in range(i, len(v)):
+                d = (x-v[j][0])**2+(y-v[j][1])**2
+                if d > best:
+                    best, pair = d, (i, j)
+        return Fraction(best, denominator*denominator), pair
     v = [tuple(map(Fraction, p)) for p in vertices]
     best, pair = Fraction(-1), (0, 0)
     for i in range(len(v)):
@@ -297,11 +310,23 @@ def _intersection(a, b):
 def _exact_vertices(rows):
     # O(M²) intersections, each checked against M rows: O(M³) arithmetic
     # operations; growth of rational numerators/denominators costs extra.
+    integer_rows = []
+    for row in rows:
+        row = tuple(map(Fraction, row))
+        denominator = math.lcm(*(v.denominator for v in row))
+        integers = tuple(v.numerator*(denominator//v.denominator) for v in row)
+        divisor = math.gcd(*integers)
+        integer_rows.append(tuple(v//divisor for v in integers) if divisor else integers)
     found = set()
-    for a, b in combinations(rows, 2):
-        p = _intersection(a, b)
-        if p is not None and all(x*p[0]+y*p[1] <= z for x, y, z in rows):
-            found.add(p)
+    for a, b in combinations(integer_rows, 2):
+        d = a[0]*b[1]-a[1]*b[0]
+        if not d:
+            continue
+        x, y = a[2]*b[1]-a[1]*b[2], a[0]*b[2]-a[2]*b[0]
+        if d < 0:
+            x, y, d = -x, -y, -d
+        if all(aa*x+bb*y <= cc*d for aa, bb, cc in integer_rows):
+            found.add((Fraction(x, d), Fraction(y, d)))
     return found
 
 

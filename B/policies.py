@@ -36,7 +36,12 @@ class Policy:
                 self.stats["inconsistent_updates"]+=1
                 if ch not in self.regions:
                     raise
+        self.record_feedback(p,ch,reply)
         return result
+
+    def record_feedback(self,p,ch,reply):
+        """Optional inference from validated, accepted public measurement replies."""
+        pass
 
     def clear(self,p,ch,certified=False):
         success=self.client.clear(p,ch)["clear_result"]=="success"

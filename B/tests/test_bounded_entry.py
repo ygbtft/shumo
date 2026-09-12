@@ -16,6 +16,7 @@ import bounded_candidates as candidates
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = json.loads((ROOT / "tests/fixtures/bounded_entry_seed42.json").read_text())
+Q3_DOMINANCE = json.loads((ROOT / "tests/fixtures/q3_dominance_seed42.json").read_text())
 
 
 class BoundedEntryTests(unittest.TestCase):
@@ -91,6 +92,14 @@ runner.main()
                     for key in ("wall_s", "cpu_s", "initialization_s", "program_wall_s"):
                         summary.pop(key, None)
                     expected = BASELINE[f"q{problem}-{mode}"]
+                    if problem == 3 and mode == "mock-http":
+                        # Q3 intentionally changes (seed42 is a slower tail).
+                        # Keep its new snapshot separate; Q4 uses the old fixture.
+                        expected = Q3_DOMINANCE
+                    elif problem == 3:
+                        # The independent offline seed42 does not trigger cuts.
+                        self.assertEqual(summary.pop("omni_negative_cuts"), 0)
+                        self.assertEqual(summary.pop("omni_negative_inconsistencies"), 0)
                     self.assertEqual(summary, expected["summary"])
                     self.assertTrue(summary["all_cleared"])
                     if mode == "offline":

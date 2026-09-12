@@ -1,0 +1,179 @@
+{
+  "schema": "q2-outer-exclusion-v1",
+  "model": "standard-S0-theta0-eps1-rho1000-1500-near5-arena1800-v1",
+  "root": [
+    "0",
+    "1005",
+    "0",
+    "1000"
+  ],
+  "reflected_y": true,
+  "q": [
+    843.035666,
+    545.527004
+  ],
+  "tau": "1/100",
+  "k": "5032613263056833/144115188075855872",
+  "target": "6100096079528237/54975581388800",
+  "lower": "0",
+  "upper": "244025833413685/2199023255552",
+  "gap": "244025833413685/2199023255552",
+  "converged": false,
+  "status": "CERTIFIED_OUTER_BOUNDS",
+  "stop_reason": "node_budget",
+  "nodes": 9,
+  "pending": 6,
+  "leaves": [
+    {
+      "box": [
+        "3015/4",
+        "1005",
+        "750",
+        "1000"
+      ],
+      "kind": "disk",
+      "disk": 0
+    },
+    {
+      "box": [
+        "7035/8",
+        "1005",
+        "500",
+        "750"
+      ],
+      "kind": "disk",
+      "disk": 0
+    },
+    {
+      "box": [
+        "0",
+        "1005/2",
+        "0",
+        "1000"
+      ],
+      "kind": "pending",
+      "lower": "0"
+    },
+    {
+      "box": [
+        "1005/2",
+        "1005",
+        "0",
+        "500"
+      ],
+      "kind": "pending",
+      "lower": "0"
+    },
+    {
+      "box": [
+        "1005/2",
+        "3015/4",
+        "500",
+        "1000"
+      ],
+      "kind": "pending",
+      "lower": "0"
+    },
+    {
+      "box": [
+        "3015/4",
+        "7035/8",
+        "500",
+        "625"
+      ],
+      "kind": "pending",
+      "lower": "0"
+    },
+    {
+      "box": [
+        "3015/4",
+        "13065/16",
+        "625",
+        "750"
+      ],
+      "kind": "pending",
+      "lower": "0"
+    },
+    {
+      "box": [
+        "13065/16",
+        "7035/8",
+        "625",
+        "750"
+      ],
+      "kind": "pending",
+      "lower": "0"
+    }
+  ],
+  "fixed_certificate": {
+    "lower_m": 110.96913484045108,
+    "upper_m": 110.97010129273485,
+    "gap_m": 0.0009664522837766755,
+    "converged": true,
+    "status": "CERTIFIED_FIXED_Q_TOL",
+    "stop_reason": "gap",
+    "nodes": 2144,
+    "active_boxes": 183,
+    "elapsed_seconds": 1.2054747920046793,
+    "witness": {
+      "parameters": [
+        -1.0,
+        0.9999995231628418,
+        1.0,
+        0.9339399337768555
+      ],
+      "branch": "direction",
+      "coordinate_enclosures": [
+        [
+          [
+            1499.7708299716087,
+            1499.7708299716091
+          ],
+          [
+            -26.178597214601215,
+            -26.178597214601208
+          ]
+        ],
+        [
+          [
+            1401.0267853267276,
+            1401.026785326728
+          ],
+          [
+            24.45501350404999,
+            24.455013504049997
+          ]
+        ]
+      ],
+      "distance_interval_m": [
+        110.96913484045108,
+        110.9691348404511
+      ]
+    },
+    "dps": 30,
+    "backend": "mpmath.iv"
+  },
+  "source_dps": 60,
+  "search_seconds": 0.00436045799870044,
+  "elapsed_seconds": 1.220626166992588,
+  "options": {
+    "max_nodes": 9,
+    "time_limit_s": 120.0,
+    "fixed_max_nodes": 200000,
+    "fixed_time_limit_s": 60.0
+  },
+  "environment": {
+    "python": "3.14.6",
+    "numpy": "2.5.3",
+    "mpmath": "1.3.0"
+  },
+  "sha256": {
+    "optional/outer_exclusion.py": "478a7c91da96ab57dea21c8c05975d50efe399717f1baf31bb4ffd940a74a4fc",
+    "optional/certified.py": "a5886b4d087076358b5ac468f3d2f6dbb00a3baaa9c325b4f6b7f1461e8c4712",
+    "benchmarks/q2_outer/check_exclusion.py": "a6a9a6aa9ff24bb4d7640fd3e5b62caed0c43c20d1eb6f362309600ef5b2fb2e",
+    "q2.py": "86aae5fc5e652991b38811075cee097d51abe2e3985e003134b1480c88d056c8",
+    "geometry.py": "e8695d2fcf87d2c17c08e5aa44222866262db9eae8ad757332f172b5edde0114",
+    "circle.py": "fcf91c9eeacc8731228b4b9f20d579a5f1529a2d3c3e9ecc9cd4dbe61d156e18",
+    "feasible.py": "51f65bfe64a8d42b8b456b145382227a982d50303d5fa8bba4a232fef564706b"
+  }
+}
