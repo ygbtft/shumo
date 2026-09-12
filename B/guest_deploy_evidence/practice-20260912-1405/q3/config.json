@@ -1,0 +1,28 @@
+{
+  "problem": 3,
+  "method": "range_area7",
+  "seed": 42,
+  "series": "cover21",
+  "mode": "practice",
+  "base_url": "http://127.0.0.1:2026",
+  "robot_id": "202623001141",
+  "confirm_practice": true,
+  "spec": {
+    "kind": "coupled_completion",
+    "layout": "ring7",
+    "dispatch_model": "base",
+    "range_skip": true,
+    "trial_radius": 50.0,
+    "area_prior": true,
+    "remainder_weight": 1.0
+  },
+  "python": "3.14.7",
+  "numpy": "2.5.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "threads": {
+    "OPENBLAS_NUM_THREADS": null,
+    "OMP_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null
+  },
+  "client_sha256": "8ae1a10018d9ef01d95862e323ffa79efe33e34a15639f06b662a07f7cfa4e6f"
+}

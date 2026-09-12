@@ -1,0 +1,43 @@
+{
+  "class_name": "OmniNegativeCompletionPolicy",
+  "spec": {
+    "kind": "coupled_completion",
+    "layout": "ring7",
+    "dispatch_model": "base",
+    "range_skip": true,
+    "trial_radius": 50.0,
+    "area_prior": true,
+    "remainder_weight": 1.0
+  },
+  "stations": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      1140.0,
+      0.0
+    ],
+    [
+      570.0000000000001,
+      987.26896031426
+    ],
+    [
+      -569.9999999999998,
+      987.2689603142601
+    ],
+    [
+      -1140.0,
+      1.3960973510279827e-13
+    ],
+    [
+      -570.0000000000005,
+      -987.2689603142599
+    ],
+    [
+      570.0000000000001,
+      -987.26896031426
+    ]
+  ],
+  "station_count": 7
+}
