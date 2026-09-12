@@ -588,11 +588,34 @@ def short_baseline_lower_bound(source_set, a, b, budget_m, half_width_deg=1.):
 
 
 def same_ray_max_angle_deg(a, b, budget_m):
-    """G3: maximum angle over the entire movement disk, in degrees.
+    """G3: outward-rounded upper bound on the disk's maximum angle (degrees).
 
-    Analytic formula evaluated in binary64, not an outward-rounded certificate.
-    The disk is unrestricted by signal/action constraints, so this remains an
-    upper bound when those constraints remove stations.
+    Inputs denote exact binary64 values. Evaluate the unchanged analytic formula
+    with a private 50-decimal-digit mpmath.iv context, including interval pi.
+    Converting its upper endpoint to float then stepping toward +inf encloses
+    conversion rounding. This relies on the interval backend's inclusion contract,
+    not on an assumed libm error bound. Zero budget has exactly zero angle.
+    The unrestricted disk also bounds any signal/action-constrained subset.
+    Use same_ray_max_angle_estimate_deg only for non-certifying fast estimates.
+    """
+    if not all(math.isfinite(v) for v in (a, b, budget_m)) or not 0 <= budget_m < a < b:
+        raise ValueError('expected 0 <= budget < a < b')
+    if budget_m == 0:
+        return 0.
+    from mpmath.ctx_iv import MPIntervalContext
+    iv = MPIntervalContext()
+    iv.dps = 50
+    a, b, budget = (iv.mpf(float(v)) for v in (a, b, budget_m))
+    angle = iv.atan2(budget*(b-a),
+                     iv.sqrt((a*a-budget*budget)*(b*b-budget*budget)))*180/iv.pi
+    return math.nextafter(float(angle.b), math.inf)
+
+
+def same_ray_max_angle_estimate_deg(a, b, budget_m):
+    """Non-certifying binary64 estimate of G3; never use to trigger a lower bound.
+
+    Rounding can underestimate the angle, including rounding an angle strictly
+    above a threshold onto that threshold. The default API uses interval bounds.
     """
     if not all(math.isfinite(v) for v in (a, b, budget_m)) or not 0 <= budget_m < a < b:
         raise ValueError('expected 0 <= budget < a < b')
@@ -606,6 +629,10 @@ def tight_short_baseline_lower_bound(source_set, a, b, budget_m, half_width_deg=
 
     Applies to signal-guaranteeing stations within the budget. A failed condition
     says nothing about achievability. This is not the exact minimax value V(B).
+    The angle test is conservative for exact binary64 radial/degree inputs:
+    only an outward-rounded upper bound <= the threshold triggers the result.
+    Unresolved boundary cases return None. Existing source/near geometry checks
+    retain their original semantics; this is not a new geometry certificate.
     """
     if not all(math.isfinite(v) for v in (a, b, budget_m, half_width_deg)) or budget_m < 0 or not 0 <= half_width_deg <= 90:
         raise ValueError('invalid lower-bound parameters')
@@ -617,7 +644,9 @@ def tight_short_baseline_lower_bound(source_set, a, b, budget_m, half_width_deg=
     if not ss.contains([x, y]).all():
         return None
     angle = same_ray_max_angle_deg(a, b, budget_m)
-    if angle > 2*half_width_deg:
+    # Multiplication by two is exact for the admitted binary64 widths [0, 90].
+    # Written positively so a non-finite/unresolved angle cannot pass via NaN.
+    if not angle <= 2*half_width_deg:
         return None
     return {'lower_bound_m': b-a, 'budget_m': budget_m, 'pair': (x, y),
             'angle_bound_deg': angle, 'kind': 'analytic_same_ray_tight_lower_bound',

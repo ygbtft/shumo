@@ -1,6 +1,6 @@
 {
   "area": "q2_worst_diameter",
-  "generated_utc": "2026-09-11T11:38:08.555816+00:00",
+  "generated_utc": "2026-09-12T05:07:08.205363+00:00",
   "n_cases": 48,
   "n_pass": 48,
   "n_fail": 0,
@@ -313,7 +313,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.9538901660052943
+      "elapsed_seconds": 0.6180222499970114
     },
     {
       "case_id": "segment_10_100_20_0.5",
@@ -567,7 +567,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.8318080839962931
+      "elapsed_seconds": 0.5885610419936711
     },
     {
       "case_id": "segment_10_100_20_2",
@@ -821,7 +821,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.9294279160021688
+      "elapsed_seconds": 0.6140504580107518
     },
     {
       "case_id": "segment_20_80_40_1",
@@ -1075,7 +1075,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.7822082080019754
+      "elapsed_seconds": 0.5889469170069788
     },
     {
       "case_id": "segment_10_100_200_1",
@@ -1329,7 +1329,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.843666166998446
+      "elapsed_seconds": 0.5823474579956383
     },
     {
       "case_id": "tangent_segment_0",
@@ -1596,7 +1596,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.7538760839961469
+      "elapsed_seconds": 0.6038618339953246
     },
     {
       "case_id": "tangent_segment_1",
@@ -1863,7 +1863,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.7476867920049699
+      "elapsed_seconds": 0.601633917001891
     },
     {
       "case_id": "tangent_segment_2",
@@ -2130,7 +2130,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.9538540830035345
+      "elapsed_seconds": 0.6343467080005212
     },
     {
       "case_id": "tangent_segment_3",
@@ -2397,7 +2397,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.7113487499955227
+      "elapsed_seconds": 0.5539133330021286
     },
     {
       "case_id": "tangent_segment_4",
@@ -2664,7 +2664,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.740890875000332
+      "elapsed_seconds": 0.5979699589952361
     },
     {
       "case_id": "tangent_segment_5",
@@ -2931,7 +2931,7 @@
         "tangent_optimum",
         "narrow_angle"
       ],
-      "elapsed_seconds": 0.9354613339964999
+      "elapsed_seconds": 0.6377337500016438
     },
     {
       "case_id": "tangent_polar_0",
@@ -3150,7 +3150,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.752660874997673
+      "elapsed_seconds": 2.171835832996294
     },
     {
       "case_id": "tangent_polar_1",
@@ -3369,7 +3369,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.285492457995133
+      "elapsed_seconds": 1.9305678329983493
     },
     {
       "case_id": "tangent_polar_2",
@@ -3588,7 +3588,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.7267370830013533
+      "elapsed_seconds": 2.144846666997182
     },
     {
       "case_id": "tangent_polar_3",
@@ -3807,7 +3807,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.5175242089972016
+      "elapsed_seconds": 1.9890969999978552
     },
     {
       "case_id": "tangent_polar_4",
@@ -4026,7 +4026,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.4229261669970583
+      "elapsed_seconds": 1.921174750008504
     },
     {
       "case_id": "tangent_polar_5",
@@ -4245,7 +4245,7 @@
         "narrow_angle",
         "tangent_optimum"
       ],
-      "elapsed_seconds": 2.3734342079987982
+      "elapsed_seconds": 1.9799522909888765
     },
     {
       "case_id": "polar_same_station_closed_0",
@@ -4491,7 +4491,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.8769360840014997
+      "elapsed_seconds": 0.8229607500106795
     },
     {
       "case_id": "polar_same_station_closed_1",
@@ -4737,7 +4737,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.9244723750016419
+      "elapsed_seconds": 0.8334499579941621
     },
     {
       "case_id": "polar_same_station_closed_2",
@@ -4983,7 +4983,7 @@
         "narrow_angle",
         "supremum"
       ],
-      "elapsed_seconds": 0.9103065419985796
+      "elapsed_seconds": 0.8439289579982869
     },
     {
       "case_id": "segment_special_18",
@@ -5233,7 +5233,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.29138275000150315
+      "elapsed_seconds": 0.2763127920043189
     },
     {
       "case_id": "segment_special_100",
@@ -5487,7 +5487,7 @@
         "closed_form",
         "degenerate"
       ],
-      "elapsed_seconds": 0.2614445419967524
+      "elapsed_seconds": 0.2576271669968264
     },
     {
       "case_id": "polar_0",
@@ -5692,7 +5692,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.5128547080021235
+      "elapsed_seconds": 1.95873045900953
     },
     {
       "case_id": "polar_1",
@@ -5897,7 +5897,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 3.072156249996624
+      "elapsed_seconds": 2.1371547500020824
     },
     {
       "case_id": "polar_2",
@@ -6102,7 +6102,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.302833041998383
+      "elapsed_seconds": 1.859087582997745
     },
     {
       "case_id": "polar_3",
@@ -6307,7 +6307,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 2.46847912499652
+      "elapsed_seconds": 1.9309852919977857
     },
     {
       "case_id": "polar_4",
@@ -6512,7 +6512,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 0.8890106249964447
+      "elapsed_seconds": 0.8371964580001077
     },
     {
       "case_id": "polar_5",
@@ -6719,7 +6719,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 1.9289378749963362
+      "elapsed_seconds": 1.748372540998389
     },
     {
       "case_id": "polar_6",
@@ -6924,7 +6924,7 @@
       "tags": [
         "adversarial"
       ],
-      "elapsed_seconds": 3.0123735000015586
+      "elapsed_seconds": 2.0941029169916874
     },
     {
       "case_id": "polar_7",
@@ -7130,7 +7130,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.7002333749987883
+      "elapsed_seconds": 2.7564334999915445
     },
     {
       "case_id": "polar_8",
@@ -7336,7 +7336,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.199234166997485
+      "elapsed_seconds": 2.4477637500094716
     },
     {
       "case_id": "polar_9",
@@ -7542,7 +7542,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 3.211803874997713
+      "elapsed_seconds": 2.435045958001865
     },
     {
       "case_id": "polar_10",
@@ -7748,7 +7748,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.956222750006418
+      "elapsed_seconds": 2.2865877500007628
     },
     {
       "case_id": "polar_11",
@@ -7954,7 +7954,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.4729781659989385
+      "elapsed_seconds": 2.1196416250022594
     },
     {
       "case_id": "polar_12",
@@ -8160,7 +8160,7 @@
       "tags": [
         "random"
       ],
-      "elapsed_seconds": 2.4886809589952463
+      "elapsed_seconds": 1.9567179170117015
     },
     {
       "case_id": "monotone_epsilon",
@@ -8216,7 +8216,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 2.7055751670050086
+      "elapsed_seconds": 2.0433279999997467
     },
     {
       "case_id": "monotone_expansion",
@@ -8278,7 +8278,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 0.07927999999810709
+      "elapsed_seconds": 0.07774658300331794
     },
     {
       "case_id": "monotone_nested",
@@ -8330,7 +8330,7 @@
       "tags": [
         "invariant"
       ],
-      "elapsed_seconds": 1.2552719169980264
+      "elapsed_seconds": 0.9065313339960994
     },
     {
       "case_id": "clearance_10_18",
@@ -8457,7 +8457,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.001347916004306171
+      "elapsed_seconds": 0.0012569579994305968
     },
     {
       "case_id": "clearance_10_30",
@@ -8593,7 +8593,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.033910792000824586
+      "elapsed_seconds": 0.005671165999956429
     },
     {
       "case_id": "clearance_50_86",
@@ -8729,7 +8729,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.0340520829995512
+      "elapsed_seconds": 0.0055042919993866235
     },
     {
       "case_id": "clearance_50_90",
@@ -8858,7 +8858,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.15732916699926136
+      "elapsed_seconds": 0.019141249998938292
     },
     {
       "case_id": "clearance_50_92",
@@ -9012,7 +9012,7 @@
         "closed_form",
         "threshold"
       ],
-      "elapsed_seconds": 0.033920333997230045
+      "elapsed_seconds": 0.005577666990575381
     },
     {
       "case_id": "feedback_near_boundary",
@@ -9336,7 +9336,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.001311166000959929
+      "elapsed_seconds": 0.0011938340030610561
     },
     {
       "case_id": "feedback_wrap_zero",
@@ -9942,7 +9942,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0017682089965092018
+      "elapsed_seconds": 0.0017128330073319376
     },
     {
       "case_id": "feedback_singleton",
@@ -10144,7 +10144,7 @@
         "adversarial",
         "degenerate"
       ],
-      "elapsed_seconds": 0.0010516670008655638
+      "elapsed_seconds": 0.0010192500049015507
     },
     {
       "case_id": "short_baseline_select",
@@ -10477,7 +10477,7 @@
         "closed_form",
         "adversarial"
       ],
-      "elapsed_seconds": 11.164576374998433
+      "elapsed_seconds": 7.407374041998992
     },
     {
       "case_id": "short_baseline_frontier",
@@ -11050,16 +11050,16 @@
         "closed_form",
         "invariant"
       ],
-      "elapsed_seconds": 28.055895042001794
+      "elapsed_seconds": 17.971969167003408
     }
   ],
   "weak_comparisons_excluded": 0,
-  "elapsed_seconds": 105.27107841600082,
+  "elapsed_seconds": 76.81151308299741,
   "production_sha256": {
-    "q2.py": "65408262158fb633482b7a049d504c8ac5c436b292aaa176eff8854c10707e80",
+    "q2.py": "01c048bbac895927350d9a5e0896d3dd7694242bc69e99bf65df83ab9dac609b",
     "diagnostics.py": "a10a8048dcb0ad39de0614da6ca7ecbb628d795e2836458c71efae58c8e520a9",
     "feasible.py": "51f65bfe64a8d42b8b456b145382227a982d50303d5fa8bba4a232fef564706b",
-    "geometry.py": "e412801a585fb35a772b3f1479903b2c48e9e55790c677c2af5a62b3daa76935"
+    "geometry.py": "e8695d2fcf87d2c17c08e5aa44222866262db9eae8ad757332f172b5edde0114"
   },
   "scope_notes": [
     "J_hat is NUMERICAL_CANDIDATE, not a certified upper bound. Strict oracle dominance is the user-requested adequacy criterion; a failure can expose insufficient sampling rather than incorrect pair algebra.",
@@ -11169,10 +11169,10 @@
   "J_passing_cases_with_other_check_failures": [],
   "legacy_pass_fail_note": "n_pass/n_fail and failures retain all-check compatibility; use grade_counts for mutually exclusive A/B/C J results.",
   "production_sha256_after": {
-    "q2.py": "65408262158fb633482b7a049d504c8ac5c436b292aaa176eff8854c10707e80",
+    "q2.py": "01c048bbac895927350d9a5e0896d3dd7694242bc69e99bf65df83ab9dac609b",
     "diagnostics.py": "a10a8048dcb0ad39de0614da6ca7ecbb628d795e2836458c71efae58c8e520a9",
     "feasible.py": "51f65bfe64a8d42b8b456b145382227a982d50303d5fa8bba4a232fef564706b",
-    "geometry.py": "e412801a585fb35a772b3f1479903b2c48e9e55790c677c2af5a62b3daa76935"
+    "geometry.py": "e8695d2fcf87d2c17c08e5aa44222866262db9eae8ad757332f172b5edde0114"
   },
   "production_unchanged_during_run": true,
   "certification": {

@@ -40,6 +40,73 @@ def test_budget_limits_and_actual_sources():
             q2.same_ray_max_angle_deg(*args)
 
 
+def independent_disk_angle_interval(a, b, budget):
+    """100-digit oracle: actual bearings at the extremizer, not G3's formula."""
+    from mpmath.ctx_iv import MPIntervalContext
+    iv = MPIntervalContext()
+    iv.dps = 100
+    a, b, r = (iv.mpf(float(v)) for v in (a, b, budget))
+    t = (a+b)*r*r/(a*b+r*r)
+    z = iv.sqrt(r*r-t*t)
+    return iv, (iv.atan2(-z, b-t)-iv.atan2(-z, a-t))*180/iv.pi
+
+
+CRITICAL_BUDGET = float('26.150756085731231312')
+
+
+@pytest.mark.parametrize('budget', [
+    CRITICAL_BUDGET-1e-10, CRITICAL_BUDGET-1e-12,
+    math.nextafter(CRITICAL_BUDGET, -math.inf), CRITICAL_BUDGET,
+    math.nextafter(CRITICAL_BUDGET, math.inf),
+    CRITICAL_BUDGET+1e-12, CRITICAL_BUDGET+1e-10,
+])
+def test_audited_budget_threshold_is_conservative(budget):
+    iv, actual = independent_disk_angle_interval(500, 1500, budget)
+    upper = q2.same_ray_max_angle_deg(500, 1500, budget)
+    assert iv.mpf(upper) >= actual.b
+    result = q2.tight_short_baseline_lower_bound(source(), 500, 1500, budget)
+    if budget >= CRITICAL_BUDGET:
+        assert actual.a > 2
+        assert result is None
+    else:
+        assert actual.b < 2
+        # A rounded upper bound may conservatively decline a true boundary case.
+        if result is not None:
+            assert result['angle_bound_deg'] <= 2
+            assert result['lower_bound_m'] == 1000
+    if budget <= CRITICAL_BUDGET-1e-12:
+        assert result is not None
+
+
+def test_audit_counterexample_and_estimate_are_explicitly_separated():
+    assert CRITICAL_BUDGET.hex() == '0x1.a2697f369e37cp+4'
+    assert q2.same_ray_max_angle_estimate_deg(500, 1500, CRITICAL_BUDGET) == 2.
+    assert q2.same_ray_max_angle_deg(500, 1500, CRITICAL_BUDGET) > 2.
+    assert q2.tight_short_baseline_lower_bound(source(), 500, 1500, CRITICAL_BUDGET) is None
+
+
+@pytest.mark.parametrize('a,b,budget', [
+    (52.96035024800184, 52.96493322961901, 52.96035024794888),
+    (1., math.nextafter(1., math.inf), math.nextafter(1., 0.)),
+    (1e-200, 3e-200, 5e-201), (1e200, 3e200, 5e199),
+    (500., 1500., 5e-324), (500., 1500., 10.), (500., 1500., 26.15),
+])
+def test_outward_angle_covers_near_singular_and_scaled_inputs(a, b, budget):
+    iv, actual = independent_disk_angle_interval(a, b, budget)
+    assert iv.mpf(q2.same_ray_max_angle_deg(a, b, budget)) >= actual.b
+
+
+@pytest.mark.parametrize('width', [0., math.nextafter(1., 0.), 1.,
+                                   math.nextafter(1., math.inf), 45., 90.])
+def test_conservative_angle_test_at_adjacent_thresholds(width):
+    iv, actual = independent_disk_angle_interval(500, 1500, CRITICAL_BUDGET)
+    result = q2.tight_short_baseline_lower_bound(source(), 500, 1500, CRITICAL_BUDGET, width)
+    if result is not None:
+        assert actual.b <= 2*iv.mpf(width)
+    if actual.a > 2*iv.mpf(width):
+        assert result is None
+
+
 @pytest.mark.parametrize('sign', [-1, 1])
 def test_noncollinear_pair_bound(sign):
     ss = source()

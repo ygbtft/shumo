@@ -22,3 +22,4 @@ __pycache__/
 /review-opt/opt-q34-evidence.tar.gz
 /models/q1q2/benchmarks/q2_outer/exclusion/before/
 /models/q1q2/benchmarks/q2_outer/exclusion/after-final/
+/review-opt/q12-budget-rounding/
