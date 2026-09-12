@@ -26,3 +26,17 @@ __pycache__/
 /models/q1q2/reviews/sensitivity/results/
 /B/experiments/runs/2026-09-12_param-sensitivity/
 /models/q1q2/reviews/sensitivity/*_report.json
+
+# review-opt 各研究的大体量证据转储（结论见各 REPORT.md/*.md，证据可由脚本复现）
+/review-opt/**/code_snapshot/
+/review-opt/**/mock_snapshot/
+/review-opt/**/snapshot/
+/review-opt/**/validation/
+/review-opt/**/validation-pooled/
+/review-opt/**/diagnosis/
+/review-opt/**/results/
+/review-opt/**/certificates/
+/review-opt/**/*.jsonl
+/review-opt/**/*.csv
+/review-opt/**/*.log
+/review-opt/**/pytest-temp/

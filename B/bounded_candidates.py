@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parent
 SPECS = {
     3: {"range_area7": dict(kind="coupled_completion", layout="ring7",
                            dispatch_model="base", range_skip=True,
-                           trial_radius=50., area_prior=True, remainder_weight=1.)},
+                           trial_radius=50., area_prior=True, remainder_weight=1.5)},
     4: {"range_grid21_29": dict(kind="coupled_width", layout="grid21_29",
                                dispatch_model="base", range_skip=True,
                                fraction=.15, share_cooldown=150.,
