@@ -101,7 +101,7 @@ def q1_bundle(results, cases=None):
         {'operation': 'diameter: all vertex pairs', 'complexity': 'O(V^2)'},
         {'operation': 'Welzl with exact support recheck', 'complexity': 'expected O(V), worst O(V^3)'},
         {'operation': 'circle enumeration fallback', 'complexity': 'O(V^4)',
-         'note': 'Arithmetic operation counts; high-precision/rational bit-length costs are additional'}]}, metadata={'design': 'PLAN v3'})
+         'note': 'Arithmetic operation counts; high-precision/rational bit-length costs are additional'}]}, metadata={'design': 'docs/q1q2-design.md'})
 
 
 def q2_bundle(ss, result):
@@ -271,10 +271,10 @@ def main(argv=None):
     tables['T1'] = [
         {'category': '题面事实', 'statement': '每源固定未知半径1000—1500米；5米near；20米清除；东0°逆时针', 'source': '题面附录2'},
         {'category': '附件事实', 'statement': '允许域外检测；合法反馈direction/near/no_signal；示向度两位小数', 'source': '附件2'},
-        {'category': '合理推断', 'statement': '同一定位时段静止源、同一会话与未清除阶段', 'source': 'PLAN §0.5'},
-        {'category': '主动简化', 'statement': '异点未知固定有界误差场的全组合外包；最坏直径优先且保收', 'source': 'PLAN §0.5—0.6'},
-        {'category': '待明确', 'statement': '官方舍入顺序及±1°是否包含量化未知；1.005°仅最近舍入外包', 'source': 'PLAN §0.6'}]
-    bundle = ResultBundle(figures=tuple(f for b in bundles for f in b.figures), tables=tables, metadata={'design': 'PLAN.md v3', 'numerical_claim': 'NUMERICAL_CANDIDATE; refinement spread is not a bound'})
+        {'category': '合理推断', 'statement': '同一定位时段静止源、同一会话与未清除阶段', 'source': 'docs/q1q2-design.md'},
+        {'category': '主动简化', 'statement': '异点未知固定有界误差场的全组合外包；最坏直径优先且保收', 'source': 'docs/q1q2-design.md'},
+        {'category': '待明确', 'statement': '官方舍入顺序及±1°是否包含量化未知；1.005°仅最近舍入外包', 'source': 'docs/q1q2-design.md'}]
+    bundle = ResultBundle(figures=tuple(f for b in bundles for f in b.figures), tables=tables, metadata={'design': 'docs/q1q2-design.md', 'numerical_claim': 'NUMERICAL_CANDIDATE; refinement spread is not a bound'})
     write_json(output/'results.json', payload)
     write_json(output/'bundle.json', bundle)
     sources = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in Path(__file__).parent.glob('*.py')}

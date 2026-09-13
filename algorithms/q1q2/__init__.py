@@ -1,1 +1,1 @@
-"""Q1/Q2 implementation with float I/O and high-precision/rational geometry checks of PLAN.md v3."""
+"""Q1/Q2 算法：浮点输入输出、高精度与有理数几何计算。"""

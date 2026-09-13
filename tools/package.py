@@ -29,7 +29,7 @@ def main():
                  'docs/q1q2-design.md', 'docs/validation.md', 'docs/delivery-check.md']:
         files.add(ROOT / name)
 
-    # 原始实验包包含当时策略；不把当前交付默认值写回历史实验。
+    # 实验包按各组实际使用的策略与配置打包。
     if args.include_experiments:
         files.add(ROOT / 'experiments/official.py')
         files.add(ROOT / 'experiments/README.md')

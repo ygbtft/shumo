@@ -5,7 +5,7 @@
 | 1. Q1—Q4 算法 | `algorithms/q1q2/`、`algorithms/q34/` | 保留；Q3/Q4 从 `strategy.py` 读取第二次正式参数 |
 | 2. 官方模拟器本地调试接口 | `interfaces/official.py`、`vm.py`、`recording.py` | 直接通过 VM 内 HTTP 运行和记录；直接访问官方机器人接口 |
 | 3. 正式三次、消融、参数数据 | `data/formal/`、`data/experiments/` | 两题各三次；927 局有效官方演练及接入记录完整保留 |
-| 4. 论文素材 | `paper/` | 保留正文、DOCX、图、四表及统计源码对应的素材 |
+| 4. 论文素材 | `paper/` | 保留模型正文、图、四表及统计源码对应的素材 |
 | 5. 仓库布局说明 | `README.md` | 已更新目录说明及当前命令 |
 | 6. 四题主要思路 | `docs/q1.md`—`q4.md` | 四篇均保留 |
 | 7. Agent 环境交接 | `HANDOFF.md` | 保留环境、部署、单局调试和离线复现命令 |
