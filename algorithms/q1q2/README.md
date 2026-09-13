@@ -13,7 +13,7 @@
 | `tests/`、`benchmarks/` | 几何/求解测试、独立真值案例、认证结果与复核源码 |
 | `outputs/`、`reviews/` | 既有数学实验结果、敏感性数据、论证及文献素材 |
 
-主要思路见 [Q1](../../docs/q1.md)、[Q2](../../docs/q2.md)；完整数学设计见 [设计长文](../../docs/q1q2-design.md)，论文推导见 [Q1/Q2正文](../../paper/modeling-q1q2.md)。
+主要思路见 [Q1](../../docs/q1.md)、[Q2](../../docs/q2.md)；完整数学设计见 [设计长文](../../docs/q1q2-design.md)。
 
 ```sh
 python -m pytest algorithms/q1q2/tests -q --import-mode=importlib

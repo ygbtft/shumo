@@ -44,7 +44,7 @@ def main():
     # 精确回放只需要 27 局请求响应，不必复制数十 GB 的界面截图。
     if args.include_replay:
         files.add(ROOT / 'tools/replay_official.py')
-        audit_path = ROOT / 'paper/tables/逐局审计.json'
+        audit_path = ROOT / 'data/provenance/practice_audit.json'
         files.add(audit_path)
         audit = json.loads(audit_path.read_text(encoding='utf8'))
         for case in audit['cases']:

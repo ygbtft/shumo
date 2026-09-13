@@ -37,4 +37,4 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -u -m algorithms.q1q2.
 .venv/bin/python -m algorithms.q1q2.benchmarks.q2_outer.exclusion_run verify
 ```
 
-`solve` 生成证书，`verify` 读取证书并重算校验结果。固定坐标的认证区间与外层全域下界分别说明，详见 [EXCLUSION.md](EXCLUSION.md) 和 [独立复核结果](exclusion/verification.json)。论文数值汇总见 [Q1/Q2 素材](../../../../paper/materials/kit-q12.md)。
+`solve` 生成证书，`verify` 读取证书并重算校验结果。固定坐标的认证区间与外层全域下界分别说明，详见 [EXCLUSION.md](EXCLUSION.md) 和 [独立复核结果](exclusion/verification.json)。

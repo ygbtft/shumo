@@ -1,17 +1,16 @@
 # 无线电干扰源定位与清除：最终交付仓库
 
-仓库保留 Q1—Q4 算法、官方模拟器本地调试接口、实验源码与数据、论文素材。Q3/Q4 唯一交付版本为各题**第二次正式测试**采用的策略；三次正式测试原始数据全部留档。
+仓库保留 Q1—Q4 算法、官方模拟器本地调试接口、实验源码与数据。Q3/Q4 唯一交付版本为各题**第二次正式测试**采用的策略；三次正式测试原始数据全部留档。
 
 | 路径 | 内容 |
 |---|---|
 | `algorithms/q1q2/` | Q1/Q2 求解、几何、输入、绘图；`optional/` 为区间认证，`benchmarks/` 与 `reviews/sensitivity/` 保留数学实验和结果 |
 | `algorithms/q34/` | Q3/Q4 第二次正式版本的策略依赖、HTTP 客户端和布局；`strategy.py` 是唯一配置源 |
 | `interfaces/` | Windows 官方 HTTP 调试入口；macOS 到 Parallels VM 的部署工具 |
-| `experiments/` | 官方消融/参数实验运行入口，以及从原始记录重建论文四表的源码 |
+| `experiments/` | 官方消融/参数实验运行入口，以及从原始记录统计实验结果的源码 |
 | `data/formal/` | `q3/`、`q4/` 各含 `attempt1`、`attempt2`、`attempt3`；[正式结果汇总](data/formal/README.md)和 `index.json` 索引六次记录 |
 | `data/experiments/` | 官方消融、参数宽扫、联合扰动与配置复测的原始记录及实验源码 |
 | `data/evidence/` | 官方消融逐局时间及请求哈希核验记录 |
-| `paper/` | Q1/Q2与Q3/Q4模型正文、图、四张实验表与论文素材 |
 | `docs/q1.md`—`q4.md` | 四题主要思路、代码入口与证据边界；`attachments/` 为官方附件 |
 | `tools/` | 打包、数据审计、已保存官方响应回放、环境验证工具 |
 | `HANDOFF.md` | 面向 agent 的环境部署、实验复现和操作约束 |
@@ -21,11 +20,11 @@
 
 | 内容 | 原始数据目录 | 整理后的结果 |
 |---|---|---|
-| Q3、Q4 官方消融实验 | [data/experiments/2026-09-13_official-ablation/](data/experiments/2026-09-13_official-ablation/)（160局实验＋2局接入） | [Q3消融表](paper/tables/表1_Q3_消融实验.md)、[Q4消融表](paper/tables/表2_Q4_消融实验.md) |
-| Q3、Q4 官方参数性实验 | [data/experiments/2026-09-13_official-sensitivity/](data/experiments/2026-09-13_official-sensitivity/)（500局宽扫＋240局联合扰动＋2局接入） | [Q3参数表](paper/tables/表3_Q3_参数实验.md)、[Q4参数表](paper/tables/表4_Q4_参数实验.md) |
+| Q3、Q4 官方消融实验 | [data/experiments/2026-09-13_official-ablation/](data/experiments/2026-09-13_official-ablation/)（160局实验＋2局接入） | [逐局结果](data/experiments/2026-09-13_official-ablation/runs.jsonl) |
+| Q3、Q4 官方参数性实验 | [data/experiments/2026-09-13_official-sensitivity/](data/experiments/2026-09-13_official-sensitivity/)（500局宽扫＋240局联合扰动＋2局接入） | [逐局结果](data/experiments/2026-09-13_official-sensitivity/trials.csv) |
 | Q3、Q4 各三次正式测试 | [data/formal/q3/](data/formal/q3/)、[data/formal/q4/](data/formal/q4/) | [六次正式成绩](data/formal/README.md) |
 
-两个官方实验目录都同时包含Q3和Q4，内有原始记录、`config.json`实验配置，以及`package/`冻结源码。四表汇总见 [paper/tables/四表汇总.md](paper/tables/四表汇总.md)，重新统计的源码是 [experiments/build_tables.py](experiments/build_tables.py)。追加复测也保存在 `data/experiments/` 的对应批次中，并已纳入四表。
+两个官方实验目录都同时包含Q3和Q4，内有原始记录、`config.json`实验配置，以及`package/`冻结源码。重新统计的源码是 [experiments/build_tables.py](experiments/build_tables.py)。追加复测也保存在 `data/experiments/` 的对应批次中，并已纳入统计。
 
 ## 安装与 Q1/Q2
 
@@ -85,7 +84,7 @@ python experiments/official.py sensitivity --problem 3 --setting trial_radius=65
 
 每次命令只运行一局，输出在 `outputs/experiments/`，不会覆盖已保存样本。冻结源码在相应 `data/experiments/*/package/`，完整随机顺序在 `config.json`。案例由官方重新生成，无法重现原隐藏场景；已保存成绩的精确复核应使用下面的离线统计/回放。详见 [实验说明](experiments/README.md)。
 
-## 数据、论文表和验证
+## 数据统计和验证
 
 ```sh
 python experiments/build_tables.py
@@ -96,12 +95,12 @@ python tools/replay_official.py
 python tools/package.py
 ```
 
-四表位于 [paper/tables/四表汇总.md](paper/tables/四表汇总.md)，覆盖927局有效官方演练；4局接入校验及正式测试不混入演练均值。所有方案逐局等权，程序时间统一采用官方 `/exit` 与 `/enter` 的响应时间戳差；客户端计时另存。对照组的实际配置在各表中列明；相对baseline的偏移不等于单个参数的因果影响。
+统计脚本将结果写入 `outputs/tables/`，覆盖927局有效官方演练；4局接入校验及正式测试不混入演练均值。所有方案逐局等权，程序时间统一采用官方 `/exit` 与 `/enter` 的响应时间戳差；客户端计时另存。对照组的实际配置在各表中列明；相对baseline的偏移不等于单个参数的因果影响。
 
 完整原始数据含大量 GUI 截图，体积较大；`tools/package.py` 默认只打包算法和接口，不打包实验记录。加 `--include-experiments` 才包含两类官方实验的冻结运行源码和配置，仍不包含成绩、请求日志或截图。
 
-压缩包用于 VM 中运行算法；测试、证书复核、数据统计和论文生成命令需要完整仓库。
+压缩包用于 VM 中运行算法；测试、证书复核、数据统计命令需要完整仓库。
 
-九项要求与代码风格的检查结果见 [交付检查](docs/delivery-check.md)，验证记录见 [交付验证](docs/validation.md)。
+交付要求与代码风格的检查结果见 [交付检查](docs/delivery-check.md)，验证记录见 [交付验证](docs/validation.md)。
 
 需要在 VM 内精确回放时，打包增加 `--include-replay`，仅带上27局所需请求响应；在 VM 解压目录运行 `python tools/replay_official.py` 即可。

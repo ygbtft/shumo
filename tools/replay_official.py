@@ -19,7 +19,7 @@ from client import Client
 from recording import RequestLog, create_output
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_AUDIT = ROOT / 'paper/tables/逐局审计.json'
+DEFAULT_AUDIT = ROOT / 'data/provenance/practice_audit.json'
 
 
 def replay(problem, trace):

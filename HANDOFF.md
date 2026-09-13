@@ -87,13 +87,13 @@ python -m algorithms.q1q2.benchmarks.q2_outer.exclusion_run verify
 python tools/replay_official.py
 ```
 
-表格重建覆盖927局有效官方演练，4局接入校验及正式数据不混入均值。按每局等权计算清除数、每源定位清除时间、程序运行时间。程序时间为官方 exit 与 enter 的 `real_timestamp_ms` 差值除1000；客户端墙钟单独保存，不能与该指标混用。输出四表及逐局审计在 `paper/tables/`。
+表格重建覆盖927局有效官方演练，4局接入校验及正式数据不混入均值。按每局等权计算清除数、每源定位清除时间、程序运行时间。程序时间为官方 exit 与 enter 的 `real_timestamp_ms` 差值除1000；客户端墙钟单独保存，不能与该指标混用。统计输出在 `outputs/tables/`；核验和回放使用的逐局索引在 `data/provenance/practice_audit.json`。
 
 回放读取25局与第二次正式方案同配置的演练和2局第二次正式记录，逐条核对命令路径、频道、位置与虚拟时间；网络审计钩子禁止连接。必须用原 Windows ARM64 数值环境核验精确轨迹，跨平台浮点计算可能改变对称候选的选择顺序。回放不生成场景、不是 mock 实验，也不能算新增性能样本。
 
-`data/formal/index.json`和`data/experiment_index.json`使用仓库相对路径定位记录。原始日志保持原样；新运行输出写入`outputs/`，论文表写入`paper/tables/`。论文正文见`paper/modeling-q1q2.md`、`paper/modeling-q34.md`，实验数值见四表及正式结果汇总。
+`data/formal/index.json`和`data/experiment_index.json`使用仓库相对路径定位记录。原始日志保持原样；新运行与统计输出写入`outputs/`。实验数据见`data/experiments/`，正式结果见`data/formal/README.md`。
 
-九项交付核对见 [交付检查](docs/delivery-check.md)，验证范围见 [交付验证](docs/validation.md)。
+交付核对见 [交付检查](docs/delivery-check.md)，验证范围见 [交付验证](docs/validation.md)。
 
 ## 快速部署离线回放
 

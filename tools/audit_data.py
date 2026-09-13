@@ -34,7 +34,7 @@ def main():
                    if x['path'] == '/clear' and x['response'].get('clear_result') == 'success'}
         assert len(cleared) == r['cleared']
         assert r['seconds_per_cleared_source'] == r['total_virtual_s'] / len(cleared)
-    audit = json.loads((ROOT/'paper/tables/逐局审计.json').read_text(encoding='utf8'))
+    audit = json.loads((ROOT/'data/provenance/practice_audit.json').read_text(encoding='utf8'))
     index = json.loads((ROOT/'data/experiment_index.json').read_text(encoding='utf8'))
     assert len(audit['cases']) == len(index) == 927
     assert len({r['case_code'] for r in audit['cases']}) == 927
