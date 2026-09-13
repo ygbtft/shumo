@@ -1,4 +1,4 @@
-# 标准场景第二检测点外层搜索与定稿
+# 标准场景第二检测点搜索与认证
 
 本实验只调用生产 `q2.py` 的候选检查、边界生成、源补样、点对评分和局部源对细化；不修改几何内核或 Q2 数学目标。标准输入为首站 `(0,0)`、首测方向 `0°`、两次半宽 `1°`，源域半径1800 m，接收半径固定未知且在 `[1000,1500]` m，近场半径5 m。
 
@@ -8,16 +8,14 @@
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -u -m algorithms.q1q2.benchmarks.q2_outer.run search
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -u -m algorithms.q1q2.benchmarks.q2_outer.run refine
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -u -m algorithms.q1q2.benchmarks.q2_outer.run certify
-.venv/bin/python -m algorithms.q1q2.benchmarks.q2_outer.run paper
 ```
 
 `search` 为现有 `select_second_point` 全流程，预算14400秒，50/25 m 网格，12个分散起点，最小站点步长1.5625 m，5°边界步长。为直接报告主目标的数值最小值，本实验将可配置的并列带置零，不以移动距离换取目标值增加。
 
 `refine` 为独立的外层增强：四圆盘关系给出完整包围矩形 `[0,1005]×[-1000,1000]`，全量50/25 m网格按生产保收检查筛选，评分逐站使用 `sample_sources(..., q=q)` 补入边界接触源对（基础9×25）。随后1°边界扫描及0.999倍内侧点、12个间距至少25 m的低值起点作八邻域局部细化，步长25 m递减至0.1953125 m；最佳正半平面边界网格点左右1°区间用33×97源采样作32轮黄金分割。黄金分割只探索这一局部边界区间，没有全域单峰性或全局最优保证。边界径向二分精度1e-7 m，边界终选点径向内移1e-5 m后将坐标保留六位小数，并重新核验保收。反射仅用标准场景的数学对称性选取正纵坐标代表，反射后的精确浮点坐标再复评。
 
-`certify` 对推荐点和固定点公平复评。默认9×25、17×49、33×97三级逐级补样，8个源对起点各细化8轮；终评提高至17×49、33×97、65×193嵌套网格，合并双方补样与错位采样的最长源对见证，冻结公共样本，双方使用同一评分配置。容差审计将 `length_abs=1e-10`、`relative=1e-12`、`angle_abs=1e-12` 和近场偏移 `1e-7 m` 同时乘0.1和10。分别调用 `certified.py`，区间宽度容差0.001 m、30位十进制精度、最多2000000节点、1800秒；只有实际收敛才能进入最终报告。
+`certify` 对推荐点和固定点公平复评。采用9×25、17×49、33×97三级逐级补样，8个源对起点各细化8轮；终评提高至17×49、33×97、65×193嵌套网格，合并双方补样与错位采样的最长源对见证，冻结公共样本，双方使用同一评分配置。容差审计将 `length_abs=1e-10`、`relative=1e-12`、`angle_abs=1e-12` 和近场偏移 `1e-7 m` 同时乘0.1和10。分别调用 `certified.py`，区间宽度容差0.001 m、30位十进制精度、最多2000000节点、1800秒；只有实际收敛才能进入最终报告。
 
-`paper` 从已保存报告生成 `paper-results.md` 并更新 `paper/draft.md` 的摘要、第5.1—5.3节及附录B TODO-1；不手工输入结果数值。
 
 输出：
 
@@ -30,13 +28,13 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -u -m algorithms.q1q2.
 
 所有论文认证端点须向外取整；普通近似量四舍五入，并注明外包量展示向上取整。本实验不处理近边界首站、源域外首站等其他初测输入，不据标准场景外推其推荐点。
 
-实际归档中，原选择器完整完成所有阶段（包括排序翻转后的中级源网格全域复扫），返回 `[822.4620426538688, 575.8941221575948]`，评分 `111.13774790317521 m`。逐站边界补样与边界加密后的最终推荐及同精度固定点对照以 `refined.json` / `report.json` 为准。两点区间认证已独立重跑，端点与归档完全一致；论文生成已核验幂等，报告中的生产代码SHA256与当前文件一致。
+## 外层全域认证
 
-## 新增：外层全域排除认证
+标准场景的全域证书给出 `110.960101 ≤ inf J(q) ≤ 110.970102 m`，精确端点差为 0.01 米。推荐坐标为 `(843.035666,545.527004)` 米；独立复核覆盖 2660 个闭叶格。
 
-建议 A 已在隔离可选模块中实现。新增证书证明标准模型
-`110.960101 <= J* <= 110.970102 m`（展示宽度0.010001 m，精确端点差0.01 m），
-独立复核2660个闭叶盒及完整根域覆盖。此结论补充上文历史搜索报告，
-不改变原 `report.json` 中固定点认证的含义。实现、复现命令、预算退出合同和诚实边界见
-[EXCLUSION.md](EXCLUSION.md)，证据见 [exclusion/verification.json](exclusion/verification.json)。
-本新增入口不写论文；旧 `run paper` 尚未集成外层新证书，不应用它生成本次论文结论。
+```sh
+.venv/bin/python -m algorithms.q1q2.benchmarks.q2_outer.exclusion_run solve
+.venv/bin/python -m algorithms.q1q2.benchmarks.q2_outer.exclusion_run verify
+```
+
+`solve` 生成证书，`verify` 读取证书并重算校验结果。固定坐标的认证区间与外层全域下界分别说明，详见 [EXCLUSION.md](EXCLUSION.md) 和 [独立复核结果](exclusion/verification.json)。论文数值汇总见 [Q1/Q2 素材](../../../../paper/materials/kit-q12.md)。

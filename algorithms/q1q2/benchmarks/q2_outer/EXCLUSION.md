@@ -1,11 +1,6 @@
-# 标准场景外层全域排除证书（新增套件）
+# 标准场景外层全域排除证书
 
-本套件落实 `review-opt/opt-q12.md` 建议 A，新增可选模块
-`algorithms/q1q2/optional/outer_exclusion.py`、独立复核器 `check_exclusion.py`、
-CLI `exclusion_run.py` 和证书完整性测试。不修改 `q2.py`、`geometry.py`、
-`circle.py`、`certified.py` 的算法、判据或 J/F/C_sig 定义。
-原 `run.py`、`report.json`、`paper-results.md` 及所有原有搜索数据保留。
-**不要为本任务运行旧 `run paper`：它会写论文。**
+搜索实现在 `algorithms/q1q2/optional/outer_exclusion.py`，独立复核器为本目录的 `check_exclusion.py`，命令入口为 `exclusion_run.py`。固定点认证数据见 `report.json`，全域证书见 `exclusion/certificate.json`。
 
 ## 复现命令
 
@@ -22,14 +17,7 @@ export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 # 预算退出及其完整域覆盖也必须通过复核：
 .venv/bin/python -m algorithms.q1q2.benchmarks.q2_outer.exclusion_run solve --max-nodes 9 --output /tmp/q2-outer-budget
 .venv/bin/python -m algorithms.q1q2.benchmarks.q2_outer.exclusion_run verify --output /tmp/q2-outer-budget
-# 原有四块 benchmark、Q12/Q34 tests、新套件、两项主候选 owned mock-http：
-.venv/bin/python -m algorithms.q1q2.benchmarks.q2_outer.exclusion_regression --output /tmp/q2-outer-regression
 ```
-
-回归入口只重定向原 benchmark 的 `report.json` 写入，原始夹具、比较代码及既有报告不变；
-Q34 pytest 以 `B/` 为 cwd。mock-http 显式选该模式，使用自己创建的随机回环端口，
-不访问官方模拟器、不调用 practice 或正式测试。主候选每局完整 HTTP 轨迹由原 runner
-保存到 `B/robot_runs/`，新回归报告记录其路径并复制 summary。
 
 ## 认证结果
 
@@ -45,9 +33,7 @@ Q34 pytest 以 `B/` 为 cwd。mock-http 显式选该模式，使用自己创建�
 - 独立精确覆盖扫描为 650 个 x 薄片，总面积 `1005000 m²`，无缺口、无正面积重叠。
 - 复核 866 个不同的实际源点，使用 60 位区间运算；全部满足首次严格 `>5`、闭外径和闭角界。
 
-这些计数与原型一致。模块不依赖 `/tmp` 原型或读取其结果；可从零生成证书。
-运行时间是机器/环境相关量，JSON 分开保存初始化后搜索时间和包含固定点认证的总时间，
-不作为与历史完整外层搜索的同工作量加速比。
+运行时间与机器和环境有关。JSON 分别保存搜索时间及包含固定点认证的总时间。
 
 ## 证明范围与证书合同
 
@@ -57,7 +43,7 @@ Q34 pytest 以 `B/` 为 cwd。mock-http 显式选该模式，使用自己创建�
 首次源域是完整扇环 `5<r<=1500, |alpha|<=1°`。
 配置在搜索器与复核器分别显式构造，不能传入非对称/裁剪模型或随意换根域。
 
-依 `PLAN.md §5.8`，令 `u±=(cos 1°,±sin 1°)`，C_sig 恰为
+依 [Q1/Q2 模型](../../../../paper/modeling-q1q2.md) 的四圆盘约化，令 `u±=(cos 1°,±sin 1°)`，C_sig 恰为
 `D(5u±,1000)` 与 `D(1000u±,1000)` 四盘交。
 后两盘相加推出 `qx>=0`；近端圆盘推出 `qx<=1005`，
 对 y 符号选相反的近端圆心得 `|qy|<=1000`。
@@ -87,7 +73,7 @@ Q34 pytest 以 `B/` 为 cwd。mock-http 显式选该模式，使用自己创建�
 
 `certificate.json` 保存模型标识、完整根域、q、k、精确 target/U/L/gap、固定点区间结果、
 每个闭叶盒及对应圆盘索引或实际源对、未决盒、预算、版本和代码SHA256。
-区间上界从原 `certify` 获取，其 `_up` 向外舍入保留。tau 默认十进制字符串 `0.01`，
+区间上界从固定点认证器 `certify` 获取，其 `_up` 向外舍入保留。tau 取十进制字符串 `0.01`，
 转成精确有理数；目标直接为 `U-tau`，避免二次浮点减法舍入。
 
 预算中断保存全部栈中未决盒及其**保守下界0**。整个 partition 仍完整；
