@@ -10,3 +10,6 @@ __pycache__/
 !.env.example
 /outputs/
 /dist/
+
+# Local experiment host captures: screenshots, UI traces and database snapshots.
+/data/experiments/*/host/
