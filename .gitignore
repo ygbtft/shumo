@@ -1,6 +1,7 @@
 # Environment, credentials and generated working files
 .DS_Store
 .venv/
+/.vscode/
 __pycache__/
 *.py[cod]
 .pytest_cache/

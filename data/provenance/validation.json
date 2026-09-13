@@ -1,0 +1,51 @@
+{
+  "complete": true,
+  "validated_date": "2026-09-13",
+  "environment": {
+    "python": "3.14.6",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.1",
+      "mpmath": "1.3.0",
+      "pytest": "9.1.1"
+    }
+  },
+  "q12_tests": {
+    "passed": 1301,
+    "log": "outputs/q12-tests.log"
+  },
+  "q2_certificate_verification": "outputs/q2-certificate/verification.json",
+  "data_audit": {
+    "complete": true,
+    "formal_records": 6,
+    "primary_formal_index": 2,
+    "practice_cases": 927,
+    "accepted_practice_requests": 199234,
+    "frozen_files": {
+      "2026-09-13_official-ablation": 213,
+      "2026-09-13_official-sensitivity": 25
+    },
+    "unchanged_formal2_core_files": 21,
+    "official_requests_sent": 0,
+    "new_simulations": 0
+  },
+  "configurations": {
+    "complete": true,
+    "checked": 306
+  },
+  "windows_recorded_response_replay": "data/provenance/replay.json",
+  "table_numbers_unchanged": true,
+  "packages": {
+    "dist/delivery.zip": {
+      "verified_files": 299,
+      "sha256": "e86a510b5a8defb625962e78098c41603a76bd0ff8c0563fb5371d7ba0486128"
+    },
+    "dist/replay.zip": {
+      "verified_files": 328,
+      "sha256": "3c9ac8d3bc275eb6f32bdecf0ecb809ce25145b98d7b87ded97edc8a9824f112"
+    }
+  },
+  "official_requests_sent": 0,
+  "new_simulations": 0
+}
