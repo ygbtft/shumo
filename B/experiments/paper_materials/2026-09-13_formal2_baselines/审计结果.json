@@ -1,0 +1,34 @@
+{
+  "complete": true,
+  "simulator_calls": 0,
+  "unique_practice_cases": 927,
+  "problem_counts": {
+    "3": 427,
+    "4": 500
+  },
+  "batch_counts": {
+    "ablation": 160,
+    "sensitivity": 740,
+    "q3_first": 5,
+    "q3_repeat": 5,
+    "q3_refinement": 7,
+    "q4_fused": 5,
+    "q4_repeat": 5
+  },
+  "all_clear_cases": 927,
+  "total_cleared": 11967,
+  "excluded_calibration_cases": 4,
+  "excluded_formal_cases": 2,
+  "accepted_requests": 199234,
+  "table_rows": [
+    9,
+    8,
+    26,
+    34
+  ],
+  "arithmetic_crosscheck": true,
+  "baseline_parameters_checked_against_formal2": true,
+  "original_ablation_80_plus_80_trace_hashes_verified": true,
+  "runtime_definition": "(exit.real_timestamp_ms-enter.real_timestamp_ms)/1000",
+  "max_abs_client_vs_official_runtime_s": 0.07885608399868937
+}

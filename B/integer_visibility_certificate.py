@@ -180,3 +180,111 @@ def verify_integer_certificate(points,certificate):
         raise ValueError("partition contains overlapping or non-quadtree leaves")
     return dict(verified_leaves=len(leaves),partition_nodes=visited,boundary_corners=boundary_corners,
                 independent_exact_corner_triangles=True,integer_partition=True)
+
+
+def certify_integer_omni_stations(points, max_depth=16, max_cells=200000):
+    """Q3 disk coverage; explicit full-root partition, including outside leaves.
+
+    Q4 entry points above retain their convex-hull requirements unchanged.
+    Every receiving leaf fits one 1000-1e-5 m disk. An outside leaf is omitted
+    from the source domain only by an exact strictly-outside-disk predicate.
+    """
+    raw = _integer_points(points)
+    if type(max_depth) is not int or not 0 <= max_depth <= 16:
+        raise ValueError('max_depth must be an integer in [0,16]')
+    scale = 2**max_depth
+    p = raw.astype(np.int64)*scale
+    arena = 1800*scale
+    limit = ((1000*100000-1)**2*scale**2)//100000**2
+    stack = [(0, 0, arena, 0)]
+    cells = []
+    visited = 0
+    while stack:
+        x, y, h, depth = stack.pop()
+        visited += 1
+        nx, ny = max(abs(x)-h, 0), max(abs(y)-h, 0)
+        outside = nx*nx+ny*ny > arena*arena
+        far = np.abs(p-[x,y])+h
+        d2 = np.sum(far*far, axis=1)
+        i = int(d2.argmin())
+        if outside or d2[i] <= limit:
+            cells.append([x/scale,y/scale,h/scale,[] if outside else [i]])
+        elif depth >= max_depth or visited >= max_cells:
+            return dict(covered=False, reason='unresolved_exact_omni_cell',
+                        cell=[x/scale,y/scale,h/scale,depth],visited=visited)
+        else:
+            half = h//2
+            stack.extend((x+a*half,y+b*half,half,depth+1)
+                         for a in (-1,1) for b in (-1,1))
+    return dict(covered=True, problem=3, arena_radius=1800, receive_radius=1000,
+                scale=scale, cells=cells, leaf_count=len(cells), visited=visited,
+                source_domain='disk', partition_domain='[-1800,1800]^2',
+                receiving_inward_margin_m=1e-5, exact_integer_predicates=True)
+
+
+def verify_integer_omni_certificate(points, certificate, *, route):
+    """Independent Python-int corners and complete exact quadtree traversal."""
+    raw = _integer_points(points)
+    path = _integer_points(route)
+    if set(map(tuple,raw)) != set(map(tuple,path)):
+        raise ValueError('route differs from certified coordinate set')
+    if (certificate.get('covered') is not True or certificate.get('problem') != 3
+            or certificate.get('arena_radius') != 1800
+            or certificate.get('receive_radius') != 1000
+            or certificate.get('source_domain') != 'disk'
+            or certificate.get('partition_domain') != '[-1800,1800]^2'):
+        raise ValueError('invalid Q3 certificate context')
+    scale = certificate.get('scale')
+    if type(scale) is not int or not 1 <= scale <= 65536 or scale & (scale-1):
+        raise ValueError('invalid integer scale')
+    points_i = [(int(x)*scale,int(y)*scale) for x,y in raw]
+    leaves = {}; ancestors = set(); outside_count = 0
+    for cell in certificate.get('cells',[]):
+        if len(cell) != 4:
+            raise ValueError('malformed leaf')
+        x,y,h,ids = cell
+        if not np.isfinite([x,y,h]).all() or h <= 0:
+            raise ValueError('invalid leaf coordinates')
+        values = [v*scale for v in (x,y,h)]
+        if any(v != int(v) for v in values):
+            raise ValueError('nonintegral leaf')
+        xi,yi,hi = map(int,values); key=(xi,yi,hi)
+        if key in leaves:
+            raise ValueError('duplicate leaf')
+        if not isinstance(ids,list) or len(ids)>1:
+            raise ValueError('invalid receiving station ids')
+        if not ids:
+            nx,ny = max(abs(xi)-hi,0),max(abs(yi)-hi,0)
+            if nx*nx+ny*ny <= (1800*scale)**2:
+                raise ValueError('outside leaf intersects source disk')
+            outside_count += 1
+        else:
+            i=ids[0]
+            if type(i) is not int or not 0 <= i < len(points_i):
+                raise ValueError('invalid station index')
+            px,py=points_i[i]
+            for qx,qy in ((xi-hi,yi-hi),(xi+hi,yi-hi),(xi+hi,yi+hi),(xi-hi,yi+hi)):
+                d2=(qx-px)**2+(qy-py)**2
+                if d2*100000**2 > (1000*100000-1)**2*scale**2:
+                    raise ValueError('corner violates original receiving inward margin')
+        cx,cy,ch=0,0,1800*scale
+        for _ in range(17):
+            if (cx,cy,ch)==key:break
+            if ch<=hi or ch%2:
+                raise ValueError('off-tree leaf')
+            ancestors.add((cx,cy,ch));ch//=2
+            cx+=ch if xi>cx else -ch;cy+=ch if yi>cy else -ch
+        else:raise ValueError('leaf exceeds depth 16')
+        leaves[key]=ids
+    stack=[(0,0,1800*scale)];seen=set();visited=0
+    while stack:
+        key=stack.pop();visited+=1
+        if key in leaves:
+            seen.add(key);continue
+        if key not in ancestors:raise ValueError('incomplete root-square partition')
+        x,y,h=key;half=h//2
+        stack.extend((x+a*half,y+b*half,half) for a in (-1,1) for b in (-1,1))
+    if seen!=set(leaves):raise ValueError('overlapping partition')
+    return dict(verified_leaves=len(seen),outside_leaves=outside_count,
+                partition_nodes=visited,full_root_partition=True,
+                independent_python_integer_predicates=True,problem=3)

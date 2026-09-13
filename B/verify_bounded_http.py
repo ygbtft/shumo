@@ -66,6 +66,12 @@ def verify_guards():
         ["--mode", "practice", "--confirm-practice"],
         ["--base-url", "http://127.0.0.1:2026"],
         ["--mode", "offline", "--confirm-practice"],
+        ["--mode", "formal"],
+        ["--mode", "formal", "--robot-id", "guard-only"],
+        ["--mode", "formal", "--confirm-formal"],
+        ["--mode", "formal", "--robot-id", "guard-only", "--confirm-practice"],
+        ["--mode", "practice", "--robot-id", "guard-only", "--confirm-practice", "--confirm-formal"],
+        ["--mode", "offline", "--confirm-formal"],
     ]
     with patch("socket.socket.connect", side_effect=AssertionError("Network forbidden")) as connect, \
          patch("socket.socket.bind", side_effect=AssertionError("Server startup forbidden")) as bind:

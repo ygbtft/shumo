@@ -182,3 +182,40 @@ def certify_layout_coverage(points, certificate, *, layout_points=None, route=No
         raise ValueError("incomplete root-square partition: disk-only coverage is insufficient")
     return {**result, "coverage_guarantee": True, "missing_requirements": [],
             "problem": problem, "domain": "[-1800,1800]^2"}
+
+
+def verify_omni_cells(points, certificate, *, route):
+    """Independent Q3 floating corner check plus the original partition checker.
+
+    Q4's strict hull verifier and full-square coverage entry remain unchanged.
+    Explicit outside leaves complete the root square but do not claim that the
+    reception disks cover positions outside the radius-1800 source domain.
+    """
+    from fractions import Fraction
+    from icra_final_checks import partition_check
+    p=_point_array(points,'points');path=_point_array(route,'route')
+    if set(map(tuple,p)) != set(map(tuple,path)):
+        raise ValueError('route differs from certified coordinate set')
+    if (certificate.get('covered') is not True or certificate.get('problem') != 3
+            or certificate.get('arena_radius') != 1800
+            or certificate.get('receive_radius') != 1000
+            or certificate.get('source_domain') != 'disk'
+            or certificate.get('partition_domain') != '[-1800,1800]^2'):
+        raise ValueError('invalid Q3 certificate context')
+    result=partition_check(certificate)
+    area=sum((4*Fraction(float(c[2]))**2 for c in certificate['cells']),Fraction())
+    if area != 3600**2:raise ValueError('incomplete full-root partition')
+    minimum_margin=math.inf
+    for x,y,h,ids in certificate['cells']:
+        if not ids:
+            nearest=np.maximum(np.abs([x,y])-h,0.)
+            if nearest@nearest <= 1800**2:raise ValueError('invalid outside leaf')
+            continue
+        if (len(ids)!=1 or type(ids[0]) is not int or not 0<=ids[0]<len(p)):
+            raise ValueError('invalid Q3 station id')
+        corners=np.array([[x-h,y-h],[x+h,y-h],[x+h,y+h],[x-h,y+h]])
+        far=float(np.linalg.norm(corners-p[ids[0]],axis=1).max())
+        if far>1000-1e-5:raise ValueError('receiving margin violated')
+        minimum_margin=min(minimum_margin,1000-far)
+    return dict(**result,full_root_partition=True,root_area_m2=int(area),
+                problem=3,source_domain='disk',minimum_receiving_margin_m=minimum_margin)

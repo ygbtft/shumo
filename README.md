@@ -43,7 +43,7 @@
 | `models/q1q2/tests/` | 单元测试与回归测试（198 passed）。 |
 | `models/q1q2/data/`、`outputs/` | 解析案例输入配置；运行产物（JSON/CSV/图）。 |
 
-> 问题 3、4（搜索定位清除策略）尚未开始，后续在 `models/` 下新增。
+> 问题3、4已完成官方实验，当前代码仅采用第二次正式测试方案；见[Q34-SUMMARY.md](Q34-SUMMARY.md)和[论文素材](writing-kit/kit-q34.md)。
 
 ---
 

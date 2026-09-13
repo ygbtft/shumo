@@ -24,7 +24,7 @@ GRID={3:{'share_limit':[0,1,2,4,6,10,20], 'localization_weight':[0,.02,.04,.08,.
          'transverse_m':[10,20,30,40,60,80,100], 'angle_min':[1.02,2,5,10],
          'angle_max':[5,10,20,30], 'localization_weight':[0,.04,.08,.16],
          'steps':[4,6,8,10], 'pause_limit':[0,4,8,16,24], 'fraction':[.05,.1,.15,.25,.35,.5]}}
-DEFAULT={'share_limit':6,'localization_weight':.08,'steps':10,'max_active':3,'remainder_weight':1,
+DEFAULT={'share_limit':6,'localization_weight':.08,'steps':10,'max_active':2,'remainder_weight':1.5,
          'share_cooldown':150,'transverse_m':40,'angle_min':1.02,'angle_max':30,'pause_limit':16,'fraction':.15}
 METHOD={3:'range_area7',4:'range_grid21_29'}
 
@@ -65,7 +65,7 @@ def construct(p,client,changes):
             points.sort(key=lambda q:float(np.linalg.norm(q-self.client.position)))
             return anchor,u,length,points
         policy.probes=types.MethodType(probes,policy)
-    assert policy.trial_radius==({3:50.,4:35.}[p])
+    assert policy.trial_radius==builders.FORMAL_PARAMETERS[p]['trial_radius']
     if p==4: assert policy.bracket_trial_radius==35.
     return policy
 

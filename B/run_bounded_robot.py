@@ -1,4 +1,4 @@
-"""Frozen strategies: owned mock HTTP by default; explicit opt-in for practice."""
+"""Named strategies: owned mock HTTP by default; explicit opt-in for official sessions."""
 import time
 PROGRAM_STARTED = time.perf_counter()
 import argparse
@@ -9,7 +9,7 @@ import json
 import math
 from pathlib import Path
 from client import Client
-from bounded_candidates import SPECS, load_paths, build
+from bounded_candidates import SPECS, METHODS, load_paths, build
 
 ROOT=Path(__file__).resolve().parent
 
@@ -38,18 +38,25 @@ def trace_metrics(trace):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--problem",type=int,choices=(3,4),required=True)
-    parser.add_argument("--method",required=True)
+    parser.add_argument("--method", help="Defaults to this problem's formal-test-2 strategy")
     parser.add_argument("--seed",type=int,default=42)
     parser.add_argument("--series",choices=("cover21",),default="cover21")
-    parser.add_argument("--mode", choices=("mock-http", "offline", "practice"), default="mock-http")
-    parser.add_argument("--base-url", help="Practice HTTP endpoint only; mock-http always owns its random loopback port")
+    parser.add_argument("--mode", choices=("mock-http", "offline", "practice", "formal"), default="mock-http")
+    parser.add_argument("--base-url", help="Official HTTP endpoint only; mock-http always owns its random loopback port")
     parser.add_argument("--robot-id")
     parser.add_argument("--confirm-practice", action="store_true", help="User has manually logged in and opened a PRACTICE session")
+    parser.add_argument("--confirm-formal", action="store_true", help="User authorized this FORMAL run and the matching session is open")
     args=parser.parse_args()
+    if args.method is None:
+        args.method = METHODS[args.problem]
     if args.mode == "practice" and (not args.confirm_practice or not args.robot_id):
         parser.error("Practice needs --confirm-practice and --robot-id after manual login. No request sent.")
-    if args.mode != "practice" and (args.base_url or args.robot_id or args.confirm_practice):
-        parser.error("--base-url, --robot-id and --confirm-practice are practice-only. No request sent.")
+    if args.mode == "formal" and (not args.confirm_formal or not args.robot_id):
+        parser.error("Formal needs --confirm-formal and --robot-id. No request sent.")
+    if (args.confirm_practice and args.mode != "practice") or (args.confirm_formal and args.mode != "formal"):
+        parser.error("Confirmation must match the session mode. No request sent.")
+    if args.mode not in ("practice", "formal") and (args.base_url or args.robot_id):
+        parser.error("--base-url and --robot-id are official-session-only. No request sent.")
     if args.method not in SPECS[args.problem]:
         parser.error("Methods: " + ", ".join(SPECS[args.problem]))
     spec = SPECS[args.problem][args.method]

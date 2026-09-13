@@ -1,25 +1,42 @@
-"""Only the two frozen Q3/Q4 candidates used by the delivery entry point."""
+"""The two production strategies used in each problem's second formal test."""
 import json
 from pathlib import Path
 
 import numpy as np
-from coupled_dispatch_policy import CoupledCompletionPolicy, CoupledWidthPolicy
+from coupled_dispatch_policy import CoupledWidthPolicy
 from omni_negative_policy import OmniNegativeCompletionPolicy
 from ring_coverage import stations
 
 ROOT = Path(__file__).resolve().parent
 
-# Copy the effective parameters, including the selected clear gates; historical
-# experiment defaults (80/40 m) must not silently replace the current 50/35 m.
+# Historical experiments reproduce from their frozen packages, not this registry.
+METHODS = {3: "range_area7", 4: "range_grid21_29"}
+FORMAL_PARAMETERS = {
+    3: dict(task_order="nearest", trial_radius=65., max_active=2,
+            share_limit=6, localization_weight=.08, remainder_weight=1.5),
+    4: dict(dispatch="nearest", trial_radius=35., share_limit=6,
+            share_cooldown=150., transverse_m=40., fraction=.15, steps=10, pause_limit=16),
+}
 SPECS = {
     3: {"range_area7": dict(kind="coupled_completion", layout="ring7",
                            dispatch_model="base", range_skip=True,
-                           trial_radius=50., area_prior=True, remainder_weight=1.5)},
+                           area_prior=True, **FORMAL_PARAMETERS[3])},
     4: {"range_grid21_29": dict(kind="coupled_width", layout="grid21_29",
                                dispatch_model="base", range_skip=True,
-                               fraction=.15, share_cooldown=150.,
-                               transverse_m=40., trial_radius=35.)},
+                               **FORMAL_PARAMETERS[4])},
 }
+
+
+def actual_parameters(policy, problem):
+    names = {"localization_weight": "time_weight", "steps": "bracket_steps"}
+    return {key: getattr(policy, names.get(key, key)) for key in FORMAL_PARAMETERS[problem]}
+
+
+def construct(problem, client):
+    policy = build(client, SPECS[problem][METHODS[problem]], problem, load_paths(problem))
+    if actual_parameters(policy, problem) != FORMAL_PARAMETERS[problem]:
+        raise ValueError("Runtime parameters differ from formal test #2")
+    return policy
 
 
 def load_paths(problem):
@@ -40,7 +57,13 @@ def build(client, spec, problem, paths):
     parameters.pop("kind")
     points = paths[parameters.pop("layout")]
     if problem == 3:
-        return OmniNegativeCompletionPolicy(client, points, mixed=False, **parameters)
+        max_active = parameters.pop("max_active", None)
+        if max_active is not None and (type(max_active) is not int or not 1 <= max_active <= 5):
+            raise ValueError("Q3 primary localization budget must be an integer from 1 to 5")
+        policy = OmniNegativeCompletionPolicy(client, points, mixed=False, **parameters)
+        if max_active is not None:
+            policy.max_active = max_active
+        return policy
     if problem == 4:
         return CoupledWidthPolicy(client, points, mixed=True, **parameters)
     raise ValueError("Only problems 3 and 4 are registered")

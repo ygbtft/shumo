@@ -1,0 +1,19 @@
+{
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/表4_Q4_参数实验.md": "50a728a1820de8c3b025b9d4cf8de06fe84be09937ec4222138f75e6c39159a7",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/表2_Q4_消融实验.md": "d9e2baccb26f22f12f9a28f47abab80b21085bbecc6383c6c6d3c540db1b5fb0",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/论文素材.md": "9681a70f4a60d88fb7cffcf9e12a9fcb653965857cc22bf89c8dbe724de58ee2",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/四表汇总.md": "7eb509616e2a114729fdf66fb5739e604fa9d26678ab8e6ecc33bc274ac30b36",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/表1_Q3_消融实验.md": "8ce3c2f64f6d7bf396be542b4fc1e6231c9738e70efac7775d63552ea25907a9",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/表3_Q3_参数实验.md": "e72397970162f1d542fb8dba9fcc438d48fd8e5650eda60e692ea99857fd79af",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/表3_Q3_参数实验.tex": "dddbb5819cc5609731aed4a109f3b9c4ae9c14e7bbc26bf43d045586b8581c6b",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/表2_Q4_消融实验.tex": "2939c215a147bcba558f5498a85448ba8220d08323707a2aed1e2880452cdbaa",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/表1_Q3_消融实验.tex": "4b196ecc32b697173715dc006c2940f2be29c9c00869461033e693c2315e2755",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/表4_Q4_参数实验.tex": "7e722c8baaa8dc8a25680ea51d50032d0fb378f301ee40517f0053f4d106b81e",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/四表数据.json": "014a5eadd6b44f1c021739cc4afc06648d2fc118ba6c5e0e56111cb1ad185526",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/逐局审计.json": "37a7341443db3d442aa4415a24ac92148621804ea9eb7a13825556c7593ebc7c",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/审计结果.json": "410a66c8aaf313f781f7b46ce7a1a6fdad786964cfb4fd85af79ba18a4f26f84",
+  "B/experiments/paper_materials/2026-09-13_formal2_baselines/build_tables.py": "a71c89e3d28fdb25fbba8089984fe0f1ddebc36e419faee53e63cfbb816b4601",
+  "writing-kit/kit-q34.md": "edb348683e29ec3bc50b0a26a868a9baaf91c8b7f0b0084b95bfdab965cc7f95",
+  "writing-kit/kit-optimization.md": "c17a03767da46b2316e4b83c9b49176b17b826f21e0df271283000c4855e5f1f",
+  "models/q34/modeling-q34.md": "de77bbf3835079d5121967fa595e92a37672c3c7636331112a1083b6ccfd0a94"
+}

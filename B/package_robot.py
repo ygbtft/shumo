@@ -1,27 +1,47 @@
-"""Make a portable source package in B/dist, with no official identity or recordings."""
-from pathlib import Path
-import zipfile
+"""Package only the two formal-test-2 policies and their runtime dependencies."""
+import ast
 import hashlib
 import json
+from pathlib import Path
+import zipfile
 
-root=Path(__file__).resolve().parent
-dest=root/"dist"
-dest.mkdir(exist_ok=True)
-files=["run_robot.py","client.py","policies.py","geometry.py","intelligent.py","coverage.py","simulator.py"]
-with zipfile.ZipFile(dest/"b-robot-offline-and-practice.zip","w",zipfile.ZIP_DEFLATED) as z:
-    for name in files:
-        z.write(root/name,"b-robot/"+name)
-    z.write(root/"experiments/runs/2026-09-10_independent/routes.json","b-robot/routes.json")
-    z.writestr("b-robot/requirements-runtime.txt","numpy>=2.1\n")
-    z.writestr("b-robot/README.txt", "Q3/Q4 CPU runtime needs Python 3.10+ and NumPy. Q1 LP checks additionally need SciPy.\n"
-               "First run offline: python -B run_robot.py --mode offline --problem 4 --strategy square_cropped_2opt\n"
-               "Official GUI and this program must run on the same Windows guest.\n"
-               "After a HUMAN starts and confirms a PRACTICE session: python -B run_robot.py --mode practice --problem 3 --strategy active_2opt --confirm-practice --robot-id YOUR_TEAM_ID\n"
-               "The flag is an operator declaration, not server mode authentication. Never use enter as a probe.\n"
-               "No account registration, GUI automation, formal-test start, or management endpoint is implemented.\n"
-               "This strategy has passed offline cross-tests but has not itself run in the official simulator.\n")
-path=dest/"b-robot-offline-and-practice.zip"
-(dest/"manifest.json").write_text(json.dumps({"zip":path.name,"sha256":hashlib.sha256(path.read_bytes()).hexdigest(),
-                                            "contains_official_identity":False,"contains_official_logs":False,
-                                            "contains_installer_or_vm":False},indent=2))
-print(path)
+ROOT = Path(__file__).resolve().parent
+
+def runtime_files():
+    seen = set()
+    pending = ['run_q34_official.py', 'run_q3_fused_formal.py', 'run_q4_nearest_formal.py']
+    while pending:
+        name = pending.pop()
+        if name in seen:
+            continue
+        seen.add(name)
+        for node in ast.walk(ast.parse((ROOT / name).read_text())):
+            names = [a.name for a in node.names] if isinstance(node, ast.Import) else ([node.module] if isinstance(node, ast.ImportFrom) and node.module else [])
+            for module in names:
+                local = module.split('.')[0] + '.py'
+                if (ROOT / local).is_file():
+                    pending.append(local)
+    return sorted(seen | {'layouts/grid21_29.json'})
+
+def main():
+    dest = ROOT / 'dist'
+    dest.mkdir(exist_ok=True)
+    files = runtime_files()
+    forbidden = {'simulator.py', 'run_robot.py', 'official_sensitivity_config.py'}
+    assert not forbidden.intersection(files)
+    manifest = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in files}
+    archive = dest / 'q34-formal2.zip'
+    with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
+        for name in files:
+            z.write(ROOT / name, 'q34-formal2/' + name)
+        z.writestr('q34-formal2/requirements.txt', 'numpy\nscipy\n')
+        z.writestr('q34-formal2/manifest.json', json.dumps(manifest, indent=2))
+        z.writestr('q34-formal2/README.md', (ROOT / 'Q34_CURRENT.md').read_text())
+    result = dict(archive=archive.name, formal_version=2, files=manifest,
+                  sha256=hashlib.sha256(archive.read_bytes()).hexdigest(),
+                  includes_mock=False, includes_official_logs=False, includes_team_identity=False)
+    (dest / 'manifest.json').write_text(json.dumps(result, indent=2) + '\n')
+    print(archive)
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,501 @@
+{
+  "status": "proposal_not_started",
+  "problem": 4,
+  "backend": "official_practice",
+  "candidate": "nearest35_fraction30_share2",
+  "profiles": {
+    "nearest35": {
+      "dispatch": "nearest",
+      "trial_radius": 35.0,
+      "share_limit": 6,
+      "share_cooldown": 150.0,
+      "transverse_m": 40.0,
+      "fraction": 0.15,
+      "steps": 10,
+      "pause_limit": 16
+    },
+    "nearest35_fraction30": {
+      "dispatch": "nearest",
+      "trial_radius": 35.0,
+      "share_limit": 6,
+      "share_cooldown": 150.0,
+      "transverse_m": 40.0,
+      "fraction": 0.3,
+      "steps": 10,
+      "pause_limit": 16
+    },
+    "nearest35_fraction30_share2": {
+      "dispatch": "nearest",
+      "trial_radius": 35.0,
+      "share_limit": 2,
+      "share_cooldown": 150.0,
+      "transverse_m": 40.0,
+      "fraction": 0.3,
+      "steps": 10,
+      "pause_limit": 16
+    }
+  },
+  "proposed_cases_per_profile": 10,
+  "proposed_total": 30,
+  "schedule_seed": 216091304,
+  "schedule": [
+    {
+      "order": 1,
+      "block": 1,
+      "profile": "nearest35_fraction30",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 2,
+      "block": 1,
+      "profile": "nearest35_fraction30_share2",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 3,
+      "block": 1,
+      "profile": "nearest35",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 4,
+      "block": 2,
+      "profile": "nearest35_fraction30",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 5,
+      "block": 2,
+      "profile": "nearest35",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 6,
+      "block": 2,
+      "profile": "nearest35_fraction30_share2",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 7,
+      "block": 3,
+      "profile": "nearest35_fraction30",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 8,
+      "block": 3,
+      "profile": "nearest35",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 9,
+      "block": 3,
+      "profile": "nearest35_fraction30_share2",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 10,
+      "block": 4,
+      "profile": "nearest35_fraction30",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 11,
+      "block": 4,
+      "profile": "nearest35",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 12,
+      "block": 4,
+      "profile": "nearest35_fraction30_share2",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 13,
+      "block": 5,
+      "profile": "nearest35",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 14,
+      "block": 5,
+      "profile": "nearest35_fraction30",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 15,
+      "block": 5,
+      "profile": "nearest35_fraction30_share2",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 16,
+      "block": 6,
+      "profile": "nearest35",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 17,
+      "block": 6,
+      "profile": "nearest35_fraction30",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 18,
+      "block": 6,
+      "profile": "nearest35_fraction30_share2",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 19,
+      "block": 7,
+      "profile": "nearest35_fraction30",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 20,
+      "block": 7,
+      "profile": "nearest35",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 21,
+      "block": 7,
+      "profile": "nearest35_fraction30_share2",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 22,
+      "block": 8,
+      "profile": "nearest35_fraction30_share2",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 23,
+      "block": 8,
+      "profile": "nearest35_fraction30",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 24,
+      "block": 8,
+      "profile": "nearest35",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 25,
+      "block": 9,
+      "profile": "nearest35_fraction30_share2",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 26,
+      "block": 9,
+      "profile": "nearest35",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 27,
+      "block": 9,
+      "profile": "nearest35_fraction30",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 28,
+      "block": 10,
+      "profile": "nearest35",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 29,
+      "block": 10,
+      "profile": "nearest35_fraction30_share2",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 30,
+      "block": 10,
+      "profile": "nearest35_fraction30",
+      "parameters": {
+        "dispatch": "nearest",
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    }
+  ],
+  "primary_comparison": [
+    "nearest35_fraction30_share2",
+    "nearest35"
+  ],
+  "source_results_observed": true,
+  "new_fused_results_observed": false,
+  "official_cases_started": 0,
+  "selection_is_exploratory": true
+}

@@ -1,6 +1,6 @@
 # 问题3与问题4：覆盖驱动的发现、定位与清除模型
 
-版本：实现对照稿 v1，2026-09-11。本文系统化记录合并、审计与修复后的 Q3/Q4 方法，供论文写作和后续引用。实现基准为本仓库当前 `B/`，主入口为 `bounded_candidates.py`；历史审计中的 `NTJ_B_wt` 路径、旧工厂与旧默认门限不作为当前配置。本文只新增建模文档，不修改策略、几何内核、实验归档或模拟器。
+版本：第二次正式测试方案，2026-09-13。Q3采用最近邻任务排序、65米试清门限、主定位预算2轮；Q4采用最近邻任务排序、35米门限及默认参数。当前配置以`B/bounded_candidates.py`为准；本稿保留适用的模型推导，实验数据统一引用[当前四表](../../B/experiments/paper_materials/2026-09-13_formal2_baselines/四表汇总.md)。
 
 核心方法是：用有限站点的连续覆盖保证发现，以含真源的位置外包指导定位和清除，将未完成扫描与已知源服务共同排序，并以有限光学覆盖完成未能充分收敛的定位任务。**覆盖、包含性与有限结束各有独立依据；任务排序、测向评分和试探门限承担效率优化，不因此获得全局最优保证。**
 
@@ -10,13 +10,13 @@
 
 | 项目 | Q3：`range_area7` | Q4：`range_grid21_29` |
 |---|---|---|
-| 实例类 | `CoupledCompletionPolicy` | `CoupledWidthPolicy` |
+| 实例类 | `OmniNegativeCompletionPolicy` | `CoupledWidthPolicy` |
 | 场景处理 | 全向源，`mixed=False` | 全向/定向混合，统一按未知朝向处理，`mixed=True` |
 | 发现布局 | 原点＋半径1140米的六个等角点，共7站 | `grid21_29` 的21个固定整数坐标 |
-| 调度模型 | `dispatch_model="base"`，已知源以包含圆心作任务位置代理 | 同为 `base`，`prediction="center"` |
-| 服务粒度 | 选中一个源后原子完成；最多3次主要主动测量，再有限光学兜底 | 按源分包；每源累计最多10轮、20次主要 RF，再有限光学兜底 |
-| 提前试探门 | `trial_radius=50` 米 | `bracket_trial_radius=35` 米，由 `trial_radius=35` 传入 |
-| 测向/探针对应参数 | `area_prior=True`，`remainder_weight=1`，`time_weight=0.08`；未启用 expanded 候选 | 纵向分位 `fraction=0.15`，横向目标40米，负反馈共享冷却150米 |
+| 调度模型 | `dispatch_model="base"`，`task_order="nearest"`，源以包含圆心作位置代理 | 同为 `base`，`prediction="center"`，`dispatch="nearest"` |
+| 服务粒度 | 选中一个源后原子完成；最多2次主要主动测量，再有限光学兜底 | 按源分包；每源累计最多10轮、20次主要 RF，再有限光学兜底 |
+| 提前试探门 | `trial_radius=65` 米 | `bracket_trial_radius=35` 米，由 `trial_radius=35` 传入 |
+| 测向/探针对应参数 | `area_prior=True`，`remainder_weight=1.5`，`time_weight=0.08`；未启用 expanded 候选 | 纵向分位 `fraction=0.15`，横向目标40米，负反馈共享冷却150米 |
 | 共用机制 | 保守位置区域、包含圆、共享已知频道测量、已知源距离跳扫、公开16源上限 | 同左；默认全局中断上限16次 |
 
 显式配置与直接构造见 [B/bounded_candidates.py:13](../../B/bounded_candidates.py)；继承默认值见 [B/joint_task_policy.py:14](../../B/joint_task_policy.py)、[B/policies.py:12](../../B/policies.py)、[B/interleaved_policy.py:19](../../B/interleaved_policy.py)。Q3 实例虽继承了 bracket 相关字段，主服务不使用其40米字段；Q4 主循环调用 `source_packet`，不调用同类可访问的旧 `complete_source`。
@@ -25,16 +25,16 @@
 
 ```text
 bounded_candidates.build
-  Q3 → CoupledCompletionPolicy
+  Q3 → OmniNegativeCompletionPolicy
        run: JointTaskPolicy.run
        next_task: CoupledDispatchMixin(base)
-                  → EfficientJointPolicy → JointTaskPolicy → remaining_route
+                  → EfficientJointPolicy → JointTaskPolicy → 最近邻任务
        source: CompletionClearancePolicy.complete_source
        clear: ClearanceMixin → JointTaskPolicy → Policy → Client
 
   Q4 → CoupledWidthPolicy
        run: InterleavedMixin.run
-       next_task: CoupledDispatchMixin(base) → InterleavedMixin → remaining_route
+       next_task: CoupledDispatchMixin(base) → InterleavedMixin → 最近邻任务
        source: InterleavedMixin.source_packet
        probes: BoundedWidthPacketPolicy → WideProbeMixin → ProbeJointPolicy
        clear: JointTaskPolicy → Policy → Client
@@ -256,20 +256,13 @@ $$
 
 ### 4.3 认证清除与试探清除
 
-未到20米认证门但 $\widehat r\le r_{\rm trial}$ 时，允许每源至多一次专门的提前圆心试探。Q3 取50米，Q4 取35米。50/35米是“何时值得尝试”的策略门，不改变20米物理清除半径，也不提供成功概率保证。
+未到20米认证门但 $\widehat r\le r_{\rm trial}$ 时，允许每源至多一次专门的提前圆心试探。Q3 取65米，Q4 取35米。65/35米是“何时值得尝试”的策略门，不改变20米物理清除半径，也不提供成功概率保证。
 
 Q3 试探失败后保留区域，在圆心继续测量；Q4 试探失败后沿原成对探针规则继续定位。只有成功响应改变 `cleared`，失败不会被算作完成，也不在当前主链中追加“20米圆外”的负约束。[B/completion_sensing_policy.py:117](../../B/completion_sensing_policy.py)、[B/interleaved_policy.py:107](../../B/interleaved_policy.py)。
 
 “每源一次”仅指该提前试探分支；光学兜底仍可尝试圆心及多个格心，故不是每源总清除请求至多一次，也不是总失败至多一次。
 
-降低门限通常减少过早试探，却可能增加测向和移动。已有冻结后独立普通验证每配置1050局，全部全清：
-
-| 比较 | 清除失败总数 | 源加权时间（秒/源） | 解释 |
-|---|---:|---:|---|
-| Q3 原80米 → 当前50米 | 2881 → 2337 | 246.8783 → 246.8197 | 样本净省约0.0587秒/源，失败减少18.88% |
-| Q4 原40米 → 当前35米 | 1032 → 808 | 467.5070 → 467.6623 | 样本增加约0.1553秒/源，失败减少21.71% |
-
-这是既有本地 mock 实验，非本次新运行或官方分布保证；差值按原始未舍入统计报告。Q4 有可测时间代价，不能写成“两题均提速”。当时20米控制在样本中零失手，但相对原门限分别增加约2.8827和2.1697秒/源；有限光学兜底使其也不是任意场景零失手策略。完整训练/验证划分、压力场景及逐局回退见 [B/CLEAR_GATE_TRADEOFF.md:18](../../B/CLEAR_GATE_TRADEOFF.md)。
+门限影响试清、后续测向和移动之间的取舍。当前65/35米选择是启发式参数；官方消融、宽扫及追加复测见[四张实验表及分析](../../B/experiments/paper_materials/2026-09-13_formal2_baselines/论文素材.md)，不能从较低门限直接推出整局时间更短。
 
 ### 4.4 有限光学覆盖兜底
 
@@ -292,7 +285,13 @@ $$
 
 已知源的一次无信号意味着“超出实际半径，或处于定向背面”。例如源位于原点、朝东、半径1000米，在 $(-1,0)$ 检测仅距1米仍无信号。因此 Q4 不能据单次无信号排除检测点周围1000米圆盘，也不能删除该频道。
 
-当前 Q3 基础层同样不执行一般单次负信息裁剪，主动测向失收后保留区域并转兜底；Q4 只有下述完整成对几何条件才做位置裁剪。`ProbeJointPolicy` 的150米负反馈冷却仅用于抑制附近可选共享测量，不是位置排除规则。[B/policies.py:23](../../B/policies.py)、[B/completion_sensing_policy.py:137](../../B/completion_sensing_policy.py)、[B/efficient_joint_policy.py:32](../../B/efficient_joint_policy.py)。
+当前Q3通过`OmniNegativeCompletionPolicy`将真实阴性与同源成功锚点结合。设$a$处成功接收、$q$处实际返回无信号，则全向源满足$\|g-q\|>\rho\ge\|g-a\|$，从而
+
+$$
+(q-a)^Tg<\frac{\|q\|^2-\|a\|^2}{2}.
+$$
+
+程序取相应闭半平面并增加向外数值余量，保守裁剪位置外包；没有成功锚点时，不将一般单次阴性当成精确位置排除。该距离支配推理不适用于定向接收。Q4采用下述成对几何条件。`ProbeJointPolicy` 的150米负反馈冷却仅用于抑制附近可选共享测量，不是位置排除规则。[B/policies.py:23](../../B/policies.py)、[B/completion_sensing_policy.py:137](../../B/completion_sensing_policy.py)、[B/efficient_joint_policy.py:32](../../B/efficient_joint_policy.py)。
 
 ### 5.2 成对探针的构造
 
@@ -355,7 +354,13 @@ $$
 \cup\{(\mathrm{source},c,z_c):c\in D_t\setminus C_t\},\tag{18}
 $$
 
-其中 $z_c$ 是当前包含圆心，只作为服务位置代理。以最近一次已接受动作的位置为起点，对任务代理点作最近邻排序，再最多3轮2-opt下降；只执行首任务，得到新反馈后重新构造任务集合。目标为固定起点、终点自由的开路径长度，不强制回原点。[B/adaptive_routes.py:7](../../B/adaptive_routes.py)、[B/joint_task_policy.py:82](../../B/joint_task_policy.py)、[B/interleaved_policy.py:51](../../B/interleaved_policy.py)。
+其中$z_c$是当前包含圆心，只作为服务位置代理。第二次正式方案在两题中均选择当前位置最近的任务：
+
+$$
+a_t=\mathop{\arg\min}_{a\in\mathcal T_t}\|p(a)-x_t\|_2.
+$$
+
+得到新反馈后重新构造任务集合。当前在线任务选择不执行2-opt改良，也不要求回到原点。该最近邻选择为启发式，不能认证整局最短时间。[B/adaptive_routes.py:7](../../B/adaptive_routes.py)、[B/joint_task_policy.py:82](../../B/joint_task_policy.py)、[B/interleaved_policy.py:51](../../B/interleaved_policy.py)。
 
 该结构将定位绕行后的实际位置带回下一次规划。Q3 选中源后完成该源再重排；Q4 只完成一个定位包，再与剩余扫描/源任务竞争。Q4 全局中断计数达到默认16次时强制续做上次未完成源，主要约束额外绕行；有限结束还依赖不可重置的每源预算。[B/interleaved_policy.py:51](../../B/interleaved_policy.py)。
 
@@ -379,10 +384,10 @@ $$
 这里 $\varepsilon$ 用弧度。主评分为
 
 $$
-J_{\rm proxy}(q)=U(q)+0.08\left[\frac{\|q-x_t\|+\|q-z_c\|}{5}+5\right].\tag{20}
+J_{\rm proxy}(q)=U(q)+0.08\left[\frac{\|q-x_t\|+1.5\|q-z_c\|}{5}+5\right].\tag{20}
 $$
 
-第二段距离模拟测量后到预期完工位置的剩余路程；$z_c$ 不是源真值。0.08 是把秒折算到米量纲评分的经验权重。协方差公式和除以3的噪声代理不表示已验证独立、高斯或均匀噪声；式（20）也没有完整模拟后续切频、可变测量数、成功/失败清除与扫描改序。因此应称“时间导向的有限候选测向评分”，不称连续最坏误差或整局虚拟时间的精确最优。[B/completion_sensing_policy.py:73](../../B/completion_sensing_policy.py)。
+第二段距离以1.5的余程权重模拟测量后到预期完工位置的剩余路程；$z_c$ 不是源真值。0.08 是把秒折算到米量纲评分的经验权重。协方差公式和除以3的噪声代理不表示已验证独立、高斯或均匀噪声；式（20）也没有完整模拟后续切频、可变测量数、成功/失败清除与扫描改序。因此应称“时间导向的有限候选测向评分”，不称连续最坏误差或整局虚拟时间的精确最优。[B/completion_sensing_policy.py:73](../../B/completion_sensing_policy.py)。
 
 ### 6.3 同位置共享测量
 
@@ -428,15 +433,15 @@ $$
 
 由此可见，少一次试探失败不必恰好省3秒：位置、后续测向和任务顺序会改变。站数更少、静态路径更短、局部不确定度更小均不是整局支配关系。
 
-跨场景必须区分
+当前实验表按每局等权统计。设方案共$m$局，第$i$局清除$C_i$个源、累计官方虚拟时间为$T_i$，真实程序耗时为$r_i$，则
 
 $$
-\frac1m\sum_{i=1}^m\frac{T_i}{N_i}
-\quad\text{与}\quad
-\frac{\sum_i T_i}{\sum_i N_i}.\tag{23}
+\overline C=\frac1m\sum_{i=1}^m C_i,\qquad
+\overline t=\frac1m\sum_{i=1}^m\frac{T_i}{C_i},\qquad
+\overline r=\frac1m\sum_{i=1}^m r_i.\tag{23}
 $$
 
-前者是逐局平均，后者是源加权平均；第4.3节用后者。历史批次、后端、源分布、误差场、门限和计分分母变化时不得拼接成同一消融。现实墙钟、CPU、初始化、网络等待另列；虚拟时间不含计算本身，低虚拟耗时不保证现实期限内完成。`offline` 与 `mock-http` 使用不同后端，同 seed 也不自动表示同一场景。[B/run_bounded_robot.py:61](../../B/run_bounded_robot.py)。
+$r_i$取官方退出响应与进入响应的`real_timestamp_ms`之差并换算成秒。各方案的时间偏移为$(\overline t/\overline t_0-1)\times100\%$，程序时间同理。基准为各题第二次正式采用方案的既有演练数据，不把单局正式成绩混入均值；所有实际组别、局数和参数见[四表素材](../../writing-kit/kit-q34.md)。各局为新的官方案例，平均清除数差异反映案例构成，不能等同于清除能力差异。
 
 ## 8. 停止准则与有限结束论证
 
@@ -453,30 +458,19 @@ $$
 
 ### 8.2 有限动作与时间上限的不同层次
 
-Q3 每个主循环要么消耗一个剩余站，要么完成一个已知源；站数有限、源最多16个，每源主要主动测量至多3次，随后光学格数有限。Q4 每个源包或者完成源、进入有限兜底，或者消耗一次不可恢复的轮数；每源至多10轮，每轮至多两次主要 RF。共享测量每次最多6个且禁止递归，站点任务也有限。因此在正确反馈、区域保持包含且操作可执行的条件下，不能无限重复定位或无限等待未知源数达到16。[B/completion_sensing_policy.py:114](../../B/completion_sensing_policy.py)、[B/interleaved_policy.py:99](../../B/interleaved_policy.py)、[B/joint_task_policy.py:50](../../B/joint_task_policy.py)。
+Q3 每个主循环要么消耗一个剩余站，要么完成一个已知源；站数有限、源最多16个，每源主要主动测量至多2次，随后光学格数有限。Q4 每个源包或者完成源、进入有限兜底，或者消耗一次不可恢复的轮数；每源至多10轮，每轮至多两次主要 RF。共享测量每次最多6个且禁止递归，站点任务也有限。因此在正确反馈、区域保持包含且操作可执行的条件下，不能无限重复定位或无限等待未知源数达到16。[B/completion_sensing_policy.py:114](../../B/completion_sensing_policy.py)、[B/interleaved_policy.py:99](../../B/interleaved_policy.py)、[B/joint_task_policy.py:50](../../B/joint_task_policy.py)。
 
-“最多3次/20次”限于源服务的主要主动 RF，不包括扫描与其他源服务时的共享测量。有限结束不表示每轮直径减半；纵向分位0.15及接收更新也不支持这种收缩率。
+“最多2次/20次”限于源服务的主要主动 RF，不包括扫描与其他源服务时的共享测量。有限结束不表示每轮直径减半；纵向分位0.15及接收更新也不支持这种收缩率。
 
 历史 [B/WIDE_PROBE_GUARANTEE.md](../../B/WIDE_PROBE_GUARANTEE.md) 给出了在站点范围、最多10轮主探测、共享上限、光学路径和全局至多24次中断等限定下的335136虚拟秒、9766请求的宽松计数界；既有审计核对了继承结构，但未独立重建全部最坏动作轨迹。本文将其列为**有条件的既有上界推导**，不将其作为本次新认证，也不推广到任意构造参数或现实1200秒期限。当前默认中断上限16小于该论证允许上限，仍须保留其他前提。
 
-## 9. 已审计修复与可引用证据
+## 9. 当前版本的代码与实验核验
 
-历史审计在同学工作区完成，随后代码合并到本仓库；审计行号、80/40米门及旧工厂记录反映当时状态。引用当前方法优先用本文所核对的 `B/` 行号，历史结果按冻结配置解释。
+当前工厂仅注册Q3最近邻65米/2轮与Q4最近邻35米/默认参数。核心定位、覆盖和负反馈实现与第二次正式冻结包一致；统一入口支持配置核对，并记录所有请求与真实时间戳。
 
-| 材料 | 可支持的结论 | 不能据此声称 |
-|---|---|---|
-| [搜索覆盖审计](../q1q2/peer-audit/q34/audit-coverage-search.md)、[定向审计](../q1q2/peer-audit/q34/audit-directional.md) | 七站连续公式、二十一站凸包及整数复核、负反馈几何 | 有限布局搜索证明站数最少；有限样本证明任意浮点程序全清 |
-| [定位清除审计](../q1q2/peer-audit/q34/audit-localize-clear.md)、[路线时间审计](../q1q2/peer-audit/q34/audit-route-time.md)、[整体审计](../q1q2/peer-audit/q34/audit-overall.md) | 包含性、有限兜底、反馈驱动回放和分项时间口径 | 旧主候选仍为80/40米；历史平均成绩等于当前50/35米成绩 |
-| [核心 review](../../code-review/review-q34-core.md)、[策略 review](../../code-review/review-q34-policy.md) 与 [认证工具修复](../../code-review/fix-q34-certification-p2.md) | 整数证书去除 assert 成功前提，固定域/尺度/索引；点/线段包含检查；错误见证半径和 tuple 索引已修复 | review 当时的问题均仍存在，或全部实验外围函数已形式化验证 |
-| [协议修复](../../code-review/q34-protocol-fix.md)、[discovery修复](../../code-review/fix-discovery-clear-weight.md) | 绝对截止、确认状态原子提交、半包退出；删除重复收益及隐藏开关 | 修复两条 seed42 轨迹就证明任意场景性能不变 |
-| [清除门实验](../../B/CLEAR_GATE_TRADEOFF.md) | 50/35米选择的训练与独立验证权衡 | 试探清除成功有确定保证；Q4门降低不增加时间 |
-| [Q34-SUMMARY](../../Q34-SUMMARY.md) | 合并来源、修复索引、已报告官方演练记录 | 本次文档任务重新核验了官方统计库或运行正式测试 |
+整理后的代码在原Windows环境回放27个已保存官方案例，5746条请求的端点、频道和位置逐条匹配，最大位置差为0。该回放没有联网或产生新模拟案例，结论是已记录轨迹上的实现一致性，不能替代新场景性能测试。记录见[回放审计](../../B/cleanup_formal2/replay.json)。
 
-`icra_final_checks` 的回放先依靠公开反馈驱动策略，再读取仅评分可见的真值检查区域包含；修复后的 `truth_margin` 显式处理空集、点、有限线段及二维多边形。这样可以发现测试裁判把整条直线误当有限线段的漏报，但它仍是归档检查工具，不在主策略内提供真值。[B/icra_final_checks.py:72](../../B/icra_final_checks.py)。
-
-既有认证修复记录报告全套132 tests、230 subtests通过，且主候选 seed42 的 mock-http 前后请求轨迹一致；这些是该修复任务的结果，本次未重跑。官方演练及大规模执行数也仅按汇总作历史来源，不能替代几何证明或自行转成当前版本的成功概率。
-
-本次只做了文档所需的只读核对：无网络实例化两主候选，确认 MRO、方法归属与有效参数；重算七站解析半径；比较二十一站入口与证书归档的实际坐标集；读取保存证书元数据。没有执行策略 `run`，没有新建 benchmark 或重写历史证书。
+当前四表纳入927个不同的官方演练案例，逐局核对官方成绩与进入/退出时间戳；完整配置、范围、分组和证据见[论文实验素材](../../writing-kit/kit-q34.md)。历史基线数据仅作为表中明确标记的对照，不作为当前代码的默认参数。
 
 ## 10. 假设、局限与论文表述边界
 
@@ -486,22 +480,13 @@ Q3 每个主循环要么消耗一个剩余站，要么完成一个已知源；�
 | 1.01°总角外包与64边圆盘外包 | 容纳已声明角误差/常见量化，保持凸多边形计算 | 外包偏大；数值余量不是任意舍入及病态输入的形式化保证 |
 | 不维护完整 $(g,\rho,n)$ 后验 | 减少状态维数，保留有证明的局部约束 | 信息未充分利用，不能称“精确物理定位区域” |
 | MEC/全顶点包含与光学格心覆盖 | 将位置不确定性转为可执行清除条件 | 精确度不足时仍可有限完成，但可能消耗更多移动和失败清除 |
-| 面积先验、协方差、有限候选、2-opt | 提供计算可控的下一步选择 | 不提供真实概率置信区间、全局最优或逐场景时间支配 |
+| 面积先验、协方差、有限候选、最近邻任务选择 | 提供计算可控的下一步选择 | 不提供真实概率置信区间、全局最优或逐场景时间支配 |
 | 固定获证站点 | 连续覆盖与具体坐标绑定 | 改点、投影、舍入或部分删站后须重新证明，不能只保留站数标签 |
-| 试探门与共享冷却 | 已测场景下的时间/失败权衡 | 50/35米、40米横向目标、0.15分位、150米冷却均非物理定理常数 |
+| 试探门与共享冷却 | 已测场景下的时间/失败权衡 | 65/35米、40米横向目标、0.15分位、150米冷却均非物理定理常数 |
 | 有限预算与异常退出 | 避免无限主动测向和不确定协议续跑 | 有限算法结束不等于任意剩余现实时间内完成；异常不是全清 |
 
 论文可概括为：**在最小接收半径约束下，以七站最近距离覆盖解决全向发现，以二十一站局部可接收凸包解决任意朝向发现；通过有界误差位置外包和成对负反馈逐步收紧已知源区域，按20米包含条件清除，并用有限光学覆盖完成剩余不确定性；扫描与源服务依据实时公开状态共同重排，以降低实际完成时间。** 随后应紧接说明：布点覆盖和双阴性截断有几何依据，路线、测向评分和提前试探为启发式，性能数字按实验配置报告。
 
-### 10.1 本稿基准指纹
+### 10.1 当前文件指纹
 
-下列 SHA256 标识本次读取的关键文件；行号随代码变更可能失效，后续引用应先比对入口参数与坐标，再追踪相关方法。
-
-```text
-B/bounded_candidates.py
-95197b1679fd4a9053e9df9ac69ccfca3bc0c8f80d967984abdbd297d2295e87
-B/layouts/grid21_29.json
-59fff0bfcc2893bc2c4dbf17a6fbf3a3e6ba916ef007aeeca4a38e71dabdd744
-B/geometry.py
-ecfb12ec885718463ae660da467c087be057fb4ef9cfa4deba9fea9cf4277e57
-```
+核心源码、运行包与第二次正式版本的一致性见[B/cleanup_formal2/REPORT.md](../../B/cleanup_formal2/REPORT.md)。运行包逐文件SHA-256保存在[B/dist/manifest.json](../../B/dist/manifest.json)，原始记录不因代码清理改写。
