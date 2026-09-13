@@ -1,0 +1,21 @@
+{"time": "2026-09-13T15:38:03.095647+08:00", "event": "GUI_JOB", "action": "inspect", "folder": "001-0-inspect"}
+{"time": "2026-09-13T15:38:03.096467+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:38:04.306989+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "inspected", "clicks": 0}
+{"time": "2026-09-13T15:38:26.561378+08:00", "event": "GUI_JOB", "action": "start", "folder": "002-1-start"}
+{"time": "2026-09-13T15:38:26.562176+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:38:28.984154+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "single-start-clicked", "clicks": 1}
+{"time": "2026-09-13T15:38:48.049554+08:00", "event": "GUI_JOB", "action": "confirm-start", "folder": "003-2-confirm-start"}
+{"time": "2026-09-13T15:38:48.050312+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:38:52.473345+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "single-start-confirmed", "clicks": 1}
+{"time": "2026-09-13T15:39:09.141710+08:00", "event": "GUI_JOB", "action": "confirm-final", "folder": "004-3-confirm-final"}
+{"time": "2026-09-13T15:39:09.144960+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:39:13.582026+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "formal-start-confirmed", "clicks": 1}
+{"time": "2026-09-13T15:39:27.807478+08:00", "event": "GUI_JOB", "action": "inspect", "folder": "005-4-inspect"}
+{"time": "2026-09-13T15:39:27.808235+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:39:29.019828+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "inspected", "clicks": 0}
+{"time": "2026-09-13T15:39:50.474837+08:00", "event": "GUI_JOB", "action": "run", "folder": "006-5-run"}
+{"time": "2026-09-13T15:39:50.475445+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T15:39:59.341017+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "case_code": "KTBQ-HUAM-BE8P-5DTM", "ok": true, "robot_started": true, "status": "formal-robot-completed", "clicks": 0}
+{"time": "2026-09-13T15:40:40.250022+08:00", "event": "GUI_JOB", "action": "view-upload", "folder": "007-6-view-upload"}
+{"time": "2026-09-13T15:40:40.251199+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:40:51.140919+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "formal-upload-history", "clicks": 2}

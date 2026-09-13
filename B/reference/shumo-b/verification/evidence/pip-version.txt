@@ -1,2 +1,0 @@
-pip 26.2.1 from C:\Python314-arm64\Lib\site-packages\pip (python 3.14)
-

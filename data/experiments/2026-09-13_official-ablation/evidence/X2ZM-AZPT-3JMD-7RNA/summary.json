@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 137,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 6632723836883929673,
+      "case_code": "X2ZM-AZPT-3JMD-7RNA",
+      "entered": 1,
+      "jammer_count": 14,
+      "cleared_jammer_count": 14,
+      "clear_failure_count": 0,
+      "virtual_time_us": 3829452331,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789241724944
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3829452331,
+  "total_jammer_count": 14,
+  "total_cleared_jammer_count": 14,
+  "total_clear_failure_count": 0
+}

@@ -1,0 +1,13 @@
+{"time": "2026-09-13T02:11:21.133594+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 4, "variant": "no_share__g35", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T02:11:22.222504+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T02:11:22.223094+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:11:24.235157+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T02:11:24.635445+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 22}
+{"time": "2026-09-13T02:11:25.657708+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T02:11:25.658291+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T02:11:43.001904+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "TEKT-BN2W-UH6C-QFAC", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T02:11:43.413072+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 23}
+{"time": "2026-09-13T02:11:43.414042+08:00", "event": "AUTHORITATIVE_RESULT", "id": 23, "team_no": "202623001141", "problem_no": 4, "practice_run_no": 5404006003552933414, "case_code": "TEKT-BN2W-UH6C-QFAC", "entered": 1, "jammer_count": 13, "cleared_jammer_count": 13, "clear_failure_count": 0, "virtual_time_us": 6162630071, "end_reason": "user_exit", "created_at_ms": 1789236696385}
+{"time": "2026-09-13T02:11:44.381475+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T02:11:44.382355+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:12:06.972593+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

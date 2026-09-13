@@ -1,0 +1,96 @@
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 921}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "UE42-T7W8-4N9X-GP47", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 922}
+AUTHORITATIVE_RESULT {"id": 922, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 7319602940691527357, "case_code": "UE42-T7W8-4N9X-GP47", "entered": 1, "jammer_count": 16, "cleared_jammer_count": 16, "clear_failure_count": 0, "virtual_time_us": 3489311705, "end_reason": "user_exit", "created_at_ms": 1789280797303}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+REFINEMENT_PROGRESS 1 80 candidate 1
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 922}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "5EH9-H8MB-RHRD-B4HF", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 923}
+AUTHORITATIVE_RESULT {"id": 923, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 4095608386202630289, "case_code": "5EH9-H8MB-RHRD-B4HF", "entered": 1, "jammer_count": 13, "cleared_jammer_count": 13, "clear_failure_count": 1, "virtual_time_us": 3238847665, "end_reason": "user_exit", "created_at_ms": 1789280855881}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+REFINEMENT_PROGRESS 2 80 baseline 1
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 923}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "GGBG-VVNX-6TBZ-WVBX", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 924}
+AUTHORITATIVE_RESULT {"id": 924, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 7260361626658570544, "case_code": "GGBG-VVNX-6TBZ-WVBX", "entered": 1, "jammer_count": 15, "cleared_jammer_count": 15, "clear_failure_count": 0, "virtual_time_us": 3353046716, "end_reason": "user_exit", "created_at_ms": 1789280913829}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+REFINEMENT_PROGRESS 3 80 candidate 1
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 924}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "Y74M-E7HT-S327-WX9K", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 925}
+AUTHORITATIVE_RESULT {"id": 925, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 5601246171307946562, "case_code": "Y74M-E7HT-S327-WX9K", "entered": 1, "jammer_count": 15, "cleared_jammer_count": 15, "clear_failure_count": 2, "virtual_time_us": 3223708225, "end_reason": "user_exit", "created_at_ms": 1789280974860}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+REFINEMENT_PROGRESS 4 80 baseline 1
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 925}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "UFRT-K9J5-6MYJ-P6TN", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 926}
+AUTHORITATIVE_RESULT {"id": 926, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 978586526735579723, "case_code": "UFRT-K9J5-6MYJ-P6TN", "entered": 1, "jammer_count": 14, "cleared_jammer_count": 14, "clear_failure_count": 0, "virtual_time_us": 3372874844, "end_reason": "user_exit", "created_at_ms": 1789281037079}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+REFINEMENT_PROGRESS 5 80 candidate 1
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 926}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "BUHR-5NBQ-CMDN-974Y", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 927}
+AUTHORITATIVE_RESULT {"id": 927, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 1537454302982627413, "case_code": "BUHR-5NBQ-CMDN-974Y", "entered": 1, "jammer_count": 11, "cleared_jammer_count": 11, "clear_failure_count": 0, "virtual_time_us": 2800528496, "end_reason": "user_exit", "created_at_ms": 1789281098965}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+REFINEMENT_PROGRESS 6 80 baseline 1
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "cancelled-before-ui-access", "ok": false, "error": "USER_REQUESTED_FIVE_CANDIDATE_RUNS", "clicks": 0, "robot_started": false}
+Traceback (most recent call last):
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/official_q3_refinement.py", line 243, in <module>
+    execute(args.output.resolve())
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/official_q3_refinement.py", line 206, in execute
+    run = runner.one(out, item)
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/official_sensitivity.py", line 182, in one
+    runner.run()
+    ~~~~~~~~~~^^
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/auto_practice.py", line 153, in run
+    self.ui('dry-run', 0)  # No database or robot work before the initial UI safety check.
+    ~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/auto_practice.py", line 145, in ui
+    raise RuntimeError(result.get('error', 'GUI failed'))
+RuntimeError: USER_REQUESTED_FIVE_CANDIDATE_RUNS

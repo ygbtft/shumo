@@ -1,0 +1,13 @@
+{"time": "2026-09-13T03:24:10.851514+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 4, "variant": "no_negative__g35", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T03:24:11.885315+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T03:24:11.885848+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:24:15.944106+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T03:24:16.373741+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 122}
+{"time": "2026-09-13T03:24:17.266772+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T03:24:17.267349+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T03:24:38.765093+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "ENER-NANE-GV3S-D4F6", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T03:24:39.184443+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 123}
+{"time": "2026-09-13T03:24:39.184772+08:00", "event": "AUTHORITATIVE_RESULT", "id": 123, "team_no": "202623001141", "problem_no": 4, "practice_run_no": 6167511699440657490, "case_code": "ENER-NANE-GV3S-D4F6", "entered": 1, "jammer_count": 10, "cleared_jammer_count": 10, "clear_failure_count": 0, "virtual_time_us": 6094891321, "end_reason": "user_exit", "created_at_ms": 1789241071367}
+{"time": "2026-09-13T03:24:40.133643+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T03:24:40.134182+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:25:04.934314+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

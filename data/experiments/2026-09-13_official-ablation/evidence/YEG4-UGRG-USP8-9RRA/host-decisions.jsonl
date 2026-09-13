@@ -1,0 +1,13 @@
+{"time": "2026-09-13T02:34:07.884734+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 3, "variant": "no_negative__g50", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T02:34:08.848423+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T02:34:08.849133+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:34:11.269160+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T02:34:11.692426+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 55}
+{"time": "2026-09-13T02:34:12.629143+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T02:34:12.629973+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T02:34:27.963763+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "YEG4-UGRG-USP8-9RRA", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T02:34:28.374216+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 56}
+{"time": "2026-09-13T02:34:28.375004+08:00", "event": "AUTHORITATIVE_RESULT", "id": 56, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 2472578110282335843, "case_code": "YEG4-UGRG-USP8-9RRA", "entered": 1, "jammer_count": 13, "cleared_jammer_count": 13, "clear_failure_count": 0, "virtual_time_us": 3275278412, "end_reason": "user_exit", "created_at_ms": 1789238063504}
+{"time": "2026-09-13T02:34:29.309923+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T02:34:29.310770+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:34:42.607008+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

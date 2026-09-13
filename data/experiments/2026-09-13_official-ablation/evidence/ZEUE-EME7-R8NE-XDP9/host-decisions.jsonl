@@ -1,0 +1,13 @@
+{"time": "2026-09-13T02:23:20.197005+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 3, "variant": "scan_then_service__g50", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T02:23:21.213331+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T02:23:21.213920+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:23:23.235047+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T02:23:23.625939+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 40}
+{"time": "2026-09-13T02:23:24.655016+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T02:23:24.655397+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T02:23:39.583114+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "ZEUE-EME7-R8NE-XDP9", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T02:23:39.999164+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 41}
+{"time": "2026-09-13T02:23:40.000011+08:00", "event": "AUTHORITATIVE_RESULT", "id": 41, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 3183454618457047232, "case_code": "ZEUE-EME7-R8NE-XDP9", "entered": 1, "jammer_count": 11, "cleared_jammer_count": 11, "clear_failure_count": 0, "virtual_time_us": 3988340450, "end_reason": "user_exit", "created_at_ms": 1789237414737}
+{"time": "2026-09-13T02:23:40.900416+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T02:23:40.901175+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:23:53.805471+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

@@ -1,0 +1,21 @@
+{
+  "assignment": {
+    "order": 7,
+    "problem": 3,
+    "phase": "refinement",
+    "block": 4,
+    "method": "range_area7",
+    "setting": "baseline",
+    "changes": {},
+    "parameters": {
+      "trial_radius": 50.0,
+      "share_limit": 6,
+      "max_active": 3,
+      "localization_weight": 0.08,
+      "remainder_weight": 1.5
+    }
+  },
+  "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/auto_practice_evidence/20260913-143221-99f40af1",
+  "working_evidence": "/Users/flower/Downloads/AutoPractice/20260913-143221-99f40af1",
+  "began": "2026-09-13T14:32:21.374077+08:00"
+}

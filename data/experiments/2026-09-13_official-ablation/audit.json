@@ -1,0 +1,14 @@
+{
+  "validation_runs": 160,
+  "calibration_runs": 2,
+  "all_cleared": 160,
+  "unique_official_cases": 162,
+  "per_action_ledger_verified": true,
+  "authoritative_counts_verified": true,
+  "official_gui_counts_verified": true,
+  "frozen_assignment_verified": true,
+  "local_mock_scored_runs": 0,
+  "official_formal_runs": 0,
+  "max_action_ledger_error_s": 4.99988288993336e-07,
+  "partial": false
+}

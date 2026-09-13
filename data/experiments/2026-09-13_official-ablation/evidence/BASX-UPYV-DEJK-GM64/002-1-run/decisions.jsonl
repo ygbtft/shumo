@@ -1,0 +1,16 @@
+﻿{"time":"2026-09-12T19:07:33.3557752Z","data":{"label":"initial","file":"001-initial.png","session":2,"text_file":"001-initial.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:07:34.3596952Z","data":{"expected":"开始问题4演练测试","point":[3210,1158],"text":"开始问题4演练测试"},"event":"ALLOW_CANDIDATE"}
+{"time":"2026-09-12T19:07:35.7335036Z","data":{"label":"before-click","file":"002-before-click.png","session":2,"text_file":"002-before-click.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:07:36.6185587Z","data":{"expected":"开始问题4演练测试","point":[3210,1158],"text":"开始问题4演练测试"},"event":"ALLOW_CANDIDATE"}
+{"time":"2026-09-12T19:07:36.6440972Z","data":{"text":"开始问题4演练测试","clicks":1},"event":"UIA_INVOKE"}
+{"time":"2026-09-12T19:07:37.5631014Z","data":{"label":"after-click","file":"003-after-click.png","session":2,"text_file":"003-after-click.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:07:38.5618481Z","data":{"label":"waiting-practice-ready","file":"004-waiting-practice-ready.png","session":2,"text_file":"004-waiting-practice-ready.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:07:39.5870227Z","data":{"label":"waiting-practice-ready","file":"005-waiting-practice-ready.png","session":2,"text_file":"005-waiting-practice-ready.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:07:40.5975740Z","data":{"label":"waiting-practice-ready","file":"006-waiting-practice-ready.png","session":2,"text_file":"006-waiting-practice-ready.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:07:41.5822010Z","data":{"label":"waiting-practice-ready","file":"007-waiting-practice-ready.png","session":2,"text_file":"007-waiting-practice-ready.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:07:42.6229022Z","data":{"label":"waiting-practice-ready","file":"008-waiting-practice-ready.png","session":2,"text_file":"008-waiting-practice-ready.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:07:42.6886471Z","data":{"problem":4,"case_code":"BASX-UPYV-DEJK-GM64"},"event":"POST_CLICK_VERIFIED"}
+{"time":"2026-09-12T19:07:42.9505509Z","data":{"label":"before-robot","file":"009-before-robot.png","session":2,"text_file":"009-before-robot.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:07:43.0027357Z","data":{"args":["-B","official_ablation_robot.py","--variant","scan_then_service__g35","--problem","4","--method","range_grid21_29","--mode","practice","--base-url","http://127.0.0.1:2026","--robot-id","202623001141","--confirm-practice"],"cwd":"C:\\BAblation-20260913\\B","case_code":"BASX-UPYV-DEJK-GM64"},"event":"ROBOT_START"}
+{"time":"2026-09-12T19:07:45.1246745Z","data":{"label":"robot-watch","file":"010-robot-watch.png","session":2,"text_file":"010-robot-watch.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:07:48.5005878Z","data":{"label":"completed","file":"011-completed.png","session":2,"text_file":"011-completed.uia.json"},"event":"SNAPSHOT"}

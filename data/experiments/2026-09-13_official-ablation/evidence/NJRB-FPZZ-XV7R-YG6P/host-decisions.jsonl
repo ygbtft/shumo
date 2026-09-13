@@ -1,0 +1,13 @@
+{"time": "2026-09-13T02:10:36.698670+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 4, "variant": "scan_then_service__g35", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T02:10:37.719422+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T02:10:37.720034+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:10:39.737305+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T02:10:40.139517+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 21}
+{"time": "2026-09-13T02:10:41.124517+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T02:10:41.124815+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T02:10:58.858202+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "NJRB-FPZZ-XV7R-YG6P", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T02:10:59.301868+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 22}
+{"time": "2026-09-13T02:10:59.302223+08:00", "event": "AUTHORITATIVE_RESULT", "id": 22, "team_no": "202623001141", "problem_no": 4, "practice_run_no": 6152238860434885758, "case_code": "NJRB-FPZZ-XV7R-YG6P", "entered": 1, "jammer_count": 14, "cleared_jammer_count": 14, "clear_failure_count": 0, "virtual_time_us": 6707268829, "end_reason": "user_exit", "created_at_ms": 1789236652217}
+{"time": "2026-09-13T02:11:00.379513+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T02:11:00.380036+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:11:20.532422+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

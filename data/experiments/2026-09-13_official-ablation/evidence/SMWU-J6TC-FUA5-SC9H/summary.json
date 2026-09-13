@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 133,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 3789723067512497068,
+      "case_code": "SMWU-J6TC-FUA5-SC9H",
+      "entered": 1,
+      "jammer_count": 16,
+      "cleared_jammer_count": 16,
+      "clear_failure_count": 0,
+      "virtual_time_us": 3422076493,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789241543930
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3422076493,
+  "total_jammer_count": 16,
+  "total_cleared_jammer_count": 16,
+  "total_clear_failure_count": 0
+}

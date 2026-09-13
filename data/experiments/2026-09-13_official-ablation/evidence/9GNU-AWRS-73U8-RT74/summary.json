@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 85,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 698175501565654052,
+      "case_code": "9GNU-AWRS-73U8-RT74",
+      "entered": 1,
+      "jammer_count": 11,
+      "cleared_jammer_count": 11,
+      "clear_failure_count": 0,
+      "virtual_time_us": 3080602970,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789239310737
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3080602970,
+  "total_jammer_count": 11,
+  "total_cleared_jammer_count": 11,
+  "total_clear_failure_count": 0
+}

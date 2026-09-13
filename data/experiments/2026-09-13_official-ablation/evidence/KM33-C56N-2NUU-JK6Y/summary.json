@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 122,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 6933601037500277645,
+      "case_code": "KM33-C56N-2NUU-JK6Y",
+      "entered": 1,
+      "jammer_count": 15,
+      "cleared_jammer_count": 15,
+      "clear_failure_count": 1,
+      "virtual_time_us": 6445756720,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789241018228
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 6445756720,
+  "total_jammer_count": 15,
+  "total_cleared_jammer_count": 15,
+  "total_clear_failure_count": 1
+}

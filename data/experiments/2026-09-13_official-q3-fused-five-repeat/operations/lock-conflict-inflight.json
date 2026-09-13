@@ -1,0 +1,22 @@
+{
+  "assignment": {
+    "order": 1,
+    "problem": 3,
+    "phase": "fused-five",
+    "block": 1,
+    "method": "range_area7_nearest65_a2",
+    "setting": "nearest65_a2",
+    "changes": {},
+    "parameters": {
+      "task_order": "nearest",
+      "trial_radius": 65.0,
+      "max_active": 2,
+      "share_limit": 6,
+      "localization_weight": 0.08,
+      "remainder_weight": 1.5
+    }
+  },
+  "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/auto_practice_evidence/20260913-145635-c9fb0a34",
+  "working_evidence": "/Users/flower/Downloads/AutoPractice/20260913-145635-c9fb0a34",
+  "began": "2026-09-13T14:56:35.123665+08:00"
+}

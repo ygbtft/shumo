@@ -1,0 +1,3 @@
+﻿problem,status,delta_s_per_source,ci_low,ci_high,reference_sources,model,standard_errors
+3,secondary only,3.913837134618237,-1.6934679181581447,9.521142187394618,13.4,total_s ~ perturbed + source_count + time_block,HC3; model-dependent; does not remove unobserved geometry
+4,secondary only,-7.288026786524705,-20.311417549436335,5.735363976386926,12.816666666666666,total_s ~ perturbed + source_count + time_block + directional_count,HC3; model-dependent; does not remove unobserved geometry

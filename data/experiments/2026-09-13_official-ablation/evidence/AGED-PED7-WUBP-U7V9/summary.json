@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 44,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 2032211377182769809,
+      "case_code": "AGED-PED7-WUBP-U7V9",
+      "entered": 1,
+      "jammer_count": 11,
+      "cleared_jammer_count": 11,
+      "clear_failure_count": 44,
+      "virtual_time_us": 3922742608,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789237550745
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3922742608,
+  "total_jammer_count": 11,
+  "total_cleared_jammer_count": 11,
+  "total_clear_failure_count": 44
+}

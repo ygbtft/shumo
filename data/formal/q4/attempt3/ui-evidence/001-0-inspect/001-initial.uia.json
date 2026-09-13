@@ -1,0 +1,1136 @@
+﻿[
+    {
+        "id":  "",
+        "text":  "无线电干扰源环境模拟器",
+        "class":  "Chrome_WidgetWin_1",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     45,
+                     4112,
+                     2203
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "Intermediate D3D Window",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     45,
+                     4112,
+                     2203
+                 ],
+        "enabled":  false
+    },
+    {
+        "id":  "",
+        "text":  "无线电干扰源环境模拟器 - Web 内容",
+        "class":  "BrowserRootView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "NonClientView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "EmbeddedBrowserTabRootView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     Infinity,
+                     Infinity,
+                     -Infinity,
+                     -Infinity
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "EmbeddedBrowserFrameView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "BrowserView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "TopContainerView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     Infinity,
+                     Infinity,
+                     -Infinity,
+                     -Infinity
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "SidebarContentsSplitView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "SidebarContentsSplitView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "View",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "MultiContentsView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "View",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "View",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     Infinity,
+                     Infinity,
+                     -Infinity,
+                     -Infinity
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "RootWebArea",
+        "text":  "无线电干扰源环境模拟器",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Document",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "sidebar",
+        "offscreen":  false,
+        "type":  "ControlType.Group",
+        "rect":  [
+                     0,
+                     46,
+                     408,
+                     2204
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "sidebar-brand",
+        "offscreen":  false,
+        "type":  "ControlType.Group",
+        "rect":  [
+                     0,
+                     46,
+                     406,
+                     128
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "环境模拟器",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     124,
+                     89,
+                     150,
+                     40
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "主导航",
+        "class":  "sidebar-nav",
+        "offscreen":  false,
+        "type":  "ControlType.Group",
+        "rect":  [
+                     0,
+                     174,
+                     406,
+                     1992
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "测试",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     40,
+                     194,
+                     44,
+                     30
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "演练测试",
+        "class":  "nav-item",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     20,
+                     236,
+                     210,
+                     76
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "正式测试",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     40,
+                     366,
+                     88,
+                     30
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "问题3正式测试",
+        "class":  "nav-item",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     20,
+                     408,
+                     282,
+                     76
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "问题4正式测试",
+        "class":  "nav-item active",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     20,
+                     492,
+                     282,
+                     76
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "其他",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     40,
+                     622,
+                     44,
+                     30
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "公告",
+        "class":  "nav-item",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     20,
+                     664,
+                     154,
+                     76
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "账号",
+        "class":  "nav-item",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     20,
+                     748,
+                     154,
+                     76
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "设置",
+        "class":  "nav-item",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     20,
+                     832,
+                     154,
+                     76
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "关于",
+        "class":  "nav-item",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     20,
+                     916,
+                     154,
+                     76
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "v1.1",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     40,
+                     2194,
+                     40,
+                     30
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "workspace-header",
+        "offscreen":  false,
+        "type":  "ControlType.Group",
+        "rect":  [
+                     408,
+                     46,
+                     3704,
+                     128
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "无线电干扰源环境模拟器",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     456,
+                     72,
+                     308,
+                     38
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "2026年9月13日17:30之后无法启动新的演练测试或正式测试",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     456,
+                     113,
+                     639,
+                     33
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "服务器已连接",
+        "class":  "connection-status connection-connected",
+        "offscreen":  false,
+        "type":  "ControlType.StatusBar",
+        "rect":  [
+                     3559,
+                     79,
+                     123,
+                     60
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "已连接",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     3603,
+                     91,
+                     79,
+                     36
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "队号 202623001141",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     3739,
+                     90,
+                     245,
+                     38
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "退出登录",
+        "class":  "icon-button",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     4012,
+                     79,
+                     60,
+                     60
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "announcement-bar",
+        "offscreen":  false,
+        "type":  "ControlType.Group",
+        "rect":  [
+                     408,
+                     174,
+                     3704,
+                     261
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "- 务必解压缩到本地硬盘之后再运行模拟器。几乎所有本地日志消失的情况都是未解压，双击压缩包内程序直接运行引起的。\n- 一定要自行记录相关信息。赛题原文：“模拟器生成加密行为日志”，“机器狗程序应自行记录测试过程中的指令序列、响应信息等内容。”\n- 在线队数较多时，请耐心等待日志上传。\n- 重要提醒：正式测试没有上传完成时，不要退出模拟器！\n- 重要提醒：各参赛队在附录中、支撑材料中提交代码时，注意将参赛队号隐去或使用占位符代替，以免违规。建议不要将参赛队号在程序中写死，而是以命令行参数等方式提供。",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     512,
+                     199,
+                     2203,
+                     211
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "关闭公告",
+        "class":  "announcement-dismiss",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     4008,
+                     196,
+                     64,
+                     64
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "workspace-main",
+        "offscreen":  false,
+        "type":  "ControlType.Group",
+        "rect":  [
+                     408,
+                     434,
+                     3704,
+                     1816
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "问题4正式测试",
+        "class":  "page formal-page",
+        "offscreen":  false,
+        "type":  "ControlType.Group",
+        "rect":  [
+                     1080,
+                     482,
+                     2360,
+                     857
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "正式测试",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     1080,
+                     482,
+                     96,
+                     33
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "formal-4-title",
+        "text":  "问题4正式测试",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     1080,
+                     524,
+                     264,
+                     51
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "问题4正式测试",
+        "class":  "test-module formal-module",
+        "offscreen":  false,
+        "type":  "ControlType.Group",
+        "rect":  [
+                     1080,
+                     622,
+                     2360,
+                     657
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "formal-4-action-title",
+        "text":  "问题4正式测试",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     1120,
+                     659,
+                     1620,
+                     44
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "已用2次，剩余1次（共3次）",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     1120,
+                     708,
+                     303,
+                     33
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "可以开始",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     2780,
+                     683,
+                     96,
+                     33
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "开始问题4正式测试",
+        "class":  "primary-button module-start-button",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     3020,
+                     661,
+                     380,
+                     77
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "问题4正式测试历史行为日志",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     1170,
+                     800,
+                     2154,
+                     36
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "刷新历史行为日志",
+        "class":  "icon-button",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     3340,
+                     787,
+                     60,
+                     61
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "data-table",
+        "offscreen":  false,
+        "type":  "ControlType.Table",
+        "rect":  [
+                     1080,
+                     860,
+                     2330,
+                     286
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1080,
+                     860,
+                     2330,
+                     81
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "序号",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1080,
+                     860,
+                     171,
+                     81
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "测试案例编码",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1250,
+                     860,
+                     492,
+                     81
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "开始时间",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1741,
+                     860,
+                     413,
+                     81
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "结束时间",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     2153,
+                     860,
+                     413,
+                     81
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "文件大小",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     2565,
+                     860,
+                     233,
+                     81
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "状态",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     2797,
+                     860,
+                     365,
+                     81
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "操作",
+        "class":  "action-column",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     3162,
+                     860,
+                     248,
+                     81
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1080,
+                     940,
+                     2330,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "第2次",
+        "class":  "numeric-cell",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1080,
+                     940,
+                     171,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "5FS5-MYSH-FKHB-PRX4",
+        "class":  "log-code-cell",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1250,
+                     940,
+                     492,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "2026/9/13 15:27:01",
+        "class":  "numeric-cell",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1741,
+                     940,
+                     413,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "2026/9/13 15:28:22",
+        "class":  "numeric-cell",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     2153,
+                     940,
+                     413,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "112.9 KiB",
+        "class":  "numeric-cell",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     2565,
+                     940,
+                     233,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "已上传",
+        "class":  "synchronization-state state-confirmed",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     2797,
+                     940,
+                     365,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "导出",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     3162,
+                     940,
+                     248,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "导出",
+        "class":  "secondary-button table-action-button",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     3182,
+                     961,
+                     208,
+                     61
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1080,
+                     1042,
+                     2330,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "第1次",
+        "class":  "numeric-cell",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1080,
+                     1042,
+                     171,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "CQTV-AWEW-7NU2-DAVU",
+        "class":  "log-code-cell",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1250,
+                     1042,
+                     492,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "2026/9/12 18:58:07",
+        "class":  "numeric-cell",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     1741,
+                     1042,
+                     413,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "2026/9/12 18:58:20",
+        "class":  "numeric-cell",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     2153,
+                     1042,
+                     413,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "135.8 KiB",
+        "class":  "numeric-cell",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     2565,
+                     1042,
+                     233,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "已上传",
+        "class":  "synchronization-state state-confirmed",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     2797,
+                     1042,
+                     365,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "导出",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.DataItem",
+        "rect":  [
+                     3162,
+                     1042,
+                     248,
+                     103
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "导出",
+        "class":  "secondary-button table-action-button",
+        "offscreen":  false,
+        "type":  "ControlType.Button",
+        "rect":  [
+                     3182,
+                     1063,
+                     208,
+                     61
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "建议在2026年9月13日15:30前完成正式测试，避免网络拥堵。",
+        "class":  "",
+        "offscreen":  false,
+        "type":  "ControlType.Text",
+        "rect":  [
+                     1080,
+                     1306,
+                     652,
+                     33
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "EmbeddedBrowserDownloadView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     Infinity,
+                     Infinity,
+                     -Infinity,
+                     -Infinity
+                 ],
+        "enabled":  true
+    },
+    {
+        "id":  "",
+        "text":  "",
+        "class":  "TopContainerOverlayView",
+        "offscreen":  false,
+        "type":  "ControlType.Pane",
+        "rect":  [
+                     0,
+                     46,
+                     4112,
+                     2204
+                 ],
+        "enabled":  true
+    }
+]

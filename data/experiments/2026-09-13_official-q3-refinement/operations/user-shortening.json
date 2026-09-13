@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-13T14:32:01.711334+08:00",
+  "request": "Candidate five runs only, exploratory check",
+  "completed_at_reconciliation": 5,
+  "inflight_order": 6,
+  "inflight_setting": "baseline",
+  "action": "Let current official case finish and archive; next launch blocked before UI access; retain all completed baseline records",
+  "candidate_target": 5,
+  "cancelled_original_validation_design": true,
+  "no_confirmatory_superiority_test": true
+}

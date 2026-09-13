@@ -1,0 +1,62 @@
+[
+  {
+    "case_code": "ZFJ4-2G6D-3XKS-XNKW",
+    "trace": "ZFJ4-2G6D-3XKS-XNKW.jsonl",
+    "sources": 16,
+    "virtual_time_us": 3453836405
+  },
+  {
+    "case_code": "YP7D-KGMB-RG2N-87AW",
+    "trace": "YP7D-KGMB-RG2N-87AW.jsonl",
+    "sources": 15,
+    "virtual_time_us": 3067227980
+  },
+  {
+    "case_code": "M29Y-3H8J-4QBH-DSK6",
+    "trace": "M29Y-3H8J-4QBH-DSK6.jsonl",
+    "sources": 16,
+    "virtual_time_us": 3271653907
+  },
+  {
+    "case_code": "Z4AQ-YQU2-JYE9-NBU4",
+    "trace": "Z4AQ-YQU2-JYE9-NBU4.jsonl",
+    "sources": 10,
+    "virtual_time_us": 2990575686
+  },
+  {
+    "case_code": "HAPY-YH4E-PWYA-954Z",
+    "trace": "HAPY-YH4E-PWYA-954Z.jsonl",
+    "sources": 13,
+    "virtual_time_us": 3020562177
+  },
+  {
+    "case_code": "W8N2-NW42-8JEY-V9NH",
+    "trace": "W8N2-NW42-8JEY-V9NH.jsonl",
+    "sources": 11,
+    "virtual_time_us": 2991518252
+  },
+  {
+    "case_code": "ZECD-F7FS-WBZU-FH5U",
+    "trace": "ZECD-F7FS-WBZU-FH5U.jsonl",
+    "sources": 15,
+    "virtual_time_us": 3941168523
+  },
+  {
+    "case_code": "SMWU-J6TC-FUA5-SC9H",
+    "trace": "SMWU-J6TC-FUA5-SC9H.jsonl",
+    "sources": 16,
+    "virtual_time_us": 3422076493
+  },
+  {
+    "case_code": "BZDW-U8YZ-A57K-39YJ",
+    "trace": "BZDW-U8YZ-A57K-39YJ.jsonl",
+    "sources": 15,
+    "virtual_time_us": 3994519238
+  },
+  {
+    "case_code": "RP3H-ZTGD-K8VU-2YBS",
+    "trace": "RP3H-ZTGD-K8VU-2YBS.jsonl",
+    "sources": 14,
+    "virtual_time_us": 3050641104
+  }
+]

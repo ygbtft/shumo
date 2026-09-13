@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "runs": 742,
+  "all_cleared": 742,
+  "sources": 9571,
+  "runs_by_problem": {
+    "3": 331,
+    "4": 411
+  },
+  "verified_manifests": {
+    "runtime_manifest.json": 25,
+    "host_manifest.json": 8,
+    "jlog_manifest.json": 742
+  },
+  "prespecified_robustness_passed": false,
+  "conclusions": {
+    "Q3": "insufficient evidence for <=5% degradation",
+    "Q4": "observed degradation >=5%; robustness criterion not met"
+  }
+}

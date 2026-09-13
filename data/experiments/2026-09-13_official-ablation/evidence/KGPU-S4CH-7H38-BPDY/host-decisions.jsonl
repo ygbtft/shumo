@@ -1,0 +1,13 @@
+{"time": "2026-09-13T03:49:06.088470+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 4, "variant": "online_nearest__g35", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T03:49:07.107675+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T03:49:07.108231+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:49:11.945020+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T03:49:12.382041+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 153}
+{"time": "2026-09-13T03:49:13.309230+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T03:49:13.309812+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T03:49:36.718119+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "KGPU-S4CH-7H38-BPDY", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T03:49:37.129990+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 154}
+{"time": "2026-09-13T03:49:37.130307+08:00", "event": "AUTHORITATIVE_RESULT", "id": 154, "team_no": "202623001141", "problem_no": 4, "practice_run_no": 4502478503169474878, "case_code": "KGPU-S4CH-7H38-BPDY", "entered": 1, "jammer_count": 13, "cleared_jammer_count": 13, "clear_failure_count": 0, "virtual_time_us": 6563389894, "end_reason": "user_exit", "created_at_ms": 1789242569200}
+{"time": "2026-09-13T03:49:38.076261+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T03:49:38.076757+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:50:02.690076+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

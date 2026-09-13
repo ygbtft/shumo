@@ -1,0 +1,113 @@
+{
+  "development_data_only": true,
+  "n": 210,
+  "model": "official total_s ~ source_count + time_block + setting; HC3 SE",
+  "reference_sources": 12.638095238095238,
+  "effects": [
+    {
+      "setting": "trial_radius=20",
+      "adjusted_delta_s_per_source": 5.292799906933501,
+      "hc3_se": 8.17773554016993
+    },
+    {
+      "setting": "trial_radius=35",
+      "adjusted_delta_s_per_source": -1.560996616991895,
+      "hc3_se": 8.56271998864983
+    },
+    {
+      "setting": "trial_radius=65",
+      "adjusted_delta_s_per_source": -14.132667570586353,
+      "hc3_se": 8.000518958468279
+    },
+    {
+      "setting": "trial_radius=80",
+      "adjusted_delta_s_per_source": -4.336161403261544,
+      "hc3_se": 8.586524332208803
+    },
+    {
+      "setting": "share_limit=0",
+      "adjusted_delta_s_per_source": 3.2129624977686513,
+      "hc3_se": 8.00301568865401
+    },
+    {
+      "setting": "share_limit=2",
+      "adjusted_delta_s_per_source": -4.814536876321485,
+      "hc3_se": 8.434056289041951
+    },
+    {
+      "setting": "share_limit=12",
+      "adjusted_delta_s_per_source": 1.4925040259947135,
+      "hc3_se": 8.794632929375664
+    },
+    {
+      "setting": "share_limit=20",
+      "adjusted_delta_s_per_source": -9.983020745321067,
+      "hc3_se": 7.942635066993505
+    },
+    {
+      "setting": "max_active=1",
+      "adjusted_delta_s_per_source": -0.11614934935062146,
+      "hc3_se": 9.710763103197982
+    },
+    {
+      "setting": "max_active=2",
+      "adjusted_delta_s_per_source": -10.9741656698374,
+      "hc3_se": 6.639435256688182
+    },
+    {
+      "setting": "max_active=4",
+      "adjusted_delta_s_per_source": 5.084225985115496,
+      "hc3_se": 7.985216647337691
+    },
+    {
+      "setting": "max_active=5",
+      "adjusted_delta_s_per_source": -2.3249112017726064,
+      "hc3_se": 7.635927817741378
+    },
+    {
+      "setting": "localization_weight=0",
+      "adjusted_delta_s_per_source": -0.4535781078888502,
+      "hc3_se": 9.162669131075292
+    },
+    {
+      "setting": "localization_weight=0.02",
+      "adjusted_delta_s_per_source": 0.8124968582001376,
+      "hc3_se": 7.327735430562587
+    },
+    {
+      "setting": "localization_weight=0.32",
+      "adjusted_delta_s_per_source": -3.01797754879534,
+      "hc3_se": 8.296708629186837
+    },
+    {
+      "setting": "localization_weight=1.28",
+      "adjusted_delta_s_per_source": -5.6033749274697735,
+      "hc3_se": 7.145001125317849
+    },
+    {
+      "setting": "remainder_weight=0",
+      "adjusted_delta_s_per_source": -5.988782600289398,
+      "hc3_se": 7.876055405737989
+    },
+    {
+      "setting": "remainder_weight=0.5",
+      "adjusted_delta_s_per_source": -5.50539294103115,
+      "hc3_se": 7.348078774890161
+    },
+    {
+      "setting": "remainder_weight=1",
+      "adjusted_delta_s_per_source": -0.6098089184261268,
+      "hc3_se": 8.29885577978219
+    },
+    {
+      "setting": "remainder_weight=2",
+      "adjusted_delta_s_per_source": -7.0936069186467146,
+      "hc3_se": 8.606143118873122
+    }
+  ],
+  "chosen_changes": {
+    "trial_radius": 65,
+    "max_active": 2
+  },
+  "interpretation": "Exploratory candidate selection, not a significance claim. Joint effects cannot be added as a guaranteed gain."
+}

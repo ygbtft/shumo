@@ -1,0 +1,16 @@
+{
+  "audited": 742,
+  "all_clear": 742,
+  "sources": 9571,
+  "max_action_ledger_error_s": 4.999908469471848e-07,
+  "by_problem": {
+    "3": {
+      "runs": 331,
+      "all_clear": 331
+    },
+    "4": {
+      "runs": 411,
+      "all_clear": 411
+    }
+  }
+}

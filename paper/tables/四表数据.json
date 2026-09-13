@@ -1,0 +1,5218 @@
+{
+  "baselines": {
+    "3": {
+      "key": "q3_baseline",
+      "label": "baseline（第二次正式方案）：最近邻＋65米＋max_active=2",
+      "section": "baseline",
+      "n": 10,
+      "means": {
+        "cleared": "12.6",
+        "average_localization_clear_s": "256.4919398515925740925740925740925740926",
+        "program_runtime_s": "0.7217"
+      },
+      "all_clear_cases": 10,
+      "total_clear_failures": 8,
+      "total_optical_fallback_calls": 0,
+      "sample_sd": {
+        "cleared": 1.9550504398153574,
+        "average_localization_clear_s": 36.8052164764455,
+        "program_runtime_s": 0.08212734014930716
+      },
+      "parameters": [
+        {
+          "localization_weight": 0.08,
+          "max_active": 2,
+          "remainder_weight": 1.5,
+          "share_limit": 6,
+          "task_order": "nearest",
+          "trial_radius": 65.0
+        }
+      ],
+      "cases": [
+        "T96Y-88TW-5D6A-N93F",
+        "689W-V2NM-WQRH-B75J",
+        "JRDS-CP4B-PP8G-WCJN",
+        "GY4N-FAKW-3VGC-SHR2",
+        "3QKZ-DD3C-4KN2-Q2SD",
+        "KSPP-3D97-BEQM-R42S",
+        "Y37N-JADG-U8CT-VN75",
+        "HEKJ-E7EN-7ZNB-R8F4",
+        "FS6J-N2JK-SVAM-2U53",
+        "BMEF-NVMT-W6CY-UD9E"
+      ],
+      "deviation_percent": {
+        "average_localization_clear_s": "0",
+        "program_runtime_s": "0"
+      }
+    },
+    "4": {
+      "key": "q4_baseline",
+      "label": "baseline（第二次正式方案）：最近邻＋35米＋fraction=0.15＋share_limit=6",
+      "section": "baseline",
+      "n": 10,
+      "means": {
+        "cleared": "13.6",
+        "average_localization_clear_s": "463.8121750790338827838827838827838827839",
+        "program_runtime_s": "1.3497"
+      },
+      "all_clear_cases": 10,
+      "total_clear_failures": 0,
+      "total_optical_fallback_calls": 0,
+      "sample_sd": {
+        "cleared": 1.5776212754932308,
+        "average_localization_clear_s": 70.95612960362607,
+        "program_runtime_s": 0.11002630998487993
+      },
+      "parameters": [
+        {
+          "ablation_component": "online_nearest",
+          "dispatch": "nearest",
+          "fraction": 0.15,
+          "pause_limit": 16,
+          "share_cooldown": 150,
+          "share_limit": 6,
+          "steps": 10,
+          "transverse_m": 40,
+          "trial_radius": 35.0
+        }
+      ],
+      "cases": [
+        "QXZY-EG4Q-YGJW-TMXG",
+        "94NM-VAFA-KQXM-NSWB",
+        "AKRP-KFVJ-9RPG-AADA",
+        "B8KT-X3D2-WDFC-K6R4",
+        "KEJT-BE9V-TB7T-RR5M",
+        "BKGC-VTRK-KM5W-5FT9",
+        "UJ5M-YMMJ-9CXF-NWNE",
+        "B6MC-G3FW-6WS2-4EZS",
+        "KGPU-S4CH-7H38-BPDY",
+        "DMB2-BBDY-CHNR-5XSM"
+      ],
+      "deviation_percent": {
+        "average_localization_clear_s": "0",
+        "program_runtime_s": "0"
+      }
+    }
+  },
+  "tables": [
+    {
+      "number": 1,
+      "problem": 3,
+      "title": "Q3 消融实验及正式采用方案对照",
+      "rows": [
+        {
+          "key": "q3_baseline",
+          "label": "baseline（第二次正式方案）：最近邻＋65米＋max_active=2",
+          "section": "baseline",
+          "n": 10,
+          "means": {
+            "cleared": "12.6",
+            "average_localization_clear_s": "256.4919398515925740925740925740925740926",
+            "program_runtime_s": "0.7217"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 8,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.9550504398153574,
+            "average_localization_clear_s": 36.8052164764455,
+            "program_runtime_s": 0.08212734014930716
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 2,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "nearest",
+              "trial_radius": 65.0
+            }
+          ],
+          "cases": [
+            "T96Y-88TW-5D6A-N93F",
+            "689W-V2NM-WQRH-B75J",
+            "JRDS-CP4B-PP8G-WCJN",
+            "GY4N-FAKW-3VGC-SHR2",
+            "3QKZ-DD3C-4KN2-Q2SD",
+            "KSPP-3D97-BEQM-R42S",
+            "Y37N-JADG-U8CT-VN75",
+            "HEKJ-E7EN-7ZNB-R8F4",
+            "FS6J-N2JK-SVAM-2U53",
+            "BMEF-NVMT-W6CY-UD9E"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "0",
+            "program_runtime_s": "0"
+          }
+        },
+        {
+          "key": "full__g50",
+          "label": "two_opt任务排序，50米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "13.4",
+            "average_localization_clear_s": "247.4997693159940059940059940059940059941",
+            "program_runtime_s": "0.8403"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 7,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.776388345929897,
+            "average_localization_clear_s": 22.420166734971442,
+            "program_runtime_s": 0.06345085587374777
+          },
+          "parameters": [
+            {
+              "ablation_component": "full",
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "6VR3-VU2J-77H5-CN33",
+            "Y9GS-YG9M-WAE9-APBG",
+            "629G-7FN7-TSMX-P3N7",
+            "7WUZ-7N8N-PZN7-ZFT7",
+            "5YED-833B-74WF-6S6Z",
+            "4U5E-W5P6-7MWZ-VYNP",
+            "V8KU-NTAH-RJM7-THUB",
+            "X2ZM-AZPT-3JMD-7RNA",
+            "XEWK-BCN9-USJQ-GJYM",
+            "S3ME-H697-XR6A-QHHS"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-3.505829672777039182063668406283678560200",
+            "program_runtime_s": "16.43342108909519190799501177774698628240"
+          }
+        },
+        {
+          "key": "online_nearest__g50",
+          "label": "最近邻任务排序，50米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "14.1",
+            "average_localization_clear_s": "238.9018287398747086247086247086247086247",
+            "program_runtime_s": "0.8053"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.1317702607092643,
+            "average_localization_clear_s": 33.401423701618626,
+            "program_runtime_s": 0.07957951997844671
+          },
+          "parameters": [
+            {
+              "ablation_component": "online_nearest",
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "nearest",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "ZFJ4-2G6D-3XKS-XNKW",
+            "YP7D-KGMB-RG2N-87AW",
+            "M29Y-3H8J-4QBH-DSK6",
+            "Z4AQ-YQU2-JYE9-NBU4",
+            "HAPY-YH4E-PWYA-954Z",
+            "W8N2-NW42-8JEY-V9NH",
+            "ZECD-F7FS-WBZU-FH5U",
+            "SMWU-J6TC-FUA5-SC9H",
+            "BZDW-U8YZ-A57K-39YJ",
+            "RP3H-ZTGD-K8VU-2YBS"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-6.857958625091917248222567703811453564310",
+            "program_runtime_s": "11.58376056533185534155466260218927532220"
+          }
+        },
+        {
+          "key": "no_share__g50",
+          "label": "关闭顺路已知源补测，50米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "12.5",
+            "average_localization_clear_s": "263.8551701355765068265068265068265068264",
+            "program_runtime_s": "0.7053"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 6,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.0682789409984763,
+            "average_localization_clear_s": 36.914265951379036,
+            "program_runtime_s": 0.08152852261632121
+          },
+          "parameters": [
+            {
+              "ablation_component": "no_share",
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "MGDW-PH44-DJUM-W39H",
+            "UE6Y-R2PQ-NVCZ-49MZ",
+            "JG2Q-QEET-GDMN-RC2V",
+            "28M4-ERZ5-XZQP-RDDP",
+            "KXU3-6YX8-B9ZX-7PKS",
+            "RWUH-6EMZ-5GP7-8S4W",
+            "QXTW-43FG-YYJT-CJKS",
+            "9ES5-4Z62-MRW9-FPQX",
+            "T753-PMK3-9T5Q-BJXV",
+            "YE7J-BMED-GG8F-VVSA"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "2.870745290571053392175944620438477602600",
+            "program_runtime_s": "-2.272412359706249133989192185118470278510"
+          }
+        },
+        {
+          "key": "scan_then_service__g50",
+          "label": "先扫描后清除，50米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "12.7",
+            "average_localization_clear_s": "315.2212711398076923076923076923076923078",
+            "program_runtime_s": "0.7841"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.2135943621178655,
+            "average_localization_clear_s": 50.18512034235615,
+            "program_runtime_s": 0.07755206136668595
+          },
+          "parameters": [
+            {
+              "ablation_component": "scan_then_service",
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "EYJF-WDHE-6XFW-WWE3",
+            "ZEUE-EME7-R8NE-XDP9",
+            "MGTF-47P7-UZCH-2XYK",
+            "D5EQ-CFGY-CN9E-MP7D",
+            "QC5S-BAGM-GGKA-HAW4",
+            "29Q4-H59H-AGU4-H5NJ",
+            "TSZ9-4G28-XAGQ-5UCV",
+            "UH2V-95AZ-ES3T-A89E",
+            "YTJE-CT4J-5Z84-42KY",
+            "BB8A-EFTE-8U3W-FGPJ"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "22.89714496377398122613404106891451907100",
+            "program_runtime_s": "8.646251905223777192739365387280033254800"
+          }
+        },
+        {
+          "key": "no_negative__g50",
+          "label": "关闭负反馈位置裁剪，50米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "12.2",
+            "average_localization_clear_s": "260.0072417285314685314685314685314685314",
+            "program_runtime_s": "0.7683"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 3,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.7511900715418263,
+            "average_localization_clear_s": 24.79896599621945,
+            "program_runtime_s": 0.12419702089824858
+          },
+          "parameters": [
+            {
+              "ablation_component": "no_negative",
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "ATN7-QQY3-7XKF-YV8X",
+            "7TM4-RZ7Z-7EEH-BCPB",
+            "YEG4-UGRG-USP8-9RRA",
+            "2NS7-Q7Q9-DKUS-55U7",
+            "9GNU-AWRS-73U8-RT74",
+            "Y4FE-ZG44-QXNA-X46Y",
+            "QD62-J4RB-3MNK-QVJS",
+            "QXWA-6K9A-83VX-CUHM",
+            "PNPW-EMQS-GJCT-FXNS",
+            "B3MU-ACMK-JHYF-QVUG"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "1.370531128180037317151734345845369172900",
+            "program_runtime_s": "6.456976583067756685603436330885409449900"
+          }
+        },
+        {
+          "key": "nearest_sensing__g50",
+          "label": "测向选点改为保收最近邻，50米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "12.4",
+            "average_localization_clear_s": "297.9036931011988011988011988011988011988",
+            "program_runtime_s": "1.0247"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 301,
+          "total_optical_fallback_calls": 298,
+          "sample_sd": {
+            "cleared": 1.429840705968481,
+            "average_localization_clear_s": 38.422638022514654,
+            "program_runtime_s": 0.09599195568148175
+          },
+          "parameters": [
+            {
+              "ablation_component": "nearest_sensing",
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "79MJ-3FK5-X2M2-7Q6S",
+            "AGED-PED7-WUBP-U7V9",
+            "552B-25KY-WUBJ-8JWG",
+            "EWMT-HYTA-FJDE-QUBF",
+            "A7BK-QG9A-QF8S-D88Y",
+            "YK3R-X39M-CCFU-X4JR",
+            "VUYY-C658-43T4-JFR3",
+            "T58U-A6KA-JRP5-DPAA",
+            "GBRP-EHGE-Q3U8-BCUV",
+            "QTFJ-CS33-6Q9U-DYJP"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "16.14544038832848298779420410737014121060",
+            "program_runtime_s": "41.98420396286545656089788000554246917000"
+          }
+        },
+        {
+          "key": "full__g20",
+          "label": "two_opt任务排序，20米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "12.5",
+            "average_localization_clear_s": "256.6196208467857142857142857142857142857",
+            "program_runtime_s": "0.7796"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.223610677354389,
+            "average_localization_clear_s": 32.64940052219199,
+            "program_runtime_s": 0.0715948477351703
+          },
+          "parameters": [
+            {
+              "ablation_component": "full",
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 20.0
+            }
+          ],
+          "cases": [
+            "TZJE-AMWT-MRYS-SCCE",
+            "DJXR-3FXT-XBS2-ZGKG",
+            "TSYU-TWF6-XG3U-MPAH",
+            "4YNR-RPWV-2H8Q-NG67",
+            "D7JK-YZ5B-XUWP-DJC5",
+            "C99G-MQCB-3T98-Z4FF",
+            "STWM-VXHJ-3275-H4UW",
+            "68AH-9BM9-V28X-BJAD",
+            "N7H8-Q5U8-EYFW-JR7B",
+            "V7E7-7XET-Y4PS-PBNU"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "0.049779730024661597200075545630048568900",
+            "program_runtime_s": "8.022724123597062491339891921851184702800"
+          }
+        },
+        {
+          "key": "full__g80",
+          "label": "two_opt任务排序，80米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "11.9",
+            "average_localization_clear_s": "260.5012085296158008658008658008658008659",
+            "program_runtime_s": "0.7975"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 3,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.282785822435191,
+            "average_localization_clear_s": 35.92797339771135,
+            "program_runtime_s": 0.048701471572564756
+          },
+          "parameters": [
+            {
+              "ablation_component": "full",
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 80.0
+            }
+          ],
+          "cases": [
+            "CE4E-N9JS-FW93-95DT",
+            "523G-VWNX-P8RK-3B7Z",
+            "YN6P-6WJS-83SQ-JFV4",
+            "Z4ZM-AMP9-Q64C-JAKY",
+            "77MA-2J4M-YEQB-FVXF",
+            "8YS9-6PBT-YEZ8-H2DU",
+            "A5M7-5TCS-ZMXQ-7693",
+            "Q24P-7VWK-5XGV-48NG",
+            "EATB-R3EZ-RJGR-T83W",
+            "8VRJ-6GA8-JWRK-VKMU"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "1.563116829457880128221955691274108686700",
+            "program_runtime_s": "10.50297907717888319246224192877927116530"
+          }
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "problem": 4,
+      "title": "Q4 消融实验及正式采用方案对照",
+      "rows": [
+        {
+          "key": "q4_baseline",
+          "label": "baseline（第二次正式方案）：最近邻＋35米＋fraction=0.15＋share_limit=6",
+          "section": "baseline",
+          "n": 10,
+          "means": {
+            "cleared": "13.6",
+            "average_localization_clear_s": "463.8121750790338827838827838827838827839",
+            "program_runtime_s": "1.3497"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.5776212754932308,
+            "average_localization_clear_s": 70.95612960362607,
+            "program_runtime_s": 0.11002630998487993
+          },
+          "parameters": [
+            {
+              "ablation_component": "online_nearest",
+              "dispatch": "nearest",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "QXZY-EG4Q-YGJW-TMXG",
+            "94NM-VAFA-KQXM-NSWB",
+            "AKRP-KFVJ-9RPG-AADA",
+            "B8KT-X3D2-WDFC-K6R4",
+            "KEJT-BE9V-TB7T-RR5M",
+            "BKGC-VTRK-KM5W-5FT9",
+            "UJ5M-YMMJ-9CXF-NWNE",
+            "B6MC-G3FW-6WS2-4EZS",
+            "KGPU-S4CH-7H38-BPDY",
+            "DMB2-BBDY-CHNR-5XSM"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "0",
+            "program_runtime_s": "0"
+          }
+        },
+        {
+          "key": "full__g35",
+          "label": "two_opt任务排序，35米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "12.4",
+            "average_localization_clear_s": "509.2500341787629037629037629037629037629",
+            "program_runtime_s": "1.508"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.505545305418162,
+            "average_localization_clear_s": 56.12780281499344,
+            "program_runtime_s": 0.1476384472659853
+          },
+          "parameters": [
+            {
+              "ablation_component": "full",
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "K5C7-ES2C-ZDQA-EXJK",
+            "BJE9-5ZHQ-QDSC-99KH",
+            "AXNN-85WU-HCWJ-W7J6",
+            "WCNG-J6AM-EDGX-Z9KT",
+            "X8X9-35ZD-JDNQ-7GYT",
+            "WX9W-BW53-TTAK-36D6",
+            "J7N7-R4MP-7EAD-CEKS",
+            "5WY6-PHUV-GGBE-6T4K",
+            "U73G-QSC7-7NAS-US54",
+            "FM5V-5H88-XE9Q-57Z7"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "9.796607666020492359749173918317299232900",
+            "program_runtime_s": "11.72853226642957694302437578721197303100"
+          }
+        },
+        {
+          "key": "no_share__g35",
+          "label": "关闭顺路已知源补测，35米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "12.8",
+            "average_localization_clear_s": "484.4592676077622377622377622377622377623",
+            "program_runtime_s": "1.3531"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 2,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.8135294011647258,
+            "average_localization_clear_s": 71.26562676293675,
+            "program_runtime_s": 0.10653997684750391
+          },
+          "parameters": [
+            {
+              "ablation_component": "no_share",
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "TEKT-BN2W-UH6C-QFAC",
+            "QXBD-CCG5-VJM5-PN7X",
+            "B6J4-QQUC-MEE6-X3ZP",
+            "33YR-2CM6-M75P-UNEB",
+            "XNQE-3KTK-YFPJ-4PTD",
+            "BWD3-6BZV-3C9D-S8EJ",
+            "82ED-BMMF-U8CR-6RFB",
+            "3CRU-RE4N-2546-SD5K",
+            "G87R-25DB-AMC3-FP7J",
+            "CJ84-4BZZ-8GAZ-ABXG"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "4.451606412705763401777302638809778552400",
+            "program_runtime_s": "0.251907831369934059420611987849151663300"
+          }
+        },
+        {
+          "key": "scan_then_service__g35",
+          "label": "先扫描后清除，35米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "13.8",
+            "average_localization_clear_s": "493.8415175923214285714285714285714285715",
+            "program_runtime_s": "1.3281"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.2292725943057183,
+            "average_localization_clear_s": 57.53762206213646,
+            "program_runtime_s": 0.09780303335445859
+          },
+          "parameters": [
+            {
+              "ablation_component": "scan_then_service",
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "NJRB-FPZZ-XV7R-YG6P",
+            "8TMP-2ZUG-PVXK-JKVU",
+            "EDDA-BAJV-CAEP-9PN7",
+            "2Z2N-JDMS-HGAQ-2AUP",
+            "AQ78-VGD8-5CK4-9WPJ",
+            "BASX-UPYV-DEJK-GM64",
+            "WCMN-G957-A26T-RBX7",
+            "SARU-2Z2H-JAGM-UFN2",
+            "6TWG-RKUN-TQ2P-E99K",
+            "K9X2-KPS2-AAYN-CS74"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "6.474461889270269191853956880837305598100",
+            "program_runtime_s": "-1.600355634585463436319182040453434096470"
+          }
+        },
+        {
+          "key": "no_negative__g35",
+          "label": "关闭负反馈位置裁剪，35米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "13.2",
+            "average_localization_clear_s": "472.9000587143127705627705627705627705628",
+            "program_runtime_s": "1.3775"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.250925735484551,
+            "average_localization_clear_s": 86.91079780154712,
+            "program_runtime_s": 0.16552760763355728
+          },
+          "parameters": [
+            {
+              "ablation_component": "no_negative",
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "FUEW-RKFY-F93C-JMAX",
+            "CHAA-Z97T-Z5ZG-RMVB",
+            "WV3B-M9HF-ZZ2M-886C",
+            "AGQN-MRMS-P7FV-HJ4E",
+            "UT4S-TRKH-MZC8-M5XM",
+            "J4MT-SQD3-6FTW-3WXH",
+            "ENER-NANE-GV3S-D4F6",
+            "PYX3-KQKW-FMD5-MMHK",
+            "VMD5-CH3S-66ZX-J5DG",
+            "CGK7-5GSH-8HB8-FNQ4"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "1.959388761998390137440742949452531719300",
+            "program_runtime_s": "2.059716974142402015262650959472475364900"
+          }
+        },
+        {
+          "key": "full__g20",
+          "label": "two_opt任务排序，20米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "12.9",
+            "average_localization_clear_s": "487.797650263976023976023976023976023976",
+            "program_runtime_s": "1.4018"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.449137674618944,
+            "average_localization_clear_s": 56.551500546944965,
+            "program_runtime_s": 0.11162018933269495
+          },
+          "parameters": [
+            {
+              "ablation_component": "full",
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 20.0
+            }
+          ],
+          "cases": [
+            "VFMT-KEMR-UEFG-NSK4",
+            "33KD-DV63-T6HW-FZFG",
+            "B58R-D86N-9H9V-T6JQ",
+            "CTJP-JJ75-4MEZ-SR7V",
+            "VN6M-XH5N-KJXA-F8VP",
+            "7T59-JH68-R4BP-WUQM",
+            "ADJJ-RHX5-J4CM-X8C9",
+            "T9VV-9RF4-N5E9-ZV2R",
+            "6Q8Z-GX5R-SE2A-QZZH",
+            "4DRS-BP5X-YFR4-XUQH"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "5.171376792956114470104916920176120205100",
+            "program_runtime_s": "3.860117063051048381121730754982588723400"
+          }
+        },
+        {
+          "key": "full__g40",
+          "label": "two_opt任务排序，40米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "12.9",
+            "average_localization_clear_s": "482.8373933245129870129870129870129870129",
+            "program_runtime_s": "1.3673"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.9119507199599983,
+            "average_localization_clear_s": 82.59290504862999,
+            "program_runtime_s": 0.15135539486769395
+          },
+          "parameters": [
+            {
+              "ablation_component": "full",
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 40.0
+            }
+          ],
+          "cases": [
+            "TTMS-R656-6FV3-23P7",
+            "QFA6-T8YN-DQET-V7TM",
+            "KDP6-EP2A-4AA8-RGT4",
+            "JXYN-NTAT-RHHG-9NCN",
+            "QHJG-B24A-RQRB-SS9V",
+            "R58J-Z6MU-6YQN-ZDMA",
+            "PPZV-A44V-WB87-BZA3",
+            "7QTD-FKKQ-4XNN-M6GS",
+            "RBRJ-7596-7Y6Q-UGFY",
+            "DMER-79EW-YQYV-JC5M"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "4.101922991184350695487122742534256323200",
+            "program_runtime_s": "1.303993480032599837000814995925020374900"
+          }
+        },
+        {
+          "key": "full__g80",
+          "label": "two_opt任务排序，80米",
+          "section": "原消融",
+          "n": 10,
+          "means": {
+            "cleared": "12.7",
+            "average_localization_clear_s": "489.3659544497269397269397269397269397269",
+            "program_runtime_s": "1.4887"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 5,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.888562063228706,
+            "average_localization_clear_s": 83.9135338055535,
+            "program_runtime_s": 0.16118660683264666
+          },
+          "parameters": [
+            {
+              "ablation_component": "full",
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 80.0
+            }
+          ],
+          "cases": [
+            "SPSV-E8WP-8GT6-QN37",
+            "R224-VSXH-V6E9-EPTB",
+            "RYPV-9BKR-JC25-PZKG",
+            "S72S-TV6Z-6DUQ-GUJ8",
+            "6K2R-BJNJ-2XF6-VU3X",
+            "EYWY-DG2B-5N23-FX3E",
+            "KM33-C56N-2NUU-JK6Y",
+            "GJCK-8DPC-AZ6P-E6MK",
+            "KSJE-REKA-6TGU-6EYM",
+            "TDKT-J56G-7UWQ-D26Q"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "5.509510259479212045827418478999778696300",
+            "program_runtime_s": "10.29858487071201007631325479736237682450"
+          }
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "problem": 3,
+      "title": "Q3 参数实验及追加复测结果",
+      "rows": [
+        {
+          "key": "q3_baseline",
+          "label": "baseline（第二次正式方案）：最近邻＋65米＋max_active=2",
+          "section": "baseline",
+          "n": 10,
+          "means": {
+            "cleared": "12.6",
+            "average_localization_clear_s": "256.4919398515925740925740925740925740926",
+            "program_runtime_s": "0.7217"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 8,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.9550504398153574,
+            "average_localization_clear_s": 36.8052164764455,
+            "program_runtime_s": 0.08212734014930716
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 2,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "nearest",
+              "trial_radius": 65.0
+            }
+          ],
+          "cases": [
+            "T96Y-88TW-5D6A-N93F",
+            "689W-V2NM-WQRH-B75J",
+            "JRDS-CP4B-PP8G-WCJN",
+            "GY4N-FAKW-3VGC-SHR2",
+            "3QKZ-DD3C-4KN2-Q2SD",
+            "KSPP-3D97-BEQM-R42S",
+            "Y37N-JADG-U8CT-VN75",
+            "HEKJ-E7EN-7ZNB-R8F4",
+            "FS6J-N2JK-SVAM-2U53",
+            "BMEF-NVMT-W6CY-UD9E"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "0",
+            "program_runtime_s": "0"
+          }
+        },
+        {
+          "key": "baseline",
+          "label": "two_opt排序＋50米＋max_active=3（宽扫对照）",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.2",
+            "average_localization_clear_s": "263.9275430389560439560439560439560439561",
+            "program_runtime_s": "0.8954"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 7,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.8737959096740262,
+            "average_localization_clear_s": 35.97962852347195,
+            "program_runtime_s": 0.04773817480102621
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "ZNXA-MH62-SHRD-7NK6",
+            "XEZX-US9N-CEW4-Q8GM",
+            "6D22-7GRB-4EU7-HB7Q",
+            "EF24-4WDR-UABJ-BZJH",
+            "83XR-9CPB-Y9ZH-XETN",
+            "S74E-ESGV-8QFR-52VK",
+            "KAJ5-VJEG-ZTVU-CZF2",
+            "T25E-F7T7-6DDV-QCSJ",
+            "WX7E-5PJP-G6HU-4JYB",
+            "T7Y9-XAED-E44W-MPNH"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "2.898961734105853131719319015860626600100",
+            "program_runtime_s": "24.06817237079118747401967576555355410840"
+          }
+        },
+        {
+          "key": "trial_radius=20",
+          "label": "two_opt排序，试清门限=20米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.2",
+            "average_localization_clear_s": "268.4278228413752913752913752913752913752",
+            "program_runtime_s": "0.8662"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.6865480854231356,
+            "average_localization_clear_s": 28.632153989897397,
+            "program_runtime_s": 0.12989979043691932
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 20
+            }
+          ],
+          "cases": [
+            "VK3H-V3KB-D2PA-NSPY",
+            "569H-RAU8-UFNJ-RTUU",
+            "DUTN-UK76-WTGD-GNWK",
+            "UDKM-JA7K-JQMM-BCWA",
+            "BNP4-76RK-8BXA-4MNH",
+            "WT93-U9GY-5XTN-C6U6",
+            "SG9J-NYRU-EXHM-CWAK",
+            "YFVZ-SDVH-8JWK-KESH",
+            "8JRF-QQDZ-GSKP-G8JB",
+            "PVB8-JS3A-UMCW-74P3"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "4.653511918030981610791491528914037699100",
+            "program_runtime_s": "20.02216987668006096716087016765969239300"
+          }
+        },
+        {
+          "key": "trial_radius=35",
+          "label": "two_opt排序，试清门限=35米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "11.6",
+            "average_localization_clear_s": "271.9128870377272727272727272727272727273",
+            "program_runtime_s": "0.8354"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.776388345929897,
+            "average_localization_clear_s": 22.401780117098678,
+            "program_runtime_s": 0.11608828058373889
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            }
+          ],
+          "cases": [
+            "VRHJ-HGWN-6YRF-BPJU",
+            "HS8W-UU98-MXD7-M3FF",
+            "Y8CC-HEYD-FKV9-5WBR",
+            "AHN5-VNAD-SWXY-DZHY",
+            "9CQQ-EQ2V-NBMT-RYYT",
+            "C7UB-BYBN-TQV6-4B93",
+            "AMX8-AN5F-NYAY-R39X",
+            "UG62-SU2B-D3GX-6945",
+            "FMWN-W676-98UV-G2AM",
+            "G6RE-4VU8-HCKA-3KEK"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "6.012254106330721422637129153850510506500",
+            "program_runtime_s": "15.75446861576832478869336289316890674800"
+          }
+        },
+        {
+          "key": "trial_radius=65",
+          "label": "two_opt排序，试清门限=65米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.6",
+            "average_localization_clear_s": "244.3426845101748251748251748251748251748",
+            "program_runtime_s": "0.8837"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 3,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.4129281427805145,
+            "average_localization_clear_s": 35.97342917953886,
+            "program_runtime_s": 0.08250259255185728
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            }
+          ],
+          "cases": [
+            "HHCG-TKFE-X26M-PMP6",
+            "D6K4-NVP4-BCEP-BPUE",
+            "7RYT-7YV2-6VW6-7B2N",
+            "V8J6-JT48-GTKR-M4YD",
+            "6S82-JGMC-ZFPK-6M9X",
+            "KHQE-7W77-B8DE-VY93",
+            "5ZC7-XBWK-WK7Z-RGZ7",
+            "84VS-AZ4S-RVS9-ZRV3",
+            "NRTJ-3YVJ-GBUG-GN3E",
+            "7RXX-TDYM-DAZP-HJGK"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-4.736700634120262961006696788909253479150",
+            "program_runtime_s": "22.44700013856172925038104475543854787310"
+          }
+        },
+        {
+          "key": "trial_radius=80",
+          "label": "two_opt排序，试清门限=80米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.1",
+            "average_localization_clear_s": "244.3329292480839993339993339993339993341",
+            "program_runtime_s": "0.8523"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 3,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.66332999331662,
+            "average_localization_clear_s": 36.202649764024414,
+            "program_runtime_s": 0.09946417557202303
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 80
+            }
+          ],
+          "cases": [
+            "FP6D-4CT9-YKZT-XXXT",
+            "5FCE-MABU-3BAK-2F2W",
+            "WNF7-9M3A-6JF9-E7AR",
+            "3C6U-Z9N3-6J4C-VYH8",
+            "EN9G-ZW2W-T24N-HH3R",
+            "PENV-5GTQ-X7U2-2WM7",
+            "F25S-BYFW-CK3W-TH37",
+            "H5F6-49JH-SD4F-WTQX",
+            "VH9U-USEV-2U65-GZ37",
+            "RHU8-GC7E-CGVE-HFJH"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-4.740503974722883955924775939811211453730",
+            "program_runtime_s": "18.09616184009976444506027435222391575450"
+          }
+        },
+        {
+          "key": "share_limit=0",
+          "label": "two_opt排序，顺路补测上限=0",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.7",
+            "average_localization_clear_s": "263.3468279834686147186147186147186147186",
+            "program_runtime_s": "0.785"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.5841396591085743,
+            "average_localization_clear_s": 50.95957823956628,
+            "program_runtime_s": 0.07996388073513078
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 0,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "5M7U-7MG5-24KV-VK9X",
+            "9NE2-BGMP-3RGD-ZT6Z",
+            "EW4J-MD89-KWWN-8G9E",
+            "P6UE-BUHY-PKD7-Q8CJ",
+            "R6S2-FBDR-3UK8-SQW5",
+            "APZG-EMVZ-HHAN-KNXY",
+            "65KZ-2RFY-M25Z-ERDR",
+            "M85N-Q7NK-6ZVV-G4DZ",
+            "ZBQV-95ZZ-D4F7-C2D4",
+            "BECC-ZWRA-F36G-3GHD"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "2.672554987826249311940984371008525885200",
+            "program_runtime_s": "8.770957461549120133019260080365802965200"
+          }
+        },
+        {
+          "key": "share_limit=2",
+          "label": "two_opt排序，顺路补测上限=2",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.7",
+            "average_localization_clear_s": "235.7381419963095238095238095238095238096",
+            "program_runtime_s": "0.8773"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 5,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.0575065816014617,
+            "average_localization_clear_s": 34.35372684886061,
+            "program_runtime_s": 0.10277272660260275
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 2,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "CH6Q-6KXZ-3B3V-D4QQ",
+            "G37S-8KKR-8NMQ-DU7G",
+            "2UZU-2UEZ-8KAH-YPU8",
+            "7ZB4-SQQJ-MB93-7D2Y",
+            "ZVMF-ER4C-6E27-PTP7",
+            "VQCC-687T-4ZWA-A942",
+            "R92D-T4TS-EFAP-EYCF",
+            "4RTP-U4C5-BK3W-TNKN",
+            "H9ND-G5N7-PR9M-RP5Q",
+            "X4GW-VPP9-GUBT-2PD9"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-8.091403522189154938012478426325790045190",
+            "program_runtime_s": "21.56020507135929056394623804905085215460"
+          }
+        },
+        {
+          "key": "share_limit=12",
+          "label": "two_opt排序，顺路补测上限=12",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.4",
+            "average_localization_clear_s": "246.1625137365367965367965367965367965369",
+            "program_runtime_s": "0.878"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 4,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.270584848790187,
+            "average_localization_clear_s": 32.75047667267815,
+            "program_runtime_s": 0.1208571240947113
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 12,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "DXD4-TZ9P-8B9C-2VFY",
+            "X3S5-A53X-UKTM-BT96",
+            "KKJX-G6RJ-M99U-9HBP",
+            "PQM8-JFCC-Q48X-7PUE",
+            "4Y6B-DEDJ-Z6GZ-SVTT",
+            "DXZ7-PPXT-H35P-QVR2",
+            "C5R8-8G73-FNZ3-P2GM",
+            "AD6Q-V9V4-4KC4-PQUD",
+            "4D77-7MC9-UFPR-48RJ",
+            "VXSP-3R8R-XPH6-E5SW"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-4.027193260354470167673481596482022587700",
+            "program_runtime_s": "21.65719828183455729527504503256200637380"
+          }
+        },
+        {
+          "key": "share_limit=20",
+          "label": "two_opt排序，顺路补测上限=20",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "11.7",
+            "average_localization_clear_s": "264.0879353126573426573426573426573426574",
+            "program_runtime_s": "0.8106"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.263232692902394,
+            "average_localization_clear_s": 36.8620421100036,
+            "program_runtime_s": 0.11240719628999639
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 20,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "B4RV-DBR9-2F4R-3A2P",
+            "D75T-D67Z-3RBR-J4JY",
+            "KE3Q-WDNF-PRD5-RY8G",
+            "U82T-SCPX-4T42-G996",
+            "YKV6-TUKP-KHAN-26CE",
+            "8UTZ-CTU8-MM9E-BYGA",
+            "NQ7A-ADDA-95B4-XSZ4",
+            "G967-62Q5-U67A-T3AX",
+            "2MCV-QMFE-2JHU-7F32",
+            "4P5Q-6J3G-WZFQ-Q5M4"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "2.961494799976890800465909401542783807500",
+            "program_runtime_s": "12.31813773035887487875848690591658583900"
+          }
+        },
+        {
+          "key": "max_active=1",
+          "label": "two_opt排序，主定位预算=1轮",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.6",
+            "average_localization_clear_s": "242.8513505123809523809523809523809523809",
+            "program_runtime_s": "0.8467"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 36,
+          "total_optical_fallback_calls": 35,
+          "sample_sd": {
+            "cleared": 2.1705094128132942,
+            "average_localization_clear_s": 45.478157450242016,
+            "program_runtime_s": 0.11538828170813341
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 1,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "9KH2-EDEC-7A28-JDY8",
+            "JWYN-8YJS-KV64-EKTH",
+            "8H6A-DM47-AJUC-9RTB",
+            "N6GY-A89N-SW43-2UKX",
+            "AJGQ-JFV7-7BVX-MPGE",
+            "GX7R-CVXD-5SM5-9V8U",
+            "BGXJ-XBT4-V5UP-JD2Z",
+            "B843-NYPH-6FEY-XYNY",
+            "FKKG-ZPYN-M25G-CMQC",
+            "6JSA-RY4J-UBCW-DAKT"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-5.318135668163346560912448122759699574810",
+            "program_runtime_s": "17.32021615629763059442981848413468200080"
+          }
+        },
+        {
+          "key": "max_active=2",
+          "label": "two_opt排序，主定位预算=2轮",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.5",
+            "average_localization_clear_s": "248.0409174468968531468531468531468531469",
+            "program_runtime_s": "0.8341"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 3,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.0682789409984763,
+            "average_localization_clear_s": 31.82924590804601,
+            "program_runtime_s": 0.11417087583481565
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 2,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "EH4H-FW27-CVG8-4GEP",
+            "N3YC-R59D-JAXC-Y8C4",
+            "QSUC-7NMQ-6SMK-WEU9",
+            "Q6DN-DJTH-USA8-XVS4",
+            "9GYC-V2KT-VJRW-ZBTQ",
+            "SPXG-43A8-BAGR-8MYT",
+            "Z3C9-U5UU-VQMR-YZ7Z",
+            "W8XX-HM35-CQ9J-76VC",
+            "F8MF-NJCS-KFRS-FXBW",
+            "8U85-6MHV-EB33-CF66"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-3.294849112835873790659591467232420390290",
+            "program_runtime_s": "15.57433836774282943051129278093390605510"
+          }
+        },
+        {
+          "key": "max_active=4",
+          "label": "two_opt排序，主定位预算=4轮",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.8",
+            "average_localization_clear_s": "262.7984247142424242424242424242424242424",
+            "program_runtime_s": "0.8924"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 3,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.616188916046478,
+            "average_localization_clear_s": 47.757695921084476,
+            "program_runtime_s": 0.1411092563307674
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 4,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "Q6CH-JWS3-4RMS-22RR",
+            "F9A3-VQ7W-TDF3-YVBX",
+            "PTM4-XFKT-8BDM-REXZ",
+            "ZKZ5-PACM-WJSK-4C3N",
+            "FQ9H-RDU2-HH44-VUWP",
+            "Z29B-KSJ5-NDSF-WDCT",
+            "PPB9-F8ZQ-D54B-D5DU",
+            "DJA6-VBMV-K5KY-PE3V",
+            "T4WT-MJ3M-22FD-D4JN",
+            "Z7XT-MRMD-U6SG-SAX5"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "2.458745825034038706397350607558743677500",
+            "program_runtime_s": "23.65248718304004433975336012193432174030"
+          }
+        },
+        {
+          "key": "max_active=5",
+          "label": "two_opt排序，主定位预算=5轮",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.8",
+            "average_localization_clear_s": "256.1781743632034632034632034632034632034",
+            "program_runtime_s": "0.939"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 4,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.485513584307633,
+            "average_localization_clear_s": 51.564663252277064,
+            "program_runtime_s": 0.08853749990195618
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 5,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "XM38-H46D-9PZQ-T4QW",
+            "HF3R-TCEK-WEMK-XATU",
+            "CTEV-AY63-MSGM-SMSY",
+            "S8QV-XNHE-XHPV-FTPB",
+            "TXYY-2R5M-KDWT-YPXU",
+            "NDAS-A4HV-QH5C-UEQT",
+            "DH2A-5SPU-D24Z-U9G8",
+            "54WE-VKF4-CAUH-22Z2",
+            "3K5X-M989-XGGC-X3FF",
+            "7U6T-EBCG-BXCS-VMES"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-0.1223295705006001575778325156968287743300",
+            "program_runtime_s": "30.10946376610780102535679645281973119020"
+          }
+        },
+        {
+          "key": "localization_weight=0",
+          "label": "two_opt排序，定位代价权重=0",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.6",
+            "average_localization_clear_s": "261.0448062830944055944055944055944055944",
+            "program_runtime_s": "0.9056"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 2,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.3190036174568114,
+            "average_localization_clear_s": 53.22611516520016,
+            "program_runtime_s": 0.14992827915002857
+          },
+          "parameters": [
+            {
+              "localization_weight": 0,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "X648-QXHX-WNBZ-4NEK",
+            "99HY-5MGE-395F-GRMA",
+            "2GGN-YTCT-CSKN-29A9",
+            "DHAY-AXSB-XB35-GHA6",
+            "BEV5-FRNH-ZSCS-DMD6",
+            "U53R-QC9J-CZNB-3QEH",
+            "BPAJ-P77Z-DSH3-PUNQ",
+            "BEYC-2K6K-2GET-26PB",
+            "26ET-FY33-C9BZ-58YQ",
+            "U544-7QVE-ZKBW-9T5D"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "1.775052437958144467819219701952300716000",
+            "program_runtime_s": "25.48150200914507413052514895385894415960"
+          }
+        },
+        {
+          "key": "localization_weight=0.02",
+          "label": "two_opt排序，定位代价权重=0.02",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.6",
+            "average_localization_clear_s": "257.0523267663344988344988344988344988346",
+            "program_runtime_s": "0.8419"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.8973665961010275,
+            "average_localization_clear_s": 28.853521288188844,
+            "program_runtime_s": 0.07278346881904801
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.02,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "FQA3-KG6T-58YN-8JSK",
+            "RBYT-G8TH-DJ4X-652V",
+            "CJJG-S8ZJ-DYHP-UJB7",
+            "Z6EK-P3KQ-XDP9-6KHD",
+            "Z63D-AREG-3RM6-E59R",
+            "W97K-JHU6-E27K-GE5S",
+            "JGQY-YTPT-N82K-E7WN",
+            "9TZJ-BVX6-6QSH-8VTD",
+            "SWJG-P83S-XF4Z-2K4Q",
+            "EFUA-N3U6-EQJX-JX4R"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "0.218481296163211682070689653510020551700",
+            "program_runtime_s": "16.65511985589580157960371345434391021200"
+          }
+        },
+        {
+          "key": "localization_weight=0.32",
+          "label": "two_opt排序，定位代价权重=0.32",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.8",
+            "average_localization_clear_s": "252.7177133796923909423909423909423909424",
+            "program_runtime_s": "0.8567"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.2010098692292237,
+            "average_localization_clear_s": 42.441054990708196,
+            "program_runtime_s": 0.08407014267199078
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.32,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "9Q32-MY99-4X5C-XDWX",
+            "CDTF-N6HW-ASUQ-GHSS",
+            "WCYN-UP7P-F56R-JJNT",
+            "APRF-KV84-SS7X-PWHK",
+            "QSSC-PK2Y-5BDG-27RQ",
+            "M2W8-Q7E6-NFVP-MSB3",
+            "3ZN3-B3ZW-KXBD-JVQD",
+            "Y3GN-4TY3-KQDT-JMA8",
+            "Y3V2-DDS6-P6QR-TX7V",
+            "ZUB3-CGJR-ARM7-C5QP"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-1.471479561534747676753798366650923551460",
+            "program_runtime_s": "18.70583344880144104198420396286545656090"
+          }
+        },
+        {
+          "key": "localization_weight=1.28",
+          "label": "two_opt排序，定位代价权重=1.28",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.8",
+            "average_localization_clear_s": "246.2401411244588744588744588744588744588",
+            "program_runtime_s": "0.8697"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 6,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.5491933384829668,
+            "average_localization_clear_s": 22.040942549673378,
+            "program_runtime_s": 0.12703197322809018
+          },
+          "parameters": [
+            {
+              "localization_weight": 1.28,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "WA38-VA2A-FQ7K-WUPA",
+            "2P7B-PC4G-G6FB-KXE8",
+            "VMPW-RU2Q-MVSQ-TXPJ",
+            "G6KM-VWYG-9DYT-QJCB",
+            "6228-M4YV-JJ8U-8EHA",
+            "CEA4-BAYE-4VAQ-HPAX",
+            "HPZT-ATMU-3G7K-7TDP",
+            "9WV5-97ZZ-QNMH-HYDN",
+            "CXYX-4WUU-BYSJ-CDCJ",
+            "87A2-2235-Y7NS-KZ74"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-3.996928220460041715561068678140690569320",
+            "program_runtime_s": "20.50713592905639462380490508521546348900"
+          }
+        },
+        {
+          "key": "remainder_weight=0",
+          "label": "two_opt排序，余程权重=0",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.4",
+            "average_localization_clear_s": "252.9964850026710789210789210789210789211",
+            "program_runtime_s": "0.8486"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 2,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.776388345929897,
+            "average_localization_clear_s": 24.715378642356782,
+            "program_runtime_s": 0.12065764238814988
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 0,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "7QB4-G4PA-8TAY-8ZX3",
+            "YC44-D9VB-HAPR-KU2C",
+            "CXHA-ZPVM-PPPQ-DXSR",
+            "U5TH-6VJG-7HTJ-JK52",
+            "KKZS-J9FC-YCGD-BF5Y",
+            "38RG-3GSP-QB33-R3DC",
+            "R4XA-SZJV-VRDN-ZDZE",
+            "Y4PR-NDRP-NE5S-B4NE",
+            "G2WF-ZB95-MXSN-9TZS",
+            "7JCK-55RV-KYMP-2HC6"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-1.362793252272949223134866711429723834590",
+            "program_runtime_s": "17.58348344187335457946515172509352916720"
+          }
+        },
+        {
+          "key": "remainder_weight=0.5",
+          "label": "two_opt排序，余程权重=0.5",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "11.6",
+            "average_localization_clear_s": "269.6370589846374458874458874458874458874",
+            "program_runtime_s": "0.8856"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.0110804171997807,
+            "average_localization_clear_s": 32.4453507169258,
+            "program_runtime_s": 0.10001466559126883
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 0.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "A46K-UCT9-33PQ-43NH",
+            "EED4-V3UM-9M6B-5NXB",
+            "TTQH-J23A-ZVEM-B7HT",
+            "2XHE-9H8Y-XNH6-W7QK",
+            "H3DQ-SCYX-99S4-KSM8",
+            "R8QA-VDN8-7SQE-ZX5Z",
+            "GSK4-S8XV-8245-2E8Q",
+            "ZPVB-TJQZ-6472-CEBY",
+            "5R95-HTFR-WZR7-MN6M",
+            "2S5B-S2JS-D7NB-VU2F"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "5.124963825627697574891671227341756732500",
+            "program_runtime_s": "22.71026742413745323541637799639739503950"
+          }
+        },
+        {
+          "key": "remainder_weight=1",
+          "label": "two_opt排序，余程权重=1",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.8",
+            "average_localization_clear_s": "253.3759187524221611721611721611721611722",
+            "program_runtime_s": "0.8554"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 4,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.9321835661585918,
+            "average_localization_clear_s": 36.80679091859897,
+            "program_runtime_s": 0.07676544361451533
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "EBGB-RNEQ-ABDH-V5PR",
+            "WZJ7-NA57-Y922-S5A6",
+            "UXY3-H3GR-NYKQ-NZSQ",
+            "VYPT-FUR6-UFZQ-N4B6",
+            "AAZB-9UPF-QHPU-G9M6",
+            "PYE8-Q88J-KKHQ-D5XW",
+            "U6BY-XZWW-YWW7-N5XM",
+            "M3EP-WCZE-UHBW-67DK",
+            "CB5F-ZQWS-Z2ZP-HAXD",
+            "BQ44-B4PC-PZDU-H5WU"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-1.214861215901504421261735972341176351010",
+            "program_runtime_s": "18.52570320077594568380213385063045586810"
+          }
+        },
+        {
+          "key": "remainder_weight=2",
+          "label": "two_opt排序，余程权重=2",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.9",
+            "average_localization_clear_s": "245.2728146455494505494505494505494505494",
+            "program_runtime_s": "0.8863"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 5,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.8529256146249728,
+            "average_localization_clear_s": 36.95964171622058,
+            "program_runtime_s": 0.10452012033840931
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "NTAF-TPCR-JYM8-NSSH",
+            "SD3J-G6ZP-FBMH-WN4C",
+            "HURG-EPBU-2K85-R3QY",
+            "GD3C-52R2-VF6J-D2DB",
+            "UVHP-JY7T-45F6-A2DF",
+            "UPQ3-SKQR-HRDC-HVYZ",
+            "ZFPP-VAEM-SUPW-GKYB",
+            "Y26Q-CAJR-HPFB-U44S",
+            "FKYR-JFK7-PNF9-XHQC",
+            "89MP-HUCG-PFWU-WZNF"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-4.374065404368870779040707647691303722270",
+            "program_runtime_s": "22.80726063461271996674518497990854925870"
+          }
+        },
+        {
+          "key": "refinement_baseline",
+          "label": "two_opt排序＋50米＋3轮（中止批次对照）",
+          "section": "追加探索",
+          "n": 3,
+          "means": {
+            "cleared": "13",
+            "average_localization_clear_s": "239.5498364599844599844599844599844599845",
+            "program_runtime_s": "0.810"
+          },
+          "all_clear_cases": 3,
+          "total_clear_failures": 3,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.0,
+            "average_localization_clear_s": 21.508767152107254,
+            "program_runtime_s": 0.12322337440599489
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "5EH9-H8MB-RHRD-B4HF",
+            "Y74M-E7HT-S327-WX9K",
+            "BUHR-5NBQ-CMDN-974Y"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-6.605316097422357092915851151265706615680",
+            "program_runtime_s": "12.23500069280864625190522377719273936540"
+          }
+        },
+        {
+          "key": "refinement_candidate",
+          "label": "two_opt排序＋65米＋2轮（中止批次候选）",
+          "section": "追加探索",
+          "n": 4,
+          "means": {
+            "cleared": "14.75",
+            "average_localization_clear_s": "233.3395565739583333333333333333333333333",
+            "program_runtime_s": "0.82925"
+          },
+          "all_clear_cases": 4,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 0.9574271077563381,
+            "average_localization_clear_s": 15.186877649667876,
+            "program_runtime_s": 0.06974417538404194
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 2,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            }
+          ],
+          "cases": [
+            "UE42-T7W8-4N9X-GP47",
+            "GGBG-VVNX-6TBZ-WVBX",
+            "UFRT-K9J5-6MYJ-P6TN",
+            "KK9S-W4WA-SW92-BFMF"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-9.026553930322456563499773183870887721120",
+            "program_runtime_s": "14.90231398087848136344741582374948039350"
+          }
+        },
+        {
+          "key": "robustness_baseline",
+          "label": "two_opt排序＋50米＋max_active=3（联合扰动同期对照）",
+          "section": "联合扰动",
+          "n": 40,
+          "means": {
+            "cleared": "13.675",
+            "average_localization_clear_s": "238.2096731269488844488844488844488844489",
+            "program_runtime_s": "0.847375"
+          },
+          "all_clear_cases": 40,
+          "total_clear_failures": 15,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.992131959381643,
+            "average_localization_clear_s": 28.253560896377117,
+            "program_runtime_s": 0.1137200087258851
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50.0
+            }
+          ],
+          "cases": [
+            "8MMM-EP4B-M3RT-2F2J",
+            "2GZ6-GMT4-QWE4-F6ZN",
+            "WMP5-BRM4-MNAU-8N92",
+            "HH3C-CGS6-VM96-RSJ6",
+            "RS3D-B4GE-XBYR-AY3M",
+            "D7MK-FHUU-GHZ6-A6RN",
+            "NCR4-XSJ5-45NM-KGPE",
+            "32T4-2EQZ-H6DX-UCZC",
+            "89BK-BRHG-GCQ8-3Z6E",
+            "VNYU-ADWK-AKJA-W6TC",
+            "SZU4-B5FV-MR7H-JTX3",
+            "QYFV-G7JZ-Y9CV-85TJ",
+            "6EE6-DHZZ-DUHX-MDEJ",
+            "CX2G-B4HQ-Z9UG-U2E6",
+            "H45H-BHCB-WZZA-5MKP",
+            "UKAR-63FG-P6YK-GQVU",
+            "88ER-SWW5-QQYT-P9M5",
+            "U2N9-4AVG-33HP-D5HU",
+            "FKH2-YUA6-MGR3-XDN7",
+            "CQYH-5TEA-HHD6-PHPU",
+            "JHGX-8ZPK-RVQE-FH67",
+            "9X4J-PWR2-2E2W-X4NW",
+            "P9SX-EPC7-7BCN-V63S",
+            "ZAHG-F77A-5NUM-HWXW",
+            "Y3H8-AN9G-7MYR-GSD3",
+            "QJHR-FET2-X5X9-X92H",
+            "5V5S-ZPG7-UCNG-8JSR",
+            "DB89-VBKW-HZG7-KVN7",
+            "9QJ4-AUVR-DFSD-BNXT",
+            "B5P9-RJD4-4K56-68DD",
+            "9ZQM-HP2M-Y9YT-799D",
+            "R6R7-TPFA-64S3-W9P2",
+            "8FH8-GTKE-AX7M-J3M4",
+            "TDC7-GN3X-NVJR-FR6X",
+            "YPT7-6J9Q-FDAC-W6DF",
+            "E2GC-6B7D-4S9T-RN9D",
+            "35BW-EM8J-NREC-7VBF",
+            "ZU2S-2UA3-FXQM-TM6U",
+            "TCKM-GGRN-VC66-8A5K",
+            "7QWS-J578-ET7H-T7U7"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-7.127813347749599444166060197831793663860",
+            "program_runtime_s": "17.41374532354163779963973950394900928360"
+          }
+        },
+        {
+          "key": "robustness_perturbed",
+          "label": "two_opt排序联合随机扰动（每局参数不同）",
+          "section": "联合扰动",
+          "n": 80,
+          "means": {
+            "cleared": "13.2625",
+            "average_localization_clear_s": "247.7514964840528742091242091242091242091",
+            "program_runtime_s": "0.8246375"
+          },
+          "all_clear_cases": 80,
+          "total_clear_failures": 35,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.9664512146877267,
+            "average_localization_clear_s": 32.49891065616583,
+            "program_runtime_s": 0.11057928523364947
+          },
+          "parameters": [
+            {
+              "localization_weight": 0.04,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 2,
+              "remainder_weight": 2,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 2,
+              "remainder_weight": 2,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 1,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 1,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 1,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 1,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 1,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 4,
+              "remainder_weight": 1,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 4,
+              "remainder_weight": 1.5,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 4,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 4,
+              "remainder_weight": 2,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.04,
+              "max_active": 4,
+              "remainder_weight": 2,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 2,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 2,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 2,
+              "remainder_weight": 1.5,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 4,
+              "remainder_weight": 1,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 4,
+              "remainder_weight": 1.5,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 4,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 4,
+              "remainder_weight": 1.5,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.08,
+              "max_active": 4,
+              "remainder_weight": 2,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 2,
+              "remainder_weight": 1,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 2,
+              "remainder_weight": 1.5,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 2,
+              "remainder_weight": 1.5,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 2,
+              "remainder_weight": 2,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 2,
+              "remainder_weight": 2,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 3,
+              "remainder_weight": 1,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 3,
+              "remainder_weight": 1,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 3,
+              "remainder_weight": 1.5,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 3,
+              "remainder_weight": 2,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 4,
+              "remainder_weight": 1,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 4,
+              "remainder_weight": 1,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 4,
+              "remainder_weight": 1.5,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 4,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 4,
+              "remainder_weight": 1.5,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 4,
+              "remainder_weight": 2,
+              "share_limit": 4,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 4,
+              "remainder_weight": 2,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 50
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 4,
+              "remainder_weight": 2,
+              "share_limit": 6,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 4,
+              "remainder_weight": 2,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 35
+            },
+            {
+              "localization_weight": 0.16,
+              "max_active": 4,
+              "remainder_weight": 2,
+              "share_limit": 8,
+              "task_order": "two_opt",
+              "trial_radius": 65
+            }
+          ],
+          "cases": [
+            "KJTV-HJ6C-5NQP-XEZ6",
+            "QDAU-ZEYG-F4KA-QS7W",
+            "FC7R-PH5Y-DZJP-4DJJ",
+            "32FA-GEFF-X2H5-22SY",
+            "EG2K-S24G-YYWW-4NFT",
+            "KP7A-F88D-N9V8-HUWT",
+            "D9UG-6RBM-RT7R-5MG8",
+            "6KAN-DCEM-9YCW-WCSW",
+            "259H-TG9C-NQSP-6KFE",
+            "ARUX-DFNK-8V4G-KKD4",
+            "HU5U-HPGB-ZFF3-8N6C",
+            "ZJFP-UWB6-9PG3-USRJ",
+            "2GVQ-CCN7-UKPT-VVW5",
+            "R4WK-9722-RQSX-XQTS",
+            "REQU-NARH-NKKK-B2MB",
+            "9WP3-WJ5S-5T53-66HX",
+            "YUH4-MDAB-95AV-TR4B",
+            "BBTX-S5GJ-XFCB-YGYA",
+            "438T-W6AY-WS2G-7RN6",
+            "N3QN-A4YZ-94KZ-6GJ8",
+            "GHF3-JFD4-BVB9-HJUF",
+            "E63D-5YEM-EQN4-5WWX",
+            "7TRY-P2RB-BMG9-C8XP",
+            "JK7C-QFKC-VMFK-32TB",
+            "Y3FH-PP5D-2PQV-9A2C",
+            "CBPX-G97P-SNEW-RBJX",
+            "XYPV-9SWQ-SNNP-VXCV",
+            "SD4J-AN9B-AUVG-MJAA",
+            "URRM-UM5E-XE7V-94JE",
+            "3ECQ-84KV-6ZHY-NPNZ",
+            "VX4D-KE9N-CPH7-TB7Z",
+            "EYH4-6X95-KNMK-M73R",
+            "8XT9-SAS3-G6P7-JHN2",
+            "QWTU-WSD5-TDT5-V4GU",
+            "RDHQ-6BGV-6XG6-7W8S",
+            "ARZ6-GBAU-6HN3-X3YR",
+            "7BJD-EKF5-TFHZ-MBQJ",
+            "E4WV-P8K5-P768-5498",
+            "YYSF-XHHK-VT5P-VWMU",
+            "QCF9-X3EE-G4M3-YH5W",
+            "BZJV-EEZB-65GS-8ET3",
+            "RUZM-G7VG-6WVY-W924",
+            "Y58H-DWPW-SSAC-UQJP",
+            "E5NC-EH2U-CE5J-A32V",
+            "EM3C-2MH5-RDPG-Q6HX",
+            "CYYC-HKBX-4W3W-M4CP",
+            "6XHF-MF7C-VYEY-5WTP",
+            "WT7H-ZKSZ-7JM6-2E4V",
+            "4KNG-UMZG-MN5V-ZMQ4",
+            "KB97-JXTQ-HA2G-CUEY",
+            "KW2E-63BA-FZAB-5EQE",
+            "QG6B-KHWR-WJK9-2RVU",
+            "5MRD-9SEN-K9VE-AU95",
+            "H8YZ-JZ6J-BG49-ZZ36",
+            "BWNU-E38B-3XBQ-DZ6P",
+            "GST4-D8N4-PCWP-UA76",
+            "X4H8-FVR2-GJFH-ZYSU",
+            "YF9F-8B82-VGKC-MVV3",
+            "KT3V-N8AT-WR4W-95PV",
+            "Y9QE-EMSZ-93RT-2QKH",
+            "DMZQ-JR4G-4AKZ-GAC7",
+            "DHGZ-2PWR-Y49R-DJ5K",
+            "3G9P-PY3M-K7RH-5UHW",
+            "PBGJ-24XF-4RPR-687U",
+            "JCWW-EDEM-BNVD-QJDA",
+            "MRQR-5KFZ-BY5G-SK3M",
+            "CPGA-KXH3-73MZ-N4ZZ",
+            "4MCC-TKGT-QTY5-3XBR",
+            "ZBAM-P4GU-22PQ-2KRF",
+            "HNF2-SX4Y-ZAVD-2MRM",
+            "AGYK-WFQV-VWNG-RS32",
+            "6HRA-XETK-YSES-RTU4",
+            "T57R-DJVB-FF8U-VU5T",
+            "PFSN-VPNF-F6VH-HCEM",
+            "STGS-KJR7-9VXG-5Y2V",
+            "JJUZ-SEUH-VY9B-BSP5",
+            "F3DJ-2CY9-BMGS-NDU9",
+            "KWRF-T4K4-C322-V9HA",
+            "N4S6-CEUW-6UTU-EGD6",
+            "5VCN-KGXJ-K3RB-7AKM"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-3.407687341987027331410886568887946668300",
+            "program_runtime_s": "14.26319800471109879451295552168491062770"
+          }
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "problem": 4,
+      "title": "Q4 参数实验及追加复测结果",
+      "rows": [
+        {
+          "key": "q4_baseline",
+          "label": "baseline（第二次正式方案）：最近邻＋35米＋fraction=0.15＋share_limit=6",
+          "section": "baseline",
+          "n": 10,
+          "means": {
+            "cleared": "13.6",
+            "average_localization_clear_s": "463.8121750790338827838827838827838827839",
+            "program_runtime_s": "1.3497"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.5776212754932308,
+            "average_localization_clear_s": 70.95612960362607,
+            "program_runtime_s": 0.11002630998487993
+          },
+          "parameters": [
+            {
+              "ablation_component": "online_nearest",
+              "dispatch": "nearest",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "QXZY-EG4Q-YGJW-TMXG",
+            "94NM-VAFA-KQXM-NSWB",
+            "AKRP-KFVJ-9RPG-AADA",
+            "B8KT-X3D2-WDFC-K6R4",
+            "KEJT-BE9V-TB7T-RR5M",
+            "BKGC-VTRK-KM5W-5FT9",
+            "UJ5M-YMMJ-9CXF-NWNE",
+            "B6MC-G3FW-6WS2-4EZS",
+            "KGPU-S4CH-7H38-BPDY",
+            "DMB2-BBDY-CHNR-5XSM"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "0",
+            "program_runtime_s": "0"
+          }
+        },
+        {
+          "key": "baseline",
+          "label": "two_opt排序＋35米＋fraction=0.15＋share_limit=6（宽扫对照）",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.7",
+            "average_localization_clear_s": "451.3068079072743922743922743922743922744",
+            "program_runtime_s": "1.3661"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 2,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.110818693198342,
+            "average_localization_clear_s": 110.39137464557547,
+            "program_runtime_s": 0.23878835352206307
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "MPED-E48N-ZD3E-7EYV",
+            "U3QN-DWUD-MCJB-G9R6",
+            "SWTS-7BZM-MNE6-BQ84",
+            "BWPB-S8UU-4TSC-DFMP",
+            "M39M-WDN8-FPVH-CNW4",
+            "WUTH-WG75-CVYR-ZMX4",
+            "Y9KP-WSV5-CZYW-9ZB9",
+            "EPMM-G5RE-DX4D-MVW8",
+            "46QN-SJD3-ZUB8-QUH2",
+            "FZQB-323Z-PWEZ-VFZD"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-2.696213649335222425817489892371802426300",
+            "program_runtime_s": "1.215084833666740757205304882566496258400"
+          }
+        },
+        {
+          "key": "trial_radius=20",
+          "label": "two_opt排序，试清门限=20米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.2",
+            "average_localization_clear_s": "512.2732596895612720612720612720612720612",
+            "program_runtime_s": "1.5299"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.8135294011647258,
+            "average_localization_clear_s": 79.29462418237765,
+            "program_runtime_s": 0.31990986577819425
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 20
+            }
+          ],
+          "cases": [
+            "TBAB-CQP5-8SVZ-Q2PS",
+            "XGW4-WBEC-2BC2-BJP8",
+            "45MH-AAJA-TMG8-M4TM",
+            "W2PC-ZTNZ-5VDQ-4SNC",
+            "MNGN-AM5T-MFFF-3474",
+            "SEH8-F6JS-THQ2-TBGC",
+            "98BR-HC9K-XQCY-V98B",
+            "DTXU-QXUH-RBKW-MPKS",
+            "Y4KE-VPUP-67TX-QF9C",
+            "B3ZG-526Q-KM3T-7FJZ"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "10.44842874214537174505274380084847579160",
+            "program_runtime_s": "13.35111506260650514929243535600503815660"
+          }
+        },
+        {
+          "key": "trial_radius=50",
+          "label": "two_opt排序，试清门限=50米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.1",
+            "average_localization_clear_s": "513.7179634310198135198135198135198135199",
+            "program_runtime_s": "1.4632"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.0789954839350235,
+            "average_localization_clear_s": 124.39082758511292,
+            "program_runtime_s": 0.3141725640472128
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 50
+            }
+          ],
+          "cases": [
+            "A8AQ-MHUP-B3UR-BQ7S",
+            "K67C-J66G-74FD-64RP",
+            "9ZKU-KMBF-WA4M-UTBF",
+            "B53Q-E67Q-BZ9G-JAZM",
+            "YNZT-8CMZ-RE9J-N3E3",
+            "ANS9-A3YH-AKHD-ZECS",
+            "ZTU2-8D6T-XZKW-H84E",
+            "7YCR-WFSD-JT2V-QVNY",
+            "VNTT-UXUN-VFBY-HYTP",
+            "HHUS-K9RM-2568-93TA"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "10.75991339457226481732981439944528149300",
+            "program_runtime_s": "8.409276135437504630658664888493739349500"
+          }
+        },
+        {
+          "key": "trial_radius=65",
+          "label": "two_opt排序，试清门限=65米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.4",
+            "average_localization_clear_s": "507.0040058593506493506493506493506493506",
+            "program_runtime_s": "1.4794"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 4,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.1705094128132942,
+            "average_localization_clear_s": 83.5910504034519,
+            "program_runtime_s": 0.1594241024577038
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 65
+            }
+          ],
+          "cases": [
+            "JMGN-EAGR-UTRY-PND6",
+            "K8CF-NBHT-3FXR-NAQP",
+            "KW6T-Y2QU-Y9NU-PWHM",
+            "ZJ6G-4W98-EA9J-RTJF",
+            "3VBE-QGYR-Y27K-GBW9",
+            "D3G9-48UP-DKR2-5GN9",
+            "DG4H-MHK7-7T5R-ZT9X",
+            "MRYS-5E4V-Y8MH-YJHY",
+            "RTXC-MPAS-DWDJ-CBZK",
+            "JMFB-Q3NA-4VB2-6CT2"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "9.312353814980568754628829526568645174400",
+            "program_runtime_s": "9.609542861376602207898051418833814921800"
+          }
+        },
+        {
+          "key": "trial_radius=80",
+          "label": "two_opt排序，试清门限=80米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.9",
+            "average_localization_clear_s": "471.0938744642453379953379953379953379954",
+            "program_runtime_s": "1.5094"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 7,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.2335820757001272,
+            "average_localization_clear_s": 100.41189738648005,
+            "program_runtime_s": 0.15006679994070785
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 80
+            }
+          ],
+          "cases": [
+            "7TEQ-AQ9Y-BXD4-SVXA",
+            "RXFG-92VQ-MF5T-ZH83",
+            "699P-K66D-VJ7B-ER3J",
+            "FPVD-8VFJ-C2PM-4WRD",
+            "NT89-WMZ4-TU33-D4AY",
+            "FYMX-RZ35-JBPU-ZJEY",
+            "V8HD-JRM6-4TCX-PYXT",
+            "BBGQ-VWNF-GPW5-CZS6",
+            "ZVKX-YX48-87MA-VNRZ",
+            "9YXC-Z7PV-R6U2-6BJ7"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "1.569967279097546137582081143622552705600",
+            "program_runtime_s": "11.83225902052307920278580425279691783360"
+          }
+        },
+        {
+          "key": "share_limit=0",
+          "label": "two_opt排序，顺路补测上限=0",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.7",
+            "average_localization_clear_s": "457.6336227416171328671328671328671328671",
+            "program_runtime_s": "1.3814"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.888562063228706,
+            "average_localization_clear_s": 98.3484616854479,
+            "program_runtime_s": 0.1636637474281407
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 0,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "WHZY-KF46-B2WU-YMG7",
+            "8FWF-RWQD-6TKF-8P47",
+            "YZR9-4YPM-7N97-NMRS",
+            "WHKC-7SBF-ZJGU-AKXJ",
+            "RKQC-J9S9-ASRN-J8ZX",
+            "T8CM-7KYU-EMHX-C4Y6",
+            "RNCN-8NAV-VT7C-ZJHJ",
+            "KEBG-7S72-RJWN-PN6T",
+            "JEYH-4PFB-85JM-XUCR",
+            "S8KX-AYE5-M89W-XG7D"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-1.332123792646003904475741775381291049230",
+            "program_runtime_s": "2.348670074831444024598058827887678743400"
+          }
+        },
+        {
+          "key": "share_limit=2",
+          "label": "two_opt排序，顺路补测上限=2",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.9",
+            "average_localization_clear_s": "440.2176822148476523476523476523476523476",
+            "program_runtime_s": "1.5017"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 2,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.024845673131659,
+            "average_localization_clear_s": 97.45023469864664,
+            "program_runtime_s": 0.3101644904097036
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 2,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "FN7H-Y9DY-FT4R-TGFH",
+            "Y2KX-9RFT-XJDE-82CX",
+            "BZWA-P48U-VTFT-HA6C",
+            "D4TY-JEFG-AN5T-T567",
+            "JK6Z-DMS6-2HW4-V2HR",
+            "4ZD7-26XJ-PY6H-Z7GY",
+            "AEPP-UTZ2-N9BH-S24E",
+            "6WQK-H8WP-77QB-3P7U",
+            "BYCT-YKX4-24RG-QZ68",
+            "FFMB-YUJ3-DH7U-8T7U"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-5.087079238522730498338717501744341434240",
+            "program_runtime_s": "11.26176187300881677409794769207972141960"
+          }
+        },
+        {
+          "key": "share_limit=12",
+          "label": "two_opt排序，顺路补测上限=12",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.2",
+            "average_localization_clear_s": "452.145973681282051282051282051282051282",
+            "program_runtime_s": "1.4613"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.0976176963403033,
+            "average_localization_clear_s": 103.40777782286624,
+            "program_runtime_s": 0.21796944230276358
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 12,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "MAC7-X65N-PHXS-3CN8",
+            "D6B3-77F8-CRRP-YPJD",
+            "RGE7-8NRM-UFFB-CCDA",
+            "57JA-NB39-F2FM-JGE3",
+            "5ZRZ-N4XY-T5X7-9MMW",
+            "JHE7-FJVY-P3WD-EW23",
+            "PFHS-3NKM-7TPK-EPJX",
+            "HRYD-X6GQ-DK6W-YDEH",
+            "66QC-PKA4-ZFRN-SW3Y",
+            "YJ57-P42Z-4TZF-M9W3"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-2.515285717923188095665739001584632972290",
+            "program_runtime_s": "8.268504112024894420982440542342742831700"
+          }
+        },
+        {
+          "key": "share_limit=20",
+          "label": "two_opt排序，顺路补测上限=20",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.9",
+            "average_localization_clear_s": "470.2525056539627039627039627039627039627",
+            "program_runtime_s": "1.4698"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 3,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.449137674618944,
+            "average_localization_clear_s": 62.27921607625118,
+            "program_runtime_s": 0.21855728971802535
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 20,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "FMFV-SVJD-2TKQ-JH59",
+            "7PJC-MMNH-4PQT-G48B",
+            "GU5B-MHQV-8B2B-MHSD",
+            "HT7H-BNF3-MYPV-FYVP",
+            "2RD4-V2DJ-X8YW-2RBP",
+            "D3U2-T24T-A7G5-V95Y",
+            "KCCX-DJKF-JCP6-3NP3",
+            "XW5K-8TWG-9ZQN-CUFS",
+            "3VXX-R5AR-P7M6-BU7H",
+            "53XF-J8XR-FFG5-W8FR"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "1.388564363113448854096882459397187709800",
+            "program_runtime_s": "8.898273690449729569533970511965621990100"
+          }
+        },
+        {
+          "key": "share_cooldown=0",
+          "label": "two_opt排序，负反馈冷却距离=0米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.6",
+            "average_localization_clear_s": "480.5172212455161505161505161505161505162",
+            "program_runtime_s": "1.5524"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.7126976771553506,
+            "average_localization_clear_s": 70.7765335519294,
+            "program_runtime_s": 0.14912798381107265
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "XZ5F-V7PH-7C8H-TM3P",
+            "5XPU-YX9D-BH22-CG9Y",
+            "J8TD-8MCJ-E7DX-D2S4",
+            "7R37-D3F6-3DS3-Y5TT",
+            "JU9Q-4NU4-P5P7-RXSH",
+            "YH2D-JW8Z-ZHU7-ZUBU",
+            "9GCR-Z93W-DFXA-3VRK",
+            "GU9W-J32Q-9CJT-R9FC",
+            "9DAW-NCUR-GT8S-9DNG",
+            "DZ59-B5XY-VUP9-SJSS"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "3.601683410668492582635081591508701908800",
+            "program_runtime_s": "15.01815218196636289545824998147736534040"
+          }
+        },
+        {
+          "key": "share_cooldown=50",
+          "label": "two_opt排序，负反馈冷却距离=50米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.7",
+            "average_localization_clear_s": "510.4374035602218614718614718614718614719",
+            "program_runtime_s": "1.5719"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 3,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.406010991015812,
+            "average_localization_clear_s": 105.30773674767178,
+            "program_runtime_s": 0.25919338554660515
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 50,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "EVD8-478H-3Y6C-B8K4",
+            "Y963-V7VX-WB8W-74HS",
+            "4ZGT-QRWC-HK8M-7Y6V",
+            "QJZH-UZV2-9TVH-K9E7",
+            "FHKG-BAKD-F7VW-S534",
+            "T8JT-GTFD-FJB8-8AFD",
+            "2QY2-89UC-CANR-ZPXN",
+            "UQ67-G88A-RAAW-KSCP",
+            "TJYD-4SCX-Z3UG-YW8W",
+            "2B4P-AQ9U-56SD-B4BD"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "10.05260986804475557118507336873260483710",
+            "program_runtime_s": "16.46291768541157294213528932355338223310"
+          }
+        },
+        {
+          "key": "share_cooldown=400",
+          "label": "two_opt排序，负反馈冷却距离=400米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.1",
+            "average_localization_clear_s": "495.2657083809848484848484848484848484849",
+            "program_runtime_s": "1.5144"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.5582111805799856,
+            "average_localization_clear_s": 113.8745656070938,
+            "program_runtime_s": 0.1861577586648247
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 400,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "E5A8-MXEX-EU44-WV4G",
+            "PHYT-MNZK-FGZF-657Q",
+            "YSSN-XZYV-8YZU-ED3M",
+            "AR9R-N6HT-TVYE-W5NT",
+            "4DQF-RXXP-AMEV-B8Q3",
+            "M8TF-5KT2-73PR-BCSZ",
+            "NJSA-BDT8-FYGR-KHBC",
+            "AQSX-C4AZ-8HZ9-JGQ6",
+            "NQM6-Y2QN-E42N-D6CB",
+            "48JM-DW7A-BWGU-MZPA"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "6.781523856416935171079563187235706025100",
+            "program_runtime_s": "12.20271171371415870193376305845743498560"
+          }
+        },
+        {
+          "key": "share_cooldown=800",
+          "label": "two_opt排序，负反馈冷却距离=800米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.6",
+            "average_localization_clear_s": "499.3769312210477022977022977022977022976",
+            "program_runtime_s": "1.5667"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.7126976771553506,
+            "average_localization_clear_s": 88.83792357666455,
+            "program_runtime_s": 0.19907901837098643
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 800,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "V7N4-ZRWU-RPTF-W7K5",
+            "V4GS-556U-YFWR-WK7V",
+            "NP4G-89UK-B2UP-QMP5",
+            "PDDQ-P69N-F432-RUK6",
+            "42BE-H8Y9-EFSK-F6XP",
+            "99V3-TZ3P-W4RH-PRQZ",
+            "TSSR-PXBN-U8SM-KN5E",
+            "Y96W-CYCS-7GCX-89SV",
+            "ZCDP-DFEV-5E3Z-4ETK",
+            "U68G-WB6W-JCZY-ZRZ8"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "7.667922071246526241375845156017326624800",
+            "program_runtime_s": "16.07764688449285026302141216566644439510"
+          }
+        },
+        {
+          "key": "transverse_m=10",
+          "label": "two_opt排序，横向探测目标距离=10米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.4",
+            "average_localization_clear_s": "469.0573728035934898434898434898434898436",
+            "program_runtime_s": "1.5324"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 3,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.1705094128132942,
+            "average_localization_clear_s": 90.98001550723197,
+            "program_runtime_s": 0.10706716479751285
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 10,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "NX96-FN97-UK8B-GQ8W",
+            "UMU2-XR5M-GDEB-G95C",
+            "AKF9-G5UM-CFGE-X3AF",
+            "587K-HRNH-PHU4-ZVRA",
+            "P6KS-QUP7-K799-FURQ",
+            "EWDA-PXQD-6VW4-75D6",
+            "K23Q-43Z9-SWCQ-72KV",
+            "GS34-EU3D-WZ4V-DARB",
+            "FQQ7-BXNW-8EUF-ZWAS",
+            "YVQF-R3A3-QS7E-ZQBH"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "1.130888322124321576656047145979143535300",
+            "program_runtime_s": "13.53634140920204489886641475883529673260"
+          }
+        },
+        {
+          "key": "transverse_m=20",
+          "label": "two_opt排序，横向探测目标距离=20米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.4",
+            "average_localization_clear_s": "515.8064656590259740259740259740259740259",
+            "program_runtime_s": "1.5672"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.776388345929897,
+            "average_localization_clear_s": 80.15953269281002,
+            "program_runtime_s": 0.09859434286227807
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 20,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "P3TT-MJDW-VPED-M48G",
+            "2FZY-SNPS-TTCW-GSJ3",
+            "4JKN-WYKX-CF92-CB3K",
+            "5VX5-5ETN-XDE9-SDXU",
+            "8B8C-JFB8-CJP8-C8CK",
+            "FPZ7-N2XU-KG3E-2995",
+            "JAFG-HYA4-TEHC-ZJKJ",
+            "7VMM-AACY-A4S4-DAKV",
+            "D6NA-F5V7-DJPP-2CVN",
+            "TGUR-SV6Q-GFWK-CYB4"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "11.21020390875514033779114537664980181460",
+            "program_runtime_s": "16.11469215381195821293620804623249611020"
+          }
+        },
+        {
+          "key": "transverse_m=70",
+          "label": "two_opt排序，横向探测目标距离=70米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.2",
+            "average_localization_clear_s": "454.7254246123006160506160506160506160506",
+            "program_runtime_s": "1.4474"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.9888578520235063,
+            "average_localization_clear_s": 100.89037158163862,
+            "program_runtime_s": 0.22635380368892508
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 70,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "NCWG-GPQA-27KB-6HUB",
+            "JXEU-WCXD-V3UK-496F",
+            "QNXW-ZRDH-XF5F-4M8V",
+            "4WWB-Z32R-W2J3-6P5D",
+            "9K9R-XHSG-A49P-G3QS",
+            "2GWM-2VU2-7P5D-BPJB",
+            "44F6-PDVX-ET2N-2NYN",
+            "XFRB-S7YW-S5DQ-T748",
+            "QUFV-SMDT-7KZR-S9WS",
+            "E6VS-88W8-S4EG-AN4U"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-1.959144445741399265435954915279472857190",
+            "program_runtime_s": "7.238645624953693413351115062606505149300"
+          }
+        },
+        {
+          "key": "transverse_m=100",
+          "label": "two_opt排序，横向探测目标距离=100米",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.6",
+            "average_localization_clear_s": "497.4379415252002164502164502164502164501",
+            "program_runtime_s": "1.5125"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.0655911179772892,
+            "average_localization_clear_s": 86.06447090646799,
+            "program_runtime_s": 0.16242485441992352
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 100,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "N8HE-GKDJ-8QA6-8QXN",
+            "TE24-MSDD-WZEW-48MZ",
+            "Y2Q7-8V9P-KSGY-3NS3",
+            "TWBQ-Q5JY-DBBE-3MQU",
+            "547S-Y3M2-BRF7-RK6R",
+            "X3SA-AMC4-8WGY-CD8H",
+            "6KTK-5ENW-UJWJ-97Y9",
+            "A2DJ-6N7S-WPXZ-MP7N",
+            "BUGT-CZJN-3KTD-9S84",
+            "YU52-73EJ-F4PP-SJ3B"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "7.249867134349477172173123475521616316900",
+            "program_runtime_s": "12.06193969030154849225753871230643846780"
+          }
+        },
+        {
+          "key": "fraction=0.05",
+          "label": "two_opt排序，纵向探测比例=0.05",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.3",
+            "average_localization_clear_s": "523.9205990671545121545121545121545121545",
+            "program_runtime_s": "1.6404"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.946506842754191,
+            "average_localization_clear_s": 75.62217805133726,
+            "program_runtime_s": 0.20825529204960597
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.05,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "67PS-W65E-5BT3-JJQ3",
+            "YJFH-N775-74NK-9PGA",
+            "C7A8-K2T4-H5J2-ETWU",
+            "27WG-KTMP-WR75-JURW",
+            "ZFRT-SNVU-9UPF-G5XS",
+            "BBRW-RX2J-2TJH-RQKS",
+            "BCPR-5BKS-Q3R8-FFGD",
+            "8D9B-ZG7E-PE7C-F4Y9",
+            "TGDE-AHY9-HCCQ-6UQ9",
+            "MBVS-7BGH-BMH4-SSEM"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "12.95964772332207893847867726331410019230",
+            "program_runtime_s": "21.53811958212936208046232496110246721490"
+          }
+        },
+        {
+          "key": "fraction=0.1",
+          "label": "two_opt排序，纵向探测比例=0.1",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13",
+            "average_localization_clear_s": "477.117842127532051282051282051282051282",
+            "program_runtime_s": "1.6076"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.9436506316151,
+            "average_localization_clear_s": 86.15820403031216,
+            "program_runtime_s": 0.16274738434491387
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "DZ7T-CUBE-EKP3-DGEP",
+            "T8KK-YPZ3-3B69-YVB7",
+            "SFU4-9HDA-F6W6-2XD2",
+            "N3R3-TPMX-CJKH-8DXX",
+            "HD98-JFFW-2ZZ8-U3QE",
+            "3EMQ-BWQ3-KN7W-X2W3",
+            "9F3W-4GNT-T33Q-Y3R8",
+            "3UUN-82MM-635U-FYS5",
+            "U8Z2-P65V-YK62-Q4CD",
+            "K3WV-NX65-X2SF-EGM6"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "2.868761917737686503541013593277995029800",
+            "program_runtime_s": "19.10794991479588056605171519596947469810"
+          }
+        },
+        {
+          "key": "fraction=0.3",
+          "label": "two_opt排序，纵向探测比例=0.3",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.7",
+            "average_localization_clear_s": "437.9104558308553946053946053946053946054",
+            "program_runtime_s": "1.4137"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.0027758514399734,
+            "average_localization_clear_s": 106.4745229284578,
+            "program_runtime_s": 0.1984652502468771
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.3,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "PV7Q-CH3J-32N2-XW4C",
+            "BNCN-RXTU-KRMU-9N3W",
+            "KZ43-T8QB-U8RE-SU8E",
+            "QX32-56Z5-THEU-QVKX",
+            "MMSN-DEQW-MMZQ-7HZF",
+            "JYX2-D4QY-XGB3-JFFM",
+            "R667-SCXM-HUEE-Z48C",
+            "WN2T-U8MT-3HJU-HEVF",
+            "6G9A-FWQH-6KRN-58AC",
+            "V3P4-VFXG-6RK7-9AM9"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-5.584527668719524045861643883442178921730",
+            "program_runtime_s": "4.741794472845817589093872712454619545100"
+          }
+        },
+        {
+          "key": "fraction=0.5",
+          "label": "two_opt排序，纵向探测比例=0.5",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.4",
+            "average_localization_clear_s": "457.7748047065617715617715617715617715617",
+            "program_runtime_s": "1.3971"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.776388345929897,
+            "average_localization_clear_s": 102.53523339961941,
+            "program_runtime_s": 0.28098060431282446
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.5,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "ZBVT-QDVG-UUVU-VDUD",
+            "2UG7-GZ5U-4ZTY-VDHY",
+            "T8Z3-CE9A-ZM4R-UJ29",
+            "Q8RR-9TP2-3QNG-WBGR",
+            "D4RR-K9HT-P5R8-XVFU",
+            "NGXS-93RT-Q3XG-R7H8",
+            "T36P-6JP9-N6A7-PK7Y",
+            "VHFY-2QQJ-CJDS-UNEH",
+            "H52N-SGSC-SJ5R-WY5N",
+            "R5R7-C6V9-HTSR-D4CW"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-1.301684323280935771001093167675674186120",
+            "program_runtime_s": "3.511891531451433651922649477661702600600"
+          }
+        },
+        {
+          "key": "steps=1",
+          "label": "two_opt排序，交错探测预算=1轮",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.6",
+            "average_localization_clear_s": "519.9607161823484848484848484848484848486",
+            "program_runtime_s": "1.5479"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 401,
+          "total_optical_fallback_calls": 401,
+          "sample_sd": {
+            "cleared": 2.3664319132398464,
+            "average_localization_clear_s": 118.94666874499954,
+            "program_runtime_s": 0.268575853138157
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 1,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "GSN6-6MV4-984S-JGM6",
+            "UVER-HBM6-TQEJ-C3NT",
+            "9M98-C7VV-6UEJ-6B6D",
+            "52N5-QWFX-KX72-TDAS",
+            "PM74-2Z95-3S5B-BUZK",
+            "T6ZK-NR3K-CPAV-VHU5",
+            "4ENU-P5FE-S7Q5-6TPV",
+            "Q9TF-ZMFS-9C9X-FR5S",
+            "W9KU-4RUE-BRPA-HC29",
+            "SFAV-B4FC-7FVY-64SW"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "12.10587908645279865226831954835237875510",
+            "program_runtime_s": "14.68474475809439134622508705638289990370"
+          }
+        },
+        {
+          "key": "steps=2",
+          "label": "two_opt排序，交错探测预算=2轮",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.6",
+            "average_localization_clear_s": "482.8934998945762570762570762570762570762",
+            "program_runtime_s": "1.5008"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 1,
+          "sample_sd": {
+            "cleared": 1.505545305418162,
+            "average_localization_clear_s": 74.44622868559969,
+            "program_runtime_s": 0.2821822893883393
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 2,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "RJSR-4RBQ-YXRB-DQ37",
+            "ZN78-RWW2-FR3E-BJVT",
+            "K4RF-ZNP6-CPRS-GX64",
+            "FZTH-DZR9-B74S-ERK2",
+            "5C2V-YG7M-YMJX-X8HR",
+            "77K6-DSDN-SD7S-B7HG",
+            "V8RH-2J2Y-E2GX-UURM",
+            "ZBQX-BAW7-SB6X-456K",
+            "38KZ-TJ8G-6PJ4-RRDF",
+            "54ET-7RWN-MGZZ-2Q7G"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "4.114019821124985494233881886118748211500",
+            "program_runtime_s": "11.19508038823442246425131510706082833220"
+          }
+        },
+        {
+          "key": "steps=3",
+          "label": "two_opt排序，交错探测预算=3轮",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13.5",
+            "average_localization_clear_s": "460.2092225600882450882450882450882450883",
+            "program_runtime_s": "1.5054"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.7795130420052185,
+            "average_localization_clear_s": 73.82663375546493,
+            "program_runtime_s": 0.2968943695435578
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 3,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "EV3B-CENY-YQCW-GVCQ",
+            "BX6V-CN4P-8RJR-PANZ",
+            "Y2DN-EKXB-4CD8-NY2F",
+            "CQU7-MPDG-XP85-KGW2",
+            "3N3K-HTFQ-6DJW-HJ89",
+            "QS9Z-S34W-YS65-KWD5",
+            "HQ7Z-PBBG-45MU-CVSH",
+            "MPK5-QWER-UTSX-UW34",
+            "JH9C-QMN3-QQXY-DXMW",
+            "G5M9-ZGWV-ZSW7-9EAJ"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-0.7768128377250321960651291893054942018200",
+            "program_runtime_s": "11.53589686597021560346743720826850411200"
+          }
+        },
+        {
+          "key": "steps=4",
+          "label": "two_opt排序，交错探测预算=4轮",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.5",
+            "average_localization_clear_s": "497.7107755373626373626373626373626373627",
+            "program_runtime_s": "1.5617"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.509230856356236,
+            "average_localization_clear_s": 74.79291747212368,
+            "program_runtime_s": 0.16578034329262992
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "96N8-QAZQ-5KN4-47HG",
+            "ZABG-W7TX-79E4-RAUU",
+            "VG7R-SEC4-HXMW-WC4X",
+            "DNSG-NYZ7-J4GG-6HUM",
+            "ZHFY-HCCX-P6Y5-FT73",
+            "QU46-EPHM-NEZF-3TTT",
+            "MVQV-KAFZ-MQ8J-QP59",
+            "U8FJ-9NWS-B3BZ-CT64",
+            "46AU-B7EB-W7YH-RD4H",
+            "5BHW-P846-68MF-RECH"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "7.308691379770790191230057104737730997000",
+            "program_runtime_s": "15.70719419130177076387345336000592724310"
+          }
+        },
+        {
+          "key": "pause_limit=0",
+          "label": "two_opt排序，任务打断预算=0次",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12.4",
+            "average_localization_clear_s": "509.0421508830969030969030969030969030969",
+            "program_runtime_s": "1.4775"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.837873166945363,
+            "average_localization_clear_s": 60.54270744583332,
+            "program_runtime_s": 0.1817441730687519
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 0,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "SE33-4YNZ-QW4Z-NSJY",
+            "QVU8-GMEA-JVXD-GDFF",
+            "UEG4-KQEH-5KEF-BEV2",
+            "3AD4-WHEP-8VER-EU3R",
+            "7FVY-JGQU-TBHW-4APJ",
+            "MU34-8PN7-JK5Q-EPR2",
+            "BTG3-YNW3-QK5K-VSR8",
+            "DUHH-V2RV-KGMR-24Z2",
+            "PJH3-NSGR-AJX8-24SE",
+            "HYAX-2HG8-JS5W-V8GC"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "9.751787088460065615179888073776100120000",
+            "program_runtime_s": "9.468770837963991998221827072682818404100"
+          }
+        },
+        {
+          "key": "pause_limit=4",
+          "label": "two_opt排序，任务打断预算=4次",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "12",
+            "average_localization_clear_s": "495.1055781163752913752913752913752913754",
+            "program_runtime_s": "1.5039"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.309401076758503,
+            "average_localization_clear_s": 124.40710758771864,
+            "program_runtime_s": 0.293122822190441
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 4,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "FRM4-KZ98-6BDG-QHYJ",
+            "34EF-9M54-QN7P-2NMV",
+            "8GMB-CNT8-SYPY-NKG3",
+            "PRUF-HFUZ-973K-KQD2",
+            "2X8W-2E7P-EPEW-GV6Q",
+            "6RWU-TN4C-ANBP-UVKU",
+            "HV34-AE9N-BY3S-4KTZ",
+            "TKDJ-JX5X-X83T-5RD6",
+            "B83P-AUW7-HYQU-7N3W",
+            "NCMN-ZXWT-V3JM-8UM3"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "6.746999048054095016444928529678005036000",
+            "program_runtime_s": "11.42476105801289175372304956657034896640"
+          }
+        },
+        {
+          "key": "pause_limit=8",
+          "label": "two_opt排序，任务打断预算=8次",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "14.1",
+            "average_localization_clear_s": "451.5777323170221445221445221445221445221",
+            "program_runtime_s": "1.4821"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.9692073983655907,
+            "average_localization_clear_s": 71.8589510772364,
+            "program_runtime_s": 0.2000691269425534
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "FJ9E-7XCB-3572-4P6C",
+            "AJXM-JS7A-AFTV-7JY2",
+            "ND9J-TDDD-FZAT-TET4",
+            "Q55U-SZJ6-HC4R-5VE7",
+            "KT6A-H85C-R84B-GATZ",
+            "WJWG-3NH2-UBY3-JZ74",
+            "ZCW2-D6WY-T2BC-X67D",
+            "CNRZ-P3YU-JEYN-Z8KP",
+            "XEYU-776M-JC6A-QVAV",
+            "VYEA-NMKP-2C9X-9HAM"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-2.637801122820241106059056866182715269650",
+            "program_runtime_s": "9.809587315699785137437949173890494183900"
+          }
+        },
+        {
+          "key": "pause_limit=24",
+          "label": "two_opt排序，任务打断预算=24次",
+          "section": "单参数宽扫",
+          "n": 10,
+          "means": {
+            "cleared": "13",
+            "average_localization_clear_s": "462.3799368475482850482850482850482850483",
+            "program_runtime_s": "1.5316"
+          },
+          "all_clear_cases": 10,
+          "total_clear_failures": 0,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.632993161855452,
+            "average_localization_clear_s": 76.79168380990168,
+            "program_runtime_s": 0.18025611408955497
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 24,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "SA49-U7M8-G56F-KZTS",
+            "JPA3-ADGX-WWXE-XKS8",
+            "UB4X-A7WN-BNBE-9Z2J",
+            "ZQ9Y-K8JN-KMFA-EM8Q",
+            "68CX-P5CW-74AP-XQGU",
+            "58C3-9BSR-R7K8-KQM2",
+            "YDE6-NNWE-9DMA-Z8SS",
+            "CHM5-ACRP-QRRV-CD22",
+            "Q48Q-D675-GBP9-QET7",
+            "VBSJ-EK4M-S77U-S3K5"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-0.3087970321696586449358856895412965315200",
+            "program_runtime_s": "13.47706897829147217900274134992961398830"
+          }
+        },
+        {
+          "key": "q4_fused",
+          "label": "最近邻＋35米＋fraction=0.30＋share_limit=2",
+          "section": "追加复测",
+          "n": 5,
+          "means": {
+            "cleared": "13.2",
+            "average_localization_clear_s": "467.5320386728205128205128205128205128206",
+            "program_runtime_s": "1.3048"
+          },
+          "all_clear_cases": 5,
+          "total_clear_failures": 2,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 2.04939015319192,
+            "average_localization_clear_s": 55.75456604220314,
+            "program_runtime_s": 0.1590525070534885
+          },
+          "parameters": [
+            {
+              "dispatch": "nearest",
+              "fraction": 0.3,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 2,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "ZA7J-FUCY-NP4N-RHUV",
+            "SP9E-KNE9-MD49-V2NH",
+            "CP4N-MRSV-W3B6-PVE7",
+            "FVZG-U8MD-RXKD-7YUX",
+            "GEK8-S6KF-VJVH-XCHM"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "0.802019393551444174406715537919907170200",
+            "program_runtime_s": "-3.326665184855893902348670074831444024600"
+          }
+        },
+        {
+          "key": "q4_repeat",
+          "label": "baseline 同配置后续复测（独立5局）",
+          "section": "追加复测",
+          "n": 5,
+          "means": {
+            "cleared": "14",
+            "average_localization_clear_s": "440.0869733219871794871794871794871794872",
+            "program_runtime_s": "1.3946"
+          },
+          "all_clear_cases": 5,
+          "total_clear_failures": 1,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.4142135623730951,
+            "average_localization_clear_s": 68.4249565565849,
+            "program_runtime_s": 0.09485936959520654
+          },
+          "parameters": [
+            {
+              "dispatch": "nearest",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "83HT-K34U-77NB-BBEM",
+            "TRQQ-M2AX-67Z7-XJBK",
+            "CVZW-TZ3G-GKJ2-WBDV",
+            "SB43-B8CF-MZ3A-5XKD",
+            "J5XZ-BKF7-9MX9-724U"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "-5.115260666239284076071888232686371102050",
+            "program_runtime_s": "3.326665184855893902348670074831444024600"
+          }
+        },
+        {
+          "key": "robustness_baseline",
+          "label": "two_opt排序＋35米＋fraction=0.15＋share_limit=6（联合扰动同期对照）",
+          "section": "联合扰动",
+          "n": 40,
+          "means": {
+            "cleared": "13.35",
+            "average_localization_clear_s": "464.229627698226148851148851148851148851",
+            "program_runtime_s": "1.460"
+          },
+          "all_clear_cases": 40,
+          "total_clear_failures": 6,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.8749358963400897,
+            "average_localization_clear_s": 85.95442086678189,
+            "program_runtime_s": 0.17099047806747483
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150.0,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40.0,
+              "trial_radius": 35.0
+            }
+          ],
+          "cases": [
+            "7UFS-2N2N-D9SG-TXKK",
+            "R2NQ-MSP3-BY7R-CAR5",
+            "5WAB-UYN8-D25D-A9BP",
+            "ZY4V-YJZ4-U2MT-W5S8",
+            "N9J5-CV49-KERW-HS55",
+            "7V7G-NTDT-U8FT-B7FY",
+            "U35Q-4WUG-D2A2-KUY7",
+            "NE88-M6QZ-TEEJ-CQ5C",
+            "2NU7-NQ42-MNGA-D727",
+            "K852-QWUK-7NGY-AGDP",
+            "TPCK-KXU6-EPSE-6SJN",
+            "4VWD-GR6S-WSWM-D92R",
+            "EU5K-7QDZ-69P8-PB4V",
+            "YMWZ-KMA9-CZPN-YB94",
+            "KZ24-BAW7-KY5K-TANY",
+            "9DDC-WQY6-62R5-H3GY",
+            "BJAB-U4GP-EXET-XXZZ",
+            "TX8U-AAK7-A89G-9JSU",
+            "C45K-TP8G-8MTK-QBVS",
+            "CFUB-NG7Z-WK3F-YUYM",
+            "DM26-SZAT-FENF-9DF7",
+            "SWVC-FJBK-ENV8-CTY6",
+            "U2U4-7PDX-5UJY-MCAP",
+            "QQMJ-97FQ-ZBMS-USHC",
+            "4STK-BD5W-RTWN-46VM",
+            "9ZTS-HX77-732T-V75E",
+            "Z9ZC-MFE8-BYM7-CZQH",
+            "K7RP-ZYE9-NCQH-RM4W",
+            "F7HZ-N5C7-GNCP-E8KR",
+            "6MWA-74AG-829R-CAVQ",
+            "8KD6-ZUSU-BTDX-ADV8",
+            "3SQK-BF3N-G7NK-AHK8",
+            "W5CU-FP4A-TC5B-3NT5",
+            "7XQM-DUVA-28Y3-7AHG",
+            "F69A-FSZU-GK74-Y46A",
+            "6QB6-MGSB-44QF-PZST",
+            "RH4X-2ZA5-MCZV-AEZC",
+            "CG62-PGGS-4BK4-4H33",
+            "RZMN-GDRV-KGR2-76PS",
+            "FPKU-RPWR-9QQ8-VGSR"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "0.090004670343362996369569997849409536500",
+            "program_runtime_s": "8.172186411795213751203971252871008372200"
+          }
+        },
+        {
+          "key": "robustness_perturbed",
+          "label": "two_opt排序联合随机扰动（每局参数不同）",
+          "section": "联合扰动",
+          "n": 80,
+          "means": {
+            "cleared": "12.55",
+            "average_localization_clear_s": "500.1844093554253038628038628038628038625",
+            "program_runtime_s": "1.4970125"
+          },
+          "all_clear_cases": 80,
+          "total_clear_failures": 9,
+          "total_optical_fallback_calls": 0,
+          "sample_sd": {
+            "cleared": 1.9610123967617248,
+            "average_localization_clear_s": 94.77518686455011,
+            "program_runtime_s": 0.20695755657022766
+          },
+          "parameters": [
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 4,
+              "steps": 10,
+              "transverse_m": 60,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 8,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 8,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 16,
+              "share_cooldown": 300,
+              "share_limit": 4,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 16,
+              "share_cooldown": 75,
+              "share_limit": 8,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 24,
+              "share_cooldown": 150,
+              "share_limit": 4,
+              "steps": 3,
+              "transverse_m": 40,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 24,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 24,
+              "share_cooldown": 300,
+              "share_limit": 4,
+              "steps": 10,
+              "transverse_m": 60,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 24,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 10,
+              "transverse_m": 20,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 8,
+              "steps": 10,
+              "transverse_m": 20,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 8,
+              "share_cooldown": 150,
+              "share_limit": 4,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 8,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 4,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 8,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 10,
+              "transverse_m": 20,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.1,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 8,
+              "steps": 4,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 3,
+              "transverse_m": 40,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 300,
+              "share_limit": 8,
+              "steps": 3,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 300,
+              "share_limit": 8,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 75,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 75,
+              "share_limit": 8,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 16,
+              "share_cooldown": 75,
+              "share_limit": 8,
+              "steps": 4,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 24,
+              "share_cooldown": 150,
+              "share_limit": 8,
+              "steps": 10,
+              "transverse_m": 20,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 24,
+              "share_cooldown": 150,
+              "share_limit": 8,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 24,
+              "share_cooldown": 150,
+              "share_limit": 8,
+              "steps": 4,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 24,
+              "share_cooldown": 300,
+              "share_limit": 4,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 4,
+              "transverse_m": 60,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 20,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 150,
+              "share_limit": 4,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 150,
+              "share_limit": 4,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 150,
+              "share_limit": 4,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 3,
+              "transverse_m": 20,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 150,
+              "share_limit": 8,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 150,
+              "share_limit": 8,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 4,
+              "steps": 4,
+              "transverse_m": 60,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 3,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 10,
+              "transverse_m": 20,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.15,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 8,
+              "steps": 10,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 4,
+              "steps": 3,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 16,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 60,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 16,
+              "share_cooldown": 75,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 20,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 16,
+              "share_cooldown": 75,
+              "share_limit": 6,
+              "steps": 3,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 16,
+              "share_cooldown": 75,
+              "share_limit": 8,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 3,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 150,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 150,
+              "share_limit": 8,
+              "steps": 3,
+              "transverse_m": 20,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 150,
+              "share_limit": 8,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 300,
+              "share_limit": 4,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 300,
+              "share_limit": 4,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 300,
+              "share_limit": 8,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 10,
+              "transverse_m": 60,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 3,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 4,
+              "steps": 4,
+              "transverse_m": 20,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 24,
+              "share_cooldown": 75,
+              "share_limit": 6,
+              "steps": 4,
+              "transverse_m": 40,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 8,
+              "share_cooldown": 150,
+              "share_limit": 4,
+              "steps": 10,
+              "transverse_m": 40,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 4,
+              "steps": 4,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 6,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 8,
+              "share_cooldown": 300,
+              "share_limit": 8,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 6,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 45
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 8,
+              "steps": 3,
+              "transverse_m": 20,
+              "trial_radius": 25
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 8,
+              "steps": 3,
+              "transverse_m": 40,
+              "trial_radius": 35
+            },
+            {
+              "dispatch": "two_opt",
+              "fraction": 0.25,
+              "pause_limit": 8,
+              "share_cooldown": 75,
+              "share_limit": 8,
+              "steps": 3,
+              "transverse_m": 60,
+              "trial_radius": 45
+            }
+          ],
+          "cases": [
+            "QXSF-YG2M-EYH5-4HBR",
+            "BQXS-QNGS-GR2V-5QAC",
+            "83SJ-EDVM-U59Z-U4VF",
+            "TKT7-7AUD-2PWV-YCT4",
+            "GF3X-C39C-K44M-B2TN",
+            "9EZQ-GBJY-YXQP-KGGM",
+            "VMH8-NRRE-XN7V-TR8N",
+            "DM9B-9WZN-W6E4-FGQH",
+            "Z36Q-A5S2-N5ND-T7BD",
+            "KNJC-85ZD-KGGG-TGEU",
+            "PMST-77B2-D6TA-BUKC",
+            "2S2K-F5HR-PNCN-HVTX",
+            "Z9YS-CKZT-5J24-CM47",
+            "J4HJ-RKRN-PVRQ-CKN4",
+            "RQBN-MKG6-RGQT-ZFF7",
+            "RAQ6-A7RJ-KYFQ-U2TA",
+            "GHUX-XB8T-GSXV-VZTU",
+            "6S99-FVQK-MZQ3-GXSV",
+            "ZWTG-PYT6-RV6F-BUZY",
+            "56WQ-PNEZ-FQNJ-JKPM",
+            "USQ6-UZYM-S9XD-YMSF",
+            "SQBR-SEV6-YBMH-W4T5",
+            "D3AJ-C4ME-W29T-M6AA",
+            "9PXU-B452-NPBY-2GKX",
+            "HR92-XP44-M5FP-H5A2",
+            "X97Y-3UNW-ATFK-JYYY",
+            "W98N-J3PE-WTST-9P39",
+            "53PT-7DBB-7RQZ-BM5G",
+            "USGJ-XDRS-PVU4-FTDR",
+            "HDGK-Q32D-9GHU-MKF9",
+            "KQVB-RQED-2RGZ-QW9U",
+            "3CHG-NE27-D57S-HWTK",
+            "5HTR-FVFD-N2UX-EZCT",
+            "HV49-5AJA-T4EP-CX5W",
+            "CR8A-T293-UDKJ-DHDU",
+            "DWWE-E2VH-VMGE-GHQR",
+            "DEE6-RHUC-HUM2-PMN2",
+            "AATH-BAXC-R2M2-6D2D",
+            "8P2B-QDJF-PASN-JK6D",
+            "2QRP-UCB2-QP7Y-AMY6",
+            "GFMW-2SE8-YPK4-AP2B",
+            "U5U7-RJ73-3C3C-TG3R",
+            "UT8N-XTHP-QXRY-4V5B",
+            "2D8X-663W-XPAK-TQW6",
+            "WDT5-HVQH-KYDV-F859",
+            "UQFJ-TAA6-82DW-FC6S",
+            "NF2P-6YRE-PU75-PEK8",
+            "TUW4-9W59-BKPB-7UND",
+            "HZW8-U9XS-YXF5-BRNM",
+            "GWDB-Z3SU-CZFT-5TZ8",
+            "A6E7-XGK8-VGCZ-7THD",
+            "TWUR-UXBU-7JYQ-XRCA",
+            "9UDK-JTFE-NJ5M-925G",
+            "4XMQ-DB9R-Z4UY-FZX5",
+            "PNQG-VUKH-HVZH-RCQK",
+            "T45C-UKVQ-TXHB-YCJC",
+            "4E8T-FE24-FANM-JR7M",
+            "YT3X-XNYR-G7EP-8FKX",
+            "WSKB-JG7U-F4BV-DGRB",
+            "GQGN-YSGX-G788-PZGZ",
+            "8VKT-2JTU-VKCT-U3G7",
+            "54W2-DMJ8-JF4P-34XF",
+            "Y6WU-6TVT-KVK7-P8PG",
+            "S2VX-72XP-TDZ8-XFDM",
+            "RSUB-8DXV-T46C-FSB2",
+            "FNTU-EKTZ-RAUQ-QRRY",
+            "4PBR-NPB3-ANZ8-AVWW",
+            "K4FE-QP3K-ZURU-VPGC",
+            "MGRD-KKQ6-KNJ2-3R8V",
+            "Z5SQ-BNN4-BHVE-U97F",
+            "Z73Z-QBNK-J4H6-ECF4",
+            "785S-KEW2-6D2P-XH8V",
+            "KBZV-AXCW-XDFR-B7TT",
+            "M5TG-F3ZU-2G9V-NB7Y",
+            "H6YY-GXKT-WMAK-TAVC",
+            "3US8-SNWY-HZAG-AKBB",
+            "ZCA4-JDUF-PUNQ-JD59",
+            "5UFC-BRQ6-KQD7-KSYV",
+            "MY9K-UMCY-FZXT-BZ72",
+            "MWAT-M9Y6-S27G-J9RF"
+          ],
+          "deviation_percent": {
+            "average_localization_clear_s": "7.842018004420338849754542231437644486200",
+            "program_runtime_s": "10.91446247314217974364673631177298658960"
+          }
+        }
+      ]
+    }
+  ],
+  "unique_practice_cases": 927,
+  "displayed_rows": 77
+}

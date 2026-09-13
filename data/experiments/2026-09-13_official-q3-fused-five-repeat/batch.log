@@ -1,0 +1,87 @@
+Traceback (most recent call last):
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/official_q3_fused_five.py", line 188, in <module>
+    execute(args.output.resolve())
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/official_q3_fused_five.py", line 125, in execute
+    run = runner.one(out, item)
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/official_sensitivity.py", line 182, in one
+    runner.run()
+    ~~~~~~~~~~^^
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/auto_practice.py", line 149, in run
+    self.setup()
+    ~~~~~~~~~~^^
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/official_sensitivity.py", line 165, in setup
+    super().setup()
+    ~~~~~~~~~~~~~^^
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/auto_practice.py", line 85, in setup
+    fcntl.flock(self.lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BlockingIOError: [Errno 35] Resource temporarily unavailable
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 938}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "KSPP-3D97-BEQM-R42S", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 939}
+AUTHORITATIVE_RESULT {"id": 939, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 1849508466565376457, "case_code": "KSPP-3D97-BEQM-R42S", "entered": 1, "jammer_count": 13, "cleared_jammer_count": 13, "clear_failure_count": 0, "virtual_time_us": 3004248092, "end_reason": "user_exit", "created_at_ms": 1789282756194}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FUSED_PROGRESS 1 5
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 939}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+WAIT_GUI {"seconds_remaining": 1290}
+GUI_RESULT {"robot_exit": 0, "case_code": "Y37N-JADG-U8CT-VN75", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 940}
+AUTHORITATIVE_RESULT {"id": 940, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 4510748900223965734, "case_code": "Y37N-JADG-U8CT-VN75", "entered": 1, "jammer_count": 11, "cleared_jammer_count": 11, "clear_failure_count": 0, "virtual_time_us": 3280740235, "end_reason": "user_exit", "created_at_ms": 1789282820539}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FUSED_PROGRESS 2 5
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 940}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "HEKJ-E7EN-7ZNB-R8F4", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 941}
+AUTHORITATIVE_RESULT {"id": 941, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 2897052227710045415, "case_code": "HEKJ-E7EN-7ZNB-R8F4", "entered": 1, "jammer_count": 15, "cleared_jammer_count": 15, "clear_failure_count": 1, "virtual_time_us": 3031539997, "end_reason": "user_exit", "created_at_ms": 1789282883415}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FUSED_PROGRESS 3 5
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 941}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "FS6J-N2JK-SVAM-2U53", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 942}
+AUTHORITATIVE_RESULT {"id": 942, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 8829940430529691010, "case_code": "FS6J-N2JK-SVAM-2U53", "entered": 1, "jammer_count": 12, "cleared_jammer_count": 12, "clear_failure_count": 0, "virtual_time_us": 3065219348, "end_reason": "user_exit", "created_at_ms": 1789282947875}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FUSED_PROGRESS 4 5
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 942}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+WAIT_GUI {"seconds_remaining": 1290}
+GUI_RESULT {"robot_exit": 0, "case_code": "BMEF-NVMT-W6CY-UD9E", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 943}
+AUTHORITATIVE_RESULT {"id": 943, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 501007124100642254, "case_code": "BMEF-NVMT-W6CY-UD9E", "entered": 1, "jammer_count": 16, "cleared_jammer_count": 16, "clear_failure_count": 0, "virtual_time_us": 3495939918, "end_reason": "user_exit", "created_at_ms": 1789283013912}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FUSED_PROGRESS 5 5
+{"summary": [{"label": "原baseline", "runs": 10, "all_clear": 10, "mean_cleared": 12.2, "mean_localization_clear_s": 263.92754303895606, "mean_program_runtime_s": 0.8985840541965444, "mean_localization_clear_s_deviation_percent": 0.0, "mean_program_runtime_s_deviation_percent": 0.0}, {"label": "最近邻＋50米（历史消融）", "runs": 10, "all_clear": 10, "mean_cleared": 14.1, "mean_localization_clear_s": 238.9018287398747, "mean_program_runtime_s": 0.8156502999045188, "mean_localization_clear_s_deviation_percent": -9.48203965790244, "mean_program_runtime_s_deviation_percent": -9.22938192645535}, {"label": "原排序＋65米＋2轮（此前候选）", "runs": 4, "all_clear": 4, "mean_cleared": 14.75, "mean_localization_clear_s": 233.33955657395833, "mean_program_runtime_s": 0.8323271352564916, "mean_localization_clear_s_deviation_percent": -11.589539353413713, "mean_program_runtime_s_deviation_percent": -7.373480380674624}, {"label": "最近邻＋65米＋2轮（本次融合）", "runs": 5, "all_clear": 5, "mean_cleared": 13.4, "mean_localization_clear_s": 241.07579527159675, "mean_program_runtime_s": 0.7133800750074443, "mean_localization_clear_s_deviation_percent": -8.658341416070536, "mean_program_runtime_s_deviation_percent": -20.610646085267724}], "complete": true}

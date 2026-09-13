@@ -1,0 +1,7 @@
+{
+  "action": "view-upload",
+  "problem": 4,
+  "robot_id": "202623001141",
+  "policy": "formal-q4-once",
+  "expected_case": "5FS5-MYSH-FKHB-PRX4"
+}

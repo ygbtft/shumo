@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 179,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 2857463851368791238,
+      "case_code": "4DRS-BP5X-YFR4-XUQH",
+      "entered": 1,
+      "jammer_count": 10,
+      "cleared_jammer_count": 10,
+      "clear_failure_count": 0,
+      "virtual_time_us": 5818909441,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789243838082
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 5818909441,
+  "total_jammer_count": 10,
+  "total_cleared_jammer_count": 10,
+  "total_clear_failure_count": 0
+}

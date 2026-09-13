@@ -1,0 +1,13 @@
+{"time": "2026-09-13T02:16:06.179279+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 3, "variant": "scan_then_service__g50", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T02:16:07.149460+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T02:16:07.150247+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:16:09.170549+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T02:16:09.561281+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 29}
+{"time": "2026-09-13T02:16:10.475847+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T02:16:10.476170+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T02:16:25.398780+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "EYJF-WDHE-6XFW-WWE3", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T02:16:25.814600+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 30}
+{"time": "2026-09-13T02:16:25.815639+08:00", "event": "AUTHORITATIVE_RESULT", "id": 30, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 955627199510568869, "case_code": "EYJF-WDHE-6XFW-WWE3", "entered": 1, "jammer_count": 16, "cleared_jammer_count": 16, "clear_failure_count": 0, "virtual_time_us": 3721906104, "end_reason": "user_exit", "created_at_ms": 1789236980706}
+{"time": "2026-09-13T02:16:26.709439+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T02:16:26.710149+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:16:38.804697+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

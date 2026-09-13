@@ -1,0 +1,8 @@
+﻿{
+    "stack":  "在 \u003cScriptBlock\u003e、C:\\BRobot\\auto-practice\\20260913-152132-c73c342a\\ui.ps1 中: 第 87 行",
+    "active_navigation":  "问题4正式测试",
+    "error":  "无法将“C:\\Q4NearestFormal-20260913\\start_q3_fused_formal.ps1”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。",
+    "ok":  false,
+    "robot_started":  false,
+    "clicks":  0
+}

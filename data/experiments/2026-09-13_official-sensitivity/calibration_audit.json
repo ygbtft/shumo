@@ -1,0 +1,22 @@
+[
+  {
+    "problem": 3,
+    "case_code": "6MTZ-9VDV-UCDM-4SZY",
+    "sources": 13,
+    "cleared": 13,
+    "completed": 1,
+    "misses": 0,
+    "seconds_per_source": 253.43819353846155,
+    "max_action_ledger_error_s": 4.945300489112014e-07
+  },
+  {
+    "problem": 4,
+    "case_code": "JKE2-8D32-KCRD-CBSR",
+    "sources": 11,
+    "cleared": 11,
+    "completed": 1,
+    "misses": 0,
+    "seconds_per_source": 543.7353626363637,
+    "max_action_ledger_error_s": 4.746044908188196e-07
+  }
+]

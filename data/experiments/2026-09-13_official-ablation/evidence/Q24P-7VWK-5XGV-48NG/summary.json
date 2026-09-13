@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 145,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 6402747492377015209,
+      "case_code": "Q24P-7VWK-5XGV-48NG",
+      "entered": 1,
+      "jammer_count": 16,
+      "cleared_jammer_count": 16,
+      "clear_failure_count": 0,
+      "virtual_time_us": 3734831675,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789242123156
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3734831675,
+  "total_jammer_count": 16,
+  "total_cleared_jammer_count": 16,
+  "total_clear_failure_count": 0
+}

@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 163,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 3186650244058253608,
+      "case_code": "U73G-QSC7-7NAS-US54",
+      "entered": 1,
+      "jammer_count": 12,
+      "cleared_jammer_count": 12,
+      "clear_failure_count": 0,
+      "virtual_time_us": 6612494971,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789243019655
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 6612494971,
+  "total_jammer_count": 12,
+  "total_cleared_jammer_count": 12,
+  "total_clear_failure_count": 0
+}

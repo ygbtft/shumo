@@ -1,4 +1,0 @@
-START optional_unit_tests
-DONE {'label': 'optional_unit_tests', 'exit_code': 0, 'timed_out': False, 'wall_s': 4.785251165973023}
-START selected_fixed_q_certification
-DONE {'label': 'selected_fixed_q_certification', 'exit_code': 1, 'timed_out': False, 'wall_s': 22.54927204095293}

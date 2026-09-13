@@ -1,0 +1,31 @@
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 927}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "KK9S-W4WA-SW92-BFMF", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 928}
+AUTHORITATIVE_RESULT {"id": 928, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 1511901072179935388, "case_code": "KK9S-W4WA-SW92-BFMF", "entered": 1, "jammer_count": 14, "cleared_jammer_count": 14, "clear_failure_count": 1, "virtual_time_us": 3511482314, "end_reason": "user_exit", "created_at_ms": 1789281343265}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FIVE_RUN_PROGRESS 4 5
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "cancelled-before-ui-access", "ok": false, "error": "USER_REQUESTED_FUSED_FIVE", "clicks": 0, "robot_started": false}
+Traceback (most recent call last):
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/official_q3_five.py", line 94, in <module>
+    main(Path(sys.argv[1]).resolve())
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/official_q3_five.py", line 33, in main
+    run = runner.one(out, item)
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/official_sensitivity.py", line 182, in one
+    runner.run()
+    ~~~~~~~~~~^^
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/auto_practice.py", line 153, in run
+    self.ui('dry-run', 0)  # No database or robot work before the initial UI safety check.
+    ~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/auto_practice.py", line 145, in ui
+    raise RuntimeError(result.get('error', 'GUI failed'))
+RuntimeError: USER_REQUESTED_FUSED_FIVE

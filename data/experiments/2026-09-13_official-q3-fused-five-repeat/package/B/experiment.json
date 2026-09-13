@@ -1,0 +1,110 @@
+{
+  "created_at": "2026-09-13T14:56:33.675429+08:00",
+  "schedule": [
+    {
+      "order": 1,
+      "problem": 3,
+      "phase": "fused-five",
+      "block": 1,
+      "method": "range_area7_nearest65_a2",
+      "setting": "nearest65_a2",
+      "changes": {},
+      "parameters": {
+        "task_order": "nearest",
+        "trial_radius": 65.0,
+        "max_active": 2,
+        "share_limit": 6,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 2,
+      "problem": 3,
+      "phase": "fused-five",
+      "block": 2,
+      "method": "range_area7_nearest65_a2",
+      "setting": "nearest65_a2",
+      "changes": {},
+      "parameters": {
+        "task_order": "nearest",
+        "trial_radius": 65.0,
+        "max_active": 2,
+        "share_limit": 6,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 3,
+      "problem": 3,
+      "phase": "fused-five",
+      "block": 3,
+      "method": "range_area7_nearest65_a2",
+      "setting": "nearest65_a2",
+      "changes": {},
+      "parameters": {
+        "task_order": "nearest",
+        "trial_radius": 65.0,
+        "max_active": 2,
+        "share_limit": 6,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 4,
+      "problem": 3,
+      "phase": "fused-five",
+      "block": 4,
+      "method": "range_area7_nearest65_a2",
+      "setting": "nearest65_a2",
+      "changes": {},
+      "parameters": {
+        "task_order": "nearest",
+        "trial_radius": 65.0,
+        "max_active": 2,
+        "share_limit": 6,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 5,
+      "problem": 3,
+      "phase": "fused-five",
+      "block": 5,
+      "method": "range_area7_nearest65_a2",
+      "setting": "nearest65_a2",
+      "changes": {},
+      "parameters": {
+        "task_order": "nearest",
+        "trial_radius": 65.0,
+        "max_active": 2,
+        "share_limit": 6,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    }
+  ],
+  "schedule_sha256": "4d8e825275183aebb003564cd7424ed2bdfe11795cff5e3e5ffcd7a3076207bd",
+  "parameters": {
+    "task_order": "nearest",
+    "trial_radius": 65.0,
+    "max_active": 2,
+    "share_limit": 6,
+    "localization_weight": 0.08,
+    "remainder_weight": 1.5
+  },
+  "candidate_target": 5,
+  "cutoff": "2026-09-13T17:00:00+08:00",
+  "observed_fused_results": 5,
+  "descriptive_only": true,
+  "source_sensitivity": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-sensitivity",
+  "official_formal_runs": 0,
+  "mock_executions": 0,
+  "repeat_of": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five",
+  "round": 2,
+  "observed_this_round_results": 0,
+  "sampling_note": "User requested a second five-case batch after reviewing the first. Report all ten descriptively; no superiority test or selective exclusions."
+}

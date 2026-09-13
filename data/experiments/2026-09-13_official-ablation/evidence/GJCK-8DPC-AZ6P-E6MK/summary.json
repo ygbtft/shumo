@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 142,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 1070960327287458978,
+      "case_code": "GJCK-8DPC-AZ6P-E6MK",
+      "entered": 1,
+      "jammer_count": 14,
+      "cleared_jammer_count": 14,
+      "clear_failure_count": 1,
+      "virtual_time_us": 5612688978,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789241972496
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 5612688978,
+  "total_jammer_count": 14,
+  "total_cleared_jammer_count": 14,
+  "total_clear_failure_count": 1
+}

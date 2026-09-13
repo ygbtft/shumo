@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 115,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 7961304520136910110,
+      "case_code": "EYWY-DG2B-5N23-FX3E",
+      "entered": 1,
+      "jammer_count": 11,
+      "cleared_jammer_count": 11,
+      "clear_failure_count": 0,
+      "virtual_time_us": 6295756811,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789240677228
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 6295756811,
+  "total_jammer_count": 11,
+  "total_cleared_jammer_count": 11,
+  "total_clear_failure_count": 0
+}

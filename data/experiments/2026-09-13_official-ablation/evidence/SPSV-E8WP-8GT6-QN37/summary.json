@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 35,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 1770634803830190701,
+      "case_code": "SPSV-E8WP-8GT6-QN37",
+      "entered": 1,
+      "jammer_count": 12,
+      "cleared_jammer_count": 12,
+      "clear_failure_count": 2,
+      "virtual_time_us": 6048158164,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789237154396
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 6048158164,
+  "total_jammer_count": 12,
+  "total_cleared_jammer_count": 12,
+  "total_clear_failure_count": 2
+}

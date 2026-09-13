@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 65,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 7517660392105376039,
+      "case_code": "JG2Q-QEET-GDMN-RC2V",
+      "entered": 1,
+      "jammer_count": 13,
+      "cleared_jammer_count": 13,
+      "clear_failure_count": 2,
+      "virtual_time_us": 3180348214,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789238446428
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3180348214,
+  "total_jammer_count": 13,
+  "total_cleared_jammer_count": 13,
+  "total_clear_failure_count": 2
+}

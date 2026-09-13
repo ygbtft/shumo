@@ -1,0 +1,2227 @@
+{
+  "rank_inversions": 0,
+  "stages": [
+    {
+      "stage": "grid_50",
+      "q": [
+        750.0,
+        -500.0
+      ],
+      "coarse_J": 34.973623149301126,
+      "uniform_final": {
+        "q": [
+          750.0,
+          -500.0
+        ],
+        "admissibility": {
+          "signal_check": {
+            "status": "IN",
+            "max_violation": -194886.59568148653,
+            "extremal_source": [
+              4.999238475781956,
+              0.08726203218641757
+            ],
+            "witness_attained": false,
+            "g_low": -194886.59568148653,
+            "g_high": -669819.1362973033,
+            "direction_status": null,
+            "distance_to_closure": null,
+            "conservative_direction_interior": false,
+            "reason": "",
+            "exact_definition": "q in Q and forall p in F: |q-p| <= max(rho_lo, |p-S|)"
+          },
+          "status": "IN",
+          "action_admissible": true,
+          "reasons": []
+        },
+        "score": {
+          "J_hat": 129.74139553705635,
+          "near_score_m": null,
+          "direction_score_m": 129.74139553705635,
+          "sample_count": 2289,
+          "witness": {
+            "x": [
+              1380.1646458429589,
+              -24.09086350481927
+            ],
+            "y": [
+              1499.7715427345856,
+              26.178609655923754
+            ],
+            "branch": "direction",
+            "common_bearing_deg": 36.06061183044153,
+            "distance_m": 129.74139553705635,
+            "constraint_residuals": {
+              "second_range_minus_near_m": [
+                784.6815732116145,
+                910.9810563292461
+              ],
+              "second_angle_minus_halfwidth_deg": [
+                -1.000444171950221e-11,
+                -1.000444171950221e-11
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
+            },
+            "near_boundary": true,
+            "actual_legal": true,
+            "worlds": [
+              {
+                "p": [
+                  1380.1646458429589,
+                  -24.09086350481927
+                ],
+                "rho": 1380.3748836237307,
+                "first_distance_m": 1380.3748836237307,
+                "second_distance_m": 789.6815732116145,
+                "first_error_deg": 1.0,
+                "second_error_deg": -0.9999999999899956
+              },
+              {
+                "p": [
+                  1499.7715427345856,
+                  26.178609655923754
+                ],
+                "rho": 1499.9999999999989,
+                "first_distance_m": 1499.9999999999989,
+                "second_distance_m": 915.9810563292461,
+                "first_error_deg": -0.9999999999999432,
+                "second_error_deg": 0.9999999999899956
+              }
+            ],
+            "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+          },
+          "top_pairs": [
+            {
+              "x": [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              "y": [
+                1499.7715427345856,
+                26.178609655923754
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 36.06061183044153,
+              "distance_m": 129.74139553705635,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  784.6815732116145,
+                  910.9810563292461
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -1.000444171950221e-11,
+                  -1.000444171950221e-11
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": true,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1380.1646458429589,
+                    -24.09086350481927
+                  ],
+                  "rho": 1380.3748836237307,
+                  "first_distance_m": 1380.3748836237307,
+                  "second_distance_m": 789.6815732116145,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999999999899956
+                },
+                {
+                  "p": [
+                    1499.7715427345856,
+                    26.178609655923754
+                  ],
+                  "rho": 1499.9999999999989,
+                  "first_distance_m": 1499.9999999999989,
+                  "second_distance_m": 915.9810563292461,
+                  "first_error_deg": -0.9999999999999432,
+                  "second_error_deg": 0.9999999999899956
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            },
+            {
+              "x": [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              "y": [
+                1499.7715427345854,
+                26.17860965592374
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 36.06061183044153,
+              "distance_m": 129.74139553705612,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  784.6815732116145,
+                  910.9810563292459
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -1.000444171950221e-11,
+                  -1.000444171950221e-11
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": true,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1380.1646458429589,
+                    -24.09086350481927
+                  ],
+                  "rho": 1380.3748836237307,
+                  "first_distance_m": 1380.3748836237307,
+                  "second_distance_m": 789.6815732116145,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999999999899956
+                },
+                {
+                  "p": [
+                    1499.7715427345854,
+                    26.17860965592374
+                  ],
+                  "rho": 1499.9999999999986,
+                  "first_distance_m": 1499.9999999999986,
+                  "second_distance_m": 915.9810563292459,
+                  "first_error_deg": -0.9999999999999432,
+                  "second_error_deg": 0.9999999999899956
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            },
+            {
+              "x": [
+                1380.163619016536,
+                -24.09084558149739
+              ],
+              "y": [
+                1499.770231685879,
+                26.178586771484948
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 36.060657767548456,
+              "distance_m": 129.74111770493323,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  784.6807646076685,
+                  910.9799700316235
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -1.000444171950221e-11,
+                  -1.000444171950221e-11
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": true,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1380.163619016536,
+                    -24.09084558149739
+                  ],
+                  "rho": 1380.373856640893,
+                  "first_distance_m": 1380.373856640893,
+                  "second_distance_m": 789.6807646076685,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999999999899956
+                },
+                {
+                  "p": [
+                    1499.770231685879,
+                    26.178586771484948
+                  ],
+                  "rho": 1499.9986887515827,
+                  "first_distance_m": 1499.9986887515827,
+                  "second_distance_m": 915.9799700316235,
+                  "first_error_deg": -1.0,
+                  "second_error_deg": 0.9999999999899956
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            },
+            {
+              "x": [
+                1380.1632742064003,
+                -24.090839562814082
+              ],
+              "y": [
+                1499.7694071251221,
+                26.178572378723395
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 36.06067992613094,
+              "distance_m": 129.74066752070823,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  784.6804930771419,
+                  910.9792868243629
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -6.732809339382584e-06,
+                  -6.732809339382584e-06
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": false,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1380.1632742064003,
+                    -24.090839562814082
+                  ],
+                  "rho": 1380.3735117782333,
+                  "first_distance_m": 1380.3735117782333,
+                  "second_distance_m": 789.6804930771419,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999932671906606
+                },
+                {
+                  "p": [
+                    1499.7694071251221,
+                    26.178572378723395
+                  ],
+                  "rho": 1499.997864065222,
+                  "first_distance_m": 1499.997864065222,
+                  "second_distance_m": 915.9792868243629,
+                  "first_error_deg": -1.0,
+                  "second_error_deg": 0.9999932671906606
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            }
+          ],
+          "near_possibility": "IMPOSSIBLE",
+          "local_improvement_m": 0.0,
+          "status": "NUMERICAL_CANDIDATE",
+          "threshold_exploration_m": 129.74139553705635
+        },
+        "clearance": {
+          "feedback": {
+            "kind": "direction",
+            "bearing_deg": 36.06061183044153,
+            "half_width_deg": 1.0
+          },
+          "R_hat": 64.87069776852817,
+          "estimated_center": [
+            1439.9680942887721,
+            1.0438730755522414
+          ],
+          "support_points": [
+            [
+              1380.1646458429589,
+              -24.09086350481927
+            ],
+            [
+              1499.7715427345856,
+              26.178609655923754
+            ]
+          ],
+          "r_U": 64.87069779916439,
+          "cover_center": [
+            1439.968094288804,
+            1.0438730755574444
+          ],
+          "H_U": 915.9810563598851,
+          "status": "NOT_YET_GUARANTEED",
+          "evidence": "impossible_pair",
+          "residual": 1.1368683772161603e-13,
+          "threshold_margin_m": -44.87069779916439,
+          "outer_sides": 32,
+          "subsequent_movement_seconds": null,
+          "subsequent_total_seconds": null,
+          "must_move_proven": true,
+          "impossibility_witness": [
+            [
+              1380.1646458429589,
+              -24.09086350481927
+            ],
+            [
+              1499.7715427345856,
+              26.178609655923754
+            ]
+          ],
+          "reason": "impossible_single_guaranteed_clear",
+          "conditional": true,
+          "radius_label": "conditional_R_estimate_not_J_R",
+          "outer_vertices": [
+            [
+              1380.1646458427351,
+              -24.090863504815374
+            ],
+            [
+              1426.9763750893042,
+              -24.907965278216373
+            ],
+            [
+              1499.771542734873,
+              26.178609655930263
+            ],
+            [
+              1445.4728751978996,
+              25.230822888556695
+            ]
+          ],
+          "clearance_radius_m": 20.0
+        },
+        "representative_feedbacks": [
+          {
+            "feedback": {
+              "kind": "direction",
+              "bearing_deg": 36.06061183044153,
+              "half_width_deg": 1.0
+            },
+            "R_hat": 64.87069776852817,
+            "estimated_center": [
+              1439.9680942887721,
+              1.0438730755522414
+            ],
+            "support_points": [
+              [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              [
+                1499.7715427345856,
+                26.178609655923754
+              ]
+            ],
+            "r_U": 64.87069779916439,
+            "cover_center": [
+              1439.968094288804,
+              1.0438730755574444
+            ],
+            "H_U": 915.9810563598851,
+            "status": "NOT_YET_GUARANTEED",
+            "evidence": "impossible_pair",
+            "residual": 1.1368683772161603e-13,
+            "threshold_margin_m": -44.87069779916439,
+            "outer_sides": 32,
+            "subsequent_movement_seconds": null,
+            "subsequent_total_seconds": null,
+            "must_move_proven": true,
+            "impossibility_witness": [
+              [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              [
+                1499.7715427345856,
+                26.178609655923754
+              ]
+            ],
+            "reason": "impossible_single_guaranteed_clear",
+            "conditional": true,
+            "radius_label": "conditional_R_estimate_not_J_R",
+            "outer_vertices": [
+              [
+                1380.1646458427351,
+                -24.090863504815374
+              ],
+              [
+                1426.9763750893042,
+                -24.907965278216373
+              ],
+              [
+                1499.771542734873,
+                26.178609655930263
+              ],
+              [
+                1445.4728751978996,
+                25.230822888556695
+              ]
+            ],
+            "clearance_radius_m": 20.0
+          }
+        ],
+        "movement_m": 901.3878188659974,
+        "movement_seconds": 180.27756377319946
+      }
+    },
+    {
+      "stage": "grid_25",
+      "q": [
+        750.0,
+        -475.0
+      ],
+      "coarse_J": 34.973623149301126,
+      "uniform_final": {
+        "q": [
+          750.0,
+          -475.0
+        ],
+        "admissibility": {
+          "signal_check": {
+            "status": "IN",
+            "max_violation": -219265.95878309582,
+            "extremal_source": [
+              4.999238475781956,
+              0.08726203218641757
+            ],
+            "witness_attained": false,
+            "g_low": -219265.95878309582,
+            "g_high": -695066.7566191675,
+            "direction_status": null,
+            "distance_to_closure": null,
+            "conservative_direction_interior": false,
+            "reason": "",
+            "exact_definition": "q in Q and forall p in F: |q-p| <= max(rho_lo, |p-S|)"
+          },
+          "status": "IN",
+          "action_admissible": true,
+          "reasons": []
+        },
+        "score": {
+          "J_hat": 133.3717767611045,
+          "near_score_m": null,
+          "direction_score_m": 133.3717767611045,
+          "sample_count": 2289,
+          "witness": {
+            "x": [
+              1376.207997496895,
+              -24.021799951040606
+            ],
+            "y": [
+              1499.7715427345859,
+              26.178609655923758
+            ],
+            "branch": "direction",
+            "common_bearing_deg": 34.760421253806214,
+            "distance_m": 133.3717767611045,
+            "constraint_residuals": {
+              "second_range_minus_near_m": [
+                766.6979934200103,
+                896.8521858216266
+              ],
+              "second_angle_minus_halfwidth_deg": [
+                -1.000444171950221e-11,
+                -1.000444171950221e-11
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
+            },
+            "near_boundary": true,
+            "actual_legal": true,
+            "worlds": [
+              {
+                "p": [
+                  1376.207997496895,
+                  -24.021799951040606
+                ],
+                "rho": 1376.4176325691637,
+                "first_distance_m": 1376.4176325691637,
+                "second_distance_m": 771.6979934200103,
+                "first_error_deg": 1.0,
+                "second_error_deg": -0.9999999999899956
+              },
+              {
+                "p": [
+                  1499.7715427345859,
+                  26.178609655923758
+                ],
+                "rho": 1499.999999999999,
+                "first_distance_m": 1499.999999999999,
+                "second_distance_m": 901.8521858216266,
+                "first_error_deg": -0.9999999999999432,
+                "second_error_deg": 0.9999999999899956
+              }
+            ],
+            "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+          },
+          "top_pairs": [
+            {
+              "x": [
+                1376.207997496895,
+                -24.021799951040606
+              ],
+              "y": [
+                1499.7715427345859,
+                26.178609655923758
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 34.760421253806214,
+              "distance_m": 133.3717767611045,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  766.6979934200103,
+                  896.8521858216266
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -1.000444171950221e-11,
+                  -1.000444171950221e-11
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": true,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1376.207997496895,
+                    -24.021799951040606
+                  ],
+                  "rho": 1376.4176325691637,
+                  "first_distance_m": 1376.4176325691637,
+                  "second_distance_m": 771.6979934200103,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999999999899956
+                },
+                {
+                  "p": [
+                    1499.7715427345859,
+                    26.178609655923758
+                  ],
+                  "rho": 1499.999999999999,
+                  "first_distance_m": 1499.999999999999,
+                  "second_distance_m": 901.8521858216266,
+                  "first_error_deg": -0.9999999999999432,
+                  "second_error_deg": 0.9999999999899956
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            },
+            {
+              "x": [
+                1376.207997496895,
+                -24.021799951040606
+              ],
+              "y": [
+                1499.7715427345859,
+                26.178609655923758
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 34.760421253806214,
+              "distance_m": 133.3717767611045,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  766.6979934200103,
+                  896.8521858216266
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -1.000444171950221e-11,
+                  -1.000444171950221e-11
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": true,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1376.207997496895,
+                    -24.021799951040606
+                  ],
+                  "rho": 1376.4176325691637,
+                  "first_distance_m": 1376.4176325691637,
+                  "second_distance_m": 771.6979934200103,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999999999899956
+                },
+                {
+                  "p": [
+                    1499.7715427345859,
+                    26.178609655923758
+                  ],
+                  "rho": 1499.999999999999,
+                  "first_distance_m": 1499.999999999999,
+                  "second_distance_m": 901.8521858216266,
+                  "first_error_deg": -0.9999999999999432,
+                  "second_error_deg": 0.9999999999899956
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            },
+            {
+              "x": [
+                1376.207997496895,
+                -24.021799951040606
+              ],
+              "y": [
+                1499.7715427345856,
+                26.178609655923754
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 34.76042125380623,
+              "distance_m": 133.37177676110431,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  766.6979934200103,
+                  896.8521858216264
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -1.000444171950221e-11,
+                  -1.000444171950221e-11
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": true,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1376.207997496895,
+                    -24.021799951040606
+                  ],
+                  "rho": 1376.4176325691637,
+                  "first_distance_m": 1376.4176325691637,
+                  "second_distance_m": 771.6979934200103,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999999999899956
+                },
+                {
+                  "p": [
+                    1499.7715427345856,
+                    26.178609655923754
+                  ],
+                  "rho": 1499.9999999999989,
+                  "first_distance_m": 1499.9999999999989,
+                  "second_distance_m": 901.8521858216264,
+                  "first_error_deg": -0.9999999999999432,
+                  "second_error_deg": 0.9999999999899956
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            },
+            {
+              "x": [
+                1376.207997496895,
+                -24.021799951040606
+              ],
+              "y": [
+                1499.7715427345856,
+                26.178609655923754
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 34.76042125380623,
+              "distance_m": 133.37177676110431,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  766.6979934200103,
+                  896.8521858216264
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -1.000444171950221e-11,
+                  -1.000444171950221e-11
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": true,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1376.207997496895,
+                    -24.021799951040606
+                  ],
+                  "rho": 1376.4176325691637,
+                  "first_distance_m": 1376.4176325691637,
+                  "second_distance_m": 771.6979934200103,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999999999899956
+                },
+                {
+                  "p": [
+                    1499.7715427345856,
+                    26.178609655923754
+                  ],
+                  "rho": 1499.9999999999989,
+                  "first_distance_m": 1499.9999999999989,
+                  "second_distance_m": 901.8521858216264,
+                  "first_error_deg": -0.9999999999999432,
+                  "second_error_deg": 0.9999999999899956
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            }
+          ],
+          "near_possibility": "IMPOSSIBLE",
+          "local_improvement_m": 1.9895196601282805e-13,
+          "status": "NUMERICAL_CANDIDATE",
+          "threshold_exploration_m": 133.37177676110431
+        },
+        "clearance": {
+          "feedback": {
+            "kind": "direction",
+            "bearing_deg": 34.760421253806214,
+            "half_width_deg": 1.0
+          },
+          "R_hat": 66.68588838055226,
+          "estimated_center": [
+            1437.9897701157404,
+            1.078404852441576
+          ],
+          "support_points": [
+            [
+              1376.207997496895,
+              -24.021799951040606
+            ],
+            [
+              1499.7715427345859,
+              26.178609655923758
+            ]
+          ],
+          "r_U": 66.6858884111927,
+          "cover_center": [
+            1437.9897701157745,
+            1.0784048524468446
+          ],
+          "H_U": 901.8521858522739,
+          "status": "NOT_YET_GUARANTEED",
+          "evidence": "impossible_pair",
+          "residual": 1.1368683772161603e-13,
+          "threshold_margin_m": -46.68588841119271,
+          "outer_sides": 32,
+          "subsequent_movement_seconds": null,
+          "subsequent_total_seconds": null,
+          "must_move_proven": true,
+          "impossibility_witness": [
+            [
+              1376.207997496895,
+              -24.021799951040606
+            ],
+            [
+              1499.7715427345859,
+              26.178609655923758
+            ]
+          ],
+          "reason": "impossible_single_guaranteed_clear",
+          "conditional": true,
+          "radius_label": "conditional_R_estimate_not_J_R",
+          "outer_vertices": [
+            [
+              1376.20799749667,
+              -24.02179995103668
+            ],
+            [
+              1423.437584906673,
+              -24.84619546581121
+            ],
+            [
+              1499.771542734879,
+              26.17860965593037
+            ],
+            [
+              1444.5762370526422,
+              25.21517201151411
+            ]
+          ],
+          "clearance_radius_m": 20.0
+        },
+        "representative_feedbacks": [
+          {
+            "feedback": {
+              "kind": "direction",
+              "bearing_deg": 34.760421253806214,
+              "half_width_deg": 1.0
+            },
+            "R_hat": 66.68588838055226,
+            "estimated_center": [
+              1437.9897701157404,
+              1.078404852441576
+            ],
+            "support_points": [
+              [
+                1376.207997496895,
+                -24.021799951040606
+              ],
+              [
+                1499.7715427345859,
+                26.178609655923758
+              ]
+            ],
+            "r_U": 66.6858884111927,
+            "cover_center": [
+              1437.9897701157745,
+              1.0784048524468446
+            ],
+            "H_U": 901.8521858522739,
+            "status": "NOT_YET_GUARANTEED",
+            "evidence": "impossible_pair",
+            "residual": 1.1368683772161603e-13,
+            "threshold_margin_m": -46.68588841119271,
+            "outer_sides": 32,
+            "subsequent_movement_seconds": null,
+            "subsequent_total_seconds": null,
+            "must_move_proven": true,
+            "impossibility_witness": [
+              [
+                1376.207997496895,
+                -24.021799951040606
+              ],
+              [
+                1499.7715427345859,
+                26.178609655923758
+              ]
+            ],
+            "reason": "impossible_single_guaranteed_clear",
+            "conditional": true,
+            "radius_label": "conditional_R_estimate_not_J_R",
+            "outer_vertices": [
+              [
+                1376.20799749667,
+                -24.02179995103668
+              ],
+              [
+                1423.437584906673,
+                -24.84619546581121
+              ],
+              [
+                1499.771542734879,
+                26.17860965593037
+              ],
+              [
+                1444.5762370526422,
+                25.21517201151411
+              ]
+            ],
+            "clearance_radius_m": 20.0
+          }
+        ],
+        "movement_m": 887.7640452282352,
+        "movement_seconds": 177.55280904564705
+      }
+    },
+    {
+      "stage": "local_and_shifted_station",
+      "q": [
+        750.0,
+        -500.0
+      ],
+      "uniform_final": {
+        "q": [
+          750.0,
+          -500.0
+        ],
+        "admissibility": {
+          "signal_check": {
+            "status": "IN",
+            "max_violation": -194886.59568148653,
+            "extremal_source": [
+              4.999238475781956,
+              0.08726203218641757
+            ],
+            "witness_attained": false,
+            "g_low": -194886.59568148653,
+            "g_high": -669819.1362973033,
+            "direction_status": null,
+            "distance_to_closure": null,
+            "conservative_direction_interior": false,
+            "reason": "",
+            "exact_definition": "q in Q and forall p in F: |q-p| <= max(rho_lo, |p-S|)"
+          },
+          "status": "IN",
+          "action_admissible": true,
+          "reasons": []
+        },
+        "score": {
+          "J_hat": 129.74139553705635,
+          "near_score_m": null,
+          "direction_score_m": 129.74139553705635,
+          "sample_count": 2289,
+          "witness": {
+            "x": [
+              1380.1646458429589,
+              -24.09086350481927
+            ],
+            "y": [
+              1499.7715427345856,
+              26.178609655923754
+            ],
+            "branch": "direction",
+            "common_bearing_deg": 36.06061183044153,
+            "distance_m": 129.74139553705635,
+            "constraint_residuals": {
+              "second_range_minus_near_m": [
+                784.6815732116145,
+                910.9810563292461
+              ],
+              "second_angle_minus_halfwidth_deg": [
+                -1.000444171950221e-11,
+                -1.000444171950221e-11
+              ],
+              "reception_radius_semantics": "existence_only_not_universal_reception"
+            },
+            "near_boundary": true,
+            "actual_legal": true,
+            "worlds": [
+              {
+                "p": [
+                  1380.1646458429589,
+                  -24.09086350481927
+                ],
+                "rho": 1380.3748836237307,
+                "first_distance_m": 1380.3748836237307,
+                "second_distance_m": 789.6815732116145,
+                "first_error_deg": 1.0,
+                "second_error_deg": -0.9999999999899956
+              },
+              {
+                "p": [
+                  1499.7715427345856,
+                  26.178609655923754
+                ],
+                "rho": 1499.9999999999989,
+                "first_distance_m": 1499.9999999999989,
+                "second_distance_m": 915.9810563292461,
+                "first_error_deg": -0.9999999999999432,
+                "second_error_deg": 0.9999999999899956
+              }
+            ],
+            "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+          },
+          "top_pairs": [
+            {
+              "x": [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              "y": [
+                1499.7715427345856,
+                26.178609655923754
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 36.06061183044153,
+              "distance_m": 129.74139553705635,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  784.6815732116145,
+                  910.9810563292461
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -1.000444171950221e-11,
+                  -1.000444171950221e-11
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": true,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1380.1646458429589,
+                    -24.09086350481927
+                  ],
+                  "rho": 1380.3748836237307,
+                  "first_distance_m": 1380.3748836237307,
+                  "second_distance_m": 789.6815732116145,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999999999899956
+                },
+                {
+                  "p": [
+                    1499.7715427345856,
+                    26.178609655923754
+                  ],
+                  "rho": 1499.9999999999989,
+                  "first_distance_m": 1499.9999999999989,
+                  "second_distance_m": 915.9810563292461,
+                  "first_error_deg": -0.9999999999999432,
+                  "second_error_deg": 0.9999999999899956
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            },
+            {
+              "x": [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              "y": [
+                1499.7715427345854,
+                26.17860965592374
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 36.06061183044153,
+              "distance_m": 129.74139553705612,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  784.6815732116145,
+                  910.9810563292459
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -1.000444171950221e-11,
+                  -1.000444171950221e-11
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": true,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1380.1646458429589,
+                    -24.09086350481927
+                  ],
+                  "rho": 1380.3748836237307,
+                  "first_distance_m": 1380.3748836237307,
+                  "second_distance_m": 789.6815732116145,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999999999899956
+                },
+                {
+                  "p": [
+                    1499.7715427345854,
+                    26.17860965592374
+                  ],
+                  "rho": 1499.9999999999986,
+                  "first_distance_m": 1499.9999999999986,
+                  "second_distance_m": 915.9810563292459,
+                  "first_error_deg": -0.9999999999999432,
+                  "second_error_deg": 0.9999999999899956
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            },
+            {
+              "x": [
+                1380.163619016536,
+                -24.09084558149739
+              ],
+              "y": [
+                1499.770231685879,
+                26.178586771484948
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 36.060657767548456,
+              "distance_m": 129.74111770493323,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  784.6807646076685,
+                  910.9799700316235
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -1.000444171950221e-11,
+                  -1.000444171950221e-11
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": true,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1380.163619016536,
+                    -24.09084558149739
+                  ],
+                  "rho": 1380.373856640893,
+                  "first_distance_m": 1380.373856640893,
+                  "second_distance_m": 789.6807646076685,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999999999899956
+                },
+                {
+                  "p": [
+                    1499.770231685879,
+                    26.178586771484948
+                  ],
+                  "rho": 1499.9986887515827,
+                  "first_distance_m": 1499.9986887515827,
+                  "second_distance_m": 915.9799700316235,
+                  "first_error_deg": -1.0,
+                  "second_error_deg": 0.9999999999899956
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            },
+            {
+              "x": [
+                1380.1632742064003,
+                -24.090839562814082
+              ],
+              "y": [
+                1499.7694071251221,
+                26.178572378723395
+              ],
+              "branch": "direction",
+              "common_bearing_deg": 36.06067992613094,
+              "distance_m": 129.74066752070823,
+              "constraint_residuals": {
+                "second_range_minus_near_m": [
+                  784.6804930771419,
+                  910.9792868243629
+                ],
+                "second_angle_minus_halfwidth_deg": [
+                  -6.732809339382584e-06,
+                  -6.732809339382584e-06
+                ],
+                "reception_radius_semantics": "existence_only_not_universal_reception"
+              },
+              "near_boundary": false,
+              "actual_legal": true,
+              "worlds": [
+                {
+                  "p": [
+                    1380.1632742064003,
+                    -24.090839562814082
+                  ],
+                  "rho": 1380.3735117782333,
+                  "first_distance_m": 1380.3735117782333,
+                  "second_distance_m": 789.6804930771419,
+                  "first_error_deg": 1.0,
+                  "second_error_deg": -0.9999932671906606
+                },
+                {
+                  "p": [
+                    1499.7694071251221,
+                    26.178572378723395
+                  ],
+                  "rho": 1499.997864065222,
+                  "first_distance_m": 1499.997864065222,
+                  "second_distance_m": 915.9792868243629,
+                  "first_error_deg": -1.0,
+                  "second_error_deg": 0.9999932671906606
+                }
+              ],
+              "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+            }
+          ],
+          "near_possibility": "IMPOSSIBLE",
+          "local_improvement_m": 0.0,
+          "status": "NUMERICAL_CANDIDATE",
+          "threshold_exploration_m": 129.74139553705635
+        },
+        "clearance": {
+          "feedback": {
+            "kind": "direction",
+            "bearing_deg": 36.06061183044153,
+            "half_width_deg": 1.0
+          },
+          "R_hat": 64.87069776852817,
+          "estimated_center": [
+            1439.9680942887721,
+            1.0438730755522414
+          ],
+          "support_points": [
+            [
+              1380.1646458429589,
+              -24.09086350481927
+            ],
+            [
+              1499.7715427345856,
+              26.178609655923754
+            ]
+          ],
+          "r_U": 64.87069779916439,
+          "cover_center": [
+            1439.968094288804,
+            1.0438730755574444
+          ],
+          "H_U": 915.9810563598851,
+          "status": "NOT_YET_GUARANTEED",
+          "evidence": "impossible_pair",
+          "residual": 1.1368683772161603e-13,
+          "threshold_margin_m": -44.87069779916439,
+          "outer_sides": 32,
+          "subsequent_movement_seconds": null,
+          "subsequent_total_seconds": null,
+          "must_move_proven": true,
+          "impossibility_witness": [
+            [
+              1380.1646458429589,
+              -24.09086350481927
+            ],
+            [
+              1499.7715427345856,
+              26.178609655923754
+            ]
+          ],
+          "reason": "impossible_single_guaranteed_clear",
+          "conditional": true,
+          "radius_label": "conditional_R_estimate_not_J_R",
+          "outer_vertices": [
+            [
+              1380.1646458427351,
+              -24.090863504815374
+            ],
+            [
+              1426.9763750893042,
+              -24.907965278216373
+            ],
+            [
+              1499.771542734873,
+              26.178609655930263
+            ],
+            [
+              1445.4728751978996,
+              25.230822888556695
+            ]
+          ],
+          "clearance_radius_m": 20.0
+        },
+        "representative_feedbacks": [
+          {
+            "feedback": {
+              "kind": "direction",
+              "bearing_deg": 36.06061183044153,
+              "half_width_deg": 1.0
+            },
+            "R_hat": 64.87069776852817,
+            "estimated_center": [
+              1439.9680942887721,
+              1.0438730755522414
+            ],
+            "support_points": [
+              [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              [
+                1499.7715427345856,
+                26.178609655923754
+              ]
+            ],
+            "r_U": 64.87069779916439,
+            "cover_center": [
+              1439.968094288804,
+              1.0438730755574444
+            ],
+            "H_U": 915.9810563598851,
+            "status": "NOT_YET_GUARANTEED",
+            "evidence": "impossible_pair",
+            "residual": 1.1368683772161603e-13,
+            "threshold_margin_m": -44.87069779916439,
+            "outer_sides": 32,
+            "subsequent_movement_seconds": null,
+            "subsequent_total_seconds": null,
+            "must_move_proven": true,
+            "impossibility_witness": [
+              [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              [
+                1499.7715427345856,
+                26.178609655923754
+              ]
+            ],
+            "reason": "impossible_single_guaranteed_clear",
+            "conditional": true,
+            "radius_label": "conditional_R_estimate_not_J_R",
+            "outer_vertices": [
+              [
+                1380.1646458427351,
+                -24.090863504815374
+              ],
+              [
+                1426.9763750893042,
+                -24.907965278216373
+              ],
+              [
+                1499.771542734873,
+                26.178609655930263
+              ],
+              [
+                1445.4728751978996,
+                25.230822888556695
+              ]
+            ],
+            "clearance_radius_m": 20.0
+          }
+        ],
+        "movement_m": 901.3878188659974,
+        "movement_seconds": 180.27756377319946
+      }
+    }
+  ],
+  "fixed_old": {
+    "q": [
+      750.0,
+      -500.0
+    ],
+    "admissibility": {
+      "signal_check": {
+        "status": "IN",
+        "max_violation": -194886.59568148653,
+        "extremal_source": [
+          4.999238475781956,
+          0.08726203218641757
+        ],
+        "witness_attained": false,
+        "g_low": -194886.59568148653,
+        "g_high": -669819.1362973033,
+        "direction_status": null,
+        "distance_to_closure": null,
+        "conservative_direction_interior": false,
+        "reason": "",
+        "exact_definition": "q in Q and forall p in F: |q-p| <= max(rho_lo, |p-S|)"
+      },
+      "status": "IN",
+      "action_admissible": true,
+      "reasons": []
+    },
+    "score": {
+      "J_hat": 129.74139553705635,
+      "near_score_m": null,
+      "direction_score_m": 129.74139553705635,
+      "sample_count": 2289,
+      "witness": {
+        "x": [
+          1380.1646458429589,
+          -24.09086350481927
+        ],
+        "y": [
+          1499.7715427345856,
+          26.178609655923754
+        ],
+        "branch": "direction",
+        "common_bearing_deg": 36.06061183044153,
+        "distance_m": 129.74139553705635,
+        "constraint_residuals": {
+          "second_range_minus_near_m": [
+            784.6815732116145,
+            910.9810563292461
+          ],
+          "second_angle_minus_halfwidth_deg": [
+            -1.000444171950221e-11,
+            -1.000444171950221e-11
+          ],
+          "reception_radius_semantics": "existence_only_not_universal_reception"
+        },
+        "near_boundary": true,
+        "actual_legal": true,
+        "worlds": [
+          {
+            "p": [
+              1380.1646458429589,
+              -24.09086350481927
+            ],
+            "rho": 1380.3748836237307,
+            "first_distance_m": 1380.3748836237307,
+            "second_distance_m": 789.6815732116145,
+            "first_error_deg": 1.0,
+            "second_error_deg": -0.9999999999899956
+          },
+          {
+            "p": [
+              1499.7715427345856,
+              26.178609655923754
+            ],
+            "rho": 1499.9999999999989,
+            "first_distance_m": 1499.9999999999989,
+            "second_distance_m": 915.9810563292461,
+            "first_error_deg": -0.9999999999999432,
+            "second_error_deg": 0.9999999999899956
+          }
+        ],
+        "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+      },
+      "top_pairs": [
+        {
+          "x": [
+            1380.1646458429589,
+            -24.09086350481927
+          ],
+          "y": [
+            1499.7715427345856,
+            26.178609655923754
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 36.06061183044153,
+          "distance_m": 129.74139553705635,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              784.6815732116145,
+              910.9810563292461
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -1.000444171950221e-11,
+              -1.000444171950221e-11
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              "rho": 1380.3748836237307,
+              "first_distance_m": 1380.3748836237307,
+              "second_distance_m": 789.6815732116145,
+              "first_error_deg": 1.0,
+              "second_error_deg": -0.9999999999899956
+            },
+            {
+              "p": [
+                1499.7715427345856,
+                26.178609655923754
+              ],
+              "rho": 1499.9999999999989,
+              "first_distance_m": 1499.9999999999989,
+              "second_distance_m": 915.9810563292461,
+              "first_error_deg": -0.9999999999999432,
+              "second_error_deg": 0.9999999999899956
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        {
+          "x": [
+            1380.1646458429589,
+            -24.09086350481927
+          ],
+          "y": [
+            1499.7715427345854,
+            26.17860965592374
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 36.06061183044153,
+          "distance_m": 129.74139553705612,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              784.6815732116145,
+              910.9810563292459
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -1.000444171950221e-11,
+              -1.000444171950221e-11
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              "rho": 1380.3748836237307,
+              "first_distance_m": 1380.3748836237307,
+              "second_distance_m": 789.6815732116145,
+              "first_error_deg": 1.0,
+              "second_error_deg": -0.9999999999899956
+            },
+            {
+              "p": [
+                1499.7715427345854,
+                26.17860965592374
+              ],
+              "rho": 1499.9999999999986,
+              "first_distance_m": 1499.9999999999986,
+              "second_distance_m": 915.9810563292459,
+              "first_error_deg": -0.9999999999999432,
+              "second_error_deg": 0.9999999999899956
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        {
+          "x": [
+            1380.163619016536,
+            -24.09084558149739
+          ],
+          "y": [
+            1499.770231685879,
+            26.178586771484948
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 36.060657767548456,
+          "distance_m": 129.74111770493323,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              784.6807646076685,
+              910.9799700316235
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -1.000444171950221e-11,
+              -1.000444171950221e-11
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1380.163619016536,
+                -24.09084558149739
+              ],
+              "rho": 1380.373856640893,
+              "first_distance_m": 1380.373856640893,
+              "second_distance_m": 789.6807646076685,
+              "first_error_deg": 1.0,
+              "second_error_deg": -0.9999999999899956
+            },
+            {
+              "p": [
+                1499.770231685879,
+                26.178586771484948
+              ],
+              "rho": 1499.9986887515827,
+              "first_distance_m": 1499.9986887515827,
+              "second_distance_m": 915.9799700316235,
+              "first_error_deg": -1.0,
+              "second_error_deg": 0.9999999999899956
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        {
+          "x": [
+            1380.1632742064003,
+            -24.090839562814082
+          ],
+          "y": [
+            1499.7694071251221,
+            26.178572378723395
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 36.06067992613094,
+          "distance_m": 129.74066752070823,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              784.6804930771419,
+              910.9792868243629
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -6.732809339382584e-06,
+              -6.732809339382584e-06
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
+          },
+          "near_boundary": false,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1380.1632742064003,
+                -24.090839562814082
+              ],
+              "rho": 1380.3735117782333,
+              "first_distance_m": 1380.3735117782333,
+              "second_distance_m": 789.6804930771419,
+              "first_error_deg": 1.0,
+              "second_error_deg": -0.9999932671906606
+            },
+            {
+              "p": [
+                1499.7694071251221,
+                26.178572378723395
+              ],
+              "rho": 1499.997864065222,
+              "first_distance_m": 1499.997864065222,
+              "second_distance_m": 915.9792868243629,
+              "first_error_deg": -1.0,
+              "second_error_deg": 0.9999932671906606
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        }
+      ],
+      "near_possibility": "IMPOSSIBLE",
+      "local_improvement_m": 0.0,
+      "status": "NUMERICAL_CANDIDATE",
+      "threshold_exploration_m": 129.74139553705635
+    },
+    "clearance": {
+      "feedback": {
+        "kind": "direction",
+        "bearing_deg": 36.06061183044153,
+        "half_width_deg": 1.0
+      },
+      "R_hat": 64.87069776852817,
+      "estimated_center": [
+        1439.9680942887721,
+        1.0438730755522414
+      ],
+      "support_points": [
+        [
+          1380.1646458429589,
+          -24.09086350481927
+        ],
+        [
+          1499.7715427345856,
+          26.178609655923754
+        ]
+      ],
+      "r_U": 64.87069779916439,
+      "cover_center": [
+        1439.968094288804,
+        1.0438730755574444
+      ],
+      "H_U": 915.9810563598851,
+      "status": "NOT_YET_GUARANTEED",
+      "evidence": "impossible_pair",
+      "residual": 1.1368683772161603e-13,
+      "threshold_margin_m": -44.87069779916439,
+      "outer_sides": 32,
+      "subsequent_movement_seconds": null,
+      "subsequent_total_seconds": null,
+      "must_move_proven": true,
+      "impossibility_witness": [
+        [
+          1380.1646458429589,
+          -24.09086350481927
+        ],
+        [
+          1499.7715427345856,
+          26.178609655923754
+        ]
+      ],
+      "reason": "impossible_single_guaranteed_clear",
+      "conditional": true,
+      "radius_label": "conditional_R_estimate_not_J_R",
+      "outer_vertices": [
+        [
+          1380.1646458427351,
+          -24.090863504815374
+        ],
+        [
+          1426.9763750893042,
+          -24.907965278216373
+        ],
+        [
+          1499.771542734873,
+          26.178609655930263
+        ],
+        [
+          1445.4728751978996,
+          25.230822888556695
+        ]
+      ],
+      "clearance_radius_m": 20.0
+    },
+    "representative_feedbacks": [
+      {
+        "feedback": {
+          "kind": "direction",
+          "bearing_deg": 36.06061183044153,
+          "half_width_deg": 1.0
+        },
+        "R_hat": 64.87069776852817,
+        "estimated_center": [
+          1439.9680942887721,
+          1.0438730755522414
+        ],
+        "support_points": [
+          [
+            1380.1646458429589,
+            -24.09086350481927
+          ],
+          [
+            1499.7715427345856,
+            26.178609655923754
+          ]
+        ],
+        "r_U": 64.87069779916439,
+        "cover_center": [
+          1439.968094288804,
+          1.0438730755574444
+        ],
+        "H_U": 915.9810563598851,
+        "status": "NOT_YET_GUARANTEED",
+        "evidence": "impossible_pair",
+        "residual": 1.1368683772161603e-13,
+        "threshold_margin_m": -44.87069779916439,
+        "outer_sides": 32,
+        "subsequent_movement_seconds": null,
+        "subsequent_total_seconds": null,
+        "must_move_proven": true,
+        "impossibility_witness": [
+          [
+            1380.1646458429589,
+            -24.09086350481927
+          ],
+          [
+            1499.7715427345856,
+            26.178609655923754
+          ]
+        ],
+        "reason": "impossible_single_guaranteed_clear",
+        "conditional": true,
+        "radius_label": "conditional_R_estimate_not_J_R",
+        "outer_vertices": [
+          [
+            1380.1646458427351,
+            -24.090863504815374
+          ],
+          [
+            1426.9763750893042,
+            -24.907965278216373
+          ],
+          [
+            1499.771542734873,
+            26.178609655930263
+          ],
+          [
+            1445.4728751978996,
+            25.230822888556695
+          ]
+        ],
+        "clearance_radius_m": 20.0
+      }
+    ],
+    "movement_m": 901.3878188659974,
+    "movement_seconds": 180.27756377319946
+  },
+  "reselected": {
+    "q": [
+      750.0,
+      -500.0
+    ],
+    "admissibility": {
+      "signal_check": {
+        "status": "IN",
+        "max_violation": -194886.59568148653,
+        "extremal_source": [
+          4.999238475781956,
+          0.08726203218641757
+        ],
+        "witness_attained": false,
+        "g_low": -194886.59568148653,
+        "g_high": -669819.1362973033,
+        "direction_status": null,
+        "distance_to_closure": null,
+        "conservative_direction_interior": false,
+        "reason": "",
+        "exact_definition": "q in Q and forall p in F: |q-p| <= max(rho_lo, |p-S|)"
+      },
+      "status": "IN",
+      "action_admissible": true,
+      "reasons": []
+    },
+    "score": {
+      "J_hat": 129.74139553705635,
+      "near_score_m": null,
+      "direction_score_m": 129.74139553705635,
+      "sample_count": 2289,
+      "witness": {
+        "x": [
+          1380.1646458429589,
+          -24.09086350481927
+        ],
+        "y": [
+          1499.7715427345856,
+          26.178609655923754
+        ],
+        "branch": "direction",
+        "common_bearing_deg": 36.06061183044153,
+        "distance_m": 129.74139553705635,
+        "constraint_residuals": {
+          "second_range_minus_near_m": [
+            784.6815732116145,
+            910.9810563292461
+          ],
+          "second_angle_minus_halfwidth_deg": [
+            -1.000444171950221e-11,
+            -1.000444171950221e-11
+          ],
+          "reception_radius_semantics": "existence_only_not_universal_reception"
+        },
+        "near_boundary": true,
+        "actual_legal": true,
+        "worlds": [
+          {
+            "p": [
+              1380.1646458429589,
+              -24.09086350481927
+            ],
+            "rho": 1380.3748836237307,
+            "first_distance_m": 1380.3748836237307,
+            "second_distance_m": 789.6815732116145,
+            "first_error_deg": 1.0,
+            "second_error_deg": -0.9999999999899956
+          },
+          {
+            "p": [
+              1499.7715427345856,
+              26.178609655923754
+            ],
+            "rho": 1499.9999999999989,
+            "first_distance_m": 1499.9999999999989,
+            "second_distance_m": 915.9810563292461,
+            "first_error_deg": -0.9999999999999432,
+            "second_error_deg": 0.9999999999899956
+          }
+        ],
+        "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+      },
+      "top_pairs": [
+        {
+          "x": [
+            1380.1646458429589,
+            -24.09086350481927
+          ],
+          "y": [
+            1499.7715427345856,
+            26.178609655923754
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 36.06061183044153,
+          "distance_m": 129.74139553705635,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              784.6815732116145,
+              910.9810563292461
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -1.000444171950221e-11,
+              -1.000444171950221e-11
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              "rho": 1380.3748836237307,
+              "first_distance_m": 1380.3748836237307,
+              "second_distance_m": 789.6815732116145,
+              "first_error_deg": 1.0,
+              "second_error_deg": -0.9999999999899956
+            },
+            {
+              "p": [
+                1499.7715427345856,
+                26.178609655923754
+              ],
+              "rho": 1499.9999999999989,
+              "first_distance_m": 1499.9999999999989,
+              "second_distance_m": 915.9810563292461,
+              "first_error_deg": -0.9999999999999432,
+              "second_error_deg": 0.9999999999899956
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        {
+          "x": [
+            1380.1646458429589,
+            -24.09086350481927
+          ],
+          "y": [
+            1499.7715427345854,
+            26.17860965592374
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 36.06061183044153,
+          "distance_m": 129.74139553705612,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              784.6815732116145,
+              910.9810563292459
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -1.000444171950221e-11,
+              -1.000444171950221e-11
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1380.1646458429589,
+                -24.09086350481927
+              ],
+              "rho": 1380.3748836237307,
+              "first_distance_m": 1380.3748836237307,
+              "second_distance_m": 789.6815732116145,
+              "first_error_deg": 1.0,
+              "second_error_deg": -0.9999999999899956
+            },
+            {
+              "p": [
+                1499.7715427345854,
+                26.17860965592374
+              ],
+              "rho": 1499.9999999999986,
+              "first_distance_m": 1499.9999999999986,
+              "second_distance_m": 915.9810563292459,
+              "first_error_deg": -0.9999999999999432,
+              "second_error_deg": 0.9999999999899956
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        {
+          "x": [
+            1380.163619016536,
+            -24.09084558149739
+          ],
+          "y": [
+            1499.770231685879,
+            26.178586771484948
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 36.060657767548456,
+          "distance_m": 129.74111770493323,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              784.6807646076685,
+              910.9799700316235
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -1.000444171950221e-11,
+              -1.000444171950221e-11
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
+          },
+          "near_boundary": true,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1380.163619016536,
+                -24.09084558149739
+              ],
+              "rho": 1380.373856640893,
+              "first_distance_m": 1380.373856640893,
+              "second_distance_m": 789.6807646076685,
+              "first_error_deg": 1.0,
+              "second_error_deg": -0.9999999999899956
+            },
+            {
+              "p": [
+                1499.770231685879,
+                26.178586771484948
+              ],
+              "rho": 1499.9986887515827,
+              "first_distance_m": 1499.9986887515827,
+              "second_distance_m": 915.9799700316235,
+              "first_error_deg": -1.0,
+              "second_error_deg": 0.9999999999899956
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        },
+        {
+          "x": [
+            1380.1632742064003,
+            -24.090839562814082
+          ],
+          "y": [
+            1499.7694071251221,
+            26.178572378723395
+          ],
+          "branch": "direction",
+          "common_bearing_deg": 36.06067992613094,
+          "distance_m": 129.74066752070823,
+          "constraint_residuals": {
+            "second_range_minus_near_m": [
+              784.6804930771419,
+              910.9792868243629
+            ],
+            "second_angle_minus_halfwidth_deg": [
+              -6.732809339382584e-06,
+              -6.732809339382584e-06
+            ],
+            "reception_radius_semantics": "existence_only_not_universal_reception"
+          },
+          "near_boundary": false,
+          "actual_legal": true,
+          "worlds": [
+            {
+              "p": [
+                1380.1632742064003,
+                -24.090839562814082
+              ],
+              "rho": 1380.3735117782333,
+              "first_distance_m": 1380.3735117782333,
+              "second_distance_m": 789.6804930771419,
+              "first_error_deg": 1.0,
+              "second_error_deg": -0.9999932671906606
+            },
+            {
+              "p": [
+                1499.7694071251221,
+                26.178572378723395
+              ],
+              "rho": 1499.997864065222,
+              "first_distance_m": 1499.997864065222,
+              "second_distance_m": 915.9792868243629,
+              "first_error_deg": -1.0,
+              "second_error_deg": 0.9999932671906606
+            }
+          ],
+          "supremum_semantics": "actual_legal_sample_pair; continuous supremum may be unattained"
+        }
+      ],
+      "near_possibility": "IMPOSSIBLE",
+      "local_improvement_m": 0.0,
+      "status": "NUMERICAL_CANDIDATE",
+      "threshold_exploration_m": 129.74139553705635
+    },
+    "clearance": {
+      "feedback": {
+        "kind": "direction",
+        "bearing_deg": 36.06061183044153,
+        "half_width_deg": 1.0
+      },
+      "R_hat": 64.87069776852817,
+      "estimated_center": [
+        1439.9680942887721,
+        1.0438730755522414
+      ],
+      "support_points": [
+        [
+          1380.1646458429589,
+          -24.09086350481927
+        ],
+        [
+          1499.7715427345856,
+          26.178609655923754
+        ]
+      ],
+      "r_U": 64.87069779916439,
+      "cover_center": [
+        1439.968094288804,
+        1.0438730755574444
+      ],
+      "H_U": 915.9810563598851,
+      "status": "NOT_YET_GUARANTEED",
+      "evidence": "impossible_pair",
+      "residual": 1.1368683772161603e-13,
+      "threshold_margin_m": -44.87069779916439,
+      "outer_sides": 32,
+      "subsequent_movement_seconds": null,
+      "subsequent_total_seconds": null,
+      "must_move_proven": true,
+      "impossibility_witness": [
+        [
+          1380.1646458429589,
+          -24.09086350481927
+        ],
+        [
+          1499.7715427345856,
+          26.178609655923754
+        ]
+      ],
+      "reason": "impossible_single_guaranteed_clear",
+      "conditional": true,
+      "radius_label": "conditional_R_estimate_not_J_R",
+      "outer_vertices": [
+        [
+          1380.1646458427351,
+          -24.090863504815374
+        ],
+        [
+          1426.9763750893042,
+          -24.907965278216373
+        ],
+        [
+          1499.771542734873,
+          26.178609655930263
+        ],
+        [
+          1445.4728751978996,
+          25.230822888556695
+        ]
+      ],
+      "clearance_radius_m": 20.0
+    },
+    "representative_feedbacks": [
+      {
+        "feedback": {
+          "kind": "direction",
+          "bearing_deg": 36.06061183044153,
+          "half_width_deg": 1.0
+        },
+        "R_hat": 64.87069776852817,
+        "estimated_center": [
+          1439.9680942887721,
+          1.0438730755522414
+        ],
+        "support_points": [
+          [
+            1380.1646458429589,
+            -24.09086350481927
+          ],
+          [
+            1499.7715427345856,
+            26.178609655923754
+          ]
+        ],
+        "r_U": 64.87069779916439,
+        "cover_center": [
+          1439.968094288804,
+          1.0438730755574444
+        ],
+        "H_U": 915.9810563598851,
+        "status": "NOT_YET_GUARANTEED",
+        "evidence": "impossible_pair",
+        "residual": 1.1368683772161603e-13,
+        "threshold_margin_m": -44.87069779916439,
+        "outer_sides": 32,
+        "subsequent_movement_seconds": null,
+        "subsequent_total_seconds": null,
+        "must_move_proven": true,
+        "impossibility_witness": [
+          [
+            1380.1646458429589,
+            -24.09086350481927
+          ],
+          [
+            1499.7715427345856,
+            26.178609655923754
+          ]
+        ],
+        "reason": "impossible_single_guaranteed_clear",
+        "conditional": true,
+        "radius_label": "conditional_R_estimate_not_J_R",
+        "outer_vertices": [
+          [
+            1380.1646458427351,
+            -24.090863504815374
+          ],
+          [
+            1426.9763750893042,
+            -24.907965278216373
+          ],
+          [
+            1499.771542734873,
+            26.178609655930263
+          ],
+          [
+            1445.4728751978996,
+            25.230822888556695
+          ]
+        ],
+        "clearance_radius_m": 20.0
+      }
+    ],
+    "movement_m": 901.3878188659974,
+    "movement_seconds": 180.27756377319946
+  },
+  "delta_station_m": 3.6303812240481648,
+  "local_screen_score_calls": 14,
+  "accounting": {
+    "sample_count": 2289,
+    "base_sample_count": 903,
+    "common_additions": 1386,
+    "shifted_sample_count": 1318,
+    "score_calls": 4,
+    "elapsed_seconds": 1.0069444159889827
+  },
+  "scan": [
+    {
+      "step_m": 50.0,
+      "planned": 1640,
+      "scanned": 1640,
+      "fraction": 1.0,
+      "feasible": 483
+    },
+    {
+      "step_m": 25.0,
+      "planned": 6480,
+      "scanned": 6480,
+      "fraction": 1.0,
+      "feasible": 1943
+    }
+  ],
+  "elapsed_seconds": 1.266486624997924,
+  "stop_reason": "SAVED_STAGES_REASSESSED",
+  "limitation": "raw search may have stopped during finalist audit; stage comparison is finite, not certified"
+}

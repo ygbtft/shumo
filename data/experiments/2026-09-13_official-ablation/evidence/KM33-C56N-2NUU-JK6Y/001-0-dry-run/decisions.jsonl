@@ -1,0 +1,2 @@
+﻿{"time":"2026-09-12T19:23:21.0905149Z","data":{"label":"initial","file":"001-initial.png","session":2,"text_file":"001-initial.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:23:22.2786882Z","data":{"expected":"开始问题4演练测试","point":[3210,1158],"text":"开始问题4演练测试"},"event":"ALLOW_CANDIDATE"}

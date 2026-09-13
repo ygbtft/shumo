@@ -1,0 +1,18 @@
+{
+  "problem": 4,
+  "formal_runs_requested": 1,
+  "expected_formal_index": 3,
+  "parameters": {
+    "trial_radius": 35.0,
+    "share_limit": 6,
+    "share_cooldown": 150.0,
+    "transverse_m": 40.0,
+    "fraction": 0.15,
+    "steps": 10,
+    "pause_limit": 16,
+    "dispatch": "nearest"
+  },
+  "source": "User requested Q4 formal test once more after the second formal test",
+  "prior_result": "/Users/flower/math/2026/B题/B/guest_deploy_evidence/q4-nearest-formal-20260913",
+  "policy_code_identical": true
+}

@@ -1,0 +1,8250 @@
+{
+  "assignments": 742,
+  "all_actual_parameters_match": true,
+  "mock_imported": false,
+  "network_requests": 0,
+  "construction_checks": [
+    {
+      "order": 1,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 2,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 3,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 100,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 4,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 5,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 6,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 0,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 7,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 0
+      }
+    },
+    {
+      "order": 8,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 400,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 9,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 10,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 10,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 11,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 12,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 1,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 13,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 800,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 14,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.02,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 15,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.5,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 16,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 17,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 0,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 18,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 19,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 20,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 50,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 21,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 20,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 22,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 23,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 24,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 5,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 25,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 26,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 12,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 27,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 28,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.05,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 29,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 1,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 30,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 31,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 32,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0.5
+      }
+    },
+    {
+      "order": 33,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 2,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 34,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0
+      }
+    },
+    {
+      "order": 35,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 36,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 37,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 70,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 38,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 1.28,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 39,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 40,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 41,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 2,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 42,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 4
+      }
+    },
+    {
+      "order": 43,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 44,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 45,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 46,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 47,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 48,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 12,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 49,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 50,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 20,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 51,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.32,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 52,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 53,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 54,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 55,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 1,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 56,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 57,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 0
+      }
+    },
+    {
+      "order": 58,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.32,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 59,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 12,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 60,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 61,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0.5
+      }
+    },
+    {
+      "order": 62,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0
+      }
+    },
+    {
+      "order": 63,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 64,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 65,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 66,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 0,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 67,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 4
+      }
+    },
+    {
+      "order": 68,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 69,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 20,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 70,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 71,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 72,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 12,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 73,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 74,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 2,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 75,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 76,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 77,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 50,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 78,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 79,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 0,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 80,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 81,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 5,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 82,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 2,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 83,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 84,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.02,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 85,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 100,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 86,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.05,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 87,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 88,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 89,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 70,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 90,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 400,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 91,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 92,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 93,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 1.28,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 94,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 800,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 95,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 96,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 20,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 97,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 98,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 10,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 99,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 1,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 100,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.5,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 101,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 102,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 103,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 2,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 104,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 70,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 105,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 106,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 2,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 107,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 20,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 108,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 50,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 109,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 110,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 111,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 112,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0.5
+      }
+    },
+    {
+      "order": 113,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 114,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 5,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 115,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 116,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.05,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 117,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0
+      }
+    },
+    {
+      "order": 118,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 0,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 119,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 100,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 120,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 121,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 122,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 0,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 123,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 124,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 1.28,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 125,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 126,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 1,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 127,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 800,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 128,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 129,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.02,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 130,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 131,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 132,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 12,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 133,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 134,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 135,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 0
+      }
+    },
+    {
+      "order": 136,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 137,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 138,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.32,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 139,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 1,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 140,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 141,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 142,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 12,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 143,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 20,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 144,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 145,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.5,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 146,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 147,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 4
+      }
+    },
+    {
+      "order": 148,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 149,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 150,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 400,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 151,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 10,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 152,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 153,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.05,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 154,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 0,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 155,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 156,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 157,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 158,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 159,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 160,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 161,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 162,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 4
+      }
+    },
+    {
+      "order": 163,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 164,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 70,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 165,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 166,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 167,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 12,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 168,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0.5
+      }
+    },
+    {
+      "order": 169,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 170,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.02,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 171,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 1,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 172,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 173,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 2,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 174,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0
+      }
+    },
+    {
+      "order": 175,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.5,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 176,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 20,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 177,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 1,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 178,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 2,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 179,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 180,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 10,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 181,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 182,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 20,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 183,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 184,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 185,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 186,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.32,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 187,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 188,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 0,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 189,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 190,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 12,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 191,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 800,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 192,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 5,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 193,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 0
+      }
+    },
+    {
+      "order": 194,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 195,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 100,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 196,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 197,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 198,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 199,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 200,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 1.28,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 201,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 50,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 202,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 400,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 203,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 204,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 1.28,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 205,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 206,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 207,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 208,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 4
+      }
+    },
+    {
+      "order": 209,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 210,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 1,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 211,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 212,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.05,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 213,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.32,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 214,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 50,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 215,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 800,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 216,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 217,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.02,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 218,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 219,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 220,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0
+      }
+    },
+    {
+      "order": 221,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 222,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 223,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 0,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 224,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 20,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 225,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 1,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 226,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 12,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 227,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 228,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 2,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 229,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 400,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 230,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 10,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 231,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 20,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 232,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 233,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 2,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 234,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 100,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 235,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 12,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 236,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 237,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 238,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 239,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.5,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 240,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 241,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 242,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 243,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 244,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 0
+      }
+    },
+    {
+      "order": 245,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 246,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 5,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 247,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 0,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 248,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 70,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 249,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 250,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0.5
+      }
+    },
+    {
+      "order": 251,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 252,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 253,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 254,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 255,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 4
+      }
+    },
+    {
+      "order": 256,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0
+      }
+    },
+    {
+      "order": 257,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 70,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 258,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 259,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 1.28,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 260,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 261,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 2,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 262,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 263,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 264,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 50,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 265,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 0,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 266,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 267,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 400,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 268,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 12,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 269,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.05,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 270,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 800,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 271,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 12,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 272,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 20,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 273,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 20,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 274,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 2,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 275,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0.5
+      }
+    },
+    {
+      "order": 276,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 1,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 277,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 278,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 279,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.5,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 280,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 281,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 282,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 283,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 284,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 0,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 285,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 286,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 287,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 288,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 289,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 290,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 100,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 291,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 292,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 0
+      }
+    },
+    {
+      "order": 293,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 294,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.32,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 295,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 1,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 296,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 297,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 5,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 298,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 299,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 10,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 300,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 301,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 302,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.02,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 303,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 100,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 304,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 305,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.5,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 306,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 4
+      }
+    },
+    {
+      "order": 307,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 20,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 308,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.32,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 309,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 310,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 1,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 311,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 800,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 312,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 10,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 313,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 314,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 315,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 0
+      }
+    },
+    {
+      "order": 316,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 317,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 318,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 2,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 319,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 320,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 0,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 321,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 2,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 322,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 323,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 0,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 324,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0.5
+      }
+    },
+    {
+      "order": 325,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 326,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 327,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 328,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 329,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 330,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 331,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 1,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 332,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 50,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 333,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 334,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 400,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 335,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.05,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 336,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 5,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 337,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 20,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 338,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 70,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 339,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 340,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 341,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 342,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.02,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 343,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 12,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 344,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 12,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 345,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 346,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 347,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 348,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 1.28,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 349,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 350,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 351,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0
+      }
+    },
+    {
+      "order": 352,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 353,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 354,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 355,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 356,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 357,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 0,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 358,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 1,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 359,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 360,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 1.28,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 361,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 1,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 362,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 363,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 0
+      }
+    },
+    {
+      "order": 364,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0.5
+      }
+    },
+    {
+      "order": 365,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 366,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 367,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 2,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 368,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 5,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 369,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 370,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 400,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 371,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 372,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 20,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 373,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 374,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 2,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 375,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.32,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 376,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 0,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 377,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 378,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0
+      }
+    },
+    {
+      "order": 379,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 380,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 381,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 20,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 382,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 383,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 12,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 384,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 385,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 12,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 386,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 387,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 388,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 800,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 389,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 10,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 390,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.5,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 391,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 392,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 393,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 394,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 70,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 395,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 100,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 396,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 397,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.05,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 398,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 399,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 4
+      }
+    },
+    {
+      "order": 400,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 50,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 401,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.02,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 402,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 403,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 404,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 405,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.5,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 406,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 407,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 408,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 4
+      }
+    },
+    {
+      "order": 409,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 410,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 411,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 412,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 2,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 413,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 400,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 414,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 415,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 416,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 417,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 1,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 418,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 419,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 50,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 420,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 421,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 1.28,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 422,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 1,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 423,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 12,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 424,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 0,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 425,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 426,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 70,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 427,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 428,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 429,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 430,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 431,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 100,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 432,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 433,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0.5
+      }
+    },
+    {
+      "order": 434,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.05,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 435,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 0
+      }
+    },
+    {
+      "order": 436,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 10,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 437,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 438,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 0,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 439,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 440,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 441,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 12,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 442,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 2,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 443,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 444,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 20,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 445,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.32,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 446,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0
+      }
+    },
+    {
+      "order": 447,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.02,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 448,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 449,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 5,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 450,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 800,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 451,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 452,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 20,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 453,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 800,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 454,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 50,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 455,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0.5
+      }
+    },
+    {
+      "order": 456,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 20,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 457,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 458,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 5,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 459,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 460,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 461,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 1.28,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 462,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 400,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 463,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 464,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 2,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 465,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 2,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 466,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 467,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 468,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 12,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 469,
+      "parameters": {
+        "trial_radius": 80,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 470,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 471,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 10,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 472,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 473,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.02,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 474,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 4
+      }
+    },
+    {
+      "order": 475,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 476,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 20,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 477,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 478,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 479,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 480,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 481,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 100,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 482,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 483,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 1,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 484,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.5,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 485,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 0,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 486,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.32,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 487,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.05,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 488,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 489,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 490,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 1,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 491,
+      "parameters": {
+        "trial_radius": 20,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 492,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 0
+      }
+    },
+    {
+      "order": 493,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 494,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 12,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 495,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 70,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 496,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 497,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 0,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 498,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 499,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 0
+      }
+    },
+    {
+      "order": 500,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 501,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 502,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 503,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 504,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 505,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.16,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 506,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 507,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "share_cooldown": 300,
+        "transverse_m": 60,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 508,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 509,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 6,
+        "share_cooldown": 150,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 510,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 8,
+        "max_active": 2,
+        "localization_weight": 0.04,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 511,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 512,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 8,
+        "share_cooldown": 75,
+        "transverse_m": 20,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 513,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 514,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 515,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 516,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 517,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 518,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 519,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 300,
+        "transverse_m": 60,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 520,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 60,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 521,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "share_cooldown": 75,
+        "transverse_m": 20,
+        "fraction": 0.1,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 522,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 523,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 524,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.25,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 525,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 4,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 526,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 2,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 527,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 528,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.16,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 529,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 20,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 530,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 531,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 532,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "share_cooldown": 150,
+        "transverse_m": 40,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 533,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 534,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "share_cooldown": 75,
+        "transverse_m": 40,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 535,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.16,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 536,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 537,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 538,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 4,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 539,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 540,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 20,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 541,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 542,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 543,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "share_cooldown": 75,
+        "transverse_m": 20,
+        "fraction": 0.25,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 544,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 545,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 546,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 547,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 548,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 549,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 550,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "share_cooldown": 300,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 551,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 552,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 553,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 554,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "share_cooldown": 300,
+        "transverse_m": 20,
+        "fraction": 0.25,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 555,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 556,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 557,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 558,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 2,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 559,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 560,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 4,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 561,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.25,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 562,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 6,
+        "share_cooldown": 150,
+        "transverse_m": 20,
+        "fraction": 0.1,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 563,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 564,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 565,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 8,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 566,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 567,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 568,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 4,
+        "share_cooldown": 150,
+        "transverse_m": 40,
+        "fraction": 0.25,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 569,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 570,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 571,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 572,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 4,
+        "localization_weight": 0.04,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 573,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.25,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 574,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 4,
+        "max_active": 4,
+        "localization_weight": 0.04,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 575,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 40,
+        "fraction": 0.1,
+        "steps": 4,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 576,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 577,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 8,
+        "max_active": 2,
+        "localization_weight": 0.16,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 578,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 579,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 580,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 581,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 582,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 583,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 2,
+        "localization_weight": 0.04,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 584,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 585,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 586,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 20,
+        "fraction": 0.25,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 587,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 588,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.16,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 589,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 4,
+        "share_cooldown": 150,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 590,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 591,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 60,
+        "fraction": 0.1,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 592,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 593,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 594,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 595,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.25,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 596,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "share_cooldown": 75,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 597,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 598,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 599,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 20,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 600,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 601,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 602,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 603,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 604,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 6,
+        "share_cooldown": 75,
+        "transverse_m": 40,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 605,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 606,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 607,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 608,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 6,
+        "share_cooldown": 150,
+        "transverse_m": 60,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 609,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "share_cooldown": 150,
+        "transverse_m": 40,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 610,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 611,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 612,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 613,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 614,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 8,
+        "share_cooldown": 75,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 615,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 616,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 617,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 4,
+        "share_cooldown": 300,
+        "transverse_m": 60,
+        "fraction": 0.25,
+        "steps": 4,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 618,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 619,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 620,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 40,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 621,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 2,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 622,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 623,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 624,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 20,
+        "fraction": 0.25,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 625,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.16,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 626,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.1,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 627,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 628,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 629,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 630,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 631,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 8,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.1,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 632,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 8,
+        "share_cooldown": 75,
+        "transverse_m": 20,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 633,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.16,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 634,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 635,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 636,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 637,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "share_cooldown": 150,
+        "transverse_m": 20,
+        "fraction": 0.25,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 638,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 2,
+        "localization_weight": 0.16,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 639,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 640,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 641,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 642,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 643,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 8,
+        "max_active": 2,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 644,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 645,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 646,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 647,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 4,
+        "share_cooldown": 150,
+        "transverse_m": 40,
+        "fraction": 0.1,
+        "steps": 3,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 648,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 649,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.16,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 650,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.1,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 651,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 652,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 653,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "share_cooldown": 75,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 654,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 655,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 656,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 8,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 657,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "share_cooldown": 150,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 658,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 659,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 6,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 660,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 661,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 60,
+        "fraction": 0.1,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 662,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 663,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 664,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 665,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 8,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 666,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.04,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 667,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 20,
+        "fraction": 0.25,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 668,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 669,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 670,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 671,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 672,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 673,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 674,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "share_cooldown": 300,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 675,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.1,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 676,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 677,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "share_cooldown": 150,
+        "transverse_m": 40,
+        "fraction": 0.1,
+        "steps": 4,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 678,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 679,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 150,
+        "transverse_m": 60,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 680,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 681,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 4,
+        "localization_weight": 0.04,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 682,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 683,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 684,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 685,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 686,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 687,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 688,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 689,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 690,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 691,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 692,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 693,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 694,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 20,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 695,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 6,
+        "share_cooldown": 75,
+        "transverse_m": 40,
+        "fraction": 0.1,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 696,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 697,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 698,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 699,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 700,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "share_cooldown": 150,
+        "transverse_m": 60,
+        "fraction": 0.25,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 701,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 702,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 703,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 704,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 705,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 6,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 706,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 707,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 708,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.04,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 709,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 6,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 710,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 711,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 712,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 6,
+        "share_cooldown": 75,
+        "transverse_m": 40,
+        "fraction": 0.25,
+        "steps": 4,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 713,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 300,
+        "transverse_m": 40,
+        "fraction": 0.1,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 714,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 715,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 716,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 8,
+        "max_active": 4,
+        "localization_weight": 0.08,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 717,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 8,
+        "share_cooldown": 300,
+        "transverse_m": 20,
+        "fraction": 0.1,
+        "steps": 4,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 718,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 719,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 720,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 40,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 721,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 722,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 723,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 4,
+        "max_active": 3,
+        "localization_weight": 0.16,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 724,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.1,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 725,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 726,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "max_active": 4,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 727,
+      "parameters": {
+        "trial_radius": 45,
+        "share_limit": 8,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 728,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 8,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 729,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 730,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 20,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 731,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 150,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 4,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 732,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 733,
+      "parameters": {
+        "trial_radius": 50,
+        "share_limit": 8,
+        "max_active": 3,
+        "localization_weight": 0.16,
+        "remainder_weight": 2
+      }
+    },
+    {
+      "order": 734,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 735,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 20,
+        "fraction": 0.25,
+        "steps": 3,
+        "pause_limit": 24
+      }
+    },
+    {
+      "order": 736,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 737,
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 6,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 16
+      }
+    },
+    {
+      "order": 738,
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.04,
+        "remainder_weight": 1
+      }
+    },
+    {
+      "order": 739,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 8,
+        "share_cooldown": 150,
+        "transverse_m": 40,
+        "fraction": 0.15,
+        "steps": 10,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 740,
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 741,
+      "parameters": {
+        "trial_radius": 25,
+        "share_limit": 4,
+        "share_cooldown": 75,
+        "transverse_m": 60,
+        "fraction": 0.15,
+        "steps": 3,
+        "pause_limit": 8
+      }
+    },
+    {
+      "order": 742,
+      "parameters": {
+        "trial_radius": 35,
+        "share_limit": 4,
+        "max_active": 2,
+        "localization_weight": 0.16,
+        "remainder_weight": 1
+      }
+    }
+  ]
+}

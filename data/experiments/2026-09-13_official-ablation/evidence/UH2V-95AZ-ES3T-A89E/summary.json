@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 136,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 8928518169960137028,
+      "case_code": "UH2V-95AZ-ES3T-A89E",
+      "entered": 1,
+      "jammer_count": 10,
+      "cleared_jammer_count": 10,
+      "clear_failure_count": 0,
+      "virtual_time_us": 3739993923,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789241682678
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3739993923,
+  "total_jammer_count": 10,
+  "total_cleared_jammer_count": 10,
+  "total_clear_failure_count": 0
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "problem": 3,
+    "perturbed_runs": 80,
+    "baseline_runs": 40,
+    "perturbed_all_clear": 80,
+    "baseline_all_clear": 40,
+    "perturbed_tau": 243.5017798529689,
+    "baseline_tau": 234.5848565868373,
+    "ratio": 1.0380115042201403,
+    "clear_probability_lower97_5": 0.9549359649323077,
+    "complete": true,
+    "full_blocks": 40,
+    "ratio_upper97_5": 1.0831192619466588,
+    "ratio_ci95": [
+      0.9948242553278527,
+      1.0831192619466588
+    ],
+    "noninferiority_pass": false,
+    "observed_all_clear": true,
+    "overall_pass": false,
+    "verdict": "insufficient evidence for <=5% degradation"
+  },
+  {
+    "problem": 4,
+    "perturbed_runs": 80,
+    "baseline_runs": 40,
+    "perturbed_all_clear": 80,
+    "baseline_all_clear": 40,
+    "perturbed_tau": 486.42443542131474,
+    "baseline_tau": 453.2229259737828,
+    "ratio": 1.0732564650744356,
+    "clear_probability_lower97_5": 0.9549359649323077,
+    "complete": true,
+    "full_blocks": 40,
+    "ratio_upper97_5": 1.157108247216959,
+    "ratio_ci95": [
+      0.9930406156469646,
+      1.157108247216959
+    ],
+    "noninferiority_pass": false,
+    "observed_all_clear": true,
+    "overall_pass": false,
+    "verdict": "observed degradation >=5%; robustness criterion not met"
+  }
+]

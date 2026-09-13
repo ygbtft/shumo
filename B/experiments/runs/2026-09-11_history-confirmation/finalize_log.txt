@@ -1,7 +1,0 @@
-{
-  "total_offline_executions": 43716,
-  "final_checks": 813,
-  "artifact_checks": 6,
-  "python_files_parsed": 113,
-  "official_calls": 0
-}

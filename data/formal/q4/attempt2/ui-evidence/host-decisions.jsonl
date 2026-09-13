@@ -1,0 +1,36 @@
+{"time": "2026-09-13T15:23:53.651356+08:00", "event": "GUI_JOB", "action": "inspect", "folder": "001-0-inspect"}
+{"time": "2026-09-13T15:23:53.652043+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:23:55.264469+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "inspected", "clicks": 0}
+{"time": "2026-09-13T15:24:41.767819+08:00", "event": "GUI_JOB", "action": "navigate", "folder": "002-1-navigate"}
+{"time": "2026-09-13T15:24:41.770800+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:24:43.789769+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "q4-formal-page", "clicks": 1}
+{"time": "2026-09-13T15:25:17.051030+08:00", "event": "GUI_JOB", "action": "start", "folder": "003-2-start"}
+{"time": "2026-09-13T15:25:17.053890+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:25:19.471057+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "single-start-clicked", "clicks": 1}
+{"time": "2026-09-13T15:25:40.063258+08:00", "event": "GUI_JOB", "action": "confirm-start", "folder": "004-3-confirm-start"}
+{"time": "2026-09-13T15:25:40.066252+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:25:41.278514+08:00", "event": "GUI_RESULT", "stack": "在 Snapshot、C:\\BRobot\\auto-practice\\20260913-152132-c73c342a\\ui.ps1 中: 第 29 行\r\n在 <ScriptBlock>、C:\\BRobot\\auto-practice\\20260913-152132-c73c342a\\ui.ps1 中: 第 47 行", "error": "Simulator not connected", "ok": false, "robot_started": false, "clicks": 0}
+{"time": "2026-09-13T15:26:10.292417+08:00", "event": "GUI_JOB", "action": "inspect", "folder": "005-4-inspect"}
+{"time": "2026-09-13T15:26:10.295281+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:26:11.503368+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "inspected", "clicks": 0}
+{"time": "2026-09-13T15:26:31.423991+08:00", "event": "GUI_JOB", "action": "confirm-start", "folder": "006-5-confirm-start"}
+{"time": "2026-09-13T15:26:31.424936+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:26:35.864970+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "single-start-confirmed", "clicks": 1}
+{"time": "2026-09-13T15:26:54.159068+08:00", "event": "GUI_JOB", "action": "confirm-final", "folder": "007-6-confirm-final"}
+{"time": "2026-09-13T15:26:54.159801+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:26:58.593463+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "formal-start-confirmed", "clicks": 1}
+{"time": "2026-09-13T15:27:17.364629+08:00", "event": "GUI_JOB", "action": "inspect", "folder": "008-7-inspect"}
+{"time": "2026-09-13T15:27:17.367462+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:27:18.579934+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "inspected", "clicks": 0}
+{"time": "2026-09-13T15:27:41.765237+08:00", "event": "GUI_JOB", "action": "run", "folder": "009-8-run"}
+{"time": "2026-09-13T15:27:41.765784+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T15:27:42.974885+08:00", "event": "GUI_RESULT", "stack": "在 <ScriptBlock>、C:\\BRobot\\auto-practice\\20260913-152132-c73c342a\\ui.ps1 中: 第 87 行", "active_navigation": "问题4正式测试", "error": "无法将“C:\\Q4NearestFormal-20260913\\start_q3_fused_formal.ps1”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。", "ok": false, "robot_started": false, "clicks": 0}
+{"time": "2026-09-13T15:28:20.634652+08:00", "event": "GUI_JOB", "action": "run", "folder": "010-9-run"}
+{"time": "2026-09-13T15:28:20.635267+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T15:28:24.267417+08:00", "event": "GUI_RESULT", "stack": "在 Snapshot、C:\\BRobot\\auto-practice\\20260913-152132-c73c342a\\ui.ps1 中: 第 23 行\r\n在 <ScriptBlock>、C:\\BRobot\\auto-practice\\20260913-152132-c73c342a\\ui.ps1 中: 第 93 行", "active_navigation": "问题4正式测试", "error": "在此对象上找不到属性“ProgrammaticName”。请确认该属性存在。", "ok": false, "robot_started": true, "clicks": 0}
+{"time": "2026-09-13T15:29:13.230691+08:00", "event": "GUI_JOB", "action": "inspect", "folder": "011-10-inspect"}
+{"time": "2026-09-13T15:29:13.233387+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:29:16.456467+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "inspected", "clicks": 0}
+{"time": "2026-09-13T15:30:24.414712+08:00", "event": "GUI_JOB", "action": "view-upload", "folder": "012-11-view-upload"}
+{"time": "2026-09-13T15:30:24.417426+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:30:31.680012+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "formal-upload-history", "clicks": 2}

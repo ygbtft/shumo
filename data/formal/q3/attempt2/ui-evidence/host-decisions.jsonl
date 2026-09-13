@@ -1,0 +1,21 @@
+{"time": "2026-09-13T15:14:24.915204+08:00", "event": "GUI_JOB", "action": "inspect", "folder": "001-0-inspect"}
+{"time": "2026-09-13T15:14:24.916100+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:14:35.808382+08:00", "event": "GUI_RESULT", "stack": "在 Snapshot、C:\\BRobot\\auto-practice\\20260913-151423-0c4eb4ba\\ui.ps1 中: 第 28 行\r\n在 <ScriptBlock>、C:\\BRobot\\auto-practice\\20260913-151423-0c4eb4ba\\ui.ps1 中: 第 47 行", "error": "Team mismatch", "ok": false, "robot_started": false, "clicks": 0}
+{"time": "2026-09-13T15:18:12.170451+08:00", "event": "GUI_JOB", "action": "navigate", "folder": "002-1-navigate"}
+{"time": "2026-09-13T15:18:12.173438+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:18:30.736208+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "q3-formal-page", "clicks": 1}
+{"time": "2026-09-13T15:19:01.522717+08:00", "event": "GUI_JOB", "action": "start", "folder": "003-2-start"}
+{"time": "2026-09-13T15:19:01.523723+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:19:03.943912+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "single-start-clicked", "clicks": 1}
+{"time": "2026-09-13T15:19:33.879811+08:00", "event": "GUI_JOB", "action": "confirm-start", "folder": "004-3-confirm-start"}
+{"time": "2026-09-13T15:19:33.880555+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:19:38.306762+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "single-start-confirmed", "clicks": 1}
+{"time": "2026-09-13T15:20:04.287008+08:00", "event": "GUI_JOB", "action": "confirm-final", "folder": "005-4-confirm-final"}
+{"time": "2026-09-13T15:20:04.289998+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:20:09.129288+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "formal-start-confirmed", "clicks": 1}
+{"time": "2026-09-13T15:20:40.315223+08:00", "event": "GUI_JOB", "action": "run", "folder": "006-5-run"}
+{"time": "2026-09-13T15:20:40.315893+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T15:20:47.969260+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "case_code": "3VUE-GVZH-MPKV-GBWE", "ok": true, "robot_started": true, "status": "formal-robot-returned", "clicks": 0}
+{"time": "2026-09-13T15:21:21.583649+08:00", "event": "GUI_JOB", "action": "view-upload", "folder": "007-6-view-upload"}
+{"time": "2026-09-13T15:21:21.584319+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T15:21:28.032110+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "formal-upload-history", "clicks": 2}

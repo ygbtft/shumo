@@ -1,0 +1,233 @@
+{
+  "rows": {
+    "standard_default": {
+      "feedback": {
+        "kind": "direction",
+        "bearing_deg": 36.06061183044153,
+        "half_width_deg": 1.0
+      },
+      "q": [
+        750.0,
+        -500.0
+      ],
+      "stages": [
+        {
+          "stage": "P",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 129.74139553752855,
+          "R": 64.87069776876427,
+          "label": "exact wedges"
+        },
+        {
+          "stage": "P_intersect_A",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 129.74139553752855,
+          "R": 64.87069776876427,
+          "label": "64-side tangent outer estimate"
+        },
+        {
+          "stage": "plus_receiving_disks",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 129.74139553752855,
+          "R": 64.87069776876427,
+          "label": "64-side tangent outer estimate"
+        },
+        {
+          "stage": "exclude_both_5m_disks",
+          "status": "SAMPLE_AND_OUTER",
+          "d": 129.74139553705635,
+          "R": 64.87069776852817,
+          "r_U": 64.87069779916439,
+          "label": "nonconvex K sample lower estimates; r_U conservative outer; open disks not polygon clipping"
+        }
+      ],
+      "dominant_constraint": "angular constraints dominate within tangent-outer resolution",
+      "q1_object_unchanged": true,
+      "fixed_old_q": [
+        750.0,
+        -500.0
+      ],
+      "reselected_q": [
+        750.0,
+        -500.0
+      ]
+    },
+    "ordinary_default": {
+      "feedback": {
+        "kind": "direction",
+        "bearing_deg": 70.13994116329519,
+        "half_width_deg": 1.0
+      },
+      "q": [
+        886.4029587292166,
+        23.23348351174343
+      ],
+      "stages": [
+        {
+          "stage": "P",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 132.9587438149707,
+          "R": 66.47937190748534,
+          "label": "exact wedges"
+        },
+        {
+          "stage": "P_intersect_A",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 132.9587438149707,
+          "R": 66.47937190748534,
+          "label": "64-side tangent outer estimate"
+        },
+        {
+          "stage": "plus_receiving_disks",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 132.9587438149707,
+          "R": 66.47937190748534,
+          "label": "64-side tangent outer estimate"
+        },
+        {
+          "stage": "exclude_both_5m_disks",
+          "status": "SAMPLE_AND_OUTER",
+          "d": 132.95874381448778,
+          "R": 66.47937190724389,
+          "r_U": 66.47937193788539,
+          "label": "nonconvex K sample lower estimates; r_U conservative outer; open disks not polygon clipping"
+        }
+      ],
+      "dominant_constraint": "angular constraints dominate within tangent-outer resolution",
+      "q1_object_unchanged": true,
+      "fixed_old_q": [
+        886.4029587292166,
+        23.23348351174343
+      ],
+      "reselected_q": [
+        886.4029587292166,
+        23.23348351174343
+      ]
+    },
+    "tangent_default": {
+      "feedback": {
+        "kind": "direction",
+        "bearing_deg": 58.033363071269,
+        "half_width_deg": 1.0
+      },
+      "q": [
+        1500.0,
+        500.0
+      ],
+      "stages": [
+        {
+          "stage": "P",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 44.17540468678625,
+          "R": 22.087702343393126,
+          "label": "exact wedges"
+        },
+        {
+          "stage": "P_intersect_A",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 20.781811260912757,
+          "R": 10.390905630456379,
+          "label": "64-side tangent outer estimate"
+        },
+        {
+          "stage": "plus_receiving_disks",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 20.781811260912757,
+          "R": 10.390905630456379,
+          "label": "64-side tangent outer estimate"
+        },
+        {
+          "stage": "exclude_both_5m_disks",
+          "status": "SAMPLE_AND_OUTER",
+          "d": 19.92964645225733,
+          "R": 9.964823226128665,
+          "r_U": 10.39090566085639,
+          "label": "nonconvex K sample lower estimates; r_U conservative outer; open disks not polygon clipping"
+        }
+      ],
+      "dominant_constraint": "P_intersect_A",
+      "q1_object_unchanged": true,
+      "fixed_old_q": [
+        1500.0,
+        500.0
+      ],
+      "reselected_q": [
+        1500.0,
+        500.0
+      ]
+    },
+    "same_station_unbounded_control": {
+      "feedback": {
+        "kind": "direction",
+        "bearing_deg": 0.0,
+        "half_width_deg": 1.0
+      },
+      "q": [
+        0.0,
+        0.0
+      ],
+      "stages": [
+        {
+          "stage": "P",
+          "status": "OK",
+          "kind": "UNBOUNDED",
+          "d": null,
+          "R": null,
+          "label": "exact wedges"
+        },
+        {
+          "stage": "P_intersect_A",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 1800.274190479034,
+          "R": 900.2742113624835,
+          "label": "64-side tangent outer estimate"
+        },
+        {
+          "stage": "plus_receiving_disks",
+          "status": "OK",
+          "kind": "POLYGON",
+          "d": 1500.2284920658615,
+          "R": 750.2285094687362,
+          "label": "64-side tangent outer estimate"
+        },
+        {
+          "stage": "exclude_both_5m_disks",
+          "status": "SAMPLE_AND_OUTER",
+          "d": 1495.00305594868,
+          "R": 747.6153934199143,
+          "r_U": 750.2285094991362,
+          "label": "nonconvex K sample lower estimates; r_U conservative outer; open disks not polygon clipping"
+        }
+      ],
+      "dominant_constraint": "arena makes P bounded; receiving disks further reduce finite outer bound",
+      "q1_object_unchanged": true,
+      "fixed_old_q": [
+        0.0,
+        0.0
+      ],
+      "reselected_q": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "accounting": {
+    "sample_count": 1915,
+    "base_sample_count": 903,
+    "common_additions": 1012,
+    "shifted_sample_count": 1318,
+    "score_calls": 2,
+    "elapsed_seconds": 0.300248500003363
+  },
+  "same_station_control": "information diagnostic only; excluded from Q2 distinct-station choice"
+}

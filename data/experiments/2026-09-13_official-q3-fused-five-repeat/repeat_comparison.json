@@ -1,0 +1,162 @@
+{
+  "complete": true,
+  "parameters": {
+    "task_order": "nearest",
+    "trial_radius": 65.0,
+    "max_active": 2,
+    "share_limit": 6,
+    "localization_weight": 0.08,
+    "remainder_weight": 1.5
+  },
+  "summary": [
+    {
+      "label": "原baseline",
+      "runs": 10,
+      "all_clear": 10,
+      "mean_cleared": 12.2,
+      "mean_localization_clear_s": 263.92754303895606,
+      "mean_program_runtime_s": 0.8985840541965444,
+      "mean_localization_clear_s_deviation_percent": 0.0,
+      "mean_program_runtime_s_deviation_percent": 0.0
+    },
+    {
+      "label": "融合方案第一轮",
+      "runs": 5,
+      "all_clear": 5,
+      "mean_cleared": 11.8,
+      "mean_localization_clear_s": 271.9080844315884,
+      "mean_program_runtime_s": 0.7359442999877501,
+      "mean_localization_clear_s_deviation_percent": 3.023762241993211,
+      "mean_program_runtime_s_deviation_percent": -18.099559351096673
+    },
+    {
+      "label": "融合方案第二轮",
+      "runs": 5,
+      "all_clear": 5,
+      "mean_cleared": 13.4,
+      "mean_localization_clear_s": 241.07579527159675,
+      "mean_program_runtime_s": 0.7133800750074443,
+      "mean_localization_clear_s_deviation_percent": -8.658341416070536,
+      "mean_program_runtime_s_deviation_percent": -20.610646085267724
+    },
+    {
+      "label": "融合方案两轮合计",
+      "runs": 10,
+      "all_clear": 10,
+      "mean_cleared": 12.6,
+      "mean_localization_clear_s": 256.4919398515926,
+      "mean_program_runtime_s": 0.7246621874975971,
+      "mean_localization_clear_s_deviation_percent": -2.8172895870386627,
+      "mean_program_runtime_s_deviation_percent": -19.355102718182206
+    }
+  ],
+  "trials": [
+    {
+      "round": 1,
+      "order": 1,
+      "case_code": "T96Y-88TW-5D6A-N93F",
+      "cleared": 11,
+      "sources": 11,
+      "localization_clear_s": 292.3340774545455,
+      "program_runtime_s": 0.6993632499943487,
+      "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five/host/auto_practice_evidence/20260913-144043-c0239e79"
+    },
+    {
+      "round": 1,
+      "order": 2,
+      "case_code": "689W-V2NM-WQRH-B75J",
+      "cleared": 13,
+      "sources": 13,
+      "localization_clear_s": 235.93373353846152,
+      "program_runtime_s": 0.7930689159838948,
+      "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five/host/auto_practice_evidence/20260913-144145-cc376ede"
+    },
+    {
+      "round": 1,
+      "order": 3,
+      "case_code": "JRDS-CP4B-PP8G-WCJN",
+      "cleared": 14,
+      "sources": 14,
+      "localization_clear_s": 239.9049599285714,
+      "program_runtime_s": 0.5622309589816723,
+      "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five/host/auto_practice_evidence/20260913-144247-98ff5a44"
+    },
+    {
+      "round": 1,
+      "order": 4,
+      "case_code": "GY4N-FAKW-3VGC-SHR2",
+      "cleared": 10,
+      "sources": 10,
+      "localization_clear_s": 308.8288486,
+      "program_runtime_s": 0.8168866249907296,
+      "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five/host/auto_practice_evidence/20260913-144348-b93a7257"
+    },
+    {
+      "round": 1,
+      "order": 5,
+      "case_code": "3QKZ-DD3C-4KN2-Q2SD",
+      "cleared": 11,
+      "sources": 11,
+      "localization_clear_s": 282.53880263636364,
+      "program_runtime_s": 0.8081717499881051,
+      "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five/host/auto_practice_evidence/20260913-144448-a4717dbc"
+    },
+    {
+      "round": 2,
+      "order": 1,
+      "case_code": "KSPP-3D97-BEQM-R42S",
+      "cleared": 13,
+      "sources": 13,
+      "localization_clear_s": 231.09600707692306,
+      "program_runtime_s": 0.7083792920166161,
+      "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/auto_practice_evidence/20260913-145836-559ef4a9"
+    },
+    {
+      "round": 2,
+      "order": 2,
+      "case_code": "Y37N-JADG-U8CT-VN75",
+      "cleared": 11,
+      "sources": 11,
+      "localization_clear_s": 298.2491122727273,
+      "program_runtime_s": 0.7293859999917913,
+      "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/auto_practice_evidence/20260913-145938-fb426b76"
+    },
+    {
+      "round": 2,
+      "order": 3,
+      "case_code": "HEKJ-E7EN-7ZNB-R8F4",
+      "cleared": 15,
+      "sources": 15,
+      "localization_clear_s": 202.10266646666665,
+      "program_runtime_s": 0.6402525000157766,
+      "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/auto_practice_evidence/20260913-150043-9573d7ba"
+    },
+    {
+      "round": 2,
+      "order": 4,
+      "case_code": "FS6J-N2JK-SVAM-2U53",
+      "cleared": 12,
+      "sources": 12,
+      "localization_clear_s": 255.43494566666666,
+      "program_runtime_s": 0.7928664160135668,
+      "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/auto_practice_evidence/20260913-150146-96f97301"
+    },
+    {
+      "round": 2,
+      "order": 5,
+      "case_code": "BMEF-NVMT-W6CY-UD9E",
+      "cleared": 16,
+      "sources": 16,
+      "localization_clear_s": 218.496244875,
+      "program_runtime_s": 0.6960161669994704,
+      "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat/host/auto_practice_evidence/20260913-150249-721aa4d3"
+    }
+  ],
+  "first_round": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five",
+  "second_round": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-fused-five-repeat",
+  "first_round_runs_sha256": "0f5df8a8758b72d59b1b2e45d50b04ce62bfb2107d954f1b9ad8c73f09234509",
+  "second_round_runs_sha256": "df923e251196459b3d5e15c79575543007d82acd95b1d18c7b10fbc378ff1450",
+  "retained_cases": 10,
+  "descriptive_only": true,
+  "superiority_test_performed": false
+}

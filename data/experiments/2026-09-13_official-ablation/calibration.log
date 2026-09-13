@@ -1,0 +1,26 @@
+OFFICIAL_ABLATION_VARIANT {"problem": 3, "variant": "full__g50", "guest_code": "C:\\BAblation-20260913\\B"}
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 17}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "PBQU-NDYS-GQSY-TED8", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 18}
+AUTHORITATIVE_RESULT {"id": 18, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 2090476979982055963, "case_code": "PBQU-NDYS-GQSY-TED8", "entered": 1, "jammer_count": 14, "cleared_jammer_count": 14, "clear_failure_count": 0, "virtual_time_us": 3437669341, "end_reason": "user_exit", "created_at_ms": 1789236481137}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+OFFICIAL_ABLATION_VARIANT {"problem": 4, "variant": "full__g35", "guest_code": "C:\\BAblation-20260913\\B"}
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 18}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "JJFQ-CQ7V-D885-Y3JU", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 19}
+AUTHORITATIVE_RESULT {"id": 19, "team_no": "202623001141", "problem_no": 4, "practice_run_no": 9196035875871764778, "case_code": "JJFQ-CQ7V-D885-Y3JU", "entered": 1, "jammer_count": 10, "cleared_jammer_count": 10, "clear_failure_count": 0, "virtual_time_us": 6161848011, "end_reason": "user_exit", "created_at_ms": 1789236514711}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

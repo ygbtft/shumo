@@ -1,0 +1,17 @@
+{
+  "recorded_runs": 742,
+  "complete": true,
+  "phases": {
+    "calibration": 2,
+    "screen": 500,
+    "robustness": 240
+  },
+  "all_cleared": 742,
+  "unique_cases": 742,
+  "official_ledger_verified": true,
+  "gui_counts_verified": true,
+  "parameters_and_schedule_verified": true,
+  "maximum_action_error_s": 4.999908469471848e-07,
+  "mock_executions": 0,
+  "official_formal_runs": 0
+}

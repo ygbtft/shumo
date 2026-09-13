@@ -1,0 +1,9 @@
+﻿{"time":"2026-09-12T18:27:56.9987209Z","data":{"label":"initial","file":"001-initial.png","session":2,"text_file":"001-initial.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T18:28:01.9654563Z","data":{"label":"before-completion-close","file":"002-before-completion-close.png","session":2,"text_file":"002-before-completion-close.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T18:28:04.3060706Z","data":{"title":"问题4演练测试完成","case_code":"BJE9-5ZHQ-QDSC-99KH","text":"问题4演练测试完成 问题4演练测试完成 问题4演练测试：机器狗已发送 /exit 指令，测试正常结束。\n本次案例含干扰源15个，其中全向2个、定向13个。\n行为日志已保存。 确认","button":"确认"},"event":"ALLOW_COMPLETION_COMPOSITE"}
+{"time":"2026-09-12T18:28:04.3353338Z","data":{"text":"问题4演练测试完成 / 确认","clicks":1},"event":"UIA_INVOKE_COMPLETION"}
+{"time":"2026-09-12T18:28:07.9172290Z","data":{"label":"after-completion-close","file":"003-after-completion-close.png","session":2,"text_file":"003-after-completion-close.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T18:28:13.1411776Z","data":{"label":"before-click","file":"004-before-click.png","session":2,"text_file":"004-before-click.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T18:28:15.2025919Z","data":{"expected":"返回演练测试","point":[3278,615],"text":"返回演练测试"},"event":"ALLOW_CANDIDATE"}
+{"time":"2026-09-12T18:28:15.2078449Z","data":{"text":"返回演练测试","clicks":2},"event":"UIA_INVOKE"}
+{"time":"2026-09-12T18:28:16.7544233Z","data":{"label":"after-click","file":"005-after-click.png","session":2,"text_file":"005-after-click.uia.json"},"event":"SNAPSHOT"}

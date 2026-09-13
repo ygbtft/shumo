@@ -1,0 +1,80 @@
+{
+  "command": [
+    "/Users/flower/math/2026/B题/models/q1q2/sensitivity.py",
+    "--output",
+    "models/q1q2/reviews/sensitivity/results",
+    "--search-seconds",
+    "30"
+  ],
+  "python": "/Users/flower/math/2026/B题/models/q1q2/.venv/bin/python",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "numpy": "2.5.3",
+  "config": {
+    "station_steps_m": [
+      50.0,
+      25.0
+    ],
+    "source_grids": [
+      [
+        5,
+        13
+      ],
+      [
+        9,
+        25
+      ],
+      [
+        17,
+        49
+      ]
+    ],
+    "starts": 2,
+    "station_initial_step_m": 25.0,
+    "station_min_step_m": 1.5625,
+    "pair_starts": 4,
+    "pair_rounds": 4,
+    "refine_pairs": false,
+    "time_budget_s": 30.0,
+    "movement_budget_m": null,
+    "policy": {
+      "length_abs": 1e-10,
+      "angle_abs": 1e-12,
+      "relative": 1e-12
+    },
+    "second_half_width_deg": 1.0,
+    "block_size": 256,
+    "boundary_step_deg": 15.0,
+    "boundary_precision_m": 1e-05,
+    "near_offset_m": 1e-07,
+    "require_direction": false,
+    "restrict_action_to_arena": false,
+    "tie_floor_m": 0.1,
+    "tie_multiplier": 1.0
+  },
+  "source_hashes": {
+    "sensitivity.py": "dfd4cb399b4ae4a3dbed1dc2a72dbd9ab5eb5b07e018b589fd6098602d3456f6",
+    "diagnostics.py": "a10a8048dcb0ad39de0614da6ca7ecbb628d795e2836458c71efae58c8e520a9",
+    "q2.py": "01c048bbac895927350d9a5e0896d3dd7694242bc69e99bf65df83ab9dac609b",
+    "feasible.py": "51f65bfe64a8d42b8b456b145382227a982d50303d5fa8bba4a232fef564706b",
+    "geometry.py": "e8695d2fcf87d2c17c08e5aa44222866262db9eae8ad757332f172b5edde0114",
+    "circle.py": "fcf91c9eeacc8731228b4b9f20d579a5f1529a2d3c3e9ecc9cd4dbe61d156e18",
+    "PLAN.md": "c30834e603668347502bd326c394c58110abce8848ddc841d1e802da10b26da8"
+  },
+  "optional": {
+    "S5": "NOT_RUN: optional frozen-field synthesis outside minimal scope",
+    "S6": "NOT_RUN: optional direction-only ablation outside minimal scope"
+  },
+  "warnings": [
+    "No simulator; no official test; numerical estimates not certified bounds",
+    "S1 rounding is nearest-rounding outer model, not exact quantization",
+    "S3 known rho is extra information; S4 inside arena is artificial ablation",
+    "S7 symmetric coordinates need not be unique; variations are not error bounds",
+    "S9 B is metres, movement seconds=actual distance/5; B10 lower bound only standard"
+  ],
+  "reuse": {
+    "S2": "all final rows",
+    "S7": "standard default search and final candidates",
+    "S8": "F11_S8.json",
+    "S9": "F9_B*.json plus standard_default"
+  }
+}

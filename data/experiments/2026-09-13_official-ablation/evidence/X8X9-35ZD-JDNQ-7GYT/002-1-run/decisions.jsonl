@@ -1,0 +1,16 @@
+﻿{"time":"2026-09-12T19:04:43.8023635Z","data":{"label":"initial","file":"001-initial.png","session":2,"text_file":"001-initial.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:04:44.7728007Z","data":{"expected":"开始问题4演练测试","point":[3210,1158],"text":"开始问题4演练测试"},"event":"ALLOW_CANDIDATE"}
+{"time":"2026-09-12T19:04:46.1482168Z","data":{"label":"before-click","file":"002-before-click.png","session":2,"text_file":"002-before-click.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:04:47.0060755Z","data":{"expected":"开始问题4演练测试","point":[3210,1158],"text":"开始问题4演练测试"},"event":"ALLOW_CANDIDATE"}
+{"time":"2026-09-12T19:04:47.0279195Z","data":{"text":"开始问题4演练测试","clicks":1},"event":"UIA_INVOKE"}
+{"time":"2026-09-12T19:04:48.0019070Z","data":{"label":"after-click","file":"003-after-click.png","session":2,"text_file":"003-after-click.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:04:49.0293830Z","data":{"label":"waiting-practice-ready","file":"004-waiting-practice-ready.png","session":2,"text_file":"004-waiting-practice-ready.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:04:50.0102105Z","data":{"label":"waiting-practice-ready","file":"005-waiting-practice-ready.png","session":2,"text_file":"005-waiting-practice-ready.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:04:50.9997134Z","data":{"label":"waiting-practice-ready","file":"006-waiting-practice-ready.png","session":2,"text_file":"006-waiting-practice-ready.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:04:51.9535874Z","data":{"label":"waiting-practice-ready","file":"007-waiting-practice-ready.png","session":2,"text_file":"007-waiting-practice-ready.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:04:52.9190362Z","data":{"label":"waiting-practice-ready","file":"008-waiting-practice-ready.png","session":2,"text_file":"008-waiting-practice-ready.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:04:52.9982614Z","data":{"problem":4,"case_code":"X8X9-35ZD-JDNQ-7GYT"},"event":"POST_CLICK_VERIFIED"}
+{"time":"2026-09-12T19:04:53.2442056Z","data":{"label":"before-robot","file":"009-before-robot.png","session":2,"text_file":"009-before-robot.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:04:53.2849504Z","data":{"args":["-B","official_ablation_robot.py","--variant","full__g35","--problem","4","--method","range_grid21_29","--mode","practice","--base-url","http://127.0.0.1:2026","--robot-id","202623001141","--confirm-practice"],"cwd":"C:\\BAblation-20260913\\B","case_code":"X8X9-35ZD-JDNQ-7GYT"},"event":"ROBOT_START"}
+{"time":"2026-09-12T19:04:55.5882133Z","data":{"label":"robot-watch","file":"010-robot-watch.png","session":2,"text_file":"010-robot-watch.uia.json"},"event":"SNAPSHOT"}
+{"time":"2026-09-12T19:04:59.6513932Z","data":{"label":"completed","file":"011-completed.png","session":2,"text_file":"011-completed.uia.json"},"event":"SNAPSHOT"}

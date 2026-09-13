@@ -1,0 +1,7 @@
+{
+  "action": "run",
+  "problem": 3,
+  "robot_id": "202623001141",
+  "policy": "formal-q3-once",
+  "expected_case": "G4MK-ZVXM-A682-MVBS"
+}

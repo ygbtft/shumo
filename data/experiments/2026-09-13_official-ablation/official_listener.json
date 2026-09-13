@@ -1,0 +1,16 @@
+[
+    {
+        "address":  "::1",
+        "port":  2026,
+        "pid":  4320,
+        "name":  "jammers-simulator.exe",
+        "executable":  "C:\\Jammers\\jammers-simulator.exe"
+    },
+    {
+        "address":  "127.0.0.1",
+        "port":  2026,
+        "pid":  4320,
+        "name":  "jammers-simulator.exe",
+        "executable":  "C:\\Jammers\\jammers-simulator.exe"
+    }
+]

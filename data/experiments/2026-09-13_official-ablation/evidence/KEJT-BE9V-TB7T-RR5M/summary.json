@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 97,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 7857249491134439448,
+      "case_code": "KEJT-BE9V-TB7T-RR5M",
+      "entered": 1,
+      "jammer_count": 14,
+      "cleared_jammer_count": 14,
+      "clear_failure_count": 0,
+      "virtual_time_us": 6316287699,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789239842857
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 6316287699,
+  "total_jammer_count": 14,
+  "total_cleared_jammer_count": 14,
+  "total_clear_failure_count": 0
+}

@@ -1,4 +1,0 @@
-bootstrap_gain_pct_high,bootstrap_gain_pct_low,faster_cases,gain_per_source_pct,layout_blocks,mean_delta_total_s,method,n,slower_cases,split,task,tied_cases,worst_regression_case,worst_regression_s
-0.0,0.0,0,0.0,30,0.0,two_opt,150,0,confirmation,q3_active,150,uniform__iid__57,0.0
-5.059578181383337,1.6313492789767723,111,3.357029415022239,30,-373.49677226000006,fireworks,150,39,confirmation,q4_active,0,clustered__adversarial-positive__58,1217.2782069999994
-0.0,0.0,0,0.0,30,0.0,two_opt,150,0,confirmation,q4_conservative,150,uniform__iid__57,0.0

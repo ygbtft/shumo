@@ -1,5 +1,0 @@
-追溯归档说明：此文件不是原始stdout。该短几何实验最初没有将stdout单独重定向保存。
-现有原始结构化记录：run_config.json、results.json、checks.json、code_snapshot/。
-checks.json原始记录：passed=3, failed=0, legal_direction_updates=1340, wall_s=0.17040429200278595。
-guaranteed_candidates_never_missed=true；continuous_bounds_enclose_all_legal_sample_posteriors=true；strictly_expands_old_candidate_union=true。
-此处只转录已存在数值，不重跑以伪造原始日志；完整任务计分数0，正式请求0。

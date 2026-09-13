@@ -1,0 +1,1042 @@
+{
+  "backend": "official-practice",
+  "guest_root": "C:\\BAblation-20260913",
+  "scope": "core-gates",
+  "repeats": 10,
+  "settings": [
+    {
+      "problem": 3,
+      "variant": "full__g50"
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50"
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50"
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50"
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50"
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50"
+    },
+    {
+      "problem": 3,
+      "variant": "full__g20"
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80"
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35"
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35"
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35"
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35"
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35"
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20"
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40"
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80"
+    }
+  ],
+  "schedule": [
+    {
+      "problem": 3,
+      "variant": "full__g20",
+      "block": 1,
+      "order": 1
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35",
+      "block": 1,
+      "order": 2
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35",
+      "block": 1,
+      "order": 3
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35",
+      "block": 1,
+      "order": 4
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40",
+      "block": 1,
+      "order": 5
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50",
+      "block": 1,
+      "order": 6
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35",
+      "block": 1,
+      "order": 7
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50",
+      "block": 1,
+      "order": 8
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80",
+      "block": 1,
+      "order": 9
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35",
+      "block": 1,
+      "order": 10
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50",
+      "block": 1,
+      "order": 11
+    },
+    {
+      "problem": 3,
+      "variant": "full__g50",
+      "block": 1,
+      "order": 12
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50",
+      "block": 1,
+      "order": 13
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50",
+      "block": 1,
+      "order": 14
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20",
+      "block": 1,
+      "order": 15
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80",
+      "block": 1,
+      "order": 16
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35",
+      "block": 2,
+      "order": 17
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35",
+      "block": 2,
+      "order": 18
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35",
+      "block": 2,
+      "order": 19
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50",
+      "block": 2,
+      "order": 20
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80",
+      "block": 2,
+      "order": 21
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50",
+      "block": 2,
+      "order": 22
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35",
+      "block": 2,
+      "order": 23
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20",
+      "block": 2,
+      "order": 24
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50",
+      "block": 2,
+      "order": 25
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50",
+      "block": 2,
+      "order": 26
+    },
+    {
+      "problem": 3,
+      "variant": "full__g50",
+      "block": 2,
+      "order": 27
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35",
+      "block": 2,
+      "order": 28
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50",
+      "block": 2,
+      "order": 29
+    },
+    {
+      "problem": 3,
+      "variant": "full__g20",
+      "block": 2,
+      "order": 30
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40",
+      "block": 2,
+      "order": 31
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80",
+      "block": 2,
+      "order": 32
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35",
+      "block": 3,
+      "order": 33
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35",
+      "block": 3,
+      "order": 34
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50",
+      "block": 3,
+      "order": 35
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35",
+      "block": 3,
+      "order": 36
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50",
+      "block": 3,
+      "order": 37
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80",
+      "block": 3,
+      "order": 38
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40",
+      "block": 3,
+      "order": 39
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35",
+      "block": 3,
+      "order": 40
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50",
+      "block": 3,
+      "order": 41
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80",
+      "block": 3,
+      "order": 42
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50",
+      "block": 3,
+      "order": 43
+    },
+    {
+      "problem": 3,
+      "variant": "full__g20",
+      "block": 3,
+      "order": 44
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20",
+      "block": 3,
+      "order": 45
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50",
+      "block": 3,
+      "order": 46
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35",
+      "block": 3,
+      "order": 47
+    },
+    {
+      "problem": 3,
+      "variant": "full__g50",
+      "block": 3,
+      "order": 48
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35",
+      "block": 4,
+      "order": 49
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50",
+      "block": 4,
+      "order": 50
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80",
+      "block": 4,
+      "order": 51
+    },
+    {
+      "problem": 3,
+      "variant": "full__g50",
+      "block": 4,
+      "order": 52
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35",
+      "block": 4,
+      "order": 53
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35",
+      "block": 4,
+      "order": 54
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80",
+      "block": 4,
+      "order": 55
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50",
+      "block": 4,
+      "order": 56
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20",
+      "block": 4,
+      "order": 57
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35",
+      "block": 4,
+      "order": 58
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50",
+      "block": 4,
+      "order": 59
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40",
+      "block": 4,
+      "order": 60
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50",
+      "block": 4,
+      "order": 61
+    },
+    {
+      "problem": 3,
+      "variant": "full__g20",
+      "block": 4,
+      "order": 62
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50",
+      "block": 4,
+      "order": 63
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35",
+      "block": 4,
+      "order": 64
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50",
+      "block": 5,
+      "order": 65
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50",
+      "block": 5,
+      "order": 66
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20",
+      "block": 5,
+      "order": 67
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35",
+      "block": 5,
+      "order": 68
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80",
+      "block": 5,
+      "order": 69
+    },
+    {
+      "problem": 3,
+      "variant": "full__g20",
+      "block": 5,
+      "order": 70
+    },
+    {
+      "problem": 3,
+      "variant": "full__g50",
+      "block": 5,
+      "order": 71
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35",
+      "block": 5,
+      "order": 72
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50",
+      "block": 5,
+      "order": 73
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35",
+      "block": 5,
+      "order": 74
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40",
+      "block": 5,
+      "order": 75
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50",
+      "block": 5,
+      "order": 76
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80",
+      "block": 5,
+      "order": 77
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35",
+      "block": 5,
+      "order": 78
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35",
+      "block": 5,
+      "order": 79
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50",
+      "block": 5,
+      "order": 80
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50",
+      "block": 6,
+      "order": 81
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50",
+      "block": 6,
+      "order": 82
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35",
+      "block": 6,
+      "order": 83
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35",
+      "block": 6,
+      "order": 84
+    },
+    {
+      "problem": 3,
+      "variant": "full__g50",
+      "block": 6,
+      "order": 85
+    },
+    {
+      "problem": 3,
+      "variant": "full__g20",
+      "block": 6,
+      "order": 86
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35",
+      "block": 6,
+      "order": 87
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20",
+      "block": 6,
+      "order": 88
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80",
+      "block": 6,
+      "order": 89
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35",
+      "block": 6,
+      "order": 90
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50",
+      "block": 6,
+      "order": 91
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35",
+      "block": 6,
+      "order": 92
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50",
+      "block": 6,
+      "order": 93
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50",
+      "block": 6,
+      "order": 94
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40",
+      "block": 6,
+      "order": 95
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80",
+      "block": 6,
+      "order": 96
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50",
+      "block": 7,
+      "order": 97
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35",
+      "block": 7,
+      "order": 98
+    },
+    {
+      "problem": 3,
+      "variant": "full__g20",
+      "block": 7,
+      "order": 99
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40",
+      "block": 7,
+      "order": 100
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50",
+      "block": 7,
+      "order": 101
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35",
+      "block": 7,
+      "order": 102
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80",
+      "block": 7,
+      "order": 103
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35",
+      "block": 7,
+      "order": 104
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50",
+      "block": 7,
+      "order": 105
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80",
+      "block": 7,
+      "order": 106
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50",
+      "block": 7,
+      "order": 107
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20",
+      "block": 7,
+      "order": 108
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50",
+      "block": 7,
+      "order": 109
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35",
+      "block": 7,
+      "order": 110
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35",
+      "block": 7,
+      "order": 111
+    },
+    {
+      "problem": 3,
+      "variant": "full__g50",
+      "block": 7,
+      "order": 112
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50",
+      "block": 8,
+      "order": 113
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50",
+      "block": 8,
+      "order": 114
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20",
+      "block": 8,
+      "order": 115
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50",
+      "block": 8,
+      "order": 116
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50",
+      "block": 8,
+      "order": 117
+    },
+    {
+      "problem": 3,
+      "variant": "full__g50",
+      "block": 8,
+      "order": 118
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50",
+      "block": 8,
+      "order": 119
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35",
+      "block": 8,
+      "order": 120
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35",
+      "block": 8,
+      "order": 121
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35",
+      "block": 8,
+      "order": 122
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80",
+      "block": 8,
+      "order": 123
+    },
+    {
+      "problem": 3,
+      "variant": "full__g20",
+      "block": 8,
+      "order": 124
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40",
+      "block": 8,
+      "order": 125
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80",
+      "block": 8,
+      "order": 126
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35",
+      "block": 8,
+      "order": 127
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35",
+      "block": 8,
+      "order": 128
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35",
+      "block": 9,
+      "order": 129
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20",
+      "block": 9,
+      "order": 130
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35",
+      "block": 9,
+      "order": 131
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50",
+      "block": 9,
+      "order": 132
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80",
+      "block": 9,
+      "order": 133
+    },
+    {
+      "problem": 3,
+      "variant": "full__g50",
+      "block": 9,
+      "order": 134
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35",
+      "block": 9,
+      "order": 135
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50",
+      "block": 9,
+      "order": 136
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40",
+      "block": 9,
+      "order": 137
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80",
+      "block": 9,
+      "order": 138
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35",
+      "block": 9,
+      "order": 139
+    },
+    {
+      "problem": 3,
+      "variant": "full__g20",
+      "block": 9,
+      "order": 140
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50",
+      "block": 9,
+      "order": 141
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50",
+      "block": 9,
+      "order": 142
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50",
+      "block": 9,
+      "order": 143
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35",
+      "block": 9,
+      "order": 144
+    },
+    {
+      "problem": 3,
+      "variant": "full__g80",
+      "block": 10,
+      "order": 145
+    },
+    {
+      "problem": 4,
+      "variant": "no_share__g35",
+      "block": 10,
+      "order": 146
+    },
+    {
+      "problem": 3,
+      "variant": "full__g50",
+      "block": 10,
+      "order": 147
+    },
+    {
+      "problem": 4,
+      "variant": "no_negative__g35",
+      "block": 10,
+      "order": 148
+    },
+    {
+      "problem": 4,
+      "variant": "full__g35",
+      "block": 10,
+      "order": 149
+    },
+    {
+      "problem": 4,
+      "variant": "full__g40",
+      "block": 10,
+      "order": 150
+    },
+    {
+      "problem": 3,
+      "variant": "online_nearest__g50",
+      "block": 10,
+      "order": 151
+    },
+    {
+      "problem": 3,
+      "variant": "no_share__g50",
+      "block": 10,
+      "order": 152
+    },
+    {
+      "problem": 3,
+      "variant": "nearest_sensing__g50",
+      "block": 10,
+      "order": 153
+    },
+    {
+      "problem": 3,
+      "variant": "scan_then_service__g50",
+      "block": 10,
+      "order": 154
+    },
+    {
+      "problem": 3,
+      "variant": "full__g20",
+      "block": 10,
+      "order": 155
+    },
+    {
+      "problem": 4,
+      "variant": "scan_then_service__g35",
+      "block": 10,
+      "order": 156
+    },
+    {
+      "problem": 4,
+      "variant": "full__g80",
+      "block": 10,
+      "order": 157
+    },
+    {
+      "problem": 3,
+      "variant": "no_negative__g50",
+      "block": 10,
+      "order": 158
+    },
+    {
+      "problem": 4,
+      "variant": "online_nearest__g35",
+      "block": 10,
+      "order": 159
+    },
+    {
+      "problem": 4,
+      "variant": "full__g20",
+      "block": 10,
+      "order": 160
+    }
+  ],
+  "randomization_seed": 216091301,
+  "pairable": false,
+  "scoring": "Official practice_statistics_tasks.virtual_time_us / jammer_count",
+  "scene_assignment": "New simulator case each run; no hidden source inputs read by robot",
+  "runtime_manifest_sha256": "f2c50c4023652e7bae2eb387f70b895270d7a34e6b1050d17ec86560e75210e2",
+  "official_formal_runs": 0,
+  "local_mock_scored_runs": 0,
+  "calibration_runs": 2
+}

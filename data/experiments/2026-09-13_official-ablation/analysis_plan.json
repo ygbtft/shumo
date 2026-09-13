@@ -1,0 +1,12 @@
+{
+  "frozen_at": "2026-09-13T02:12:40.028178+08:00",
+  "scope": "16 settings x 10 cases",
+  "primary": "Official sum(virtual_time_us)/1e6/sum(jammer_count), show completion separately; incomplete prefixes do not establish efficiency",
+  "interval": "10000 independent case bootstrap replicates per group, 95% percentile interval",
+  "test": "Exact swap of two treatment labels within the 10 randomized order blocks; 1024 assignments; Holm over 14 contrasts",
+  "secondary": "Sensitivity only: total_s ~ variant + source_count (+ directional_count for Q4), OLS HC3 t intervals; normalize to pooled source_count; Holm over 14",
+  "caveat": "Each official case is unique. Temporal randomized blocks do not create matched scene pairs. Small sample and geometry remain unobserved.",
+  "calibration": "2 runs excluded",
+  "prior_validation_results_seen": 4,
+  "analysis_sha256": "1fe4536b7656f7f52f6700e45c572658a83aa122146004fb521dec1499cb685c"
+}

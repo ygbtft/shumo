@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 69,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 7853721084870347475,
+      "case_code": "2NS7-Q7Q9-DKUS-55U7",
+      "entered": 1,
+      "jammer_count": 15,
+      "cleared_jammer_count": 15,
+      "clear_failure_count": 1,
+      "virtual_time_us": 3500591096,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789238624976
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3500591096,
+  "total_jammer_count": 15,
+  "total_cleared_jammer_count": 15,
+  "total_clear_failure_count": 1
+}

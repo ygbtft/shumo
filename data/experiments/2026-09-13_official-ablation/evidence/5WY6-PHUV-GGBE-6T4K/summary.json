@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 139,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 6986661120003052259,
+      "case_code": "5WY6-PHUV-GGBE-6T4K",
+      "entered": 1,
+      "jammer_count": 12,
+      "cleared_jammer_count": 12,
+      "clear_failure_count": 0,
+      "virtual_time_us": 6545911652,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789241810437
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 6545911652,
+  "total_jammer_count": 12,
+  "total_cleared_jammer_count": 12,
+  "total_clear_failure_count": 0
+}

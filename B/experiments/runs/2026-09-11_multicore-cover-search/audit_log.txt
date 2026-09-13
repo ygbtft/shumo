@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/dingdingzai/Desktop/数学建模/B/multicore_cover_audit.py", line 6, in <module>
-    from peer_benchmark import Source
-ImportError: cannot import name 'Source' from 'peer_benchmark' (/Users/dingdingzai/Desktop/数学建模/B/peer_benchmark.py)
-multicore-cover-search 216 actual blind-source witnesses passed
-multicore-cover-smallcore 192 actual blind-source witnesses passed

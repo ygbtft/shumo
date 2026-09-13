@@ -1,0 +1,13 @@
+{"time": "2026-09-13T03:12:12.014875+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 3, "variant": "full__g80", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T03:12:12.995046+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T03:12:12.995674+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:12:16.627177+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T03:12:17.071701+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 107}
+{"time": "2026-09-13T03:12:17.935583+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T03:12:17.936163+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T03:12:36.097978+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "8YS9-6PBT-YEZ8-H2DU", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T03:12:36.499661+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 108}
+{"time": "2026-09-13T03:12:36.500295+08:00", "event": "AUTHORITATIVE_RESULT", "id": 108, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 1089291124990526070, "case_code": "8YS9-6PBT-YEZ8-H2DU", "entered": 1, "jammer_count": 12, "cleared_jammer_count": 12, "clear_failure_count": 0, "virtual_time_us": 2824377884, "end_reason": "user_exit", "created_at_ms": 1789240351423}
+{"time": "2026-09-13T03:12:37.421626+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T03:12:37.422212+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:12:51.944316+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

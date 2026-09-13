@@ -1,0 +1,42 @@
+{
+  "problem": 4,
+  "variant": "no_share__g35",
+  "method": "range_grid21_29",
+  "mode": "practice",
+  "base_url": "http://127.0.0.1:2026",
+  "robot_id": "202623001141",
+  "confirm_practice": true,
+  "variant_spec": {
+    "component": "no_share",
+    "gate": 35.0,
+    "family": "core",
+    "id": "no_share__g35"
+  },
+  "backend": "official-practice",
+  "mock_executions": 0,
+  "policy_specs": {
+    "3": {
+      "range_area7": {
+        "kind": "coupled_completion",
+        "layout": "ring7",
+        "dispatch_model": "base",
+        "range_skip": true,
+        "trial_radius": 50.0,
+        "area_prior": true,
+        "remainder_weight": 1.5
+      }
+    },
+    "4": {
+      "range_grid21_29": {
+        "kind": "coupled_width",
+        "layout": "grid21_29",
+        "dispatch_model": "base",
+        "range_skip": true,
+        "fraction": 0.15,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "trial_radius": 35.0
+      }
+    }
+  }
+}

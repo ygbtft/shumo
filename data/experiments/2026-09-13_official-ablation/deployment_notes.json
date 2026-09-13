@@ -1,0 +1,6 @@
+{
+  "runtime_hash_files": 213,
+  "manual_setup": "Created empty C:\\BAblation-20260913\\B\\robot_runs before first robot launch; the guarded UI enumerates existing run folders.",
+  "policy_code_changes_after_freeze": 0,
+  "orchestration_fix": "prepare() now creates the empty run output directory for future deployments; running batch keeps originally loaded host code."
+}

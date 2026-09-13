@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 79,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 4146791610557762881,
+      "case_code": "JXYN-NTAT-RHHG-9NCN",
+      "entered": 1,
+      "jammer_count": 16,
+      "cleared_jammer_count": 16,
+      "clear_failure_count": 0,
+      "virtual_time_us": 5971482242,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789239062387
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 5971482242,
+  "total_jammer_count": 16,
+  "total_cleared_jammer_count": 16,
+  "total_clear_failure_count": 0
+}

@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 119,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 2694566617042321716,
+      "case_code": "PPZV-A44V-WB87-BZA3",
+      "entered": 1,
+      "jammer_count": 12,
+      "cleared_jammer_count": 12,
+      "clear_failure_count": 1,
+      "virtual_time_us": 5986328340,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789240869578
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 5986328340,
+  "total_jammer_count": 12,
+  "total_cleared_jammer_count": 12,
+  "total_clear_failure_count": 1
+}

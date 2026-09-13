@@ -1,0 +1,13 @@
+{"time": "2026-09-13T03:15:20.510771+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 3, "variant": "no_share__g50", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T03:15:21.513318+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T03:15:21.514017+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:15:25.141228+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T03:15:25.561878+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 111}
+{"time": "2026-09-13T03:15:26.532990+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T03:15:26.533363+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T03:15:43.873878+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "RWUH-6EMZ-5GP7-8S4W", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T03:15:44.307407+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 112}
+{"time": "2026-09-13T03:15:44.308262+08:00", "event": "AUTHORITATIVE_RESULT", "id": 112, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 939762230261805878, "case_code": "RWUH-6EMZ-5GP7-8S4W", "entered": 1, "jammer_count": 10, "cleared_jammer_count": 10, "clear_failure_count": 0, "virtual_time_us": 3100179197, "end_reason": "user_exit", "created_at_ms": 1789240539710}
+{"time": "2026-09-13T03:15:45.345630+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T03:15:45.345921+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:15:59.462445+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

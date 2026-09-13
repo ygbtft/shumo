@@ -1,0 +1,26 @@
+{
+  "source": [
+    1499.0,
+    0.0
+  ],
+  "candidate": [
+    0.0,
+    0.0
+  ],
+  "source_in_F": true,
+  "correct_C_sig": {
+    "status": "IN",
+    "max_violation": 0.0,
+    "extremal_source": null,
+    "witness_attained": false,
+    "g_low": null,
+    "g_high": null,
+    "direction_status": "IN",
+    "distance_to_closure": 5.0,
+    "conservative_direction_interior": false,
+    "reason": "same_point_first_direction",
+    "exact_definition": "S in C_dir subset C_sig; repeated bearing is fixed"
+  },
+  "wrong_uniform_1000_intersection_accepts": false,
+  "explanation": "S always receives its fixed first signal; far source may have rho>=1499, not uniformly 1000"
+}

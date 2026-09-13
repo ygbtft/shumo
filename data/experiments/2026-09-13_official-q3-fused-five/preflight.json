@@ -1,0 +1,13 @@
+{
+  "actual_parameters": {
+    "task_order": "nearest",
+    "trial_radius": 65.0,
+    "max_active": 2,
+    "share_limit": 6,
+    "localization_weight": 0.08,
+    "remainder_weight": 1.5
+  },
+  "network_requests": 0,
+  "mock_imported": false,
+  "integrated_builder_sha256": "7497b3704f5851ec3e9691bdbf181d07c3d37391bff36515df34a1de8dab2a0e"
+}

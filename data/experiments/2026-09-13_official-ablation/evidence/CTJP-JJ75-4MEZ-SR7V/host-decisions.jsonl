@@ -1,0 +1,13 @@
+{"time": "2026-09-13T02:48:29.377135+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 4, "variant": "full__g20", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T02:48:30.390904+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T02:48:30.391574+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:48:33.208695+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T02:48:33.606495+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 75}
+{"time": "2026-09-13T02:48:34.624157+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T02:48:34.624750+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T02:48:53.984660+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "CTJP-JJ75-4MEZ-SR7V", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T02:48:54.374082+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 76}
+{"time": "2026-09-13T02:48:54.374841+08:00", "event": "AUTHORITATIVE_RESULT", "id": 76, "team_no": "202623001141", "problem_no": 4, "practice_run_no": 7908976001189223171, "case_code": "CTJP-JJ75-4MEZ-SR7V", "entered": 1, "jammer_count": 13, "cleared_jammer_count": 13, "clear_failure_count": 0, "virtual_time_us": 6716605274, "end_reason": "user_exit", "created_at_ms": 1789238926739}
+{"time": "2026-09-13T02:48:55.345022+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T02:48:55.345556+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:49:20.354361+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

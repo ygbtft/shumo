@@ -1,0 +1,16 @@
+{
+  "user_requested_formal_runs": 1,
+  "problem": 4,
+  "parameters": {
+    "trial_radius": 35.0,
+    "share_limit": 6,
+    "share_cooldown": 150.0,
+    "transverse_m": 40.0,
+    "fraction": 0.15,
+    "steps": 10,
+    "pause_limit": 16,
+    "dispatch": "nearest"
+  },
+  "source": "User explicitly requested one official formal test of the Q4 nearest/default-parameter version",
+  "source_practice": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q4-nearest-five"
+}

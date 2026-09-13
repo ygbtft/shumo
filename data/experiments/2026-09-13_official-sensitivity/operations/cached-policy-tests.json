@@ -1,0 +1,336 @@
+﻿{
+    "decisions":  [
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "问题3正式测试",
+                                       "scope":  "active navigation"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "问题3演练测试 正式",
+                                       "scope":  "active navigation"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "FORMAL practice",
+                                       "scope":  "active navigation"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 production",
+                                       "scope":  "active navigation"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 real test",
+                                       "scope":  "active navigation"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 official test",
+                                       "scope":  "active navigation"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "问题3正式测试",
+                                       "scope":  "main content"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "问题3演练测试 正式",
+                                       "scope":  "main content"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "FORMAL practice",
+                                       "scope":  "main content"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 production",
+                                       "scope":  "main content"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 real test",
+                                       "scope":  "main content"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 official test",
+                                       "scope":  "main content"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "问题3正式测试",
+                                       "scope":  "dialog"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "问题3演练测试 正式",
+                                       "scope":  "dialog"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "FORMAL practice",
+                                       "scope":  "dialog"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 production",
+                                       "scope":  "dialog"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 real test",
+                                       "scope":  "dialog"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 official test",
+                                       "scope":  "dialog"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "问题3正式测试",
+                                       "scope":  "candidate"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "问题3演练测试 正式",
+                                       "scope":  "candidate"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "FORMAL practice",
+                                       "scope":  "candidate"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 production",
+                                       "scope":  "candidate"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 real test",
+                                       "scope":  "candidate"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "演练 official test",
+                                       "scope":  "candidate"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "问题3正式测试",
+                                       "scope":  "candidate"
+                                   }
+                      },
+                      {
+                          "event":  "DENY_FORMAL",
+                          "data":  {
+                                       "text":  "开始问题3演练测试 FORMAL",
+                                       "scope":  "candidate"
+                                   }
+                      }
+                  ],
+    "gui_calls":  0,
+    "http_calls":  0,
+    "checks":  [
+                   {
+                       "scope":  "active navigation",
+                       "rejected":  true,
+                       "text":  "问题3正式测试"
+                   },
+                   {
+                       "scope":  "active navigation",
+                       "rejected":  true,
+                       "text":  "问题3演练测试 正式"
+                   },
+                   {
+                       "scope":  "active navigation",
+                       "rejected":  true,
+                       "text":  "FORMAL practice"
+                   },
+                   {
+                       "scope":  "active navigation",
+                       "rejected":  true,
+                       "text":  "演练 production"
+                   },
+                   {
+                       "scope":  "active navigation",
+                       "rejected":  true,
+                       "text":  "演练 real test"
+                   },
+                   {
+                       "scope":  "active navigation",
+                       "rejected":  true,
+                       "text":  "演练 official test"
+                   },
+                   {
+                       "scope":  "main content",
+                       "rejected":  true,
+                       "text":  "问题3正式测试"
+                   },
+                   {
+                       "scope":  "main content",
+                       "rejected":  true,
+                       "text":  "问题3演练测试 正式"
+                   },
+                   {
+                       "scope":  "main content",
+                       "rejected":  true,
+                       "text":  "FORMAL practice"
+                   },
+                   {
+                       "scope":  "main content",
+                       "rejected":  true,
+                       "text":  "演练 production"
+                   },
+                   {
+                       "scope":  "main content",
+                       "rejected":  true,
+                       "text":  "演练 real test"
+                   },
+                   {
+                       "scope":  "main content",
+                       "rejected":  true,
+                       "text":  "演练 official test"
+                   },
+                   {
+                       "scope":  "dialog",
+                       "rejected":  true,
+                       "text":  "问题3正式测试"
+                   },
+                   {
+                       "scope":  "dialog",
+                       "rejected":  true,
+                       "text":  "问题3演练测试 正式"
+                   },
+                   {
+                       "scope":  "dialog",
+                       "rejected":  true,
+                       "text":  "FORMAL practice"
+                   },
+                   {
+                       "scope":  "dialog",
+                       "rejected":  true,
+                       "text":  "演练 production"
+                   },
+                   {
+                       "scope":  "dialog",
+                       "rejected":  true,
+                       "text":  "演练 real test"
+                   },
+                   {
+                       "scope":  "dialog",
+                       "rejected":  true,
+                       "text":  "演练 official test"
+                   },
+                   {
+                       "scope":  "candidate",
+                       "rejected":  true,
+                       "text":  "问题3正式测试"
+                   },
+                   {
+                       "scope":  "candidate",
+                       "rejected":  true,
+                       "text":  "问题3演练测试 正式"
+                   },
+                   {
+                       "scope":  "candidate",
+                       "rejected":  true,
+                       "text":  "FORMAL practice"
+                   },
+                   {
+                       "scope":  "candidate",
+                       "rejected":  true,
+                       "text":  "演练 production"
+                   },
+                   {
+                       "scope":  "candidate",
+                       "rejected":  true,
+                       "text":  "演练 real test"
+                   },
+                   {
+                       "scope":  "candidate",
+                       "rejected":  true,
+                       "text":  "演练 official test"
+                   },
+                   {
+                       "scope":  "candidate gate",
+                       "rejected":  true,
+                       "text":  "问题3正式测试"
+                   },
+                   {
+                       "scope":  "candidate gate",
+                       "rejected":  true,
+                       "text":  "开始问题3演练测试 FORMAL"
+                   },
+                   {
+                       "scope":  "candidate gate",
+                       "rejected":  true,
+                       "text":  "开始问题4演练测试"
+                   },
+                   {
+                       "scope":  "candidate gate",
+                       "rejected":  true,
+                       "text":  "确认"
+                   },
+                   {
+                       "scope":  "candidate gate",
+                       "rejected":  true,
+                       "text":  "开始问题3测试"
+                   }
+               ],
+    "passed":  30
+}

@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-13T04:11:28.284259+08:00",
+  "finalization": {
+    "completed_at": "2026-09-13T04:11:20.140444+08:00",
+    "official_validation_runs": 160,
+    "official_calibration_runs": 2,
+    "official_encrypted_logs": 162,
+    "guest_frozen_code_verified": true,
+    "report": "REPORT.md"
+  }
+}

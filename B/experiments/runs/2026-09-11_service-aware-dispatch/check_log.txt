@@ -1,3 +1,0 @@
-Protocol prechecks completed Q 3
-Protocol prechecks completed Q 4
-Passed 389

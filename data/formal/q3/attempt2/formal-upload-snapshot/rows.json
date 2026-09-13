@@ -1,0 +1,23 @@
+{
+  "rows": [
+    {
+      "kind": "formal_behavior",
+      "problem_no": 3,
+      "formal_index": 2,
+      "case_code": "3VUE-GVZH-MPKV-GBWE",
+      "package_sha256": "cddf04e9ec88698ede115553375f249cd1a2e4d36b467e2ff26bd852566e10df",
+      "package_bytes": 108907,
+      "formal_upload_state": "outer_verified",
+      "state": "confirmed",
+      "attempt_count": 3,
+      "last_error_code": "",
+      "received_at_ms": 1789284077987
+    }
+  ],
+  "copied_database": "C:\\WINDOWS\\TEMP\\auto-practice-db-96kom6qv\\snapshot\\0-b\\upload-queue.sqlite3",
+  "sha256": {
+    "": "2fb9e76bc8b8bb820a77e21342abe7b079f687749503315e13c0cf95106675e0",
+    "-wal": "d6eb98f32340b0b6dca3498a1f612bc4b74ee4ef1f53299d87775ebd20587f22"
+  },
+  "source_opened_by_sqlite": false
+}

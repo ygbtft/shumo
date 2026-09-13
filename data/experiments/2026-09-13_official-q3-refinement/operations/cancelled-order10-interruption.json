@@ -1,0 +1,25 @@
+{
+  "assignment": {
+    "order": 10,
+    "problem": 3,
+    "phase": "refinement",
+    "block": 5,
+    "method": "range_area7",
+    "setting": "candidate",
+    "changes": {
+      "trial_radius": 65,
+      "max_active": 2
+    },
+    "parameters": {
+      "trial_radius": 65,
+      "share_limit": 6,
+      "max_active": 2,
+      "localization_weight": 0.08,
+      "remainder_weight": 1.5
+    }
+  },
+  "error": "RuntimeError('USER_REQUESTED_FUSED_FIVE')",
+  "evidence": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-q3-refinement/host/auto_practice_evidence/20260913-143622-9a31c75a",
+  "working_evidence": "/Users/flower/Downloads/AutoPractice/20260913-143622-9a31c75a",
+  "at": "2026-09-13T14:36:25.231274+08:00"
+}

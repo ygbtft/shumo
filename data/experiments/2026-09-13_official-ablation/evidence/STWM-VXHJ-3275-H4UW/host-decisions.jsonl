@@ -1,0 +1,13 @@
+{"time": "2026-09-13T03:20:07.657179+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 3, "variant": "full__g20", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T03:20:08.650701+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T03:20:08.651013+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:20:12.285271+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T03:20:12.685917+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 117}
+{"time": "2026-09-13T03:20:13.629205+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T03:20:13.629514+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T03:20:32.599974+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "STWM-VXHJ-3275-H4UW", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T03:20:33.032918+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 118}
+{"time": "2026-09-13T03:20:33.033662+08:00", "event": "AUTHORITATIVE_RESULT", "id": 118, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 29466718383992559, "case_code": "STWM-VXHJ-3275-H4UW", "entered": 1, "jammer_count": 16, "cleared_jammer_count": 16, "clear_failure_count": 0, "virtual_time_us": 3769783450, "end_reason": "user_exit", "created_at_ms": 1789240827562}
+{"time": "2026-09-13T03:20:33.948863+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T03:20:33.949252+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:20:48.480846+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

@@ -1,0 +1,7 @@
+{
+  "source_archive": "/Users/flower/math/2026/B\u9898/B/experiments/runs/2026-09-13_official-ablation",
+  "original_files": 213,
+  "original_manifest_sha256": "f2c50c4023652e7bae2eb387f70b895270d7a34e6b1050d17ec86560e75210e2",
+  "variant": "online_nearest__g50",
+  "problem": 3
+}

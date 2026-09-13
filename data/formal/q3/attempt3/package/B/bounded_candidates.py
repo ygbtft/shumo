@@ -1,0 +1,56 @@
+"""Frozen Q3/Q4 baselines and explicitly named Q3 experimental candidates."""
+import json
+from pathlib import Path
+
+import numpy as np
+from coupled_dispatch_policy import CoupledCompletionPolicy, CoupledWidthPolicy
+from omni_negative_policy import OmniNegativeCompletionPolicy
+from ring_coverage import stations
+
+ROOT = Path(__file__).resolve().parent
+
+# Copy the effective parameters, including the selected clear gates; historical
+# experiment defaults (80/40 m) must not silently replace the current 50/35 m.
+SPECS = {
+    3: {"range_area7": dict(kind="coupled_completion", layout="ring7",
+                           dispatch_model="base", range_skip=True,
+                           trial_radius=50., area_prior=True, remainder_weight=1.5)},
+    4: {"range_grid21_29": dict(kind="coupled_width", layout="grid21_29",
+                               dispatch_model="base", range_skip=True,
+                               fraction=.15, share_cooldown=150.,
+                               transverse_m=40., trial_radius=35.)},
+}
+# Fuse the ablation's nearest-task dispatcher with the sensitivity candidate.
+# Keep the historical baseline addressable for reproducible comparisons.
+SPECS[3]["range_area7_nearest65_a2"] = dict(
+    SPECS[3]["range_area7"], task_order="nearest", trial_radius=65., max_active=2)
+
+
+def load_paths(problem):
+    # Load only the chosen layout. No certificate generation or experimental
+    # JSON reads are needed at runtime. Preserve route order and float values.
+    if problem == 3:
+        return {"ring7": stations(6, 1140.)}
+    if problem == 4:
+        data = json.loads((ROOT / "layouts/grid21_29.json").read_text())
+        return {"grid21_29": np.asarray(data["route"])}
+    raise ValueError("Only problems 3 and 4 are registered")
+
+
+def build(client, spec, problem, paths):
+    # This single adapter retains bounded_http.run_http's factory contract.
+    # There is deliberately no forwarding to historical experiment factories.
+    parameters = spec.copy()
+    parameters.pop("kind")
+    points = paths[parameters.pop("layout")]
+    if problem == 3:
+        max_active = parameters.pop("max_active", None)
+        if max_active is not None and (type(max_active) is not int or not 1 <= max_active <= 5):
+            raise ValueError("Q3 primary localization budget must be an integer from 1 to 5")
+        policy = OmniNegativeCompletionPolicy(client, points, mixed=False, **parameters)
+        if max_active is not None:
+            policy.max_active = max_active
+        return policy
+    if problem == 4:
+        return CoupledWidthPolicy(client, points, mixed=True, **parameters)
+    raise ValueError("Only problems 3 and 4 are registered")

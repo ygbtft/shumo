@@ -1,0 +1,13 @@
+{"time": "2026-09-13T02:22:06.807788+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 3, "variant": "online_nearest__g50", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T02:22:07.866032+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T02:22:07.866661+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:22:09.893819+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T02:22:10.333106+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 38}
+{"time": "2026-09-13T02:22:11.303885+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T02:22:11.304858+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T02:22:25.819837+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "YP7D-KGMB-RG2N-87AW", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T02:22:26.252083+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 39}
+{"time": "2026-09-13T02:22:26.252950+08:00", "event": "AUTHORITATIVE_RESULT", "id": 39, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 2103430931457776368, "case_code": "YP7D-KGMB-RG2N-87AW", "entered": 1, "jammer_count": 15, "cleared_jammer_count": 15, "clear_failure_count": 0, "virtual_time_us": 3067227980, "end_reason": "user_exit", "created_at_ms": 1789237341752}
+{"time": "2026-09-13T02:22:27.300738+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T02:22:27.301621+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:22:41.816597+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

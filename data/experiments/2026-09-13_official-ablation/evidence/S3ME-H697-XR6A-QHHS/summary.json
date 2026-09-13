@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 166,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 1383116805627868652,
+      "case_code": "S3ME-H697-XR6A-QHHS",
+      "entered": 1,
+      "jammer_count": 13,
+      "cleared_jammer_count": 13,
+      "clear_failure_count": 1,
+      "virtual_time_us": 3246047046,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789243178504
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3246047046,
+  "total_jammer_count": 13,
+  "total_cleared_jammer_count": 13,
+  "total_clear_failure_count": 1
+}

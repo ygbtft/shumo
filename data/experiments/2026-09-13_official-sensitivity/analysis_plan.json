@@ -1,0 +1,17 @@
+{
+  "frozen_at": "2026-09-13T03:28:27.565083+08:00",
+  "observed_sensitivity_results": 0,
+  "primary": "For each problem: 80/80 perturbed and 40/40 baseline all-clear; block-bootstrap ratio upper97.5 < 1.05",
+  "inference": {
+    "bootstrap_replicates": 100000,
+    "noninferiority_ratio": 1.05,
+    "upper_quantile": 0.975,
+    "screen_holm_comparisons": 48,
+    "scenario_pairing": false
+  },
+  "wide_screen": "Exploratory; no post-screen parameter selection or tuning",
+  "random_neighborhood": "Independent uniform draws per coordinate, reject only all-default; frozen before all outcomes",
+  "all_started_cases_retained": true,
+  "cutoff": "2026-09-13T17:00:00+08:00",
+  "schedule_sha256": "2a2af79e72784b30b529cd29dc1e15522d4160b165e5478cae92ee2ab6bdde5e"
+}

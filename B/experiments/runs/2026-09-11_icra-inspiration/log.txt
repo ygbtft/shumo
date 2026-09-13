@@ -1,4 +1,0 @@
-Located and read the six-page 2013 conference PDF on the author's website, not merely the 2012 technical report. University publication metadata confirms pages 2515-2520 and DOI 10.1109/ICRA.2013.6630920.
-Initial sandbox curl failed because the configured localhost proxy could not be reached. The same exact public-PDF download was approved and succeeded; file saved under B/reference only.
-PyMuPDF (fitz) was unavailable; pypdf already installed was used for complete local text extraction. No package installed, no official simulator request.
-Source metadata and SHA-256 saved in paper_metadata.json. New cooperative/bracket algorithms are our implementations, not attributed as existing algorithms in the cited paper.

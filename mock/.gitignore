@@ -1,7 +1,0 @@
-.venv/
-__pycache__/
-.pytest_cache/
-.mplconfig/
-results/
-dist/
-configs/*.local.json

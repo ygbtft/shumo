@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-13T14:35:00.200890+08:00",
+  "candidate_target": 5,
+  "retained_baseline_runs": 3,
+  "remaining_candidate_orders": [
+    8,
+    10
+  ],
+  "original_80_run_plan_cancelled": true,
+  "descriptive_only": true,
+  "source": "User requested only five candidate runs",
+  "cancelled_order7_had_no_simulator_actions": true
+}

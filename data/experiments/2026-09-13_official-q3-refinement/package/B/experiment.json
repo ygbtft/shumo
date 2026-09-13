@@ -1,0 +1,1434 @@
+{
+  "created_at": "2026-09-13T14:25:16.903780+08:00",
+  "candidate": {
+    "trial_radius": 65,
+    "share_limit": 6,
+    "max_active": 2,
+    "localization_weight": 0.08,
+    "remainder_weight": 1.5
+  },
+  "baseline": {
+    "trial_radius": 50.0,
+    "share_limit": 6,
+    "max_active": 3,
+    "localization_weight": 0.08,
+    "remainder_weight": 1.5
+  },
+  "schedule": [
+    {
+      "order": 1,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 1,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 2,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 1,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 3,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 2,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 4,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 2,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 5,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 3,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 6,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 3,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 7,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 4,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 8,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 4,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 9,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 5,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 10,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 5,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 11,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 6,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 12,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 6,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 13,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 7,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 14,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 7,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 15,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 8,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 16,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 8,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 17,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 9,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 18,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 9,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 19,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 10,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 20,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 10,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 21,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 11,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 22,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 11,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 23,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 12,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 24,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 12,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 25,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 13,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 26,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 13,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 27,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 14,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 28,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 14,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 29,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 15,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 30,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 15,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 31,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 16,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 32,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 16,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 33,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 17,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 34,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 17,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 35,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 18,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 36,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 18,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 37,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 19,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 38,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 19,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 39,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 20,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 40,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 20,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 41,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 21,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 42,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 21,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 43,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 22,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 44,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 22,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 45,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 23,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 46,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 23,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 47,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 24,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 48,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 24,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 49,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 25,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 50,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 25,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 51,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 26,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 52,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 26,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 53,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 27,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 54,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 27,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 55,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 28,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 56,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 28,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 57,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 29,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 58,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 29,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 59,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 30,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 60,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 30,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 61,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 31,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 62,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 31,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 63,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 32,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 64,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 32,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 65,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 33,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 66,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 33,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 67,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 34,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 68,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 34,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 69,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 35,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 70,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 35,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 71,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 36,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 72,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 36,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 73,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 37,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 74,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 37,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 75,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 38,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 76,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 38,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 77,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 39,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 78,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 39,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 79,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 40,
+      "method": "range_area7",
+      "setting": "candidate",
+      "changes": {
+        "trial_radius": 65,
+        "max_active": 2
+      },
+      "parameters": {
+        "trial_radius": 65,
+        "share_limit": 6,
+        "max_active": 2,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    },
+    {
+      "order": 80,
+      "problem": 3,
+      "phase": "refinement",
+      "block": 40,
+      "method": "range_area7",
+      "setting": "baseline",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 50.0,
+        "share_limit": 6,
+        "max_active": 3,
+        "localization_weight": 0.08,
+        "remainder_weight": 1.5
+      }
+    }
+  ],
+  "schedule_sha256": "4626d670bb54bf4315da5d05c28d8575047aee7da7b5ed56701b043f1bad05b2",
+  "cutoff": "2026-09-13T17:00:00+08:00",
+  "seed": 216091306,
+  "previous_experiment": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-sensitivity",
+  "previous_runs_sha256": "718fb506f35faa0876d23effbc9a8db15532208fdedc18104a2063ad3b7e3362",
+  "observed_new_validation_results": 0,
+  "primary": "Equal-case arithmetic mean of official virtual seconds / source count; candidate/default ratio",
+  "success_rule": "All 40 candidate and all 40 baseline cases clear; one-sided 95% block-bootstrap ratio upper < 1",
+  "bootstrap_replicates": 100000,
+  "bootstrap_seed": 216091307,
+  "secondary": "Arithmetic mean robot.wall_s, cleared source counts, pooled virtual seconds/source; descriptive only",
+  "no_optional_stopping": true,
+  "no_same_scenario_pairing": true,
+  "official_formal_runs": 0,
+  "mock_executions": 0
+}

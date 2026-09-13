@@ -1,0 +1,27 @@
+{
+  "same_current_and_tested_sources": [
+    "cooperative_policy.py",
+    "joint_policy.py",
+    "completion_sensing_policy.py",
+    "efficient_joint_policy.py",
+    "client.py",
+    "coupled_dispatch_policy.py",
+    "wide_probe_policy.py",
+    "bounded_width_policy.py",
+    "coverage.py",
+    "ring_coverage.py",
+    "adaptive_routes.py",
+    "joint_task_policy.py",
+    "interleaved_policy.py",
+    "intelligent.py",
+    "omni_negative_policy.py",
+    "geometry.py",
+    "bounded_candidates.py",
+    "official_sensitivity_robot.py",
+    "policies.py",
+    "clearance_policy.py",
+    "bracket_policy.py",
+    "layout_certificates.py"
+  ],
+  "different": []
+}

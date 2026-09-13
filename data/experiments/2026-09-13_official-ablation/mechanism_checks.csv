@@ -1,0 +1,17 @@
+﻿problem,variant,runs,shared_known_measurements,ablation_disabled_negative_calls,omni_negative_cuts,bracket_pair_cuts,bracket_cut_inconsistencies,ablation_scoring_calls,active_measurements,active_no_signal,early_optical_trials,early_optical_success,bracket_optical_trials,bracket_optical_success,negative_pair_branch_entries
+3,full__g50,10,195,0,13,0,0,0,72,0,60,53,0,0,0
+3,no_share__g50,10,0,0,9,0,0,0,88,0,68,62,0,0,0
+3,scan_then_service__g50,10,31,0,7,0,0,0,11,0,83,83,0,0,0
+3,no_negative__g50,10,147,1194,0,0,0,0,63,0,59,56,0,0,0
+3,online_nearest__g50,10,214,0,2,0,0,0,63,0,61,60,0,0,0
+3,nearest_sensing__g50,10,256,0,12,0,0,154,157,0,47,44,0,0,0
+3,full__g20,10,213,0,9,0,0,0,121,0,0,0,0,0,0
+3,full__g80,10,187,0,13,0,0,0,39,0,70,67,0,0,0
+4,full__g35,10,145,0,0,2,0,0,118,20,0,0,30,30,2
+4,no_share__g35,10,0,0,0,1,0,0,105,14,0,0,39,37,1
+4,scan_then_service__g35,10,30,0,0,0,0,0,7,2,0,0,22,22,0
+4,no_negative__g35,10,175,0,0,0,0,0,110,12,0,0,27,27,0
+4,online_nearest__g35,10,178,0,0,1,0,0,132,15,0,0,47,47,1
+4,full__g20,10,149,0,0,0,0,0,133,22,0,0,0,0,0
+4,full__g40,10,161,0,0,4,0,0,93,15,0,0,46,45,4
+4,full__g80,10,193,0,0,1,0,0,74,8,0,0,52,47,1

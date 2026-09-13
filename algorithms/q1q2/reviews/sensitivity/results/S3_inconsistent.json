@@ -1,0 +1,1153 @@
+{
+  "first": {
+    "position": [
+      2900.0,
+      0.0
+    ],
+    "bearing_deg": 180.0,
+    "half_width_deg": 1.0,
+    "measurement_id": "",
+    "channel": null,
+    "request_id": null,
+    "origin": null,
+    "error_mode": "THEORETICAL_1_DEG",
+    "rounding_assumption_source": null,
+    "session_id": null,
+    "stage_id": null,
+    "stability_id": null,
+    "raw_bearing_deg": 180.0
+  },
+  "known_radius_models": {
+    "1000.0": {
+      "first": {
+        "position": [
+          2900.0,
+          0.0
+        ],
+        "bearing_deg": 180.0,
+        "half_width_deg": 1.0,
+        "measurement_id": "",
+        "channel": null,
+        "request_id": null,
+        "origin": null,
+        "error_mode": "THEORETICAL_1_DEG",
+        "rounding_assumption_source": null,
+        "session_id": null,
+        "stage_id": null,
+        "stability_id": null,
+        "raw_bearing_deg": 180.0
+      },
+      "physics": {
+        "rho_lo": 1000.0,
+        "rho_hi": 1000.0,
+        "near_radius": 5.0,
+        "clearance_radius": 20.0,
+        "arena_radius": 1800.0,
+        "arena_center": [
+          0.0,
+          0.0
+        ],
+        "action_bounds": [
+          -2000000.0,
+          2000000.0,
+          -2000000.0,
+          2000000.0
+        ]
+      },
+      "policy": {
+        "length_abs": 1e-10,
+        "angle_abs": 1e-12,
+        "relative": 1e-12
+      },
+      "status": "INCONSISTENT_FIRST_OBSERVATION",
+      "boundaries": [],
+      "low_boundaries": [],
+      "high_boundaries": [],
+      "angle_events": [
+        -0.017453292519943295,
+        0.017453292519943295
+      ],
+      "angle_intervals": [],
+      "actual_point": null,
+      "strict_boundary": "distance_from_first > near_radius"
+    },
+    "1250.0": {
+      "first": {
+        "position": [
+          2900.0,
+          0.0
+        ],
+        "bearing_deg": 180.0,
+        "half_width_deg": 1.0,
+        "measurement_id": "",
+        "channel": null,
+        "request_id": null,
+        "origin": null,
+        "error_mode": "THEORETICAL_1_DEG",
+        "rounding_assumption_source": null,
+        "session_id": null,
+        "stage_id": null,
+        "stability_id": null,
+        "raw_bearing_deg": 180.0
+      },
+      "physics": {
+        "rho_lo": 1250.0,
+        "rho_hi": 1250.0,
+        "near_radius": 5.0,
+        "clearance_radius": 20.0,
+        "arena_radius": 1800.0,
+        "arena_center": [
+          0.0,
+          0.0
+        ],
+        "action_bounds": [
+          -2000000.0,
+          2000000.0,
+          -2000000.0,
+          2000000.0
+        ]
+      },
+      "policy": {
+        "length_abs": 1e-10,
+        "angle_abs": 1e-12,
+        "relative": 1e-12
+      },
+      "status": "OK",
+      "boundaries": [
+        {
+          "kind": "arc",
+          "source": "receiving",
+          "start": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "end": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "center": [
+            2900.0,
+            0.0
+          ],
+          "radius": 1250.0,
+          "angle_start": 3.12413936106985,
+          "angle_end": 3.159045946109736,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "end": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "end": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "arc",
+          "source": "arena",
+          "start": [
+            1800.0,
+            0.0
+          ],
+          "end": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1800.0,
+          "angle_start": 0.0,
+          "angle_end": 0.010668179750908927,
+          "attained": true
+        },
+        {
+          "kind": "arc",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "end": [
+            1800.0,
+            -4.4087284769304714e-13
+          ],
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1800.0,
+          "angle_start": 6.272517127428677,
+          "angle_end": 6.283185307179586,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1800.0,
+            0.0
+          ],
+          "end": [
+            1800.0,
+            0.0
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "end": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "end": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "segment",
+          "source": "wedge",
+          "start": [
+            1799.8975719181733,
+            19.2023593098581
+          ],
+          "end": [
+            1650.1903810545111,
+            21.815508046604386
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "segment",
+          "source": "wedge",
+          "start": [
+            1650.1903810545111,
+            -21.815508046604386
+          ],
+          "end": [
+            1799.8975719181733,
+            -19.2023593098581
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        }
+      ],
+      "low_boundaries": [
+        {
+          "kind": "arc",
+          "source": "receiving",
+          "start": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "end": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "center": [
+            2900.0,
+            0.0
+          ],
+          "radius": 1250.0,
+          "angle_start": 3.12413936106985,
+          "angle_end": 3.159045946109736,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "end": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "end": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "arc",
+          "source": "arena",
+          "start": [
+            1800.0,
+            0.0
+          ],
+          "end": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1800.0,
+          "angle_start": 0.0,
+          "angle_end": 0.010668179750908927,
+          "attained": true
+        },
+        {
+          "kind": "arc",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "end": [
+            1800.0,
+            -4.4087284769304714e-13
+          ],
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1800.0,
+          "angle_start": 6.272517127428677,
+          "angle_end": 6.283185307179586,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1800.0,
+            0.0
+          ],
+          "end": [
+            1800.0,
+            0.0
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "end": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "end": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "segment",
+          "source": "wedge",
+          "start": [
+            1799.8975719181733,
+            19.2023593098581
+          ],
+          "end": [
+            1650.1903810545111,
+            21.815508046604386
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "segment",
+          "source": "wedge",
+          "start": [
+            1650.1903810545111,
+            -21.815508046604386
+          ],
+          "end": [
+            1799.8975719181733,
+            -19.2023593098581
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        }
+      ],
+      "high_boundaries": [
+        {
+          "kind": "arc",
+          "source": "radial_split",
+          "start": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "end": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "center": [
+            2900.0,
+            0.0
+          ],
+          "radius": 1250.0,
+          "angle_start": 3.12413936106985,
+          "angle_end": 3.159045946109736,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "radial_split",
+          "start": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "end": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "radial_split",
+          "start": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "end": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "arc",
+          "source": "receiving",
+          "start": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "end": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "center": [
+            2900.0,
+            0.0
+          ],
+          "radius": 1250.0,
+          "angle_start": 3.12413936106985,
+          "angle_end": 3.159045946109736,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "end": [
+            1650.190381054511,
+            21.815508046604297
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "end": [
+            1650.190381054511,
+            -21.81550804660399
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        }
+      ],
+      "angle_events": [
+        -0.017453292519943295,
+        0.017453292519943295
+      ],
+      "angle_intervals": [
+        [
+          -0.017453292519943295,
+          0.017453292519943295
+        ],
+        [
+          -0.017453292519943295,
+          -0.017453292519943295
+        ],
+        [
+          0.017453292519943295,
+          0.017453292519943295
+        ]
+      ],
+      "actual_point": [
+        1725.0,
+        1.43895998899814e-13
+      ],
+      "strict_boundary": "distance_from_first > near_radius"
+    },
+    "1500.0": {
+      "first": {
+        "position": [
+          2900.0,
+          0.0
+        ],
+        "bearing_deg": 180.0,
+        "half_width_deg": 1.0,
+        "measurement_id": "",
+        "channel": null,
+        "request_id": null,
+        "origin": null,
+        "error_mode": "THEORETICAL_1_DEG",
+        "rounding_assumption_source": null,
+        "session_id": null,
+        "stage_id": null,
+        "stability_id": null,
+        "raw_bearing_deg": 180.0
+      },
+      "physics": {
+        "rho_lo": 1500.0,
+        "rho_hi": 1500.0,
+        "near_radius": 5.0,
+        "clearance_radius": 20.0,
+        "arena_radius": 1800.0,
+        "arena_center": [
+          0.0,
+          0.0
+        ],
+        "action_bounds": [
+          -2000000.0,
+          2000000.0,
+          -2000000.0,
+          2000000.0
+        ]
+      },
+      "policy": {
+        "length_abs": 1e-10,
+        "angle_abs": 1e-12,
+        "relative": 1e-12
+      },
+      "status": "OK",
+      "boundaries": [
+        {
+          "kind": "arc",
+          "source": "receiving",
+          "start": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "end": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "center": [
+            2900.0,
+            0.0
+          ],
+          "radius": 1500.0,
+          "angle_start": 3.12413936106985,
+          "angle_end": 3.159045946109736,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "end": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "end": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "arc",
+          "source": "arena",
+          "start": [
+            1800.0,
+            0.0
+          ],
+          "end": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1800.0,
+          "angle_start": 0.0,
+          "angle_end": 0.010668179750908927,
+          "attained": true
+        },
+        {
+          "kind": "arc",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "end": [
+            1800.0,
+            -4.4087284769304714e-13
+          ],
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1800.0,
+          "angle_start": 6.272517127428677,
+          "angle_end": 6.283185307179586,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1800.0,
+            0.0
+          ],
+          "end": [
+            1800.0,
+            0.0
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "end": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "end": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "segment",
+          "source": "wedge",
+          "start": [
+            1799.8975719181733,
+            19.2023593098581
+          ],
+          "end": [
+            1400.228457265413,
+            26.178609655925268
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "segment",
+          "source": "wedge",
+          "start": [
+            1400.228457265413,
+            -26.178609655925268
+          ],
+          "end": [
+            1799.8975719181733,
+            -19.2023593098581
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        }
+      ],
+      "low_boundaries": [
+        {
+          "kind": "arc",
+          "source": "receiving",
+          "start": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "end": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "center": [
+            2900.0,
+            0.0
+          ],
+          "radius": 1500.0,
+          "angle_start": 3.12413936106985,
+          "angle_end": 3.159045946109736,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "end": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "end": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "arc",
+          "source": "arena",
+          "start": [
+            1800.0,
+            0.0
+          ],
+          "end": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1800.0,
+          "angle_start": 0.0,
+          "angle_end": 0.010668179750908927,
+          "attained": true
+        },
+        {
+          "kind": "arc",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "end": [
+            1800.0,
+            -4.4087284769304714e-13
+          ],
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 1800.0,
+          "angle_start": 6.272517127428677,
+          "angle_end": 6.283185307179586,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1800.0,
+            0.0
+          ],
+          "end": [
+            1800.0,
+            0.0
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "end": [
+            1799.897571918173,
+            19.2023593098581
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "arena",
+          "start": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "end": [
+            1799.897571918173,
+            -19.202359309858974
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "segment",
+          "source": "wedge",
+          "start": [
+            1799.8975719181733,
+            19.2023593098581
+          ],
+          "end": [
+            1400.228457265413,
+            26.178609655925268
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "segment",
+          "source": "wedge",
+          "start": [
+            1400.228457265413,
+            -26.178609655925268
+          ],
+          "end": [
+            1799.8975719181733,
+            -19.2023593098581
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        }
+      ],
+      "high_boundaries": [
+        {
+          "kind": "arc",
+          "source": "radial_split",
+          "start": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "end": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "center": [
+            2900.0,
+            0.0
+          ],
+          "radius": 1500.0,
+          "angle_start": 3.12413936106985,
+          "angle_end": 3.159045946109736,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "radial_split",
+          "start": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "end": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "radial_split",
+          "start": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "end": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "arc",
+          "source": "receiving",
+          "start": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "end": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "center": [
+            2900.0,
+            0.0
+          ],
+          "radius": 1500.0,
+          "angle_start": 3.12413936106985,
+          "angle_end": 3.159045946109736,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "end": [
+            1400.228457265413,
+            26.178609655925158
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        },
+        {
+          "kind": "point",
+          "source": "receiving",
+          "start": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "end": [
+            1400.228457265413,
+            -26.178609655924788
+          ],
+          "center": null,
+          "radius": null,
+          "angle_start": 0.0,
+          "angle_end": 0.0,
+          "attained": true
+        }
+      ],
+      "angle_events": [
+        -0.017453292519943295,
+        0.017453292519943295
+      ],
+      "angle_intervals": [
+        [
+          -0.017453292519943295,
+          0.017453292519943295
+        ],
+        [
+          -0.017453292519943295,
+          -0.017453292519943295
+        ],
+        [
+          0.017453292519943295,
+          0.017453292519943295
+        ]
+      ],
+      "actual_point": [
+        1600.0,
+        1.5920408388915592e-13
+      ],
+      "strict_boundary": "distance_from_first > near_radius"
+    }
+  },
+  "interpretation": "known rho=1000 unavailable: nearest arena source is 1100 m away; no optimization or J comparison",
+  "score_calls": 0
+}

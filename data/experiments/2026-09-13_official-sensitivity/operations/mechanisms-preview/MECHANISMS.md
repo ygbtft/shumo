@@ -1,0 +1,13 @@
+# 参数路径与机制计数说明
+
+mechanisms.csv只汇总已归档的真实官方运行内部计数，不回放策略、不生成场景。
+
+- share_limit是每次机会共享的数量上限；0表示关闭该路径。共享次数依赖已知源和几何可用性，不能用设定上限替代实际次数。
+- Q3 max_active与Q4 steps是主定位预算，不强制执行满额。Q3未记录逐源轮数，预算触达数留空；active_measurements可反映实际主测量总数。
+- Q4 maximum_source_rounds与sources_at_round_budget来自实际交错探测计数。达到上限不一定进入光学覆盖：最后一轮也可能已成功清除。
+- Q4 transverse_m为横向位移目标，实际宽度还受1.02°—30°角度约束；fraction改变纵向探测距离。没有记录逐次实际角度，不能宣称全部目标位移均原样执行。
+- pause_limit为全局源任务打断次数上限；source_interruptions记录实际次数，forced_continuations记录达到上限后强制续做的次数。
+- optical_fallback_calls为光学覆盖点清除尝试次数，packet_fallbacks为Q4进入兜底的源任务数，两者单位不同。
+- early_optical_trials/early_optical_success对应Q3门槛试清；bracket_optical_trials/bracket_optical_success对应Q4门槛试清。
+
+本表用于解释参数路径是否实际活跃，不是另一个显著性检验。不同设置运行于不同官方案例；次数差异同时包含场景差异。部分预算未触发、角度截断或动作相同，均不能直接推出参数在所有场景下无影响。

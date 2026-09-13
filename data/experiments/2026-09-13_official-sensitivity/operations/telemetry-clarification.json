@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-13T04:52:16.122008+08:00",
+  "completed": 63,
+  "reason": "Correct missing Q3 round telemetry to null; clarify grid-point optical attempts and exact-test resolution. No outcome or inferential calculation changed.",
+  "changed_functions": [
+    "audit_trial",
+    "report"
+  ],
+  "statistical_functions_unchanged": true,
+  "policy_and_assignments_unchanged": true,
+  "before_sha256": "2d7eea6123f2287d0b3df6750efb4e8faa6ffbe8ae2cb76d0ee2147dca51bc4c",
+  "after_sha256": "098b559d2ee224aab270d00a36576bc4ad73920fa32f2183b3be35c808c97daf"
+}

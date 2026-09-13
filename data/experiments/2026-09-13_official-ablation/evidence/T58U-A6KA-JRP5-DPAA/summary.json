@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 135,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 8621026868125266291,
+      "case_code": "T58U-A6KA-JRP5-DPAA",
+      "entered": 1,
+      "jammer_count": 14,
+      "cleared_jammer_count": 14,
+      "clear_failure_count": 8,
+      "virtual_time_us": 3326851747,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789241639449
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3326851747,
+  "total_jammer_count": 14,
+  "total_cleared_jammer_count": 14,
+  "total_clear_failure_count": 8
+}

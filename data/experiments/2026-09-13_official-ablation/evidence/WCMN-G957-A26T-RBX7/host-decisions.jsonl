@@ -1,0 +1,13 @@
+{"time": "2026-09-13T03:22:23.614671+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 4, "variant": "scan_then_service__g35", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T03:22:24.781758+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T03:22:24.782030+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:22:28.822003+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T03:22:29.272109+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 120}
+{"time": "2026-09-13T03:22:30.201690+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T03:22:30.202220+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T03:22:51.602019+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "WCMN-G957-A26T-RBX7", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T03:22:52.031879+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 121}
+{"time": "2026-09-13T03:22:52.032484+08:00", "event": "AUTHORITATIVE_RESULT", "id": 121, "team_no": "202623001141", "problem_no": 4, "practice_run_no": 6196862763348680381, "case_code": "WCMN-G957-A26T-RBX7", "entered": 1, "jammer_count": 12, "cleared_jammer_count": 12, "clear_failure_count": 0, "virtual_time_us": 7261012589, "end_reason": "user_exit", "created_at_ms": 1789240964043}
+{"time": "2026-09-13T03:22:52.978628+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T03:22:52.979199+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T03:23:17.243041+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

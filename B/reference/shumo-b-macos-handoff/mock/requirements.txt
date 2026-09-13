@@ -1,2 +1,0 @@
-# Cross-platform core + statistics/calibration. HTTP/inproc/recording use stdlib only.
-numpy>=1.26,<3

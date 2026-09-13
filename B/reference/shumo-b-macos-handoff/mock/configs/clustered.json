@@ -1,1 +1,0 @@
-{"scenario":{"position_distribution":"clustered","clusters":3,"cluster_sigma_m":180,"radius_distribution":"fixed","radius_fixed":1000,"directional_fraction":0.5,"direction_distribution":"vonmises","direction_deg":45,"direction_kappa":4},"error":{"model":"adversarial","adversarial_sign":"spatial"}}

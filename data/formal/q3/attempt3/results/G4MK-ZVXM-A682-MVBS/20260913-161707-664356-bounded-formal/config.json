@@ -1,0 +1,16 @@
+{
+  "mode": "formal",
+  "problem": 3,
+  "case_code": "G4MK-ZVXM-A682-MVBS",
+  "robot_id": "202623001141",
+  "method": "range_area7_nearest65_a2",
+  "parameters": {
+    "task_order": "nearest",
+    "trial_radius": 65.0,
+    "max_active": 2,
+    "share_limit": 6,
+    "localization_weight": 0.08,
+    "remainder_weight": 1.5
+  },
+  "mock_executions": 0
+}

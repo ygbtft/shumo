@@ -1,0 +1,66 @@
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 928}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "T96Y-88TW-5D6A-N93F", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 929}
+AUTHORITATIVE_RESULT {"id": 929, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 4165588095384042711, "case_code": "T96Y-88TW-5D6A-N93F", "entered": 1, "jammer_count": 11, "cleared_jammer_count": 11, "clear_failure_count": 1, "virtual_time_us": 3215674852, "end_reason": "user_exit", "created_at_ms": 1789281683539}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FUSED_PROGRESS 1 5
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 929}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "689W-V2NM-WQRH-B75J", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 930}
+AUTHORITATIVE_RESULT {"id": 930, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 7921772940442770098, "case_code": "689W-V2NM-WQRH-B75J", "entered": 1, "jammer_count": 13, "cleared_jammer_count": 13, "clear_failure_count": 1, "virtual_time_us": 3067138536, "end_reason": "user_exit", "created_at_ms": 1789281745156}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FUSED_PROGRESS 2 5
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 930}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "JRDS-CP4B-PP8G-WCJN", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 931}
+AUTHORITATIVE_RESULT {"id": 931, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 5796859117782058332, "case_code": "JRDS-CP4B-PP8G-WCJN", "entered": 1, "jammer_count": 14, "cleared_jammer_count": 14, "clear_failure_count": 1, "virtual_time_us": 3358669439, "end_reason": "user_exit", "created_at_ms": 1789281806104}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FUSED_PROGRESS 3 5
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 931}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "GY4N-FAKW-3VGC-SHR2", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 932}
+AUTHORITATIVE_RESULT {"id": 932, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 3947841063959102934, "case_code": "GY4N-FAKW-3VGC-SHR2", "entered": 1, "jammer_count": 10, "cleared_jammer_count": 10, "clear_failure_count": 2, "virtual_time_us": 3088288486, "end_reason": "user_exit", "created_at_ms": 1789281867482}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FUSED_PROGRESS 4 5
+GUI_JOB {"action": "dry-run", "folder": "001-0-dry-run"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+READ_ONLY_DB_COPY {"label": "001-db-before", "rows": 932}
+GUI_JOB {"action": "run", "folder": "002-1-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"robot_exit": 0, "case_code": "3QKZ-DD3C-4KN2-Q2SD", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+READ_ONLY_DB_COPY {"label": "001-db-after-0", "rows": 933}
+AUTHORITATIVE_RESULT {"id": 933, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 6466466850163703215, "case_code": "3QKZ-DD3C-4KN2-Q2SD", "entered": 1, "jammer_count": 11, "cleared_jammer_count": 11, "clear_failure_count": 2, "virtual_time_us": 3107926829, "end_reason": "user_exit", "created_at_ms": 1789281927062}
+GUI_JOB {"action": "return", "folder": "003-1-return"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}
+FUSED_PROGRESS 5 5
+{"summary": [{"label": "原baseline", "runs": 10, "all_clear": 10, "mean_cleared": 12.2, "mean_localization_clear_s": 263.92754303895606, "mean_program_runtime_s": 0.8985840541965444, "mean_localization_clear_s_deviation_percent": 0.0, "mean_program_runtime_s_deviation_percent": 0.0}, {"label": "最近邻＋50米（历史消融）", "runs": 10, "all_clear": 10, "mean_cleared": 14.1, "mean_localization_clear_s": 238.9018287398747, "mean_program_runtime_s": 0.8156502999045188, "mean_localization_clear_s_deviation_percent": -9.48203965790244, "mean_program_runtime_s_deviation_percent": -9.22938192645535}, {"label": "原排序＋65米＋2轮（此前候选）", "runs": 4, "all_clear": 4, "mean_cleared": 14.75, "mean_localization_clear_s": 233.33955657395833, "mean_program_runtime_s": 0.8323271352564916, "mean_localization_clear_s_deviation_percent": -11.589539353413713, "mean_program_runtime_s_deviation_percent": -7.373480380674624}, {"label": "最近邻＋65米＋2轮（本次融合）", "runs": 5, "all_clear": 5, "mean_cleared": 11.8, "mean_localization_clear_s": 271.9080844315884, "mean_program_runtime_s": 0.7359442999877501, "mean_localization_clear_s_deviation_percent": 3.023762241993211, "mean_program_runtime_s_deviation_percent": -18.099559351096673}], "complete": true}

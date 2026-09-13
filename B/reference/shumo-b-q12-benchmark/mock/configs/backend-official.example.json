@@ -1,8 +1,0 @@
-{
-  "kind": "http_official",
-  "base_url": "http://127.0.0.1:2026",
-  "robot_id": "<当前登录参赛队号>",
-  "timeout": 5,
-  "retries": 2,
-  "session_mode": "practice"
-}

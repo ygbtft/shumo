@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 113,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 2675874529376063434,
+      "case_code": "YK3R-X39M-CCFU-X4JR",
+      "entered": 1,
+      "jammer_count": 13,
+      "cleared_jammer_count": 13,
+      "clear_failure_count": 13,
+      "virtual_time_us": 3325805811,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789240580596
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3325805811,
+  "total_jammer_count": 13,
+  "total_cleared_jammer_count": 13,
+  "total_clear_failure_count": 13
+}

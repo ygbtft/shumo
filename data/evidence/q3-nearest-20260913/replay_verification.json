@@ -1,0 +1,69 @@
+{
+  "recorded_official_cases": 10,
+  "cases": [
+    {
+      "case_code": "ZFJ4-2G6D-3XKS-XNKW",
+      "matched_commands": 128,
+      "max_position_delta_m": 0.0,
+      "original_official_sources": 16
+    },
+    {
+      "case_code": "YP7D-KGMB-RG2N-87AW",
+      "matched_commands": 136,
+      "max_position_delta_m": 0.0,
+      "original_official_sources": 15
+    },
+    {
+      "case_code": "M29Y-3H8J-4QBH-DSK6",
+      "matched_commands": 122,
+      "max_position_delta_m": 0.0,
+      "original_official_sources": 16
+    },
+    {
+      "case_code": "Z4AQ-YQU2-JYE9-NBU4",
+      "matched_commands": 128,
+      "max_position_delta_m": 0.0,
+      "original_official_sources": 10
+    },
+    {
+      "case_code": "HAPY-YH4E-PWYA-954Z",
+      "matched_commands": 123,
+      "max_position_delta_m": 0.0,
+      "original_official_sources": 13
+    },
+    {
+      "case_code": "W8N2-NW42-8JEY-V9NH",
+      "matched_commands": 141,
+      "max_position_delta_m": 0.0,
+      "original_official_sources": 11
+    },
+    {
+      "case_code": "ZECD-F7FS-WBZU-FH5U",
+      "matched_commands": 135,
+      "max_position_delta_m": 0.0,
+      "original_official_sources": 15
+    },
+    {
+      "case_code": "SMWU-J6TC-FUA5-SC9H",
+      "matched_commands": 116,
+      "max_position_delta_m": 0.0,
+      "original_official_sources": 16
+    },
+    {
+      "case_code": "BZDW-U8YZ-A57K-39YJ",
+      "matched_commands": 129,
+      "max_position_delta_m": 0.0,
+      "original_official_sources": 15
+    },
+    {
+      "case_code": "RP3H-ZTGD-K8VU-2YBS",
+      "matched_commands": 125,
+      "max_position_delta_m": 0.0,
+      "original_official_sources": 14
+    }
+  ],
+  "official_requests_sent": 0,
+  "new_simulations": 0,
+  "mode_guards_passed": true,
+  "policy": "online_nearest__g50"
+}

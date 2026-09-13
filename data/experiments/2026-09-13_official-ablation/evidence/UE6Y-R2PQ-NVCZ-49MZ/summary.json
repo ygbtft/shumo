@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 48,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 6568179898842007403,
+      "case_code": "UE6Y-R2PQ-NVCZ-49MZ",
+      "entered": 1,
+      "jammer_count": 11,
+      "cleared_jammer_count": 11,
+      "clear_failure_count": 0,
+      "virtual_time_us": 3258008321,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789237713900
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3258008321,
+  "total_jammer_count": 11,
+  "total_cleared_jammer_count": 11,
+  "total_clear_failure_count": 0
+}

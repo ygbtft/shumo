@@ -1,0 +1,21 @@
+{"time": "2026-09-13T16:15:26.359723+08:00", "event": "GUI_JOB", "action": "inspect", "folder": "001-0-inspect"}
+{"time": "2026-09-13T16:15:26.360452+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T16:15:27.976529+08:00", "event": "GUI_RESULT", "active_navigation": "问题4正式测试", "ok": true, "robot_started": false, "status": "inspected", "clicks": 0}
+{"time": "2026-09-13T16:15:46.770234+08:00", "event": "GUI_JOB", "action": "navigate", "folder": "002-1-navigate"}
+{"time": "2026-09-13T16:15:46.772028+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T16:15:49.193724+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "q3-formal-page", "clicks": 1}
+{"time": "2026-09-13T16:16:12.894216+08:00", "event": "GUI_JOB", "action": "start", "folder": "003-2-start"}
+{"time": "2026-09-13T16:16:12.896971+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T16:16:15.316426+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "single-start-clicked", "clicks": 1}
+{"time": "2026-09-13T16:16:26.770868+08:00", "event": "GUI_JOB", "action": "confirm-start", "folder": "004-3-confirm-start"}
+{"time": "2026-09-13T16:16:26.773695+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T16:16:31.597967+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "single-start-confirmed", "clicks": 1}
+{"time": "2026-09-13T16:16:40.258207+08:00", "event": "GUI_JOB", "action": "confirm-final", "folder": "005-4-confirm-final"}
+{"time": "2026-09-13T16:16:40.259071+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T16:16:45.105332+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "formal-start-confirmed", "clicks": 1}
+{"time": "2026-09-13T16:17:04.873497+08:00", "event": "GUI_JOB", "action": "run", "folder": "006-5-run"}
+{"time": "2026-09-13T16:17:04.874434+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T16:17:13.725741+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "case_code": "G4MK-ZVXM-A682-MVBS", "ok": true, "robot_started": true, "status": "formal-robot-returned", "clicks": 0}
+{"time": "2026-09-13T16:17:42.488309+08:00", "event": "GUI_JOB", "action": "view-upload", "folder": "007-6-view-upload"}
+{"time": "2026-09-13T16:17:42.491374+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T16:17:48.538902+08:00", "event": "GUI_RESULT", "active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "formal-upload-history", "clicks": 2}

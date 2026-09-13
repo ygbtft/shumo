@@ -1,0 +1,7 @@
+{
+  "bundled_official_cases_checked": 162,
+  "source_and_copy_files_matched": 4050,
+  "host_frozen_runtime_files_verified": 213,
+  "guest_postflight": "Official ablation runtime hash match: 213",
+  "all_bundled_cases_pass_score_count_and_action_ledger_checks": true
+}

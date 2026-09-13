@@ -1,0 +1,29 @@
+READY {"directory": "/Users/flower/Downloads/AutoPractice/20260913-151423-0c4eb4ba", "evidence": "/Users/flower/math/2026/B题/B/guest_deploy_evidence/q3-fused-formal-20260913/control/auto_practice_evidence/20260913-151423-0c4eb4ba", "guest_dir": "C:\\BRobot\\auto-practice\\20260913-151423-0c4eb4ba", "unc": "\\\\Mac\\Home\\Downloads\\AutoPractice\\20260913-151423-0c4eb4ba"}
+GUI_JOB {"action": "inspect", "folder": "001-0-inspect"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"stack": "在 Snapshot、C:\\BRobot\\auto-practice\\20260913-151423-0c4eb4ba\\ui.ps1 中: 第 28 行\r\n在 <ScriptBlock>、C:\\BRobot\\auto-practice\\20260913-151423-0c4eb4ba\\ui.ps1 中: 第 47 行", "error": "Team mismatch", "ok": false, "robot_started": false, "clicks": 0}
+ACTION_ERROR RuntimeError('Team mismatch')
+GUI_JOB {"action": "navigate", "folder": "002-1-navigate"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "q3-formal-page", "clicks": 1}
+ACTION_RESULT {"active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "q3-formal-page", "clicks": 1}
+GUI_JOB {"action": "start", "folder": "003-2-start"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "single-start-clicked", "clicks": 1}
+ACTION_RESULT {"active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "single-start-clicked", "clicks": 1}
+GUI_JOB {"action": "confirm-start", "folder": "004-3-confirm-start"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "single-start-confirmed", "clicks": 1}
+ACTION_RESULT {"active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "single-start-confirmed", "clicks": 1}
+GUI_JOB {"action": "confirm-final", "folder": "005-4-confirm-final"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "formal-start-confirmed", "clicks": 1}
+ACTION_RESULT {"active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "formal-start-confirmed", "clicks": 1}
+GUI_JOB {"action": "run", "folder": "006-5-run"}
+WAIT_GUI {"seconds_remaining": 1320}
+GUI_RESULT {"active_navigation": "问题3正式测试", "case_code": "3VUE-GVZH-MPKV-GBWE", "ok": true, "robot_started": true, "status": "formal-robot-returned", "clicks": 0}
+ACTION_RESULT {"active_navigation": "问题3正式测试", "case_code": "3VUE-GVZH-MPKV-GBWE", "ok": true, "robot_started": true, "status": "formal-robot-returned", "clicks": 0}
+GUI_JOB {"action": "view-upload", "folder": "007-6-view-upload"}
+WAIT_GUI {"seconds_remaining": 60}
+GUI_RESULT {"active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "formal-upload-history", "clicks": 2}
+ACTION_RESULT {"active_navigation": "问题3正式测试", "ok": true, "robot_started": false, "status": "formal-upload-history", "clicks": 2}

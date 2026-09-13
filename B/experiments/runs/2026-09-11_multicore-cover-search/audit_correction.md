@@ -1,5 +1,0 @@
-# 独立审计工具修正记录
-
-首次启动审计时从peer_benchmark导入未导出的Source导致ImportError，尚未执行任何见证检查；原traceback保留在audit_log.txt。改为先初始化只读peer路径再从mock.scenario_gen导入Source，随后408个见证全部通过独立点积和后端验证。未修改布局、见证、覆盖条件或计分策略。
-
-另在生成历史训练驱动后，附带计数检查曾遗漏import json，计数命令报NameError；生成文件已完成，补import后的独立读取确认216+192个候选全有实际见证，不影响任何计分行。初始布局直接探查的参数和结果保存在initial_candidate.json，其stdout未单独归档，不冒称完整原始命令日志。

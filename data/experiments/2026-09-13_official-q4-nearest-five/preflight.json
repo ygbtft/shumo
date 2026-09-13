@@ -1,0 +1,14 @@
+{
+  "parameters": {
+    "trial_radius": 35.0,
+    "share_limit": 6,
+    "share_cooldown": 150.0,
+    "transverse_m": 40.0,
+    "fraction": 0.15,
+    "steps": 10,
+    "pause_limit": 16,
+    "dispatch": "nearest"
+  },
+  "official_requests": 0,
+  "mock_executions": 0
+}

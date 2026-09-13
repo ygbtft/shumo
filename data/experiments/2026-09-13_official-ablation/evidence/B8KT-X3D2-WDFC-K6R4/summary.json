@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 77,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 2452958957916871708,
+      "case_code": "B8KT-X3D2-WDFC-K6R4",
+      "entered": 1,
+      "jammer_count": 15,
+      "cleared_jammer_count": 15,
+      "clear_failure_count": 0,
+      "virtual_time_us": 6430021931,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789238978562
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 6430021931,
+  "total_jammer_count": 15,
+  "total_cleared_jammer_count": 15,
+  "total_clear_failure_count": 0
+}

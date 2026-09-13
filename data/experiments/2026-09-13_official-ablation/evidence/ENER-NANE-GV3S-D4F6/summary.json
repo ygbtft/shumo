@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 123,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 6167511699440657490,
+      "case_code": "ENER-NANE-GV3S-D4F6",
+      "entered": 1,
+      "jammer_count": 10,
+      "cleared_jammer_count": 10,
+      "clear_failure_count": 0,
+      "virtual_time_us": 6094891321,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789241071367
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 6094891321,
+  "total_jammer_count": 10,
+  "total_cleared_jammer_count": 10,
+  "total_clear_failure_count": 0
+}

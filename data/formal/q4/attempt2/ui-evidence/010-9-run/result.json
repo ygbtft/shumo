@@ -1,0 +1,8 @@
+﻿{
+    "stack":  "在 Snapshot、C:\\BRobot\\auto-practice\\20260913-152132-c73c342a\\ui.ps1 中: 第 23 行\r\n在 \u003cScriptBlock\u003e、C:\\BRobot\\auto-practice\\20260913-152132-c73c342a\\ui.ps1 中: 第 93 行",
+    "active_navigation":  "问题4正式测试",
+    "error":  "在此对象上找不到属性“ProgrammaticName”。请确认该属性存在。",
+    "ok":  false,
+    "robot_started":  true,
+    "clicks":  0
+}

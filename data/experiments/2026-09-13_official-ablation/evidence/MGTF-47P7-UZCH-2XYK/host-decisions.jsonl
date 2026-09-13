@@ -1,0 +1,13 @@
+{"time": "2026-09-13T02:32:43.723899+08:00", "event": "OFFICIAL_ABLATION_VARIANT", "problem": 3, "variant": "scan_then_service__g50", "guest_code": "C:\\BAblation-20260913\\B"}
+{"time": "2026-09-13T02:32:44.700403+08:00", "event": "GUI_JOB", "action": "dry-run", "folder": "001-0-dry-run"}
+{"time": "2026-09-13T02:32:44.701054+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:32:47.522788+08:00", "event": "GUI_RESULT", "status": "dry-run-ready", "ok": true, "clicks": 0, "robot_started": false}
+{"time": "2026-09-13T02:32:47.956450+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-before", "rows": 53}
+{"time": "2026-09-13T02:32:48.837227+08:00", "event": "GUI_JOB", "action": "run", "folder": "002-1-run"}
+{"time": "2026-09-13T02:32:48.838000+08:00", "event": "WAIT_GUI", "seconds_remaining": 1320}
+{"time": "2026-09-13T02:33:04.955422+08:00", "event": "GUI_RESULT", "robot_exit": 0, "case_code": "MGTF-47P7-UZCH-2XYK", "ok": true, "robot_started": true, "status": "robot-completed", "clicks": 1}
+{"time": "2026-09-13T02:33:05.363926+08:00", "event": "READ_ONLY_DB_COPY", "label": "001-db-after-0", "rows": 54}
+{"time": "2026-09-13T02:33:05.364511+08:00", "event": "AUTHORITATIVE_RESULT", "id": 54, "team_no": "202623001141", "problem_no": 3, "practice_run_no": 5023155096499579663, "case_code": "MGTF-47P7-UZCH-2XYK", "entered": 1, "jammer_count": 13, "cleared_jammer_count": 13, "clear_failure_count": 0, "virtual_time_us": 4098718262, "end_reason": "user_exit", "created_at_ms": 1789237980388}
+{"time": "2026-09-13T02:33:06.329322+08:00", "event": "GUI_JOB", "action": "return", "folder": "003-1-return"}
+{"time": "2026-09-13T02:33:06.329900+08:00", "event": "WAIT_GUI", "seconds_remaining": 60}
+{"time": "2026-09-13T02:33:19.227662+08:00", "event": "GUI_RESULT", "status": "returned-to-practice", "ok": true, "clicks": 2, "robot_started": false}

@@ -1,0 +1,23 @@
+% UTF-8; load ctex, longtable, booktabs, array. Values match Markdown tables.
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{p{0.37\textwidth}rrrrrr}
+\caption{Q3 消融实验及正式采用方案对照}\label{tab:official-q3-1}\\
+\toprule
+方案或参数设置 & 局数 & 平均清除数 & $\bar t$/秒 & $\Delta_t$/\% & $\bar r$/秒 & $\Delta_r$/\% \\
+\midrule\endfirsthead
+\toprule
+方案或参数设置 & 局数 & 平均清除数 & $\bar t$/秒 & $\Delta_t$/\% & $\bar r$/秒 & $\Delta_r$/\% \\
+\midrule\endhead
+\midrule\multicolumn{7}{r}{续下页}\\\endfoot
+\bottomrule\endlastfoot
+baseline（第二次正式方案）：最近邻＋65米＋max\_active=2 & 10 & 12.60 & 256.49 & +0.00 & 0.7217 & +0.00 \\
+two\_opt任务排序，50米 & 10 & 13.40 & 247.50 & -3.51 & 0.8403 & +16.43 \\
+最近邻任务排序，50米 & 10 & 14.10 & 238.90 & -6.86 & 0.8053 & +11.58 \\
+关闭顺路已知源补测，50米 & 10 & 12.50 & 263.86 & +2.87 & 0.7053 & -2.27 \\
+先扫描后清除，50米 & 10 & 12.70 & 315.22 & +22.90 & 0.7841 & +8.65 \\
+关闭负反馈位置裁剪，50米 & 10 & 12.20 & 260.01 & +1.37 & 0.7683 & +6.46 \\
+测向选点改为保收最近邻，50米 & 10 & 12.40 & 297.90 & +16.15 & 1.0247 & +41.98 \\
+two\_opt任务排序，20米 & 10 & 12.50 & 256.62 & +0.05 & 0.7796 & +8.02 \\
+two\_opt任务排序，80米 & 10 & 11.90 & 260.50 & +1.56 & 0.7975 & +10.50 \\
+\end{longtable}\endgroup
+% Include the matching Markdown table notes in the manuscript.

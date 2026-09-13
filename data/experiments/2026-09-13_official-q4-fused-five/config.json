@@ -1,0 +1,119 @@
+{
+  "created_at": "2026-09-13T14:52:40.603832+08:00",
+  "schedule": [
+    {
+      "order": 1,
+      "problem": 4,
+      "phase": "fused-five",
+      "block": 1,
+      "method": "range_grid21_29",
+      "setting": "nearest35_fraction30_share2",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16,
+        "dispatch": "nearest"
+      }
+    },
+    {
+      "order": 2,
+      "problem": 4,
+      "phase": "fused-five",
+      "block": 2,
+      "method": "range_grid21_29",
+      "setting": "nearest35_fraction30_share2",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16,
+        "dispatch": "nearest"
+      }
+    },
+    {
+      "order": 3,
+      "problem": 4,
+      "phase": "fused-five",
+      "block": 3,
+      "method": "range_grid21_29",
+      "setting": "nearest35_fraction30_share2",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16,
+        "dispatch": "nearest"
+      }
+    },
+    {
+      "order": 4,
+      "problem": 4,
+      "phase": "fused-five",
+      "block": 4,
+      "method": "range_grid21_29",
+      "setting": "nearest35_fraction30_share2",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16,
+        "dispatch": "nearest"
+      }
+    },
+    {
+      "order": 5,
+      "problem": 4,
+      "phase": "fused-five",
+      "block": 5,
+      "method": "range_grid21_29",
+      "setting": "nearest35_fraction30_share2",
+      "changes": {},
+      "parameters": {
+        "trial_radius": 35.0,
+        "share_limit": 2,
+        "share_cooldown": 150.0,
+        "transverse_m": 40.0,
+        "fraction": 0.3,
+        "steps": 10,
+        "pause_limit": 16,
+        "dispatch": "nearest"
+      }
+    }
+  ],
+  "schedule_sha256": "8be8c11ed6f7dc3e11aa5f53d49eaa12e257340bceea7ee68290812c875cdf8f",
+  "parameters": {
+    "trial_radius": 35.0,
+    "share_limit": 2,
+    "share_cooldown": 150.0,
+    "transverse_m": 40.0,
+    "fraction": 0.3,
+    "steps": 10,
+    "pause_limit": 16,
+    "dispatch": "nearest"
+  },
+  "target": 5,
+  "source_sensitivity": "/Users/flower/math/2026/B题/B/experiments/runs/2026-09-13_official-sensitivity",
+  "cutoff": "2026-09-13T17:00:00+08:00",
+  "official_formal_runs": 0,
+  "mock_executions": 0,
+  "observed_fused_results": 0,
+  "metric": "arithmetic mean of per-case virtual time / cleared count",
+  "runtime": "official exit real_timestamp_ms minus enter real_timestamp_ms"
+}

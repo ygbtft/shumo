@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-13T04:19:14.973752+08:00",
+  "reason": "UI history growth caused repeated cross-process reads; fresh per-enumeration property cache and linear node collection",
+  "source": "https://learn.microsoft.com/en-us/dotnet/framework/ui-automation/caching-in-ui-automation-clients",
+  "observed_completed_orders": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "before_sha256": "5bdb59ae677c4b1ad48a486f09e2fd5e6ee8847dd24a1cdf1c984a0128633f15",
+  "after_sha256": "6503275601e76b640efdb3c91165ee50ae333895d413b3d1c0913156b9793d64",
+  "strategy_and_assignments_unchanged": true,
+  "action_time_guard_and_invoke_code_byte_identical": true,
+  "all_screenshots_and_nodes_retained": true,
+  "tests_passed": 30,
+  "effective_run": "First new runner setup after atomic helper replacement; verify per-run source-hashes.json"
+}

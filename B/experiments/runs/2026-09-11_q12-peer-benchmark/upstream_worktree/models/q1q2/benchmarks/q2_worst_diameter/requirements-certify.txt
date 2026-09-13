@@ -1,2 +1,0 @@
-# Optional oracle only; production requirements are unchanged.
-mpmath==1.3.0

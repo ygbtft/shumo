@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 150,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 2971424411932923853,
+      "case_code": "VMD5-CH3S-66ZX-J5DG",
+      "entered": 1,
+      "jammer_count": 16,
+      "cleared_jammer_count": 16,
+      "clear_failure_count": 0,
+      "virtual_time_us": 5978405348,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789242385777
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 5978405348,
+  "total_jammer_count": 16,
+  "total_cleared_jammer_count": 16,
+  "total_clear_failure_count": 0
+}

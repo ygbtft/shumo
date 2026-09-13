@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 40,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 1906251706001380145,
+      "case_code": "523G-VWNX-P8RK-3B7Z",
+      "entered": 1,
+      "jammer_count": 14,
+      "cleared_jammer_count": 14,
+      "clear_failure_count": 1,
+      "virtual_time_us": 3036009646,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789237378751
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3036009646,
+  "total_jammer_count": 14,
+  "total_cleared_jammer_count": 14,
+  "total_clear_failure_count": 1
+}

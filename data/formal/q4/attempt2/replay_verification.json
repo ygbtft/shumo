@@ -1,0 +1,42 @@
+{
+  "recorded_official_cases": 5,
+  "cases": [
+    {
+      "case_code": "83HT-K34U-77NB-BBEM",
+      "commands": 227,
+      "max_position_delta_m": 0.0
+    },
+    {
+      "case_code": "TRQQ-M2AX-67Z7-XJBK",
+      "commands": 263,
+      "max_position_delta_m": 0.0
+    },
+    {
+      "case_code": "CVZW-TZ3G-GKJ2-WBDV",
+      "commands": 303,
+      "max_position_delta_m": 0.0
+    },
+    {
+      "case_code": "SB43-B8CF-MZ3A-5XKD",
+      "commands": 290,
+      "max_position_delta_m": 0.0
+    },
+    {
+      "case_code": "J5XZ-BKF7-9MX9-724U",
+      "commands": 295,
+      "max_position_delta_m": 0.0
+    }
+  ],
+  "parameters": {
+    "trial_radius": 35.0,
+    "share_limit": 6,
+    "share_cooldown": 150.0,
+    "transverse_m": 40.0,
+    "fraction": 0.15,
+    "steps": 10,
+    "pause_limit": 16,
+    "dispatch": "nearest"
+  },
+  "official_requests_sent": 0,
+  "new_test_cases": 0
+}

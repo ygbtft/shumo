@@ -1,0 +1,23 @@
+{
+  "rows": [
+    {
+      "kind": "formal_behavior",
+      "problem_no": 3,
+      "formal_index": 3,
+      "case_code": "G4MK-ZVXM-A682-MVBS",
+      "package_sha256": "d2200f7f0939dbb5f8d976bbd99f7759f4f61dc28f811266573d64888ff72c5d",
+      "package_bytes": 109361,
+      "formal_upload_state": "outer_verified",
+      "state": "confirmed",
+      "attempt_count": 3,
+      "last_error_code": "",
+      "received_at_ms": 1789287462818
+    }
+  ],
+  "copied_database": "C:\\WINDOWS\\TEMP\\auto-practice-db-x2xl14sv\\snapshot\\0-b\\upload-queue.sqlite3",
+  "sha256": {
+    "": "2fb9e76bc8b8bb820a77e21342abe7b079f687749503315e13c0cf95106675e0",
+    "-wal": "dafefafac72bf20147ddaec388e04b8638b2a9298111ba0e5272679a8a930977"
+  },
+  "source_opened_by_sqlite": false
+}

@@ -1,0 +1,16 @@
+{
+  "parameters": {
+    "task_order": "nearest",
+    "trial_radius": 65.0,
+    "max_active": 2,
+    "share_limit": 6,
+    "localization_weight": 0.08,
+    "remainder_weight": 1.5
+  },
+  "all_strategy_and_robot_files_identical_to_first_round": true,
+  "changed_package_files": [
+    "B/experiment.json"
+  ],
+  "network_requests": 0,
+  "mock_executions": 0
+}

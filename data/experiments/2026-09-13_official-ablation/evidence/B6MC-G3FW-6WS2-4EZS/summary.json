@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 147,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 1816581310218819255,
+      "case_code": "B6MC-G3FW-6WS2-4EZS",
+      "entered": 1,
+      "jammer_count": 12,
+      "cleared_jammer_count": 12,
+      "clear_failure_count": 0,
+      "virtual_time_us": 5854957475,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789242216387
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 5854957475,
+  "total_jammer_count": 12,
+  "total_cleared_jammer_count": 12,
+  "total_clear_failure_count": 0
+}

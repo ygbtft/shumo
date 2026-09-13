@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 3,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 74,
+      "team_no": "202623001141",
+      "problem_no": 3,
+      "practice_run_no": 6683754884911744429,
+      "case_code": "Z4ZM-AMP9-Q64C-JAKY",
+      "entered": 1,
+      "jammer_count": 10,
+      "cleared_jammer_count": 10,
+      "clear_failure_count": 0,
+      "virtual_time_us": 3040063664,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789238847410
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 3040063664,
+  "total_jammer_count": 10,
+  "total_cleared_jammer_count": 10,
+  "total_clear_failure_count": 0
+}

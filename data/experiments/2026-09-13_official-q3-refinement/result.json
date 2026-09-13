@@ -1,0 +1,35 @@
+{
+  "complete": false,
+  "recorded_runs": 7,
+  "all_clear": 7,
+  "mock_executions": 0,
+  "official_formal_runs": 0,
+  "summary": [
+    {
+      "setting": "baseline",
+      "runs": 3,
+      "all_clear": 3,
+      "mean_cleared": 13.0,
+      "mean_localization_clear_s": 239.54983645998445,
+      "mean_program_runtime_s": 0.8129751249895586,
+      "pooled_virtual_s_per_source": 237.51498425641023,
+      "mean_localization_clear_s_deviation_percent": 0.0,
+      "mean_program_runtime_s_deviation_percent": 0.0
+    },
+    {
+      "setting": "candidate",
+      "runs": 4,
+      "all_clear": 4,
+      "mean_cleared": 14.75,
+      "mean_localization_clear_s": 233.3395565739583,
+      "mean_program_runtime_s": 0.8323271352564916,
+      "pooled_virtual_s_per_source": 232.65619625423727,
+      "mean_localization_clear_s_deviation_percent": -2.5924792843945554,
+      "mean_program_runtime_s_deviation_percent": 2.3803938979291006
+    }
+  ],
+  "ratio": 0.9740752071560544,
+  "ratio_upper95": null,
+  "superiority_passed": false,
+  "verdict": "incomplete; no confirmatory conclusion"
+}

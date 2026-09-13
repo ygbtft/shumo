@@ -1,0 +1,27 @@
+{
+  "policy": "practice-only",
+  "problem": 4,
+  "requested_runs": 1,
+  "completed_runs": 1,
+  "results": [
+    {
+      "id": 154,
+      "team_no": "202623001141",
+      "problem_no": 4,
+      "practice_run_no": 4502478503169474878,
+      "case_code": "KGPU-S4CH-7H38-BPDY",
+      "entered": 1,
+      "jammer_count": 13,
+      "cleared_jammer_count": 13,
+      "clear_failure_count": 0,
+      "virtual_time_us": 6563389894,
+      "end_reason": "user_exit",
+      "created_at_ms": 1789242569200
+    }
+  ],
+  "all_cleared": true,
+  "total_virtual_time_us": 6563389894,
+  "total_jammer_count": 13,
+  "total_cleared_jammer_count": 13,
+  "total_clear_failure_count": 0
+}
